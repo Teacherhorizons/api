@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/Schema.yaml'
+          $ref: '../../components/schemas/non-th-examples/Schema.yaml'
         examples:
           mapName:
             summary: My first example
@@ -38,6 +38,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../components/schemas/Schema.yaml
+            $ref: ../../components/schemas/non-th-examples/Schema.yaml
     '400':
       $ref: ../../components/responses/Problem.yaml

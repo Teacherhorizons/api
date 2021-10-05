@@ -204,12 +204,12 @@ get:
           schema:
             type: array
             items:
-              $ref: ../components/schemas/Customer.yaml
+              $ref: ../components/schemas/non-th-examples/Customer.yaml
         text/csv:
           schema:
             type: array
             items:
-              $ref: ../components/schemas/Customer.yaml
+              $ref: ../components/schemas/non-th-examples/Customer.yaml
     '401':
       $ref: ../components/responses/AccessForbidden.yaml
   x-code-samples:

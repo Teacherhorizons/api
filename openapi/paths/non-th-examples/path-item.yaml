@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../components/schemas/Schema.yaml
+          $ref: ../../components/schemas/non-th-examples/Schema.yaml
     description: requestBody description
     required: true
   responses:
@@ -29,6 +29,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../../components/schemas/Schema.yaml
+            $ref: ../../components/schemas/non-th-examples/Schema.yaml
     '400':
       $ref: ../../components/responses/Problem.yaml
