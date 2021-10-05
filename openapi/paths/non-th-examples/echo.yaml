@@ -1,6 +1,6 @@
 post:
   tags:
-    - Echo
+    - Example - Echo
   summary: Echo test
   description: Receive the exact message you've sent
   operationId: echo
@@ -17,7 +17,7 @@ post:
             type: integer
             format: int32
         X-Expires-After:
-          $ref: ../components/headers/ExpiresAfter.yaml
+          $ref: ../../components/headers/ExpiresAfter.yaml
       content:
         application/json:
           schema:
@@ -46,7 +46,7 @@ post:
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../code_samples/csharp/echo/post.cs"
+        $ref: "../../code_samples/csharp/echo/post.cs"
     - lang: PHP
       source:
-        $ref: ../code_samples/PHP/echo/post.php
+        $ref: ../../code_samples/PHP/echo/post.php

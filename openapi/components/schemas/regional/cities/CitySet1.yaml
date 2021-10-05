@@ -1,0 +1,8 @@
+type: object
+properties:
+  id:
+    $ref: ./properties.yaml#/id
+  name:
+    $ref: ./properties.yaml#/name
+  country:
+    $ref: '../countries/CountrySet1.yaml'

@@ -1,15 +1,15 @@
 job-ids:
   name: job-ids
   in: query
-  description: Foo
-  example: 1234, 2345
+  description: Comma separated list of job ids
+  example: 1234,2345
   schema:
     type: string
 
 job-subjects:
   name: job-subjects
   in: query
-  description: Foo
+  description: Comma separated list of subject ids
   example: 2,3
   schema:
     type: string

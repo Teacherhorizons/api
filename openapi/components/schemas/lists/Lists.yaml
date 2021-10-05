@@ -1,0 +1,11 @@
+type: object
+properties:
+  subjects:
+    type: array
+    items:
+      $ref: './Subject.yaml'
+
+  countries:
+    type: array
+    items:
+      $ref: '../regional/countries/CountrySet2.yaml'

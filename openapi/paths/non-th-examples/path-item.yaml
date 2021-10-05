@@ -1,6 +1,6 @@
 post:
   tags:
-    - Tag
+    - Example - Tag
   summary: Operation summary
   description: |
     Operation description **Markdown**.
@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Schema.yaml
+          $ref: ../../components/schemas/Schema.yaml
     description: requestBody description
     required: true
   responses:
@@ -25,10 +25,10 @@ post:
             type: integer
             format: int32
         X-Expires-After:
-          $ref: ../components/headers/ExpiresAfter.yaml
+          $ref: ../../components/headers/ExpiresAfter.yaml
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Schema.yaml
+            $ref: ../../components/schemas/Schema.yaml
     '400':
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../../components/responses/Problem.yaml

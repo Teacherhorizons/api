@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - User
+    - Example - User
   summary: Get user by user name
   description: |
     Some description of the operation.
@@ -34,16 +34,16 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/User.yaml
+            $ref: ../../components/schemas/User.yaml
           example:
             username: user1
             email: user@example.com
     '403':
       description: Forbidden
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../../components/responses/Problem.yaml
     '404':
       description: User not found
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../../components/responses/Problem.yaml
 put:
   tags:
     - User
@@ -64,10 +64,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/User.yaml
+          $ref: ../../components/schemas/User.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/User.yaml
+          $ref: ../../components/schemas/User.yaml
     description: Updated user object
     required: true
   responses:
@@ -75,7 +75,7 @@ put:
       description: OK
     '400':
       description: Invalid user supplied
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../../components/responses/Problem.yaml
     '404':
       description: User not found
-      $ref: ../components/responses/Problem.yaml
+      $ref: ../../components/responses/Problem.yaml

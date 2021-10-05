@@ -17,27 +17,35 @@ externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Echo
+  - name: Job applications
+    description: Operations relating to job applications
+  - name: Lists
+    description: Operations relating to simple lists of objects - such as subjects or countries
+
+  # non-th-examples
+  - name: Example - Echo
     description: Example echo operations.
-  - name: User
+  - name: Example - User
     description: Operations about users.
-  - name: Tag
+  - name: Example - Tag
     description: This is a tag description.
 servers:
   - url: 'https://beta.teacherhorizons.com/th/api/'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/path-item.yaml
-  /pathItemWithExamples:
-    $ref: paths/path-item-with-examples.yaml
   /v1/job-applications/job-applications/set-1:
     $ref: paths/job-applications/job-applications-set-1.yaml
   /v1/lists:
     $ref: paths/lists/lists.yaml
+
+  # non-th-examples
+  '/users/{username}':
+    $ref: 'paths/users@{username}.yaml'
+  /echo:
+    $ref: paths/non-th-examples/echo.yaml
+  /pathItem:
+    $ref: paths/non-th-examples/path-item.yaml
+  /pathItemWithExamples:
+    $ref: paths/non-th-examples/path-item-with-examples.yaml
 components:
   securitySchemes:
     main_auth:

@@ -1,6 +1,6 @@
 get:
   tags:
-    - lists
+    - Lists
   summary: Get lists matching the key (list of names)
   parameters:
     - $ref: '../../components/parameters/general.yaml#/key'
@@ -10,4 +10,4 @@ get:
       content:
         application/json:
           schema:
-            - $ref: '../../components/schemas/Lists.yaml'
+            $ref: '../../components/schemas/lists/Lists.yaml'

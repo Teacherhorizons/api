@@ -1,23 +1,25 @@
 limit:
   name: limit
   in: query
-  description: number of records to return
+  description: Number of records to return
   example: 20
   schema:
     type: integer
     format: int64
+
 page-number:
   name: page-number
   in: query
-  description: page number to return
+  description: Page number to return
   example: 3
   schema:
     type: integer
     format: int64
+
 sort:
   name: sort
   in: query
-  description: order to sort the records
+  description: Order to sort the records
   example: applicationDate,-subject
   schema:
     type: string

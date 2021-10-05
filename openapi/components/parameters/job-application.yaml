@@ -1,7 +1,7 @@
 job-application-statuses:
   name: job-application-statuses
   in: query
-  description: Foo
+  description: Comma separated list of job application status ids; TODO - better if called job-application-status-ids
   example: -20,-10,1
   schema:
     type: string
@@ -9,7 +9,7 @@ job-application-statuses:
 actioned-by-user-ids:
   name: actioned-by-user-ids
   in: query
-  description: Foo
-  example: 1234, 210607
+  description: Comma separated list of user ids
+  example: 1234,210607
   schema:
     type: string

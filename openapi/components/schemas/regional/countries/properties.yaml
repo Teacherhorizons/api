@@ -1,0 +1,36 @@
+id:
+  type: integer
+  format: int32
+  example: 23
+name: 
+  type: string
+  example: Portugal
+
+isoCode:
+  type: string
+  example: af
+freeHealthCare:
+  type: string
+  example: 0
+  description: Boolean; TODO - better if has values true or false
+phoneCode:
+  type: string
+  example: 93
+currency:
+  type: integer
+  format: int32
+  example: 3
+  description: Id; TODO - better if called 'currencyId'
+location:
+  type: string
+  example: 33,65
+  description: Latitude and longitude (comma separated); TODO - better if an object
+nationalAverageIncome:
+  type: number
+  format: float
+  example: 123.45
+  description: Amount in USD; TODO - better if called 'nationalAverageIncomeInUsd'
+region:
+  type: string
+  example: 2
+  description: Id; TODO - better if called 'regionId'
