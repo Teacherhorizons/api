@@ -1,0 +1,15 @@
+job-application-statuses:
+  name: job-application-statuses
+  in: query
+  description: Foo
+  example: -20,-10,1
+  schema:
+    type: string
+
+actioned-by-user-ids:
+  name: actioned-by-user-ids
+  in: query
+  description: Foo
+  example: 1234, 210607
+  schema:
+    type: string

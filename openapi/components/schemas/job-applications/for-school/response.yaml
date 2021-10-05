@@ -1,0 +1,10 @@
+description: foo bar
+type: object
+items:
+  properties:
+    apiSchema:
+      type: string
+    jobApplications:
+      type: array
+      items:
+        $ref: './job-application.yaml'

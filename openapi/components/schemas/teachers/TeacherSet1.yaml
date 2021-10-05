@@ -1,0 +1,31 @@
+type: object
+items:
+  type: object
+  properties:
+    fullName: 
+      type: string
+      example: Dean Owen
+    memberNumber: 
+      type: integer
+      format: int32
+      example: 123456
+    photoUrl: 
+      type: string
+      example: /static/media/teachers/photo/16844.jpg
+    currentLocationCountryId: 
+      type: integer
+      format: int32
+      example: 14
+    qualificationCountryId: 
+      type: integer
+      format: int32
+      example: 7
+    numberOfYearsExperience: 
+      type: integer
+      format: int32
+      example: 3
+example:
+  - statusId: 10
+    name: Jessica Smith
+  - id: 20
+    name: Ron Stewart

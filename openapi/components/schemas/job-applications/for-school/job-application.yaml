@@ -1,0 +1,10 @@
+type: object
+properties:
+  statusId:
+    type: integer
+    format: int32
+    example: 419
+  teacher:
+    $ref: '../../teachers/TeacherSet1.yaml'
+  job:
+    $ref: '../../jobs/JobSet1.yaml'

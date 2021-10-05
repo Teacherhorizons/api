@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: 'https://www.teacherhorizons.com/assets/bird/logo.png'
   description:
     $ref: ./info-description.md
 externalDocs:
@@ -24,8 +24,7 @@ tags:
   - name: Tag
     description: This is a tag description.
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: 'https://beta.teacherhorizons.com/th/api/'
 paths:
   '/users/{username}':
     $ref: 'paths/users@{username}.yaml'
@@ -35,6 +34,10 @@ paths:
     $ref: paths/path-item.yaml
   /pathItemWithExamples:
     $ref: paths/path-item-with-examples.yaml
+  /v1/job-applications/job-applications/set-1:
+    $ref: paths/job-applications/job-applications-set-1.yaml
+  /v1/lists:
+    $ref: paths/lists/lists.yaml
 components:
   securitySchemes:
     main_auth:

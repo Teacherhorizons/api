@@ -1,0 +1,12 @@
+type: object
+items:
+  type: object
+  properties:
+    id: 
+      $ref: './properties/SchoolId.yaml'
+    name: 
+      $ref: './properties/SchoolName.yaml'
+    imageUrl: 
+      type: string
+    city: 
+      $ref: '#/components/schemas/CitySet1'
