@@ -1,11 +1,22 @@
 type: object
 properties:
-  subjects:
+  academicSystems:
     type: array
     items:
-      $ref: './Subject.yaml'
+      $ref: './AcademicSystem.yaml'
+
+  acceptedTeacherQualifications:
+    type: array
+    items:
+      $ref: './AcceptedTeacherQualification.yaml'
 
   countries:
     type: array
     items:
       $ref: '../regional/countries/CountrySet2.yaml'
+
+  subjects:
+    type: array
+    items:
+      $ref: './Subject.yaml'
+
