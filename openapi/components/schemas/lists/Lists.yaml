@@ -1,11 +1,41 @@
 type: object
 properties:
+  academicSystems:
+    type: array
+    items:
+      $ref: './AcademicSystem.yaml'
+  acceptedTeacherQualifications:
+    type: array
+    items:
+      $ref: './AcceptedTeacherQualification.yaml'
+  accountStatuses:
+    type: array
+    items:
+      $ref: './AccountStatus.yaml' 
+  adminNoteTypes:
+     type: array
+    items:
+      $ref: './AdminNoteType.yaml'  
+  ageLevels:
+    type: array
+    items:
+      $ref: './AgeLevel.yaml' 
+  attractions:
+    type: array
+    items:
+      $ref: './Attraction.yaml' 
+  benefits:
+    type: array
+    items:
+      $ref: './Benefit.yaml'         
+ countries:
+    type: array
+    items:
+      $ref: '../regional/countries/CountrySet2.yaml'
   subjects:
     type: array
     items:
       $ref: './Subject.yaml'
 
-  countries:
-    type: array
-    items:
-      $ref: '../regional/countries/CountrySet2.yaml'
+ 
+
