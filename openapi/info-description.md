@@ -1,8 +1,10 @@
-This is an **example** API to demonstrate features of the OpenAPI specification.
+<!-- This is an **example** API to demonstrate features of the OpenAPI specification. -->
 
 # Introduction
 
-This API definition is intended to to be a good starting point for
+TODO RR
+
+<!-- This API definition is intended to to be a good starting point for
 describing your API in 
 
 [OpenAPI/Swagger
@@ -34,4 +36,4 @@ understand and interact with the remote service with a minimal amount of
 implementation logic. Similar to what
 
 interfaces have done for lower-level programming, OpenAPI removes the
-guesswork in calling the service.
+guesswork in calling the service. -->
