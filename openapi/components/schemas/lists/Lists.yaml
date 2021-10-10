@@ -14,7 +14,7 @@ properties:
       $ref: './AccountStatus.yaml' 
   adminNoteTypes:
      type: array
-    items:
+     items:
       $ref: './AdminNoteType.yaml'  
   ageLevels:
     type: array
@@ -28,7 +28,7 @@ properties:
     type: array
     items:
       $ref: './Benefit.yaml'         
- countries:
+  countries:
     type: array
     items:
       $ref: '../regional/countries/CountrySet2.yaml'
