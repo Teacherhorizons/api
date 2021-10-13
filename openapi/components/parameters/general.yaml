@@ -5,3 +5,11 @@ key:
   example: subjects,countries
   schema:
     type: string
+
+search:
+  name: search
+  in: query
+  description: Term to search
+  example: Foo bar
+  schema:
+    type: string

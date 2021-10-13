@@ -1,14 +1,10 @@
 type: object
 properties:
+  id:
+    $ref: "./properties.yaml#/id"
   fullName:
-    $ref: './properties.yaml#/fullName'
+    $ref: "./properties.yaml#/fullName"
   memberNumber:
-    $ref: './properties.yaml#/memberNumber'
+    $ref: "./properties.yaml#/memberNumber"
   photoUrl:
-    $ref: './properties.yaml#/photoUrl'
-  currentLocationCountryId:
-    $ref: './properties.yaml#/currentLocationCountryId'
-  qualificationCountryId:
-    $ref: './properties.yaml#/qualificationCountryId'
-  numberOfYearsExperience:
-    $ref: './properties.yaml#/numberOfYearsExperience'
+    $ref: "./properties.yaml#/photoUrl"

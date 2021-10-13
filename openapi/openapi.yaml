@@ -8,11 +8,11 @@ info:
     # url: 'http://example.com/contact'
   license:
     name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
-    url: 'https://www.teacherhorizons.com/assets/bird/logo.png'
+    url: "https://www.teacherhorizons.com/assets/bird/logo.png"
   description:
-    $ref: './info-description.md'
+    $ref: "./info-description.md"
 # externalDocs:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
@@ -24,22 +24,26 @@ tags:
 
   # non-th-examples
   - name: Example - Echo
-    description: Example echo operations.    
+    description: Example echo operations.
   - name: Example - User
     description: Operations about users.
   - name: Example - Tag
     description: This is a tag description.
 servers:
-  - url: 'https://beta.teacherhorizons.com/th/api/'
+  - url: "https://beta.teacherhorizons.com/th/api/"
 paths:
   /v1/job-applications/job-applications/set-1:
     $ref: paths/job-applications/job-applications-set-1.yaml
   /v1/lists:
     $ref: paths/lists/lists.yaml
+  /v3/schools/search/school-area/full:
+    $ref: paths/schools/schools-set-1.yaml
+  /v1/teachers/teachers/set-1:
+    $ref: paths/teachers/teachers-set-1.yaml
 
   # non-th-examples
-  '/users/{username}':
-    $ref: 'paths/non-th-examples/users@{username}.yaml'
+  "/users/{username}":
+    $ref: "paths/non-th-examples/users@{username}.yaml"
   /echo:
     $ref: paths/non-th-examples/echo.yaml
   /pathItem:
@@ -52,10 +56,10 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          authorizationUrl: "http://example.com/api/oauth/dialog"
           scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
+            "read:users": read users info
+            "write:users": modify or remove users
     api_key:
       type: apiKey
       in: header

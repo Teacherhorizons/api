@@ -12,15 +12,15 @@ properties:
     type: integer
     format: int32
     example: 1550417150000
-  applicationDate: 
+  applicationDate:
     type: integer
     format: int64
     example: 1550416230000
   name:
     type: string
   teacher:
-    $ref: '../../teachers/TeacherSet1.yaml'
+    $ref: "../../teachers/TeacherSet2.yaml"
   job:
-    $ref: '../../jobs/JobSet1.yaml'
+    $ref: "../../jobs/JobSet1.yaml"
   school:
-    $ref: '../../schools/SchoolSet1.yaml'
+    $ref: "../../schools/SchoolSet1.yaml"

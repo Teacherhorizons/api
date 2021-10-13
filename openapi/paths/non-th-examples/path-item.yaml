@@ -12,11 +12,11 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../../components/schemas/non-th-examples/Schema.yaml
+          $ref: "../../components/schemas/non-th-examples/Schema.yaml"
     description: requestBody description
     required: true
   responses:
-    '200':
+    "200":
       description: OK
       headers:
         X-Rate-Limit:
@@ -25,10 +25,10 @@ post:
             type: integer
             format: int32
         X-Expires-After:
-          $ref: ../../components/headers/ExpiresAfter.yaml
+          $ref: "../../components/headers/ExpiresAfter.yaml"
       content:
         application/json:
           schema:
-            $ref: ../../components/schemas/non-th-examples/Schema.yaml
-    '400':
-      $ref: ../../components/responses/Problem.yaml
+            $ref: "../../components/schemas/non-th-examples/Schema.yaml"
+    "400":
+      $ref: "../../components/responses/Problem.yaml"

@@ -1,0 +1,119 @@
+description: foo bar
+type: object
+properties:
+  # apiSchema:
+  #   type: string
+  schools:
+    type: array
+    items:
+      type: object
+      properties:
+        approvedByTh:
+          $ref: "./properties.yaml#/approvedByTh"
+        visitedByTh:
+          $ref: "./properties.yaml#/visitedByTh"
+        accreditations:
+          $ref: "./properties.yaml#/accreditations"
+        # TODO AS: make the rest of these as above
+        academicSystems:
+          type: array
+          items:
+            type: integer
+            format: int32
+            example: 1
+        completionLevel:
+          type: integer
+          format: int32
+          example: 100
+        slug:
+          type: string
+          example: africa-morocco-casablanca-george-washington-academy
+        isFavourite:
+          type: integer
+          format: int32
+          example: 1
+        city:
+          type: object
+          properties:
+            imageUrl:
+              type: string
+              example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+            id:
+              type: integer
+              format: int32
+              example: 6
+            name:
+              type: string
+              example: Casablanca
+        endorsedByTh:
+          type: integer
+          format: int32
+          example: 1
+        country:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+              example: 48
+            name:
+              type: string
+              example: Morocco
+        region:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+              example: 1
+            name:
+              type: string
+              example: Africa
+        badgeImage:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+              example: 487931
+            resource:
+              type: string
+              example: /static/mediav2/schools/2538/images/487931_main.jpg
+            reference:
+              type: string
+              example: SATR.jpg
+            type:
+              type: integer
+              format: int32
+              example: 0
+        schoolImage:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+              example: 499271
+            resource:
+              type: string
+              example: /static/mediav2/schools/2538/images/499271_main.jpg
+            reference:
+              type: string
+              example: GWAD.jpg
+            type:
+              type: integer
+              format: int32
+              example: 13
+        id:
+          type: integer
+          format: int32
+          example: 2538
+        name:
+          type: string
+          example: George Washington Academy
+        locationLatLong:
+          type: string
+          example: 33.55436509486863-7.724996851330563
+  count:
+    type: integer
+    format: int32
+    example: 20
