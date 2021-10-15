@@ -1,10 +1,10 @@
 get:
   tags:
     - Schools
-    - status-todo
-  summary: Get a list of schools
+    - status-current
+  summary: Get a list of schools (current)
   parameters:
-    - $ref: "../../components/parameters/school.yaml#/school-ids"
+    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
       name: ids
 
     - in: query
@@ -78,9 +78,9 @@ get:
         type: string
 
     # TODO AS: add the rest of the parameters below here
-    - $ref: "../../components/parameters/list.yaml#/limit"
-    - $ref: "../../components/parameters/list.yaml#/page-number"
-    - $ref: "../../components/parameters/list.yaml#/sort"
+    - $ref: "../../../components/parameters/current/list.yaml#/limit"
+    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+    - $ref: "../../../components/parameters/current/list.yaml#/sort"
 
   # limit=20&regions=1&countries=2&cities=210&sort=-thMatchScore&my-list=favourites&search=test&academic-systems=3,4&
   # curriculums=6,13&minimum-percentage-complete=21&accreditations=4,14&visited-by-th=1&endorsed-by-th=1&
@@ -124,7 +124,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/schools/response.yaml"
+            $ref: "../../../components/schemas/current/schools/response.yaml"
     "400":
       description: Invalid ID supplied
     "404":

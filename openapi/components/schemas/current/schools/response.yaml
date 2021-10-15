@@ -8,13 +8,9 @@ properties:
     items:
       type: object
       properties:
-        approvedByTh:
-          $ref: "./properties.yaml#/approvedByTh"
-        visitedByTh:
-          $ref: "./properties.yaml#/visitedByTh"
+        # current
         accreditations:
           $ref: "./properties.yaml#/accreditations"
-        # TODO AS: make the rest of these as above
         academicSystems:
           $ref: "./properties.yaml#/academicSystems"
         completionLevel:
@@ -24,20 +20,30 @@ properties:
         isFavourite:
           $ref: "./properties.yaml#/isFavourite"
         city:
-          $ref: "./properties.yaml#/isFavourite"
+          $ref: "./properties.yaml#/city"
         id:
           $ref: "./properties.yaml#/id"
         name:
           $ref: "./properties.yaml#/name"
         endorsedByTh:
           $ref: "./properties.yaml#/endorsedByTh"
-        country:
-          $ref: "./properties.yaml#/country"
-        region:
-          $ref: "./properties.yaml#/region"
         badgeImage:
           $ref: "./properties.yaml#/badgeImage"
         schoolImage:
-         $ref: "./properties.yaml#/schoolImage"
-        count:
-         $ref: "./properties.yaml#/count"
+          $ref: "./properties.yaml#/schoolImage"
+        locationLatLong:
+          $ref: "./properties.yaml#/locationLatLong"
+
+        # deprecated
+        approvedByTh:
+          $ref: "./../../deprecated/schools/properties.yaml#/approvedByTh"
+        visitedByTh:
+          $ref: "./../../deprecated/schools/properties.yaml#/visitedByTh"
+        country:
+          $ref: "./../../deprecated/schools/properties.yaml#/country"
+        region:
+          $ref: "./../../deprecated/schools/properties.yaml#/region"
+  count:
+    type: integer
+    format: int32
+    example: 20

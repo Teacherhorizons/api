@@ -4,6 +4,8 @@ properties:
     $ref: ./properties.yaml#/id
   name:
     $ref: ./properties.yaml#/name
+  imageUrl:
+    $ref: ./properties.yaml#/imageUrl
   country:
     anyOf:
       - $ref: "../countries/CountrySet1.yaml"

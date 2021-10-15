@@ -1,0 +1,52 @@
+description: foo bar
+type: object
+properties:
+  # apiSchema:
+  #   type: string
+  schools:
+    type: array
+    items:
+      type: object
+      properties:
+        approvedByTh:
+          $ref: "./../../current/schools/properties.yaml#/approvedByTh"
+        visitedByTh:
+          $ref: "./../../current/schools/properties.yaml#/visitedByTh"
+        accreditations:
+          $ref: "./../../current/schools/properties.yaml#/accreditations"
+        # TODO AS: make the rest of these as above
+        academicSystems:
+          $ref: "./../../current/schools/properties.yaml#/academicSystems"
+        completionLevel:
+          $ref: "./../../current/schools/properties.yaml#/completionLevel"
+        slug:
+          $ref: "./../../current/schools/properties.yaml#/slug"
+        isFavourite:
+          $ref: "./../../current/schools/properties.yaml#/isFavourite"
+
+        # TODO: need to add imageUrl to city
+        city:
+          $ref: "./../../regional/cities/CitySet2.yaml"
+
+        #        city:
+        #          $ref: "./../../current/schools/properties.yaml#/city"
+        id:
+          $ref: "./../../current/schools/properties.yaml#/id"
+        name:
+          $ref: "./../../current/schools/properties.yaml#/name"
+        endorsedByTh:
+          $ref: "./../../current/schools/properties.yaml#/endorsedByTh"
+        # country:
+        #   $ref: "./../../current/schools/properties.yaml#/country"
+        # region:
+        #   $ref: "./../../current/schools/properties.yaml#/region"
+        badgeImage:
+          $ref: "./../../current/schools/properties.yaml#/badgeImage"
+        schoolImage:
+          $ref: "./../../current/schools/properties.yaml#/schoolImage"
+        locationLatLong:
+          $ref: "./../../current/schools/properties.yaml#/locationLatLong"
+  count:
+    type: integer
+    format: int32
+    example: 20

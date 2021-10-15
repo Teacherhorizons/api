@@ -11,16 +11,27 @@ info:
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
     url: "https://www.teacherhorizons.com/assets/bird/logo.png"
-  description:
-    $ref: "./info-description.md"
+  # description:
+  #   $ref: "./info-description.md"
 # externalDocs:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
+  # areas
   - name: Job applications
     description: Operations relating to job applications
   - name: Lists
     description: Operations relating to simple lists of objects - such as subjects or countries
+  - name: Schools
+    description: ...
+  - name: Teachers
+    description: ...
+
+  # statuses
+  - name: status-current
+    description: ...
+  - name: status-proposed
+    description: ...
 
   # non-th-examples
   - name: Example - Echo
@@ -32,24 +43,32 @@ tags:
 servers:
   - url: "https://beta.teacherhorizons.com/th/api/"
 paths:
-  /v1/job-applications/job-applications/set-1:
-    $ref: paths/job-applications/job-applications-set-1.yaml
+  # current
   /v1/lists:
-    $ref: paths/lists/lists.yaml
+    $ref: "./paths/current/lists/lists.yaml"
   /v3/schools/search/school-area/full:
-    $ref: paths/schools/schools-set-1.yaml
-  /v1/teachers/teachers/set-1:
-    $ref: paths/teachers/teachers-set-1.yaml
+    $ref: "./paths/current/schools/schools-set-1.yaml"
+
+  # proposed
+  # TODO: consider versioning and 'sets'
+  /job-applications/set-1:
+    $ref: "./paths/proposed/job-applications/job-applications-set-1.yaml"
+  /schools/set-1:
+    $ref: "./paths/proposed/schools/schools-set-1.yaml"
+  /teachers/set-1:
+    $ref: "./paths/proposed/teachers/teachers-set-1.yaml"
 
   # non-th-examples
   "/users/{username}":
-    $ref: "paths/non-th-examples/users@{username}.yaml"
+    $ref: "./paths/non-th-examples/users@{username}.yaml"
   /echo:
-    $ref: paths/non-th-examples/echo.yaml
+    $ref: "./paths/non-th-examples/echo.yaml"
   /pathItem:
-    $ref: paths/non-th-examples/path-item.yaml
+    $ref: "./paths/non-th-examples/path-item.yaml"
   /pathItemWithExamples:
-    $ref: paths/non-th-examples/path-item-with-examples.yaml
+    $ref: "./paths/non-th-examples/path-item-with-examples.yaml"
+
+# TODO: components section
 components:
   securitySchemes:
     main_auth:

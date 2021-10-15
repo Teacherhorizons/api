@@ -1,0 +1,96 @@
+get:
+  tags:
+    - Schools
+    - status-proposed
+  summary: Get a list of schools (proposed)
+  parameters:
+    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+      name: ids
+
+    - in: query
+      name: search
+      description: Name of part of school
+      example: International
+      schema:
+        type: string
+
+    - in: query
+      name: curriculums
+      description: Comma separated list of curriculum ids
+      example: 6,13
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma separated list of region ids
+      example: 1,2
+      schema:
+        type: string
+
+    - in: query
+      name: countries
+      description: Comma separated list of country ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: cities
+      description: Comma separated list of city ids
+      example: 210
+      schema:
+        type: string
+
+    - in: query
+      name: academicSystems
+      description: Comma separated list of academicSystems ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: minimumPercentageComplete
+      description: Comma separated list of minimumPercentageComplete ids
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: accreditations
+      description: Comma separated list of accreditations ids
+      example: 4,14
+      schema:
+        type: string
+
+    - in: query
+      name: educationLevels
+      description: Comma separated list of educationLevels ids
+      example: 6,3
+      schema:
+        type: string
+
+    - in: query
+      name: nationalityGroups
+      description: Comma separated list of nationalityGroups ids
+      example: 207,209
+      schema:
+        type: string
+
+    - $ref: "../../../components/parameters/current/list.yaml#/limit"
+    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/proposed/schools/response.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

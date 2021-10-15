@@ -1,0 +1,15 @@
+job-application-status-ids:
+  name: job-application-status-ids
+  in: query
+  description: Comma separated list of job application status ids
+  example: -20,-10,1
+  schema:
+    type: string
+
+actioned-by-user-ids:
+  name: actioned-by-user-ids
+  in: query
+  description: Comma separated list of user ids
+  example: 1234,210607
+  schema:
+    type: string
