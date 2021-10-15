@@ -1,0 +1,39 @@
+description: foo bar
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+    example: 6
+  name:
+    type: string
+    example: Casablanca
+  alias:
+    type: string
+    example: /Africa/Morocco/Casablanca
+  slug:
+    type: string
+    example: africa-morocco-casablanca
+  keyAttractions:
+    type: string
+    example: Mosque Hassan II, Jemaa el Fna, Atlas Mountains, Tour Hassan
+  language:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+        example: 0
+      name:
+        type: string
+        format: nullable
+  countryId:
+    type: integer
+    format: int32
+    example: 48
+  nameWithCountry:
+    type: string
+    example: Casablanca (Morocco)
+  locationLatLong:
+    type: string
+    example: 33.5333333 -7.5833333
