@@ -5,9 +5,9 @@ get:
   summary: Get a city (current)
   parameters:
     - in: path
-      name: cityId
-      description: Id of the city
-      example: 6
+      name: slugId
+      description: Id of the slug
+      example: africa-morocco-casablanca-george-washington-academy
       schema:
         type: integer
         format: int32
