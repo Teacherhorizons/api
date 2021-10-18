@@ -18,6 +18,8 @@ info:
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   # areas
+  - name: Academy
+    description: Operations relating to Academy
   - name: City # consider tag structure - Regional? Cities?
     description: Operations relating to a city
   - name: Job applications
@@ -52,6 +54,8 @@ paths:
     $ref: "./paths/current/schools/schools-set-1.yaml"
   /v3/city/id/{cityId}/profile:
     $ref: "./paths/current/regional/city-set-1.yaml"
+  /v3/school/slug/academy/profile:
+    $ref: "./paths/current/academy/academy-set-1.yaml"
 
   # proposed
   # TODO: consider versioning and 'sets'
