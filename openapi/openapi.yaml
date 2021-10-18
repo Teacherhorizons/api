@@ -11,8 +11,8 @@ info:
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
     url: "https://www.teacherhorizons.com/assets/bird/logo.png"
-  # description:
-  #   $ref: "./info-description.md"
+  description:
+    $ref: "./info-description.md"
 # externalDocs:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
@@ -43,7 +43,7 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 servers:
-  - url: "https://beta.teacherhorizons.com/th/api/"
+  - url: "https://beta.teacherhorizons.com/th/api"
 paths:
   # current
   /v1/lists:
@@ -55,10 +55,12 @@ paths:
 
   # proposed
   # TODO: consider versioning and 'sets'
-  /job-applications/set-1:
+  /job-applications:
     $ref: "./paths/proposed/job-applications/job-applications-set-1.yaml"
-  /schools/set-1:
-    $ref: "./paths/proposed/schools/schools-set-1.yaml"
+  /schools:
+    $ref: "./paths/proposed/schools/schools.yaml"
+  # /schools/{schoolId}:
+  #   $ref: "./paths/proposed/schools/school.yaml"
   /teachers/set-1:
     $ref: "./paths/proposed/teachers/teachers-set-1.yaml"
 

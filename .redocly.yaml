@@ -1,6 +1,6 @@
 # See https://redoc.ly/docs/cli/configuration/ for more information.
 apiDefinitions:
-  main: openapi/openapi.yaml
+  main: "./openapi/openapi.yaml"
 lint:
   extends:
     - recommended
@@ -11,10 +11,20 @@ referenceDocs:
   theme:
     colors:
       primary:
-        main: "#32329f"
+        main: "#00264B"
+      secondary:
+        main: "#3FA9B3"
+      warning:
+        main: "#FF725E"
+    custom:
+      background-color: red
   generateCodeSamples:
-    languages:  # Array of language config objects; indicates in which languages to generate code samples.
+    languages: # Array of language config objects; indicates in which languages to generate code samples.
       - lang: curl # Can be one of the following supported languages: "curl", "Node.js", "JavaScript".
       - lang: "Node.js"
       - lang: "JavaScript"
-      
+  expandResponses: all
+  hideDownloadButton: true
+  jsonSampleExpandLevel: all
+  sortPropsAlphabetically: true
+  sortTagsAlphabetically: true

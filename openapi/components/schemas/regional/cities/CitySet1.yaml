@@ -1,9 +1,9 @@
 type: object
 properties:
   id:
-    $ref: ./properties.yaml#/id
+    $ref: ./city-properties.yaml#/id
   name:
-    $ref: ./properties.yaml#/name
+    $ref: ./city-properties.yaml#/name
   country:
     anyOf:
       - $ref: "../countries/CountrySet1.yaml"

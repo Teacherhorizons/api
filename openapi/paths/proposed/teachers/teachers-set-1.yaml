@@ -1,11 +1,13 @@
 get:
+  operationId: getTeachers
   tags:
     - Teachers
     - status-proposed
   summary: Get a list of teachers (proposed)
-  description: Will typically be used in a 'teacher picker'.
+  description:
+    $ref: "./foo.md"
   parameters:
-    - $ref: "../../../components/parameters/general.yaml#/search"
+    - $ref: "../../../components/parameters/current/general.yaml#/search"
       description: |
         Matches against a teacher name or member number.
 
@@ -22,4 +24,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/teachers/response.yaml"
+            $ref: "../../../components/schemas/teachers/teachers.yaml"

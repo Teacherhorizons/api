@@ -1,17 +1,20 @@
 # wrong name and data type
 approvedByTh:
+  deprecated: true
   type: integer
   format: int32
   example: 1
 
 # wrong data type
 visitedByTh:
+  deprecated: true
   type: integer
   format: int32
   example: 1
 
 # not directly related to school
 country:
+  deprecated: true
   type: object
   properties:
     id:
@@ -24,6 +27,7 @@ country:
 
 # not directly related to school
 region:
+  deprecated: true
   type: object
   properties:
     id:

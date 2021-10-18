@@ -1,0 +1,1748 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Teacher Horizons API
+  contact:
+    email: dev@teacherhorizons.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  x-logo:
+    url: 'https://www.teacherhorizons.com/assets/bird/logo.png'
+  description: >+
+    # Introduction
+
+
+    ## Plan
+
+
+    - Document current API here
+
+    - For new APIs, start trying to use the JSON API format
+
+
+    ## Process
+
+
+    1. **Document a current API call** (old format)
+       - Take a current API call which is not yet documented here and document it in the 'current' and/or 'deprecated' folders (as appropriate)
+       - Keep this documentation relatively 'flat' (i.e. don't involve many files), since the current API calls are relatively dissimilar (i.e. they aren't consistent enough)
+    2. **Document a related proposed API call** (JSON API format)
+       - If the current API call is not in the JSON API format, and if there's not yet a proposed API call which would have the same behaviour, document a related proposed API call
+       - Use lots of nested files, since a lot of reuse should be possible
+
+    ## Useful links
+
+
+    ### OpenApi
+
+
+    - https://swagger.io/specification/ - OpenAPI Specification
+
+    - https://redoc.ly/docs/ - Redocly API reference docs
+
+    - https://github.com/OAI/OpenAPI-Specification/issues/1706 - Support deep
+    objects for query parameters with deepObject style
+
+
+    ### JSON API
+
+
+    - https://jsonapi.org/format/
+
+    - https://jsonapi.org/format/#fetching-sparse-fieldsets
+
+    - https://jsonapi.org/format/1.1/#query-parameters-families
+
+    -
+    https://discuss.jsonapi.org/t/filtering-querying-deep-relationships-a-proposal-for-a-syntax/1746
+
+
+    ### Java
+
+
+    - https://www.baeldung.com/json-api-java-spring-web-app
+
+
+    ### To be organised
+
+
+    - https://tanzu.vmware.com/developer/guides/api-first-development/
+
+    -
+    https://apisyouwonthate.com/blog/json-api-openapi-and-json-schema-working-in-harmony
+
+
+
+    ## Documentation limitations
+
+
+    - Filters aren't yet fully supported. Workaround: ...
+
+
+
+    <!-- This is an **example** API to demonstrate features of the OpenAPI
+    specification. -->
+
+
+    <!-- TODO RR -->
+
+
+    <!-- This API definition is intended to to be a good starting point for
+
+    describing your API in 
+
+
+    [OpenAPI/Swagger
+
+    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
+
+
+    It also demonstrates features of the
+
+    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
+
+    and 
+
+
+    the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
+
+    the standard OpenAPI syntax, we use a few 
+
+
+    [vendor
+
+    extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+
+
+
+    # OpenAPI Specification
+
+
+    The goal of The OpenAPI Specification is to define a standard,
+
+    language-agnostic interface to REST APIs which
+
+
+    allows both humans and computers to discover and understand the capabilities
+
+    of the service without access to source
+
+
+    code, documentation, or through network traffic inspection. When properly
+
+    defined via OpenAPI, a consumer can 
+
+
+    understand and interact with the remote service with a minimal amount of
+
+    implementation logic. Similar to what
+
+
+    interfaces have done for lower-level programming, OpenAPI removes the
+
+    guesswork in calling the service. -->
+
+tags:
+  - name: City
+    description: Operations relating to a city
+  - name: Job applications
+    description: Operations relating to job applications
+  - name: Lists
+    description: >-
+      Operations relating to simple lists of objects - such as subjects or
+      countries
+  - name: Schools
+    description: ...
+  - name: Teachers
+    description: ...
+  - name: status-current
+    description: ...
+  - name: status-proposed
+    description: ...
+  - name: Example - Echo
+    description: Example echo operations.
+  - name: Example - User
+    description: Operations about users.
+  - name: Example - Tag
+    description: This is a tag description.
+servers:
+  - url: 'https://beta.teacherhorizons.com/th/api'
+paths:
+  /v1/lists:
+    get:
+      operationId: getLists
+      tags:
+        - Lists
+        - status-current
+      summary: Get lists matching the key (current)
+      parameters:
+        - $ref: '#/components/parameters/key'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lists'
+  /v3/schools/search/school-area/full:
+    get:
+      operationId: getSchools
+      tags:
+        - Schools
+        - status-current
+      summary: Get a list of schools (current)
+      parameters:
+        - $ref: '#/components/parameters/school-ids'
+          name: ids
+        - in: query
+          name: search
+          description: Name of part of school
+          example: International
+          schema:
+            type: string
+        - in: query
+          name: curriculums
+          description: Comma separated list of curriculum ids
+          example: '6,13'
+          schema:
+            type: string
+        - in: query
+          name: regions
+          description: Comma separated list of region ids
+          example: '1,2'
+          schema:
+            type: string
+        - in: query
+          name: countries
+          description: Comma separated list of country ids
+          example: '2,3'
+          schema:
+            type: string
+        - in: query
+          name: cities
+          description: Comma separated list of city ids
+          example: 210
+          schema:
+            type: string
+        - in: query
+          name: academicSystems
+          description: Comma separated list of academicSystems ids
+          example: '3,4'
+          schema:
+            type: string
+        - in: query
+          name: minimumPercentageComplete
+          description: Comma separated list of minimumPercentageComplete ids
+          example: '21,22'
+          schema:
+            type: string
+        - in: query
+          name: accreditations
+          description: Comma separated list of accreditations ids
+          example: '4,14'
+          schema:
+            type: string
+        - in: query
+          name: educationLevels
+          description: Comma separated list of educationLevels ids
+          example: '6,3'
+          schema:
+            type: string
+        - in: query
+          name: nationalityGroups
+          description: Comma separated list of nationalityGroups ids
+          example: '207,209'
+          schema:
+            type: string
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/page-number'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+      security:
+        - api_key: []
+  '/v3/city/id/{cityId}/profile':
+    get:
+      operationId: getCity
+      tags:
+        - City
+        - status-current
+      summary: Get a city (current)
+      parameters:
+        - in: path
+          name: cityId
+          description: Id of the city
+          example: 6
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/city-response'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+      security:
+        - api_key: []
+  /job-applications:
+    get:
+      operationId: getJobApplications
+      tags:
+        - Job applications
+        - status-proposed
+      summary: Get a list of job applications (proposed)
+      parameters:
+        - $ref: '#/components/parameters/school-ids'
+        - $ref: '#/components/parameters/job-ids'
+        - $ref: '#/components/parameters/job-subjects'
+        - $ref: '#/components/parameters/member-numbers'
+        - $ref: '#/components/parameters/actioned-by-user-ids'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/page-number'
+        - $ref: '#/components/parameters/sort'
+        - $ref: '#/components/parameters/job-application-statuses'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                anyOf:
+                  - $ref: '#/components/schemas/response-2'
+                  - $ref: '#/components/schemas/response-3'
+                  - $ref: '#/components/schemas/response-4'
+                discriminator:
+                  propertyName: apiSchema
+                  mapping:
+                    JobApplicationsForAdminSet1: '#/components/schemas/response-2'
+                    JobApplicationsForSchoolSet1: '#/components/schemas/response-3'
+                    JobApplicationsForTeacherSet1: '#/components/schemas/response-4'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+      security:
+        - api_key: []
+  /schools:
+    get:
+      operationId: getSchools_proposed
+      tags:
+        - Schools
+        - status-proposed
+      summary: Get a list of schools (proposed)
+      parameters:
+        - $ref: '#/components/parameters/school-ids'
+          name: ids
+        - in: query
+          name: include
+          description: Which nested objects to include
+          example: 'city,city.country,city.country.region'
+          schema:
+            type: string
+        - in: query
+          name: fields
+          style: deepObject
+          allowReserved: true
+          explode: true
+          schema:
+            type: object
+            additionalProperties:
+              $ref: '#/components/schemas/CitySet1'
+            example:
+              articles: 'title,body'
+              people: name
+        - in: query
+          name: 'filter[name]'
+          description: Name of part of school
+          example: International
+          schema:
+            type: string
+        - in: query
+          name: 'filter[percentageComplete]'
+          description: Foo bar
+          style: deepObject
+          allowReserved: true
+          explode: true
+          schema:
+            type: object
+            properties:
+              gte:
+                type: integer
+                format: int32
+            example:
+              gte: 21
+        - in: query
+          name: filter
+          description: Foo bar
+          style: deepObject
+          allowReserved: true
+          explode: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                minLength: 2
+                description: Name of part of school
+              id:
+                type: string
+              curriculum.id:
+                type: integer
+                format: int32
+              city.country.region.id:
+                type: integer
+                format: int32
+              city.country.id:
+                type: integer
+                format: int32
+              city.id:
+                description: 'Typically used as [city.id][contains]=1,2'
+                type: integer
+                format: int32
+              percentageComplete:
+                description: 'Typically used as [percentageComplete][gte]'
+                type: object
+                properties:
+                  gte:
+                    type: integer
+                    format: int32
+            example:
+              name: International
+              id: 123
+              curriculum.id: 6
+              city.country.region.id: 1
+              city.country.id: 2
+              city.id: 210
+        - in: query
+          name: 'filter[city.country.region.id]'
+          description: Comma separated list of region ids
+          example: '1,2'
+          schema:
+            type: string
+        - in: query
+          name: 'filter[city.country.id]'
+          description: Comma separated list of country ids
+          example: '2,3'
+          schema:
+            type: string
+        - in: query
+          name: 'filter[city.id]'
+          description: Comma separated list of city ids
+          example: 210
+          schema:
+            type: string
+        - in: query
+          name: 'filter[academicSystem.id]'
+          description: Comma separated list of academicSystems ids
+          example: '3,4'
+          schema:
+            type: string
+        - in: query
+          name: accreditations
+          description: Comma separated list of accreditations ids
+          example: '4,14'
+          schema:
+            type: string
+        - in: query
+          name: educationLevels
+          description: Comma separated list of educationLevels ids
+          example: '6,3'
+          schema:
+            type: string
+        - in: query
+          name: nationalityGroups
+          description: Comma separated list of nationalityGroups ids
+          example: '207,209'
+          schema:
+            type: string
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/page-number'
+        - $ref: '#/components/parameters/sort'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response-5'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+      security:
+        - api_key: []
+  /teachers/set-1:
+    get:
+      operationId: getTeachers
+      tags:
+        - Teachers
+        - status-proposed
+      summary: Get a list of teachers (proposed)
+      description: "\r\nWill typically be used in a 'teacher picker'."
+      parameters:
+        - $ref: '#/components/parameters/search'
+          description: |
+            Matches against a teacher name or member number.
+
+              - let S = replace(search, ' ', '% ') + '%', then the WHERE clause is:
+              - firstName like S OR lastName like S OR fullName like S OR memberNumber like S
+
+            Examples:
+              - 1. 'br' - includes 'Brian Jones' and 'Steve Bronson', but not 'Abraham Jones' (S = 'br%')
+              - 2. 'j s' - includes 'John Smith' (S = 'j% s%')
+              - 3. 12345 - includes 12345 and 123456 (S = '12345%')
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/teachers'
+  '/users/{username}':
+    parameters:
+      - name: pretty_print
+        in: query
+        description: Pretty print response
+        schema:
+          type: boolean
+    get:
+      tags:
+        - Example - User
+      summary: Get user by user name
+      description: |
+        Some description of the operation.
+        You can use `Markdown` here.
+      operationId: getUserByName
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be fetched
+          required: true
+          schema:
+            type: string
+        - name: with_email
+          in: query
+          description: Filter users without email
+          schema:
+            type: boolean
+      security:
+        - main_auth:
+            - 'read:users'
+        - api_key: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+              example:
+                username: user1
+                email: user@example.com
+        '403':
+          description: Forbidden
+          $ref: '#/components/responses/Problem'
+        '404':
+          description: User not found
+          $ref: '#/components/responses/Problem'
+    put:
+      tags:
+        - Example - User
+      summary: Updated user
+      description: This can only be done by the logged in user.
+      operationId: updateUser
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be updated
+          required: true
+          schema:
+            type: string
+      security:
+        - main_auth:
+            - 'write:users'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/User'
+        description: Updated user object
+        required: true
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Invalid user supplied
+          $ref: '#/components/responses/Problem'
+        '404':
+          description: User not found
+          $ref: '#/components/responses/Problem'
+  /echo:
+    post:
+      tags:
+        - Example - Echo
+      summary: Echo test
+      description: Receive the exact message you've sent
+      operationId: echo
+      security:
+        - api_key: []
+        - basic_auth: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              $ref: '#/components/headers/ExpiresAfter'
+          content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: Hello world!
+            application/xml:
+              schema:
+                type: string
+            text/csv:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              example: Hello world!
+          application/xml:
+            schema:
+              type: string
+              example: Hello world!
+        description: Echo payload
+        required: true
+      x-codeSamples:
+        - lang: C#
+          source: |
+            API.v1.Echo echo = new API.v1.Echo();
+            echo.message = "Hello World!");
+            EchoResponse response = echo.post();
+            if (response.statusCode == HttpStatusCode.Created)
+            {
+              // Success
+            }
+            else
+            {
+              // Something wrong -- check response for errors
+              Console.WriteLine(response.getRawResponse());
+            }
+        - lang: PHP
+          source: |
+            $form = new \API\Entities\Echo();
+            $form->setMessage("Hello World!");
+            try {
+                $pet = $client->echo()->post($form);
+            } catch (UnprocessableEntityException $e) {
+                var_dump($e->getErrors());
+            }
+  /pathItem:
+    post:
+      tags:
+        - Example - Tag
+      summary: Operation summary
+      description: |
+        Operation description **Markdown**.
+      operationId: operationId
+      security:
+        - api_key: []
+        - basic_auth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Schema'
+        description: requestBody description
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Rate-Limit:
+              description: Calls per hour allowed by the user.
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              $ref: '#/components/headers/ExpiresAfter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Schema'
+        '400':
+          $ref: '#/components/responses/Problem'
+  /pathItemWithExamples:
+    post:
+      tags:
+        - Example - Tag
+      summary: Operation summary with examples
+      description: |
+        Operation description **markdown**.
+      operationId: postPathItemWithExamples
+      security:
+        - api_key: []
+        - basic_auth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Schema'
+            examples:
+              mapName:
+                summary: My first example
+                description: My first example's description.
+                value:
+                  stringProperty: tada
+              mapNameDoesNotShowInDocsUnlessSummaryIsNotProvided:
+                value:
+                  stringProperty: checkmark
+        description: requestBody description
+        required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              $ref: '#/components/headers/ExpiresAfter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Schema'
+        '400':
+          $ref: '#/components/responses/Problem'
+components:
+  securitySchemes:
+    main_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          scopes:
+            'read:users': read users info
+            'write:users': modify or remove users
+    api_key:
+      type: apiKey
+      in: header
+      name: api_key
+    basic_auth:
+      type: http
+      scheme: basic
+  parameters:
+    key:
+      name: key
+      in: query
+      description: >-
+        Comma separated list of list keys (keywords); TODO - consider renaming
+        to 'keys'
+      example: 'subjects,countries'
+      schema:
+        type: string
+    school-ids:
+      name: school-ids
+      in: query
+      description: Comma separated list of school ids
+      example: '123,234'
+      schema:
+        type: string
+    limit:
+      name: limit
+      in: query
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+    page-number:
+      name: page-number
+      in: query
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
+    sort:
+      name: sort
+      in: query
+      description: Order to sort the records
+      example: 'applicationDate,-subject'
+      schema:
+        type: string
+    job-ids:
+      name: job-ids
+      in: query
+      description: Comma separated list of job ids
+      example: '1234,2345'
+      schema:
+        type: string
+    job-subjects:
+      name: job-subjects
+      in: query
+      description: Comma separated list of subject ids
+      example: '2,3'
+      schema:
+        type: string
+    member-numbers:
+      name: member-numbers
+      in: query
+      description: Comma separated list of teacher member numbers
+      example: '123456,234567'
+      schema:
+        type: string
+    actioned-by-user-ids:
+      name: actioned-by-user-ids
+      in: query
+      description: Comma separated list of user ids
+      example: '1234,210607'
+      schema:
+        type: string
+    job-application-statuses:
+      deprecated: true
+      name: job-application-statuses
+      in: query
+      description: >-
+        Comma separated list of job application status ids; TODO - better if
+        called job-application-status-ids
+      example: '-20,-10,1'
+      schema:
+        type: string
+    search:
+      name: search
+      in: query
+      description: Term to search
+      example: Foo bar
+      schema:
+        type: string
+  schemas:
+    AcademicSystem:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 2
+        system:
+          type: string
+          example: American
+    AcceptedTeacherQualification:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        qualification:
+          type: string
+          example: Australia
+    AccountStatus:
+      type: object
+      properties:
+        accountStatuses:
+          type: string
+          example: null
+    AdminNoteType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Interview
+        rank:
+          type: integer
+          format: int32
+          example: 10
+    AgeLevel:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Pre-school
+    Attraction:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        attraction:
+          type: string
+          example: Mountain range
+    Benefit:
+      type: object
+      properties:
+        type:
+          type: integer
+          format: int32
+          example: 1
+        benefit:
+          type: string
+          example: Discount on School Fees for Staff Children
+        id:
+          type: integer
+          format: int32
+          example: 1
+    id:
+      type: integer
+      format: int32
+      example: 23
+    name:
+      type: string
+      example: Portugal
+    isoCode:
+      type: string
+      example: af
+    freeHealthCare:
+      type: string
+      example: 0
+      description: Boolean; TODO - better if has values true or false
+    phoneCode:
+      type: string
+      example: 93
+    currency:
+      type: integer
+      format: int32
+      example: 3
+      description: Id; TODO - better if called 'currencyId'
+    location:
+      type: string
+      example: '33,65'
+      description: Latitude and longitude (comma separated); TODO - better if an object
+    nationalAverageIncome:
+      type: number
+      format: float
+      example: 123.45
+      description: Amount in USD; TODO - better if called 'nationalAverageIncomeInUsd'
+    region:
+      type: string
+      example: 2
+      description: Id; TODO - better if called 'regionId'
+    CountrySet2:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/id'
+        name:
+          $ref: '#/components/schemas/name'
+        isoCode:
+          $ref: '#/components/schemas/isoCode'
+        freeHealthCare:
+          $ref: '#/components/schemas/freeHealthCare'
+        phoneCode:
+          $ref: '#/components/schemas/phoneCode'
+        currency:
+          $ref: '#/components/schemas/currency'
+        location:
+          $ref: '#/components/schemas/location'
+        nationalAverageIncome:
+          $ref: '#/components/schemas/nationalAverageIncome'
+        region:
+          $ref: '#/components/schemas/region'
+    Subject:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Accounting
+        basicJobCategory:
+          description: TODO
+          type: integer
+          format: int32
+          example: 3
+    Lists:
+      type: object
+      properties:
+        academicSystems:
+          type: array
+          items:
+            $ref: '#/components/schemas/AcademicSystem'
+        acceptedTeacherQualifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/AcceptedTeacherQualification'
+        accountStatuses:
+          type: array
+          items:
+            $ref: '#/components/schemas/AccountStatus'
+        adminNoteTypes:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdminNoteType'
+        ageLevels:
+          type: array
+          items:
+            $ref: '#/components/schemas/AgeLevel'
+        attractions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attraction'
+        benefits:
+          type: array
+          items:
+            $ref: '#/components/schemas/Benefit'
+        countries:
+          type: array
+          items:
+            $ref: '#/components/schemas/CountrySet2'
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subject'
+    accreditations:
+      type: array
+      items:
+        type: integer
+        format: int32
+        example: 12
+    academicSystems:
+      type: array
+      items:
+        type: integer
+        format: int32
+        example: 1
+    completionLevel:
+      type: integer
+      format: int32
+      example: 100
+    slug:
+      type: string
+      example: africa-morocco-casablanca-george-washington-academy
+    isFavourite:
+      type: integer
+      format: int32
+      example: 1
+    city:
+      type: object
+      properties:
+        imageUrl:
+          type: string
+          example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+        id:
+          type: integer
+          format: int32
+          example: 6
+        name:
+          type: string
+          example: Casablanca
+    properties_id:
+      type: integer
+      format: int32
+      example: 17
+    properties_name:
+      type: string
+      example: Raintree International School
+    endorsedByTh:
+      type: integer
+      format: int32
+      example: 1
+    badgeImage:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 487931
+        resource:
+          type: string
+          example: /static/mediav2/schools/2538/images/487931_main.jpg
+        reference:
+          type: string
+          example: SATR.jpg
+        type:
+          type: integer
+          format: int32
+          example: 0
+    schoolImage:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 499271
+        resource:
+          type: string
+          example: /static/mediav2/schools/2538/images/499271_main.jpg
+        reference:
+          type: string
+          example: GWAD.jpg
+        type:
+          type: integer
+          format: int32
+          example: 13
+    locationLatLong:
+      type: string
+      example: '9.0220503, 7.3926057'
+    approvedByTh:
+      deprecated: true
+      type: integer
+      format: int32
+      example: 1
+    visitedByTh:
+      deprecated: true
+      type: integer
+      format: int32
+      example: 1
+    country:
+      deprecated: true
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 48
+        name:
+          type: string
+          example: Morocco
+    properties_region:
+      deprecated: true
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Africa
+    response:
+      description: foo bar
+      type: object
+      properties:
+        schools:
+          type: array
+          items:
+            type: object
+            properties:
+              accreditations:
+                $ref: '#/components/schemas/accreditations'
+              academicSystems:
+                $ref: '#/components/schemas/academicSystems'
+              completionLevel:
+                $ref: '#/components/schemas/completionLevel'
+              slug:
+                $ref: '#/components/schemas/slug'
+              isFavourite:
+                $ref: '#/components/schemas/isFavourite'
+              city:
+                $ref: '#/components/schemas/city'
+              id:
+                $ref: '#/components/schemas/properties_id'
+              name:
+                $ref: '#/components/schemas/properties_name'
+              endorsedByTh:
+                $ref: '#/components/schemas/endorsedByTh'
+              badgeImage:
+                $ref: '#/components/schemas/badgeImage'
+              schoolImage:
+                $ref: '#/components/schemas/schoolImage'
+              locationLatLong:
+                $ref: '#/components/schemas/locationLatLong'
+              approvedByTh:
+                $ref: '#/components/schemas/approvedByTh'
+              visitedByTh:
+                $ref: '#/components/schemas/visitedByTh'
+              country:
+                $ref: '#/components/schemas/country'
+              region:
+                $ref: '#/components/schemas/properties_region'
+        count:
+          type: integer
+          format: int32
+          example: 20
+    city-response:
+      description: foo bar
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 6
+        name:
+          type: string
+          example: Casablanca
+        alias:
+          type: string
+          example: /Africa/Morocco/Casablanca
+        slug:
+          type: string
+          example: africa-morocco-casablanca
+        keyAttractions:
+          type: string
+          example: 'Mosque Hassan II, Jemaa el Fna, Atlas Mountains, Tour Hassan'
+        language:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+              example: 0
+            name:
+              type: string
+              format: nullable
+        countryId:
+          type: integer
+          format: int32
+          example: 48
+        nameWithCountry:
+          type: string
+          example: Casablanca (Morocco)
+        locationLatLong:
+          type: string
+          example: 33.5333333 -7.5833333
+    fullName:
+      type: string
+      example: Dean Owen
+    memberNumber:
+      type: integer
+      format: int32
+      example: 123456
+    photoUrl:
+      type: string
+      example: /static/media/teachers/photo/16844.jpg
+    currentLocationCountryId:
+      type: integer
+      format: int32
+      example: 14
+    qualificationCountryId:
+      type: integer
+      format: int32
+      example: 7
+    numberOfYearsExperience:
+      type: integer
+      format: int32
+      example: 3
+    TeacherSet2:
+      type: object
+      properties:
+        fullName:
+          $ref: '#/components/schemas/fullName'
+        memberNumber:
+          $ref: '#/components/schemas/memberNumber'
+        photoUrl:
+          $ref: '#/components/schemas/photoUrl'
+        currentLocationCountryId:
+          $ref: '#/components/schemas/currentLocationCountryId'
+        qualificationCountryId:
+          $ref: '#/components/schemas/qualificationCountryId'
+        numberOfYearsExperience:
+          $ref: '#/components/schemas/numberOfYearsExperience'
+    job-properties_id:
+      type: integer
+      format: int32
+      example: 123456
+    title:
+      type: string
+      example: Head Of Early Years
+    subjectId:
+      type: integer
+      format: int32
+      example: 16
+    JobSet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/job-properties_id'
+        title:
+          $ref: '#/components/schemas/title'
+        subjectId:
+          $ref: '#/components/schemas/subjectId'
+    imageUrl:
+      type: string
+      example: /static/mediav2/school/image/142418.jpg
+    city-properties_id:
+      type: integer
+      format: int32
+      example: 12
+    city-properties_name:
+      type: string
+      example: Lisbon
+    region-properties_id:
+      type: integer
+      format: int32
+      example: 5
+    region-properties_name:
+      type: string
+      example: Europe
+    RegionSet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/region-properties_id'
+        name:
+          $ref: '#/components/schemas/region-properties_name'
+    CountrySet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/id'
+        name:
+          $ref: '#/components/schemas/name'
+        region:
+          $ref: '#/components/schemas/RegionSet1'
+    CitySet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/city-properties_id'
+        name:
+          $ref: '#/components/schemas/city-properties_name'
+        country:
+          anyOf:
+            - $ref: '#/components/schemas/CountrySet1'
+            - $ref: '#/components/schemas/CountrySet2'
+    SchoolSet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/properties_id'
+        name:
+          $ref: '#/components/schemas/properties_name'
+        imageUrl:
+          $ref: '#/components/schemas/imageUrl'
+        city:
+          $ref: '#/components/schemas/CitySet1'
+    job-application:
+      type: object
+      properties:
+        statusId:
+          type: integer
+          format: int32
+          example: 419
+        actionedByUserId:
+          type: integer
+          format: int32
+          example: 210607
+        actionDate:
+          type: integer
+          format: int32
+          example: 1550417150000
+        applicationDate:
+          type: integer
+          format: int64
+          example: 1550416230000
+        name:
+          type: string
+        teacher:
+          $ref: '#/components/schemas/TeacherSet2'
+        job:
+          $ref: '#/components/schemas/JobSet1'
+        school:
+          $ref: '#/components/schemas/SchoolSet1'
+    response-2:
+      description: foo bar
+      type: object
+      properties:
+        apiSchema:
+          type: string
+        jobApplications:
+          type: array
+          items:
+            $ref: '#/components/schemas/job-application'
+    job-application-2:
+      type: object
+      properties:
+        statusId:
+          type: integer
+          format: int32
+          example: 419
+        teacher:
+          $ref: '#/components/schemas/TeacherSet2'
+        job:
+          $ref: '#/components/schemas/JobSet1'
+    response-3:
+      description: foo bar
+      type: object
+      properties:
+        apiSchema:
+          type: string
+        jobApplications:
+          type: array
+          items:
+            $ref: '#/components/schemas/job-application-2'
+    job-application-3:
+      type: object
+      properties:
+        statusId:
+          type: integer
+          format: int32
+          example: 419
+        applicationDate:
+          type: integer
+          format: int64
+          example: 1550416230000
+        name:
+          type: string
+        job:
+          $ref: '#/components/schemas/JobSet1'
+        school:
+          $ref: '#/components/schemas/SchoolSet1'
+    response-4:
+      description: foo bar
+      type: object
+      properties:
+        apiSchema:
+          type: string
+        jobApplications:
+          type: array
+          items:
+            $ref: '#/components/schemas/job-application-3'
+    isEndorsedByTh:
+      type: boolean
+      example: true
+    properties_visitedByTh:
+      type: boolean
+      example: false
+    city-properties_imageUrl:
+      type: string
+      example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+    CitySet2:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/city-properties_id'
+        name:
+          $ref: '#/components/schemas/city-properties_name'
+        imageUrl:
+          $ref: '#/components/schemas/city-properties_imageUrl'
+        country:
+          anyOf:
+            - $ref: '#/components/schemas/CountrySet1'
+            - $ref: '#/components/schemas/CountrySet2'
+    response-5:
+      description: foo bar
+      type: object
+      properties:
+        schools:
+          type: array
+          items:
+            type: object
+            properties:
+              isEndorsedByTh:
+                $ref: '#/components/schemas/isEndorsedByTh'
+              visitedByTh:
+                $ref: '#/components/schemas/properties_visitedByTh'
+              accreditations:
+                $ref: '#/components/schemas/accreditations'
+              academicSystems:
+                $ref: '#/components/schemas/academicSystems'
+              completionLevel:
+                $ref: '#/components/schemas/completionLevel'
+              slug:
+                $ref: '#/components/schemas/slug'
+              isFavourite:
+                $ref: '#/components/schemas/isFavourite'
+              city:
+                $ref: '#/components/schemas/CitySet2'
+              id:
+                $ref: '#/components/schemas/properties_id'
+              name:
+                $ref: '#/components/schemas/properties_name'
+              endorsedByTh:
+                $ref: '#/components/schemas/endorsedByTh'
+              badgeImage:
+                $ref: '#/components/schemas/badgeImage'
+              schoolImage:
+                $ref: '#/components/schemas/schoolImage'
+              locationLatLong:
+                $ref: '#/components/schemas/locationLatLong'
+        count:
+          type: integer
+          format: int32
+          example: 20
+    teacher-properties_id:
+      type: integer
+      format: int32
+      example: 1234
+    TeacherSet1:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/teacher-properties_id'
+        fullName:
+          $ref: '#/components/schemas/fullName'
+        memberNumber:
+          $ref: '#/components/schemas/memberNumber'
+        photoUrl:
+          $ref: '#/components/schemas/photoUrl'
+    teachers:
+      description: Response containing an array of teachers
+      type: object
+      properties:
+        teachers:
+          type: array
+          items:
+            $ref: '#/components/schemas/TeacherSet1'
+    Email:
+      description: User email address
+      type: string
+      format: test
+      example: john.smith@example.com
+    User:
+      type: object
+      properties:
+        username:
+          description: User supplied username
+          type: string
+          minLength: 4
+          example: John78
+        firstName:
+          description: User first name
+          type: string
+          minLength: 1
+          example: John
+        lastName:
+          description: User last name
+          type: string
+          minLength: 1
+          example: Smith
+        email:
+          $ref: '#/components/schemas/Email'
+    Problem:
+      type: object
+      additionalProperties: true
+      minProperties: 1
+      description: >-
+        The Problem Details JSON Object
+        [[RFC7807](https://tools.ietf.org/html/rfc7807)].
+      properties:
+        type:
+          type: string
+          description: >-
+            A URI reference [[RFC3986](https://tools.ietf.org/html/rfc3986)]
+            that identifies the problem type. It should provide human-readable
+            documentation for the problem type. When this member is not present,
+            its value is assumed to be "about:blank".
+          format: uri
+        title:
+          type: string
+          description: >-
+            A short, human-readable summary of the problem type. It SHOULD NOT
+            change from occurrence to occurrence of the problem, except for
+            purposes of localization.
+        status:
+          type: integer
+          description: The HTTP status code.
+          minimum: 400
+          maximum: 599
+        detail:
+          type: string
+          description: >-
+            A human-readable explanation specific to this occurrence of the
+            problem.
+        instance:
+          type: string
+          description: >-
+            A URI reference that identifies the specific occurrence of the
+            problem.  It may or may not yield further information if
+            dereferenced.
+    Schema:
+      type: object
+      title: Scalars
+      properties:
+        stringProperty:
+          description: Property name's description (type is string)
+          type: string
+          examples:
+            - example
+            - sample
+        readOnlyStringProperty:
+          description: Notice this only appears in the response.
+          type: string
+          readOnly: true
+          examples:
+            - example
+        writeOnlyStringProperty:
+          description: Notice this only appears in the request.
+          type: string
+          writeOnly: true
+          examples:
+            - example
+        minLengthString:
+          description: Property name's description (type is string)
+          type: string
+          minLength: 4
+          examples:
+            - example
+        maxLengthString:
+          description: Property name's description (type is string)
+          type: string
+          maxLength: 140
+          examples:
+            - example
+        minAndMaxLengthString:
+          description: Property name's description (type is string)
+          type: string
+          minLength: 4
+          maxLength: 140
+          examples:
+            - example
+        nullableOrStringProperty:
+          description: Property name's description (type is string or null)
+          type:
+            - string
+            - null
+          examples:
+            - example
+        stringEnumValues:
+          description: Property name's description (type is string)
+          type: string
+          enum:
+            - sample
+            - example
+            - specimen
+            - case
+            - instance
+            - illustration
+        stringDateTime:
+          description: 'Property name''s description (type is string, format is date-time)'
+          type: string
+          format: date-time
+        stringDate:
+          description: 'Property name''s description (type is string, format is date-time)'
+          type: string
+          format: date
+        stringEmail:
+          description: 'Property name''s description (type is string, format is email)'
+          type: string
+          format: email
+        stringIpAddressV4:
+          description: 'Property name''s description (type is string, format is ipv4 address)'
+          type: string
+          format: ipv4
+        stringIpAddressV6:
+          description: 'Property name''s description (type is string, format is ipv6 address)'
+          type: string
+          format: ipv6
+        stringPassword:
+          description: 'Property name''s description (type is string, format is password)'
+          type: string
+          format: password
+        stringHostname:
+          description: 'Property name''s description (type is string, format is hostname)'
+          type: string
+          format: hostname
+        stringUri:
+          description: 'Property name''s description (type is string, format is uri)'
+          type: string
+          format: uri
+        stringUuid:
+          description: 'Property name''s description (type is string, format is uuid)'
+          type: string
+          format: uuid
+        numberProperty:
+          description: Property name's description (type is number)
+          type: number
+          example: 8
+        numberFloat:
+          description: 'Property name''s description (type is number, format is float)'
+          type: number
+          format: float
+        numberDouble:
+          description: 'Property name''s description (type is number, format is double)'
+          type: number
+          format: double
+        numberGreaterThanOrEquals:
+          description: Property name's description (type is number)
+          type: number
+          minimum: 5
+        numberGreaterThan:
+          description: Property name's description (type is number)
+          type: number
+          exclusiveMinimum: 5
+        numberLessThan:
+          description: Property name's description (type is number)
+          type: number
+          exclusiveMaximum: 8
+        numberLessThanOrEquals:
+          description: Property name's description (type is number)
+          type: number
+          maximum: 8
+        numberRange:
+          description: Property name's description (type is number)
+          type: number
+          minimum: 5
+          maximum: 8
+        numberRangeExclusiveMaximum:
+          description: Property name's description (type is number)
+          type: number
+          minimum: 5
+          exclusiveMaximum: 8
+        numberRangeExclusiveMinimumAndMaximum:
+          description: Property name's description (type is number)
+          type: number
+          exclusiveMinimum: 5
+          exclusiveMaximum: 8
+        numberMultipleOf:
+          description: Property name's description (type is number)
+          type: number
+          multipleOf: 2
+        integerType:
+          description: Property name's description (type is integer)
+          type: integer
+        integer32bit:
+          description: 'Property name''s description (type is integer, format is int32)'
+          type: integer
+          format: int32
+        integer64bit:
+          description: 'Property name''s description (type is integer, format is int64)'
+          type: integer
+          format: int64
+        booleanProperty:
+          description: Property name's description (type is boolean)
+          type: boolean
+  responses:
+    Problem:
+      description: Problem
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+  headers:
+    ExpiresAfter:
+      description: date in UTC when token expires
+      schema:
+        type: string
+        format: date-time
