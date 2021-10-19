@@ -1,7 +1,7 @@
 get:
   operationId: getSchools_proposed
   tags:
-    - Schools
+    - schools
     - status-proposed
   summary: Get a list of schools (proposed)
   parameters:
@@ -22,8 +22,8 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "./../../../components/schemas/regional/cities/CitySet1.yaml"
+        # additionalProperties:
+        #   $ref: "./../../../components/schemas/proposed/cities/CitySet1.yaml"
         example:
           articles: title,body
           people: name
@@ -162,7 +162,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/proposed/schools/response.yaml"
+            $ref: "../../../components/schemas/proposed/schools/School.yaml"
     "400":
       description: Invalid ID supplied
     "404":

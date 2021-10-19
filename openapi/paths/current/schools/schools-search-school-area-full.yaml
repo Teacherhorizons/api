@@ -1,0 +1,133 @@
+get:
+  operationId: getSchools_current
+  tags:
+    - schools
+    - status-current
+  summary: Get a list of schools (current)
+  parameters:
+    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+      name: ids
+
+    - in: query
+      name: search
+      description: Name of part of school
+      example: International
+      schema:
+        type: string
+
+    - in: query
+      name: curriculums
+      description: Comma separated list of curriculum ids
+      example: 6,13
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma separated list of region ids
+      example: 1,2
+      schema:
+        type: string
+
+    - in: query
+      name: countries
+      description: Comma separated list of country ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: cities
+      description: Comma separated list of city ids
+      example: 210
+      schema:
+        type: string
+
+    - in: query
+      name: academicSystems
+      description: Comma separated list of academicSystems ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: minimumPercentageComplete
+      description: Comma separated list of minimumPercentageComplete ids
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: accreditations
+      description: Comma separated list of accreditations ids
+      example: 4,14
+      schema:
+        type: string
+
+    - in: query
+      name: educationLevels
+      description: Comma separated list of educationLevels ids
+      example: 6,3
+      schema:
+        type: string
+
+    - in: query
+      name: nationalityGroups
+      description: Comma separated list of nationalityGroups ids
+      example: 207,209
+      schema:
+        type: string
+
+    - $ref: "../../../components/parameters/current/list.yaml#/limit"
+    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+
+  # limit=20&regions=1&countries=2&cities=210&sort=-thMatchScore&my-list=favourites&search=test&academic-systems=3,4&
+  # curriculums=6,13&minimum-percentage-complete=21&accreditations=4,14&visited-by-th=1&endorsed-by-th=1&
+  # education-levels=6,3&teacher-nationality-groups-accepted=207,209&match-member-number=1234567
+
+  # , @RequestParam(value="ids", required = false) Integer[] _schoolids
+  # , @RequestParam(value="search", required=false) String textSearchTerm
+  # , @RequestParam(value="curriculums", required = false) Integer[] curriculums
+  # , @RequestParam(value="regions", required = false) Integer[] regions
+  # , @RequestParam(value="countries",required = false) Integer[] countries
+  # , @RequestParam(value="cities",required = false) Integer[] cities
+  # , @RequestParam(value="academic-systems",required = false) Integer[] academicSystems
+
+  #   , @RequestParam(value="minimum-percentage-complete",required = false) Integer minimumPercentageComplete
+
+  # , @RequestParam(value="accreditations",required = false) Integer[] accreditations
+  # , @RequestParam(value="education-levels",required = false) Integer[] educationLevels
+  # , @RequestParam(value="teacher-nationality-groups-accepted",required = false) Integer[] nationalityGroups
+  # , @RequestParam(value="approved-by-th",required = false) Integer _approvedByTh
+  # , @RequestParam(value="endorsed-by-th",required = false) Integer _endorsedByTh
+  # , @RequestParam(value="visited-by-th",required = false) Integer visitedByTh
+  #   , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+
+  #   , @RequestParam(value="lras",required = false) Integer[] thAdviserIds
+
+  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
+  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
+  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
+  # , @RequestParam(value="long-to",required = false) Float longitudeTo
+
+  #   , @RequestParam(value="limit",required = false) Integer pagesize
+  # , @RequestParam(value="page-number",required=false) Integer pagenumber
+  # , @RequestParam(value="sort",required=false) String[] sortfield
+
+  # , @RequestParam(value="match-teacher-id",required=false) Integer matchTeacherId
+  # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
+  # , @RequestParam(value="min-match-score",required=false) Double minMatchScore
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/schools/schools-search-school-area-full.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

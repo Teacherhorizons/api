@@ -37,6 +37,7 @@
 
 - https://tanzu.vmware.com/developer/guides/api-first-development/
 - https://apisyouwonthate.com/blog/json-api-openapi-and-json-schema-working-in-harmony
+- https://stackoverflow.com/a/49843322 - OData, JSON API, GraphQL, OpenAPI ("focus on building a consistent and well-documented API")
 
 
 ## Documentation limitations
@@ -85,3 +86,109 @@ guesswork in calling the service. -->
 # Style guide
 
 ## TODO...
+
+# JSON API (proposed)
+
+### Current API call
+
+/v3/schools/search/school-area/full?countries=2,3
+
+
+### All possible values (simplified response, for example purposes):
+
+```
+{
+  id,
+  name,
+  slug,
+  completionLevel,
+  city: {
+    id,
+    name,
+    country: {
+      id,
+      name,
+      currency,
+      region: {
+         id,
+         name
+      }
+    }
+  }
+}
+```
+
+### Simple subset (sparse fieldset):
+
+/schools?fields=id,name
+
+```
+{
+  id,
+  name
+}
+```
+
+### Complex subset:
+
+/schools?include=city,city.country&fields=id,name&fields[city]=name&fields[city.country]=id,currency
+
+```
+{
+  id,
+  name,
+  city: {
+    name,
+    country: {
+      id,
+      currency
+    }
+  }
+}
+```
+
+OR JSON API style:
+
+```
+data: {
+  type: "school"
+  id,
+  "attributes": {
+    name
+  },
+  "relationships": {
+    "city": {
+      "data": { "type": "city", "id": "9" }
+    },
+  }
+}
+included: {
+  [
+    {
+      type: "city"
+      id: 9
+      "attributes": {
+        name
+      },
+      "relationships": {
+        "country": {
+          "data": { "type": "country", "id": "17" }
+        },
+      }      
+    },
+    {
+      type: "country"
+      id: 17,
+      "attributes": {
+        currency
+      },
+    }
+  }
+  ]
+}
+
+
+```
+
+
+<!-- /schools?include=city,city.country,city.country.region& -->

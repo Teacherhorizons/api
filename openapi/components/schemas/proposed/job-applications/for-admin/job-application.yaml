@@ -1,0 +1,26 @@
+type: object
+properties:
+  statusId:
+    type: integer
+    format: int32
+    example: 419
+  actionedByUserId:
+    type: integer
+    format: int32
+    example: 210607
+  actionDate:
+    type: integer
+    format: int32
+    example: 1550417150000
+  applicationDate:
+    type: integer
+    format: int64
+    example: 1550416230000
+  name:
+    type: string
+  teacher:
+    $ref: "../../teachers/Teacher.yaml"
+  job:
+    $ref: "../../jobs/Job.yaml"
+  school:
+    $ref: "../../schools/School.yaml"

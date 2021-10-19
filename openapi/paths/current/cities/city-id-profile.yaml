@@ -1,0 +1,27 @@
+get:
+  operationId: getCity_current
+  tags:
+    - cities
+    - status-current
+  summary: Get a city (current)
+  parameters:
+    - in: path
+      name: cityId
+      # description:
+      example: 12
+      schema:
+        type: integer
+        format: int32
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/cities/city-id-profile.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

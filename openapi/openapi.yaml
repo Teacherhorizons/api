@@ -17,19 +17,21 @@ info:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  # areas
-  - name: Academy
-    description: Operations relating to Academy
-  - name: City # consider tag structure - Regional? Cities?
-    description: Operations relating to a city
-  - name: Job applications
+  # categories
+  - name: cities
+    description: Operations relating to cities
+  - name: countries
+    description: Operations relating to countries
+  - name: job applications
     description: Operations relating to job applications
-  - name: Lists
-    description: Operations relating to simple lists of objects - such as subjects or countries
-  - name: Schools
-    description: ...
-  - name: Teachers
-    description: ...
+  - name: lists
+    description: Operations relating to simple lists of objects - such as subjects or roles
+  - name: regions
+    description: Operations relating to regions (~continents)
+  - name: schools
+    description: Operations relating to schools
+  - name: teachers
+    description: Operations relating to teachers or candidates
 
   # statuses
   - name: status-current
@@ -48,25 +50,26 @@ servers:
   - url: "https://beta.teacherhorizons.com/th/api"
 paths:
   # current
+  # $ref is of form: "./paths/current/{category}/{path-words-in-kebab-form}.yaml"
+  /v3/city/id/{cityId}/profile:
+    $ref: "./paths/current/cities/city-id-profile.yaml"
   /v1/lists:
     $ref: "./paths/current/lists/lists.yaml"
+  /v3/school/slug/{schoolSlug}/profile:
+    $ref: "./paths/current/schools/school-slug-profile.yaml"
   /v3/schools/search/school-area/full:
-    $ref: "./paths/current/schools/schools-set-1.yaml"
-  /v3/city/id/{cityId}/profile:
-    $ref: "./paths/current/regional/city-set-1.yaml"
-  /v3/school/slug/academy/profile:
-    $ref: "./paths/current/academy/academy-set-1.yaml"
+    $ref: "./paths/current/schools/schools-search-school-area-full.yaml"
 
   # proposed
   # TODO: consider versioning and 'sets'
   /job-applications:
-    $ref: "./paths/proposed/job-applications/job-applications-set-1.yaml"
+    $ref: "./paths/proposed/job-applications/job-applications.yaml"
   /schools:
     $ref: "./paths/proposed/schools/schools.yaml"
   # /schools/{schoolId}:
   #   $ref: "./paths/proposed/schools/school.yaml"
-  /teachers/set-1:
-    $ref: "./paths/proposed/teachers/teachers-set-1.yaml"
+  /teachers:
+    $ref: "./paths/proposed/teachers/teachers.yaml"
 
   # non-th-examples
   "/users/{username}":
