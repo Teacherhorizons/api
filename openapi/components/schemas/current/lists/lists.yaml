@@ -36,3 +36,801 @@ properties:
     type: array
     items:
       $ref: "./Subject.yaml"
+
+  # TODO: create separate files for each of these
+  teachingLanguages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: English
+  fundingTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          example: -select
+  worldLanguages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Afrikaans
+  nationalities:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 205
+        name:
+          type: string
+          example: American
+        flag:
+          type: string
+          example: us
+  livingCosts:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 3
+        name:
+          type: string
+          example: Average Cost of Litre of Petrol / Gas
+  countryImages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 151
+        imageUrl1:
+          type: string
+          example: /advice/wp-content/uploads/regional/afghanistan-1.jpg
+        imageUrl2:
+          type: string
+          example: /advice/wp-content/uploads/regional/afghanistan-2.jpg
+        name:
+          type: string
+          example: Afghanistan
+  skills:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 44
+        type:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Adobe Creative Suite
+  religiousAffiliations:
+    type: array
+    items:
+      type: object
+      properties:
+        affiliation:
+          type: string
+          example: -select
+  pensionSchemes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: State
+  percentage:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: -select
+        id:
+          type: string
+          format: nullable
+  thDiscoveryMethodCategories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Word of mouth
+        order:
+          type: integer
+          format: int32
+          example: 1
+  schoolAdditionalDocumentCategoryIds:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Teacher induction pack
+  preferenceOptions:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Essential
+        order:
+          type: integer
+          format: int32
+          example: 1
+  userTeacherAdditionalPhotoCategoryIds:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Classroom
+  jobTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Global
+        jobType:
+          type: string
+          example: Supported
+  qualificationTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: not qualified
+        id:
+          type: integer
+          format: int32
+          example: 1
+  cities:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Durres
+        country:
+          type: integer
+          format: int32
+          example: 1
+        id:
+          type: integer
+          format: int32
+          example: 893
+        geolocation:
+          type: object
+          properties:
+            latitude:
+              type: string
+              example: 41.3246
+            longitude:
+              type: string
+              example: 19.4565
+  referenceStatuses:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Pending
+        id:
+          type: integer
+          format: int32
+          example: 1
+  yesno:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Yes
+        id:
+          type: integer
+          format: int32
+          example: 1
+  thRatingsSchool:
+    type: array
+    items:
+      type: integer
+      format: int32
+      example: 6
+  formFields:
+    type: array
+    items:
+      type: object
+      properties:
+        formId:
+          type: integer
+          format: int32
+          example: 1
+        attribute:
+          type: string
+          example: heading
+        type:
+          type: string
+          example: table
+        rank:
+          type: integer
+          format: int32
+          example: 1
+        required:
+          type: integer
+          format: int32
+          example: 0
+        value:
+          type: string
+          example: Professional experience
+        formFieldId:
+          type: integer
+          format: int32
+          example: 1
+  genderRatios:
+    type: array
+    items:
+      type: object
+      properties:
+        ratio:
+          type: string
+          example: -select
+  regions:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        alias:
+          type: string
+          example: /Africa
+        slug:
+          type: string
+          example: africa
+        name:
+          type: string
+          example: Africa
+        locationLatLong:
+          type: string
+          example: 12.27559889056173117.46826171875
+  accreditations:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        type:
+          type: string
+          example: CIS
+        url:
+          type: string
+          example: https://www.cois.org/
+  maritalStatuses:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Single
+        id:
+          type: integer
+          format: int32
+          example: 1
+  passportTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        passportType:
+          type: string
+          example: Australia
+  roles:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: integer
+          format: int32
+          example: 2
+        id:
+          type: integer
+          format: int32
+          example: 23
+        name:
+          type: string
+          example: Board Member / Governor
+  referenceTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        title:
+          type: string
+          example: Middle Manager (Curriculum)
+        type:
+          type: integer
+          format: int32
+          example: 3
+        name:
+          type: string
+          example: Middle Manager (Curriculum)
+  userTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: New
+        id:
+          type: integer
+          format: int32
+          example: 1
+  nationalitiesAll:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 198
+        name:
+          type: string
+          example:
+        flag:
+          type: string
+          format: nullable
+  nationalityGroups:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 205
+        name:
+          type: string
+          example: American
+        flag:
+          type: string
+          example: us
+  internationalExperiences:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Not answered
+        id:
+          type: integer
+          format: int32
+          example: 0
+  regionImages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        imageUrl1:
+          type: string
+          example: https://www.teacherhorizons.com/advice/wp-content/uploads/serengeti.jpg
+        imageUrl2:
+          type: string
+          example: https://www.teacherhorizons.com/advice/wp-content/uploads/articles/another-world-teaching-overseas-in-the-1970s/ethiopia.jpg
+        name:
+          type: string
+          example: Africa
+  thDiscoveryMethods:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        categoryId:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Friend / colleague
+        order:
+          type: integer
+          format: int32
+          example: 1
+  yesNo:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Yes
+        id:
+          type: integer
+          format: int32
+          example: 1
+  cityImages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 207
+        name:
+          type: string
+          example: Aarhus
+  nationalitiesAllBad:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 198
+        name:
+          type: string
+          example:
+        flag:
+          type: string
+          format: nullable
+  userTeacherBadges:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Guest blogger
+        order:
+          type: integer
+          format: int32
+          example: 1
+        slug:
+          type: string
+          example: guest-blogger
+        isAutomated:
+          type: integer
+          format: int32
+          example: 0
+  curriculums:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 6
+        name:
+          type: string
+          example: A-Levels
+  ratingCategories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 5
+        category:
+          type: string
+          example: Ability to save
+  refereeTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        title:
+          type: string
+          example: Middle Manager (Curriculum)
+        type:
+          type: integer
+          format: int32
+          example: 3
+        name:
+          type: string
+          example: Middle Manager (Curriculum)
+  relocationAllowances:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 0
+        allowance:
+          type: string
+          example: -select
+        type:
+          type: integer
+          format: int32
+          example: 0
+  languages:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: English
+  linkCategories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        category:
+          type: string
+          example: Leisure
+  citiesWithCountry:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Durres (Albania)
+        country:
+          type: integer
+          format: int32
+          example: 1
+        id:
+          type: integer
+          format: int32
+          example: 893
+  schoolAdditionalPhotoCategoryIds:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Canteen
+  schoolAdditionalUrlMediaCategoryIds:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Teacher interviews
+  userTeacherVideoUrlCategoryIds:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Classroom teaching
+  documentTypes:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        path:
+          type: string
+          example: /var/www/th/live/static/mediav2/schools/%1$d/images/
+        type:
+          type: string
+          example: School images
+  flightAllowances:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 0
+        allowance:
+          type: string
+          example: -select
+        type:
+          type: integer
+          format: int32
+          example: 0
+  educationLevels:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 2
+        name:
+          type: string
+          example: Bachelors
+  jobSeekingStatuses:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        color:
+          type: string
+          example: Green
+        name:
+          type: string
+          example: Actively looking for a school
+        description:
+          type: string
+          example: Recruiters can access my full profile and contact details.
+  locations:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        alias:
+          type: string
+          example: /Africa
+        slug:
+          type: string
+          example: africa
+        name:
+          type: string
+          example: Africa
+        locationLatLong:
+          type: string
+          example: 12.27559889056173117.46826171875
+  facilities:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 1
+        facility:
+          type: string
+          example: Outdoor Pitches
+  currencies:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+          example: 2
+        code:
+          type: string
+          example: AUD
+        symbol:
+          type: string
+          example: AUS $
+        currency:
+          type: string
+          example: Australian dollar

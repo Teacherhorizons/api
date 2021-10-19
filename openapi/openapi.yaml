@@ -53,8 +53,12 @@ paths:
   # $ref is of form: "./paths/current/{category}/{path-words-in-kebab-form}.yaml"
   /v3/city/id/{cityId}/profile:
     $ref: "./paths/current/cities/city-id-profile.yaml"
+
   /v1/lists:
     $ref: "./paths/current/lists/lists.yaml"
+  /v1/lists/keys:
+    $ref: "./paths/current/lists/lists-keys.yaml"
+
   /v3/school/slug/{schoolSlug}/profile:
     $ref: "./paths/current/schools/school-slug-profile.yaml"
   /v3/schools/search/school-area/full:

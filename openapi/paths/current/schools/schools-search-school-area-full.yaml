@@ -5,6 +5,7 @@ get:
     - status-current
   summary: Get a list of schools (current)
   parameters:
+    # no need to use $refs
     - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
       name: ids
 
