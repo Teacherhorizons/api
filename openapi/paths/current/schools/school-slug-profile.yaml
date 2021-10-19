@@ -1,0 +1,26 @@
+get:
+  operationId: getSchool_current
+  tags:
+    - schools
+    - status-current
+  summary: Get school details (current)
+  parameters:
+    - in: path
+      name: schoolSlug
+      # description:
+      example: africa-morocco-casablanca-george-washington-academy
+      schema:
+        type: string
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/schools/school-slug-profile.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

@@ -1,0 +1,49 @@
+description: foo bar
+type: object
+properties:
+  # apiSchema:
+  #   type: string
+  schools:
+    type: array
+    items:
+      type: object
+      properties:
+        # current
+        accreditations:
+          $ref: "./zz_properties.yaml#/accreditations"
+        academicSystems:
+          $ref: "./zz_properties.yaml#/academicSystems"
+        completionLevel:
+          $ref: "./zz_properties.yaml#/completionLevel"
+        slug:
+          $ref: "./zz_properties.yaml#/slug"
+        isFavourite:
+          $ref: "./zz_properties.yaml#/isFavourite"
+        city:
+          $ref: "./zz_properties.yaml#/city"
+        id:
+          $ref: "./zz_properties.yaml#/id"
+        name:
+          $ref: "./zz_properties.yaml#/name"
+        endorsedByTh:
+          $ref: "./zz_properties.yaml#/endorsedByTh"
+        badgeImage:
+          $ref: "./zz_properties.yaml#/badgeImage"
+        schoolImage:
+          $ref: "./zz_properties.yaml#/schoolImage"
+        locationLatLong:
+          $ref: "./zz_properties.yaml#/locationLatLong"
+
+        # deprecated
+        approvedByTh:
+          $ref: "./../../deprecated/schools/zz_properties.yaml#/approvedByTh"
+        visitedByTh:
+          $ref: "./../../deprecated/schools/zz_properties.yaml#/visitedByTh"
+        country:
+          $ref: "./../../deprecated/schools/zz_properties.yaml#/country"
+        region:
+          $ref: "./../../deprecated/schools/zz_properties.yaml#/region"
+  count:
+    type: integer
+    format: int32
+    example: 20

@@ -1,0 +1,171 @@
+get:
+  operationId: getSchools_proposed
+  tags:
+    - schools
+    - status-proposed
+  summary: Get a list of schools (proposed)
+  parameters:
+    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+      name: ids
+
+    - in: query
+      name: include
+      description: Which nested objects to include
+      example: city,city.country,city.country.region
+      schema:
+        type: string
+
+    - in: query
+      name: fields
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        # additionalProperties:
+        #   $ref: "./../../../components/schemas/proposed/cities/CitySet1.yaml"
+        example:
+          articles: title,body
+          people: name
+
+    # - in: query
+    #   name: filter[name]
+    #   description: Name of part of school
+    #   example: International
+    #   schema:
+    #     type: string
+
+    - in: query
+      name: filter[percentageComplete]
+      description: Foo bar
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        properties:
+          gte:
+            type: integer
+            format: int32
+        example:
+          gte: 21
+
+    - in: query
+      name: filter
+      description: Foo bar
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+            minLength: 2
+            description: Name of part of school
+          id:
+            type: string
+          curriculum.id:
+            type: integer
+            format: int32
+          city.country.region.id:
+            type: integer
+            format: int32
+          city.country.id:
+            type: integer
+            format: int32
+          city.id:
+            description: Typically used as [city.id][contains]=1,2
+            type: integer
+            format: int32
+          percentageComplete:
+            description: Typically used as [percentageComplete][gte]
+            type: object
+            properties:
+              gte:
+                type: integer
+                format: int32
+        example:
+          name: International
+          id: 123
+          curriculum.id: 6
+          city.country.region.id: 1
+          city.country.id: 2
+          city.id: 210
+          # percentageComplete.gte: 21
+    # filter[name]=International&filter[id][contains]=123,234&filter[curriculum.id][contains]=6,13&filter[percentageComplete][gte]=21
+
+    # - in: query
+    #   name: filter[city.country.region.id]
+    #   description: Comma separated list of region ids
+    #   example: 1,2
+    #   schema:
+    #     type: string
+
+    # - in: query
+    #   name: filter[city.country.id]
+    #   description: Comma separated list of country ids
+    #   example: 2,3
+    #   schema:
+    #     type: string
+
+    # - in: query
+    #   name: filter[city.id]
+    #   description: Comma separated list of city ids
+    #   example: 210
+    #   schema:
+    #     type: string
+
+    # - in: query
+    #   name: filter[academicSystem.id]
+    #   description: Comma separated list of academicSystems ids
+    #   example: 3,4
+    #   schema:
+    #     type: string
+
+    # - in: query
+    #   name: filter[percentageComplete][ge]
+    #   description: Minimum percentageComplete
+    #   example: 21
+    #   schema:
+    #     type: integer
+    #     format: int32
+
+    - in: query
+      name: accreditations
+      description: Comma separated list of accreditations ids
+      example: 4,14
+      schema:
+        type: string
+
+    - in: query
+      name: educationLevels
+      description: Comma separated list of educationLevels ids
+      example: 6,3
+      schema:
+        type: string
+
+    - in: query
+      name: nationalityGroups
+      description: Comma separated list of nationalityGroups ids
+      example: 207,209
+      schema:
+        type: string
+
+    - $ref: "../../../components/parameters/current/list.yaml#/limit"
+    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/proposed/schools/School.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

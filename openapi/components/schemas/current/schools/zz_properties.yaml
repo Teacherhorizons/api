@@ -1,0 +1,127 @@
+# standard properties - this file only contains agreed 'standard' properties
+
+id:
+  type: integer
+  format: int32
+  example: 17
+  readOnly: true
+
+name:
+  type: string
+  example: Raintree International School
+
+imageUrl:
+  type: string
+  example: /static/mediav2/school/image/142418.jpg
+
+isEndorsedByTh:
+  type: boolean
+  example: true
+
+visitedByTh:
+  type: boolean
+  example: false
+
+accreditations:
+  type: array
+  items:
+    type: integer
+    format: int32
+    example: 12
+
+academicSystemIds:
+  type: array
+  items:
+    type: integer
+    format: int32
+    example: 1
+
+academicSystems:
+  type: array
+  items:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+        example: 1
+      name:
+        type: string
+        example: Foo
+
+completionLevel:
+  type: integer
+  format: int32
+  example: 100
+
+slug:
+  type: string
+  example: africa-morocco-casablanca-george-washington-academy
+
+endorsedByTh:
+  type: integer
+  format: int32
+  example: 1
+
+locationLatLong:
+  type: string
+  example: 9.0220503, 7.3926057
+
+# TODO: not a property of school; relates to the combination of the school and the current user
+isFavourite:
+  type: integer
+  format: int32
+  example: 1
+
+# TODO: direct relationship with school; could stay here, but should probably move
+city:
+  type: object
+  properties:
+    imageUrl:
+      type: string
+      example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+    id:
+      type: integer
+      format: int32
+      example: 6
+    name:
+      type: string
+      example: Casablanca
+
+# TODO: might be okay here
+badgeImage:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 487931
+    resource:
+      type: string
+      example: /static/mediav2/schools/2538/images/487931_main.jpg
+    reference:
+      type: string
+      example: SATR.jpg
+    type:
+      type: integer
+      format: int32
+      example: 0
+
+# TODO: might be okay here
+schoolImage: # name?
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 499271
+    resource:
+      type: string
+      example: /static/mediav2/schools/2538/images/499271_main.jpg
+    reference:
+      type: string
+      example: GWAD.jpg
+    type:
+      type: integer
+      format: int32
+      example: 13

@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    $ref: ./city-properties.yaml#/id
+  name:
+    $ref: ./city-properties.yaml#/name
+  imageUrl:
+    $ref: ./city-properties.yaml#/imageUrl
+  country:
+    $ref: "../countries/CountrySet1.yaml"
