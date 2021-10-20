@@ -1,0 +1,14 @@
+type: object
+properties:
+ jobCountByRegion: 
+    type: array
+    items:
+     properties: 
+      regionId: 
+        type: integer
+        format: int32
+        example: 1
+      jobCount: 
+        type: integer
+        format: int32
+        example: 13
