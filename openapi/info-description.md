@@ -32,6 +32,8 @@
 ### Java
 
 - https://www.baeldung.com/json-api-java-spring-web-app
+- https://cradlepoint.com/resources/blog/behind-the-code-series-java-jsonapi-a-journey/
+- https://jsonapi.org/implementations/#server-libraries-java
 
 ### To be organised
 
