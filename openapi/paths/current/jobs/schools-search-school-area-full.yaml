@@ -1,0 +1,21 @@
+get:
+  operationId: getJobs_current
+  tags:
+    - jobs
+    - status-current
+  summary: Get a job (current)
+  #parameters:
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/jobs/schools-search-school-area-full.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

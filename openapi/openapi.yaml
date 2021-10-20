@@ -36,6 +36,8 @@ tags:
     description: Operations relating to users
   - name: sites
     description: Operations relating to sites
+  - name: jobs
+    description: Operations relating to jobs
 
   # statuses
   - name: status-current
@@ -74,7 +76,11 @@ paths:
     $ref: "./paths/current/sites/site-statistics.yaml"
   /v1/jobs/search/region-area/by-region/count:
     $ref: "./paths/current/jobs/region-area-by-region-count.yaml"
-
+  /v1/jobs/search/school-area/full:
+    $ref: "./paths/current/jobs/schools-search-school-area-full.yaml"
+  /v1/jobs/search/school-area/full/count:
+    $ref: "./paths/current/jobs/schools-search-school-area-full-count.yaml"
+    
   # proposed
   # TODO: consider versioning and 'sets'
   /job-applications:

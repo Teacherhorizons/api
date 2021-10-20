@@ -1,0 +1,74 @@
+type: object
+properties:
+  jobs: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        title: 
+          type: string
+          example: Head of Physical Education (August 2022)
+        city: 
+          type: object
+          properties: 
+            id: 
+              type: integer
+              format: int32
+              example: 17
+            name: 
+              type: string
+              example: Hong Kong
+            country: 
+              type: object
+              properties: 
+                id: 
+                  type: integer
+                  format: int32
+                  example: 26
+                name: 
+                  type: string
+                  example: Hong Kong
+                region: 
+                  type: object
+                  properties: 
+                    id: 
+                      type: integer
+                      format: int32
+                      example: 2
+                    name: 
+                      type: string
+                      example: Asia
+        startDate: 
+          type: string
+          format: date
+          example: 2022-08-01
+        furtherInfo: 
+          type: string
+          example: Opportunity:Chance to be part of a well-established and largest group of schools in Asia. Start date:August 2022 Experience:Bachelor Degree in Educati
+        deadline: 
+          type: integer
+          format: int64
+          example: 1635897599000
+        subjectId: 
+          type: integer
+          format: int32
+          example: 26
+        locationLatLong: 
+          type: string
+          example: 22.267877599133747114.12613668037102
+        jobTypeId: 
+          type: integer
+          format: int32
+          example: 1
+        roleId: 
+          type: integer
+          format: int32
+          example: 2
+        lastUpdatedDate: 
+          type: integer
+          format: int64
+          example: 1634735023000
+        id: 
+          type: integer
+          format: int32
+          example: 53764
