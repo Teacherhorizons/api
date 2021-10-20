@@ -1,0 +1,21 @@
+get:
+  operationId: getRegions_jobCounts_current
+  tags:
+    - jobs
+    - status-current
+  summary: Get job count by region (current)
+#parameters:
+#parameters to be advised by RR
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/jobs/region-area-by-region-count.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

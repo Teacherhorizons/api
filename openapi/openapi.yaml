@@ -32,6 +32,10 @@ tags:
     description: Operations relating to schools
   - name: teachers
     description: Operations relating to teachers or candidates
+  - name: users
+    description: Operations relating to users
+  - name: sites
+    description: Operations relating to sites
 
   # statuses
   - name: status-current
@@ -63,6 +67,13 @@ paths:
     $ref: "./paths/current/schools/school-slug-profile.yaml"
   /v3/schools/search/school-area/full:
     $ref: "./paths/current/schools/schools-search-school-area-full.yaml"
+
+  /v1/user/bundle:
+    $ref: "./paths/current/user/user-bundle.yaml"
+  /v1/site/statistics:
+    $ref: "./paths/current/sites/site-statistics.yaml"
+  /v1/jobs/search/region-area/by-region/count:
+    $ref: "./paths/current/jobs/region-area-by-region-count.yaml"
 
   # proposed
   # TODO: consider versioning and 'sets'

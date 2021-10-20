@@ -79,6 +79,55 @@ get:
       schema:
         type: string
 
+    - in: query
+      name: approvedByTh
+      description: Comma separated list of approvedByTh ids
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: endorsedByTh
+      description: Comma separated list of endorsedByTh ids
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: visitedByTh
+      description: Comma separated list of visitedByTh ids
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: thAdviserIds
+      description: The Advisers id
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: matchTeacherId
+      description: Teacher Id matched
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: matchMemberNumber
+      description: Matched member number
+      example: 1234567
+      schema:
+        type: string
+
+    - in: query
+      name: minMatchScore
+      description: Minimum matched score
+      example: 5
+      schema:
+        type: string
+
     - $ref: "../../../components/parameters/current/list.yaml#/limit"
     - $ref: "../../../components/parameters/current/list.yaml#/page-number"
     - $ref: "../../../components/parameters/current/list.yaml#/sort"

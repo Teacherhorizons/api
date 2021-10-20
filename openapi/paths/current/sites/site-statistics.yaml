@@ -1,0 +1,19 @@
+get:
+  operationId: getStatistics_current
+  tags:
+    - sites
+    - status-current
+  summary: Get statistics (current)
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/sites/site-statistics.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
