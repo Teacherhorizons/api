@@ -19,3 +19,30 @@ get:
       description: Pet not found
   security:
     - api_key: []
+
+  # Paramters in Java code:
+  # @RequestParam(value="subjects",required = false) String[] _subjects
+  # , @RequestParam(value="search",required = false) String jobTitleSearchString
+  # , @RequestParam(required = false) Integer[] roles
+  # , @RequestParam(required = false) Integer[] locations
+  # , @RequestParam(value="regions",required = false) Integer[] regions
+  # , @RequestParam(value="systems",required = false) Integer[] academicSystems
+  # , @RequestParam(value="start",required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") Date startDate
+  # , @RequestParam(value="city",required = false) Integer city
+  # , @RequestParam(value="country",required = false) Integer country
+  # , @RequestParam(value="cities",required = false) Integer[] cityIds
+  # , @RequestParam(value="countries",required = false) Integer[] countryIds
+  # , @RequestParam(value="job-type",required = false) Integer jobType
+  # , @RequestParam(value="job-types",required = false) Integer[] jobTypes
+
+  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
+  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
+  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
+  # , @RequestParam(value="long-to",required = false) Float longitudeTo
+
+  # , @RequestParam(value="maximum-further-info-length",required = false) Integer maxFurtherInfoLength
+  # , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+
+  # , @RequestParam(value="match-teacher-id",required=false) Integer matchTeacherId
+  # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
+  # , @RequestParam(value="min-match-score",required=false) Double minMatchScore

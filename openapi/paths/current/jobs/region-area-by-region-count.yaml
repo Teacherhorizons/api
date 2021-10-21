@@ -20,6 +20,7 @@ get:
   security:
     - api_key: []
 
+  # Paramters in Java code:
   # @RequestParam(value="subjects",required = false) String[] _subjects
   # , @RequestParam(value="search",required = false) String jobTitleSearchString
   # , @RequestParam(required = false) Integer[] roles
@@ -37,10 +38,10 @@ get:
   # , @RequestParam(value="long-from",required = false) Float longitudeFrom
   # , @RequestParam(value="long-to",required = false) Float longitudeTo
 
-  #   , @RequestParam(value="job-type",required = false) Integer jobType
-  #   , @RequestParam(value="job-types",required = false) Integer[] jobTypes
+  # , @RequestParam(value="job-type",required = false) Integer jobType
+  # , @RequestParam(value="job-types",required = false) Integer[] jobTypes
 
-  #   , @RequestParam(value="limit",required = false) Integer pagesize
+  # , @RequestParam(value="limit",required = false) Integer pagesize
   # , @RequestParam(value="page-number",required=false) Integer pagenumber
-  #   , @RequestParam(value="maximum-further-info-length",required = false) Integer maxFurtherInfoLength
-  #   , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+  # , @RequestParam(value="maximum-further-info-length",required = false) Integer maxFurtherInfoLength
+  # , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
