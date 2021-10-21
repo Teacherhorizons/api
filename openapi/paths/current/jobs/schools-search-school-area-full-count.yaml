@@ -4,8 +4,158 @@ get:
     - jobs
     - status-current
   summary: Get job count (current)
-  #parameters:
+  parameters:
+      - in: query
+        name: subjects
+        description: Comma separated list of subject ids
+        example: 2,4
+        schema:
+         type: string
 
+      - in: query
+        name: jobTitleSearchString
+        description: Comma separated list of jobTitleSearchString ids
+        example: 5
+        schema:
+         type: string
+
+      - in: query
+        name: roles
+        description: Comma separated list of role ids
+        example: 23,16
+        schema:
+         type: string
+
+      - in: query
+        name: locations
+        description: Comma separated list of location ids
+        example: 3,4
+        schema:
+         type: string
+
+      - in: query
+        name: regions
+        description: Comma separated list of region ids
+        example: 2,3
+        schema:
+         type: string
+
+      - in: query
+        name: countries
+        description: Comma separated list of country ids
+        example: 2,3
+        schema:
+         type: string
+
+      - in: query
+        name: cities
+        description: Comma separated list of city ids
+        example: 210
+        schema:
+         type: string
+
+      - in: query
+        name: academicSystems
+        description: Comma separated list of academicSystems ids
+        example: 3,4
+        schema:
+         type: string
+         limit:
+  
+      - in: query
+        name: limit
+        description: Number of records to return
+        example: 20
+        schema:
+         type: integer
+         format: int64
+
+      - in: query
+        name: page-number
+        description: Page number to return
+        example: 3
+        schema:
+         type: integer
+         format: int64
+
+      - in: query
+        name: Date
+        description: Job Start Date
+        example: yyyy-MM-dd
+        schema:
+         type: string
+
+      - in: query
+        name: cityIds
+        description: Comma separated list of city ids
+        example: -10,1
+        schema:
+         type: string
+
+      - in: query
+        name: countryIds
+        description: Comma separated list of country ids
+        example: 1234,210607
+        schema:
+         type: string
+
+      - in: query
+        name: jobTypes
+        description: Comma separated list of jobType ids
+        example: 2,4
+        schema:
+         type: string
+
+      - in: query
+        name: LatitudeFrom
+        example: 21.2478652577589
+        schema:
+         type: string
+      - in: query
+        name: LatitudeTo
+        example: 12.27559889056173117
+        schema:
+         type: string
+
+      - in: query
+        name: LongitudeFrom
+        example: 114.32084663984377
+        schema:
+         type: string
+      - in: query
+        name: LongitudeTo
+        example: 105.27559889056173117
+        schema:
+         type: string
+
+      - in: query
+        name: matchTeacherId
+        description: Comma separated list of matching teacher ids
+        example: 2,4
+        schema:
+         type: string
+
+      - in: query
+        name: matchMemberNumber
+        description: Comma separated list of matchMemberNumber ids
+        example: 2,4
+        schema:
+         type: string
+
+      - in: query
+        name: minMatchScore
+        description: Show minimum match score
+        example: 25
+        schema:
+         type: string
+      
+      - in: query  
+        name: sort
+        description: Order to sort the records
+        example: applicationDate,-subject
+        schema:
+         type: string
+         
   responses:
     "200":
       description: successful operation
@@ -20,29 +170,4 @@ get:
   security:
     - api_key: []
 
-  # Paramters in Java code:
-  # @RequestParam(value="subjects",required = false) String[] _subjects
-  # , @RequestParam(value="search",required = false) String jobTitleSearchString
-  # , @RequestParam(required = false) Integer[] roles
-  # , @RequestParam(required = false) Integer[] locations
-  # , @RequestParam(value="regions",required = false) Integer[] regions
-  # , @RequestParam(value="systems",required = false) Integer[] academicSystems
-  # , @RequestParam(value="start",required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") Date startDate
-  # , @RequestParam(value="city",required = false) Integer city
-  # , @RequestParam(value="country",required = false) Integer country
-  # , @RequestParam(value="cities",required = false) Integer[] cityIds
-  # , @RequestParam(value="countries",required = false) Integer[] countryIds
-  # , @RequestParam(value="job-type",required = false) Integer jobType
-  # , @RequestParam(value="job-types",required = false) Integer[] jobTypes
 
-  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
-  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
-  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
-  # , @RequestParam(value="long-to",required = false) Float longitudeTo
-
-  # , @RequestParam(value="maximum-further-info-length",required = false) Integer maxFurtherInfoLength
-  # , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
-
-  # , @RequestParam(value="match-teacher-id",required=false) Integer matchTeacherId
-  # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
-  # , @RequestParam(value="min-match-score",required=false) Double minMatchScore
