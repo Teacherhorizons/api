@@ -17,27 +17,27 @@ info:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  # categories
+  # categories (alphabetical)
   - name: cities
     description: Operations relating to cities
   - name: countries
     description: Operations relating to countries
   - name: job applications
     description: Operations relating to job applications
+  - name: jobs
+    description: Operations relating to jobs
   - name: lists
     description: Operations relating to simple lists of objects - such as subjects or roles
   - name: regions
     description: Operations relating to regions (~continents)
   - name: schools
     description: Operations relating to schools
+  - name: sites
+    description: Operations relating to sites
   - name: teachers
     description: Operations relating to teachers or candidates
   - name: users
     description: Operations relating to users
-  - name: sites
-    description: Operations relating to sites
-  - name: jobs
-    description: Operations relating to jobs
 
   # statuses
   - name: status-current
@@ -80,7 +80,7 @@ paths:
     $ref: "./paths/current/jobs/schools-search-school-area-full.yaml"
   /v1/jobs/search/school-area/full/count:
     $ref: "./paths/current/jobs/schools-search-school-area-full-count.yaml"
-    
+
   # proposed
   # TODO: consider versioning and 'sets'
   /job-applications:
