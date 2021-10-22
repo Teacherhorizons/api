@@ -1,0 +1,21 @@
+get:
+  operationId: getCities_schoolCounts_current
+  tags:
+    - schools
+    - status-current
+  summary: Get school count by city (current)
+ # parameters:
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/schools/schools-search-city-area-by-city-count.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

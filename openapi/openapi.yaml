@@ -69,6 +69,17 @@ paths:
     $ref: "./paths/current/schools/school-slug-profile.yaml"
   /v3/schools/search/school-area/full:
     $ref: "./paths/current/schools/schools-search-school-area-full.yaml"
+  /v3/schools/search/school-area/count:
+    $ref: "./paths/current/schools/schools-search-school-area-count.yaml"
+
+  /v1/schools/search/region-area/by-region/count:
+    $ref: "./paths/current/schools/schools-search-region-area-by-region-count.yaml"
+  /v1/schools/search/country-area/by-country/count:
+    $ref: "./paths/current/schools/schools-search-country-area-by-country-count.yaml"
+  /v1/schools/search/city-area/by-city/count:
+    $ref: "./paths/current/schools/schools-search-city-area-by-city-count.yaml"
+
+
 
   /v1/user/bundle:
     $ref: "./paths/current/user/user-bundle.yaml"
@@ -80,6 +91,11 @@ paths:
     $ref: "./paths/current/jobs/schools-search-school-area-full.yaml"
   /v1/jobs/search/school-area/full/count:
     $ref: "./paths/current/jobs/schools-search-school-area-full-count.yaml"
+  /v1/jobs/search/country-area/by-country/count:
+    $ref: "./paths/current/jobs/schools-search-country-area-by-country-count.yaml"
+  /v1/jobs/search/city-area/by-city/count:
+    $ref: "./paths/current/jobs/schools-search-city-area-by-city-count.yaml"
+
 
   # proposed
   # TODO: consider versioning and 'sets'

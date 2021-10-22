@@ -1,9 +1,9 @@
 get:
-  operationId: getJobCount_current
+  operationId: getCities_jobCounts_current
   tags:
     - jobs
     - status-current
-  summary: Get job count (current)
+  summary: Get job count by city (current)
   parameters:
     - in: query
       name: subjects
@@ -134,49 +134,13 @@ get:
       example: 105.27559889056173117
       schema:
         type: string
-
-    - in: query
-      name: match-teacher-id
-      description: Comma separated list of matching teacher ids
-      example: 2,4
-      schema:
-        type: string
-
-    - in: query
-      name: match-member-number
-      description: List of matching member ids
-      example: 2,4
-      schema:
-        type: string
-
-    - in: query
-      name: min-match-score
-      description: Show minimum match score
-      example: 25
-      schema:
-        type: string
-
-    - in: query
-      name: my-list
-      description: List of favourites 
-      example: 5,6
-      schema:
-        type: string
-
-    - in: query
-      name: sort
-      description: Order to sort the records
-      example: applicationDate,-subject
-      schema:
-        type: string
-
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/jobs/schools-search-school-area-full-count.yaml"
+            $ref: "../../../components/schemas/current/jobs/schools-search-city-area-by-city-count.yaml"
     "400":
       description: Invalid ID supplied
     "404":

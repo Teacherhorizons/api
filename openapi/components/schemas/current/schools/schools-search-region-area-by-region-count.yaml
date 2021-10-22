@@ -1,0 +1,15 @@
+type: object
+properties:
+  schoolCountByRegion: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        regionId: 
+          type: integer
+          format: int32
+          example: 1
+        schoolCount: 
+          type: integer
+          format: int32
+          example: 366

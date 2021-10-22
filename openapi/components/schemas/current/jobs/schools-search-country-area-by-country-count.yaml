@@ -1,0 +1,15 @@
+type: object
+properties:
+  jobCountByCountry: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        jobCount: 
+          type: integer
+          format: int32
+          example: 2
+        countryId: 
+          type: integer
+          format: int32
+          example: 5

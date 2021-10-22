@@ -1,0 +1,15 @@
+type: object
+properties:
+  jobCountByCity: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        jobCount: 
+          type: integer
+          format: int32
+          example: 2
+        cityId: 
+          type: integer
+          format: int32
+          example: 13
