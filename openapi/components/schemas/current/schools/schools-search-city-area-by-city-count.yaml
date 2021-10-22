@@ -1,0 +1,15 @@
+type: object
+properties:
+  schoolCountByCity: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        schoolCount: 
+          type: integer
+          format: int32
+          example: 3
+        cityId: 
+          type: integer
+          format: int32
+          example: 60

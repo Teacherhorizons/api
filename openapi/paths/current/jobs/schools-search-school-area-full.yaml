@@ -13,8 +13,8 @@ get:
         type: string
 
     - in: query
-      name: jobTitleSearchString
-      description: Comma separated list of jobTitleSearchString ids
+      name: search
+      description: Part of the job title
       example: 5
       schema:
         type: string
@@ -41,22 +41,22 @@ get:
         type: string
 
     - in: query
-      name: countries
+      name: country
       description: Comma separated list of country ids
-      example: 2,3
+      example: 2
       schema:
         type: string
 
     - in: query
-      name: cities
+      name: city
       description: Comma separated list of city ids
       example: 210
       schema:
         type: string
 
     - in: query
-      name: academicSystems
-      description: Comma separated list of academicSystems ids
+      name: systems
+      description: Comma separated list of system ids
       example: 3,4
       schema:
         type: string
@@ -78,76 +78,104 @@ get:
         format: int64
 
     - in: query
-      name: Date
+      name: start
       description: Job Start Date
-      example: yyyy-MM-dd
+      example: '2021-10-22'
       schema:
         type: string
+        format: date
 
     - in: query
-      name: cityIds
-      description: Comma separated list of city ids
+      name: cities
+      description: Comma seperated list of cities ids
       example: -10,1
       schema:
         type: string
 
     - in: query
-      name: countryIds
-      description: Comma separated list of country ids
+      name: countries
+      description: Comma seperated list of countries ids
       example: 1234,210607
       schema:
         type: string
 
     - in: query
-      name: jobTypes
-      description: Comma separated list of jobType ids
+      name: job-type
+      description: Comma separated list of job type ids
       example: 2,4
       schema:
         type: string
 
     - in: query
-      name: LatitudeFrom
+      name: job-types
+      description: List of job types
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: lat-from
       example: 21.2478652577589
       schema:
         type: string
     - in: query
-      name: LatitudeTo
+      name: lat-to
       example: 12.27559889056173117
       schema:
         type: string
 
     - in: query
-      name: LongitudeFrom
+      name: long-from
       example: 114.32084663984377
       schema:
         type: string
     - in: query
-      name: LongitudeTo
+      name: long-to
       example: 105.27559889056173117
       schema:
         type: string
 
     - in: query
-      name: matchTeacherId
+      name: match-teacher-id
       description: Comma separated list of matching teacher ids
       example: 2,4
       schema:
         type: string
 
     - in: query
-      name: matchMemberNumber
-      description: Comma separated list of matchMemberNumber ids
+      name: match-member-number
+      description: List of matching member ids
       example: 2,4
       schema:
         type: string
 
     - in: query
-      name: minMatchScore
+      name: min-match-score
       description: Show minimum match score
       example: 25
       schema:
         type: string
 
+    - in: query
+      name: my-list
+      description: List of favourites 
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-further-info-length
+      description: .. #not sure about the descripion
+      example: 25
+      schema:
+        type: string
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
   responses:
     "200":
       description: successful operation

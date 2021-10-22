@@ -6,8 +6,13 @@ get:
   summary: Get a list of schools (current)
   parameters:
     # no need to use $refs
-    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+  
+    - in: query
       name: ids
+      description: Comma separated list of school ids
+      example: 123,234
+      schema:
+       type: string
 
     - in: query
       name: search
@@ -45,14 +50,14 @@ get:
         type: string
 
     - in: query
-      name: academicSystems
+      name: academic-systems
       description: Comma separated list of academicSystems ids
       example: 3,4
       schema:
         type: string
 
     - in: query
-      name: minimumPercentageComplete
+      name: minimum-percentage-complete
       description: Comma separated list of minimumPercentageComplete ids
       example: 21,22
       schema:
@@ -66,71 +71,97 @@ get:
         type: string
 
     - in: query
-      name: educationLevels
+      name: education-levels
       description: Comma separated list of educationLevels ids
       example: 6,3
       schema:
         type: string
 
     - in: query
-      name: nationalityGroups
+      name: teacher-nationality-groups-accepted
       description: Comma separated list of nationalityGroups ids
       example: 207,209
       schema:
         type: string
 
     - in: query
-      name: approvedByTh
+      name: approved-by-th
       description: Comma separated list of approvedByTh ids
       example: 5,6
       schema:
         type: string
 
     - in: query
-      name: endorsedByTh
+      name: endorsed-by-th
       description: Comma separated list of endorsedByTh ids
       example: 1
       schema:
         type: string
 
     - in: query
-      name: visitedByTh
+      name: visited-by-th
       description: Comma separated list of visitedByTh ids
       example: 1
       schema:
         type: string
 
     - in: query
-      name: thAdviserIds
+      name: lras
       description: The Advisers id
       example: 1
       schema:
         type: string
 
     - in: query
-      name: matchTeacherId
-      description: Teacher Id matched
-      example: 1
+      name: match-teacher-id
+      description: Comma separated list of matching teacher ids
+      example: 2,4
       schema:
         type: string
 
     - in: query
-      name: matchMemberNumber
-      description: Matched member number
-      example: 1234567
+      name: match-member-number
+      description: List of matching member ids
+      example: 2,4
       schema:
         type: string
 
     - in: query
-      name: minMatchScore
-      description: Minimum matched score
-      example: 5
+      name: min-match-score
+      description: Show minimum match score
+      example: 25
       schema:
         type: string
 
-    - $ref: "../../../components/parameters/current/list.yaml#/limit"
-    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
-    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+    - in: query
+      name: my-list
+      description: List of favourites 
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
+
+    - in: query
+      name: limit
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: page-number
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
 
   # limit=20&regions=1&countries=2&cities=210&sort=-thMatchScore&my-list=favourites&search=test&academic-systems=3,4&
   # curriculums=6,13&minimum-percentage-complete=21&accreditations=4,14&visited-by-th=1&endorsed-by-th=1&
