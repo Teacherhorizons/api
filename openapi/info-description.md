@@ -20,6 +20,7 @@
 
 - https://swagger.io/specification/ - OpenAPI Specification
 - https://redoc.ly/docs/ - Redocly API reference docs
+- http://redocly.github.io/redoc/ - Examples
 - https://github.com/OAI/OpenAPI-Specification/issues/1706 - Support deep objects for query parameters with deepObject style
 
 ### JSON API
@@ -40,6 +41,8 @@
 - https://tanzu.vmware.com/developer/guides/api-first-development/
 - https://apisyouwonthate.com/blog/json-api-openapi-and-json-schema-working-in-harmony
 - https://stackoverflow.com/a/49843322 - OData, JSON API, GraphQL, OpenAPI ("focus on building a consistent and well-documented API")
+- https://metamug.com/util/postman-to-swagger/
+- https://github.com/codekie/openapi-examples-validator
 
 
 ## Documentation limitations
