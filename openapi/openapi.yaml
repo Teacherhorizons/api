@@ -79,7 +79,12 @@ paths:
   /v1/schools/search/city-area/by-city/count:
     $ref: "./paths/current/schools/schools-search-city-area-by-city-count.yaml"
 
-
+  /api/v1/candidates/search/full:
+    $ref: "./paths/current/teachers/candidates-search-full.yaml"
+  /api/v1/candidates/search/full/count:
+    $ref: "./paths/current/teachers/candidates-search-full-count.yaml"
+#/api/v2/candidates/search/region-area/by-region/count
+#/api/v2/candidates/search/country-area/by-country/count
 
   /v1/user/bundle:
     $ref: "./paths/current/user/user-bundle.yaml"

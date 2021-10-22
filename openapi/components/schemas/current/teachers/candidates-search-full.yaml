@@ -1,0 +1,48 @@
+type: object
+properties: 
+  candidates: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        memberNumber: 
+          type: integer
+          format: int32
+          example: 122198
+        currentCountryId: 
+          type: integer
+          format: int32
+          example: 92
+        numberOfYearsTeachingExperience: 
+          type: integer
+          format: int32
+          example: 23
+        firstName: 
+          type: string
+          example: Linda
+        teachingQualificationCountryId: 
+          type: integer
+          format: int32
+          example: 77
+        lookingForSubjectIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 31
+        curriculumExperienceIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 7
+        completedEducationLevelIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 2
+        lastActiveDate: 
+          type: integer
+          format: int64
+          example: 1634273120000
