@@ -83,8 +83,10 @@ paths:
     $ref: "./paths/current/teachers/candidates-search-full.yaml"
   /api/v1/candidates/search/full/count:
     $ref: "./paths/current/teachers/candidates-search-full-count.yaml"
-#/api/v2/candidates/search/region-area/by-region/count
-#/api/v2/candidates/search/country-area/by-country/count
+  /api/v2/candidates/search/region-area/by-region/count:
+    $ref: "./paths/current/teachers/candidates-search-region-area-by-region-count.yaml"
+  /api/v2/candidates/search/country-area/by-country/count:
+    $ref: "./paths/current/teachers/candidates-search-country-area-by-country-count.yaml"
 
   /v1/user/bundle:
     $ref: "./paths/current/user/user-bundle.yaml"
