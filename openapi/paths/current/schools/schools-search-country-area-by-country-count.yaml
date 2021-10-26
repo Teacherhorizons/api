@@ -4,7 +4,7 @@ get:
     - schools
     - status-current
   summary: Get school count by country (current)
- # parameters:
+  # parameters:
 
   responses:
     "200":
@@ -19,3 +19,30 @@ get:
       description: Pet not found
   security:
     - api_key: []
+
+  # , @RequestParam(value="ids", required = false) Integer[] _schoolIds
+  # , @RequestParam(value="search", required=false) String textSearchTerm
+  # , @RequestParam(value="curriculums", required = false) Integer[] curriculums
+  # , @RequestParam(value="regions", required = false) Integer[] regions
+  # , @RequestParam(value="countries",required = false) Integer[] countries
+  # , @RequestParam(value="cities",required = false) Integer[] cities
+  # , @RequestParam(value="academic-systems",required = false) Integer[] academicSystems
+  #   , @RequestParam(value="limit",required = false) Integer pagesize
+  # , @RequestParam(value="page-number",required=false) Integer pagenumber
+
+  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
+  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
+  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
+  # , @RequestParam(value="long-to",required = false) Float longitudeTo
+
+  #   , @RequestParam(value="minimum-percentage-complete",required = false) Integer minimumPercentageComplete
+
+  # , @RequestParam(value="accreditations",required = false) Integer[] accreditations
+  # , @RequestParam(value="education-levels",required = false) Integer[] educationLevels
+  # , @RequestParam(value="teacher-nationality-groups-accepted",required = false) Integer[] nationalityGroups
+  # , @RequestParam(value="approved-by-th",required = false) Integer _approvedByTh
+  # , @RequestParam(value="endorsed-by-th",required = false) Integer _endorsedByTh
+  # , @RequestParam(value="visited-by-th",required = false) Integer visitedByTh
+  #   , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+
+  #   , @RequestParam(value="lras",required = false) Integer[] thAdviserIds

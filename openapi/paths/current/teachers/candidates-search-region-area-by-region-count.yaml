@@ -4,7 +4,7 @@ get:
     - teachers
     - status-current
   summary: Get list of teachers by region (current)
- # parameters:
+  # parameters:
 
   responses:
     "200":
@@ -19,3 +19,52 @@ get:
       description: Pet not found
   security:
     - api_key: []
+# @RequestParam(value="search", required=false) String term,
+
+# @RequestParam(value="lat-from",required = false) Float latitudeFrom,
+# @RequestParam(value="lat-to",required = false) Float latitudeTo,
+# @RequestParam(value="long-from",required = false) Float longitudeFrom,
+# @RequestParam(value="long-to",required = false) Float longitudeTo,
+
+# @RequestParam(value="subjects", required=false) Integer[] subjects,
+
+# @RequestParam(value="looking-for-roles",required=false) Integer[] lookingForRoles,
+# @RequestParam(value="roles",required=false) Integer[] roles, // old alias for lookingForRoles
+
+# @RequestParam(value="current-roles",required=false) Integer[] currentRoles,
+
+# @RequestParam(value="excluding-looking-for-roles",required=false) Integer[] excludingLookingForRoles,
+# @RequestParam(value="excluding-roles",required=false) Integer[] excludingRoles, // old alias for excludingLookingForRoles
+
+# @RequestParam(value="country-of-interest",required=false) Integer interestedInCountry,
+# @RequestParam(value="user-types",required=false) Integer[] userTypes,
+# @RequestParam(value="countries-of-qualification",required=false) Integer[] countriesQualification,
+# @RequestParam(value="nationalities",required=false) Integer[] nationalities,
+# @RequestParam(value="curriculum-experience",required=false) Integer[] curriculumTypes,
+# @RequestParam(value="minimum-experience",required=false) Integer minimumYearsOfExperience,
+# @RequestParam(value="maximum-experience",required=false) Integer maximumYearsOfExperience,
+# @RequestParam(value="minimum-average-reference-score",required=false) Integer minimumAverageReferenceScore,
+# @RequestParam(value="minimum-adviser-score",required=false) Integer minimumAdviserScore,
+# @RequestParam(value="minimum-th-placeability-rating",required=false) Integer _minimumThPlaceabilityRating,
+# @RequestParam(value="available-from-date",required=false) @DateTimeFormat(pattern="yyyy-MM-dd") Date _availableFrom,
+# @RequestParam(value="maximum-available-from",required=false) @DateTimeFormat(pattern="yyyy-MM-dd") Date _maxAvailableFrom,
+# @RequestParam(value="international-or-ib-experience",required=false) Integer intOrIbExperience,
+# @RequestParam(value="minimum-date-registered",required=false)  @DateTimeFormat(pattern="yyyy-MM-dd") Date minimumDateRegistered,
+# @RequestParam(value="minimum-year-of-birth",required=false)  Integer minimumYearOfBirth,
+# @RequestParam(value="marital-statuses",required=false) Integer[] maritalStatuses,
+# @RequestParam(value="maximum-number-of-dependent-children",required=false) Integer maximumDependentChildren,
+# @RequestParam(value="education-levels-completed",required=false) Integer[] educationLevelsCompleted,
+# @RequestParam(value="regions",required=false) Integer[] preferredRegions,
+# @RequestParam(value="regions-of-interest",required=false) Integer[] preferredRegions2,
+# @RequestParam(value="cv",required=false) Boolean uploadedCV,
+# @RequestParam(value="job-seeking-statuses",required=false) Integer[] jobSeekingStatuses,
+# @RequestParam(value="limit",required=false) Integer pagesize,
+# @RequestParam(value="page-number",required=false) Integer pagenumber,
+# @RequestParam(value="sort",required=false) String[] sortfield,
+# @RequestParam(value="attributes",required=false) String[] attributefield,
+# @RequestParam(value="user-is-active", required=false) Boolean active,
+# @RequestParam(value="override-view-type", required=false) String overrideViewType,
+#   @RequestParam(value="my-list",required = false) String myListType, // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+#   @RequestParam(value="school-ids",required = false) Integer[] schoolIds,
+#   @RequestParam(value="current-regions",required=false) Integer[] currentRegions,
+#   @RequestParam(value="current-countries",required=false) Integer[] currentCountries,
