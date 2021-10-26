@@ -16,14 +16,30 @@
 
 ## Useful links
 
-### OpenApi
+### OpenApi (idea: document current and future API calls in a standard way)
 
 - https://swagger.io/specification/ - OpenAPI Specification
 - https://redoc.ly/docs/ - Redocly API reference docs
 - http://redocly.github.io/redoc/ - Examples
 - https://github.com/OAI/OpenAPI-Specification/issues/1706 - Support deep objects for query parameters with deepObject style
+- https://openapi.tools/
 
-### JSON API
+### Auto-generation of OpenAPI YAML (idea: partly auto-generate the documentation of current APIs)
+
+- https://metamug.com/util/postman-to-swagger/ - Convert JSON response to YAML (very simple)
+- https://support.google.com/admanager/answer/10358597?hl=en - Capture web session traffic (in a HAR file)
+- https://github.com/dcarr178/har2openapi - Generate OpenAPI YAML from  HAR file
+- https://springdoc.org/ - For future, generate OpenAPI YAML from Spring Boot
+
+### Auto-generation of back-end code (for future)
+
+- https://docs.openapiprocessor.io/ - generate Spring Boot interfaces and models
+
+### Validation (idea: validate the latest spec against actual API calls)
+
+- https://github.com/codekie/openapi-examples-validator - Validate JSON responses
+
+### JSON API (idea: use a standard format for future API calls)
 
 - https://jsonapi.org/format/
 - https://jsonapi.org/format/#fetching-sparse-fieldsets
@@ -40,10 +56,7 @@
 
 - https://tanzu.vmware.com/developer/guides/api-first-development/
 - https://apisyouwonthate.com/blog/json-api-openapi-and-json-schema-working-in-harmony
-- https://stackoverflow.com/a/49843322 - OData, JSON API, GraphQL, OpenAPI ("focus on building a consistent and well-documented API")
-- https://metamug.com/util/postman-to-swagger/
-- https://github.com/codekie/openapi-examples-validator
-
+- https://stackoverflow.com/a/49843322 - Overview of OData, JSON API, GraphQL and OpenAPI (quote: "focus on building a consistent and well-documented API")
 
 ## Documentation limitations
 
