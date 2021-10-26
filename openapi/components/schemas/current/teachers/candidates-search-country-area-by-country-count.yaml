@@ -1,0 +1,15 @@
+type: object
+properties:
+  candidateCountByCountry: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        countryId: 
+          type: integer
+          format: int32
+          example: 1
+        candidateCount: 
+          type: integer
+          format: int32
+          example: 5

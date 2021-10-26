@@ -1,0 +1,15 @@
+type: object
+properties:
+  candidateCountByRegion: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        regionId: 
+          type: integer
+          format: int32
+          example: 1
+        candidateCount: 
+          type: integer
+          format: int32
+          example: 508
