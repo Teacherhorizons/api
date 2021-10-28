@@ -22,6 +22,8 @@ tags:
     description: Operations relating to cities
   - name: countries
     description: Operations relating to countries
+  - name: employment-records
+    description: Operations relating to teacher employment records
   - name: job applications
     description: Operations relating to job applications
   - name: jobs
@@ -123,6 +125,45 @@ paths:
     $ref: "./paths/non-th-examples/path-item.yaml"
   /pathItemWithExamples:
     $ref: "./paths/non-th-examples/path-item-with-examples.yaml"
+
+  # TODO AS: organise and finish this one
+  /v1/teacher/member-number/{member-number}/employment-record/add:
+    post:
+      description: ""
+      operationId: addTeacherEmploymentRecord_current
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  properties:
+                    isInternationalSchool:
+                      type: boolean
+            example:
+              data:
+                isInternationalSchool: false
+                name: Fluffy
+                petType: dog
+      responses:
+        "200":
+          content:
+            application/json:
+              examples:
+                example-0001:
+                  value:
+                    id: 16492
+                    status: "1"
+              schema:
+                properties: {}
+                type: object
+          description: Item created
+      summary: Create teacher employment-record
+      tags:
+        - employment-records
 
 # TODO: components section
 components:
