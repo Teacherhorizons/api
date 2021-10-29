@@ -6,7 +6,7 @@ get:
   summary: Get school count by region (current)
   parameters:
   
-    - in: path
+    - in: query
       name: Ids
       description: Get Schools Ids
       example: 12,15
@@ -104,8 +104,8 @@ get:
        type: integer
  
 
-    - in: path
-      name: Iras
+    - in: query
+      name: lras
       description: Get Adviser Ids
       example: 12,15
       schema:
