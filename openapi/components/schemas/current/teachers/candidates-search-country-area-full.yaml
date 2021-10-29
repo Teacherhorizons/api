@@ -1,0 +1,107 @@
+type: object
+properties:
+  candidates: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        cvUrl: 
+          type: string
+          example: /th/api/teachers/123724/download/10163
+        memberNumber: 
+          type: integer
+          format: int32
+          example: 123724
+        currentCountryId: 
+          type: integer
+          format: int32
+          example: 1
+        thPlaceabilityRating: 
+          type: integer
+          format: int32
+          example: 8
+        nationalityId: 
+          type: integer
+          format: int32
+          example: 167
+        availableFrom: 
+          type: integer
+          format: int64
+          example: 1377475200000
+        isFavourite: 
+          type: integer
+          format: int32
+          example: 1
+        currentJobCountryId: 
+          type: integer
+          format: int32
+          example: 2
+        teachingQualificationCountryId: 
+          type: integer
+          format: int32
+          example: 62
+        userIsActive: 
+          type: integer
+          format: int32
+          example: 1
+        percentageComplete: 
+          type: integer
+          format: int32
+          example: 95
+        jobSeekingStatusId: 
+          type: integer
+          format: int32
+          example: 1
+        lookingForSubjectIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 20
+        curriculumExperienceIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 19
+        lastActiveDate: 
+          type: integer
+          format: int64
+          example: 1633103071000
+        averageReferenceScore: 
+          type: integer
+          format: int32
+          example: 95
+        firstName: 
+          type: string
+          example: Poobie
+        lastName: 
+          type: string
+          example: Kisten
+        numberOfYearsTeachingExperience: 
+          type: integer
+          format: int32
+          example: 29
+        nationalityIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 167
+        userTypeId: 
+          type: integer
+          format: int32
+          example: 7
+        imageUrl: 
+          type: string
+          example: /static/media/teachers/photo/3724.jpg
+        adviserScore: 
+          type: integer
+          format: int32
+          example: 8
+        completedEducationLevelIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 2

@@ -1,0 +1,82 @@
+type: object
+properties:
+  candidates: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        cvUrl: 
+          type: string
+          example: /th/api/teachers/1523321/download/20483
+        memberNumber: 
+          type: integer
+          format: int32
+          example: 1523321
+        thPlaceabilityRating: 
+          type: integer
+          format: int32
+          example: 0
+        nationalityId: 
+          type: integer
+          format: int32
+          example: -1
+        isFavourite: 
+          type: integer
+          format: int32
+          example: 0
+        teachingQualificationCountryId: 
+          type: integer
+          format: int32
+          example: 77
+        userIsActive: 
+          type: integer
+          format: int32
+          example: 1
+        percentageComplete: 
+          type: integer
+          format: int32
+          example: 70
+        jobSeekingStatusId: 
+          type: integer
+          format: int32
+          example: 1
+        lookingForSubjectIds: 
+          type: array
+          items: 
+            type: integer
+            format: int32
+            example: 3
+        curriculumExperienceIds: 
+          type: array
+          
+        lastActiveDate: 
+          type: integer
+          format: int64
+          example: 1592419437000
+        averageReferenceScore: 
+          type: integer
+          format: int32
+          example: 63
+        firstName: 
+          type: string
+          example: Awaiting-cv-review
+        lastName: 
+          type: string
+          example: Test
+        nationalityIds: 
+          type: array
+         
+        userTypeId: 
+          type: integer
+          format: int32
+          example: 4
+        imageUrl: 
+          type: string
+          example: /static/images/member.png
+        adviserScore: 
+          type: integer
+          format: int32
+          example: 0
+        completedEducationLevelIds: 
+          type: array
+          
