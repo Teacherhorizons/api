@@ -5,7 +5,7 @@ get:
     - status-current
   summary: Get school count (current)
   parameters:
-    - in: path
+    - in: query
       name: ids
       description: Get Schools Ids
       example: 12,15
@@ -46,15 +46,15 @@ get:
       description: Comma separated list of academicSystems ids
       example: 3,4
       schema:
-         type: string
+        type: string
 
     - in: query
       name: minimum-percentage-complete
       description: Minimum percentageComplete
       example: 21
       schema:
-         type: integer
-         format: int32
+        type: integer
+        format: int32
 
     - in: query
       name: accreditations
@@ -77,30 +77,26 @@ get:
       schema:
         type: string
 
-
     - in: query
       name: approved-by-th
       description: Approved by TH
       example: 4
       schema:
-       type: integer
-
+        type: integer
 
     - in: query
       name: endorsed-by-th
       description: Endorsed by TH
       example: 6,4
       schema:
-       type: integer
-
+        type: integer
 
     - in: query
       name: visited-by-th
       description: Visited by TH
       example: 1
       schema:
-       type: integer
- 
+        type: integer
 
     - in: path
       name: Iras
@@ -119,11 +115,10 @@ get:
 
     - in: query
       name: my-list
-      description: List of favourites 
+      description: List of favourites
       example: 5,6
       schema:
         type: string
-
 
     - in: query
       name: lat-from
