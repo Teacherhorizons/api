@@ -79,13 +79,13 @@ paths:
   /v1/schools/search/city-area/by-city/count:
     $ref: "./paths/current/schools/schools-search-city-area-by-city-count.yaml"
 
-  /api/v1/candidates/search/full:
+  /v1/candidates/search/full:
     $ref: "./paths/current/teachers/candidates-search-full.yaml"
-  /api/v1/candidates/search/full/count:
+  /v1/candidates/search/full/count:
     $ref: "./paths/current/teachers/candidates-search-full-count.yaml"
-  /api/v2/candidates/search/region-area/by-region/count:
+  /v2/candidates/search/region-area/by-region/count:
     $ref: "./paths/current/teachers/candidates-search-region-area-by-region-count.yaml"
-  /api/v2/candidates/search/country-area/by-country/count:
+  /v2/candidates/search/country-area/by-country/count:
     $ref: "./paths/current/teachers/candidates-search-country-area-by-country-count.yaml"
 
   /v1/user/bundle:
@@ -102,6 +102,23 @@ paths:
     $ref: "./paths/current/jobs/schools-search-country-area-by-country-count.yaml"
   /v1/jobs/search/city-area/by-city/count:
     $ref: "./paths/current/jobs/schools-search-city-area-by-city-count.yaml"
+
+  /v1/jobs/applications/lists:
+    $ref: "./paths/current/jobs/applications-lists.yaml"
+  /v1/candidates:
+    $ref: "./paths/current/teachers/candidates-details.yaml"
+  /v2/candidates/search/country-area/full:
+    $ref: "./paths/current/teachers/candidates-search-country-area-full.yaml"
+
+
+#/v1/school-community/school-responses/school/id/{schoolId}
+#/v1/school/id/{schoolId}/jobs
+#/v1/teacher/member-number/123724/employment-record/add
+
+
+#/v2/candidates/search/country-area/full/count
+#/v1/admin-users
+#/v1/jobs/applications/search
 
   # proposed
   # TODO: consider versioning and 'sets'
