@@ -2,16 +2,16 @@ openapi: 3.1.0
 info:
   version: 1.0.0
   title: Teacher Horizons API
-  # termsOfService: 'https://example.com/terms/'
   contact:
     email: dev@teacherhorizons.com
-    # url: 'http://example.com/contact'
+    url: "http://127.0.0.1:8080/"
   license:
     name: Apache 2.0
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
     url: "https://www.teacherhorizons.com/assets/bird/logo.png"
   description:
+    # TODO: figure out how to disable this warning (e.g. 'yamllint disable-line' doesn't work)
     $ref: "./info-description.md"
 # externalDocs:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
@@ -54,6 +54,43 @@ tags:
     description: Operations about users.
   - name: Example - Tag
     description: This is a tag description.
+
+  - name: pet_model
+    x-displayName: Pet (Non-TH)
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Pet" />
+
+  - name: school_model
+    x-displayName: School
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/School" />
+
+x-tagGroups:
+  - name: Models
+    tags:
+      - pet_model
+      - school_model
+      - store_model
+
+  - name: API
+    tags:
+      - cities
+      - countries
+      - employment-records
+      - job-applications
+      - jobs
+      - lists
+      - regions
+      - schools
+      - sites
+      - teachers
+      - users
+
+  - name: API - non-TH examples
+    tags:
+      - Example - Echo
+      - Example - User
+      - Example - Tag
 servers:
   - url: "https://beta.teacherhorizons.com/th/api"
 paths:
@@ -112,18 +149,15 @@ paths:
   /v2/candidates/search/country-area/full:
     $ref: "./paths/current/teachers/candidates-search-country-area-full.yaml"
 
+  #/v1/school-community/school-responses/school/id/{schoolId}
+  #/v1/school/id/{schoolId}/jobs
+  #/v1/teacher/member-number/123724/employment-record/add
 
-#/v1/school-community/school-responses/school/id/{schoolId}
-#/v1/school/id/{schoolId}/jobs
-#/v1/teacher/member-number/123724/employment-record/add
-
-
-#/v2/candidates/search/country-area/full/count
-#/v1/admin-users
-#/v1/jobs/applications/search
+  #/v2/candidates/search/country-area/full/count
+  #/v1/admin-users
+  #/v1/jobs/applications/search
 
   # proposed
-  # TODO: consider versioning and 'sets'
   /job-applications:
     $ref: "./paths/proposed/job-applications/job-applications.yaml"
   /schools:
@@ -182,7 +216,6 @@ paths:
       tags:
         - employment-records
 
-# TODO: components section
 components:
   securitySchemes:
     main_auth:
@@ -200,3 +233,5 @@ components:
     basic_auth:
       type: http
       scheme: basic
+  schemas:
+    $ref: schemas.yaml

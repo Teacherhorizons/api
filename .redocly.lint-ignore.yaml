@@ -1,0 +1,33 @@
+# # This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
+# # See https://redoc.ly/docs/cli/ for more information.
+openapi\paths\current\schools\schools-search-school-area-count.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/13/name"
+openapi\paths\current\schools\schools-search-region-area-by-region-count.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/0/name"
+    - "#/get/parameters/13/name"
+openapi\paths\current\schools\schools-search-country-area-by-country-count.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/0/name"
+    - "#/get/parameters/13/name"
+openapi\paths\current\schools\schools-search-city-area-by-city-count.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/0/name"
+    - "#/get/parameters/13/name"
+openapi\paths\current\teachers\candidates-search-full.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/0/name"
+openapi\paths\current\teachers\candidates-search-full-count.yaml:
+  path-parameters-defined:
+    - "#/get/parameters/0/name"
+? openapi\paths\current\teachers\candidates-search-region-area-by-region-count.yaml
+: path-parameters-defined:
+    - "#/get/parameters/0/name"
+? openapi\paths\current\teachers\candidates-search-country-area-by-country-count.yaml
+: path-parameters-defined:
+    - "#/get/parameters/0/name"
+openapi\openapi.yaml:
+  path-parameters-defined:
+    - >-
+      #/paths/~1v1~1teacher~1member-number~1{member-number}~1employment-record~1add/post/parameters

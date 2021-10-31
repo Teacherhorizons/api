@@ -45,6 +45,8 @@
 - https://jsonapi.org/format/#fetching-sparse-fieldsets
 - https://jsonapi.org/format/1.1/#query-parameters-families
 - https://discuss.jsonapi.org/t/filtering-querying-deep-relationships-a-proposal-for-a-syntax/1746
+- https://discuss.jsonapi.org/t/openapi-3-0-spec-that-conforms-to-json-api/1803/6
+- https://github.com/UkonnRa/wonderland-archived/blob/develop/openapi/jsonapi.yaml
 
 ### Java
 
@@ -101,11 +103,11 @@ implementation logic. Similar to what
 interfaces have done for lower-level programming, OpenAPI removes the
 guesswork in calling the service. -->
 
-# Style guide
+## Style guide
 
-## TODO...
+### TODO...
 
-# JSON API (proposed)
+## JSON API (proposed)
 
 ### Current API call
 
@@ -210,3 +212,27 @@ included: {
 
 
 <!-- /schools?include=city,city.country,city.country.region& -->
+
+## Versioning
+
+### Versioning of the whole api
+
+- Initially none - address if we ever need it
+
+### Versioning of individual API calls
+
+- Initially none - address as/when we need it
+- Probably do using 'content negotiation' (option 4 here https://www.xmatters.com/blog/blog-four-rest-api-versioning-strategies/) or, possibly simpler for our use cases, use e.g. `?version=2` in the url
+- If no version specified, default to oldest 'supported' version
+
+#### Process
+
+  1. change the spec so it describes what we want things to change to (no need to keep the spec for the 'old' version)
+  2. if spec implies a significant breaking change, create parallel code in backend which requires version=2
+  3. release backend
+  4. update front-end to use version=2
+  5. once nothing's using the 'old' version, delete the related backend code and gradually remove version=2 from everywhere
+
+- This way 'version' is only a *temporary state*, and exists only to support separate backend and front-end releases
+- Add deprecation marking into the process if we ever need into
+- Useful link: https://apisyouwonthate.com/blog/api-versioning-has-no-right-way

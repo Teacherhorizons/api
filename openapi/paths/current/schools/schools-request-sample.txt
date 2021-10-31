@@ -1,0 +1,44 @@
+# stub: /th/jsonapi/
+
+# for school search
+
+# current
+/v3/schools/search/school-area/full?limit=20&minimum-percentage-complete=30
+
+# proposed
+/schools?page[size]=20&filter[percentageComplete][gte]=30
+&include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
+&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[cities]=imageUrl,name,country
+&fields[countries]=name,region
+&fields[regions]=name
+
+# current
+/v3/schools/search/school-area/full?limit=20&countries=1,164
+
+# proposed
+/schools?page[size]=20&filter[country]=1,164
+&include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
+&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[cities]=imageUrl,name,country
+&fields[countries]=name,region
+&fields[regions]=name
+
+# current
+/v3/schools/search/school-area/full?limit=20&search=nat
+
+# proposed
+/schools?page[size]=20&filter[name][matches]=nat
+&include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
+&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[cities]=imageUrl,name,country
+&fields[countries]=name,region
+&fields[regions]=name
+
+# 'matches' operator defined as e.g. SQL: ... where concat(' ', name) like ' nat';
+
+# client (e.g. angular) can only request stuff the user has access to
+# if server receives request for anything the user doesn't has access to, it responds with an appropriate error
+
+# proposed
+/schools?page[size]=20&filter[locationLatLong.lat][gte]=12...
