@@ -143,19 +143,29 @@ paths:
     $ref: "./paths/current/jobs/schools-search-city-area-by-city-count.yaml"
 
   /v1/jobs/applications/lists:
-    $ref: "./paths/current/jobs/applications-lists.yaml"
+    $ref: "./paths/current/job-applications/applications-lists.yaml"
   /v1/candidates:
     $ref: "./paths/current/teachers/candidates-details.yaml"
   /v2/candidates/search/country-area/full:
     $ref: "./paths/current/teachers/candidates-search-country-area-full.yaml"
+  /v2/candidates/search/country-area/full/count:
+    $ref: "./paths/current/teachers/candidates-search-country-area-full-count.yaml"
+  /v1/admin-users:
+    $ref: "./paths/current/user/admin-users.yaml"
+  /v1/jobs/applications/search:
+    $ref: "./paths/current/job-applications/applications-search.yaml"
+  /v1/school/id/3010/jobs:
+    $ref: "./paths/current/jobs/school-id-3010-jobs.yaml"
+
+  /v3/school/slug/europe-italy-turin-association-victoria-institute/profile:
+    $ref: "./paths/current/schools/school-slug-europe-italy-turin-association-victoria-institute-profile.yaml"
+
+  #/v1/school/id/{schoolId}/jobs:
+  #$ref: "./paths/current/schools/school-id-jobs.yaml"
 
   #/v1/school-community/school-responses/school/id/{schoolId}
-  #/v1/school/id/{schoolId}/jobs
-  #/v1/teacher/member-number/123724/employment-record/add
 
-  #/v2/candidates/search/country-area/full/count
-  #/v1/admin-users
-  #/v1/jobs/applications/search
+  #/v1/teacher/member-number/123724/employment-record/add
 
   # proposed
   /job-applications:
