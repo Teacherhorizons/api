@@ -1,0 +1,97 @@
+type: object
+properties:
+  debugType: 
+    type: string
+    example: schoolViewFullAdmin
+  school: 
+    type: object
+    properties: 
+      additionalVideoUrls: 
+        type: array
+       
+      cityAlias: 
+        type: string
+        example: /Europe/Italy/Turin
+      countryAlias: 
+        type: string
+        example: /Europe/Italy
+      regionAlias: 
+        type: string
+        example: /Europe
+      managedByUserId: 
+        type: integer
+        format: int32
+        example: 1159
+      managedByFullName: 
+        type: string
+        example: admin Test
+      managedByEmail: 
+        type: string
+        example: admin@th.test
+      schoolId: 
+        type: integer
+        format: int32
+        example: 3010
+      cityId: 
+        type: integer
+        format: int32
+        example: 117
+      schoolName: 
+        type: string
+        example: Association-Victoria Institute
+      slug: 
+        type: string
+        example: europe-italy-turin-association-victoria-institute
+      profileCompletionPercentage: 
+        type: integer
+        format: int32
+        example: 5
+      acronym: 
+        type: string
+        example: AI
+      numberOfBasicActiveJobCredits: 
+        type: integer
+        format: int32
+        example: 10
+      files: 
+        type: array
+        items: 
+          type: object
+          properties: 
+            urlPathComponent: 
+              type: string
+              example: /static/media/schools/3010/images/1730.jpg
+            schoolImageId: 
+              type: integer
+              format: int32
+              example: 1607
+            mediaType: 
+              type: string
+              example: additional-image
+            avContentId: 
+              type: integer
+              format: int32
+              example: 1730
+      locationLatLong: 
+        type: string
+        example: 45.070982 7.685676
+      lastUpdatedDate: 
+        type: integer
+        format: int64
+        example: 1307735187000
+      isEndorsedByTh: 
+        type: boolean
+  requestedSlug: 
+    type: string
+    example: europe-italy-turin-association-victoria-institute
+  schoolViewCount: 
+    type: integer
+    format: int32
+    example: 0
+  userType: 
+    type: string
+    example: 1
+  isFavourite: 
+    type: integer
+    format: int32
+    example: 0

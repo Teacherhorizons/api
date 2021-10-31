@@ -1,0 +1,27 @@
+type: object
+properties: 
+  adminusers: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: integer
+          format: int32
+          example: 1159
+        firstname: 
+          type: string
+          example: admin
+        lastname: 
+          type: string
+          example: Test
+        email: 
+          type: string
+          example: admin@th.test
+        allowLogin: 
+          type: integer
+          format: int32
+          example: 1
+        fullname: 
+          type: string
+          example: admin Test

@@ -1,0 +1,88 @@
+type: object
+properties: 
+  jobapplications: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        jobApplicationId: 
+          type: integer
+          format: int32
+          example: 30
+        jobId: 
+          type: integer
+          format: int32
+          example: 1389
+        teacherId: 
+          type: integer
+          format: int32
+          example: 4
+        jobApplicationCreationDate: 
+          type: integer
+          format: int64
+          example: 1576645994000
+        jobApplicationStatus: 
+          type: string
+          example: Pending
+        teacherEmail: 
+          type: string
+          example: endorsed@th.test
+        startDate: 
+          type: integer
+          format: int64
+          example: 1677888000000
+        deadline: 
+          type: integer
+          format: int64
+          example: 1677715200000
+        jobTitle: 
+          type: string
+          example: Mathematics teacher
+        schoolId: 
+          type: integer
+          format: int32
+          example: 2520
+        thPlaceabilityRating: 
+          type: integer
+          format: int32
+          example: 7
+        memberNumber: 
+          type: integer
+          format: int32
+          example: 111059
+        candidateFirstName: 
+          type: string
+          example: Endorsed
+        candidateLastName: 
+          type: string
+          example: Test
+        schoolName: 
+          type: string
+          example: Alice Smith School
+        schoolSlug: 
+          type: string
+          example: asia-malaysia-kuala-lumpur-alice-smith-school
+        cityId: 
+          type: integer
+          format: int32
+          example: 358
+        countryId: 
+          type: integer
+          format: int32
+          example: 43
+        thDoesNotWantToContactTeacher: 
+          type: integer
+          format: int32
+          example: 0
+        jobApplicationStatus4Search: 
+          type: integer
+          format: int32
+          example: -20
+        teachingPosition: 
+          type: integer
+          format: int32
+          example: 18
+        teachingSubject: 
+          type: integer
+          format: int32
+          example: 23

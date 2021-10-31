@@ -1,0 +1,20 @@
+get:
+  operationId: getCountriesTeacherCount_current
+  tags:
+    - teachers
+    - status-current
+  summary: Get full list of teachers count by country (current)
+ # parameters:
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/teachers/candidates-search-country-area-full-count.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

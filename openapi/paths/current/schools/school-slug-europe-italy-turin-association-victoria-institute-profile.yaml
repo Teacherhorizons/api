@@ -1,0 +1,21 @@
+get:
+  operationId: getProfile_school_current
+  tags:
+    - schools
+    - status-current
+  summary: Get school profile (current)
+  #parameters:
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/schools/school-slug-europe-italy-turin-association-victoria-institute-profile.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
