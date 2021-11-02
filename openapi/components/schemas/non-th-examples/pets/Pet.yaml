@@ -1,0 +1,152 @@
+Pet:
+  type: object
+  required:
+    - name
+    - photoUrls
+  discriminator:
+    propertyName: petType
+    mapping:
+      cat: "#/Cat"
+      dog: "#/Dog"
+      bee: "#/HoneyBee"
+  properties:
+    $ref: "#/PetProperties"
+  xml:
+    name: Pet
+
+PetProperties:
+  id:
+    externalDocs:
+      description: "Find more info here"
+      url: "https://example.com"
+    description: Pet ID
+    allOf:
+      - $ref: "#/Id"
+  category:
+    description: Categories this pet belongs to
+    allOf:
+      - $ref: "#/Category"
+  name:
+    description: The name given to a pet
+    type: string
+    example: Guru
+  photoUrls:
+    description: The list of URL to a cute photos featuring pet
+    type: array
+    maxItems: 20
+    xml:
+      name: photoUrl
+      wrapped: true
+    items:
+      type: string
+      format: url
+  friend:
+    allOf:
+      - $ref: "#/Pet"
+  tags:
+    description: Tags attached to the pet
+    type: array
+    minItems: 1
+    xml:
+      name: tag
+      wrapped: true
+    items:
+      $ref: "#/Tag"
+  status:
+    type: string
+    description: Pet status in the store
+    enum:
+      - available
+      - pending
+      - sold
+  petType:
+    description: Type of a pet
+    type: string
+
+Cat:
+  description: A representation of a cat
+  allOf:
+    - $ref: "#/Pet"
+    - type: object
+      properties:
+        huntingSkill:
+          type: string
+          description: The measured skill for hunting
+          default: lazy
+          example: adventurous
+          enum:
+            - clueless
+            - lazy
+            - adventurous
+            - aggressive
+      required:
+        - huntingSkill
+
+Dog:
+  description: A representation of a dog
+  allOf:
+    - $ref: "#/Pet"
+    - type: object
+      properties:
+        packSize:
+          type: integer
+          format: int32
+          description: The size of the pack the dog is from
+          default: 1
+          minimum: 1
+      required:
+        - packSize
+
+HoneyBee:
+  description: A representation of a honey bee
+  allOf:
+    - $ref: "#/Pet"
+    - type: object
+      properties:
+        honeyPerDay:
+          type: number
+          description: Average amount of honey produced per day in ounces
+          example: 3.14
+          multipleOf: .01
+      required:
+        - honeyPerDay
+
+Category:
+  type: object
+  properties:
+    id:
+      description: Category ID
+      allOf:
+        - $ref: "#/Id"
+    name:
+      description: Category name
+      type: string
+      minLength: 1
+    sub:
+      description: Test Sub Category
+      type: object
+      properties:
+        prop1:
+          type: string
+          description: Dumb Property
+  xml:
+    name: Category
+
+Id:
+  type: integer
+  format: int64
+  readOnly: true
+
+Tag:
+  type: object
+  properties:
+    id:
+      description: Tag ID
+      allOf:
+        - $ref: "#/Id"
+    name:
+      description: Tag name
+      type: string
+      minLength: 1
+  xml:
+    name: Tag

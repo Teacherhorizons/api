@@ -18,7 +18,7 @@ properties:
     type: boolean
     example: true
 
-  visitedByTh:
+  isVisitedByTh:
     type: boolean
     example: false
 
@@ -28,13 +28,6 @@ properties:
       type: integer
       format: int32
       example: 12
-
-  academicSystemIds:
-    type: array
-    items:
-      type: integer
-      format: int32
-      example: 1
 
   academicSystems:
     type: array
@@ -49,7 +42,7 @@ properties:
           type: string
           example: Foo
 
-  completionLevel:
+  profileStrength:
     type: integer
     format: int32
     example: 100
@@ -58,20 +51,16 @@ properties:
     type: string
     example: africa-morocco-casablanca-george-washington-academy
 
-  endorsedByTh:
-    type: integer
-    format: int32
-    example: 1
+  # locationLatLong:
+  #   type: object
+  #   example: 9.0220503, 7.3926057
 
-  locationLatLong:
-    type: string
-    example: 9.0220503, 7.3926057
-
-  # TODO: not a property of school; relates to the combination of the school and the current user
-  isFavourite:
-    type: integer
-    format: int32
-    example: 1
+  schoolUser:
+    type: object
+    properties:
+      isFavourite:
+        type: boolean
+        example: true
 
   # TODO: direct relationship with school; could stay here, but should probably move
   city:
@@ -125,8 +114,6 @@ properties:
         type: integer
         format: int32
         example: 13
-
   # city:
   #   $ref: "./../../proposed/cities/City.yaml"
-# standard properties - this file only contains agreed 'standard' properties
-
+  # standard properties - this file only contains agreed 'standard' properties

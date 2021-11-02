@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "type": "schools",
+      "id": 2520,
+      "attributes": {
+        "isApprovedByTh": true,
+        "isEndorsedByTh": true,
+        "isVisitedByTh": false,
+        "profileStrength": 90.0,
+        "slug": "asia-malaysia-kuala-lumpur-alice-smith-school",
+        "name": "Alice Smith School",
+        // "locationLatitude": "3.09099001606275",
+        // "locationLongitude": "101.68617714196444",
+        // https://discuss.jsonapi.org/t/should-json-api-attributes-element-contain-nested-objects/893
+        // "specification allows for nested complex types in attributes of an individual resource, BUT the complex type can not be another resource"
+        "locationLatLong": {
+          "lat": "3.09099001606275",
+          "long": "101.68617714196444"
+        }
+      },
+      "relationships": {
+        "city": {
+          "data": {
+            "type": "cities",
+            "id": "358"
+          }
+        },
+        // https://discuss.jsonapi.org/t/array-of-resources-ids-in-attributes/1603/2
+        "academicSystems": {
+          "data": [
+            {
+              "type": "academicSystems",
+              "id": "1"
+            },
+            {
+              "type": "academicSystems",
+              "id": "2"
+            }
+          ]
+        },
+        "accreditations": {
+          "data": []
+        },
+        "schoolUsers": {
+          "data": {
+            "isFavourite": true
+          }
+        },
+        "badgeImage": {
+          "data": {
+            "type": "images",
+            "id": "28607"
+          }
+        },
+        "mainImage": {
+          "data": {
+            "type": "images",
+            "id": "28603"
+          }
+        }
+      },
+      "badgeImage": {
+        "id": 28607,
+        "resource": "/static/media/schools/2520/images/28607_main.jpg",
+        "reference": "28583_main.jpg",
+        "type": 0
+      },
+      "mainImage": {
+        "id": 28603,
+        "resource": "/static/media/schools/2520/images/28603_main.jpeg",
+        "reference": "28585_main.jpeg",
+        "type": 13
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "cities",
+      "id": "358",
+      "attributes": {
+        "imageUrl": "/advice/wp-content/uploads/regional/city/kuala-lumpur-1.jpg",
+        "name": "Kuala Lumpur"
+      },
+      "relationships": {
+        "country": {
+          "data": {
+            "type": "countries",
+            "id": "43"
+          }
+        }
+      }
+    },
+    {
+      "type": "countries",
+      "id": "43",
+      "attributes": {
+        "name": "Malaysia"
+      },
+      "relationships": {
+        "region": {
+          "data": {
+            "type": "regions",
+            "id": "2"
+          }
+        }
+      }
+    },
+    {
+      "type": "regions",
+      "id": "2",
+      "attributes": {
+        "name": "Asia"
+      }
+    },
+    {
+      "type": "images",
+      "id": 28607,
+      "attributes": {
+        "resource": "/static/media/schools/2520/images/28607_main.jpg",
+        "reference": "28583_main.jpg",
+        "type": 0
+      }
+    },
+    {
+      "type": "images",
+      "id": 28603,
+      "attributes": {
+        "resource": "/static/media/schools/2520/images/28603_main.jpeg",
+        "reference": "28585_main.jpeg",
+        "type": 13
+      }
+    }
+  ]
+}
