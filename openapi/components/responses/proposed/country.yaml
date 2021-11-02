@@ -1,0 +1,18 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      $ref: "../../schemas/proposed/models/country.yaml#/Country"
+  included:
+    type: array
+    uniqueItems: true
+    items:
+      $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Resource"
+  links:
+    description: Link members related to primary data
+    allOf:
+      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Links"
+      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Pagination"
+  jsonapi:
+    $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/JsonApi"

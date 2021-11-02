@@ -8,10 +8,38 @@
 # proposed
 /schools?page[size]=20&filter[percentageComplete][gte]=30
 &include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
-&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
 &fields[cities]=imageUrl,name,country
 &fields[countries]=name,region
 &fields[regions]=name
+
+# proposed - processing steps
+
+-- get school data (possibly using an orm)
+select isApprovedByTh, isEndorsedByTh, isVisitedByTh, profileStrength, slug, name,
+  locationLatLong, -- some translation needed
+  cityId, academicSystemId, accreditationId,
+  isFavourite -- need to think about how best to represent this one
+from schools -- probably a view
+where ...
+
+-- derive distinct cityIds (from schools)
+javascript
+
+-- derive city data (could be cached?)
+select imageUrl, name, countryId
+from cities
+where id in ({cityIds})
+
+-- derive distinct countryIds (from cities)
+javascript
+
+-- derive country data (could be cached?)
+select name, regionId
+from countries
+where id in ({countryIds})
+
+-- etc.
 
 # current
 /v3/schools/search/school-area/full?limit=20&countries=1,164
@@ -19,7 +47,7 @@
 # proposed
 /schools?page[size]=20&filter[country]=1,164
 &include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
-&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
 &fields[cities]=imageUrl,name,country
 &fields[countries]=name,region
 &fields[regions]=name
@@ -30,7 +58,7 @@
 # proposed
 /schools?page[size]=20&filter[name][matches]=nat
 &include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
-&fields[schools]=isApprovedByTh&isEndorsedByTh&isVisitedByTh&profileStrength&slug&name&locationLatLong
+&fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
 &fields[cities]=imageUrl,name,country
 &fields[countries]=name,region
 &fields[regions]=name

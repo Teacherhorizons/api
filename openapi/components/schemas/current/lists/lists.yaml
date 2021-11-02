@@ -3,7 +3,7 @@ properties:
   academicSystems:
     type: array
     items:
-      $ref: "./AcademicSystem.yaml"
+      $ref: "./AcademicSystem_current.yaml"
   acceptedTeacherQualifications:
     type: array
     items:
@@ -31,13 +31,14 @@ properties:
   countries:
     type: array
     items:
-      $ref: "./Country.yaml"
+      $ref: "./Country_current.yaml"
   subjects:
     type: array
     items:
       $ref: "./Subject.yaml"
 
-  # TODO: create separate files for each of these
+  # (TODO: create separate files for each of these)
+  # don't bother with this now - don't need so much structure with the 'current' documentation
   teachingLanguages:
     type: array
     items:

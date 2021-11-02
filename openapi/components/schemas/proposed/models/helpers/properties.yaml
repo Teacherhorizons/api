@@ -1,0 +1,25 @@
+Type:
+  type: string
+  example: fooBar
+  readOnly: true
+  description: Value representing the object type
+
+Id:
+  type: integer
+  format: int32
+  minimum: 1
+  example: 2
+  readOnly: true
+  description: Unique identifier of the object
+
+LocationLatLong:
+  type: object
+  properties:
+    lat:
+      type: number
+      format: float
+      example: -12.34
+    long:
+      type: number
+      format: float
+      example: 23.45

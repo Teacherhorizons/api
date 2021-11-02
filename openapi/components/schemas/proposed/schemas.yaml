@@ -1,0 +1,19 @@
+ListRefs:
+  allOf:
+    - $ref: "./models/lists/AcademicSystem.yaml#/AcademicSystem"
+    - $ref: "./models/lists/Accreditation.yaml#/Accreditation"
+
+RegionalRefs:
+  allOf:
+    - $ref: "./models/City.yaml#/City"
+    - $ref: "./models/Country.yaml#/Country"
+    - $ref: "./models/Country.yaml#/CountryAttributes"
+    - $ref: "./models/Region.yaml#/Region"
+
+MainRefs:
+  allOf:
+    - $ref: "./models/School.yaml#/School"
+
+NonThRefs:
+  allOf:
+    - $ref: "./../non-th-examples/pets/Pet.yaml#/Pet"

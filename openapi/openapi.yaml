@@ -55,12 +55,35 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
-  - name: pet_model
+  - name: model-city
+    x-displayName: City
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/City" />
+
+  - name: model-country
+    x-displayName: Country
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Country" />
+
+  - name: model-lists
+    x-displayName: Lists
+    description: |
+      ### Academic system
+      <SchemaDefinition schemaRef="#/components/schemas/AcademicSystem" />
+      ### Accreditation
+      <SchemaDefinition schemaRef="#/components/schemas/Accreditation" />
+
+  - name: model-pet
     x-displayName: Pet (Non-TH)
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
-  - name: school_model
+  - name: model-region
+    x-displayName: Region
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/Region" />
+
+  - name: model-school
     x-displayName: School
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/School" />
@@ -68,9 +91,12 @@ tags:
 x-tagGroups:
   - name: Models
     tags:
-      - pet_model
-      - school_model
-      - store_model
+      - model-city
+      - model-country
+      - model-lists
+      - model-pet
+      - model-region
+      - model-school
 
   - name: API
     tags:
@@ -168,6 +194,11 @@ paths:
   #/v1/teacher/member-number/123724/employment-record/add
 
   # proposed
+  /regions/{regionId}:
+    $ref: "./paths/proposed/regions/region.yaml"
+  /countries/{countryId}:
+    $ref: "./paths/proposed/countries/country.yaml"
+
   /job-applications:
     $ref: "./paths/proposed/job-applications/job-applications.yaml"
   /schools:
@@ -244,4 +275,4 @@ components:
       type: http
       scheme: basic
   schemas:
-    $ref: schemas.yaml
+    $ref: "./components/schemas/proposed/schemas.yaml"

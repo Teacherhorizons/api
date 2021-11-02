@@ -1,0 +1,199 @@
+JsonApi:
+  type: object
+  description: The server's implementation
+  properties:
+    version:
+      type: string
+    meta:
+      $ref: "#/Meta"
+  additionalProperties: false
+Resource:
+  type: object
+  required:
+    - type
+    - id
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/Type"
+    id:
+      $ref: "#/Id"
+    attributes:
+      type: object
+    relationships:
+      type: object
+    links:
+      $ref: "#/Links"
+    meta:
+      $ref: "#/Meta"
+Link:
+  oneOf:
+    - description: a string containing the link's URL
+      type: string
+      format: uri-reference
+    - type: object
+      required:
+        - href
+      properties:
+        href:
+          description: a string containing the link's URL
+          type: string
+          format: uri-reference
+        meta:
+          $ref: "#/Meta"
+Links:
+  type: object
+  additionalProperties:
+    $ref: "#/Link"
+RelToOne:
+  description: \'To-one\' relationship
+  type: object
+  properties:
+    links:
+      $ref: "#/RelationshipLinks"
+    data:
+      $ref: "#/RelationshipToOne"
+    meta:
+      $ref: "#/Meta"
+RelationshipToOne:
+  description: reference to other resource in a to-one relationship
+  anyOf:
+    - $ref: "#/NullType"
+    - $ref: "#/Linkage"
+RelToMany:
+  description: \'To-many\' relationship
+  type: object
+  properties:
+    links:
+      $ref: "#/RelationshipLinks"
+    data:
+      $ref: "#/RelationshipToMany"
+    meta:
+      $ref: "#/Meta"
+RelationshipLinks:
+  description: optional references to other resource objects
+  type: object
+  additionalProperties: true
+  properties:
+    self:
+      $ref: "#/Link"
+    related:
+      $ref: "#/Link"
+RelationshipToMany:
+  description:
+    An array of objects each containing the 'type' and 'id' for to-many
+    relationships
+  type: array
+  items:
+    $ref: "#/Linkage"
+  uniqueItems: true
+ResourceIdentifierObject:
+  oneOf:
+    - $ref: "#/RelationshipToOne"
+    - $ref: "#/RelationshipToMany"
+Linkage:
+  type: object
+  description: the 'type' and 'id'
+  required:
+    - type
+    - id
+  properties:
+    type:
+      $ref: "#/Type"
+    id:
+      $ref: "#/Id"
+    meta:
+      $ref: "#/Meta"
+Pagination:
+  type: object
+  properties:
+    first:
+      $ref: "#/PageRef"
+    last:
+      $ref: "#/PageRef"
+    prev:
+      $ref: "#/PageRef"
+    next:
+      $ref: "#/PageRef"
+PageRef:
+  oneOf:
+    - type: string
+      format: uri-reference
+    - $ref: "#/NullType"
+Failure:
+  type: object
+  required:
+    - errors
+  properties:
+    errors:
+      $ref: "#/Errors"
+    meta:
+      $ref: "#/Meta"
+    jsonapi:
+      $ref: "#/JsonApi"
+    links:
+      $ref: "#/Links"
+Errors:
+  type: array
+  items:
+    $ref: "#/Error"
+  uniqueItems: true
+Error:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+    status:
+      type: string
+    links:
+      $ref: "#/Links"
+    code:
+      type: string
+    title:
+      type: string
+    detail:
+      type: string
+    source:
+      type: object
+      properties:
+        pointer:
+          type: string
+          description: A [JSON Pointer](https://tools.ietf.org/html/rfc6901) to
+            the associated entity in the request document [e.g. `/data` for a
+            primary data object, or `/data/attributes/title` for a specific attribute.
+        parameter:
+          type: string
+          description: A string indicating which query parameter caused the error.
+        meta:
+          $ref: "#/Meta"
+Onlymeta:
+  additionalProperties: false
+  properties:
+    meta:
+      $ref: "#/Meta"
+Meta:
+  type: object
+  additionalProperties: true
+Datum:
+  description: singular item
+  properties:
+    data:
+      $ref: "#/Resource"
+NullType:
+  type: object
+  # nullable: true
+  default: null
+Type:
+  type: string
+  description:
+    The [type](https://jsonapi.org/format/#document-resource-object-identification)
+    member is used to describe resource objects that share common attributes and
+    relationships.
+  example: foos
+Id:
+  type: string
+  description:
+    "Each resource object\u2019s type and id pair MUST [identify](https://jsonapi.org/format/#document-resource-object-identification)\
+    \ a single, unique resource."
+  example: 12

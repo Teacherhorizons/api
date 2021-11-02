@@ -162,7 +162,8 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/proposed/schools/School.yaml"
+            type: string
+            # $ref: "../../../components/schemas/proposed/schools/School.yaml"
     "400":
       description: Invalid ID supplied
     "404":

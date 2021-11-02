@@ -1,0 +1,29 @@
+Accreditation:
+  type: object
+  properties:
+    $ref: "#/AccreditationProperties"
+  required:
+    - type
+    - id
+
+AccreditationProperties:
+  type:
+    type: string
+    example: accreditation
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "../helpers/properties.yaml#/Id"
+  attributes:
+    $ref: "#/AccreditationAttributes"
+
+AccreditationAttributes:
+  type: object
+  description: Direct attributes
+  properties:
+    name:
+      type: string
+      example: CIS
+    url:
+      type: string
+      example: https://www.cois.org/

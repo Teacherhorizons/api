@@ -1,0 +1,26 @@
+AcademicSystem:
+  type: object
+  properties:
+    $ref: "#/AcademicSystemProperties"
+  required:
+    - type
+    - id
+
+AcademicSystemProperties:
+  type:
+    type: string
+    example: academicSystem
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "../helpers/properties.yaml#/Id"
+  attributes:
+    $ref: "#/AcademicSystemAttributes"
+
+AcademicSystemAttributes:
+  type: object
+  description: Direct attributes
+  properties:
+    name:
+      type: string
+      example: American

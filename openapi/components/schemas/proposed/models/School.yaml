@@ -1,0 +1,125 @@
+School:
+  type: object
+  properties:
+    $ref: "#/SchoolProperties"
+  required:
+    - type
+    - id
+
+SchoolProperties:
+  type:
+    type: string
+    example: school
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "./helpers/properties.yaml#/Id"
+  attributes:
+    type: object
+    properties:
+      $ref: "#/SchoolAttributes"
+    description: Direct attributes
+  relationships:
+    type: object
+    properties:
+      $ref: "#/SchoolRelationships"
+    description: Related attributes
+
+SchoolAttributes:
+  name:
+    type: string
+    example: Raintree International School
+
+  imageUrl:
+    type: string
+    example: /static/mediav2/school/image/142418.jpg
+
+  isEndorsedByTh:
+    type: boolean
+    example: true
+
+  isVisitedByTh:
+    type: boolean
+    example: false
+
+  profileStrength:
+    type: integer
+    format: int32
+    example: 100
+
+  slug:
+    type: string
+    example: africa-morocco-casablanca-george-washington-academy
+
+  locationLatLong:
+    $ref: "../models/helpers/properties.yaml#/LocationLatLong"
+
+SchoolRelationships:
+  accreditations:
+    $ref: "./helpers/json-api.yaml#/RelToMany"
+  academicSystems:
+    $ref: "./helpers/json-api.yaml#/RelToMany"
+  city:
+    $ref: "./helpers/json-api.yaml#/RelToOne"
+  schoolUser:
+    type: object
+    properties:
+      isFavourite:
+        type: boolean
+        example: true
+
+  # # TODO: direct relationship with school; could stay here, but should probably move
+  # city:
+  #   type: object
+  #   properties:
+  #     imageUrl:
+  #       type: string
+  #       example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+  #     id:
+  #       type: integer
+  #       format: int32
+  #       example: 6
+  #     name:
+  #       type: string
+  #       example: Casablanca
+
+  # # TODO: might be okay here
+  # badgeImage:
+  #   type: object
+  #   properties:
+  #     id:
+  #       type: integer
+  #       format: int32
+  #       example: 487931
+  #     resource:
+  #       type: string
+  #       example: /static/mediav2/schools/2538/images/487931_main.jpg
+  #     reference:
+  #       type: string
+  #       example: SATR.jpg
+  #     type:
+  #       type: integer
+  #       format: int32
+  #       example: 0
+
+  # # TODO: might be okay here
+  # schoolImage: # name?
+  #   type: object
+  #   properties:
+  #     id:
+  #       type: integer
+  #       format: int32
+  #       example: 499271
+  #     resource:
+  #       type: string
+  #       example: /static/mediav2/schools/2538/images/499271_main.jpg
+  #     reference:
+  #       type: string
+  #       example: GWAD.jpg
+  #     type:
+  #       type: integer
+  #       format: int32
+  #       example: 13
+  # city:
+  #   $ref: "./../../proposed/cities/City.yaml"
+  # standard properties - this file only contains agreed 'standard' properties

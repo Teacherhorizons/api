@@ -1,0 +1,52 @@
+Country:
+  type: object
+  properties:
+    $ref: "#/CountryProperties"
+  required:
+    - type
+    - id
+
+CountryProperties:
+  type:
+    type: string
+    example: country
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "./helpers/properties.yaml#/Id"
+  attributes:
+    $ref: "#/CountryAttributes"
+  relationships:
+    $ref: "#/CountryRelationships"
+
+CountryAttributes:
+  type: object
+  description: Direct attributes
+  properties:
+    name:
+      type: string
+      example: Portugal
+    isoCode:
+      type: string
+      example: af
+    hasFreeHealthCare:
+      type: boolean
+      example: true
+    phoneCode:
+      type: string
+      example: 93
+    locationLatLong:
+      $ref: "./helpers/properties.yaml#/LocationLatLong"
+    nationalAverageIncomeInUsd:
+      type: number
+      format: float
+      example: 123.45
+
+CountryRelationships:
+  type: object
+  description: Related attributes
+  properties:
+    region:
+      $ref: "./helpers/json-api.yaml#/RelToOne"
+    # currency:
+    #   $ref: "../lists/Currency.yaml"

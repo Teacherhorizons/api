@@ -1,0 +1,52 @@
+Region:
+  type: object
+  required:
+    - type
+    - id
+  properties:
+    $ref: "#/RegionProperties"
+
+RegionProperties:
+  type:
+    type: string
+    example: region
+    readOnly: true
+  id:
+    type: integer
+    format: int32
+    example: 5
+    readOnly: true
+    description: Unique identifier of the object
+  attributes:
+    $ref: "#/RegionAttributes"
+
+RegionAttributes:
+  type: object
+  discriminator:
+    propertyName: userCategory
+    mapping:
+      admin: "#/RegionAttributes_admin"
+      school: "#/RegionAttributes_school"
+      teacher: "#/RegionAttributes_teacher"
+  properties:
+    name:
+      type: string
+      example: Europe
+    userCategory:
+      type: string
+
+RegionAttributes_admin:
+  allOf:
+    - $ref: "#/RegionAttributes"
+    - type: object
+      properties:
+        adminOnlyField:
+          type: string
+
+RegionAttributes_school:
+  allOf:
+    - $ref: "#/RegionAttributes"
+
+RegionAttributes_teacher:
+  allOf:
+    - $ref: "#/RegionAttributes"

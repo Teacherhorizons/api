@@ -1,0 +1,38 @@
+City:
+  type: object
+  properties:
+    $ref: "#/CityProperties"
+  required:
+    - type
+    - id
+
+CityProperties:
+  type:
+    type: string
+    example: city
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "./helpers/properties.yaml#/Id"
+  attributes:
+    $ref: "#/CityAttributes"
+  relationships:
+    $ref: "#/CityRelationships"
+
+CityAttributes:
+  type: object
+  description: Direct attributes
+  properties:
+    name:
+      type: string
+      example: Lisbon
+    imageUrl:
+      type: string
+      example: /advice/wp-content/uploads/regional/city/casablanca-morocco-1.jpg
+
+CityRelationships:
+  type: object
+  description: Related attributes
+  properties:
+    country:
+      $ref: "./helpers/json-api.yaml#/RelToOne"

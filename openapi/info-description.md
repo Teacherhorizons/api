@@ -46,7 +46,7 @@
 - https://jsonapi.org/format/1.1/#query-parameters-families
 - https://discuss.jsonapi.org/t/filtering-querying-deep-relationships-a-proposal-for-a-syntax/1746
 - https://discuss.jsonapi.org/t/openapi-3-0-spec-that-conforms-to-json-api/1803/6
-- https://github.com/UkonnRa/wonderland-archived/blob/develop/openapi/jsonapi.yaml
+- https://gist.github.com/naesean/d64185e45d1722ab3a53c45be47accae
 
 ### Java
 
@@ -213,7 +213,7 @@ included: {
 
 <!-- /schools?include=city,city.country,city.country.region& -->
 
-## Versioning
+## Approach to versioning
 
 ### Versioning of the whole api
 
@@ -225,7 +225,7 @@ included: {
 - Probably do using 'content negotiation' (option 4 here https://www.xmatters.com/blog/blog-four-rest-api-versioning-strategies/) or, possibly simpler for our use cases, use e.g. `?version=2` in the url
 - If no version specified, default to oldest 'supported' version
 
-#### Process
+#### Versioning process
 
   1. change the spec so it describes what we want things to change to (no need to keep the spec for the 'old' version)
   2. if spec implies a significant breaking change, create parallel code in backend which requires version=2
@@ -233,6 +233,14 @@ included: {
   4. update front-end to use version=2
   5. once nothing's using the 'old' version, delete the related backend code and gradually remove version=2 from everywhere
 
+- This is to keep it simple. Will tweak if it isn't simple in a particular case.
 - This way 'version' is only a *temporary state*, and exists only to support separate backend and front-end releases
 - Add deprecation marking into the process if we ever need into
 - Useful link: https://apisyouwonthate.com/blog/api-versioning-has-no-right-way
+
+## Approach to error handling
+
+TODO
+## Approach to different user types
+
+See the 'Pet' example.
