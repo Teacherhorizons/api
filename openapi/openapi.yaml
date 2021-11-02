@@ -119,16 +119,32 @@ paths:
     $ref: "./paths/current/job-applications/applications-search.yaml"
   /v1/school/id/3010/jobs:
     $ref: "./paths/current/jobs/school-id-3010-jobs.yaml"
+  /v1/teacher/member-number/2123428/employment-records:
+    $ref: "./paths/current/teachers/teacher-member-number-2123428-employment-records.yaml"
+  /v1/teacher/member-number/2123428/admin-notes:
+    $ref: "./paths/current/teachers/teacher-member-number-2123428-admin-notes.yaml"
+  /v2/teacher/member-number/2123428/related:
+    $ref: "./paths/current/teachers/teacher-member-number-2123428-related.yaml"
+  /v2/teacher/member-number/2123428/documents:
+    $ref: "./paths/current/teachers/teacher-member-number-2123428-documents.yaml"
+  /v2/teacher/member-number/2123428/references:
+    $ref: "./paths/current/teachers/teacher-member-number-2123428-references.yaml"
 
+
+  /v3/teacher/member-number/2123428/core:
+    $ref: "./paths/current/teachers/teacher-member-number-core.yaml"
   /v3/school/slug/europe-italy-turin-association-victoria-institute/profile:
     $ref: "./paths/current/schools/school-slug-europe-italy-turin-association-victoria-institute-profile.yaml"
+  
 
-  #/v1/school/id/{schoolId}/jobs:
-    #$ref: "./paths/current/schools/school-id-jobs.yaml"
-
+#/v1/school/id/{schoolId}/jobs:
+#$ref: "./paths/current/schools/school-id-jobs.yaml"
 #/v1/school-community/school-responses/school/id/{schoolId}
 
 #/v1/teacher/member-number/123724/employment-record/add
+
+
+
 
 
 

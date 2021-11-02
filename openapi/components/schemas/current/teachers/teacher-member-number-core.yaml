@@ -1,0 +1,228 @@
+type: object
+properties:
+  thDoNotContact: 
+    type: integer
+    format: int32
+    example: 0
+  teacherId: 
+    type: integer
+    format: int32
+    example: 22136
+  dateApplied: 
+    type: integer
+    format: int64
+    example: 1610200165000
+  thPlaceabilityRating: 
+    type: integer
+    format: int32
+    example: 0
+  userid: 
+    type: integer
+    format: int32
+    example: 23428
+  averageReferenceScore: 
+    type: integer
+    format: int32
+    example: 0
+  teachingQualificationCountryId: 
+    type: integer
+    format: int32
+    example: 62
+  userIsActive: 
+    type: integer
+    format: int32
+    example: 1
+  currentRoleId: 
+    type: integer
+    format: int32
+    example: -1
+  badgeIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  percentageComplete: 
+    type: integer
+    format: int32
+    example: 0
+  jobSeekingStatusId: 
+    type: integer
+    format: int32
+    example: 1
+  currentSubjectIds: 
+    type: array
+  lookingForSubjectIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  curriculumExperienceIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5 
+  completedEducationLevelIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  teachingSkillIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  computerSkillIds: 
+    type: array 
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  lookingForRegionIds: 
+    type: array 
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  fluentLanguageIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  lookingForAgeLevelIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  lookingForCurriculumIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  experienceCurriculumIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  lookingForRoleIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 14
+  notLookingForCountryIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5 
+  numberOfCompletedReferences: 
+    type: integer
+    format: int32
+    example: 0
+  lastActiveDate: 
+    type: integer
+    format: int64
+    example: 1610200165000
+  cvUrl: 
+    type: string
+    example: /th/api/teachers/2123428/download/20788
+  qualificationTypeId: 
+    type: integer
+    format: int32
+    example: 3
+  internationalExperienceId: 
+    type: integer
+    format: int32
+    example: 2
+  sharedFacebookProfile: 
+    type: integer
+    format: int32
+    example: 0
+  thDiscoveryMethodId: 
+    type: integer
+    format: int32
+    example: 6
+  latestUpdateDate: 
+    type: integer
+    format: int64
+    example: 1610200416000
+  teachingQualificationId: 
+    type: integer
+    format: int32
+    example: 3
+  jobEmailsOptIn: 
+    type: integer
+    format: int32
+    example: 1
+  internationalSchoolExperienceId: 
+    type: integer
+    format: int32
+    example: 2
+  numberOfEmploymentRecords: 
+    type: integer
+    format: int32
+    example: 0
+  photoUrl: 
+    type: string
+    example: /static/images/member.png
+  email: 
+    type: string
+    example: www@eee.com
+  firstName: 
+    type: string
+    example: www
+  lastName: 
+    type: string
+    example: eee
+  schoolPreferences:
+    type: object
+    properties:
+      schoolPreferenceId: 
+        type: integer
+        format: int32
+        example: 6454
+      abilityToSavePreferenceId: 
+        type: integer
+        format: int32
+        example: 3
+      discountOnSchoolFeesPreferenceId: 
+        type: integer
+        format: int32
+        example: 1
+      accommodationProvidedPreferenceId: 
+        type: integer
+        format: int32
+        example: 4
+      healthInsuranceProvidedPreferenceId: 
+        type: integer
+        format: int32
+        example: 3  
+  nationalityIds: 
+    type: array
+    items: 
+      type: integer
+      format: int32
+      example: 5
+  currentEmployer: 
+    type: string
+  interestedInPrivateTuition: 
+    type: integer
+    format: int32
+    example: 0
+  memberNumber: 
+    type: integer
+    format: int32
+    example: 2123428
+  accountStatusId: 
+    type: integer
+    format: int32
+    example: 4
