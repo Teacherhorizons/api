@@ -1,16 +1,16 @@
 get:
-  operationId: getStatistics_current
+  operationId: getAdminNotes_current
   tags:
-    - sites
+    - admin-notes
     - status-current
-  summary: Get statistics (current)
+  summary: Get admin notes for a teacher (current)
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/sites/site-statistics.yaml"
+            $ref: "../../../components/schemas/current/admin-notes/teacher-member-number-admin-notes.yaml"
     "400":
       description: Invalid ID supplied
     "404":

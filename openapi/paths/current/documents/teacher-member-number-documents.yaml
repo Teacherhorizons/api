@@ -1,17 +1,18 @@
 get:
-  operationId: getTeacher_adminnotes_current
+  operationId: getDocuments_teacher_current
   tags:
-    - teachers
+    - documents
     - status-current
-  summary: Get admin notes for a teacher (current)
-  #parameters
+  summary: Get teacher documents (current)
+  #parameters:
+
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/teacher-member-number-2123428-admin-notes.yaml"
+            $ref: "../../../components/schemas/current/documents/teacher-member-number-documents.yaml"
     "400":
       description: Invalid ID supplied
     "404":

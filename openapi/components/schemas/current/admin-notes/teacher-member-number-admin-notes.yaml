@@ -1,0 +1,54 @@
+type: object
+properties: 
+  notes: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: integer
+          format: int32
+          example: 162
+        comment: 
+          type: string
+          example: fwefewfeweefwewfe\n\nhttps://drive.google.com/file/d/19pKew5GSAhn24Lc-vUJp8kxLRWL8AzMl/view?usp=sharing
+        createdByUser: 
+          type: object
+          properties: 
+            email: 
+              type: string
+              example: pythondave@gmail.com
+            firstName: 
+              type: string
+              example: Ryan
+            lastName: 
+              type: string
+              example: Randall
+        modifiedByUser: 
+          type: object
+          properties: 
+            email: 
+              type: string
+              example: pythondave@gmail.com
+            firstName: 
+              type: string
+              example: Ryan
+            lastName: 
+              type: string
+              example: Randall
+        modifiedDate: 
+          type: integer
+          format: int64
+          example: 1631720657000
+        createdDate: 
+          type: integer
+          format: int64
+          example: 1631720359000
+        teacherId: 
+          type: integer
+          format: int32
+          example: 2513
+        adminNoteTypeId: 
+          type: integer
+          format: int32
+          example: 1

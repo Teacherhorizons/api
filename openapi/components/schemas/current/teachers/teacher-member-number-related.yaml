@@ -1,0 +1,49 @@
+type: object
+properties:  
+  teacherImages: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        urlPathComponent: 
+          type: string
+          example: /static/media/teachers/additional-photos/28460_main.jpg
+        caption: 
+          type: string
+          example: hello world
+        mediaType: 
+          type: string
+          example: additionalPhoto
+        teacherAdditionalPhotoCategoryId: 
+          type: integer
+          format: int32
+          example: 1
+        teacherImageId: 
+          type: integer
+          format: int32
+          example: 2
+        avContentId: 
+          type: integer
+          format: int32
+          example: 28460
+  videoUrls: 
+    type: array
+    items: 
+      type: object
+      properties: 
+        caption: 
+          type: string
+          example: arijit
+        videoUrlId: 
+          type: integer
+          format: int32
+          example: 2
+        videoUrlCategoryId: 
+          type: integer
+          format: int32
+          example: 1
+        url: 
+          type: string
+          example: https://www.youtube.com/watch?v=yNfkNWfH6aU
+
+  

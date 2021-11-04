@@ -1,0 +1,162 @@
+properties: 
+  1: 
+    type: object
+    properties: 
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      formSubmission: 
+        type: object
+        properties: 
+          formId: 
+            type: integer
+            format: int32
+            example: 3
+          formSubmissionId: 
+            type: integer
+            format: int32
+            example: 2749
+          formSubmissionData: 
+            type: array
+            items: 
+              type: object
+              properties: 
+                value: 
+                  type: string
+                  example: Outstanding
+                formSubmissionDataId: 
+                  type: integer
+                  format: int32
+                  example: 60428
+                formFieldId: 
+                  type: integer
+                  format: int32
+                  example: 82
+      score: 
+        type: integer
+        format: int32
+        example: 99
+      referenceId: 
+        type: integer
+        format: int32
+        example: 5089
+      refereeTypeId: 
+        type: integer
+        format: int32
+        example: 3
+      refereeName: 
+        type: string
+        example: Heikki Soini
+      refereeInstitution: 
+        type: string
+        example: Principal - Copenhagen International School
+      refereePosition: 
+        type: string
+        example: Head of School / Principal
+      refereeEmail: 
+        type: string
+        example: heikkisoini@cisdk.dk
+      refereePhone: 
+        type: string
+        example: (+45)4550620163
+      referenceFileUri: 
+        type: string
+        example: 55ea7ddf-90b1-470a-9321-eae1cb347657
+      statusId: 
+        type: integer
+        format: int32
+        example: 3
+      isArchived: 
+        type: integer
+        format: int32
+        example: 0
+      submissionDate: 
+        type: integer
+        format: int64
+        example: 1362745747000
+      completionDate: 
+        type: integer
+        format: int64
+        example: 1362776707000
+  2: 
+    type: object
+    properties: 
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      formSubmission: 
+        type: object
+        properties: 
+          formId: 
+            type: integer
+            format: int32
+            example: 5
+          formSubmissionId: 
+            type: integer
+            format: int32
+            example: 2777
+          formSubmissionData: 
+            type: array
+            items: 
+              type: object
+              properties: 
+                value: 
+                  type: string
+                  example: Very Good
+                formSubmissionDataId: 
+                  type: integer
+                  format: int32
+                  example: 61046
+                formFieldId: 
+                  type: integer
+                  format: int32
+                  example: 165
+      score: 
+        type: integer
+        format: int32
+        example: 92
+      referenceId: 
+        type: integer
+        format: int32
+        example: 5093
+      refereeTypeId: 
+        type: integer
+        format: int32
+        example: 5
+      refereeName: 
+        type: string
+        example: Dr Peter Hawkey
+      refereeInstitution: 
+        type: string
+        example: Crawford College - North CoastSouth Africa
+      refereePosition: 
+        type: string
+        example: Head of Secondary / High School
+      refereeEmail: 
+        type: string
+        example: peter@openweb.co.za
+      refereePhone: 
+        type: string
+        example: (+27)0027   829225738
+      referenceFileUri: 
+        type: string
+        example: 2493a1e9-b34f-44f8-8418-f63e446e9b0c
+      statusId: 
+        type: integer
+        format: int32
+        example: 3
+      isArchived: 
+        type: integer
+        format: int32
+        example: 0
+      submissionDate: 
+        type: integer
+        format: int64
+        example: 1362746049000
+      completionDate: 
+        type: integer
+        format: int64
+        example: 1362948793000
+

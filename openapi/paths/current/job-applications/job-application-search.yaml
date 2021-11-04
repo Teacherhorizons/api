@@ -1,7 +1,7 @@
 get:
-  operationId: getJobApplicationActions_current
+  operationId: getJobApplications_current
   tags:
-    - job applications
+    - job-applications
     - status-current
   summary: Get job applications (current)
   #parameters:
@@ -12,7 +12,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/job-applications/applications-lists.yaml"
+            $ref: "../../../components/schemas/current/job-applications/job-application-search.yaml"
     "400":
       description: Invalid ID supplied
     "404":

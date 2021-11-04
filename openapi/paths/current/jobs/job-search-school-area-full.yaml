@@ -1,9 +1,9 @@
 get:
-  operationId: getJobCount_current
+  operationId: getJobs_current
   tags:
     - jobs
     - status-current
-  summary: Get job count (current)
+  summary: Get a job (current)
   parameters:
     - in: query
       name: subjects
@@ -164,22 +164,70 @@ get:
         type: string
 
     - in: query
+      name: maximum-further-info-length
+      description: .. #not sure about the descripion
+      example: 25
+      schema:
+        type: string
+
+    - in: query
       name: sort
       description: Order to sort the records
       example: applicationDate,-subject
       schema:
         type: string
-
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/jobs/schools-search-school-area-full-count.yaml"
+            $ref: "../../../components/schemas/current/jobs/job-search-school-area-full.yaml"
     "400":
       description: Invalid ID supplied
     "404":
       description: Pet not found
   security:
     - api_key: []
+
+  # Paramters in Java code:
+
+  # RR 2021-10-22: I've added a few notes below to give an idea of the kinds of tweaks which need to be made
+
+  # Note: query name for the following is 'subjects' (from value="subjects")
+  # Note: there are several parameters below with similar issues (my fault for not initially pointing this out)
+  # @RequestParam(value="subjects",required = false) String[] subjectsStr
+
+  # Note: query name for the following is 'search'; description should be something like 'Part of the job title'
+  # , @RequestParam(value="search",required = false) String jobTitleSearchString
+
+  # , @RequestParam(required = false) Integer[] roles
+  # , @RequestParam(required = false) Integer[] locations
+  # , @RequestParam(value="regions",required = false) Integer[] regions
+  # , @RequestParam(value="systems",required = false) Integer[] academicSystems
+
+  # Note: query name for the following is 'start'; example should be something like '2021-10-22'; can include 'format: date'
+  # , @RequestParam(value="start",required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") Date startDate
+
+  # , @RequestParam(value="city",required = false) Integer city
+  # , @RequestParam(value="country",required = false) Integer country
+  # , @RequestParam(value="cities",required = false) Integer[] cityIds
+  # , @RequestParam(value="countries",required = false) Integer[] countryIds
+
+  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
+  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
+  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
+  # , @RequestParam(value="long-to",required = false) Float longitudeTo
+
+  # , @RequestParam(value="job-type",required = false) Integer jobType
+  # , @RequestParam(value="job-types",required = false) Integer[] jobTypes
+  # , @RequestParam(value="limit",required = false) Integer pagesize
+  # , @RequestParam(value="page-number",required=false) Integer pagenumber
+  # , @RequestParam(value="maximum-further-info-length",required = false) Integer maxFurtherInfoLength
+  # , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+
+  # , @RequestParam(value="sort",required=false) String[] sortfield
+
+  # , @RequestParam(value="match-teacher-id",required=false) Integer matchTeacherId
+  # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
+  # , @RequestParam(value="min-match-score",required=false) Double minMatchScore

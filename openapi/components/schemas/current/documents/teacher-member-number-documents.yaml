@@ -1,0 +1,38 @@
+properties:
+items:
+    type: object
+    properties: 
+      id: 
+        type: integer
+        format: int32
+        example: 28531
+      typeId: 
+        type: integer
+        format: int32
+        example: 10
+      url: 
+        type: string
+        example: /static/media/teachers/observations/8f0ac33f-cc28-48ea-80e3-373ba1994135.doc
+      name: 
+        type: string
+        example: doc-39KB - with a really long file name.doc
+      width: 
+        type: integer
+        format: int32
+        example: 0
+      height: 
+        type: integer
+        format: int32
+        example: 0
+      addedDate: 
+        type: integer
+        format: int64
+        example: 1610200371000
+      lastModifiedDate: 
+        type: integer
+        format: int64
+        example: 1610200371000
+      materialsId: 
+        type: integer
+        format: int32
+        example: 20788

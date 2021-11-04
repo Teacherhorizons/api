@@ -1,9 +1,9 @@
 get:
-  operationId: getTeacherDetails_current
+  operationId: getTeachers_current
   tags:
     - teachers
     - status-current
-  summary: Get details of a Teacher (current)
+  summary: Get list of Teachers (current)
   # parameters:
   responses:
     "200":
@@ -11,7 +11,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/candidates-details.yaml"
+            $ref: "../../../components/schemas/current/teachers/candidate-details.yaml"
     "400":
       description: Invalid ID supplied
     "404":
