@@ -5,28 +5,112 @@
 # current
 /v3/schools/search/school-area/full?limit=20&minimum-percentage-complete=30
 
-# proposed
-/schools?page[size]=20&filter[percentageComplete][gte]=30
-&include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
+# proposed (/foo?queryString)
+var schoolRequestString = /schools?page[size]=20&filter[profileStrength][gte]=30&filter[countryId]=2,3
+&include=city,city.country,city.country.region,academicSystems,accreditations[,schoolUsers]
 &fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
-&fields[cities]=imageUrl,name,country
-&fields[countries]=name,region
+&fields[cities]=imageUrl,name
+&fields[countries]=name
 &fields[regions]=name
 
 # proposed - processing steps
 
--- get school data (possibly using an orm)
-select isApprovedByTh, isEndorsedByTh, isVisitedByTh, profileStrength, slug, name,
-  locationLatLong, -- some translation needed
-  cityId, academicSystemId, accreditationId,
-  isFavourite -- need to think about how best to represent this one
-from schools -- probably a view
-where ...
+# pseudocode
+var schools = schoolsService.search(schoolRequestString)
+  var schoolRequestObject = queryService.adapt(schoolRequestString)
+  needs to know:
+    list of possible fields[schools]:
+      isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong,...
+    defaults:
+      list of fields: ...
+      order by: ...
+      limit: 20
+    list of possible relationships:
+      city: one-to-many (cityId)
+      academicSystems: many-to-many
+      accreditations: many-to-many
+    list of possible filters:
+      list of possible fields
+      cityId
+      countryId
+      regionId
+    view name
+  1. error checking
+    if fields[schools] contains any unknown fields, error
+    if include contains unknown direct (i.e. without dots) relationships, error
+    if filter contains unknown values, error
+  2. construct sql (for sql itself, see further down)
+    SELECT
+      from fields[schools] parameter and include parameter (e.g. cityId)
+    FROM
+      from viewName
+    WHERE
+      from filter parameters
+    ORDER BY
+      from related parameter (need to check name)
+    LIMIT
+      from limit parameter
+  3. ...
 
--- derive distinct cityIds (from schools)
+
+# cities
+var cityIds = schoolsService.getCityIds(schools); // 1,3,7
+
+var cityRequestString = /cities?filter[id]=1,3,7
+&include=country,country.region
+&fields[cities]=imageUrl,name
+&fields[countries]=name
+&fields[regions]=name
+
+var cities = citiesService.search(cityRequestString)
+  var cityRequestObject = queryService.adapt(cityRequestString)
+
+
+# countries
+var countryIds = citiesService.getCountryIds(cities); // 8,13
+
+var countryRequestString = /countries?filter[id]=8,13
+&include=region
+&fields[countries]=name
+&fields[regions]=name
+
+var countries = countriesService.search(countryRequestString)
+  var countryRequestObject = queryService.adapt(countryRequestString)
+  for each include:
+    var regionRequestString = deriveRegionRequestString(...)
+      later: includesService.derive(requestString, 'region')
+    regionsService.search(regionRequestString)
+
+
+# regions
+var regionIds = citiesService.getRegionIds(cities); // 1,2
+
+var regionRequestString = /regions?filter[id]=1,2
+&fields[regions]=name
+
+var regions = regionsService.search(regionRequestString)
+  var regionRequestObject = queryService.adapt(regionRequestString)
+
+
+
+-- get school data (possibly using an orm)
+select
+  id, -- always there
+  isApprovedByTh, isEndorsedByTh, isVisitedByTh, profileStrength, slug, name,
+  locationLatLong, -- some translation needed
+  cityId,
+  [isFavourite -- need to think about how best to represent this one]
+from vSchools -- probably a view
+where
+  percentageComplete >= 30 and
+  countryId in (2,3)
+order by
+limit 20;
+
+-- derive distinct cityIds (from schools) => 1,3,6,13
 javascript
 
--- derive city data (could be cached?)
+-- derive city data (one to many; could be cached?)
 select imageUrl, name, countryId
 from cities
 where id in ({cityIds})
@@ -34,10 +118,22 @@ where id in ({cityIds})
 -- derive distinct countryIds (from cities)
 javascript
 
--- derive country data (could be cached?)
+-- derive country data (one to many; could be cached?)
 select name, regionId
 from countries
 where id in ({countryIds})
+
+-- derive distinct schoolIds (from schools)
+javascript
+
+-- derive academicSystem data (many to many; could be cached?)
+select schoolId, academicSystemId, academicSystemName
+from vSchoolAcademicSystems
+where schoolId in ({schoolIds})
+
+-- derive jsonapi response
+
+
 
 -- etc.
 
