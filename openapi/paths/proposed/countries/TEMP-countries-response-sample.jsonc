@@ -1,0 +1,55 @@
+// SELECT id, name, foo, regionId FROM vCountries WHERE id IN (8,13);
+// regionIds = 1,2
+// SELECT id, name, bar FROM vRegions WHERE id IN (regionIds)
+{
+  "data": [
+    {
+      "type": "country",
+      "id": 8,
+      "attributes": {
+        "name": "hello",
+        "foo": "world"
+      },
+      "relationships": {
+        "region": {
+          "data": {
+            "type": "region",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "country",
+      "id": 13,
+      "attributes": {
+        "name": "hello2",
+        "foo": "world2"
+      },
+      "relationships": {
+        "region": {
+          "data": {
+            "type": "region",
+            "id": "2"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "region",
+      "id": "1",
+      "attributes": {
+        "bar": 123
+      }
+    },
+    {
+      "type": "region",
+      "id": "2",
+      "attributes": {
+        "bar": 222
+      }
+    }
+  ]
+}

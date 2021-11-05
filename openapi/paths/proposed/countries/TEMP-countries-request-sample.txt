@@ -1,0 +1,76 @@
+# countries
+var countryRequestString = '/countries?filter[id]=8,13
+&include=region
+&fields[countries]=name,foo
+&fields[regions]=name,bar';
+
+var countryRequestObject = queryService.adapt(countryRequestString) = {
+  filter: { id: [8,13] },
+  include: ['region'],
+  fields: { countries: ['name','foo'], regions: ['name','bar'] }
+};
+
+var countrySql = `
+  SELECT
+    from 'id', countryRequestObject.fields.countries, include parameter (e.g. regionId)
+  FROM
+    from countryService.viewName
+  WHERE
+    from countryRequestObject.filter.id
+  ORDER BY
+    from related parameter (need to check name)
+  LIMIT
+    from limit parameter;` =
+  `SELECT id, name, foo, regionId FROM vCountries WHERE id IN (8,13);`;
+
+var countries = [
+  {
+    "id": 8,
+    "name": "hello",
+    "foo": "world"
+    "regionId": "1"
+  }
+  {
+    "id": 13,
+    "name": "hello2",
+    "foo": "world2"
+    "regionId": "2"
+  }
+];
+
+# regions
+var regionIds = someFunction(countries) = [1, 2];
+
+var regionRequestObject = someFunction('region', regionIds, countryRequestObject) = {
+  filter: { id: [1, 2] },
+  include: [],
+  fields: { regions: ['name','bar'] }
+};
+
+var regionSql = `
+  SELECT
+    from 'id', regionRequestObject.fields.regions
+  FROM
+    from regionService.viewName
+  WHERE
+    from regionRequestObject.filter.id
+  ORDER BY
+    from related parameter (need to check name)
+  LIMIT
+    from limit parameter;` =
+  `SELECT id, name, bar FROM vRegions WHERE id IN (1,2);`;
+
+var regions = [
+  {
+    "id": 1,
+    "name": "Africa",
+    "bar": 123
+  }
+  {
+    "id": 2,
+    "name": "Asia",
+    "bar": 222
+  }
+];
+
+var jsonApiResponse = someFunction(countryRequestObject, [countries, regions]) = [see TEMP-countries-response-sample.jsonc];
