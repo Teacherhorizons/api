@@ -18,24 +18,32 @@ info:
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   # categories (alphabetical)
+  - name: admin-notes
+    description: Operations relating to admin-notes
   - name: cities
     description: Operations relating to cities
+  - name: community-responses
+    description: Operations relating to community responses 
   - name: countries
     description: Operations relating to countries
+  - name: documents
+    description: Operations relating to documents
   - name: employment-records
     description: Operations relating to teacher employment records
-  - name: job applications
+  - name: job-applications
     description: Operations relating to job applications
   - name: jobs
     description: Operations relating to jobs
   - name: lists
     description: Operations relating to simple lists of objects - such as subjects or roles
+  - name: other
+    description: Other Operations
+  - name: references
+    description: Operations relating to references
   - name: regions
     description: Operations relating to regions (~continents)
   - name: schools
     description: Operations relating to schools
-  - name: sites
-    description: Operations relating to sites
   - name: teachers
     description: Operations relating to teachers or candidates
   - name: users
@@ -100,12 +108,17 @@ x-tagGroups:
 
   - name: API
     tags:
+      - admin-notes
       - cities
+      - community-responses
       - countries
+      - documents
       - employment-records
       - job-applications
       - jobs
       - lists
+      - other
+      - references
       - regions
       - schools
       - sites
@@ -124,108 +137,100 @@ paths:
   # $ref should be of the form: "./paths/current/{category}/{path-words-in-kebab-form}.yaml"
 
   # admin-notes
-  /v1/teacher/member-number/2123428/admin-notes:
-    $ref: "./paths/current/teachers/teacher-member-number-2123428-admin-notes.yaml"
+  /v1/teacher/member-number/{memberNumber}/admin-notes:
+    $ref: "./paths/current/admin-notes/teacher-member-number-admin-notes.yaml"
 
   # cities
   /v3/city/id/{cityId}/profile:
     $ref: "./paths/current/cities/city-id-profile.yaml"
 
   # community-responses
-  #/v1/school-community/school-responses/school/id/{schoolId}
+  /v1/school-community/school-responses/school/id/{schoolId}:
+    $ref: "./paths/current/community-responses/school-community-school-responses-school-id.yaml"
 
   # documents
-  /v2/teacher/member-number/2123428/documents:
-    $ref: "./paths/current/teachers/teacher-member-number-2123428-documents.yaml"
+  /v2/teacher/member-number/{memberNumber}/documents:
+    $ref: "./paths/current/documents/teacher-member-number-documents.yaml"
 
   # employment records
+  /v1/teacher/member-number/{memberNumber}/employment-records:
+    $ref: "./paths/current/employment-records/teacher-member-number-employment-records.yaml"
 
   # job applications
+  /v1/jobs/applications/search:
+    $ref: "./paths/current/job-applications/job-application-search.yaml"
 
   # jobs
+  /v1/jobs/search/city-area/by-city/count:
+    $ref: "./paths/current/jobs/job-search-city-area-by-city-count.yaml"
+  /v1/jobs/search/school-area/full/count:
+    $ref: "./paths/current/jobs/job-search-school-area-full-count.yaml"
+  /v1/jobs/search/country-area/by-country/count:
+    $ref: "./paths/current/jobs/job-search-country-area-by-country-count.yaml"
+  /v1/jobs/search/school-area/full:
+    $ref: "./paths/current/jobs/job-search-school-area-full.yaml"
+  /v1/jobs/search/region-area/by-region/count:
+    $ref: "./paths/current/jobs/job-search-region-area-by-region-count.yaml"
 
   # lists
   /v1/lists:
     $ref: "./paths/current/lists/lists.yaml"
   /v1/lists/keys:
     $ref: "./paths/current/lists/lists-keys.yaml"
+  /v1/jobs/applications/lists:
+    $ref: "./paths/current/lists/job-application-list.yaml"
+
+  #references 
+  /v2/teacher/member-number/2123428/references:
+    $ref: "./paths/current/references/teacher-member-number-references.yaml"
 
   # regions
-  /v1/schools/search/region-area/by-region/count:
-    $ref: "./paths/current/schools/schools-search-region-area-by-region-count.yaml"
 
   # schools
+  /v1/school/id/{schoolId}/jobs:
+    $ref: "./paths/current/jobs/school-id-jobs.yaml"
   /v1/schools/search/city-area/by-city/count:
     $ref: "./paths/current/schools/schools-search-city-area-by-city-count.yaml"
+  /v3/schools/search/school-area/count:
+    $ref: "./paths/current/schools/schools-search-school-area-count.yaml"
   /v1/schools/search/country-area/by-country/count:
     $ref: "./paths/current/schools/schools-search-country-area-by-country-count.yaml"
+  /v1/schools/search/region-area/by-region/count:
+    $ref: "./paths/current/schools/schools-search-region-area-by-region-count.yaml"
   /v3/school/slug/{schoolSlug}/profile:
     $ref: "./paths/current/schools/school-slug-profile.yaml"
   /v3/schools/search/school-area/full:
     $ref: "./paths/current/schools/schools-search-school-area-full.yaml"
-  /v3/schools/search/school-area/count:
-    $ref: "./paths/current/schools/schools-search-school-area-count.yaml"
 
   # teachers
-
-  # users
-
-  # other
-
-  /v1/candidates/search/full:
-    $ref: "./paths/current/teachers/candidates-search-full.yaml"
-  /v1/candidates/search/full/count:
-    $ref: "./paths/current/teachers/candidates-search-full-count.yaml"
-  /v2/candidates/search/region-area/by-region/count:
-    $ref: "./paths/current/teachers/candidates-search-region-area-by-region-count.yaml"
-  /v2/candidates/search/country-area/by-country/count:
-    $ref: "./paths/current/teachers/candidates-search-country-area-by-country-count.yaml"
-
-  /v1/user/bundle:
-    $ref: "./paths/current/user/user-bundle.yaml"
-  /v1/site/statistics:
-    $ref: "./paths/current/sites/site-statistics.yaml"
-  /v1/jobs/search/region-area/by-region/count:
-    $ref: "./paths/current/jobs/region-area-by-region-count.yaml"
-  /v1/jobs/search/school-area/full:
-    $ref: "./paths/current/jobs/schools-search-school-area-full.yaml"
-  /v1/jobs/search/school-area/full/count:
-    $ref: "./paths/current/jobs/schools-search-school-area-full-count.yaml"
-  /v1/jobs/search/country-area/by-country/count:
-    $ref: "./paths/current/jobs/schools-search-country-area-by-country-count.yaml"
-  /v1/jobs/search/city-area/by-city/count:
-    $ref: "./paths/current/jobs/schools-search-city-area-by-city-count.yaml"
-
-  /v1/jobs/applications/lists:
-    $ref: "./paths/current/job-applications/applications-lists.yaml"
-  /v1/candidates:
-    $ref: "./paths/current/teachers/candidates-details.yaml"
   /v2/candidates/search/country-area/full:
     $ref: "./paths/current/teachers/candidates-search-country-area-full.yaml"
+  /v1/candidates/search/full/count:
+    $ref: "./paths/current/teachers/candidates-search-full-count.yaml"
+  /v2/candidates/search/country-area/by-country/count:
+    $ref: "./paths/current/teachers/candidates-search-country-area-by-country-count.yaml"
+  /v2/candidates/search/region-area/by-region/count:
+    $ref: "./paths/current/teachers/candidates-search-region-area-by-region-count.yaml"
+  /v3/teacher/member-number/{memberNumber}/core:
+    $ref: "./paths/current/teachers/teacher-member-number-core.yaml"
+  /v2/teacher/member-number/{member-number}/related:
+    $ref: "./paths/current/teachers/teacher-member-number-related.yaml"
+  /v1/candidates:
+    $ref: "./paths/current/teachers/candidate-details.yaml"
+  /v1/candidates/search/full:
+    $ref: "./paths/current/teachers/candidates-search-full.yaml"
   /v2/candidates/search/country-area/full/count:
     $ref: "./paths/current/teachers/candidates-search-country-area-full-count.yaml"
+
+  # users
+  /v1/user/bundle:
+    $ref: "./paths/current/user/user-bundle.yaml"
   /v1/admin-users:
     $ref: "./paths/current/user/admin-users.yaml"
-  /v1/jobs/applications/search:
-    $ref: "./paths/current/job-applications/applications-search.yaml"
-  /v1/school/id/3010/jobs:
-    $ref: "./paths/current/jobs/school-id-3010-jobs.yaml"
-  /v1/teacher/member-number/2123428/employment-records:
-    $ref: "./paths/current/teachers/teacher-member-number-2123428-employment-records.yaml"
-  /v2/teacher/member-number/2123428/related:
-    $ref: "./paths/current/teachers/teacher-member-number-2123428-related.yaml"
-  /v2/teacher/member-number/2123428/references:
-    $ref: "./paths/current/teachers/teacher-member-number-2123428-references.yaml"
 
-  /v3/teacher/member-number/2123428/core:
-    $ref: "./paths/current/teachers/teacher-member-number-core.yaml"
-  /v3/school/slug/europe-italy-turin-association-victoria-institute/profile:
-    $ref: "./paths/current/schools/school-slug-europe-italy-turin-association-victoria-institute-profile.yaml"
-
-  #/v1/school/id/{schoolId}/jobs:
-  #$ref: "./paths/current/schools/school-id-jobs.yaml"
-
-  #/v1/teacher/member-number/123724/employment-record/add
+  # other
+  /v1/site/statistics:
+    $ref: "./paths/current/other/site-statistics.yaml"
 
   # proposed
   /regions/{regionId}:

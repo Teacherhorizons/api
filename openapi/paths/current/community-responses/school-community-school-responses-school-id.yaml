@@ -1,0 +1,21 @@
+get:
+  operationId: getCommunityResponses_school_current
+  tags:
+    - community-responses
+    - status-current
+  summary: Get community response for school (current)
+  #parameters:
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/community-responses/school-community-school-responses-school-id.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

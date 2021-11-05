@@ -1,26 +1,10 @@
 get:
-  operationId: getTeachers_full_current
+  operationId: getTeachers_current
   tags:
     - teachers
     - status-current
-  summary: Get list of teachers (current)
+  summary: Get list of Teachers (current)
   parameters:
-    - in: query
-      name: school-ids
-      description: Get comma seperated list of Schools Ids
-      example: 12,15
-      schema:
-        type: integer
-        format: int32
-
-
-    - in: query
-      name: subjects
-      description: Comma separated list of subject ids
-      example: 1,2
-      schema:
-        type: string
-
     - in: query
       name: search
       description: Part of the job title
@@ -29,55 +13,9 @@ get:
         type: string
 
     - in: query
-      name: current-regions
-      description: Comma separated list of current region ids
-      example: 2,3
-      schema:
-        type: string
-
-    - in: query
-      name: current-countries
-      description: Comma seperated list of current countries ids
-      example: 1234,210607
-      schema:
-        type: string
-
-    - in: query
-      name: nationalities
-      description: Comma separated list of nationalities
-      example: 207,209
-      schema:
-        type: string
-
-
-    - in: query
-      name: my-list
-      description: List of favourites 
-      example: 5,6
-      schema:
-        type: string
-
-
-    - in: query
-      name: limit
-      description: Number of records to return
-      example: 20
-      schema:
-        type: integer
-        format: int64
-
-    - in: query
-      name: page-number
-      description: Page number to return
-      example: 3
-      schema:
-        type: integer
-        format: int64
-
-    - in: query
-      name: sort
-      description: Order to sort the records
-      example: applicationDate,-subject
+      name: subjects
+      description: Comma separated list of subject ids
+      example: 1,2
       schema:
         type: string
 
@@ -102,14 +40,12 @@ get:
       schema:
         type: string
 
-
     - in: query
       name: excluding-looking-for-roles
       description: ..
       example: 21,22
       schema:
         type: string
-
 
     - in: query
       name: excluding-roles
@@ -132,10 +68,18 @@ get:
       schema:
          type: string
 
+
     - in: query
       name: countries-of-qualification
       description: Comma seperated list of countries of qualification ids
       example: 8,9
+      schema:
+        type: string
+
+    - in: query
+      name: nationalities
+      description: Comma separated list of nationalities
+      example: 207,209
       schema:
         type: string
 
@@ -204,7 +148,6 @@ get:
       schema:
         type: string
 
-
     - in: query
       name: minimum-date-registered
       description: minimum date registered
@@ -212,7 +155,6 @@ get:
       schema:
         type: string
         format: date
-
 
     - in: query
       name: minimum-year-of-birth
@@ -222,7 +164,6 @@ get:
         type: string
         format: date
 
-
     - in: query
       name: marital-statuses
       description: Marital Statuses
@@ -230,14 +171,12 @@ get:
       schema:
         type: string
 
-
     - in: query
       name: maximum-number-of-dependent-children
       description: maximum number of dependent children
       example: 2
       schema:
         type: string
-
 
     - in: query
       name: education-levels-completed
@@ -275,6 +214,28 @@ get:
       schema:
         type: string
 
+    - in: query
+      name: limit
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: page-number
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
 
     - in: query
       name: attributes
@@ -290,26 +251,58 @@ get:
       schema:
         type: string
 
-
     - in: query
       name: override-view-type
       description: ..
       example: 13,14
       schema:
         type: string
+
+    - in: query
+      name: my-list
+      description: List of favourites 
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: school-ids
+      description: Get comma seperated list of Schools Ids
+      example: 12,15
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: current-regions
+      description: Comma separated list of current region ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: current-countries
+      description: Comma seperated list of current countries ids
+      example: 1234,210607
+      schema:
+        type: string
+
+
+
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/candidates-search-full.yaml"
+            $ref: "../../../components/schemas/current/teachers/candidate-details.yaml"
     "400":
       description: Invalid ID supplied
     "404":
       description: Pet not found
   security:
     - api_key: []
+# parameters
 # @RequestParam(value="search", required=false) String term,
 # @RequestParam(value="subjects", required=false) Integer[] subjects,
 
@@ -349,7 +342,7 @@ get:
 # @RequestParam(value="attributes",required=false) String[] attributefield,
 # @RequestParam(value="user-is-active", required=false) Boolean active,
 # @RequestParam(value="override-view-type", required=false) String overrideViewType,
-#   @RequestParam(value="my-list",required = false) String myListType, // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
-#   @RequestParam(value="school-ids",required = false) Integer[] schoolIds,
-#   @RequestParam(value="current-regions",required=false) Integer[] currentRegions,
-#   @RequestParam(value="current-countries",required=false) Integer[] currentCountries,
+# @RequestParam(value="my-list",required = false) String myListType, // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+# @RequestParam(value="school-ids",required = false) Integer[] schoolIds,
+# @RequestParam(value="current-regions",required=false) Integer[] currentRegions,
+# @RequestParam(value="current-countries",required=false) Integer[] currentCountries,

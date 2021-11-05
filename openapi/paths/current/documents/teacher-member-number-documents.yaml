@@ -1,16 +1,18 @@
 get:
-  operationId: getStatistics_current
+  operationId: getDocuments_teacher_current
   tags:
-    - sites
+    - documents
     - status-current
-  summary: Get statistics (current)
+  summary: Get teacher documents (current)
+  #parameters:
+
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/sites/site-statistics.yaml"
+            $ref: "../../../components/schemas/current/documents/teacher-member-number-documents.yaml"
     "400":
       description: Invalid ID supplied
     "404":

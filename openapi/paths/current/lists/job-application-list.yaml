@@ -1,20 +1,22 @@
 get:
-  operationId: getTeacher_adminnotes_current
+  operationId: getLists_jobApplications_current
   tags:
-    - teachers
+    - lists
     - status-current
-  summary: Get admin notes for a teacher (current)
-  #parameters
+  summary: Get job applications (current)
+  #parameters:
+
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/teacher-member-number-2123428-admin-notes.yaml"
+            $ref: "../../../components/schemas/current/lists/job-application-list.yaml"
     "400":
       description: Invalid ID supplied
     "404":
       description: Pet not found
   security:
     - api_key: []
+#parameters - none

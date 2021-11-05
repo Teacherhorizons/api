@@ -1,17 +1,16 @@
 get:
-  operationId: getTeacher_reference_current
+  operationId: getTeacher_related_current
   tags:
     - teachers
     - status-current
-  summary: Get teacher reference (current)
-  #parameters
+  summary: Get related details for a teacher (current)
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/teacher-member-number-2123428-references.yaml"
+            $ref: "../../../components/schemas/current/teachers/teacher-member-number-related.yaml"
     "400":
       description: Invalid ID supplied
     "404":

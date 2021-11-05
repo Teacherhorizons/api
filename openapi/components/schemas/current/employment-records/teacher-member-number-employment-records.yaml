@@ -1,0 +1,179 @@
+type: object
+properties: 
+  1: 
+    type: object
+    properties: 
+      employerName: 
+        type: string
+        example: test 1
+      startDate: 
+        type: integer
+        format: int64
+        example: 1633046400000
+      endDate: 
+        type: integer
+        format: int64
+        example: 1634256000000
+      isInternationalSchool: 
+        type: integer
+        format: int32
+        example: 0
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      subjectIds: 
+        type: array
+        items: 
+          type: integer
+          format: int32
+          example: 3
+      countryId: 
+        type: integer
+        format: int32
+        example: 2
+      teachingPositionId: 
+        type: integer
+        format: int32
+        example: 22
+      employmentRecordId: 
+        type: integer
+        format: int32
+        example: 16493
+  2: 
+    type: object
+    properties: 
+      startDate: 
+        type: integer
+        format: int64
+        example: 1579737600000
+      endDate: 
+        type: integer
+        format: int64
+        example: 1579910400000
+      isInternationalSchool: 
+        type: integer
+        format: int32
+        example: 1
+      allowDisplay: 
+        type: integer
+        format: int32
+        example: 1
+      schoolId: 
+        type: integer
+        format: int32
+        example: 3130
+      schoolName: 
+        type: string
+        example: Albania International School
+      schoolSlug: 
+        type: string
+        example: europe-albania-tirana-albania-international-school
+      schoolCountryId: 
+        type: integer
+        format: int32
+        example: 1
+      schoolCityId: 
+        type: integer
+        format: int32
+        example: 56
+      schoolAccreditationIds: 
+        type: array
+        items: 
+          type: integer
+          format: int32
+          example: 11
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      subjectIds: 
+        type: array
+        items: 
+          type: integer
+          format: int32
+          example: 4
+      teachingPositionId: 
+        type: integer
+        format: int32
+        example: 22
+      employmentRecordId: 
+        type: integer
+        format: int32
+        example: 16427
+  3: 
+    type: object
+    properties: 
+      employerName: 
+        type: string
+        example: Test 1
+      startDate: 
+        type: integer
+        format: int64
+        example: 1496707200000
+      endDate: 
+        type: integer
+        format: int64
+        example: 1633478400000
+      isInternationalSchool: 
+        type: integer
+        format: int32
+        example: 0
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      subjectIds: 
+        type: array
+        items: 
+          type: integer
+          format: int32
+          example: 4
+      countryId: 
+        type: integer
+        format: int32
+        example: 83
+      teachingPositionId: 
+        type: integer
+        format: int32
+        example: 22
+      employmentRecordId: 
+        type: integer
+        format: int32
+        example: 16492
+  4: 
+    type: object
+    properties: 
+      employerName: 
+        type: string
+        example: The Cambridge SchoolDohaQatar
+      startDate: 
+        type: integer
+        format: int64
+        example: 1346025600000
+      isInternationalSchool: 
+        type: integer
+        format: int32
+        example: 0
+      teacherId: 
+        type: integer
+        format: int32
+        example: 2513
+      subjectIds: 
+        type: array
+        items: 
+          type: integer
+          format: int32
+          example: 4
+      countryId: 
+        type: integer
+        format: int32
+        example: 55
+      teachingPositionId: 
+        type: integer
+        format: int32
+        example: 21
+      employmentRecordId: 
+        type: integer
+        format: int32
+        example: 2408
