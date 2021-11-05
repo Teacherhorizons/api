@@ -4,7 +4,291 @@ get:
     - teachers
     - status-current
   summary: Get list of Teachers (current)
-  # parameters:
+  parameters:
+    - in: query
+      name: search
+      description: Part of the job title
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: subjects
+      description: Comma separated list of subject ids
+      example: 1,2
+      schema:
+        type: string
+
+    - in: query
+      name: looking-for-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: roles
+      description: List of roles
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: current-roles
+      description: List of current roles
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: excluding-looking-for-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: excluding-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: country-of-interest
+      description: Comma seperated list of country of interest ids
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: user-types
+      description: Comma separated list of user types ids
+      example: 6,7
+      schema:
+         type: string
+
+
+    - in: query
+      name: countries-of-qualification
+      description: Comma seperated list of countries of qualification ids
+      example: 8,9
+      schema:
+        type: string
+
+    - in: query
+      name: nationalities
+      description: Comma separated list of nationalities
+      example: 207,209
+      schema:
+        type: string
+
+    - in: query
+      name: curriculum-experience
+      description: Comma separated list of curriculum experience ids
+      example: 3,4
+      schema:
+         type: string
+
+    - in: query
+      name: minimum-experience
+      description: Show minimum years of experience
+      example: 6
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-experience
+      description: Show maximum years of experience
+      example: 11
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-average-reference-score
+      description: Show minimum average reference score
+      example: 60
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-adviser-score
+      description: Show minimum adviser score
+      example: 25
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-th-placeability-rating
+      description: minimum th placeability rating
+      example: 70
+      schema:
+        type: string
+
+    - in: query
+      name: available-from-date
+      description: Available From Date
+      example: '2021-10-22'
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: maximum-available-from
+      description: Maximum available from Date
+      example: '2021-10-22'
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: international-or-ib-experience
+      description: Show international or ib experience
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-date-registered
+      description: minimum date registered
+      example: '2021-10-22'
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: minimum-year-of-birth
+      description: minimum year of birth
+      example: '1992'
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: marital-statuses
+      description: Marital Statuses
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-number-of-dependent-children
+      description: maximum number of dependent children
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: education-levels-completed
+      description: maximum number of dependent children
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma seperated list of region ids
+      example: 5
+      schema:
+        type: string
+
+
+    - in: query
+      name: regions-of-interest
+      description: Comma seperated list of preferred region ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: CV
+      description: CV
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: job-seeking-statuses
+      description: Comma seperated list of job seeking statuses ids
+      example: 10,13,14
+      schema:
+        type: string
+
+    - in: query
+      name: limit
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: page-number
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
+
+    - in: query
+      name: attributes
+      description: Attributes #not sure
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: user-is-active
+      description: Comma seperated list of active user ids
+      example: 7,8
+      schema:
+        type: string
+
+    - in: query
+      name: override-view-type
+      description: ..
+      example: 13,14
+      schema:
+        type: string
+
+    - in: query
+      name: my-list
+      description: List of favourites 
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: school-ids
+      description: Get comma seperated list of Schools Ids
+      example: 12,15
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: current-regions
+      description: Comma separated list of current region ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: current-countries
+      description: Comma seperated list of current countries ids
+      example: 1234,210607
+      schema:
+        type: string
+
+
+
   responses:
     "200":
       description: successful operation
