@@ -1,0 +1,40 @@
+# regions
+var regionRequestString = '/regions?filter[id]=1,2
+&fields[region]=name,slug';
+
+var regionRequestObject = someGenericFunction('region', regionIds, regionRequestString) = {
+  filter: { id: [1, 2] },
+  include: [],
+  fields: { region: ['name', 'slug'] }
+};
+
+var regionSql = `
+  SELECT
+    from 'id', regionRequestObject.fields.region
+  FROM
+    from regionService.viewName
+  WHERE
+    from regionRequestObject.filter.id
+  ORDER BY
+    from related parameter (need to check name)
+  LIMIT
+    from limit parameter;` =
+  `SELECT id, name, bar FROM vRegions WHERE id IN (1,2);`;
+
+var regions = [
+  {
+    "id": 1,
+    "name": "Africa",
+    "slug": "africa"
+  }
+  {
+    "id": 2,
+    "name": "Asia",
+    "slug": "asia"
+  }
+];
+
+var data = regions.map({ id, ...rest } => { type: "region", id: id, attributes: rest };
+var jsonApiResponse = { data: data };
+
+// see TEMP-regions-response-sample.jsonc for required format;

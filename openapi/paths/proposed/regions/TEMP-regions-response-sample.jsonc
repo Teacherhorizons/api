@@ -1,0 +1,21 @@
+// SELECT id, name, slug FROM aRegions WHERE id IN (1,2)
+{
+  "data": [
+    {
+      "type": "region",
+      "id": 1,
+      "attributes": {
+        "name": "Africa",
+        "slug": "africa"
+      }
+    },
+    {
+      "type": "region",
+      "id": 2,
+      "attributes": {
+        "name": "Asia",
+        "slug": "asia"
+      }
+    }
+  ]
+}
