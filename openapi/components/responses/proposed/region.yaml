@@ -1,18 +1,75 @@
-type: object
-properties:
-  data:
-    type: array
-    items:
-      $ref: "../../schemas/proposed/models/region.yaml#/Region"
-  included:
-    type: array
-    uniqueItems: true
-    items:
-      $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Resource"
-  links:
-    description: Link members related to primary data
-    allOf:
-      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Links"
-      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Pagination"
-  jsonapi:
-    $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/JsonApi"
+RegionResponse:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: standard-admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      standard_admin: "#/RegionResponse_standard_admin"
+      standard_school: "#/RegionResponse_standard_school"
+      standard_teacher: "#/RegionResponse_standard_teacher"
+      schoolsAggregation_any: "#/RegionResponse_schoolsAggregation_any"
+
+RegionResponse_standard_admin:
+  allOf:
+    - $ref: "#/RegionResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          allOf:
+            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - properties:
+                attributes:
+                  type: object
+                  allOf:
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_admin"
+
+RegionResponse_standard_school:
+  allOf:
+    - $ref: "#/RegionResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          allOf:
+            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - properties:
+                attributes:
+                  type: object
+                  allOf:
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_school"
+
+RegionResponse_standard_teacher:
+  allOf:
+    - $ref: "#/RegionResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          allOf:
+            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - properties:
+                attributes:
+                  type: object
+                  allOf:
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_teacher"
+
+RegionResponse_schoolsAggregation_any:
+  allOf:
+    - $ref: "#/RegionResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          allOf:
+            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - properties:
+                attributes:
+                  type: object
+                  $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_schoolsAggregation_any"

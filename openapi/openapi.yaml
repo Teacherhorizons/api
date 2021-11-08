@@ -23,7 +23,7 @@ tags:
   - name: cities
     description: Operations relating to cities
   - name: community-responses
-    description: Operations relating to community responses 
+    description: Operations relating to community responses
   - name: countries
     description: Operations relating to countries
   - name: documents
@@ -180,7 +180,7 @@ paths:
   /v1/jobs/applications/lists:
     $ref: "./paths/current/lists/job-application-list.yaml"
 
-  #references 
+  #references
   /v2/teacher/member-number/2123428/references:
     $ref: "./paths/current/references/teacher-member-number-references.yaml"
 
@@ -235,8 +235,14 @@ paths:
   # proposed
   /regions/{regionId}:
     $ref: "./paths/proposed/regions/region.yaml"
+  /regions:
+    $ref: "./paths/proposed/regions/regions.yaml"
+
   /countries/{countryId}:
     $ref: "./paths/proposed/countries/country.yaml"
+
+  # /schools-agg-regions:
+  #   $ref: "./paths/proposed/regions/schools-agg-regions.yaml"
 
   /job-applications:
     $ref: "./paths/proposed/job-applications/job-applications.yaml"

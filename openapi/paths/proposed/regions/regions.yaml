@@ -1,17 +1,10 @@
 get:
-  operationId: getRegion
+  operationId: getRegions
   tags:
     - regions
     - status-proposed
-  summary: Get a region (proposed)
+  summary: Get regions (proposed)
   parameters:
-    - in: path
-      name: regionId
-      required: true
-      example: 12
-      schema:
-        type: integer
-        format: int32
     - in: query
       name: schema
       required: true
@@ -33,13 +26,25 @@ get:
           $ref: "./../../../components/schemas/proposed/models/Region.yaml#/RegionProperties_all"
         example:
           region: name,adminOnlyField1
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties:
+          $ref: "./../../../components/schemas/proposed/models/Region.yaml#/RegionProperties_all"
+        example:
+          name: foo
+          adminOnlyField1: bar
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/region.yaml#/RegionResponse"
+            $ref: "../../../components/responses/proposed/regions.yaml#/RegionsResponse"
     "400":
       description: Invalid ID supplied
     "404":
