@@ -4,8 +4,13 @@ get:
     - jobs
     - status-current
   summary: Get list of jobs for a school (current)
-  #parameters:
-
+  parameters:
+    - in: path
+      name: schoolId
+      example: 14
+      schema:
+        type: integer
+        format: int32
   responses:
     "200":
       description: successful operation
