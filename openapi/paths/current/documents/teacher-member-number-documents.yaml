@@ -4,7 +4,14 @@ get:
     - documents
     - status-current
   summary: Get teacher documents (current)
-  #parameters:
+  parameters:
+    - in: path
+      name: memberNumber
+      # description:
+      example: 1234567
+      schema:
+        type: integer
+        format: int32
 
   responses:
     "200":

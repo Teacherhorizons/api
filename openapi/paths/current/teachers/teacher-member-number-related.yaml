@@ -4,6 +4,14 @@ get:
     - teachers
     - status-current
   summary: Get related details for a teacher (current)
+  parameters:
+    - in: path
+      name: member-number
+      # description:
+      example: 1234567
+      schema:
+        type: integer
+        format: int32
   responses:
     "200":
       description: successful operation

@@ -4,8 +4,13 @@ get:
     - community-responses
     - status-current
   summary: Get community response for school (current)
-  #parameters:
-
+  parameters:
+    - in: path
+      name: schoolId
+      example: 14
+      schema:
+        type: integer
+        format: int32
   responses:
     "200":
       description: successful operation
