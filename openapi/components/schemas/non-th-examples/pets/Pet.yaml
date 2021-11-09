@@ -3,14 +3,14 @@ Pet:
   required:
     - name
     - photoUrls
+  properties:
+    $ref: "#/PetProperties"
   discriminator:
     propertyName: petType
     mapping:
       cat: "#/Cat"
       dog: "#/Dog"
       bee: "#/HoneyBee"
-  properties:
-    $ref: "#/PetProperties"
   xml:
     name: Pet
 

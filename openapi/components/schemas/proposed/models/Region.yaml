@@ -1,55 +1,134 @@
 Region:
   type: object
-  required:
-    - type
-    - id
   properties:
-    $ref: "#/RegionProperties"
-
-RegionProperties:
-  type:
-    type: string
-    example: region
-    readOnly: true
-  id:
-    type: integer
-    format: int32
-    example: 5
-    readOnly: true
-    description: Unique identifier of the object
-  attributes:
-    $ref: "#/RegionAttributes"
-
-RegionAttributes:
-  type: object
+    schema:
+      type: string
+      example: standard-admin
   discriminator:
-    propertyName: userCategory
+    propertyName: schema
     mapping:
-      admin: "#/RegionAttributes_admin"
-      school: "#/RegionAttributes_school"
-      teacher: "#/RegionAttributes_teacher"
+      all: "#/Region_all"
+      standard_admin: "#/Region_standard_admin"
+      standard_school: "#/Region_standard_school"
+      standard_teacher: "#/Region_standard_teacher"
+      schoolsAggregation_any: "#/Region_schoolsAggregation_any"
+
+Region_all:
+  allOf:
+    - $ref: "#/Region"
+    - type: object
+      allOf:
+        - $ref: "#/RegionProperties_id"
+        - $ref: "#/RegionProperties_all"
+
+Region_standard_admin:
+  allOf:
+    - $ref: "#/Region"
+    - type: object
+      allOf:
+        - $ref: "#/RegionProperties_id"
+        - $ref: "#/RegionProperties_standard_core"
+        - $ref: "#/RegionProperties_standard_admin"
+
+Region_standard_school:
+  allOf:
+    - $ref: "#/Region"
+    - type: object
+      allOf:
+        - $ref: "#/RegionProperties_id"
+        - $ref: "#/RegionProperties_standard_core"
+        - $ref: "#/RegionProperties_standard_school"
+
+Region_standard_teacher:
+  allOf:
+    - $ref: "#/Region"
+    - type: object
+      allOf:
+        - $ref: "#/RegionProperties_id"
+        - $ref: "#/RegionProperties_standard_core"
+        - $ref: "#/RegionProperties_standard_teacher"
+
+Region_schoolsAggregation_any:
+  allOf:
+    - $ref: "#/Region"
+    - type: object
+      allOf:
+        - $ref: "#/RegionProperties_id"
+        - $ref: "#/RegionProperties_schoolsAggregation_any"
+
+# RegionProperties
+RegionProperties_typeAndId:
+  allOf:
+    - $ref: "#/RegionProperties_type"
+    - $ref: "#/RegionProperties_id"
+
+RegionProperties_type:
+  properties:
+    type:
+      type: string
+      example: region
+      readOnly: true
+
+RegionProperties_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 5
+      readOnly: true
+      description: Unique identifier of the object
+
+RegionProperties_all:
+  allOf:
+    - $ref: "#/RegionProperties_standard_core"
+    - $ref: "#/RegionProperties_standard_admin"
+    - $ref: "#/RegionProperties_standard_school"
+    - $ref: "#/RegionProperties_standard_teacher"
+    - $ref: "#/RegionProperties_schoolsAggregation_any"
+
+RegionProperties_standard_core:
   properties:
     name:
       type: string
-      example: Europe
-    userCategory:
+      example: hello
+    imageUrl:
       type: string
-    teacherCount:
+      example: hello
+
+RegionProperties_standard_adminAndSchool:
+  properties:
+    adminAndSchoolOnlyField1:
+      type: string
+      example: bar
+
+RegionProperties_standard_admin:
+  allOf:
+    - $ref: "#/RegionProperties_standard_adminAndSchool"
+  properties:
+    adminOnlyField1:
+      type: string
+      example: foo
+    adminOnlyField2:
+      type: string
+      example: bar
+
+RegionProperties_standard_school:
+  allOf:
+    - $ref: "#/RegionProperties_standard_adminAndSchool"
+  properties:
+    schoolOnlyField1:
+      type: string
+      example: baz
+
+RegionProperties_standard_teacher:
+  properties:
+    teacherOnlyField1:
+      type: string
+      example: qux
+
+RegionProperties_schoolsAggregation_any:
+  properties:
+    numberOfSchools:
       type: integer
-      description: WIP - not yet sure how want to fit something like this in
-
-RegionAttributes_admin:
-  allOf:
-    - $ref: "#/RegionAttributes"
-    - type: object
-      properties:
-        adminOnlyField:
-          type: string
-
-RegionAttributes_school:
-  allOf:
-    - $ref: "#/RegionAttributes"
-
-RegionAttributes_teacher:
-  allOf:
-    - $ref: "#/RegionAttributes"
+      description: Number of schools in region
+      example: 123

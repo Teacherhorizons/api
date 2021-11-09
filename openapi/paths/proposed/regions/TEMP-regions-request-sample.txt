@@ -38,3 +38,25 @@ var data = regions.map({ id, ...rest } => { type: "region", id: id, attributes: 
 var jsonApiResponse = { data: data };
 
 // see TEMP-regions-response-sample.jsonc for required format;
+
+/*
+As well as regions, we have...
+
+  - 1) regions relating to aggregation of related tables
+  - 2) regions in the data warehouse (though these may generally be more time-related - e..g. regionMonths)
+
+These could be on the same path, but would probably be better separately...
+
+  - 1) 
+    - '/schools-agg/regions?fields[region]=schoolCount&filter[isEndorsedByTh]=true';
+    - '/schools-agg/countries?fields[country]=schoolCount&filter[isEndorsedByTh]=true';
+    - '/schools-agg/cities?fields[city]=schoolCount&filter[isEndorsedByTh]=true';
+    
+  - 2)
+    - '/dw/regions?fields[region]=...';
+    - '/dw/region-months?fields[region-month]=...';
+
+  - In the case of 1), filters will more or less be the standard school filters. The process for getting the data is more our less: SELECT regionId as id, count(*) as schoolCount FROM ([sql for /schools]) GROUP BY regionId
+  - So it's like a wrapper for /schools, and may not be too difficult to generalise.
+  - To keep things simple, aggregated api calls shouldn't allow any 'include' parameters
+*/

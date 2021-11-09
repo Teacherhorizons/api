@@ -19,10 +19,34 @@
       .api-content {
         overflow-wrap: anywhere;
       }
+      .dropdown {
+        /* related issue: https://github.com/Redocly/redoc/issues/451 */
+        /* workaround (hack): make full width */
+        /* future: keep an eye on the issue */
+        width: -webkit-fill-available !important;
+      } 
     </style>
     {{{redocHead}}}
   </head>
   <body>
     {{{redocHTML}}}
+    <script>
+      // related issue: schemas are not expanded (https://github.com/Redocly/redoc/issues/593)
+      // workaround (hack): add a button which will expand all schemas
+      // future: keep an eye on the issue; make less hacky
+      function expandAllSchemaSectionsInCurrentDom() {
+        document
+        .querySelectorAll('tr:not(.expanded) > td > button[aria-label*=expand]')
+        .forEach((btn) => {
+          btn.click();
+        });
+      };
+
+      function expandAllSchemas() {
+        const expandInterval = setInterval(() => expandAllSchemaSectionsInCurrentDom(), 100);
+        setTimeout(() => clearInterval(expandInterval), 1000);
+      }
+    </script>
+    <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="expandAllSchemas()">Expand all (WIP)</button>
   </body>
 </html>
