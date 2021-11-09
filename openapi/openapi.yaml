@@ -155,6 +155,11 @@ paths:
   # employment records
   /v1/teacher/member-number/{memberNumber}/employment-records:
     $ref: "./paths/current/employment-records/teacher-member-number-employment-records.yaml"
+  # TODO AS: organise and finish this one
+  /v1/teacher/member-number/{member-number}/employment-record/add:
+    $ref: "./paths/current/employment-records/member-number-employment-record-add.yaml"
+  /v1/teacher/member-number/{memberNumber}/employment-record/id/16492/update:
+    $ref: "./paths/current/employment-records/teacher-member-number-employment-record-id-update.yaml"
 
   # job applications
   /v1/jobs/applications/search:
@@ -257,44 +262,7 @@ paths:
   /pathItemWithExamples:
     $ref: "./paths/non-th-examples/path-item-with-examples.yaml"
 
-  # TODO AS: organise and finish this one
-  /v1/teacher/member-number/{member-number}/employment-record/add:
-    post:
-      description: ""
-      operationId: addTeacherEmploymentRecord_current
-      parameters: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                data:
-                  type: object
-                  properties:
-                    isInternationalSchool:
-                      type: boolean
-            example:
-              data:
-                isInternationalSchool: false
-                name: Fluffy
-                petType: dog
-      responses:
-        "200":
-          content:
-            application/json:
-              examples:
-                example-0001:
-                  value:
-                    id: 16492
-                    status: "1"
-              schema:
-                properties: {}
-                type: object
-          description: Item created
-      summary: Create teacher employment-record
-      tags:
-        - employment-records
+
 
 components:
   securitySchemes:
