@@ -1,0 +1,69 @@
+get:
+  operationId: getSchoolsAggRegions
+  tags:
+    - regions
+    - status-proposed
+  summary: Get an aggregation of schools into regions (proposed)
+  parameters:
+    - in: query
+      name: fields
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties:
+          $ref: "./../../../components/schemas/proposed/models/Region.yaml#/RegionProperties_schoolsAgg"
+        example:
+          region: numberOfSchools
+        description: |
+          Default: `fields[region]=numberOfSchools`
+    # - in: query
+    #   name: filter
+    #   style: deepObject
+    #   allowReserved: true
+    #   explode: true
+    #   schema:
+    #     type: object
+    #     additionalProperties:
+    #       $ref: "./../../../components/schemas/proposed/models/School.yaml#/SchoolProperties_all"
+    #     example:
+    #       name: foo
+    #       adminOnlyField1: bar
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/responses/proposed/schools-agg-regions.yaml#/RegionsResponse_schoolsAgg"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
+# get:
+#   operationId: getSchoolAggRegions
+#   tags:
+#     - regions
+#     - status-proposed
+#   summary: Get an aggregation of schools into regions (proposed)
+#   parameters:
+#     - in: query
+#       name: sameParamsAsSchools
+#       schema:
+#         type: string
+#   responses:
+#     "200":
+#       description: successful operation
+#       content:
+#         application/json:
+#           schema:
+#             $ref: "../../../components/responses/proposed/schools-agg-regions.yaml"
+#     "400":
+#       description: Invalid ID supplied
+#     "404":
+#       description: Pet not found
+#   security:
+#     - api_key: []

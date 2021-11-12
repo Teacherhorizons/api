@@ -1,0 +1,6 @@
+| Current API call                                                              |                                         New API call                                          |
+| :---------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------: |
+| /v1/schools/search/region-area/by-region/count                                |                   [/schools-agg-regions](/#operation/getSchoolsAggRegions)                    |
+| /v1/schools/search/region-area/by-region/count                                |   [/schools-agg-regions?fields[region\]=numberOfSchools](/#operation/getSchoolsAggRegions)    |
+| /v1/schools/search/region-area/by-region/count?visited-by-th=1                |     [/schools-agg-regions?filter[isVisitedByTh\]=true](/#operation/getSchoolsAggRegions)      |
+| /v1/schools/search/region-area/by-region/count?minimum-percentage-complete=80 | [/schools-agg-regions?filter[percentageComplete\][gte\]=80](/#operation/getSchoolsAggRegions) |

@@ -3,15 +3,15 @@ Region:
   properties:
     schema:
       type: string
-      example: standard-admin
+      example: admin
   discriminator:
     propertyName: schema
     mapping:
       all: "#/Region_all"
-      standard_admin: "#/Region_standard_admin"
-      standard_school: "#/Region_standard_school"
-      standard_teacher: "#/Region_standard_teacher"
-      schoolsAggregation_any: "#/Region_schoolsAggregation_any"
+      admin: "#/Region_admin"
+      school: "#/Region_school"
+      teacher: "#/Region_teacher"
+      schoolsAgg: "#/Region_schoolsAgg"
 
 Region_all:
   allOf:
@@ -21,40 +21,40 @@ Region_all:
         - $ref: "#/RegionProperties_id"
         - $ref: "#/RegionProperties_all"
 
-Region_standard_admin:
+Region_admin:
   allOf:
     - $ref: "#/Region"
     - type: object
       allOf:
         - $ref: "#/RegionProperties_id"
         - $ref: "#/RegionProperties_standard_core"
-        - $ref: "#/RegionProperties_standard_admin"
+        - $ref: "#/RegionProperties_admin"
 
-Region_standard_school:
+Region_school:
   allOf:
     - $ref: "#/Region"
     - type: object
       allOf:
         - $ref: "#/RegionProperties_id"
         - $ref: "#/RegionProperties_standard_core"
-        - $ref: "#/RegionProperties_standard_school"
+        - $ref: "#/RegionProperties_school"
 
-Region_standard_teacher:
+Region_teacher:
   allOf:
     - $ref: "#/Region"
     - type: object
       allOf:
         - $ref: "#/RegionProperties_id"
         - $ref: "#/RegionProperties_standard_core"
-        - $ref: "#/RegionProperties_standard_teacher"
+        - $ref: "#/RegionProperties_teacher"
 
-Region_schoolsAggregation_any:
+Region_schoolsAgg:
   allOf:
     - $ref: "#/Region"
     - type: object
       allOf:
         - $ref: "#/RegionProperties_id"
-        - $ref: "#/RegionProperties_schoolsAggregation_any"
+        - $ref: "#/RegionProperties_schoolsAgg"
 
 # RegionProperties
 RegionProperties_typeAndId:
@@ -81,10 +81,10 @@ RegionProperties_id:
 RegionProperties_all:
   allOf:
     - $ref: "#/RegionProperties_standard_core"
-    - $ref: "#/RegionProperties_standard_admin"
-    - $ref: "#/RegionProperties_standard_school"
-    - $ref: "#/RegionProperties_standard_teacher"
-    - $ref: "#/RegionProperties_schoolsAggregation_any"
+    - $ref: "#/RegionProperties_admin"
+    - $ref: "#/RegionProperties_school"
+    - $ref: "#/RegionProperties_teacher"
+    - $ref: "#/RegionProperties_schoolsAgg"
 
 RegionProperties_standard_core:
   properties:
@@ -95,15 +95,15 @@ RegionProperties_standard_core:
       type: string
       example: hello
 
-RegionProperties_standard_adminAndSchool:
+RegionProperties_adminAndSchool:
   properties:
     adminAndSchoolOnlyField1:
       type: string
       example: bar
 
-RegionProperties_standard_admin:
+RegionProperties_admin:
   allOf:
-    - $ref: "#/RegionProperties_standard_adminAndSchool"
+    - $ref: "#/RegionProperties_adminAndSchool"
   properties:
     adminOnlyField1:
       type: string
@@ -112,21 +112,21 @@ RegionProperties_standard_admin:
       type: string
       example: bar
 
-RegionProperties_standard_school:
+RegionProperties_school:
   allOf:
-    - $ref: "#/RegionProperties_standard_adminAndSchool"
+    - $ref: "#/RegionProperties_adminAndSchool"
   properties:
     schoolOnlyField1:
       type: string
       example: baz
 
-RegionProperties_standard_teacher:
+RegionProperties_teacher:
   properties:
     teacherOnlyField1:
       type: string
       example: qux
 
-RegionProperties_schoolsAggregation_any:
+RegionProperties_schoolsAgg:
   properties:
     numberOfSchools:
       type: integer

@@ -233,16 +233,17 @@ paths:
     $ref: "./paths/current/other/site-statistics.yaml"
 
   # proposed
+
+  # regions
   /regions/{regionId}:
     $ref: "./paths/proposed/regions/region.yaml"
   /regions:
     $ref: "./paths/proposed/regions/regions.yaml"
+  /schools-agg-regions:
+    $ref: "./paths/proposed/regions/schools-agg-regions.yaml"
 
   /countries/{countryId}:
     $ref: "./paths/proposed/countries/country.yaml"
-
-  # /schools-agg-regions:
-  #   $ref: "./paths/proposed/regions/schools-agg-regions.yaml"
 
   /job-applications:
     $ref: "./paths/proposed/job-applications/job-applications.yaml"

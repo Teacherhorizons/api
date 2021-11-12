@@ -18,10 +18,9 @@ get:
       schema:
         type: string
         enum:
-          - standard-admin
-          - standard-school
-          - standard-teacher
-          - schoolsAggregation-any
+          - admin
+          - school
+          - teacher
     - in: query
       name: fields
       style: deepObject

@@ -1,0 +1,13 @@
+RegionsResponse_schoolsAgg:
+  type: object
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        allOf:
+          - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+          - properties:
+              attributes:
+                type: object
+                $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_schoolsAgg"
