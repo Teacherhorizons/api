@@ -80,6 +80,8 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/AcademicSystem" />
       ### Accreditation
       <SchemaDefinition schemaRef="#/components/schemas/Accreditation" />
+      ### Site discovery method
+      <SchemaDefinition schemaRef="#/components/schemas/SiteDiscoveryMethod" />
 
   - name: model-pet
     x-displayName: Pet (Non-TH)
@@ -99,6 +101,7 @@ tags:
 x-tagGroups:
   - name: Models
     tags:
+      - model-accreditation-type
       - model-city
       - model-country
       - model-lists

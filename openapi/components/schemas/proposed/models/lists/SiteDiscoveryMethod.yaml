@@ -1,0 +1,43 @@
+SiteDiscoveryMethod:
+  type: object
+  allOf:
+    - $ref: "#/SiteDiscoveryMethodProperties_id"
+    - $ref: "#/SiteDiscoveryMethodProperties"
+
+# SiteDiscoveryMethodProperties
+SiteDiscoveryMethodProperties_typeAndId:
+  allOf:
+    - $ref: "#/SiteDiscoveryMethodProperties_type"
+    - $ref: "#/SiteDiscoveryMethodProperties_id"
+
+SiteDiscoveryMethodProperties_type:
+  properties:
+    type:
+      type: string
+      example: region
+      readOnly: true
+
+SiteDiscoveryMethodProperties_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 5
+      readOnly: true
+      description: Unique identifier of the object
+
+SiteDiscoveryMethodProperties:
+  properties:
+    # TODO: figure out how best to represent relationships
+    categoryId:
+      type: integer
+      example: 1
+      description: Unique identifier of the entity
+    name:
+      type: string
+      example: Friend / colleague
+      description:
+    precedence:
+      type: integer
+      example: 1
+      description:
