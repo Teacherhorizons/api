@@ -1,23 +1,23 @@
-SiteDiscoveryMethod:
+ThDiscoveryMethod:
   type: object
   allOf:
-    - $ref: "#/SiteDiscoveryMethodProperties_id"
-    - $ref: "#/SiteDiscoveryMethodProperties"
+    - $ref: "#/ThDiscoveryMethodProperties_id"
+    - $ref: "#/ThDiscoveryMethodProperties"
 
-# SiteDiscoveryMethodProperties
-SiteDiscoveryMethodProperties_typeAndId:
+# ThDiscoveryMethodProperties
+ThDiscoveryMethodProperties_typeAndId:
   allOf:
-    - $ref: "#/SiteDiscoveryMethodProperties_type"
-    - $ref: "#/SiteDiscoveryMethodProperties_id"
+    - $ref: "#/ThDiscoveryMethodProperties_type"
+    - $ref: "#/ThDiscoveryMethodProperties_id"
 
-SiteDiscoveryMethodProperties_type:
+ThDiscoveryMethodProperties_type:
   properties:
     type:
       type: string
       example: region
       readOnly: true
 
-SiteDiscoveryMethodProperties_id:
+ThDiscoveryMethodProperties_id:
   properties:
     id:
       type: integer
@@ -26,18 +26,16 @@ SiteDiscoveryMethodProperties_id:
       readOnly: true
       description: Unique identifier of the object
 
-SiteDiscoveryMethodProperties:
+ThDiscoveryMethodProperties:
   properties:
     # TODO: figure out how best to represent relationships
-    categoryId:
+    thDiscoveryMethodCategoryId:
       type: integer
       example: 1
-      description: Unique identifier of the entity
+      description: Relationship to ThDiscoveryMethodCategory
     name:
       type: string
       example: Friend / colleague
-      description:
     precedence:
       type: integer
       example: 1
-      description:

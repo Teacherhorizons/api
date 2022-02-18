@@ -1,0 +1,36 @@
+ThDiscoveryMethodCategory:
+  type: object
+  allOf:
+    - $ref: "#/ThDiscoveryMethodCategoryProperties_id"
+    - $ref: "#/ThDiscoveryMethodCategoryProperties"
+
+# ThDiscoveryMethodCategoryProperties
+ThDiscoveryMethodCategoryProperties_typeAndId:
+  allOf:
+    - $ref: "#/ThDiscoveryMethodCategoryProperties_type"
+    - $ref: "#/ThDiscoveryMethodCategoryProperties_id"
+
+ThDiscoveryMethodCategoryProperties_type:
+  properties:
+    type:
+      type: string
+      example: site-discovery-method-category
+      readOnly: true
+
+ThDiscoveryMethodCategoryProperties_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 5
+      readOnly: true
+      description: Unique identifier of the object
+
+ThDiscoveryMethodCategoryProperties:
+  properties:
+    name:
+      type: string
+      example: Word of mouth
+    precedence:
+      type: integer
+      example: 1
