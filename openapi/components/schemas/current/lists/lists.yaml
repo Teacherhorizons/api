@@ -24,6 +24,14 @@ properties:
     type: array
     items:
       $ref: "./ApplicationStatus.yaml"
+  applicationEventAutoEmails:
+    type: array
+    items:
+      $ref: "./ApplicationEventAutoEmail.yaml"
+  applicationEventTypes:
+    type: array
+    items:
+      $ref: "./ApplicationEventType.yaml"
   attractions:
     type: array
     items:
@@ -40,6 +48,14 @@ properties:
     type: array
     items:
       $ref: "./Subject.yaml"
+  thMatchTypes:
+    type: array
+    items:
+      $ref: "./ThMatchType.yaml"
+  jobStatuses:
+    type: array
+    items:
+      $ref: "./JobStatus.yaml"
 
   # (TODO: create separate files for each of these)
   # don't bother with this now - don't need so much structure with the 'current' documentation

@@ -1,0 +1,44 @@
+post:
+  description: ""
+  operationId: addTeacherEmploymentRecord_current
+  parameters: 
+    - in: path
+      name: member-number
+      # description:
+      example: 1234567
+      schema:
+        type: integer
+        format: int32
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                isInternationalSchool:
+                  type: boolean
+        example:
+          data:
+            isInternationalSchool: false
+            name: Fluffy
+            petType: dog
+  responses:
+    "200":
+      content:
+        application/json:
+          examples:
+            example-0001:
+              value:
+                id: 16492
+                status: "1"
+          schema:
+            properties: {}
+            type: object
+      description: Item created
+  summary: Create teacher employment-record(current)
+  tags:
+    - employment-records
+  
