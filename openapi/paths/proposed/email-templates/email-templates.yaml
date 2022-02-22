@@ -1,28 +1,26 @@
 get:
-  operationId: getCountry
+  operationId: getEmailTemplates
   tags:
-    - countries
+    - email-templates
     - status-proposed
-  summary: Get a country (proposed)
+  summary: Get email templates (proposed)
   parameters:
-    - in: path
-      name: countryId
-      # description:
-      example: 12
-      schema:
-        type: integer
-        format: int32
     - in: query
-      name: fields
+      name: filter
       style: deepObject
       allowReserved: true
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "./../../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
-        example:
-          country: name,isoCode,locationLatLong
+        properties:
+          id:
+            description: Typically used as [id][contains]
+            type: object
+            properties:
+              contains:
+                type: string
+        # example:
+        # id.contains: 1,3
     - in: query
       name: include
       description: Which nested objects to include

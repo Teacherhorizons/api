@@ -3,16 +3,16 @@ properties:
   data:
     type: array
     items:
-      $ref: "../../schemas/proposed/models/country.yaml#/Country"
+      $ref: "../../schemas/proposed/simple-models/country.yaml#/Country"
   included:
     type: array
     uniqueItems: true
     items:
-      $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Resource"
+      $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Resource"
   links:
     description: Link members related to primary data
     allOf:
-      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Links"
-      - $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/Pagination"
+      - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Links"
+      - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Pagination"
   jsonapi:
-    $ref: "../../schemas/proposed/models/helpers/json-api.yaml#/JsonApi"
+    $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/JsonApi"

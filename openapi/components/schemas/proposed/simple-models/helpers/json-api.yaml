@@ -49,12 +49,12 @@ RelToOne:
   description: \'To-one\' relationship
   type: object
   properties:
-    links:
-      $ref: "#/RelationshipLinks"
+    # links:
+    #   $ref: "#/RelationshipLinks"
     data:
       $ref: "#/RelationshipToOne"
-    meta:
-      $ref: "#/Meta"
+    # meta:
+    #   $ref: "#/Meta"
 RelationshipToOne:
   description: reference to other resource in a to-one relationship
   anyOf:

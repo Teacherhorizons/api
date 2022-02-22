@@ -1,0 +1,37 @@
+EmailTemplate:
+  type: object
+  properties:
+    $ref: "#/EmailTemplateProperties"
+  required:
+    - type
+    - id
+
+EmailTemplateProperties:
+  type:
+    type: string
+    example: EmailTemplate
+    readOnly: true
+    description: Value representing the object type
+  id:
+    $ref: "./helpers/properties.yaml#/Id"
+  attributes:
+    $ref: "#/EmailTemplateAttributes"
+  relationships:
+    $ref: "#/EmailTemplateRelationships"
+
+EmailTemplateAttributes:
+  type: object
+  description: Direct attributes
+  properties:
+    id:
+      type: string
+      example: Portugal
+
+EmailTemplateRelationships:
+  type: object
+  description: Related attributes
+  properties:
+    region:
+      $ref: "./helpers/json-api.yaml#/RelToOne"
+    # currency:
+    #   $ref: "../lists/Currency.yaml"

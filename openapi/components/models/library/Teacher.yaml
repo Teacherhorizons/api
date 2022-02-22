@@ -1,0 +1,147 @@
+Teacher_simpleProperties_adminOnly:
+  properties:
+    thPlaceabilityRating:
+      type: integer
+      example: 1
+
+Teacher_simpleProperties_typeAndId:
+  allOf:
+    - $ref: "#/Teacher_simpleProperties_type"
+    - $ref: "#/Teacher_simpleProperties_id"
+
+Teacher_simpleProperties_type:
+  properties:
+    type:
+      type: string
+      example: teacher
+      description: Value representing the object type
+      readOnly: true
+
+Teacher_simpleProperties_type2:
+  type: string
+  example: teacher
+  description: Value representing the object type
+  readOnly: true
+
+Teacher_simpleProperties_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+
+Teacher_simpleProperties_all:
+  allOf:
+    - $ref: "#/Teacher_simpleProperties_shared"
+    - $ref: "#/Teacher_simpleProperties_adminOnly"
+
+Teacher_simpleProperties_shared:
+  properties:
+    memberNumber:
+      type: integer
+      example: 1
+    availableFromDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:32Z
+    photoFileId:
+      type: integer
+      example:
+    statement:
+      type: string
+      example:
+    partnerMemberNumber:
+      type: integer
+      example:
+    numberOfYearsTeachingExperience:
+      type: integer
+      example:
+    profileStrength:
+      type: integer
+      example:
+    birthYear:
+      type: integer
+      example:
+    maritalStatusId:
+      type: integer
+      example:
+    internationalSchoolExperienceId:
+      type: integer
+      example:
+    numberOfDependentChildren:
+      type: integer
+      example:
+    latestAdviserCommentDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:32Z
+    interestedInPrivateTuition:
+      type: integer
+      example: 1
+    neverPotentialRiskToChildren:
+      type: integer
+      example: 1
+    neverBehaviouralConcernsTowardsChildren:
+      type: integer
+      example: 1
+    thPlaceabilityRating:
+      type: integer
+      example: 1
+    teacherDoesNotWantToBeContacted:
+      type: integer
+      example:
+    isAvailableForRemoteTeaching:
+      type: boolean
+      example:
+    twitterHandle:
+      type: string
+      example:
+    instagramHandle:
+      type: string
+      example:
+    linkedInProfileUrl:
+      type: string
+      example:
+    facebookProfileUrl:
+      type: string
+      example:
+    videoInterviewClipUrl:
+      type: string
+      example:
+
+Teacher_relationshipProperties_shared:
+  properties:
+    userId:
+      type: integer
+      example: 1
+      description: Relationship to User
+    teachingQualificationCountryId:
+      type: integer
+      example: 1
+      description: Relationship to Country
+    qualificationTypeId:
+      type: integer
+      example: 1
+      description: Relationship to QualificationType
+    jobSeekingStatusId:
+      type: integer
+      example: 1
+      description: Relationship to Status
+    userTypeId:
+      type: integer
+      example: 1
+      description: Relationship to UserType
+    thDiscoveryMethodId:
+      type: integer
+      example: 1
+      description: Relationship to ThDiscoveryMethod
+    latestAdviserCommentUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+    currentCountryId:
+      type: integer
+      example: 1
+      description: Relationship to Country

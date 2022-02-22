@@ -19,13 +19,13 @@ RegionResponse_admin:
         data:
           type: object
           allOf:
-            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_typeAndId"
             - properties:
                 attributes:
                   type: object
                   allOf:
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_admin"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_admin"
 
 RegionResponse_school:
   allOf:
@@ -35,13 +35,13 @@ RegionResponse_school:
         data:
           type: object
           allOf:
-            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_typeAndId"
             - properties:
                 attributes:
                   type: object
                   allOf:
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_school"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_school"
 
 RegionResponse_teacher:
   allOf:
@@ -51,10 +51,10 @@ RegionResponse_teacher:
         data:
           type: object
           allOf:
-            - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_typeAndId"
+            - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_typeAndId"
             - properties:
                 attributes:
                   type: object
                   allOf:
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_standard_core"
-                    - $ref: "../../schemas/proposed/models/Region.yaml#/RegionProperties_teacher"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_standard_core"
+                    - $ref: "../../schemas/proposed/simple-models/Region.yaml#/RegionProperties_teacher"

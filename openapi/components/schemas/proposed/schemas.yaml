@@ -1,21 +1,29 @@
 ListRefs:
   allOf:
-    - $ref: "./models/lists/AcademicSystem.yaml#/AcademicSystem"
-    - $ref: "./models/lists/Accreditation.yaml#/Accreditation"
-    - $ref: "./models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
-    - $ref: "./models/lists/ThDiscoveryMethodCategory.yaml#/ThDiscoveryMethodCategory"
+    - $ref: "./simple-models/lists/AcademicSystem.yaml#/AcademicSystem"
+    - $ref: "./simple-models/lists/Accreditation.yaml#/Accreditation"
+    - $ref: "./simple-models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
+    - $ref: "./simple-models/lists/ThDiscoveryMethodCategory.yaml#/ThDiscoveryMethodCategory"
 
 RegionalRefs:
   allOf:
-    - $ref: "./models/City.yaml#/City"
-    - $ref: "./models/Country.yaml#/Country"
-    - $ref: "./models/Country.yaml#/CountryAttributes"
-    - $ref: "./models/Region.yaml#/Region"
+    - $ref: "./simple-models/City.yaml#/City"
+    - $ref: "./simple-models/Country.yaml#/Country"
+    - $ref: "./simple-models/Country.yaml#/CountryAttributes"
+    - $ref: "./simple-models/Region.yaml#/Region"
 
-MainRefs:
+SchoolRefs:
   allOf:
-    - $ref: "./models/School.yaml#/School"
+    - $ref: "./simple-models/School.yaml#/School"
 
 NonThRefs:
   allOf:
     - $ref: "./../non-th-examples/pets/Pet.yaml#/Pet"
+
+SimpleModels:
+  allOf:
+    - $ref: "./../../models/simple/Teacher.yaml#/SimpleModel_teacher"
+
+JsonApiModels:
+  allOf:
+    - $ref: "./../../models/json-api/Teacher.yaml#/JsonApiModel_teacher"

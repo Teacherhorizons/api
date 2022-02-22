@@ -28,6 +28,8 @@ tags:
     description: Operations relating to countries
   - name: documents
     description: Operations relating to documents
+  - name: email-templates
+    description: Operations relating to email templates
   - name: employment-records
     description: Operations relating to teacher employment records
   - name: job-applications
@@ -63,17 +65,17 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
-  - name: model-city
+  - name: simple-model-city
     x-displayName: City
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/City" />
 
-  - name: model-country
+  - name: simple-model-country
     x-displayName: Country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Country" />
 
-  - name: model-lists
+  - name: simple-model-lists
     x-displayName: Lists
     description: |
       ### AcademicSystem
@@ -85,31 +87,47 @@ tags:
       ### ThDiscoveryMethodCategory
       <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethodCategory" />
 
-  - name: model-pet
+  - name: simple-model-pet
     x-displayName: Pet (Non-TH)
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
-  - name: model-region
+  - name: simple-model-region
     x-displayName: Region
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Region" />
 
-  - name: model-school
+  - name: simple-model-school
     x-displayName: School
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/School" />
 
+  - name: simple-model-teacher
+    x-displayName: Simple model - Teacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
+
+  # JSON:API models
+  - name: json-api-model-teacher
+    x-displayName: JSON:API model - Teacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
+
 x-tagGroups:
-  - name: Models
+  - name: Simple models
     tags:
-      - model-accreditation-type
-      - model-city
-      - model-country
-      - model-lists
-      - model-pet
-      - model-region
-      - model-school
+      - simple-model-accreditation-type
+      - simple-model-city
+      - simple-model-country
+      - simple-model-lists
+      - simple-model-pet
+      - simple-model-region
+      - simple-model-school
+      - simple-model-teacher
+
+  - name: JSON:API models
+    tags:
+      - json-api-model-teacher
 
   - name: API
     tags:
@@ -118,6 +136,7 @@ x-tagGroups:
       - community-responses
       - countries
       - documents
+      - email-templates
       - employment-records
       - job-applications
       - jobs
@@ -156,6 +175,10 @@ paths:
   # documents
   /v2/teacher/member-number/{memberNumber}/documents:
     $ref: "./paths/current/documents/teacher-member-number-documents.yaml"
+
+  # email-templates
+  /email-templates:
+    $ref: "./paths/proposed/email-templates/email-templates.yaml"
 
   # employment records
   /v1/teacher/member-number/{memberNumber}/employment-records:
@@ -273,8 +296,6 @@ paths:
     $ref: "./paths/non-th-examples/path-item.yaml"
   /pathItemWithExamples:
     $ref: "./paths/non-th-examples/path-item-with-examples.yaml"
-
-
 
 components:
   securitySchemes:
