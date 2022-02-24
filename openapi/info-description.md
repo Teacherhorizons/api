@@ -26,6 +26,7 @@
 
 ### Auto-generation of OpenAPI YAML (idea: partly auto-generate the documentation of current APIs)
 
+- https://roger13.github.io/SwagDefGen/ - Convert JSON response to YAML
 - https://metamug.com/util/postman-to-swagger/ - Convert JSON response to YAML (very simple)
 - https://support.google.com/admanager/answer/10358597?hl=en - Capture web session traffic (in a HAR file)
 - https://github.com/dcarr178/har2openapi - Generate OpenAPI YAML from  HAR file

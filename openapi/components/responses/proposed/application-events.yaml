@@ -1,0 +1,87 @@
+# Generated using https://roger13.github.io/SwagDefGen/
+# TODO: tidy up / refactor
+ApplicationEventsResponse:
+  type: object
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        properties:
+          type:
+            type: string
+            example: applicationEvent
+          id:
+            type: string
+            example: 12
+          attributes:
+            type: object
+            properties:
+              application:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 123
+              eventType:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 3
+              date:
+                type: string
+                example: 2011-02-07T15:53:34:000Z
+              notes:
+                type: string
+                example: Foo bar
+              creationDate:
+                type: string
+                example: 2011-02-07T15:53:34:000Z
+              latestUpdateDate:
+                type: string
+                example: 2011-02-07T15:53:34:000Z
+          relationships:
+            type: object
+            properties:
+              creationUser:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: user
+                      id:
+                        type: string
+                        example: 44
+              latestUpdateUser:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: user
+                      id:
+                        type: string
+                        example: 44
+    included:
+      type: array
+      items:
+        type: object
+        properties:
+          type:
+            type: string
+            example: user
+          id:
+            type: string
+            example: 44
+          attributes:
+            type: object
+            properties:
+              fullName:
+                type: string
+                example: Emily Parkman

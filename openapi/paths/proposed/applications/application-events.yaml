@@ -1,0 +1,43 @@
+get:
+  operationId: getApplicationEvents
+  tags:
+    - applications
+    - status-proposed
+  summary: Get application events (proposed)
+  parameters:
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties:
+          $ref: "#/ApplicationEvents_filter_additionalProperties"
+        example:
+          application.id: 1
+          application.teacher.memberNumber: 1
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/responses/proposed/application-events.yaml#/ApplicationEventsResponse"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Application not found
+  security:
+    - api_key: []
+
+ApplicationEvents_filter_additionalProperties:
+  type: object
+  description: Direct attributes
+  properties:
+    application.id:
+      type: number
+      example: 1
+    application.teacher.memberNumber:
+      type: number
+      example: 123456

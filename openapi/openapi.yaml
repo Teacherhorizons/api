@@ -140,6 +140,7 @@ x-tagGroups:
   - name: API
     tags:
       - admin-notes
+      - applications
       - cities
       - community-responses
       - countries
@@ -171,6 +172,10 @@ paths:
   # admin-notes
   /v1/teacher/member-number/{memberNumber}/admin-notes:
     $ref: "./paths/current/admin-notes/teacher-member-number-admin-notes.yaml"
+
+  # applications
+  /application-events:
+    $ref: "./paths/proposed/applications/application-events.yaml"
 
   # cities
   /v3/city/id/{cityId}/profile:
