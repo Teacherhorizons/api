@@ -20,7 +20,7 @@ SimpleModel_region_all:
       allOf:
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_all"
-        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
 
 SimpleModel_region_admin:
   allOf:
@@ -29,13 +29,16 @@ SimpleModel_region_admin:
       allOf:
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
-        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_adminOnly"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
 
 SimpleModel_region_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_region"
     - type: object
+      allOf:
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_adminOnly"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
 
 SimpleModel_region_school:
   allOf:
@@ -44,7 +47,7 @@ SimpleModel_region_school:
       allOf:
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
-        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        # - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
 
 SimpleModel_region_teacher:
   allOf:
@@ -53,4 +56,4 @@ SimpleModel_region_teacher:
       allOf:
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
         - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
-        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        # - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"

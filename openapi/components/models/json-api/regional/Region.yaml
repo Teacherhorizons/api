@@ -1,38 +1,86 @@
 JsonApiModel_region:
   type: object
   properties:
-    $ref: "#/JsonApiModel_region_attributes"
-  required:
-    - type
-    - id
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_region_admin"
+      school: "#/JsonApiModel_region_school"
+      teacher: "#/JsonApiModel_region_teacher"
 
-JsonApiModel_region_attributes:
+JsonApiModel_region_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_region"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_region_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_region_school:
+  allOf:
+    - $ref: "#/JsonApiModel_region"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_region_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_region_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_region"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_region_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_region_attributes_admin:
   type:
     $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_type2"
   id:
     $ref: "./../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
   attributes:
-    $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_all"
+    allOf:
+      - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+      - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_adminOnly"
   relationships:
-    $ref: "#/JsonApiModel_region_relationships"
+    $ref: "#/JsonApiModel_region_relationships_admin"
 
-JsonApiModel_region_relationships:
+JsonApiModel_region_relationships_admin:
   type: object
   description: Related attributes
   properties:
-    user:
+    creationUser:
       $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    teachingQualificationCountry:
+    latestUpdateUser:
       $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    qualificationType:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    jobSeekingStatus:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    userType:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    thDiscoveryMethod:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    latestAdviserCommentUser:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    currentCountry:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_region_attributes_school:
+  type:
+    $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_type2"
+  id:
+    $ref: "./../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+  attributes:
+    allOf:
+      - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+  # relationships:
+
+# teacher
+JsonApiModel_region_attributes_teacher:
+  type:
+    $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_type2"
+  id:
+    $ref: "./../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+  attributes:
+    allOf:
+      - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+  # relationships:

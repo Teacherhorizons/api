@@ -1,9 +1,4 @@
-Region_simpleProperties_adminOnly:
-  properties:
-    thPlaceabilityRating:
-      type: integer
-      example: 1
-
+# standard properties
 Region_simpleProperties_typeAndId:
   allOf:
     - $ref: "#/Region_simpleProperties_type"
@@ -45,14 +40,6 @@ Region_simpleProperties_shared:
     name:
       type: string
       example: Africa
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
     slug:
       type: string
       example: africa
@@ -65,13 +52,35 @@ Region_simpleProperties_shared:
       example: 17.46826171875
       description: Longitude
 
-Region_relationshipProperties_shared:
+Region_simpleProperties_adminOnly:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+
+# relationship properties
+
+Region_relationshipProperties_all:
+  allOf:
+    # - $ref: "#/Region_simpleProperties_shared"
+    - $ref: "#/Region_simpleProperties_adminOnly"
+
+# Region_relationshipProperties_shared:
+
+Region_relationshipProperties_adminOnly:
   properties:
     creationUserId:
       type: integer
       example: 1
-      description: Relationship to User
+      description: Relationship to User; admin only
     latestUpdateUserId:
       type: integer
       example: 1
-      description: Relationship to User
+      description: Relationship to User; admin only
