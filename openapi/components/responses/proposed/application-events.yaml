@@ -13,7 +13,7 @@ ApplicationEventsResponse:
             example: applicationEvent
           id:
             type: string
-            example: 12
+            example: "1"
           attributes:
             type: object
             properties:
@@ -22,13 +22,13 @@ ApplicationEventsResponse:
                 properties:
                   id:
                     type: string
-                    example: 123
+                    example: "1"
               eventType:
                 type: object
                 properties:
                   id:
                     type: string
-                    example: 3
+                    example: "1"
               date:
                 type: string
                 example: 2011-02-07T15:53:34:000Z
@@ -55,7 +55,7 @@ ApplicationEventsResponse:
                         example: user
                       id:
                         type: string
-                        example: 44
+                        example: "1"
               latestUpdateUser:
                 type: object
                 properties:
@@ -67,7 +67,7 @@ ApplicationEventsResponse:
                         example: user
                       id:
                         type: string
-                        example: 44
+                        example: "1"
     included:
       type: array
       items:
@@ -78,7 +78,7 @@ ApplicationEventsResponse:
             example: user
           id:
             type: string
-            example: 44
+            example: "1"
           attributes:
             type: object
             properties:
