@@ -20,7 +20,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "./../../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
+          $ref: "../../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
         example:
           country: name,isoCode,locationLatLong
     - in: query

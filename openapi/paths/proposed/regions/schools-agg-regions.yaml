@@ -13,7 +13,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "./../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_schoolsAgg"
+          $ref: "../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_schoolsAgg"
         example:
           region: numberOfSchools
         description: |
@@ -26,7 +26,7 @@ get:
     #   schema:
     #     type: object
     #     additionalProperties:
-    #       $ref: "./../../../components/schemas/proposed/simple-models/School.yaml#/SchoolProperties_all"
+    #       $ref: "../../../components/schemas/proposed/simple-models/School.yaml#/SchoolProperties_all"
     #     example:
     #       name: foo
     #       adminOnlyField1: bar

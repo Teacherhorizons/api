@@ -8,11 +8,11 @@ JsonApiModel_teacher:
 
 JsonApiModel_teacher_attributes:
   type:
-    $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_type2"
+    $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_type2"
   id:
-    $ref: "./../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+    $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
   attributes:
-    $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_all"
+    $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_all"
   relationships:
     $ref: "#/JsonApiModel_teacher_relationships"
 
@@ -21,18 +21,18 @@ JsonApiModel_teacher_relationships:
   description: Related attributes
   properties:
     user:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     teachingQualificationCountry:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     qualificationType:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     jobSeekingStatus:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     userType:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     thDiscoveryMethod:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     latestAdviserCommentUser:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     currentCountry:
-      $ref: "./../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
