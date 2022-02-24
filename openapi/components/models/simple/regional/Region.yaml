@@ -18,7 +18,7 @@ SimpleModel_region_all:
     - $ref: "#/SimpleModel_region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_id"
+        - $ref: "#/SimpleModel_region_id"
         - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_all"
         - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
 
@@ -27,7 +27,7 @@ SimpleModel_region_admin:
     - $ref: "#/SimpleModel_region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_id"
+        - $ref: "#/SimpleModel_region_id"
         - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
         - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_adminOnly"
         - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
@@ -45,7 +45,7 @@ SimpleModel_region_school:
     - $ref: "#/SimpleModel_region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_id"
+        - $ref: "#/SimpleModel_region_id"
         - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
         # - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
 
@@ -54,6 +54,16 @@ SimpleModel_region_teacher:
     - $ref: "#/SimpleModel_region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_id"
+        - $ref: "#/SimpleModel_region_id"
         - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
         # - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+
+# shared
+SimpleModel_region_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

@@ -32,7 +32,7 @@ get:
           $ref: "../../../components/models/library/regional/Region.yaml#/Region_standardProperties_all"
           # $ref: "../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_all"
         example:
-          region: name,adminOnlyField1
+          region: name,slug,locationLatLong
   responses:
     "200":
       description: successful operation
@@ -43,6 +43,6 @@ get:
     "400":
       description: Invalid ID supplied
     "404":
-      description: Pet not found
+      description: Region not found
   security:
     - api_key: []

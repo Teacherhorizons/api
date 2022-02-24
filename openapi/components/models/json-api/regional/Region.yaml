@@ -44,9 +44,9 @@ JsonApiModel_region_teacher:
 # admin
 JsonApiModel_region_attributes_admin:
   type:
-    $ref: "../../library/regional/Region.yaml#/Region_standardProperties_type2"
+    $ref: "#/JsonApiModel_region_type"
   id:
-    $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+    $ref: "#/JsonApiModel_region_id"
   attributes:
     allOf:
       - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
@@ -66,9 +66,9 @@ JsonApiModel_region_relationships_admin:
 # school
 JsonApiModel_region_attributes_school:
   type:
-    $ref: "../../library/regional/Region.yaml#/Region_standardProperties_type2"
+    $ref: "#/JsonApiModel_region_type"
   id:
-    $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+    $ref: "#/JsonApiModel_region_id"
   attributes:
     allOf:
       - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
@@ -77,10 +77,23 @@ JsonApiModel_region_attributes_school:
 # teacher
 JsonApiModel_region_attributes_teacher:
   type:
-    $ref: "../../library/regional/Region.yaml#/Region_standardProperties_type2"
+    $ref: "#/JsonApiModel_region_type"
   id:
-    $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
+    $ref: "#/JsonApiModel_region_id"
   attributes:
     allOf:
       - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
   # relationships:
+
+# shared
+JsonApiModel_region_type:
+  type: string
+  example: region
+  description: region
+  readOnly: true
+
+JsonApiModel_region_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the region (string)
