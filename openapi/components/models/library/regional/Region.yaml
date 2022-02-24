@@ -1,0 +1,77 @@
+Region_simpleProperties_adminOnly:
+  properties:
+    thPlaceabilityRating:
+      type: integer
+      example: 1
+
+Region_simpleProperties_typeAndId:
+  allOf:
+    - $ref: "#/Region_simpleProperties_type"
+    - $ref: "#/Region_simpleProperties_id"
+
+Region_simpleProperties_type:
+  properties:
+    type:
+      type: string
+      example: region
+      description: Value representing the object type
+      readOnly: true
+
+Region_simpleProperties_type2:
+  type: string
+  example: region
+  description: Value representing the object type
+  readOnly: true
+
+Region_simpleProperties_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+
+Region_simpleProperties_all:
+  allOf:
+    - $ref: "#/Region_simpleProperties_shared"
+    - $ref: "#/Region_simpleProperties_adminOnly"
+
+Region_simpleProperties_shared:
+  properties:
+    alias:
+      type: string
+      example: /Africa
+    name:
+      type: string
+      example: Africa
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+    slug:
+      type: string
+      example: africa
+    locationLatLong.lat:
+      type: number
+      example: 12.2755988905617
+      description: Latitude
+    locationLatLong.long:
+      type: number
+      example: 17.46826171875
+      description: Longitude
+
+Region_relationshipProperties_shared:
+  properties:
+    creationUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+    latestUpdateUserId:
+      type: integer
+      example: 1
+      description: Relationship to User

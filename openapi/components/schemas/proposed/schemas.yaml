@@ -22,8 +22,10 @@ NonThRefs:
 
 SimpleModels:
   allOf:
-    - $ref: "./../../models/simple/Teacher.yaml#/SimpleModel_teacher"
+    - $ref: "./../../models/simple/regional/Region.yaml#/SimpleModel_region"
+    - $ref: "./../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
 
 JsonApiModels:
   allOf:
-    - $ref: "./../../models/json-api/Teacher.yaml#/JsonApiModel_teacher"
+    - $ref: "./../../models/json-api/regional/Region.yaml#/JsonApiModel_region"
+    - $ref: "./../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"

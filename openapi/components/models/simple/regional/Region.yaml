@@ -1,0 +1,56 @@
+SimpleModel_region:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_region_all"
+      admin: "#/SimpleModel_region_admin"
+      adminOnly: "#/SimpleModel_region_adminOnly"
+      school: "#/SimpleModel_region_school"
+      teacher: "#/SimpleModel_region_teacher"
+
+SimpleModel_region_all:
+  allOf:
+    - $ref: "#/SimpleModel_region"
+    - type: object
+      allOf:
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_all"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+
+SimpleModel_region_admin:
+  allOf:
+    - $ref: "#/SimpleModel_region"
+    - type: object
+      allOf:
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_adminOnly"
+
+SimpleModel_region_adminOnly:
+  allOf:
+    - $ref: "#/SimpleModel_region"
+    - type: object
+
+SimpleModel_region_school:
+  allOf:
+    - $ref: "#/SimpleModel_region"
+    - type: object
+      allOf:
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+
+SimpleModel_region_teacher:
+  allOf:
+    - $ref: "#/SimpleModel_region"
+    - type: object
+      allOf:
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_id"
+        - $ref: "./../../library/regional/Region.yaml#/Region_simpleProperties_shared"
+        - $ref: "./../../library/regional/Region.yaml#/Region_relationshipProperties_shared"

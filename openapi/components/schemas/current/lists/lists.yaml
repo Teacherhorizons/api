@@ -32,6 +32,10 @@ properties:
     type: array
     items:
       $ref: "./ApplicationEventType.yaml"
+  applicationThMatchTypes:
+    type: array
+    items:
+      $ref: "./ApplicationThMatchType.yaml"
   attractions:
     type: array
     items:
@@ -48,10 +52,6 @@ properties:
     type: array
     items:
       $ref: "./Subject.yaml"
-  thMatchTypes:
-    type: array
-    items:
-      $ref: "./ThMatchType.yaml"
   jobStatuses:
     type: array
     items:

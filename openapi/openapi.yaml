@@ -20,6 +20,8 @@ tags:
   # categories (alphabetical)
   - name: admin-notes
     description: Operations relating to admin-notes
+  - name: applications
+    description: Operations relating to applications
   - name: cities
     description: Operations relating to cities
   - name: community-responses
@@ -93,9 +95,9 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
   - name: simple-model-region
-    x-displayName: Region
+    x-displayName: Simple model - Region
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Region" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_region" />
 
   - name: simple-model-school
     x-displayName: School
@@ -108,6 +110,11 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
 
   # JSON:API models
+  - name: json-api-model-region
+    x-displayName: JSON:API model - Region
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_region" />
+
   - name: json-api-model-teacher
     x-displayName: JSON:API model - Teacher
     description: |
@@ -127,6 +134,7 @@ x-tagGroups:
 
   - name: JSON:API models
     tags:
+      - json-api-model-region
       - json-api-model-teacher
 
   - name: API

@@ -1,12 +1,12 @@
 get:
-  operationId: getRegion
+  operationId: getApplication
   tags:
-    - regions
+    - applications
     - status-proposed
-  summary: Get a region (proposed)
+  summary: Get a application (proposed)
   parameters:
     - in: path
-      name: regionId
+      name: applicationId
       required: true
       example: 12
       schema:
@@ -28,18 +28,17 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "./../../../components/models/library/regional#/Region_simpleProperties_all"
-          # $ref: "./../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_all"
+        # additionalProperties:
+        #   $ref: "./../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
         example:
-          region: name,adminOnlyField1
+          application: name,adminOnlyField1
   responses:
     "200":
       description: successful operation
-      content:
-        application/json:
-          schema:
-            $ref: "../../../components/responses/proposed/region.yaml#/RegionResponse"
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "../../../components/responses/proposed/application.yaml#/ApplicationResponse"
     "400":
       description: Invalid ID supplied
     "404":
