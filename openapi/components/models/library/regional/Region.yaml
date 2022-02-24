@@ -1,10 +1,10 @@
 # standard properties
-Region_simpleProperties_typeAndId:
+Region_standardProperties_typeAndId:
   allOf:
-    - $ref: "#/Region_simpleProperties_type"
-    - $ref: "#/Region_simpleProperties_id"
+    - $ref: "#/Region_standardProperties_type"
+    - $ref: "#/Region_standardProperties_id"
 
-Region_simpleProperties_type:
+Region_standardProperties_type:
   properties:
     type:
       type: string
@@ -12,13 +12,13 @@ Region_simpleProperties_type:
       description: Value representing the object type
       readOnly: true
 
-Region_simpleProperties_type2:
+Region_standardProperties_type2:
   type: string
   example: region
   description: Value representing the object type
   readOnly: true
 
-Region_simpleProperties_id:
+Region_standardProperties_id:
   properties:
     id:
       type: integer
@@ -27,12 +27,12 @@ Region_simpleProperties_id:
       readOnly: true
       description: Unique identifier of the object
 
-Region_simpleProperties_all:
+Region_standardProperties_all:
   allOf:
-    - $ref: "#/Region_simpleProperties_shared"
-    - $ref: "#/Region_simpleProperties_adminOnly"
+    - $ref: "#/Region_standardProperties_shared"
+    - $ref: "#/Region_standardProperties_adminOnly"
 
-Region_simpleProperties_shared:
+Region_standardProperties_shared:
   properties:
     alias:
       type: string
@@ -52,7 +52,7 @@ Region_simpleProperties_shared:
       example: 17.46826171875
       description: Longitude
 
-Region_simpleProperties_adminOnly:
+Region_standardProperties_adminOnly:
   properties:
     creationDate:
       type: string
@@ -69,8 +69,8 @@ Region_simpleProperties_adminOnly:
 
 Region_relationshipProperties_all:
   allOf:
-    # - $ref: "#/Region_simpleProperties_shared"
-    - $ref: "#/Region_simpleProperties_adminOnly"
+    # - $ref: "#/Region_standardProperties_shared"
+    - $ref: "#/Region_standardProperties_adminOnly"
 
 # Region_relationshipProperties_shared:
 

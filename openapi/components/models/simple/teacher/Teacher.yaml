@@ -18,8 +18,8 @@ SimpleModel_teacher_all:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_id"
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_all"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_all"
         - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
 
 SimpleModel_teacher_admin:
@@ -27,25 +27,25 @@ SimpleModel_teacher_admin:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_id"
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_shared"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
         - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_adminOnly"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_adminOnly"
 
 SimpleModel_teacher_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_adminOnly"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_adminOnly"
 
 SimpleModel_teacher_school:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_id"
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_shared"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
         - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
 
 SimpleModel_teacher_teacher:
@@ -53,6 +53,6 @@ SimpleModel_teacher_teacher:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_id"
-        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_simpleProperties_shared"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
+        - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
         - $ref: "./../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
