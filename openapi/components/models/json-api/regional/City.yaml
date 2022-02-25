@@ -1,0 +1,99 @@
+JsonApiModel_city:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_city_admin"
+      school: "#/JsonApiModel_city_school"
+      teacher: "#/JsonApiModel_city_teacher"
+
+JsonApiModel_city_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_city"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_city_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_city_school:
+  allOf:
+    - $ref: "#/JsonApiModel_city"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_city_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_city_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_city"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_city_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_city_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_city_type"
+  id:
+    $ref: "#/JsonApiModel_city_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
+      - $ref: "../../library/regional/City.yaml#/City_standardProperties_adminOnly"
+  relationships:
+    $ref: "#/JsonApiModel_city_relationships_admin"
+
+JsonApiModel_city_relationships_admin:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_city_attributes_school:
+  type:
+    $ref: "#/JsonApiModel_city_type"
+  id:
+    $ref: "#/JsonApiModel_city_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
+  # relationships:
+
+# teacher
+JsonApiModel_city_attributes_teacher:
+  type:
+    $ref: "#/JsonApiModel_city_type"
+  id:
+    $ref: "#/JsonApiModel_city_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
+  # relationships:
+
+# shared
+JsonApiModel_city_type:
+  type: string
+  example: city
+  description: city
+  readOnly: true
+
+JsonApiModel_city_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the city (string)

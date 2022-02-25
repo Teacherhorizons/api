@@ -1,0 +1,69 @@
+SimpleModel_country:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_country_all"
+      admin: "#/SimpleModel_country_admin"
+      adminOnly: "#/SimpleModel_country_adminOnly"
+      school: "#/SimpleModel_country_school"
+      teacher: "#/SimpleModel_country_teacher"
+
+SimpleModel_country_all:
+  allOf:
+    - $ref: "#/SimpleModel_country"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_country_id"
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_all"
+        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+
+SimpleModel_country_admin:
+  allOf:
+    - $ref: "#/SimpleModel_country"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_country_id"
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+
+SimpleModel_country_adminOnly:
+  allOf:
+    - $ref: "#/SimpleModel_country"
+    - type: object
+      allOf:
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+
+SimpleModel_country_school:
+  allOf:
+    - $ref: "#/SimpleModel_country"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_country_id"
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+        # - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_shared"
+
+SimpleModel_country_teacher:
+  allOf:
+    - $ref: "#/SimpleModel_country"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_country_id"
+        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+        # - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_shared"
+
+# shared
+SimpleModel_country_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

@@ -1,0 +1,73 @@
+# standard properties
+City_standardProperties_all:
+  allOf:
+    - $ref: "#/City_standardProperties_shared"
+    - $ref: "#/City_standardProperties_adminOnly"
+
+City_standardProperties_shared:
+  properties:
+    id:
+      type: integer
+      example: 1
+      description: Unique identifier of the entity"
+    name:
+      type: string
+      example: Luanda"
+    alias:
+      type: string
+      example: /Africa/Angola/Luanda"
+    keyAttractions:
+      type: string
+      example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to."
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:32Z"
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:32Z"
+    slug:
+      type: string
+      example: africa-angola-luanda"
+    locationLatLong.lat:
+      type: number
+      example: -8.8383333
+      description: Latitude"
+    locationLatLong.long:
+      type: number
+      example: 13.2344444
+      description: Longitude"
+
+City_standardProperties_adminOnly:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+
+# relationship properties
+
+City_relationshipProperties_all:
+  allOf:
+    # - $ref: "#/City_standardProperties_shared"
+    - $ref: "#/City_standardProperties_adminOnly"
+
+# City_relationshipProperties_shared:
+
+City_relationshipProperties_adminOnly:
+  properties:
+    creationUserId:
+      type: integer
+      example: 1
+      description: Relationship to User; admin only
+    latestUpdateUserId:
+      type: integer
+      example: 1
+      description: Relationship to User; admin only
