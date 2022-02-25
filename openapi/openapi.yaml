@@ -68,14 +68,14 @@ tags:
     description: This is a tag description.
 
   - name: simple-model-city
-    x-displayName: City
+    x-displayName: Simple model - City
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/City" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_city" />
 
   - name: simple-model-country
-    x-displayName: Country
+    x-displayName: Simple model - Country
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Country" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
   - name: simple-model-lists
     x-displayName: Lists
@@ -110,6 +110,16 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
 
   # JSON:API models
+  - name: json-api-model-city
+    x-displayName: JSON:API model - City
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
+ 
+  - name: json-api-model-country
+    x-displayName: JSON:API model - Country
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
+ 
   - name: json-api-model-region
     x-displayName: JSON:API model - Region
     description: |
@@ -136,6 +146,8 @@ x-tagGroups:
     tags:
       - json-api-model-region
       - json-api-model-teacher
+      - json-api-model-city
+      - json-api-model-country
 
   - name: API
     tags:

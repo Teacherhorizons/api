@@ -1,0 +1,80 @@
+# standard properties
+Country_standardProperties_all:
+  allOf:
+    - $ref: "#/Country_standardProperties_shared"
+    - $ref: "#/Country_standardProperties_adminOnly"
+
+Country_standardProperties_shared:
+  properties:
+    id:
+      type: integer
+      example: 1
+      description: Unique identifier of the entity"
+    name:
+      type: string
+      example: Albania"
+    alias:
+      type: string
+      example: /Europe/Albania"
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z"
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z"
+    isoCode:
+      type: string
+      example: al"
+    phoneCode:
+      type: string
+      example: 355"
+    slug:
+      type: string
+      example: europe-albania"
+    nationalAverageIncome:
+      type: number
+      example: 4032.6"
+    locationLatLong.lat:
+      type: number
+      example: 41
+      description: Latitude"
+    locationLatLong.long:
+      type: number
+      example: 20
+      description: Longitude"
+
+
+Country_standardProperties_adminOnly:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:31Z
+      description: admin only
+
+# relationship properties
+
+Country_relationshipProperties_all:
+  allOf:
+    # - $ref: "#/Country_standardProperties_shared"
+    - $ref: "#/Country_standardProperties_adminOnly"
+
+# Country_relationshipProperties_shared:
+
+Country_relationshipProperties_adminOnly:
+  properties:
+    creationUserId:
+      type: integer
+      example: 1
+      description: Relationship to User; admin only
+    latestUpdateUserId:
+      type: integer
+      example: 1
+      description: Relationship to User; admin only

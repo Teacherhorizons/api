@@ -1,0 +1,99 @@
+JsonApiModel_country:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_country_admin"
+      school: "#/JsonApiModel_country_school"
+      teacher: "#/JsonApiModel_country_teacher"
+
+JsonApiModel_country_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_country"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_country_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_country_school:
+  allOf:
+    - $ref: "#/JsonApiModel_country"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_country_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_country_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_country"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_country_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_country_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_country_type"
+  id:
+    $ref: "#/JsonApiModel_country_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
+  relationships:
+    $ref: "#/JsonApiModel_country_relationships_admin"
+
+JsonApiModel_country_relationships_admin:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_country_attributes_school:
+  type:
+    $ref: "#/JsonApiModel_country_type"
+  id:
+    $ref: "#/JsonApiModel_country_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+  # relationships:
+
+# teacher
+JsonApiModel_country_attributes_teacher:
+  type:
+    $ref: "#/JsonApiModel_country_type"
+  id:
+    $ref: "#/JsonApiModel_country_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+  # relationships:
+
+# shared
+JsonApiModel_country_type:
+  type: string
+  example: country
+  description: country
+  readOnly: true
+
+JsonApiModel_country_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the country (string)
