@@ -40,9 +40,47 @@ get:
         application/json:
           schema:
             $ref: "../../../components/responses/proposed/region.yaml#/RegionResponse"
+
+    # TODO: move these to a library
+
     "400":
-      description: Invalid ID supplied
+      description: Invalid id supplied
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "400"
+                    title:
+                      type: string
+                      example: "Invalid id supplied"
+                    detail:
+                      type: string
+                      example: "Id must be and integer"
     "404":
       description: Region not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "404"
+                    title:
+                      type: string
+                      example: "Related entity not found"
   security:
     - api_key: []
