@@ -1,0 +1,10 @@
+# standard properties
+Application_standardProperties_all:
+  allOf:
+    - $ref: "#/Application_standardProperties_shared"
+
+Application_standardProperties_shared:
+  properties:
+    TODO:
+      type: string
+      example: WIP

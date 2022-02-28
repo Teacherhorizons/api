@@ -27,9 +27,9 @@ ApplicationResponse:
                   id:
                     type: string
                     example: "1"
-                  latestUpdateDate:
-                    type: string
-                    example: 2011-02-07T15:53:34:000Z 
+              latestUpdateDate:
+                type: string
+                example: 2011-02-07T15:53:34:000Z
               recommendationText:
                 type: string
                 example: Foo bar
@@ -63,106 +63,163 @@ ApplicationResponse:
     included:
       type: array
       items:
-        type: object
-        properties:
-          type:
-            type: string
-            example: job
-          id:
-            type: string
-            example: "22"
+        anyOf:
+          - $ref: "#/ApplicationResponse_IncludedJob"
+          - $ref: "#/ApplicationResponse_IncludedTeacher"
+          - $ref: "#/ApplicationResponse_IncludedSchool"
+      example:
+        # TODO AS: finish off
+        - type: job
+          id: "1"
           attributes:
-            type: object
-            properties:
-              title:
-                type: string
-                example: Humanities Teacher - Shenzhen campus (February 2022)
-              thOwnerUser:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "234"
-              subject:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
-              role:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
-                    latestUpdateDate:
-                     type: string
-                     example: 2011-02-07T00:00:00Z
-                    status:
-                     type: object
-                     properties:
-                      id:
-                       type: string
-                       example: "1"
-          relationships:
-            type: object
-            properties:
-              school:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        example: school
-                      id:
-                        type: string
-                        example: "225"
-        attributes:  
-          type: array
-          items:
-            type: object
-            properties:
-              type:
-                type: string
-                example: teacher 
-              id:
-                type: string
-                example: 33       
-                attributes:  
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      memberNumber:
-                        type: string
-                        example: 1314160   
-          attributes:  
-           type: array
-           items:
-            type: object
-            properties:
-              type:
-                type: string
-                example: school        
-              attributes:  
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      name:
-                        type: string
-                        example: Maple Leaf International School 
-                      city:
-                        type: object
-                        properties:
-                          type:
-                            id: string
-                            example: 2256
-                      lraUser:
-                        type: object
-                        properties:
-                          type:
-                            id: string
-                            example: 123
+            title: Humanities Teacher - Shenzhen campus (February 2022)
+            thOwnerUser:
+              id": "1"
+        - type: teacher
+          id: "1"
+          attributes:
+            memberNumber: 123456
+        - type: school
+          id: "1"
+          attributes:
+            name: Maple Leaf International School
+            city:
+              id": "1"
+
+# {
+#       "type": "job",
+#       "id": "22",
+#       "attributes": {
+#         "title": "Humanities Teacher - Shenzhen campus (February 2022)",
+#         "thOwnerUser": { "id": "234" },
+#         "subject": { "id": "1" },
+#         "role": { "id": "1" },
+#            "startDate": "2011-02-07T00:00:00Z", // date only
+#            "status": { "id": 1 }
+#       },
+#       "relationships": {
+#         "school": {
+#           "data": { "type": "school", "id": "225" }
+#         }
+#       }
+#     },
+#     {
+#       "type": "teacher",
+#       "id": "33",
+#       "attributes": {
+#         "memberNumber": 1314160
+#       } // get remaining teacher data from separate call
+#     },
+#     {
+#       "type": "school",
+#       "id": "225",
+#       "attributes": {
+#         "name": "Maple Leaf International School",
+#         "city": { id: "2256" },
+#         "lraUser": { "id": "123" }
+#       }
+#     }
+
+ApplicationResponse_IncludedJob:
+  type: object
+  properties:
+    type:
+      type: string
+      example: job
+    id:
+      type: string
+      example: "22"
+    attributes:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Humanities Teacher - Shenzhen campus (February 2022)
+        thOwnerUser:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "234"
+        subject:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1"
+        role:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1"
+        startDate:
+          type: string
+          example: 2011-02-07T00:00:00Z
+          description: date only (e.g. 2011-02-07T00:00:00Z)
+        status:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1"
+    relationships:
+      type: object
+      properties:
+        school:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: school
+                id:
+                  type: string
+                  example: "225"
+
+ApplicationResponse_IncludedTeacher:
+  type: object
+  properties:
+    type:
+      type: string
+      example: teacher
+    id:
+      type: string
+      example: 1
+    attributes:
+      type: object
+      properties:
+        memberNumber:
+          type: string
+          example: 1314160
+      description: memberNumber only; get remaining teacher data from separate call
+
+ApplicationResponse_IncludedSchool:
+  type: object
+  properties:
+    type:
+      type: string
+      example: school
+    id:
+      type: string
+      example: 1
+    attributes:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Maple Leaf International School
+        city:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1"
+        lraUser:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "1"
