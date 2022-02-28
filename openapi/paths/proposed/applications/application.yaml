@@ -3,7 +3,7 @@ get:
   tags:
     - applications
     - status-proposed
-  summary: Get a application (proposed)
+  summary: Get an application (proposed)
   parameters:
     - in: path
       name: applicationId
@@ -28,20 +28,59 @@ get:
       explode: true
       schema:
         type: object
-        # additionalProperties:
-        #   $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
+        additionalProperties:
+          $ref: "../../../components/models/library/applications/Application.yaml#/Application_standardProperties_all"
+          # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
         example:
-          application: name,adminOnlyField1
+          application: name,slug,locationLatLong
   responses:
     "200":
       description: successful operation
-      # content:
-      #   application/json:
-      #     schema:
-      #       $ref: "../../../components/responses/proposed/application.yaml#/ApplicationResponse"
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/responses/proposed/application.yaml#/ApplicationResponse"
+
+    # TODO: move these to a library
+
     "400":
-      description: Invalid ID supplied
+      description: Invalid id supplied
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "400"
+                    title:
+                      type: string
+                      example: "Invalid id supplied"
+                    detail:
+                      type: string
+                      example: "Id must be and integer"
     "404":
-      description: Pet not found
+      description: Application not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    status:
+                      type: string
+                      example: "404"
+                    title:
+                      type: string
+                      example: "Related entity not found"
   security:
     - api_key: []
