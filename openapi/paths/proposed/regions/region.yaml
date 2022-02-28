@@ -55,6 +55,10 @@ get:
                 items:
                   type: object
                   properties:
+                    code:
+                      type: string
+                      description: One of a list of possible values (previously 'frontEndErrorSlug')
+                      example: "missingMandatoryParameter"
                     status:
                       type: string
                       example: "400"
@@ -63,7 +67,7 @@ get:
                       example: "Invalid id supplied"
                     detail:
                       type: string
-                      example: "Id must be and integer"
+                      example: "Id must be an integer"
     "404":
       description: Region not found
       content:
@@ -76,6 +80,10 @@ get:
                 items:
                   type: object
                   properties:
+                    code:
+                      type: string
+                      description: One of a list of possible values (previously 'frontEndErrorSlug')
+                      example: "entityNotFoundForId"
                     status:
                       type: string
                       example: "404"
