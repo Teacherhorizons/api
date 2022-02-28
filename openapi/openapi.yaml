@@ -114,12 +114,12 @@ tags:
     x-displayName: JSON:API model - City
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
- 
+
   - name: json-api-model-country
     x-displayName: JSON:API model - Country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
- 
+
   - name: json-api-model-region
     x-displayName: JSON:API model - Region
     description: |
@@ -189,7 +189,7 @@ paths:
   /application-events:
     $ref: "./paths/proposed/applications/application-events.yaml"
 
-  /application:
+  /application/{applicationId}:
     $ref: "./paths/proposed/applications/application.yaml"
   
   /addApplication-events:
