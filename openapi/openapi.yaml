@@ -191,6 +191,12 @@ paths:
 
   /application:
     $ref: "./paths/proposed/applications/application.yaml"
+  
+  /addApplication-events:
+    $ref: "./paths/proposed/applications/addApplication-events.yaml"
+
+  /addApplication:
+    $ref: "./paths/proposed/applications/addApplication.yaml"
 
   # cities
   /v3/city/id/{cityId}/profile:
