@@ -189,6 +189,9 @@ paths:
   /application-events:
     $ref: "./paths/proposed/applications/application-events.yaml"
 
+  /application:
+    $ref: "./paths/proposed/applications/application.yaml"
+
   # cities
   /v3/city/id/{cityId}/profile:
     $ref: "./paths/current/cities/city-id-profile.yaml"
