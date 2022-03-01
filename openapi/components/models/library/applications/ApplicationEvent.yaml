@@ -1,0 +1,49 @@
+# standard properties
+ApplicationEvent_standardProperties_all:
+  allOf:
+    - $ref: "#/ApplicationEvent_standardProperties_shared"
+
+ApplicationEvent_standardProperties_shared:
+  properties:
+    application:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 123
+    eventType:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 3
+    date:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+    notes:
+      type: string
+      example: Foo bar
+    addedDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    email:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1
+
+# TODO: organise
+ApplicationEvents_filter_additionalProperties:
+  type: object
+  description: Direct attributes
+  properties:
+    application.id:
+      type: number
+      example: 1
+    application.teacher.memberNumber:
+      type: number
+      example: 123456

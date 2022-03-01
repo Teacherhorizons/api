@@ -13,7 +13,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "#/ApplicationEvents_filter_additionalProperties"
+          $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvents_filter_additionalProperties"
         example:
           application.id: 1
           application.teacher.memberNumber: 1
@@ -31,13 +31,43 @@ get:
   security:
     - api_key: []
 
-ApplicationEvents_filter_additionalProperties:
-  type: object
-  description: Direct attributes
-  properties:
-    application.id:
-      type: number
-      example: 1
-    application.teacher.memberNumber:
-      type: number
-      example: 123456
+post:
+  description: ""
+  operationId: postApplicationEvent
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            type:
+              type: string
+              example: applicationEvent
+            attributes:
+              allOf:
+                - type: object
+                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                - required:
+                    - application
+                    - eventType
+                    - date
+  responses:
+    "201":
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: applicationEvent
+                  id:
+                    type: string
+                    example: 1
+      description: Item created
+  summary: Create application event (proposed)
+  tags:
+    - applications
