@@ -5,6 +5,14 @@ Application_standardProperties_all:
 
 Application_standardProperties_shared:
   properties:
-    TODO:
-      type: string
-      example: WIP
+      job: 
+          type: object
+          properties: 
+            id: 
+              type: string
+              example: 123
+      memberNumber: 
+          type: object
+          example: 34567
+
+      
