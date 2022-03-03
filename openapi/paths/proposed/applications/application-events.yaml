@@ -17,6 +17,8 @@ get:
         example:
           application.id: 1
           application.teacher.memberNumber: 1
+        description: e.g. filter[application.id]=123 - gets the events related to application 123
+
   responses:
     "200":
       description: successful operation

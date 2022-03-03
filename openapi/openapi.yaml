@@ -35,7 +35,7 @@ tags:
   - name: employment-records
     description: Operations relating to teacher employment records
   - name: general
-    description: General Operations 
+    description: General Operations
   - name: job-applications
     description: Operations relating to job applications
   - name: jobs
@@ -90,6 +90,8 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethod" />
       ### ThDiscoveryMethodCategory
       <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethodCategory" />
+      ### Simple model - Currency
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_currency" />
 
   - name: simple-model-pet
     x-displayName: Pet (Non-TH)
@@ -138,6 +140,7 @@ x-tagGroups:
       - simple-model-accreditation-type
       - simple-model-city
       - simple-model-country
+      - simple-model-currency
       - simple-model-lists
       - simple-model-pet
       - simple-model-region
@@ -299,7 +302,7 @@ paths:
   # proposed
 
   #general
-  
+
   /general/{currencyId}:
     $ref: "./paths/proposed/general/currency.yaml"
 
