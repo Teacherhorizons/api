@@ -1,0 +1,92 @@
+get:
+  operationId: getCurrency
+  tags:
+    - general
+    - status-proposed
+  summary: Get currency (proposed)
+  parameters:
+    - in: path
+      name: currencyId
+      required: true
+      example: 12
+      schema:
+        type: integer
+        format: int32
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - admin
+          - school
+          - teacher
+    - in: query
+      name: fields
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties:
+          $ref: "../../../components/models/library/general/Currency.yaml#/Currency_standardProperties_all"
+          # $ref: "../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_all"
+        example:
+          region: name,creationDate
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/responses/proposed/currency.yaml#/CurrencyResponse"
+
+    "400":
+      description: Invalid id supplied
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                      description: One of a list of possible values (previously 'frontEndErrorSlug')
+                      example: "missingMandatoryParameter"
+                    status:
+                      type: string
+                      example: "400"
+                    title:
+                      type: string
+                      example: "Invalid id supplied"
+                    detail:
+                      type: string
+                      example: "Id must be an integer"
+    "404":
+      description: Region not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                      description: One of a list of possible values (previously 'frontEndErrorSlug')
+                      example: "entityNotFoundForId"
+                    status:
+                      type: string
+                      example: "404"
+                    title:
+                      type: string
+                      example: "Related entity not found"
+  security:
+    - api_key: []

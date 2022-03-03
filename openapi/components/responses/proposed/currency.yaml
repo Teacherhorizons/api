@@ -1,0 +1,55 @@
+CurrencyResponse:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/CurrencyResponse_admin"
+      school: "#/CurrencyResponse_school"
+      teacher: "#/CurrencyResponse_teacher"
+
+CurrencyResponse_admin:
+  allOf:
+    - $ref: "#/CurrencyResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          properties:
+            attributes:
+              type: object
+              allOf:
+                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
+                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_adminOnly"
+           # relationships:
+              #$ref: "../../models/json-api/general/Currency.yaml#/JsonApiModel_region_relationships_admin"
+
+CurrencyResponse_school:
+  allOf:
+    - $ref: "#/CurrencyResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          properties:
+            attributes:
+              type: object
+              allOf:
+                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
+
+CurrencyResponse_teacher:
+  allOf:
+    - $ref: "#/CurrencyResponse"
+    - type: object
+      properties:
+        data:
+          type: object
+          properties:
+            attributes:
+              type: object
+              allOf:
+                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
+

@@ -34,6 +34,8 @@ tags:
     description: Operations relating to email templates
   - name: employment-records
     description: Operations relating to teacher employment records
+  - name: general
+    description: General Operations 
   - name: job-applications
     description: Operations relating to job applications
   - name: jobs
@@ -159,6 +161,7 @@ x-tagGroups:
       - documents
       - email-templates
       - employment-records
+      - general
       - job-applications
       - jobs
       - lists
@@ -294,6 +297,11 @@ paths:
     $ref: "./paths/current/other/site-statistics.yaml"
 
   # proposed
+
+  #general
+  
+  /general/{currencyId}:
+    $ref: "./paths/proposed/general/currency.yaml"
 
   # regions
   /regions/{regionId}:
