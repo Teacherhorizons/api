@@ -104,7 +104,7 @@ post:
                 - required:
                     - job
                     - memberNumber
-                    
+
   responses:
     "201":
       content:
@@ -142,23 +142,14 @@ patch:
               allOf:
                 - type: object
                 - $ref: "../../../components/models/library/applications/Application.yaml#/Application_filter_additionalProperties"
-                                
+
   responses:
-    "201":
+    "204":
       content:
         application/json:
           schema:
             type: object
-            properties:
-              data:
-                type: object
-                properties:
-                  type:
-                    type: string
-                    example: Application
-                  id:
-                    type: string
-                    example: 123
+            default: null
       description: Item Updated
   summary: Update application (proposed)
   tags:
