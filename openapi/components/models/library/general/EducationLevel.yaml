@@ -1,0 +1,25 @@
+# standard properties
+EducationLevel_standardProperties_all:
+  allOf:
+    - $ref: "#/EducationLevel_standardProperties_shared"
+    - $ref: "#/EducationLevel_standardProperties_adminOnly"
+
+EducationLevel_standardProperties_shared:
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: PhD
+
+EducationLevel_standardProperties_adminOnly:
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: PhD
+
+# relationship properties

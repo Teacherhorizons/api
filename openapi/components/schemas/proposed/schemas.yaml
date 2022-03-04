@@ -28,6 +28,9 @@ SimpleModels:
     - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
     - $ref: "../../models/simple/regional/Country.yaml#/SimpleModel_country"
     - $ref: "../../models/simple/general/Currency.yaml#/SimpleModel_currency"
+    - $ref: "../../models/simple/general/EducationLevel.yaml#/SimpleModel_educationLevel"
+    - $ref: "../../models/simple/general/PensionSchemeType.yaml#/SimpleModel_pensionSchemeType"
+
 JsonApiModels:
   allOf:
     - $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_region"
