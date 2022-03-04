@@ -15,4 +15,14 @@ Application_standardProperties_shared:
           type: object
           example: 34567
 
-      
+Application_filter_additionalProperties:
+  properties:
+      thMatchType: 
+          type: object
+          properties: 
+            id: 
+              type: string
+              example: 2
+      recommendationText: 
+          type: object
+          example: Foo bar
