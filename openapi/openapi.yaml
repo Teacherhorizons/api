@@ -69,6 +69,16 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
+  - name: simple-model-application-action
+    x-displayName: Simple model - Application Action
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationAction" />
+  
+  - name: simple-model-application-status
+    x-displayName: Simple model - Application Status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
+  
   - name: simple-model-city
     x-displayName: Simple model - City
     description: |
@@ -78,6 +88,21 @@ tags:
     x-displayName: Simple model - Country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
+
+  - name: simple-model-education-level 
+    x-displayName: Simple model - EducationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_educationLevel" />
+
+  - name: simple-model-pensionScheme-type
+    x-displayName: Simple model - PensionSchemeType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_pensionSchemeType" />
+
+  - name: simple-model-currency
+    x-displayName: Simple model - Currency
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_currency" />
 
   - name: simple-model-lists
     x-displayName: Lists
@@ -90,12 +115,6 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethod" />
       ### ThDiscoveryMethodCategory
       <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethodCategory" />
-      ### Simple model - Currency
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_currency" />
-      ### Simple model - educationLevel
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_educationLevel" />
-      ### Simple model - pensionSchemeType
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_pensionSchemeType" />
 
   - name: simple-model-pet
     x-displayName: Pet (Non-TH)
@@ -142,10 +161,14 @@ x-tagGroups:
   - name: Simple models
     tags:
       - simple-model-accreditation-type
+      - simple-model-application-action
+      - simple-model-application-status
       - simple-model-city
       - simple-model-country
       - simple-model-currency
+      - simple-model-education-level
       - simple-model-lists
+      - simple-model-pensionScheme-type
       - simple-model-pet
       - simple-model-region
       - simple-model-school
@@ -201,6 +224,9 @@ paths:
 
   /application/{applicationId}:
     $ref: "./paths/proposed/applications/application.yaml"
+
+  /applications/{applicationId}:
+    $ref: "./paths/proposed/applications/applications.yaml"
 
   # cities
   /v3/city/id/{cityId}/profile:

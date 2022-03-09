@@ -3,7 +3,7 @@ get:
   tags:
     - applications
     - status-proposed
-  summary: Get first 20 applications (proposed)
+  summary: Get list of first 20 applications (proposed)
   parameters:
     - in: path
       name: applicationId
@@ -38,6 +38,7 @@ get:
       description: successful operation
       content:
         application/json:
+        
           schema:
             $ref: "../../../components/responses/proposed/application.yaml#/ApplicationResponse"
 
