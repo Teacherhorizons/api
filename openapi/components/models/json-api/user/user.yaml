@@ -98,6 +98,11 @@ JsonApiModel_user_id:
   readOnly: true
   description: Unique identifier of the user (string)
 
+JsonApiModel_user_fullName:
+  type: string
+  example: "John Smith"
+  readOnly: true
+
 JsonApiModel_user_relationship:
   type: object
   properties:

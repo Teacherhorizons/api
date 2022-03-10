@@ -1,0 +1,65 @@
+JsonApiModel_error_400:
+  type: object
+  properties:
+    status:
+      type: string
+      example: "400"
+    code:
+      type: string
+      description: One of a list of possible values (previously 'frontEndErrorSlug')
+      example: "missingMandatoryParameter"
+    title:
+      type: string
+      example: "Invalid parameters"
+    detail:
+      type: string
+      example: "Parameter 'foo' or 'bar' must be passed"
+
+JsonApiModel_error_404:
+  description: Related entity not found
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "404"
+                code:
+                  type: string
+                  description: One of a list of possible values (previously 'frontEndErrorSlug')
+                  example: "entityNotFoundForId"
+                title:
+                  type: string
+                  example: "Related entity not found"
+# list of possible values for 'code'
+# accessNotPermitted
+# invalidJSONInput
+# invalidOrExpiredAuthorisationToken
+# invalidOrExpiredUploadToken
+# insufficientPermissions
+# missingMandatoryParameter
+# missingMandatoryJSONfield
+# nonExistentParameterPassed
+# entityNotFoundForId
+# entityNotFoundForSlug
+# entityNotFoundForAlias
+# secondaryEntityNotFound
+# wrongDataType
+# updateFailed
+# JSONfieldCannotBeNull
+# integrityViolation
+# contactSupport
+# fileTypeLimitReached
+# fileOnServerContactSupport
+# fileTooLargeForUpload
+# cannotManipulateFile
+# entityAlreadyExists
+# callToExternalServiceFailed
+# callFailed
+# valdationFailed
