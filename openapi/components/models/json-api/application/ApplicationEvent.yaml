@@ -1,0 +1,110 @@
+# JsonApiModel_applicationEvent:
+#   type: object
+#   properties:
+#     schema:
+#       type: string
+#       example: admin
+#   discriminator:
+#     propertyName: schema
+#     mapping:
+#       admin: "#/JsonApiModel_applicationEvent_admin"
+#       school: "#/JsonApiModel_applicationEvent_school"
+#       teacher: "#/JsonApiModel_applicationEvent_teacher"
+
+# JsonApiModel_applicationEvent_admin:
+#   allOf:
+#     - $ref: "#/JsonApiModel_applicationEvent"
+#     - type: object
+#     - properties:
+#         $ref: "#/JsonApiModel_applicationEvent_attributes_admin"
+#     - required:
+#         - type
+#         - id
+
+# JsonApiModel_applicationEvent_school:
+#   allOf:
+#     - $ref: "#/JsonApiModel_applicationEvent"
+#     - type: object
+#     - properties:
+#         $ref: "#/JsonApiModel_applicationEvent_attributes_school"
+#     - required:
+#         - type
+#         - id
+
+# JsonApiModel_applicationEvent_teacher:
+#   allOf:
+#     - $ref: "#/JsonApiModel_applicationEvent"
+#     - type: object
+#     - properties:
+#         $ref: "#/JsonApiModel_applicationEvent_attributes_school"
+#     - required:
+#         - type
+#         - id
+
+# # admin
+# JsonApiModel_applicationEvent_attributes_admin:
+#   type:
+#     $ref: "#/JsonApiModel_applicationEvent_type"
+#   id:
+#     $ref: "#/JsonApiModel_applicationEvent_id"
+#   attributes:
+#     allOf:
+#       - $ref: "../../library/applicationEvent/User.yaml#/User_standardProperties_shared"
+#       - $ref: "../../library/applicationEvent/User.yaml#/User_standardProperties_adminOnly"
+#   relationships:
+#     $ref: "#/JsonApiModel_applicationEvent_relationships_admin"
+
+# JsonApiModel_applicationEvent_relationships_admin:
+#   type: object
+#   description: Related attributes
+#   properties:
+#     creationUser:
+#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+#     latestUpdateUser:
+#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# # school
+# JsonApiModel_applicationEvent_attributes_school:
+#   type:
+#     $ref: "#/JsonApiModel_applicationEvent_type"
+#   id:
+#     $ref: "#/JsonApiModel_applicationEvent_id"
+#   attributes:
+#     allOf:
+#       - $ref: "../../library/applicationEvent/User.yaml#/User_standardProperties_shared"
+#   # relationships:
+
+# # teacher
+# JsonApiModel_applicationEvent_attributes_teacher:
+#   type:
+#     $ref: "#/JsonApiModel_applicationEvent_type"
+#   id:
+#     $ref: "#/JsonApiModel_applicationEvent_id"
+#   attributes:
+#     allOf:
+#       - $ref: "../../library/applicationEvent/User.yaml#/User_standardProperties_shared"
+#   # relationships:
+
+# shared
+JsonApiModel_applicationEvent_type:
+  type: string
+  example: applicationEvent
+  description: applicationEvent
+  readOnly: true
+
+JsonApiModel_applicationEvent_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the applicationEvent (string)
+
+JsonApiModel_applicationEvent_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_applicationEvent_type"
+        id:
+          $ref: "#/JsonApiModel_applicationEvent_id"

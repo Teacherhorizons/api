@@ -49,6 +49,7 @@ post:
               allOf:
                 - type: object
                 - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
                 - required:
                     - application
                     - eventType
@@ -92,7 +93,7 @@ patch:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_additionalProperties_shared"
+                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
 
   responses:
     "204":
@@ -105,4 +106,3 @@ patch:
   summary: Update application event (proposed)
   tags:
     - applications
-

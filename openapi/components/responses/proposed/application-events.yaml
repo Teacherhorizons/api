@@ -8,80 +8,102 @@ ApplicationEventsResponse:
       items:
         type: object
         properties:
+          # TODO: use these rather than the other
+          # OPTION 2 (best?)
           type:
-            type: string
-            example: applicationEvent
+            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_applicationEvent_type"
           id:
-            type: string
-            example: "1"
+            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_applicationEvent_id"
+
+          # OPTION 1
+          # type:
+          #   type: string
+          #   example: applicationEvent
+          # id:
+          #   type: string
+          #   example: "1"
           attributes:
             type: object
-            properties:
-              application:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
-              eventType:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
-              date:
-                type: string
-                example: 2011-02-07T15:53:34:000Z
-              notes:
-                type: string
-                example: Foo bar
-              creationDate:
-                type: string
-                example: 2011-02-07T15:53:34:000Z
-              latestUpdateDate:
-                type: string
-                example: 2011-02-07T15:53:34:000Z
+            allOf:
+              - $ref: "../../models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_all"
           relationships:
             type: object
             properties:
+              # OPTION 4 (best?)
               creationUser:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        example: user
-                      id:
-                        type: string
-                        example: "1"
+                $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
               latestUpdateUser:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        example: user
-                      id:
-                        type: string
-                        example: "1"
+                $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+
+              # OPTION 3
+              # creationUser:
+              #   type: object
+              #   properties:
+              #     data:
+              #       type: object
+              #       properties:
+              #         type:
+              #           $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_type"
+              #         id:
+              #           $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_id"
+              # latestUpdateUser:
+              #   $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+              # OPTION 2
+              # creationUser:
+              #   $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+              # latestUpdateUser:
+              #   $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+              # OPTION 1
+              # creationUser:
+              #   type: object
+              #   properties:
+              #     data:
+              #       type: object
+              #       properties:
+              #         type:
+              #           type: string
+              #           example: user
+              #         id:
+              #           type: string
+              #           example: "1"
+              # latestUpdateUser:
+              #   type: object
+              #   properties:
+              #     data:
+              #       type: object
+              #       properties:
+              #         type:
+              #           type: string
+              #           example: user
+              #         id:
+              #           type: string
+              #           example: "1"
     included:
       type: array
       items:
         type: object
         properties:
+          # OPTION 2 (best?)
           type:
-            type: string
-            example: user
+            $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_type"
           id:
-            type: string
-            example: "1"
+            $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_id"
+
+          # OPTION 1
+          # type:
+          #   type: string
+          #   example: user
+          # id:
+          #   type: string
+          #   example: "1"
+
           attributes:
             type: object
             properties:
+              # breaks 'rule A' (see below)
               fullName:
                 type: string
                 example: Emily Parkman
+# consider having a 'rule' that says every property should be a reference to the library (rule A, say)

@@ -58,8 +58,8 @@ RelToOne:
 RelationshipToOne:
   description: reference to other resource in a to-one relationship
   anyOf:
-    - $ref: "#/NullType"
     - $ref: "#/Linkage"
+    - $ref: "#/NullType"
 RelToMany:
   description: \'To-many\' relationship
   type: object
@@ -190,7 +190,7 @@ Type:
     The [type](https://jsonapi.org/format/#document-resource-object-identification)
     member is used to describe resource objects that share common attributes and
     relationships.
-  example: foos
+  example: (entityName)
 Id:
   type: string
   description:

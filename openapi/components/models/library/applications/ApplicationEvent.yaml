@@ -2,16 +2,37 @@
 ApplicationEvent_standardProperties_all:
   allOf:
     - $ref: "#/ApplicationEvent_standardProperties_shared"
-    - $ref: "#/ApplicationEvent_additionalProperties_shared"
+    - $ref: "#/ApplicationEvent_metaProperties_shared"
+    - $ref: "#/ApplicationEvent_updatableProperties_shared"
 
 ApplicationEvent_standardProperties_shared:
   properties:
-    applicationEvent:
+    application:
       type: object
       properties:
         id:
           type: string
           example: 123
+    email:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1
+
+ApplicationEvent_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+ApplicationEvent_updatableProperties_shared:
+  properties:
     eventType:
       type: object
       properties:
@@ -25,16 +46,6 @@ ApplicationEvent_standardProperties_shared:
     notes:
       type: string
       example: Foo bar
-    addedDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    email:
-      type: object
-      properties:
-        id:
-          type: string
-          example: 1
 
 # TODO: organise
 ApplicationEvents_filter_additionalProperties:
@@ -47,19 +58,3 @@ ApplicationEvents_filter_additionalProperties:
     application.teacher.memberNumber:
       type: number
       example: 123456
-
-ApplicationEvent_additionalProperties_shared:
- properties:
-  eventType:
-        type: object
-        properties:
-          id:
-            type: string
-            example: 3
-  date:
-         type: string
-         format: date-time
-         example: 2011-02-07T15:53:34Z
-  notes:
-          type: string
-          example: Foo bar
