@@ -69,6 +69,16 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
+  - name: simple-model-application-event
+    x-displayName: Simple model - Application Event
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEvent" />
+
+   - name: simple-model-application-event-type
+    x-displayName: Simple model - Application Event Type
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEventType" />
+  
   - name: simple-model-application-action
     x-displayName: Simple model - Application Action
     description: |
@@ -79,6 +89,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
   
+    - name: simple-model-thmatch-type
+    x-displayName: Simple model - ThMatch Type
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
+
   - name: simple-model-city
     x-displayName: Simple model - City
     description: |
@@ -162,7 +177,10 @@ x-tagGroups:
     tags:
       - simple-model-accreditation-type
       - simple-model-application-action
+      - simple-model-application-event
+      - simple-model-application-event-type
       - simple-model-application-status
+      - simple-model-thmatch-type
       - simple-model-city
       - simple-model-country
       - simple-model-currency

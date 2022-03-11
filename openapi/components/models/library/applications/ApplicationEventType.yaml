@@ -1,0 +1,23 @@
+# standard properties
+ApplicationEventType_standardProperties_all:
+  allOf:
+    - $ref: "#/ApplicationEventType_standardProperties_shared"
+
+
+ApplicationEventType_standardProperties_shared:
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: Info request from Candidate
+
+
+#relationship properties
+ApplicationEventType_relationshipProperties_adminOnly:
+  properties:
+    applicationStatusId:
+      type: integer
+      example: 1
+      description: Relationship to application_status
