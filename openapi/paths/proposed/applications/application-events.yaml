@@ -51,18 +51,21 @@ post:
         schema:
           type: object
           properties:
-            type:
-              type: string
-              example: applicationEvent
-            attributes:
-              allOf:
-                - type: object
-                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
-                - required:
-                    - application
-                    - eventType
-                    - date
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: applicationEvent
+                attributes:
+                  allOf:
+                    - type: object
+                    - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                    - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
+                    - required:
+                        - application
+                        - eventType
+                        - date
   responses:
     "201":
       content:

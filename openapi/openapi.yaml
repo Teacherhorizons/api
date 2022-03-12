@@ -74,22 +74,22 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEvent" />
 
-   - name: simple-model-application-event-type
+  - name: simple-model-application-event-type
     x-displayName: Simple model - Application Event Type
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEventType" />
-  
+
   - name: simple-model-application-action
     x-displayName: Simple model - Application Action
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationAction" />
-  
+
   - name: simple-model-application-status
     x-displayName: Simple model - Application Status
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
-  
-    - name: simple-model-thmatch-type
+
+  - name: simple-model-thmatch-type
     x-displayName: Simple model - ThMatch Type
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
@@ -104,7 +104,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
-  - name: simple-model-education-level 
+  - name: simple-model-education-level
     x-displayName: Simple model - EducationLevel
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_educationLevel" />
@@ -238,7 +238,10 @@ paths:
 
   # applications
   /application-events:
-    $ref: "./paths/proposed/applications/application-events.yaml"
+    get:
+      $ref: "./paths/proposed/applications/application-events.yaml#/get"
+    post:
+      $ref: "./paths/proposed/applications/application-events.yaml#/post"
 
   /application/{applicationId}:
     $ref: "./paths/proposed/applications/application.yaml"

@@ -11,7 +11,6 @@ ApplicationEvent_standardProperties_shared:
       type: integer
       example: 1
 
-
 ApplicationEvent_metaProperties_shared:
   properties:
     creationDate:
@@ -32,6 +31,18 @@ ApplicationEvent_updatableProperties_shared:
     notes:
       type: string
       example: Foo bar
+
+#filter properties
+ApplicationEvents_filter_additionalProperties:
+  type: object
+  description: Direct attributes
+  properties:
+    application.id:
+      type: number
+      example: 1
+    application.teacher.memberNumber:
+      type: number
+      example: 123456
 
 #relationship properties
 ApplicationEvent_relationshipProperties_adminOnly:
