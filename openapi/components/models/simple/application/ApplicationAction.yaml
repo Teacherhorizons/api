@@ -9,9 +9,6 @@ SimpleModel_applicationAction:
     mapping:
       all: "#/SimpleModel_applicationAction_all"
       admin: "#/SimpleModel_applicationAction_admin"
-      adminOnly: "#/SimpleModel_applicationAction_adminOnly"
-      school: "#/SimpleModel_applicationAction_school"
-      teacher: "#/SimpleModel_applicationAction_teacher"
 
 SimpleModel_applicationAction_all:
   allOf:
@@ -28,35 +25,8 @@ SimpleModel_applicationAction_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_applicationAction_id"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
         - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
         - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
-
-SimpleModel_applicationAction_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_applicationAction"
-    - type: object
-      allOf:
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
-
-SimpleModel_applicationAction_school:
-  allOf:
-    - $ref: "#/SimpleModel_applicationAction"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_applicationAction_id"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
-        # - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_shared"
-
-SimpleModel_applicationAction_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_applicationAction"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_applicationAction_id"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
-        # - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_shared"
 
 # shared
 SimpleModel_applicationAction_id:

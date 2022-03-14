@@ -1,4 +1,4 @@
-SimpleModel_region:
+SimpleModel_regional_region:
   type: object
   properties:
     schema:
@@ -7,59 +7,59 @@ SimpleModel_region:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_region_all"
-      admin: "#/SimpleModel_region_admin"
-      adminOnly: "#/SimpleModel_region_adminOnly"
-      school: "#/SimpleModel_region_school"
-      teacher: "#/SimpleModel_region_teacher"
+      all: "#/SimpleModel_regional_region_all"
+      admin: "#/SimpleModel_regional_region_admin"
+      adminOnly: "#/SimpleModel_regional_region_adminOnly"
+      school: "#/SimpleModel_regional_region_school"
+      teacher: "#/SimpleModel_regional_region_teacher"
 
-SimpleModel_region_all:
+SimpleModel_regional_region_all:
   allOf:
-    - $ref: "#/SimpleModel_region"
+    - $ref: "#/SimpleModel_regional_region"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_region_id"
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_all"
-        - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional_region_id"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_all"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_relationshipProperties_adminOnly"
 
-SimpleModel_region_admin:
+SimpleModel_regional_region_admin:
   allOf:
-    - $ref: "#/SimpleModel_region"
+    - $ref: "#/SimpleModel_regional_region"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_region_id"
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional_region_id"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_adminOnly"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_relationshipProperties_adminOnly"
 
-SimpleModel_region_adminOnly:
+SimpleModel_regional_region_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_region"
+    - $ref: "#/SimpleModel_regional_region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_adminOnly"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_relationshipProperties_adminOnly"
 
-SimpleModel_region_school:
+SimpleModel_regional_region_school:
   allOf:
-    - $ref: "#/SimpleModel_region"
+    - $ref: "#/SimpleModel_regional_region"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_region_id"
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
-        # - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional_region_id"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
+        # - $ref: "../../library/regional/Region.yaml#/regional_region_relationshipProperties_shared"
 
-SimpleModel_region_teacher:
+SimpleModel_regional_region_teacher:
   allOf:
-    - $ref: "#/SimpleModel_region"
+    - $ref: "#/SimpleModel_regional_region"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_region_id"
-        - $ref: "../../library/regional/Region.yaml#/Region_standardProperties_shared"
-        # - $ref: "../../library/regional/Region.yaml#/Region_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional_region_id"
+        - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
+        # - $ref: "../../library/regional/Region.yaml#/regional_region_relationshipProperties_shared"
 
 # shared
-SimpleModel_region_id:
+SimpleModel_regional_region_id:
   properties:
     id:
       type: integer

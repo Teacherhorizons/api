@@ -1,10 +1,10 @@
 # standard properties
-Region_standardProperties_all:
+regional_region_standardProperties_all:
   allOf:
-    - $ref: "#/Region_standardProperties_shared"
-    - $ref: "#/Region_standardProperties_adminOnly"
+    - $ref: "#/regional_region_standardProperties_shared"
+    - $ref: "#/regional_region_standardProperties_adminOnly"
 
-Region_standardProperties_shared:
+regional_region_standardProperties_shared:
   properties:
     alias:
       type: string
@@ -27,7 +27,7 @@ Region_standardProperties_shared:
           example: 17.46826171875
           description: Longitude
 
-Region_standardProperties_adminOnly:
+regional_region_standardProperties_adminOnly:
   properties:
     creationDate:
       type: string
@@ -42,14 +42,14 @@ Region_standardProperties_adminOnly:
 
 # relationship properties
 
-Region_relationshipProperties_all:
+regional_region_relationshipProperties_all:
   allOf:
-    # - $ref: "#/Region_standardProperties_shared"
-    - $ref: "#/Region_standardProperties_adminOnly"
+    # - $ref: "#/regional_region_standardProperties_shared"
+    - $ref: "#/regional_region_standardProperties_adminOnly"
 
-# Region_relationshipProperties_shared:
+# regional_region_relationshipProperties_shared:
 
-Region_relationshipProperties_adminOnly:
+regional_region_relationshipProperties_adminOnly:
   properties:
     creationUserId:
       type: integer

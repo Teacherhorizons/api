@@ -46,7 +46,7 @@ tags:
     description: Other Operations
   - name: references
     description: Operations relating to references
-  - name: regions
+  - name: regional_regions
     description: Operations relating to regions (~continents)
   - name: schools
     description: Operations relating to schools
@@ -136,10 +136,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
-  - name: simple-model-region
-    x-displayName: Simple model - Region
+  - name: simple-model-regional_region
+    x-displayName: Simple model - regional_region
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_region" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional_region" />
 
   - name: simple-model-school
     x-displayName: School
@@ -156,7 +156,7 @@ tags:
   - name: json-api-model-application-action
     x-displayName: JSON:API model - Application Action
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_applicationAction />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_applicationAction" />
 
   - name: json-api-model-city
     x-displayName: JSON:API model - City
@@ -168,10 +168,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
 
-  - name: json-api-model-region
-    x-displayName: JSON:API model - Region
+  - name: json-api-model-regional_region
+    x-displayName: JSON:API model - regional_region
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_region" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional_region" />
 
   - name: json-api-model-teacher
     x-displayName: JSON:API model - Teacher
@@ -194,14 +194,14 @@ x-tagGroups:
       - simple-model-lists
       - simple-model-pensionScheme-type
       - simple-model-pet
-      - simple-model-region
+      - simple-model-regional_region
       - simple-model-school
       - simple-model-teacher
 
   - name: JSON:API models
     tags:
       - json-api-model-application-action
-      - json-api-model-region
+      - json-api-model-regional_region
       - json-api-model-teacher
       - json-api-model-city
       - json-api-model-country
@@ -222,7 +222,7 @@ x-tagGroups:
       - lists
       - other
       - references
-      - regions
+      - regional_regions
       - schools
       - sites
       - teachers

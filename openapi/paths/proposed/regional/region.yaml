@@ -1,7 +1,7 @@
 get:
-  operationId: getRegion
+  operationId: get_regional_region
   tags:
-    - regions
+    - regional_regions
     - status-proposed
   summary: Get a region (proposed)
   parameters:
@@ -29,7 +29,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/Region.yaml#/Region_standardProperties_all"
+          $ref: "../../../components/models/library/regional/Region.yaml#/regional_region_standardProperties_all"
           # $ref: "../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_all"
         example:
           region: name,slug,locationLatLong

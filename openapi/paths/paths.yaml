@@ -131,12 +131,12 @@
   $ref: "./../paths/proposed/general/currency.yaml"
 
 # regions
-/regions/{regionId}:
-  $ref: "./../paths/proposed/regions/region.yaml"
-/regions:
-  $ref: "./../paths/proposed/regions/regions.yaml"
+/regional_regions/{regionId}:
+  $ref: "./../paths/proposed/regional/region.yaml"
+/regional_regions:
+  $ref: "./../paths/proposed/regional/regions.yaml"
 /schools-agg-regions:
-  $ref: "./../paths/proposed/regions/schools-agg-regions.yaml"
+  $ref: "./../paths/proposed/regional/schools-agg-regions.yaml"
 
 /countries/{countryId}:
   $ref: "./../paths/proposed/countries/country.yaml"

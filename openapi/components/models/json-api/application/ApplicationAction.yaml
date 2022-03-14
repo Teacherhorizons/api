@@ -8,8 +8,6 @@ JsonApiModel_applicationAction:
     propertyName: schema
     mapping:
       admin: "#/JsonApiModel_applicationAction_admin"
-      school: "#/JsonApiModel_applicationAction_school"
-      teacher: "#/JsonApiModel_applicationAction_teacher"
 
 JsonApiModel_applicationAction_admin:
   allOf:
@@ -17,26 +15,6 @@ JsonApiModel_applicationAction_admin:
     - type: object
     - properties:
         $ref: "#/JsonApiModel_applicationAction_attributes_admin"
-    - required:
-        - type
-        - id
-
-JsonApiModel_applicationAction_school:
-  allOf:
-    - $ref: "#/JsonApiModel_applicationAction"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_applicationAction_attributes_school"
-    - required:
-        - type
-        - id
-
-JsonApiModel_applicationAction_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_applicationAction"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_applicationAction_attributes_school"
     - required:
         - type
         - id
@@ -49,38 +27,20 @@ JsonApiModel_applicationAction_attributes_admin:
     $ref: "#/JsonApiModel_applicationAction_id"
   attributes:
     allOf:
-      - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
       - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
   relationships:
     $ref: "#/JsonApiModel_applicationAction_relationships_admin"
 
+# JsonApiModel_applicationAction_relationships_admin:
+#   type: object
+#   description: Related attributes
+#   properties:
+#     $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly2"
+
 JsonApiModel_applicationAction_relationships_admin:
   type: object
   description: Related attributes
-  properties:
-    - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
-
-# school
-JsonApiModel_applicationAction_attributes_school:
-  type:
-    $ref: "#/JsonApiModel_applicationAction_type"
-  id:
-    $ref: "#/JsonApiModel_applicationAction_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
-  # relationships:
-
-# teacher
-JsonApiModel_applicationAction_attributes_teacher:
-  type:
-    $ref: "#/JsonApiModel_applicationAction_type"
-  id:
-    $ref: "#/JsonApiModel_applicationAction_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_shared"
-  # relationships:
+  $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
 
 # shared
 JsonApiModel_applicationAction_type:
