@@ -35,12 +35,13 @@ SimpleModels:
     - $ref: "../../models/simple/application/ApplicationEvent.yaml#/SimpleModel_applicationEvent"
     - $ref: "../../models/simple/application/ApplicationStatus.yaml#/SimpleModel_applicationStatus"
     - $ref: "../../models/simple/application/ApplicationEventType.yaml#/SimpleModel_applicationEventType"
-    - $ref: "../../models/simple/application/ApplicationThMatchType.yaml#/SimpleModel_applicationThMatchType"
+    - $ref: "../../models/simple/application/ApplicationThMatchType.yaml#/SimpleModel_application_thMatchType"
 
 JsonApiModels:
   allOf:
     - $ref: "../../models/json-api/application/ApplicationAction.yaml#/JsonApiModel_applicationAction"
     - $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional_region"
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
+    - $ref: "../../models/json-api/application/ApplicationThMatchType.yaml#/JsonApiModel_application_thMatchType"
     - $ref: "../../models/json-api/regional/City.yaml#/JsonApiModel_city"
     - $ref: "../../models/json-api/regional/Country.yaml#/JsonApiModel_country"
