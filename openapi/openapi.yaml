@@ -84,10 +84,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationAction" />
 
-  - name: simple-model-application-status
-    x-displayName: Simple model - Application Status
+  - name: simple-model-application_status
+    x-displayName: Simple model - application_status
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application_status" />
 
   - name: simple-model-application_thMatchType
     x-displayName: Simple model - application_thMatchType
@@ -158,6 +158,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_applicationAction" />
 
+  - name: json-api-model-application_status
+    x-displayName: JSON:API model - application_status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application_status" />
+
   - name: json-api-model-city
     x-displayName: JSON:API model - City
     description: |
@@ -191,7 +196,7 @@ x-tagGroups:
       - simple-model-application_action
       - simple-model-application-event
       - simple-model-application-event-type
-      - simple-model-application-status
+      - simple-model-application_status
       - simple-model-application_thMatchType
       - simple-model-city
       - simple-model-country
@@ -207,6 +212,7 @@ x-tagGroups:
   - name: JSON:API models
     tags:
       - json-api-model-application_action
+      - json-api-model-application_status
       - json-api-model-regional_region
       - json-api-model-teacher
       - json-api-model-city
