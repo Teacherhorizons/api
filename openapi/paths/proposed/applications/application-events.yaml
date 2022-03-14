@@ -60,6 +60,32 @@ post:
                 attributes:
                   allOf:
                     - type: object
+                    - $ref: "#/Application_option4"
+                    - properties:
+                        $ref: "#/Application_option3"
+                    - properties:
+                        application_option2:
+                          $ref: "#/Application_option2"
+                    - properties:
+                        application_option1:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                              example: 1
+                    - properties:
+                        eventType:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                              example: 1
+                        email:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                              example: 1
                     - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
                     - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
                     - required:
@@ -118,3 +144,27 @@ patch:
   summary: Update application event (proposed)
   tags:
     - applications
+
+Application_option2:
+  type: object
+  properties:
+    id:
+      type: string
+      example: 1
+
+Application_option3:
+  application_option3:
+    type: object
+    properties:
+      id:
+        type: string
+        example: 1
+
+Application_option4:
+  properties:
+    application:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1

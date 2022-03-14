@@ -23,6 +23,7 @@ NonThRefs:
 
 SimpleModels:
   allOf:
+    # TODO: organise by category and alphabetically
     - $ref: "../../models/simple/regional/Region.yaml#/SimpleModel_region"
     - $ref: "../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
     - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
@@ -38,6 +39,8 @@ SimpleModels:
 
 JsonApiModels:
   allOf:
+    # - $ref: "../../models/json-api/application/Application.yaml#/JsonApiModel_application"
+    # - $ref: "../../models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_applicationEvent"
     - $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_region"
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
     - $ref: "../../models/json-api/regional/City.yaml#/JsonApiModel_city"
