@@ -46,7 +46,7 @@ tags:
     description: Other Operations
   - name: references
     description: Operations relating to references
-  - name: regional_regions
+  - name: regional-regions
     description: Operations relating to regions (~continents)
   - name: schools
     description: Operations relating to schools
@@ -136,10 +136,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
-  - name: simple-model-regional_region
-    x-displayName: Simple model - regional_region
+  - name: simple-model-regional-region
+    x-displayName: Simple model - regional-region
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional_region" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-region" />
 
   - name: simple-model-school
     x-displayName: School
@@ -168,10 +168,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
 
-  - name: json-api-model-regional_region
-    x-displayName: JSON:API model - regional_region
+  - name: json-api-model-regional-region
+    x-displayName: JSON:API model - regional-region
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional_region" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-region" />
 
   - name: json-api-model-teacher
     x-displayName: JSON:API model - Teacher
@@ -194,14 +194,14 @@ x-tagGroups:
       - simple-model-lists
       - simple-model-pensionScheme-type
       - simple-model-pet
-      - simple-model-regional_region
+      - simple-model-regional-region
       - simple-model-school
       - simple-model-teacher
 
   - name: JSON:API models
     tags:
       - json-api-model-application-action
-      - json-api-model-regional_region
+      - json-api-model-regional-region
       - json-api-model-teacher
       - json-api-model-city
       - json-api-model-country
@@ -222,7 +222,7 @@ x-tagGroups:
       - lists
       - other
       - references
-      - regional_regions
+      - regional-regions
       - schools
       - sites
       - teachers

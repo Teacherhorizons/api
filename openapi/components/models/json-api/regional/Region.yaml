@@ -1,4 +1,4 @@
-JsonApiModel_regional_region:
+JsonApiModel_regional-region:
   type: object
   properties:
     schema:
@@ -7,54 +7,54 @@ JsonApiModel_regional_region:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_regional_region_admin"
-      school: "#/JsonApiModel_regional_region_school"
-      teacher: "#/JsonApiModel_regional_region_teacher"
+      admin: "#/JsonApiModel_regional-region_admin"
+      school: "#/JsonApiModel_regional-region_school"
+      teacher: "#/JsonApiModel_regional-region_teacher"
 
-JsonApiModel_regional_region_admin:
+JsonApiModel_regional-region_admin:
   allOf:
-    - $ref: "#/JsonApiModel_regional_region"
+    - $ref: "#/JsonApiModel_regional-region"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_regional_region_attributes_admin"
+        $ref: "#/JsonApiModel_regional-region_attributes_admin"
     - required:
         - type
         - id
 
-JsonApiModel_regional_region_school:
+JsonApiModel_regional-region_school:
   allOf:
-    - $ref: "#/JsonApiModel_regional_region"
+    - $ref: "#/JsonApiModel_regional-region"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_regional_region_attributes_school"
+        $ref: "#/JsonApiModel_regional-region_attributes_school"
     - required:
         - type
         - id
 
-JsonApiModel_regional_region_teacher:
+JsonApiModel_regional-region_teacher:
   allOf:
-    - $ref: "#/JsonApiModel_regional_region"
+    - $ref: "#/JsonApiModel_regional-region"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_regional_region_attributes_school"
+        $ref: "#/JsonApiModel_regional-region_attributes_school"
     - required:
         - type
         - id
 
 # admin
-JsonApiModel_regional_region_attributes_admin:
+JsonApiModel_regional-region_attributes_admin:
   type:
-    $ref: "#/JsonApiModel_regional_region_type"
+    $ref: "#/JsonApiModel_regional-region_type"
   id:
-    $ref: "#/JsonApiModel_regional_region_id"
+    $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
-      - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_adminOnly"
+      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
+      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_adminOnly"
   relationships:
-    $ref: "#/JsonApiModel_regional_region_relationships_admin"
+    $ref: "#/JsonApiModel_regional-region_relationships_admin"
 
-JsonApiModel_regional_region_relationships_admin:
+JsonApiModel_regional-region_relationships_admin:
   type: object
   description: Related attributes
   properties:
@@ -64,35 +64,35 @@ JsonApiModel_regional_region_relationships_admin:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
 # school
-JsonApiModel_regional_region_attributes_school:
+JsonApiModel_regional-region_attributes_school:
   type:
-    $ref: "#/JsonApiModel_regional_region_type"
+    $ref: "#/JsonApiModel_regional-region_type"
   id:
-    $ref: "#/JsonApiModel_regional_region_id"
+    $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
+      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
   # relationships:
 
 # teacher
-JsonApiModel_regional_region_attributes_teacher:
+JsonApiModel_regional-region_attributes_teacher:
   type:
-    $ref: "#/JsonApiModel_regional_region_type"
+    $ref: "#/JsonApiModel_regional-region_type"
   id:
-    $ref: "#/JsonApiModel_regional_region_id"
+    $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional_region_standardProperties_shared"
+      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
   # relationships:
 
 # shared
-JsonApiModel_regional_region_type:
+JsonApiModel_regional-region_type:
   type: string
   example: region
   description: region
   readOnly: true
 
-JsonApiModel_regional_region_id:
+JsonApiModel_regional-region_id:
   type: string
   example: "1"
   readOnly: true
