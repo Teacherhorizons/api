@@ -1,10 +1,10 @@
 # standard properties
-ApplicationStatus_standardProperties_all:
+application_status_standardProperties_all:
   allOf:
-    - $ref: "#/ApplicationStatus_standardProperties_shared"
-    - $ref: "#/ApplicationStatus_standardProperties_adminOnly"
+    - $ref: "#/application_status_standardProperties_shared"
+    - $ref: "#/application_status_standardProperties_adminOnly"
 
-ApplicationStatus_standardProperties_shared:
+application_status_standardProperties_shared:
   properties:
     id:
       type: integer
@@ -13,12 +13,9 @@ ApplicationStatus_standardProperties_shared:
       type: string
       example: Open
 
-ApplicationStatus_standardProperties_adminOnly:
+application_status_standardProperties_adminOnly:
   allOf:
-    - $ref: "#/ApplicationStatus_standardProperties_shared"
-
-# relationship properties
+    - $ref: "#/application_status_standardProperties_shared"
 
 
-# ApplicationStatus_relationshipProperties_shared:
 

@@ -79,20 +79,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEventType" />
 
-  - name: simple-model-application-action
-    x-displayName: Simple model - Application Action
+  - name: simple-model-application_action
+    x-displayName: Simple model - application_action
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationAction" />
 
-  - name: simple-model-application-status
-    x-displayName: Simple model - Application Status
+  - name: simple-model-application_status
+    x-displayName: Simple model - application_status
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationStatus" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application_status" />
 
-  - name: simple-model-application-thmatch-type
-    x-displayName: Simple model - Application ThMatch Type
+  - name: simple-model-application_thMatchType
+    x-displayName: Simple model - application_thMatchType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationThMatchType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application_thMatchType" />
 
   - name: simple-model-city
     x-displayName: Simple model - City
@@ -153,10 +153,15 @@ tags:
 
   # JSON:API models
 
-  - name: json-api-model-application-action
-    x-displayName: JSON:API model - Application Action
+  - name: json-api-model-application_action
+    x-displayName: JSON:API model - application_action
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_applicationAction" />
+
+  - name: json-api-model-application_status
+    x-displayName: JSON:API model - application_status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application_status" />
 
   - name: json-api-model-city
     x-displayName: JSON:API model - City
@@ -178,15 +183,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
+  - name: json-api-model-application_thMatchType
+    x-displayName: JSON:API model - application_thMatchType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application_thMatchType" />
+
 x-tagGroups:
   - name: Simple models
     tags:
       - simple-model-accreditation-type
-      - simple-model-application-action
+      - simple-model-application_action
       - simple-model-application-event
       - simple-model-application-event-type
-      - simple-model-application-status
-      - simple-model-application-thmatch-type
+      - simple-model-application_status
+      - simple-model-application_thMatchType
       - simple-model-city
       - simple-model-country
       - simple-model-currency
@@ -202,9 +212,12 @@ x-tagGroups:
     tags:
       - json-api-model-application-action
       - json-api-model-regional-region
+      - json-api-model-application_action
+      - json-api-model-application_status
       - json-api-model-teacher
       - json-api-model-city
       - json-api-model-country
+      - json-api-model-application_thMatchType
 
   - name: API
     tags:

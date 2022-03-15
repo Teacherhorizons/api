@@ -1,0 +1,40 @@
+JsonApiModel_application_thMatchType:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_application_thMatchType_admin"
+
+JsonApiModel_application_thMatchType_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_application_thMatchType"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_application_thMatchType_attributes_admin"
+    - required:
+        - id
+
+# admin
+JsonApiModel_application_thMatchType_attributes_admin:
+  id:
+    $ref: "#/JsonApiModel_application_thMatchType_id"
+  name:
+    $ref: "#/JsonApiModel_application_thMatchType_name"
+
+
+# shared
+
+JsonApiModel_application_thMatchType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the application_thMatchType (string)
+
+JsonApiModel_application_thMatchType_name:
+  type: string
+  example: Excellent Fit
+  readOnly: true
