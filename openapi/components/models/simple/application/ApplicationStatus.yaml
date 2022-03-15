@@ -1,4 +1,4 @@
-SimpleModel_application_status:
+SimpleModel_application-status:
   type: object
   properties:
     schema:
@@ -7,58 +7,54 @@ SimpleModel_application_status:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_application_status_all"
-      admin: "#/SimpleModel_application_status_admin"
-      adminOnly: "#/SimpleModel_application_status_adminOnly"
-      school: "#/SimpleModel_application_status_school"
-      teacher: "#/SimpleModel_application_status_teacher"
+      all: "#/SimpleModel_application-status_all"
+      admin: "#/SimpleModel_application-status_admin"
+      adminOnly: "#/SimpleModel_application-status_adminOnly"
+      school: "#/SimpleModel_application-status_school"
+      teacher: "#/SimpleModel_application-status_teacher"
 
-SimpleModel_application_status_all:
+SimpleModel_application-status_all:
   allOf:
-    - $ref: "#/SimpleModel_application_status"
+    - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_all"
+        - $ref: "#/SimpleModel_application-status_id"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_all"
 
-
-SimpleModel_application_status_admin:
+SimpleModel_application-status_admin:
   allOf:
-    - $ref: "#/SimpleModel_application_status"
+    - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_shared"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_adminOnly"
+        - $ref: "#/SimpleModel_application-status_id"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_adminOnly"
 
-
-SimpleModel_application_status_adminOnly:
+SimpleModel_application-status_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_application_status"
+    - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_adminOnly"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_adminOnly"
 
-
-SimpleModel_application_status_school:
+SimpleModel_application-status_school:
   allOf:
-    - $ref: "#/SimpleModel_application_status"
+    - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_shared"
+        - $ref: "#/SimpleModel_application-status_id"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
 
-
-SimpleModel_application_status_teacher:
+SimpleModel_application-status_teacher:
   allOf:
-    - $ref: "#/SimpleModel_application_status"
+    - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application_status_standardProperties_shared"
+        - $ref: "#/SimpleModel_application-status_id"
+        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
 
 # shared
-SimpleModel_application_status_id:
+SimpleModel_application-status_id:
   properties:
     id:
       type: integer

@@ -1,4 +1,4 @@
-JsonApiModel_application_status:
+JsonApiModel_application-status:
   type: object
   properties:
     schema:
@@ -7,37 +7,33 @@ JsonApiModel_application_status:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_application_status_admin"
+      admin: "#/JsonApiModel_application-status_admin"
 
-JsonApiModel_application_status_admin:
+JsonApiModel_application-status_admin:
   allOf:
-    - $ref: "#/JsonApiModel_application_status"
+    - $ref: "#/JsonApiModel_application-status"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_application_status_attributes_admin"
+        $ref: "#/JsonApiModel_application-status_attributes_admin"
     - required:
         - id
         - name
 
 # admin
-JsonApiModel_application_status_attributes_admin:
+JsonApiModel_application-status_attributes_admin:
   id:
-    $ref: "#/JsonApiModel_application_status_id"
+    $ref: "#/JsonApiModel_application-status_id"
   name:
-    $ref: "#/JsonApiModel_application_status_name"
-
-
+    $ref: "#/JsonApiModel_application-status_name"
 
 # shared
-JsonApiModel_application_status_id:
+JsonApiModel_application-status_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the application_status (string)
+  description: Unique identifier of the application-status (string)
 
-JsonApiModel_application_status_name:
+JsonApiModel_application-status_name:
   type: string
   example: Open
   readOnly: true
-
-

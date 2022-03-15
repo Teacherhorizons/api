@@ -1,4 +1,4 @@
-JsonApiModel_application_thMatchType:
+JsonApiModel_application-thMatchType:
   type: object
   properties:
     schema:
@@ -7,34 +7,33 @@ JsonApiModel_application_thMatchType:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_application_thMatchType_admin"
+      admin: "#/JsonApiModel_application-thMatchType_admin"
 
-JsonApiModel_application_thMatchType_admin:
+JsonApiModel_application-thMatchType_admin:
   allOf:
-    - $ref: "#/JsonApiModel_application_thMatchType"
+    - $ref: "#/JsonApiModel_application-thMatchType"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_application_thMatchType_attributes_admin"
+        $ref: "#/JsonApiModel_application-thMatchType_attributes_admin"
     - required:
         - id
 
 # admin
-JsonApiModel_application_thMatchType_attributes_admin:
+JsonApiModel_application-thMatchType_attributes_admin:
   id:
-    $ref: "#/JsonApiModel_application_thMatchType_id"
+    $ref: "#/JsonApiModel_application-thMatchType_id"
   name:
-    $ref: "#/JsonApiModel_application_thMatchType_name"
-
+    $ref: "#/JsonApiModel_application-thMatchType_name"
 
 # shared
 
-JsonApiModel_application_thMatchType_id:
+JsonApiModel_application-thMatchType_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the application_thMatchType (string)
+  description: Unique identifier of the application-thMatchType (string)
 
-JsonApiModel_application_thMatchType_name:
+JsonApiModel_application-thMatchType_name:
   type: string
   example: Excellent Fit
   readOnly: true

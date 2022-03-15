@@ -1,10 +1,9 @@
 # standard properties
-application_thMatchType_standardProperties_all:
+application-thMatchType_standardProperties_all:
   allOf:
-    - $ref: "#/application_thMatchType_standardProperties_shared"
+    - $ref: "#/application-thMatchType_standardProperties_shared"
 
-
-application_thMatchType_standardProperties_shared:
+application-thMatchType_standardProperties_shared:
   properties:
     id:
       type: integer
@@ -12,4 +11,3 @@ application_thMatchType_standardProperties_shared:
     name:
       type: string
       example: Excellent Fit
-

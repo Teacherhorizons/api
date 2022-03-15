@@ -1,4 +1,4 @@
-SimpleModel_application_thMatchType:
+SimpleModel_application-thMatchType:
   type: object
   properties:
     schema:
@@ -7,55 +7,55 @@ SimpleModel_application_thMatchType:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_application_thMatchType_all"
-      admin: "#/SimpleModel_application_thMatchType_admin"
-      adminOnly: "#/SimpleModel_application_thMatchType_adminOnly"
-      school: "#/SimpleModel_application_thMatchType_school"
-      teacher: "#/SimpleModel_application_thMatchType_teacher"
+      all: "#/SimpleModel_application-thMatchType_all"
+      admin: "#/SimpleModel_application-thMatchType_admin"
+      adminOnly: "#/SimpleModel_application-thMatchType_adminOnly"
+      school: "#/SimpleModel_application-thMatchType_school"
+      teacher: "#/SimpleModel_application-thMatchType_teacher"
 
-SimpleModel_application_thMatchType_all:
+SimpleModel_application-thMatchType_all:
   allOf:
-    - $ref: "#/SimpleModel_application_thMatchType"
+    - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_thMatchType_id"
-        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application_thMatchType_standardProperties_all"
+        - $ref: "#/SimpleModel_application-thMatchType_id"
+        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application-thMatchType_standardProperties_all"
 
-SimpleModel_application_thMatchType_admin:
+SimpleModel_application-thMatchType_admin:
   allOf:
-    - $ref: "#/SimpleModel_application_thMatchType"
+    - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_thMatchType_id"
-        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application_thMatchType_standardProperties_shared"
+        - $ref: "#/SimpleModel_application-thMatchType_id"
+        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application-thMatchType_standardProperties_shared"
 
-SimpleModel_application_thMatchType_adminOnly:
+SimpleModel_application-thMatchType_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_application_thMatchType"
+    - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
-        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application_thMatchType_standardProperties_shared"
+        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application-thMatchType_standardProperties_shared"
 
-SimpleModel_application_thMatchType_school:
+SimpleModel_application-thMatchType_school:
   allOf:
-    - $ref: "#/SimpleModel_application_thMatchType"
+    - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_thMatchType_id"
-        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application_thMatchType_standardProperties_shared"
-        # - $ref: "../../library/applications/application_thMatchType.yaml#/application_thMatchType_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_application-thMatchType_id"
+        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application-thMatchType_standardProperties_shared"
+        # - $ref: "../../library/applications/application-thMatchType.yaml#/application-thMatchType_relationshipProperties_shared"
 
-SimpleModel_application_thMatchType_teacher:
+SimpleModel_application-thMatchType_teacher:
   allOf:
-    - $ref: "#/SimpleModel_application_thMatchType"
+    - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application_thMatchType_id"
-        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application_thMatchType_standardProperties_shared"
-        # - $ref: "../../library/applications/application_thMatchType.yaml#/application_thMatchType_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_application-thMatchType_id"
+        - $ref: "../../library/applications/ApplicationThMatchType.yaml#/application-thMatchType_standardProperties_shared"
+        # - $ref: "../../library/applications/application-thMatchType.yaml#/application-thMatchType_relationshipProperties_shared"
 
 # shared
-SimpleModel_application_thMatchType_id:
+SimpleModel_application-thMatchType_id:
   properties:
     id:
       type: integer
