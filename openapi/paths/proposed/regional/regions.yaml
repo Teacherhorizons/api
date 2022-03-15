@@ -22,7 +22,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/Region.yaml#/regional-region_standardProperties_all"
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
         example:
           region: name,slug,locationLatLong
     - in: query
@@ -33,7 +33,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/Region.yaml#/regional-region_standardProperties_all"
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
         example:
           name: foo
           slug: bar

@@ -29,8 +29,8 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/Region.yaml#/regional-region_standardProperties_all"
-          # $ref: "../../../components/schemas/proposed/simple-models/Region.yaml#/RegionProperties_all"
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
+          # $ref: "../../../components/schemas/proposed/simple-models/region.yaml#/RegionProperties_all"
         example:
           region: name,slug,locationLatLong
   responses:

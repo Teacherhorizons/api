@@ -16,8 +16,8 @@ SimpleModel_applicationAction_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_applicationAction_id"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_all"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_standardProperties_all"
+        - $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
 
 SimpleModel_applicationAction_admin:
   allOf:
@@ -25,8 +25,8 @@ SimpleModel_applicationAction_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_applicationAction_id"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
-        - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
+        - $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
 
 # shared
 SimpleModel_applicationAction_id:

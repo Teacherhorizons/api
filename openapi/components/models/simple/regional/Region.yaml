@@ -19,8 +19,8 @@ SimpleModel_regional-region_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_all"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_all"
+        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
 
 SimpleModel_regional-region_admin:
   allOf:
@@ -28,17 +28,17 @@ SimpleModel_regional-region_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
+        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
 
 SimpleModel_regional-region_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_regional-region"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
+        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
 
 SimpleModel_regional-region_school:
   allOf:
@@ -46,8 +46,8 @@ SimpleModel_regional-region_school:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
-        # - $ref: "../../library/regional/Region.yaml#/regional-region_relationshipProperties_shared"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
+        # - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_shared"
 
 SimpleModel_regional-region_teacher:
   allOf:
@@ -55,8 +55,8 @@ SimpleModel_regional-region_teacher:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
-        # - $ref: "../../library/regional/Region.yaml#/regional-region_relationshipProperties_shared"
+        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
+        # - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_shared"
 
 # shared
 SimpleModel_regional-region_id:

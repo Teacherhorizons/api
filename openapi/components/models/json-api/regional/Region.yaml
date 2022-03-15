@@ -49,8 +49,8 @@ JsonApiModel_regional-region_attributes_admin:
     $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
-      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_adminOnly"
+      - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
+      - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
   relationships:
     $ref: "#/JsonApiModel_regional-region_relationships_admin"
 
@@ -71,7 +71,7 @@ JsonApiModel_regional-region_attributes_school:
     $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
+      - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
   # relationships:
 
 # teacher
@@ -82,14 +82,14 @@ JsonApiModel_regional-region_attributes_teacher:
     $ref: "#/JsonApiModel_regional-region_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Region.yaml#/regional-region_standardProperties_shared"
+      - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
   # relationships:
 
 # shared
 JsonApiModel_regional-region_type:
   type: string
-  example: region
-  description: region
+  example: regional-region
+  description: regional-region
   readOnly: true
 
 JsonApiModel_regional-region_id:

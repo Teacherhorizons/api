@@ -19,7 +19,7 @@ SimpleModel_application-status_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_all"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_all"
 
 SimpleModel_application-status_admin:
   allOf:
@@ -27,15 +27,15 @@ SimpleModel_application-status_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_adminOnly"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
 
 SimpleModel_application-status_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_adminOnly"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
 
 SimpleModel_application-status_school:
   allOf:
@@ -43,7 +43,7 @@ SimpleModel_application-status_school:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
 
 SimpleModel_application-status_teacher:
   allOf:
@@ -51,7 +51,7 @@ SimpleModel_application-status_teacher:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/applications/ApplicationStatus.yaml#/application-status_standardProperties_shared"
+        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
 
 # shared
 SimpleModel_application-status_id:

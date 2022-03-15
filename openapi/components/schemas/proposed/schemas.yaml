@@ -11,7 +11,7 @@ RegionalRefs:
     - $ref: "./simple-models/City.yaml#/City"
     - $ref: "./simple-models/Country.yaml#/Country"
     - $ref: "./simple-models/Country.yaml#/CountryAttributes"
-    - $ref: "./simple-models/Region.yaml#/Region"
+    - $ref: "./simple-models/region.yaml#/Region"
 
 SchoolRefs:
   allOf:
@@ -24,7 +24,7 @@ NonThRefs:
 SimpleModels:
   allOf:
     # TODO: organise by category and alphabetically
-    - $ref: "../../models/simple/regional/Region.yaml#/SimpleModel_regional-region"
+    - $ref: "../../models/simple/regional/region.yaml#/SimpleModel_regional-region"
     - $ref: "../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
     - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
     - $ref: "../../models/simple/regional/Country.yaml#/SimpleModel_country"
@@ -33,16 +33,16 @@ SimpleModels:
     - $ref: "../../models/simple/general/PensionSchemeType.yaml#/SimpleModel_pensionSchemeType"
     - $ref: "../../models/simple/application/ApplicationAction.yaml#/SimpleModel_applicationAction"
     - $ref: "../../models/simple/application/ApplicationEvent.yaml#/SimpleModel_applicationEvent"
-    - $ref: "../../models/simple/application/ApplicationStatus.yaml#/SimpleModel_application-status"
+    - $ref: "../../models/simple/application/status.yaml#/SimpleModel_application-status"
     - $ref: "../../models/simple/application/ApplicationEventType.yaml#/SimpleModel_applicationEventType"
     - $ref: "../../models/simple/application/ApplicationThMatchType.yaml#/SimpleModel_application-thMatchType"
 
 JsonApiModels:
   allOf:
     - $ref: "../../models/json-api/application/ApplicationAction.yaml#/JsonApiModel_applicationAction"
-    - $ref: "../../models/json-api/application/ApplicationStatus.yaml#/JsonApiModel_application-status"
+    - $ref: "../../models/json-api/application/status.yaml#/JsonApiModel_application-status"
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
     - $ref: "../../models/json-api/application/ApplicationThMatchType.yaml#/JsonApiModel_application-thMatchType"
     - $ref: "../../models/json-api/regional/City.yaml#/JsonApiModel_city"
     - $ref: "../../models/json-api/regional/Country.yaml#/JsonApiModel_country"
-    - $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region"
+    - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"

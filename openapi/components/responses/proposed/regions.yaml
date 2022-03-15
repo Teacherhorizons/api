@@ -23,16 +23,16 @@ RegionsResponse_admin:
             type: object
             properties:
               type:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_type"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
               id:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_id"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
               attributes:
                 type: object
                 allOf:
-                  - $ref: "../../models/library/regional/Region.yaml#/regional-region_standardProperties_shared"
-                  - $ref: "../../models/library/regional/Region.yaml#/regional-region_standardProperties_adminOnly"
+                  - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_shared"
+                  - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
               relationships:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_relationships_admin"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationships_admin"
 
 RegionsResponse_school:
   allOf:
@@ -45,13 +45,13 @@ RegionsResponse_school:
             type: object
             properties:
               type:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_type"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
               id:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_id"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
               attributes:
                 type: object
                 allOf:
-                  - $ref: "../../models/library/regional/Region.yaml#/regional-region_standardProperties_shared"
+                  - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_shared"
 
 RegionsResponse_teacher:
   allOf:
@@ -64,10 +64,10 @@ RegionsResponse_teacher:
             type: object
             properties:
               type:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_type"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
               id:
-                $ref: "../../models/json-api/regional/Region.yaml#/JsonApiModel_regional-region_id"
+                $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
               attributes:
                 type: object
                 allOf:
-                  - $ref: "../../models/library/regional/Region.yaml#/regional-region_standardProperties_shared"
+                  - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_shared"

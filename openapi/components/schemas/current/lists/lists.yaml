@@ -23,7 +23,8 @@ properties:
   applicationStatuses:
     type: array
     items:
-      $ref: "./ApplicationStatus.yaml"
+      $ref: "./application-status.yaml"
+    description: Ideally, list key would now be 'application-statuses'
   applicationEventAutoEmails:
     type: array
     items:

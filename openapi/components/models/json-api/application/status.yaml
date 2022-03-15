@@ -21,19 +21,23 @@ JsonApiModel_application-status_admin:
 
 # admin
 JsonApiModel_application-status_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_application-status_type"
   id:
     $ref: "#/JsonApiModel_application-status_id"
-  name:
-    $ref: "#/JsonApiModel_application-status_name"
+  attributes:
+    allOf:
+      - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
 
 # shared
+JsonApiModel_application-status_type:
+  type: string
+  example: application-status
+  description: application-status
+  readOnly: true
+
 JsonApiModel_application-status_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the application-status (string)
-
-JsonApiModel_application-status_name:
-  type: string
-  example: Open
-  readOnly: true

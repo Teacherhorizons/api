@@ -29,7 +29,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/applications/Application.yaml#/Application_standardProperties_all"
+          $ref: "../../../components/models/library/application/Application.yaml#/Application_standardProperties_all"
           # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
         example:
           application: name,slug,locationLatLong
@@ -100,7 +100,7 @@ post:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/applications/Application.yaml#/Application_standardProperties_shared"
+                - $ref: "../../../components/models/library/application/Application.yaml#/Application_standardProperties_shared"
                 - required:
                     - job
                     - memberNumber
@@ -141,7 +141,7 @@ patch:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/applications/Application.yaml#/Application_filter_additionalProperties"
+                - $ref: "../../../components/models/library/application/Application.yaml#/Application_filter_additionalProperties"
 
   responses:
     "204":

@@ -13,7 +13,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvents_filter_additionalProperties"
+          $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvents_filter_additionalProperties"
         example:
           application.id: 1
           application.teacher.memberNumber: 1
@@ -86,8 +86,8 @@ post:
                             id:
                               type: string
                               example: 1
-                    - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-                    - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
                     - required:
                         - application
                         - eventType
@@ -131,7 +131,7 @@ patch:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/applications/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
+                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
 
   responses:
     "204":

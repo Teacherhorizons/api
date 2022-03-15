@@ -27,7 +27,7 @@ JsonApiModel_applicationAction_attributes_admin:
     $ref: "#/JsonApiModel_applicationAction_id"
   attributes:
     allOf:
-      - $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
+      - $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_standardProperties_adminOnly"
   relationships:
     $ref: "#/JsonApiModel_applicationAction_relationships_admin"
 
@@ -35,12 +35,12 @@ JsonApiModel_applicationAction_attributes_admin:
 #   type: object
 #   description: Related attributes
 #   properties:
-#     $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly2"
+#     $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly2"
 
 JsonApiModel_applicationAction_relationships_admin:
   type: object
   description: Related attributes
-  $ref: "../../library/applications/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
+  $ref: "../../library/application/ApplicationAction.yaml#/ApplicationAction_relationshipProperties_adminOnly"
 
 # shared
 JsonApiModel_applicationAction_type:
