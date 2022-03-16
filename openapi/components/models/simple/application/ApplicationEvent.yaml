@@ -1,4 +1,4 @@
-SimpleModel_applicationEvent:
+SimpleModel_application-applicationEvent:
   type: object
   properties:
     schema:
@@ -7,59 +7,57 @@ SimpleModel_applicationEvent:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_applicationEvent_all"
-      admin: "#/SimpleModel_applicationEvent_admin"
-      adminOnly: "#/SimpleModel_applicationEvent_adminOnly"
-      school: "#/SimpleModel_applicationEvent_school"
-      teacher: "#/SimpleModel_applicationEvent_teacher"
+      all: "#/SimpleModel_application-applicationEvent_all"
+      admin: "#/SimpleModel_application-applicationEvent_admin"
+      adminOnly: "#/SimpleModel_application-applicationEvent_adminOnly"
+      school: "#/SimpleModel_application-applicationEvent_school"
+      teacher: "#/SimpleModel_application-applicationEvent_teacher"
 
-SimpleModel_applicationEvent_all:
+SimpleModel_application-applicationEvent_all:
   allOf:
-    - $ref: "#/SimpleModel_applicationEvent"
+    - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_applicationEvent_id"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_all"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_application-applicationEvent_id"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_all"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
 
-SimpleModel_applicationEvent_admin:
+SimpleModel_application-applicationEvent_admin:
   allOf:
-    - $ref: "#/SimpleModel_applicationEvent"
+    - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_applicationEvent_id"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_metaProperties_shared"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_application-applicationEvent_id"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
 
-SimpleModel_applicationEvent_adminOnly:
+SimpleModel_application-applicationEvent_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_applicationEvent"
+    - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_metaProperties_shared"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
 
-SimpleModel_applicationEvent_school:
+SimpleModel_application-applicationEvent_school:
   allOf:
-    - $ref: "#/SimpleModel_applicationEvent"
+    - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_applicationEvent_id"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-        # - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_application-applicationEvent_id"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
 
-SimpleModel_applicationEvent_teacher:
+SimpleModel_application-applicationEvent_teacher:
   allOf:
-    - $ref: "#/SimpleModel_applicationEvent"
+    - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_applicationEvent_id"
-        - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-        # - $ref: "../../library/application/ApplicationEvent.yaml#/ApplicationEvent_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_application-applicationEvent_id"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
 
 # shared
-SimpleModel_applicationEvent_id:
+SimpleModel_application-applicationEvent_id:
   properties:
     id:
       type: integer

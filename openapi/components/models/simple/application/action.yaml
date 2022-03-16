@@ -1,0 +1,39 @@
+SimpleModel_application-action:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_application-action_all"
+      admin: "#/SimpleModel_application-action_admin"
+
+SimpleModel_application-action_all:
+  allOf:
+    - $ref: "#/SimpleModel_application-action"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_application-action_id"
+        - $ref: "../../library/application/action.yaml#/application-action_standardProperties_all"
+        - $ref: "../../library/application/action.yaml#/application-action_relationshipProperties_adminOnly"
+
+SimpleModel_application-action_admin:
+  allOf:
+    - $ref: "#/SimpleModel_application-action"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_application-action_id"
+        - $ref: "../../library/application/action.yaml#/application-action_standardProperties_adminOnly"
+        - $ref: "../../library/application/action.yaml#/application-action_relationshipProperties_adminOnly"
+
+# shared
+SimpleModel_application-action_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

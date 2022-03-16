@@ -1,15 +1,15 @@
-# JsonApiModel_applicationEvent:
-#   type: object
-#   properties:
-#     schema:
-#       type: string
-#       example: admin
-#   discriminator:
-#     propertyName: schema
-#     mapping:
-#       admin: "#/JsonApiModel_applicationEvent_admin"
-#       school: "#/JsonApiModel_applicationEvent_school"
-#       teacher: "#/JsonApiModel_applicationEvent_teacher"
+JsonApiModel_application-applicationEvent:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  # discriminator:
+  #   propertyName: schema
+  #   mapping:
+  #     admin: "#/JsonApiModel_applicationEvent_admin"
+  #     school: "#/JsonApiModel_applicationEvent_school"
+  #     teacher: "#/JsonApiModel_applicationEvent_teacher"
 
 # JsonApiModel_applicationEvent_admin:
 #   allOf:
@@ -86,25 +86,25 @@
 #   # relationships:
 
 # shared
-JsonApiModel_applicationEvent_type:
+JsonApiModel_application-applicationEvent_type:
   type: string
   example: applicationEvent
   description: applicationEvent
   readOnly: true
 
-JsonApiModel_applicationEvent_id:
+JsonApiModel_application-applicationEvent_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the applicationEvent (string)
 
-JsonApiModel_applicationEvent_relationship:
+JsonApiModel_application-applicationEvent_relationship:
   type: object
   properties:
     data:
       type: object
       properties:
         type:
-          $ref: "#/JsonApiModel_applicationEvent_type"
+          $ref: "#/JsonApiModel_application-applicationEvent_type"
         id:
-          $ref: "#/JsonApiModel_applicationEvent_id"
+          $ref: "#/JsonApiModel_application-applicationEvent_id"

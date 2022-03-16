@@ -10,11 +10,11 @@
 # applications
 /application-events:
   get:
-    $ref: "./../paths/proposed/applications/application-events.yaml#/get"
+    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/get"
   patch:
-    $ref: "./../paths/proposed/applications/application-events.yaml#/patch"
+    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/patch"
   post:
-    $ref: "./../paths/proposed/applications/application-events.yaml#/post"
+    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/post"
 
 /application/{applicationId}:
   $ref: "./../paths/proposed/applications/application.yaml"

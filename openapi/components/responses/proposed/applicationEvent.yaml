@@ -1,4 +1,4 @@
-ApplicationEventsResponse:
+application-applicationEventResponse:
   type: object
   properties:
     data:
@@ -7,13 +7,13 @@ ApplicationEventsResponse:
         type: object
         properties:
           type:
-            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_applicationEvent_type"
+            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
           id:
-            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_applicationEvent_id"
+            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
           attributes:
             type: object
             allOf:
-              - $ref: "../../models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_all"
+              - $ref: "../../models/library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_all"
           relationships:
             type: object
             properties:

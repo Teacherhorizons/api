@@ -69,20 +69,20 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
-  - name: simple-model-application-event
-    x-displayName: Simple model - Application Event
+  - name: simple-model-application-applicationEvent
+    x-displayName: Simple model - application-applicationEvent
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEvent" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-applicationEvent" />
 
-  - name: simple-model-application-event-type
-    x-displayName: Simple model - Application Event Type
+  - name: simple-model-application-applicationEventType
+    x-displayName: Simple model - application-applicationEventType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationEventType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-applicationEventType" />
 
   - name: simple-model-application-action
     x-displayName: Simple model - application-action
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_applicationAction" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-action" />
 
   - name: simple-model-application-status
     x-displayName: Simple model - application-status
@@ -104,10 +104,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
-  - name: simple-model-education-level
-    x-displayName: Simple model - EducationLevel
+  - name: simple-model-general-educationlevel
+    x-displayName: Simple model - general-educationLevel
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_educationLevel" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-educationLevel" />
 
   - name: simple-model-pensionScheme-type
     x-displayName: Simple model - PensionSchemeType
@@ -156,7 +156,12 @@ tags:
   - name: json-api-model-application-action
     x-displayName: JSON:API model - application-action
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_applicationAction" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
+
+  - name: json-api-model-application-applicationEvent
+    x-displayName: JSON:API model - application-applicationEvent
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-applicationEvent" />
 
   - name: json-api-model-application-status
     x-displayName: JSON:API model - application-status
@@ -193,14 +198,14 @@ x-tagGroups:
     tags:
       - simple-model-accreditation-type
       - simple-model-application-action
-      - simple-model-application-event
-      - simple-model-application-event-type
+      - simple-model-application-applicationEvent
+      - simple-model-application-applicationEventType
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-city
       - simple-model-country
       - simple-model-currency
-      - simple-model-education-level
+      - simple-model-general-educationLevel
       - simple-model-lists
       - simple-model-pensionScheme-type
       - simple-model-pet
@@ -211,6 +216,7 @@ x-tagGroups:
   - name: JSON:API models
     tags:
       - json-api-model-application-action
+      - json-api-model-application-applicationEvent
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-city

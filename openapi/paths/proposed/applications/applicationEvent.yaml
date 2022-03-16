@@ -1,5 +1,5 @@
 get:
-  operationId: getApplicationEvents
+  operationId: getapplicationEvents
   tags:
     - applications
     - status-proposed
@@ -13,7 +13,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvents_filter_additionalProperties"
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_filter_additionalProperties"
         example:
           application.id: 1
           application.teacher.memberNumber: 1
@@ -25,7 +25,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/application-events.yaml#/ApplicationEventsResponse"
+            $ref: "../../../components/responses/proposed/applicationEvent.yaml#/application-applicationEventResponse"
     "400":
       description: Invalid parameters
       content:
@@ -44,7 +44,7 @@ get:
 
 post:
   description: ""
-  operationId: postApplicationEvent
+  operationId: postapplicationEvent
   requestBody:
     content:
       application/json:
@@ -86,8 +86,8 @@ post:
                             id:
                               type: string
                               example: 1
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
+                    - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
+                    - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
                     - required:
                         - application
                         - eventType
@@ -115,7 +115,7 @@ post:
 
 patch:
   description: Update Application Event
-  operationId: patchApplicationEvent
+  operationId: patchapplicationEvent
   requestBody:
     content:
       application/json:
@@ -131,7 +131,7 @@ patch:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_updatableProperties_shared"
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
 
   responses:
     "204":

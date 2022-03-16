@@ -1,9 +1,10 @@
 # standard properties
-ApplicationAction_standardProperties_all:
+application-action_standardProperties_all:
   allOf:
-    - $ref: "#/ApplicationAction_standardProperties_adminOnly"
+    - $ref: "#/application-action_standardProperties_adminOnly"
+    - $ref: "#/application-action_relationshipProperties_adminOnly"
 
-ApplicationAction_standardProperties_adminOnly:
+application-action_standardProperties_adminOnly:
   properties:
     detail:
       type: string
@@ -14,7 +15,7 @@ ApplicationAction_standardProperties_adminOnly:
 
 # relationship properties
 
-ApplicationAction_relationshipProperties_adminOnly:
+application-action_relationshipProperties_adminOnly:
   properties:
     endStateId:
       type: integer

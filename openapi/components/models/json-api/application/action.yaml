@@ -1,0 +1,56 @@
+JsonApiModel_application-action:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_application-action_admin"
+
+JsonApiModel_application-action_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_application-action"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_application-action_attributes_admin"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_application-action_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_application-action_type"
+  id:
+    $ref: "#/JsonApiModel_application-action_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/application/action.yaml#/application-action_standardProperties_adminOnly"
+  relationships:
+    $ref: "#/JsonApiModel_application-action_relationships_admin"
+
+# JsonApiModel_applicationAction_relationships_admin:
+#   type: object
+#   description: Related attributes
+#   properties:
+#     $ref: "../../library/application/applicationAction.yaml#/applicationAction_relationshipProperties_adminOnly2"
+
+JsonApiModel_application-action_relationships_admin:
+  type: object
+  description: Related attributes
+  $ref: "../../library/application/action.yaml#/application-action_relationshipProperties_adminOnly"
+
+# shared
+JsonApiModel_application-action_type:
+  type: string
+  example: applicationAction
+  description: applicationAction
+  readOnly: true
+
+JsonApiModel_application-action_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the applicationAction (string)
