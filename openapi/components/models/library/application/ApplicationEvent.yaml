@@ -1,3 +1,5 @@
+# TODO RR+AS: figure out how best to name the groups of properties (try listing individual properties and groups)
+
 # standard properties
 ApplicationEvent_standardProperties_all:
   allOf:
@@ -31,6 +33,27 @@ ApplicationEvent_updatableProperties_shared:
     notes:
       type: string
       example: Foo bar
+
+Application_option4:
+  properties:
+    application:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1
+    email:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1
+    eventType:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 1
 
 #filter properties
 ApplicationEvents_filter_additionalProperties:

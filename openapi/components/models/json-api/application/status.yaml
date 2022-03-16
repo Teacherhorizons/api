@@ -16,8 +16,8 @@ JsonApiModel_application-status_admin:
     - properties:
         $ref: "#/JsonApiModel_application-status_attributes_admin"
     - required:
+        - type
         - id
-        - name
 
 # admin
 JsonApiModel_application-status_attributes_admin:
