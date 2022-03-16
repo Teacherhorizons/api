@@ -16,24 +16,28 @@ JsonApiModel_application-thMatchType_admin:
     - properties:
         $ref: "#/JsonApiModel_application-thMatchType_attributes_admin"
     - required:
+        - type
         - id
 
 # admin
 JsonApiModel_application-thMatchType_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_application-thMatchType_type"
   id:
     $ref: "#/JsonApiModel_application-thMatchType_id"
-  name:
-    $ref: "#/JsonApiModel_application-thMatchType_name"
+  attributes:
+    allOf:
+      - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
 
 # shared
+JsonApiModel_application-thMatchType_type:
+  type: string
+  example: application-thMatchType
+  description: application-thMatchType
+  readOnly: true
 
 JsonApiModel_application-thMatchType_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the application-thMatchType (string)
-
-JsonApiModel_application-thMatchType_name:
-  type: string
-  example: Excellent Fit
-  readOnly: true

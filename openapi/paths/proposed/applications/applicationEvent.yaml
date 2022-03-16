@@ -60,34 +60,34 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                    - $ref: "#/Application_option4"
-                    - properties:
-                        $ref: "#/Application_option3"
-                    - properties:
-                        application_option2:
-                          $ref: "#/Application_option2"
-                    - properties:
-                        application_option1:
-                          type: object
-                          properties:
-                            id:
-                              type: string
-                              example: 1
-                    - properties:
-                        eventType:
-                          type: object
-                          properties:
-                            id:
-                              type: string
-                              example: 1
-                        email:
-                          type: object
-                          properties:
-                            id:
-                              type: string
-                              example: 1
-                    - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
-                    - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/Application_option4"
+                    # - properties:
+                    #     $ref: "#/Application_option3"
+                    # - properties:
+                    #     application_option2:
+                    #       $ref: "#/Application_option2"
+                    # - properties:
+                    #     application_option1:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    # - properties:
+                    #     eventType:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    #     email:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
                     - required:
                         - application
                         - eventType
@@ -112,59 +112,3 @@ post:
   summary: Create application event (proposed)
   tags:
     - applications
-
-patch:
-  description: Update Application Event
-  operationId: patchapplicationEvent
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            type:
-              type: string
-              example: applicationEvent
-            id:
-              type: string
-              example: 12
-            attributes:
-              allOf:
-                - type: object
-                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
-
-  responses:
-    "204":
-      content:
-        application/json:
-          schema:
-            type: object
-            default: null
-      description: Item Updated
-  summary: Update application event (proposed)
-  tags:
-    - applications
-
-Application_option2:
-  type: object
-  properties:
-    id:
-      type: string
-      example: 1
-
-Application_option3:
-  application_option3:
-    type: object
-    properties:
-      id:
-        type: string
-        example: 1
-
-Application_option4:
-  properties:
-    application:
-      type: object
-      properties:
-        id:
-          type: string
-          example: 1

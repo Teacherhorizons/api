@@ -9,12 +9,27 @@
 
 # applications
 /application-events:
-  get:
-    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/get"
-  patch:
-    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/patch"
-  post:
-    $ref: "./../paths/proposed/applications/applicationEvent.yaml#/post"
+  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
+
+/application-event/{applicationEventId}:
+  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
+
+# /application-events:
+#   get:
+#     $ref: "./../paths/proposed/applications/application-events.yaml#/get"
+#   post:
+#     $ref: "./../paths/proposed/applications/application-events.yaml#/post"
+
+# /application-events/1:
+#   patch:
+#     $ref: "./../paths/proposed/applications/application-events.yaml#/patch"
+
+# get:
+#   $ref: "./../paths/proposed/applications/application-events.yaml#/get"
+# patch:
+#   $ref: "./../paths/proposed/applications/application-events.yaml#/patch"
+# post:
+#   $ref: "./../paths/proposed/applications/application-events.yaml#/post"
 
 /application/{applicationId}:
   $ref: "./../paths/proposed/applications/application.yaml"
