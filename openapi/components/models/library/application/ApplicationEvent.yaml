@@ -34,6 +34,28 @@ application-applicationEvent_updatableProperties_shared:
       type: string
       example: Foo bar
 
+application-applicationEvent_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationEvent_notes:
+  type: string
+  example: Foo bar
+
+application-applicationEvent_properties_date:
+  properties:
+    date:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+application-applicationEvent_properties_notes:
+  properties:
+    notes:
+      type: string
+      example: Foo bar
+
 Application_option4:
   properties:
     application:
@@ -90,3 +112,33 @@ application-applicationEvent_relationshipProperties_adminOnly:
       type: integer
       example: 1
       description: Relationship to User
+
+application-applicationEvent_post_request_option1:
+  properties:
+    date:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    notes:
+      type: string
+      example: Foo bar
+
+application-applicationEvent_post_request_option2:
+  properties:
+    date:
+      $ref: "#/application-applicationEvent_date"
+    notes:
+      $ref: "#/application-applicationEvent_notes"
+
+application-applicationEvent_post_request_option3:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_date"
+    - $ref: "#/application-applicationEvent_properties_notes"
+
+application-applicationEvent_post_200:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_date"
+
+application-applicationEvent_post_404:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_notes"

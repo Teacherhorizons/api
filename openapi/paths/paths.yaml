@@ -8,34 +8,17 @@
   $ref: "./../paths/current/admin-notes/teacher-member-number-admin-notes.yaml"
 
 # applications
-/application-events:
-  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
-
-/application-event/{applicationEventId}:
-  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
-
-# /application-events:
-#   get:
-#     $ref: "./../paths/proposed/applications/application-events.yaml#/get"
-#   post:
-#     $ref: "./../paths/proposed/applications/application-events.yaml#/post"
-
-# /application-events/1:
-#   patch:
-#     $ref: "./../paths/proposed/applications/application-events.yaml#/patch"
-
-# get:
-#   $ref: "./../paths/proposed/applications/application-events.yaml#/get"
-# patch:
-#   $ref: "./../paths/proposed/applications/application-events.yaml#/patch"
-# post:
-#   $ref: "./../paths/proposed/applications/application-events.yaml#/post"
-
 /application/{applicationId}:
   $ref: "./../paths/proposed/applications/application.yaml"
 
 /applications/{applicationId}:
   $ref: "./../paths/proposed/applications/applications.yaml"
+
+/applicationEvents:
+  $ref: "./../paths/proposed/applications/applicationEvents.yaml"
+
+/applicationEvent/{applicationEventId}:
+  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
 
 # cities
 /v3/city/id/{cityId}/profile:

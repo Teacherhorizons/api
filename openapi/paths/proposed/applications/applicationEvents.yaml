@@ -1,0 +1,122 @@
+get:
+  operationId: getApplicationEvents
+  tags:
+    - applications
+    - status-proposed
+  summary: Get application events (proposed)
+  parameters:
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties:
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_filter_additionalProperties"
+        example:
+          application.id: 1
+          application.teacher.memberNumber: 1
+        description: e.g. filter[application.id]=123 - gets the events related to application 123
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/responses/proposed/applicationEvent.yaml#/application-applicationEventResponse"
+    "400":
+      description: Invalid parameters
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+    "404":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+  security:
+    - api_key: []
+
+post:
+  description: ""
+  operationId: postApplicationEvent
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: applicationEvent
+                attributes:
+                  allOf:
+                    - type: object
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/Application_option4"
+                    # - properties:
+                    #     $ref: "#/Application_option3"
+                    # - properties:
+                    #     application_option2:
+                    #       $ref: "#/Application_option2"
+                    #     date:
+                    #       $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvents_date"
+                    #     notes:
+                    #       $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvents_notes"
+
+                    # - properties:
+                    #     application_option1:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    # - properties:
+                    #     eventType:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    #     email:
+                    #       type: object
+                    #       properties:
+                    #         id:
+                    #           type: string
+                    #           example: 1
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option1"
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option2"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option3"
+                    - required:
+                        - application
+                        - eventType
+                        - date
+  responses:
+    "201":
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: applicationEvent
+                  id:
+                    type: string
+                    example: 1
+      description: Item created
+  summary: Create application event (proposed)
+  tags:
+    - applications
