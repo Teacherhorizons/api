@@ -29,7 +29,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/general/Currency.yaml#/Currency_standardProperties_all"
+          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_standardProperties_all"
           # $ref: "../../../components/schemas/proposed/simple-models/region.yaml#/RegionProperties_all"
         example:
           region: name,creationDate
@@ -39,7 +39,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/currency.yaml#/CurrencyResponse"
+            $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
 
     "400":
       description: Invalid id supplied

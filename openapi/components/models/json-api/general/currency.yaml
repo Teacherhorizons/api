@@ -1,0 +1,99 @@
+JsonApiModel_general-currency:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_general-currency_admin"
+      school: "#/JsonApiModel_general-currency_school"
+      teacher: "#/JsonApiModel_general-currency_teacher"
+
+JsonApiModel_general-currency_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_general-currency"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-currency_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-currency_school:
+  allOf:
+    - $ref: "#/JsonApiModel_general-currency"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-currency_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-currency_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_general-currency"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-currency_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_general-currency_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_general-currency_type"
+  id:
+    $ref: "#/JsonApiModel_general-currency_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
+      - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_adminOnly"
+  relationships:
+    $ref: "#/JsonApiModel_general-currency_relationships_admin"
+
+JsonApiModel_general-currency_relationships_admin:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_general-currency_attributes_school:
+  type:
+    $ref: "#/JsonApiModel_general-currency_type"
+  id:
+    $ref: "#/JsonApiModel_general-currency_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
+  # relationships:
+
+# teacher
+JsonApiModel_general-currency_attributes_teacher:
+  type:
+    $ref: "#/JsonApiModel_general-currency_type"
+  id:
+    $ref: "#/JsonApiModel_general-currency_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
+  # relationships:
+
+# shared
+JsonApiModel_general-currency_type:
+  type: string
+  example: general-currency
+  description: general-currency
+  readOnly: true
+
+JsonApiModel_general-currency_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-currency (string)

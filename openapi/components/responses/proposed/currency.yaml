@@ -1,4 +1,4 @@
-CurrencyResponse:
+general-currencyResponse:
   type: object
   properties:
     schema:
@@ -7,13 +7,13 @@ CurrencyResponse:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/CurrencyResponse_admin"
-      school: "#/CurrencyResponse_school"
-      teacher: "#/CurrencyResponse_teacher"
+      admin: "#/general-currencyResponse_admin"
+      school: "#/general-currencyResponse_school"
+      teacher: "#/general-currencyResponse_teacher"
 
-CurrencyResponse_admin:
+general-currencyResponse_admin:
   allOf:
-    - $ref: "#/CurrencyResponse"
+    - $ref: "#/general-currencyResponse"
     - type: object
       properties:
         data:
@@ -22,14 +22,14 @@ CurrencyResponse_admin:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
-                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_adminOnly"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_adminOnly"
             # relationships:
-            #$ref: "../../models/json-api/general/Currency.yaml#/JsonApiModel_regional-region_relationships_admin"
+            #$ref: "../../models/json-api/general/general-currency.yaml#/JsonApiModel_regional-region_relationships_admin"
 
-CurrencyResponse_school:
+general-currencyResponse_school:
   allOf:
-    - $ref: "#/CurrencyResponse"
+    - $ref: "#/general-currencyResponse"
     - type: object
       properties:
         data:
@@ -38,11 +38,11 @@ CurrencyResponse_school:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"
 
-CurrencyResponse_teacher:
+general-currencyResponse_teacher:
   allOf:
-    - $ref: "#/CurrencyResponse"
+    - $ref: "#/general-currencyResponse"
     - type: object
       properties:
         data:
@@ -51,4 +51,4 @@ CurrencyResponse_teacher:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/Currency.yaml#/Currency_standardProperties_shared"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"

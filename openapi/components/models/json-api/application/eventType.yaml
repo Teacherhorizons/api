@@ -1,0 +1,44 @@
+JsonApiModel_application-eventType:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_application-eventType_admin"
+
+JsonApiModel_application-eventType_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_application-eventType"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_application-eventType_attributes_admin"
+      
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_application-eventType_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_application-eventType_type"
+  id:
+    $ref: "#/JsonApiModel_application-eventType_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_shared"
+
+# shared
+JsonApiModel_application-eventType_type:
+  type: string
+  example: application-eventType
+  description: application-eventType
+  readOnly: true
+
+JsonApiModel_application-eventType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the application-eventType (string)

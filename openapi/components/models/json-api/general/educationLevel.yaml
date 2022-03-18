@@ -1,0 +1,99 @@
+JsonApiModel_general-educationLevel:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_general-educationLevel_admin"
+      school: "#/JsonApiModel_general-educationLevel_school"
+      teacher: "#/JsonApiModel_general-educationLevel_teacher"
+
+JsonApiModel_general-educationLevel_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_general-educationLevel"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-educationLevel_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-educationLevel_school:
+  allOf:
+    - $ref: "#/JsonApiModel_general-educationLevel"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-educationLevel_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-educationLevel_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_general-educationLevel"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-educationLevel_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_general-educationLevel_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_general-educationLevel_type"
+  id:
+    $ref: "#/JsonApiModel_general-educationLevel_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
+      - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_adminOnly"
+  relationships:
+    $ref: "#/JsonApiModel_general-educationLevel_relationships_admin"
+
+JsonApiModel_general-educationLevel_relationships_admin:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_general-educationLevel_attributes_school:
+  type:
+    $ref: "#/JsonApiModel_general-educationLevel_type"
+  id:
+    $ref: "#/JsonApiModel_general-educationLevel_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
+  # relationships:
+
+# teacher
+JsonApiModel_general-educationLevel_attributes_teacher:
+  type:
+    $ref: "#/JsonApiModel_general-educationLevel_type"
+  id:
+    $ref: "#/JsonApiModel_general-educationLevel_id"
+  attributes:
+    allOf:
+      - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
+  # relationships:
+
+# shared
+JsonApiModel_general-educationLevel_type:
+  type: string
+  example: general-educationLevel
+  description: general-educationLevel
+  readOnly: true
+
+JsonApiModel_general-educationLevel_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-educationLevel (string)

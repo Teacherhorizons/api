@@ -4,7 +4,7 @@ ListRefs:
     - $ref: "./simple-models/lists/Accreditation.yaml#/Accreditation"
     - $ref: "./simple-models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
     - $ref: "./simple-models/lists/ThDiscoveryMethodCategory.yaml#/ThDiscoveryMethodCategory"
-    - $ref: "../../../components/responses/proposed/currency.yaml#/CurrencyResponse"
+    - $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
 
 RegionalRefs:
   allOf:
@@ -28,22 +28,24 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
     - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
     - $ref: "../../models/simple/regional/Country.yaml#/SimpleModel_country"
-    - $ref: "../../models/simple/general/Currency.yaml#/SimpleModel_currency"
+    - $ref: "../../models/simple/general/currency.yaml#/SimpleModel_general-currency"
     - $ref: "../../models/simple/general/educationLevel.yaml#/SimpleModel_educationLevel"
     - $ref: "../../models/simple/general/PensionSchemeType.yaml#/SimpleModel_pensionSchemeType"
     - $ref: "../../models/simple/application/action.yaml#/SimpleModel_application-action"
     - $ref: "../../models/simple/application/applicationEvent.yaml#/SimpleModel_application-applicationEvent"
     - $ref: "../../models/simple/application/status.yaml#/SimpleModel_application-status"
-    - $ref: "../../models/simple/application/applicationEventType.yaml#/SimpleModel_application-applicationEventType"
+    - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
 
 JsonApiModels:
   allOf:
     - $ref: "../../models/json-api/application/action.yaml#/JsonApiModel_application-action"
     - $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent"
+    - $ref: "../../models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType"
     - $ref: "../../models/json-api/application/status.yaml#/JsonApiModel_application-status"
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
     - $ref: "../../models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType"
     - $ref: "../../models/json-api/regional/City.yaml#/JsonApiModel_city"
     - $ref: "../../models/json-api/regional/Country.yaml#/JsonApiModel_country"
+    - $ref: "../../models/json-api/general/currency.yaml#/JsonApiModel_general-currency"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"

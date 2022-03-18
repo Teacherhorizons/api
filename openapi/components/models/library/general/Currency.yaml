@@ -1,10 +1,10 @@
 # standard properties
-Currency_standardProperties_all:
+general-currency_standardProperties_all:
   allOf:
-    - $ref: "#/Currency_standardProperties_shared"
-    - $ref: "#/Currency_standardProperties_adminOnly"
+    - $ref: "#/general-currency_standardProperties_shared"
+    - $ref: "#/general-currency_standardProperties_adminOnly"
 
-Currency_standardProperties_shared:
+general-currency_standardProperties_shared:
   properties:
    code:
       type: string
@@ -16,7 +16,7 @@ Currency_standardProperties_shared:
       type: string
       example: Great Britain Pound
 
-Currency_standardProperties_adminOnly:
+general-currency_standardProperties_adminOnly:
   properties:
     creationDate:
       type: string
@@ -31,14 +31,14 @@ Currency_standardProperties_adminOnly:
 
 # relationship properties
 
-Currency_relationshipProperties_all:
+general-currency_relationshipProperties_all:
   allOf:
-    # - $ref: "#/Currency_standardProperties_shared"
-    - $ref: "#/Currency_standardProperties_adminOnly"
+    # - $ref: "#/general-currency_standardProperties_shared"
+    - $ref: "#/general-currency_standardProperties_adminOnly"
 
-# Currency_relationshipProperties_shared:
+# general-currency_relationshipProperties_shared:
 
-Currency_relationshipProperties_adminOnly:
+general-currency_relationshipProperties_adminOnly:
   properties:
     creationUserId:
       type: integer
