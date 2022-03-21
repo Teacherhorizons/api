@@ -28,7 +28,7 @@ SimpleModel_application-applicationEvent_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
+        # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
         - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
         - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
 
@@ -46,7 +46,7 @@ SimpleModel_application-applicationEvent_school:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
+        # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
 
 SimpleModel_application-applicationEvent_teacher:
   allOf:
@@ -54,7 +54,7 @@ SimpleModel_application-applicationEvent_teacher:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
+        # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
 
 # shared
 SimpleModel_application-applicationEvent_id:

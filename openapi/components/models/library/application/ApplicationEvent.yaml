@@ -3,15 +3,15 @@
 # standard properties
 application-applicationEvent_standardProperties_all:
   allOf:
-    - $ref: "#/application-applicationEvent_standardProperties_shared"
+    # - $ref: "#/application-applicationEvent_standardProperties_shared"
     - $ref: "#/application-applicationEvent_metaProperties_shared"
     - $ref: "#/application-applicationEvent_updatableProperties_shared"
 
-application-applicationEvent_standardProperties_shared:
-  properties:
-    id:
-      type: integer
-      example: 1
+# application-applicationEvent_standardProperties_shared:
+#   properties:
+#     id:
+#       type: integer
+#       example: 1
 
 application-applicationEvent_metaProperties_shared:
   properties:
@@ -34,48 +34,26 @@ application-applicationEvent_updatableProperties_shared:
       type: string
       example: Foo bar
 
-application-applicationEvent_date:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:34Z
-
-application-applicationEvent_notes:
-  type: string
-  example: Foo bar
-
-application-applicationEvent_properties_date:
-  properties:
-    date:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-application-applicationEvent_properties_notes:
-  properties:
-    notes:
-      type: string
-      example: Foo bar
-
-Application_option4:
+application-applicationEvent_wip:
   properties:
     application:
       type: object
       properties:
         id:
           type: string
-          example: 1
+          example: "1"
     email:
       type: object
       properties:
         id:
           type: string
-          example: 1
+          example: "1"
     eventType:
       type: object
       properties:
         id:
           type: string
-          example: 1
+          example: "1"
 
 #filter properties
 application-applicationEvent_filter_additionalProperties:
@@ -142,3 +120,161 @@ application-applicationEvent_post_200:
 application-applicationEvent_post_404:
   allOf:
     - $ref: "#/application-applicationEvent_properties_notes"
+
+# relationshipIds
+application-applicationEvent_relationshipIds:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_applicationId"
+    - $ref: "#/application-applicationEvent_properties_eventTypeId"
+    - $ref: "#/application-applicationEvent_properties_emailId"
+    - $ref: "#/application-applicationEvent_properties_creationUserId"
+    - $ref: "#/application-applicationEvent_properties_latestUpdateUserId"
+
+# attribute relationships
+application-applicationEvent_attributeRelationships:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_application"
+    - $ref: "#/application-applicationEvent_properties_eventType"
+    - $ref: "#/application-applicationEvent_properties_email"
+
+# attributes
+application-applicationEvent_attributes:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_date"
+    - $ref: "#/application-applicationEvent_properties_notes"
+    - $ref: "#/application-applicationEvent_properties_creationDate"
+    - $ref: "#/application-applicationEvent_properties_latestUpdateDate"
+
+# relationships
+# application-applicationEvent_relationships:
+#   allOf:
+#     - $ref: "#/application-applicationEvent_properties_creationUser"
+#     - $ref: "#/application-applicationEvent_properties_latestUpdateUser"
+
+# properties
+application-applicationEvent_properties_date:
+  properties:
+    date:
+      $ref: "#/application-applicationEvent_date"
+
+application-applicationEvent_properties_notes:
+  properties:
+    notes:
+      $ref: "#/application-applicationEvent_notes"
+
+application-applicationEvent_properties_applicationId:
+  properties:
+    applicationId:
+      $ref: "#/application-applicationEvent_applicationId"
+
+application-applicationEvent_properties_eventTypeId:
+  properties:
+    eventTypeId:
+      $ref: "#/application-applicationEvent_eventTypeId"
+
+application-applicationEvent_properties_emailId:
+  properties:
+    emailId:
+      $ref: "#/application-applicationEvent_emailId"
+
+application-applicationEvent_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/application-applicationEvent_creationUserId"
+
+application-applicationEvent_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/application-applicationEvent_latestUpdateUserId"
+
+application-applicationEvent_properties_application:
+  properties:
+    application:
+      $ref: "#/application-applicationEvent_application"
+
+application-applicationEvent_properties_email:
+  properties:
+    email:
+      $ref: "#/application-applicationEvent_email"
+
+application-applicationEvent_properties_eventType:
+  properties:
+    eventType:
+      $ref: "#/application-applicationEvent_eventType"
+
+application-applicationEvent_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/application-applicationEvent_creationDate"
+
+application-applicationEvent_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/application-applicationEvent_latestUpdateDate"
+
+# application-applicationEvent_properties_:
+#   properties:
+#     :
+#       $ref: "#/application-applicationEvent_"
+
+# ...
+
+# attributes
+application-applicationEvent_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationEvent_notes:
+  type: string
+  example: Foo bar
+
+application-applicationEvent_applicationId:
+  type: integer
+  example: 1
+  description: Relationship to application
+
+application-applicationEvent_eventTypeId:
+  type: integer
+  example: 1
+  description: Relationship to application_eventType
+
+application-applicationEvent_emailId:
+  type: integer
+  example: 1
+  description: Relationship to general_emails
+
+application-applicationEvent_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application-applicationEvent_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application-applicationEvent_application:
+  id:
+    type: string
+    example: "1"
+
+application-applicationEvent_email:
+  id:
+    type: string
+    example: "1"
+
+application-applicationEvent_eventType:
+  id:
+    type: string
+    example: "1"
+
+application-applicationEvent_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationEvent_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z

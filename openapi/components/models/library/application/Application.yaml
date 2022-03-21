@@ -5,24 +5,24 @@ Application_standardProperties_all:
 
 Application_standardProperties_shared:
   properties:
-      job: 
-          type: object
-          properties: 
-            id: 
-              type: string
-              example: 123
-      memberNumber: 
-          type: object
-          example: 34567
+    job:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+    memberNumber:
+      type: number
+      example: 34567
 
 Application_filter_additionalProperties:
   properties:
-      thMatchType: 
-          type: object
-          properties: 
-            id: 
-              type: string
-              example: 2
-      recommendationText: 
-          type: object
-          example: Foo bar
+    thMatchType:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+    recommendationText:
+      type: object
+      example: Foo bar
