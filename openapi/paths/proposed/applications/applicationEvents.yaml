@@ -60,7 +60,7 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/Application_option4"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_wip"
                     # - properties:
                     #     $ref: "#/Application_option3"
                     # - properties:
@@ -115,7 +115,7 @@ post:
                     example: applicationEvent
                   id:
                     type: string
-                    example: 1
+                    example: "1"
       description: Item created
   summary: Create application event (proposed)
   tags:
