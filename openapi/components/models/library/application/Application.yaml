@@ -26,3 +26,86 @@ application_filter_additionalProperties:
     recommendationText:
       type: object
       example: Foo bar
+
+
+application_recommendationText:
+      type: string
+      example: 
+      description: Max 10,000 characters
+application_creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:35Z"
+application_creationUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+application_latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:35Z
+application_latestUpdateUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+application_statusId:
+      type: integer
+      example: 1
+      description: Relationship to application_status
+application_jobId:
+      type: integer
+      example: 
+      description: Relationship to Job
+application_teacherId:
+      type: integer
+      example: 
+      description: Relationship to Teacher
+application_id:
+      type: integer
+      example: 
+
+
+application_properties_recommendationText:
+  properties:
+    recommendationText:
+      $ref: "#/application_recommendationText"
+
+application_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/application_creationDate"
+
+application_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/application_creationUserId"
+
+application_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/application_latestUpdateDate"
+
+application_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/application_latestUpdateUserId"
+
+application_properties_statusId:
+  properties:
+    statusId:
+      $ref: "#/application_statusId"
+
+application_properties_jobId:
+  properties:
+    jobId:
+      $ref: "#/application_jobId"
+
+application_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/application_teacherId"
+
+application_properties_id:
+  properties:
+    id:
+      $ref: "#/application_id"

@@ -18,20 +18,20 @@ SimpleModel_application-eventType_all:
     - $ref: "#/SimpleModel_application-eventType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_application-eventType_id"
-        - $ref: "#/SimpleModel_application-eventType_type"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_all"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipProperties_adminOnly"
+          - $ref: "#/SimpleModel_application-eventType_id"
+          - $ref: "#/SimpleModel_application-eventType_type"
+          - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_all"
 
 SimpleModel_application-eventType_admin:
   allOf:
     - $ref: "#/SimpleModel_application-eventType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-eventType_id"
-        - $ref: "#/SimpleModel_application-eventType_type"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_shared"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipProperties_adminOnly"
+      properties:
+      - type: object
+        allOf:
+          - $ref: "#/SimpleModel_application-eventType_id"
+          - $ref: "#/SimpleModel_application-eventType_type"
+          - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_shared"
+          - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipProperties_adminOnly"
 
 SimpleModel_application-eventType_adminOnly:
   allOf:
