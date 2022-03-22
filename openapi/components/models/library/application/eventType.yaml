@@ -2,6 +2,7 @@
 application-eventType_standardProperties_all:
   allOf:
     - $ref: "#/application-eventType_standardProperties_shared"
+    - $ref: "#/application-eventType_relationshipProperties_adminOnly"
 
 application-eventType_standardProperties_shared:
   properties:

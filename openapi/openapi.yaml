@@ -69,6 +69,11 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
+  - name: simple-model-application
+    x-displayName: Simple model - application
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application" />
+
   - name: simple-model-application-applicationEvent
     x-displayName: Simple model - application-applicationEvent
     description: |
@@ -213,6 +218,7 @@ x-tagGroups:
     tags:
       - simple-model-accreditation-type
       - simple-model-application-action
+      - simple-model-application
       - simple-model-application-applicationEvent
       - simple-model-application-eventType
       - simple-model-application-status
