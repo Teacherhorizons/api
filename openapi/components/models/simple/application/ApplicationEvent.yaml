@@ -19,8 +19,8 @@ SimpleModel_application-applicationEvent_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_all"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipIds"
 
 SimpleModel_application-applicationEvent_admin:
   allOf:

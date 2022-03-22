@@ -1,18 +1,3 @@
-# TODO RR+AS: figure out how best to name the groups of properties (try listing individual properties and groups)
-
-# standard properties
-application-applicationEvent_standardProperties_all:
-  allOf:
-    # - $ref: "#/application-applicationEvent_standardProperties_shared"
-    - $ref: "#/application-applicationEvent_metaProperties_shared"
-    - $ref: "#/application-applicationEvent_updatableProperties_shared"
-
-# application-applicationEvent_standardProperties_shared:
-#   properties:
-#     id:
-#       type: integer
-#       example: 1
-
 application-applicationEvent_metaProperties_shared:
   properties:
     creationDate:
@@ -121,6 +106,14 @@ application-applicationEvent_post_404:
   allOf:
     - $ref: "#/application-applicationEvent_properties_notes"
 
+# attributes
+application-applicationEvent_attributes:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_date"
+    - $ref: "#/application-applicationEvent_properties_notes"
+    - $ref: "#/application-applicationEvent_properties_creationDate"
+    - $ref: "#/application-applicationEvent_properties_latestUpdateDate"
+
 # relationshipIds
 application-applicationEvent_relationshipIds:
   allOf:
@@ -137,19 +130,12 @@ application-applicationEvent_attributeRelationships:
     - $ref: "#/application-applicationEvent_properties_eventType"
     - $ref: "#/application-applicationEvent_properties_email"
 
-# attributes
-application-applicationEvent_attributes:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_date"
-    - $ref: "#/application-applicationEvent_properties_notes"
-    - $ref: "#/application-applicationEvent_properties_creationDate"
-    - $ref: "#/application-applicationEvent_properties_latestUpdateDate"
-
 # relationships
-# application-applicationEvent_relationships:
-#   allOf:
-#     - $ref: "#/application-applicationEvent_properties_creationUser"
-#     - $ref: "#/application-applicationEvent_properties_latestUpdateUser"
+# TODO - not yet used; consider referring to the json-api user model here, and then trying to use
+application-applicationEvent_relationships:
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_creationUser"
+    - $ref: "#/application-applicationEvent_properties_latestUpdateUser"
 
 # properties
 application-applicationEvent_properties_date:
@@ -161,6 +147,16 @@ application-applicationEvent_properties_notes:
   properties:
     notes:
       $ref: "#/application-applicationEvent_notes"
+
+application-applicationEvent_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/application-applicationEvent_creationDate"
+
+application-applicationEvent_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/application-applicationEvent_latestUpdateDate"
 
 application-applicationEvent_properties_applicationId:
   properties:
@@ -202,22 +198,15 @@ application-applicationEvent_properties_eventType:
     eventType:
       $ref: "#/application-applicationEvent_eventType"
 
-application-applicationEvent_properties_creationDate:
+application-applicationEvent_properties_creationUser:
   properties:
-    creationDate:
-      $ref: "#/application-applicationEvent_creationDate"
+    creationUser:
+      $ref: "#/application-applicationEvent_creationUser"
 
-application-applicationEvent_properties_latestUpdateDate:
+application-applicationEvent_properties_latestUpdateUser:
   properties:
-    latestUpdateDate:
-      $ref: "#/application-applicationEvent_latestUpdateDate"
-
-# application-applicationEvent_properties_:
-#   properties:
-#     :
-#       $ref: "#/application-applicationEvent_"
-
-# ...
+    latestUpdateUser:
+      $ref: "#/application-applicationEvent_latestUpdateUser"
 
 # attributes
 application-applicationEvent_date:
@@ -228,6 +217,16 @@ application-applicationEvent_date:
 application-applicationEvent_notes:
   type: string
   example: Foo bar
+
+application-applicationEvent_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationEvent_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
 
 application-applicationEvent_applicationId:
   type: integer
@@ -255,26 +254,38 @@ application-applicationEvent_latestUpdateUserId:
   description: Relationship to User
 
 application-applicationEvent_application:
-  id:
-    type: string
-    example: "1"
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
 
 application-applicationEvent_email:
-  id:
-    type: string
-    example: "1"
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
 
 application-applicationEvent_eventType:
-  id:
-    type: string
-    example: "1"
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
 
-application-applicationEvent_creationDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:34Z
+application-applicationEvent_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to User
 
-application-applicationEvent_latestUpdateDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:34Z
+application-applicationEvent_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to User

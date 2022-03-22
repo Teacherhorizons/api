@@ -49,14 +49,11 @@ JsonApiModel_application-applicationEvent_attributes_admin:
     $ref: "#/JsonApiModel_application-applicationEvent_id"
   attributes:
     allOf:
-      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_all"
-      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_wip"
-      # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
-      # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
-      # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
-      # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_adminOnly"
+      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
+      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributeRelationships"
   relationships:
     $ref: "#/JsonApiModel_application-applicationEvent_relationships_admin"
+    # $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationships"
 
 JsonApiModel_application-applicationEvent_relationships_admin:
   type: object
@@ -73,10 +70,6 @@ JsonApiModel_application-applicationEvent_attributes_school:
     $ref: "#/JsonApiModel_application-applicationEvent_type"
   id:
     $ref: "#/JsonApiModel_application-applicationEvent_id"
-  # attributes:
-  #   allOf:
-  # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
-  # relationships:
 
 # teacher
 JsonApiModel_application-applicationEvent_attributes_teacher:
@@ -84,10 +77,6 @@ JsonApiModel_application-applicationEvent_attributes_teacher:
     $ref: "#/JsonApiModel_application-applicationEvent_type"
   id:
     $ref: "#/JsonApiModel_application-applicationEvent_id"
-  attributes:
-    allOf:
-      # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
-  # relationships:
 
 # shared
 JsonApiModel_application-applicationEvent_type:
@@ -101,14 +90,3 @@ JsonApiModel_application-applicationEvent_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the application-applicationEvent (string)
-
-JsonApiModel_application-applicationEvent_relationship:
-  type: object
-  properties:
-    data:
-      type: object
-      properties:
-        type:
-          $ref: "#/JsonApiModel_application-applicationEvent_type"
-        id:
-          $ref: "#/JsonApiModel_application-applicationEvent_id"
