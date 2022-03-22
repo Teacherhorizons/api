@@ -19,8 +19,8 @@ SimpleModel_country_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_all"
-        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_all"
+        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
 
 SimpleModel_country_admin:
   allOf:
@@ -28,17 +28,17 @@ SimpleModel_country_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
 
 SimpleModel_country_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_country"
     - type: object
       allOf:
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
 
 SimpleModel_country_school:
   allOf:
@@ -46,8 +46,8 @@ SimpleModel_country_school:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
-        # - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_shared"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+        # - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_shared"
 
 SimpleModel_country_teacher:
   allOf:
@@ -55,8 +55,8 @@ SimpleModel_country_teacher:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
-        # - $ref: "../../library/regional/Country.yaml#/Country_relationshipProperties_shared"
+        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+        # - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_shared"
 
 # shared
 SimpleModel_country_id:

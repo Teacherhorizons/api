@@ -49,8 +49,8 @@ JsonApiModel_country_attributes_admin:
     $ref: "#/JsonApiModel_country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
-      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_adminOnly"
+      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
   relationships:
     $ref: "#/JsonApiModel_country_relationships_admin"
 
@@ -71,7 +71,7 @@ JsonApiModel_country_attributes_school:
     $ref: "#/JsonApiModel_country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
   # relationships:
 
 # teacher
@@ -82,7 +82,7 @@ JsonApiModel_country_attributes_teacher:
     $ref: "#/JsonApiModel_country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/Country.yaml#/Country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
   # relationships:
 
 # shared

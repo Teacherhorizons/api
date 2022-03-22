@@ -18,41 +18,41 @@ SimpleModel_teacher_all:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_all"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_all"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
 
 SimpleModel_teacher_admin:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_adminOnly"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_adminOnly"
 
 SimpleModel_teacher_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_adminOnly"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_adminOnly"
 
 SimpleModel_teacher_school:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
 
 SimpleModel_teacher_teacher:
   allOf:
     - $ref: "#/SimpleModel_teacher"
     - type: object
       allOf:
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_id"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/Teacher.yaml#/Teacher_relationshipProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
+        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"

@@ -100,12 +100,12 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-thMatchType" />
 
   - name: simple-model-city
-    x-displayName: Simple model - City
+    x-displayName: Simple model - city
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_city" />
 
   - name: simple-model-country
-    x-displayName: Simple model - Country
+    x-displayName: Simple model - country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
@@ -114,10 +114,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-educationLevel" />
 
-  - name: simple-model-pensionScheme-type
-    x-displayName: Simple model - PensionSchemeType
+  - name: simple-model-general-pensionSchemeType
+    x-displayName: Simple model - pensionSchemeType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_pensionSchemeType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-pensionSchemeType" />
 
   - name: simple-model-general-currency
     x-displayName: Simple model - general-currency
@@ -152,7 +152,7 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/School" />
 
   - name: simple-model-teacher
-    x-displayName: Simple model - Teacher
+    x-displayName: Simple model - teacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
 
@@ -179,12 +179,12 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-status" />
 
   - name: json-api-model-city
-    x-displayName: JSON:API model - City
+    x-displayName: JSON:API model - city
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
 
   - name: json-api-model-country
-    x-displayName: JSON:API model - Country
+    x-displayName: JSON:API model - country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
 
@@ -204,7 +204,7 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-region" />
 
   - name: json-api-model-teacher
-    x-displayName: JSON:API model - Teacher
+    x-displayName: JSON:API model - teacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
@@ -228,7 +228,7 @@ x-tagGroups:
       - simple-model-general-currency
       - simple-model-general-educationLevel
       - simple-model-lists
-      - simple-model-pensionScheme-type
+      - simple-model-general-pensionSchemeType
       - simple-model-pet
       - simple-model-regional-region
       - simple-model-school

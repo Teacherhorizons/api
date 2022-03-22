@@ -1,4 +1,4 @@
-SimpleModel_pensionSchemeType:
+SimpleModel_general-pensionSchemeType:
   type: object
   properties:
     schema:
@@ -7,59 +7,59 @@ SimpleModel_pensionSchemeType:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_pensionSchemeType_all"
-      admin: "#/SimpleModel_pensionSchemeType_admin"
-      adminOnly: "#/SimpleModel_pensionSchemeType_adminOnly"
-      school: "#/SimpleModel_pensionSchemeType_school"
-      teacher: "#/SimpleModel_pensionSchemeType_teacher"
+      all: "#/SimpleModel_general-pensionSchemeType_all"
+      admin: "#/SimpleModel_general-pensionSchemeType_admin"
+      adminOnly: "#/SimpleModel_general-pensionSchemeType_adminOnly"
+      school: "#/SimpleModel_general-pensionSchemeType_school"
+      teacher: "#/SimpleModel_general-pensionSchemeType_teacher"
 
-SimpleModel_pensionSchemeType_all:
+SimpleModel_general-pensionSchemeType_all:
   allOf:
-    - $ref: "#/SimpleModel_pensionSchemeType"
+    - $ref: "#/SimpleModel_general-pensionSchemeType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_pensionSchemeType_id"
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_all"
-        # $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_general-pensionSchemeType_id"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_all"
+        # $ref: "../../library/general/ensionSchemeType.yaml#/general-pensionSchemeType_relationshipProperties_adminOnly"
 
-SimpleModel_pensionSchemeType_admin:
+SimpleModel_general-pensionSchemeType_admin:
   allOf:
-    - $ref: "#/SimpleModel_pensionSchemeType"
+    - $ref: "#/SimpleModel_general-pensionSchemeType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_pensionSchemeType_id"
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_shared"
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_adminOnly"
-        # $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_general-pensionSchemeType_id"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_shared"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_adminOnly"
+        # $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipProperties_adminOnly"
 
-SimpleModel_pensionSchemeType_adminOnly:
+SimpleModel_general-pensionSchemeType_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_pensionSchemeType"
+    - $ref: "#/SimpleModel_general-pensionSchemeType"
     - type: object
       allOf:
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_adminOnly"
-        # $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_relationshipProperties_adminOnly"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_adminOnly"
+        # $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipProperties_adminOnly"
 
-SimpleModel_pensionSchemeType_school:
+SimpleModel_general-pensionSchemeType_school:
   allOf:
-    - $ref: "#/SimpleModel_pensionSchemeType"
+    - $ref: "#/SimpleModel_general-pensionSchemeType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_pensionSchemeType_id"
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_shared"
-        # $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_general-pensionSchemeType_id"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_shared"
+        # $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipProperties_shared"
 
-SimpleModel_pensionSchemeType_teacher:
+SimpleModel_general-pensionSchemeType_teacher:
   allOf:
-    - $ref: "#/SimpleModel_pensionSchemeType"
+    - $ref: "#/SimpleModel_general-pensionSchemeType"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_pensionSchemeType_id"
-        - $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_standardProperties_shared"
-        # $ref: "../../library/general/PensionSchemeType.yaml#/PensionSchemeType_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_general-pensionSchemeType_id"
+        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_standardProperties_shared"
+        # $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipProperties_shared"
 
 # shared
-SimpleModel_pensionSchemeType_id:
+SimpleModel_general-pensionSchemeType_id:
   properties:
     id:
       type: integer

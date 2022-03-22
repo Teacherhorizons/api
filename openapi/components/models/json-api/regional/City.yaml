@@ -49,8 +49,8 @@ JsonApiModel_city_attributes_admin:
     $ref: "#/JsonApiModel_city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
-      - $ref: "../../library/regional/City.yaml#/City_standardProperties_adminOnly"
+      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
   relationships:
     $ref: "#/JsonApiModel_city_relationships_admin"
 
@@ -71,7 +71,7 @@ JsonApiModel_city_attributes_school:
     $ref: "#/JsonApiModel_city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
   # relationships:
 
 # teacher
@@ -82,7 +82,7 @@ JsonApiModel_city_attributes_teacher:
     $ref: "#/JsonApiModel_city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
   # relationships:
 
 # shared

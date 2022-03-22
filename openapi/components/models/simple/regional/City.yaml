@@ -19,8 +19,8 @@ SimpleModel_city_all:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_all"
-        - $ref: "../../library/regional/City.yaml#/City_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_all"
+        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
 
 SimpleModel_city_admin:
   allOf:
@@ -28,17 +28,17 @@ SimpleModel_city_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_adminOnly"
-        - $ref: "../../library/regional/City.yaml#/City_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
 
 SimpleModel_city_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_city"
     - type: object
       allOf:
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_adminOnly"
-        - $ref: "../../library/regional/City.yaml#/City_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
 
 SimpleModel_city_school:
   allOf:
@@ -46,8 +46,8 @@ SimpleModel_city_school:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
-        # - $ref: "../../library/regional/City.yaml#/City_relationshipProperties_shared"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+        # - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_shared"
 
 SimpleModel_city_teacher:
   allOf:
@@ -55,8 +55,8 @@ SimpleModel_city_teacher:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/City.yaml#/City_standardProperties_shared"
-        # - $ref: "../../library/regional/City.yaml#/City_relationshipProperties_shared"
+        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+        # - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_shared"
 
 # shared
 SimpleModel_city_id:

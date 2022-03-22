@@ -8,11 +8,11 @@ JsonApiModel_teacher:
 
 JsonApiModel_teacher_attributes:
   type:
-    $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_type2"
+    $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_type2"
   id:
     $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
   attributes:
-    $ref: "../../library/teacher/Teacher.yaml#/Teacher_standardProperties_all"
+    $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_all"
   relationships:
     $ref: "#/JsonApiModel_teacher_relationships"
 

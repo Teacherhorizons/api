@@ -1,10 +1,10 @@
 # standard properties
-Country_standardProperties_all:
+country_standardProperties_all:
   allOf:
-    - $ref: "#/Country_standardProperties_shared"
-    - $ref: "#/Country_standardProperties_adminOnly"
+    - $ref: "#/country_standardProperties_shared"
+    - $ref: "#/country_standardProperties_adminOnly"
 
-Country_standardProperties_shared:
+country_standardProperties_shared:
   properties:
     id:
       type: integer
@@ -48,7 +48,7 @@ Country_standardProperties_shared:
           example: 17.46826171875
           description: Longitude
 
-Country_standardProperties_adminOnly:
+country_standardProperties_adminOnly:
   properties:
     creationDate:
       type: string
@@ -63,14 +63,14 @@ Country_standardProperties_adminOnly:
 
 # relationship properties
 
-Country_relationshipProperties_all:
+country_relationshipProperties_all:
   allOf:
-    # - $ref: "#/Country_standardProperties_shared"
-    - $ref: "#/Country_standardProperties_adminOnly"
+    # - $ref: "#/country_standardProperties_shared"
+    - $ref: "#/country_standardProperties_adminOnly"
 
-# Country_relationshipProperties_shared:
+# country_relationshipProperties_shared:
 
-Country_relationshipProperties_adminOnly:
+country_relationshipProperties_adminOnly:
   properties:
     creationUserId:
       type: integer

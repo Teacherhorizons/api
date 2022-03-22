@@ -1,15 +1,15 @@
-Teacher_standardProperties_adminOnly:
+teacher_standardProperties_adminOnly:
   properties:
     thPlaceabilityRating:
       type: integer
       example: 1
 
-Teacher_standardProperties_typeAndId:
+teacher_standardProperties_typeAndId:
   allOf:
-    - $ref: "#/Teacher_standardProperties_type"
-    - $ref: "#/Teacher_standardProperties_id"
+    - $ref: "#/teacher_standardProperties_type"
+    - $ref: "#/teacher_standardProperties_id"
 
-Teacher_standardProperties_type:
+teacher_standardProperties_type:
   properties:
     type:
       type: string
@@ -17,13 +17,13 @@ Teacher_standardProperties_type:
       description: Value representing the object type
       readOnly: true
 
-Teacher_standardProperties_type2:
+teacher_standardProperties_type2:
   type: string
   example: teacher
   description: Value representing the object type
   readOnly: true
 
-Teacher_standardProperties_id:
+teacher_standardProperties_id:
   properties:
     id:
       type: integer
@@ -32,12 +32,12 @@ Teacher_standardProperties_id:
       readOnly: true
       description: Unique identifier of the object
 
-Teacher_standardProperties_all:
+teacher_standardProperties_all:
   allOf:
-    - $ref: "#/Teacher_standardProperties_shared"
-    - $ref: "#/Teacher_standardProperties_adminOnly"
+    - $ref: "#/teacher_standardProperties_shared"
+    - $ref: "#/teacher_standardProperties_adminOnly"
 
-Teacher_standardProperties_shared:
+teacher_standardProperties_shared:
   properties:
     memberNumber:
       type: integer
@@ -111,7 +111,7 @@ Teacher_standardProperties_shared:
       type: string
       example:
 
-Teacher_relationshipProperties_shared:
+teacher_relationshipProperties_shared:
   properties:
     userId:
       type: integer
