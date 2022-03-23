@@ -1,0 +1,78 @@
+SimpleModel_general-religion:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_general-religion_all"
+      admin: "#/SimpleModel_general-religion_admin"
+      adminOnly: "#/SimpleModel_general-religion_adminOnly"
+      school: "#/SimpleModel_general-religion_school"
+      teacher: "#/SimpleModel_general-religion_teacher"
+
+SimpleModel_general-religion_all:
+  allOf:
+    - $ref: "#/SimpleModel_general-religion"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-religion_id"
+        - $ref: "#/SimpleModel_general-religion_name"
+        - $ref: "../../library/general/religion.yaml#/general-religion_attributes"
+        - $ref: "../../library/general/religion.yaml#/general-religion_relationshipIds"
+
+SimpleModel_general-religion_admin:
+  allOf:
+    - $ref: "#/SimpleModel_general-religion"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-religion_id"
+        - $ref: "#/SimpleModel_general-religion_name"
+        - $ref: "../../library/general/religion.yaml#/general-religion_metaProperties_shared"
+        - $ref: "../../library/general/religion.yaml#/general-religion_relationshipProperties_adminOnly"
+
+SimpleModel_general-religion_adminOnly:
+  allOf:
+    - $ref: "#/SimpleModel_general-religion"
+    - type: object
+      allOf:
+        - $ref: "../../library/general/religion.yaml#/general-religion_metaProperties_shared"
+        - $ref: "../../library/general/religion.yaml#/general-religion_relationshipProperties_adminOnly"
+
+SimpleModel_general-religion_school:
+  allOf:
+    - $ref: "#/SimpleModel_general-religion"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-religion_id"
+        - $ref: "#/SimpleModel_general-religion_name"
+
+
+SimpleModel_general-religion_teacher:
+  allOf:
+    - $ref: "#/SimpleModel_general-religion"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-religion_id"
+        - $ref: "#/SimpleModel_general-religion_name"
+
+
+# shared
+SimpleModel_general-religion_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+
+SimpleModel_general-religion_name:
+  properties:
+    name:
+      type: string
+      example: "State"
+      readOnly: true
+      description: Unique identifier of the object

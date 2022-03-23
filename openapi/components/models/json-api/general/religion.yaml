@@ -1,0 +1,107 @@
+JsonApiModel_general-religion:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_general-religion_admin"
+      school: "#/JsonApiModel_general-religion_school"
+      teacher: "#/JsonApiModel_general-religion_teacher"
+
+JsonApiModel_general-religion_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_general-religion"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-religion_attributes_admin"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-religion_school:
+  allOf:
+    - $ref: "#/JsonApiModel_general-religion"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-religion_attributes_school"
+    - required:
+        - type
+        - id
+
+JsonApiModel_general-religion_teacher:
+  allOf:
+    - $ref: "#/JsonApiModel_general-religion"
+    - type: object
+    - properties:
+        $ref: "#/JsonApiModel_general-religion_attributes_school"
+    - required:
+        - type
+        - id
+
+# admin
+JsonApiModel_general-religion_attributes_admin:
+  type:
+    $ref: "#/JsonApiModel_general-religion_type"
+  id:
+    $ref: "#/JsonApiModel_general-religion_id"
+  name:
+    $ref: "#/JsonApiModel_general-religion_name"
+  attributes:
+    allOf:
+        - $ref: "../../library/general/religion.yaml#/general-religion_attributes"
+      
+  relationships:
+    $ref: "#/JsonApiModel_general-religion_relationships_admin"
+    attributes:
+      allOf:
+        $ref: "../../library/general/religion.yaml#/general-religion_relationships"
+
+JsonApiModel_general-religion_relationships_admin:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+# school
+JsonApiModel_general-religion_attributes_school:
+  type:
+    $ref: "#/JsonApiModel_general-religion_type"
+  id:
+    $ref: "#/JsonApiModel_general-religion_id"
+  name:
+    $ref: "#/JsonApiModel_general-religion_name"
+
+# teacher
+JsonApiModel_general-religion_attributes_teacher:
+  type:
+    $ref: "#/JsonApiModel_general-religion_type"
+  id:
+    $ref: "#/JsonApiModel_general-religion_id"
+  name:
+    $ref: "#/JsonApiModel_general-religion_name"
+
+# shared
+JsonApiModel_general-religion_type:
+  type: string
+  example: general-religion
+  description: general-religion
+  readOnly: true
+
+JsonApiModel_general-religion_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-religion (string)
+
+JsonApiModel_general-religion_name:
+   type: string
+   example: "State"
+   readOnly: true
+   description: Unique identifier of the object
+

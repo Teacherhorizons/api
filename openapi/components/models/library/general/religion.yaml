@@ -1,0 +1,170 @@
+general-religion_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+general-religion_filter_additionalProperties:
+  type: object
+  description: Direct attributes
+  properties:
+    application.id:
+      type: number
+      example: 1
+    application.teacher.memberNumber:
+      type: number
+      example: 123456
+
+#relationship properties
+general-religion_relationshipProperties_adminOnly:
+  properties:
+    creationUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+    latestUpdateUserId:
+      type: integer
+      example: 1
+      description: Relationship to User
+
+general-religion_post_request_option1:
+  properties:
+    date:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    notes:
+      type: string
+      example: Foo bar
+
+# general-religion_post_request_option2:
+#   properties:
+
+
+# general-religion_post_request_option3:
+#   allOf:
+
+
+# general-religion_post_200:
+#   allOf:
+
+
+# general-religion_post_404:
+#   allOf:
+
+
+# attributes
+general-religion_attributes:
+  allOf:
+    - $ref: "#/general-religion_properties_creationDate"
+    - $ref: "#/general-religion_properties_latestUpdateDate"
+
+# relationshipIds
+general-religion_relationshipIds:
+  allOf:
+    - $ref: "#/general-religion_properties_creationUserId"
+    - $ref: "#/general-religion_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+general-religion_relationships:
+  allOf:
+    - $ref: "#/general-religion_properties_creationUser"
+    - $ref: "#/general-religion_properties_latestUpdateUser"
+
+
+#properties
+
+general-religion_properties_id:
+  properties:
+    id:
+      $ref: "#/general-religion_id"
+
+
+general-religion_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/general-religion_creationDate"
+
+general-religion_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/general-religion_latestUpdateDate"
+
+general-religion_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/general-religion_creationUserId"
+
+general-religion_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/general-religion_latestUpdateUserId"
+
+general-religion_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/general-religion_creationUser"
+
+general-religion_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/general-religion_latestUpdateUser"
+
+#attributes
+
+general-religion_id:
+  type: integer
+  example: 1
+
+general-religion_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+general-religion_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+general-religion_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+general-religion_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+#relationship
+
+general-religion_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+general-religion_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+# id
+# name
+# creationDate
+# latestUpdateDate
+# creationUserId
+# latestUpdateUserId
