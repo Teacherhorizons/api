@@ -19,7 +19,6 @@ application-applicationEvent_wip:
           example: "1"
 #filter properties
 
-
 #relationship properties
 general-role_relationshipProperties_adminOnly:
   properties:
@@ -38,7 +37,6 @@ general-role_relationshipProperties_adminOnly:
 
 # general-role_post_request_option1:
 #   properties:
-
 
 # general-role_post_request_option2:
 #   properties:
@@ -63,7 +61,7 @@ general-role_relationshipProperties_adminOnly:
 # attributes
 general-role_attributes:
   allOf:
-    - $ref: "#/general-role_properties_position"
+    - $ref: "#/general-role_properties_name"
     - $ref: "#/general-role_properties_creationDate"
     - $ref: "#/general-role_properties_latestUpdateDate"
 
@@ -90,10 +88,10 @@ general-role_properties_id:
     id:
       $ref: "#/general-role_id"
 
-general-role_properties_position:
+general-role_properties_name:
   properties:
-    position:
-      $ref: "#/general-role_position"
+    name:
+      $ref: "#/general-role_name"
 
 general-role_properties_creationDate:
   properties:
@@ -141,7 +139,7 @@ general-role_id:
   type: integer
   example: 1
 
-general-role_position:
+general-role_name:
   type: string
   example: Secondary Subject Teacher"
 
@@ -195,9 +193,8 @@ general-role_type:
       type: string
       example: "1"
   description: Relationship to Type
-
 # id
-# position
+# name
 # creationDate
 # latestUpdateDate
 # creationUserId
