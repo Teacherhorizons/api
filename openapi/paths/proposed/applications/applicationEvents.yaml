@@ -60,42 +60,9 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_wip"
-                    # - properties:
-                    #     $ref: "#/Application_option3"
-                    # - properties:
-                    #     application_option2:
-                    #       $ref: "#/Application_option2"
-                    #     date:
-                    #       $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvents_date"
-                    #     notes:
-                    #       $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvents_notes"
-
-                    # - properties:
-                    #     application_option1:
-                    #       type: object
-                    #       properties:
-                    #         id:
-                    #           type: string
-                    #           example: 1
-                    # - properties:
-                    #     eventType:
-                    #       type: object
-                    #       properties:
-                    #         id:
-                    #           type: string
-                    #           example: 1
-                    #     email:
-                    #       type: object
-                    #       properties:
-                    #         id:
-                    #           type: string
-                    #           example: 1
-                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/ApplicationEvent_standardProperties_shared"
-                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
-                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option1"
-                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option2"
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_post_request_option3"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_attributeRelationships"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_date"
+                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_notes"
                     - required:
                         - application
                         - eventType

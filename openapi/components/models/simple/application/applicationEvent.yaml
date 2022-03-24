@@ -28,17 +28,17 @@ SimpleModel_application-applicationEvent_admin:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        # - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_standardProperties_shared"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipIds"
 
 SimpleModel_application-applicationEvent_adminOnly:
   allOf:
     - $ref: "#/SimpleModel_application-applicationEvent"
     - type: object
       allOf:
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_metaProperties_shared"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipProperties_adminOnly"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_properties_creationDate"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_properties_latestUpdateDate"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipIds"
 
 SimpleModel_application-applicationEvent_school:
   allOf:
@@ -65,5 +65,3 @@ SimpleModel_application-applicationEvent_id:
       example: 1
       readOnly: true
       description: Unique identifier of the object
-
-

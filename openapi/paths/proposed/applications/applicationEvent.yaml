@@ -24,7 +24,8 @@ patch:
             attributes:
               allOf:
                 - type: object
-                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_updatableProperties_shared"
+                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_date"
+                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_notes"
 
   responses:
     "204":
