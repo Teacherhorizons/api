@@ -1,0 +1,17 @@
+# # standard properties
+# Application_standardProperties_all:
+#   allOf:
+#     - $ref: "#/Application_standardProperties_shared"
+
+# Application_standardProperties_shared:
+#   properties:
+#       job:
+#           type: object
+#           properties:
+#             id:
+#               type: string
+#               example: 123
+#       memberNumber:
+#           type: object
+#           example: 34567
+
