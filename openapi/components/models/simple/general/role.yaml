@@ -4,20 +4,10 @@ SimpleModel_general-role:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_general-role_id"
-        - $ref: "#/SimpleModel_general-role_type"
         - $ref: "../../library/general/role.yaml#/general-role_attributes"
-        - $ref: "../../library/general/role.yaml#/general-role_relationships"
+        - $ref: "../../library/general/role.yaml#/general-role_relationshipIds"
 
 # shared
-
-SimpleModel_general-role_type:
-  properties:
-    type:
-      type: string
-      example: general-role
-      description: general-role
-      readOnly: true
-
 SimpleModel_general-role_id:
   properties:
     id:

@@ -21,6 +21,7 @@ SimpleModel_general-currency_all:
         - $ref: "#/SimpleModel_general-currency_id"
         - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_all"
         - $ref: "../../library/general/currency.yaml#/general-currency_relationshipProperties_adminOnly"
+        - $ref: "../../library/general/currency.yaml#/general-currency_noLongerUsedProperties"
 
 SimpleModel_general-currency_admin:
   allOf:

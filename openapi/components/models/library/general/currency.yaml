@@ -4,15 +4,22 @@ general-currency_standardProperties_all:
     - $ref: "#/general-currency_standardProperties_shared"
     - $ref: "#/general-currency_standardProperties_adminOnly"
 
+general-currency_noLongerUsedProperties:
+  properties:
+    exampleNoLongerUsedProperty:
+      type: string
+      example: TODO - remove once used for real elsewhere
+      description: NO LONGER USED
+
 general-currency_standardProperties_shared:
   properties:
-   code:
+    code:
       type: string
       example: GBP
-   symbol:
+    symbol:
       type: string
       example: &pound;
-   name:
+    name:
       type: string
       example: Great Britain Pound
 

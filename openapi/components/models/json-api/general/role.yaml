@@ -21,6 +21,8 @@ JsonApiModel_general-role_relationships:
   type: object
   description: Related attributes
   properties:
+    roleType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     creationUser:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     latestUpdateUser:
