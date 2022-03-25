@@ -62,6 +62,7 @@ general-religion_post_request_option1:
 # attributes
 general-religion_attributes:
   allOf:
+    - $ref: "#/general-religion_properties_name"
     - $ref: "#/general-religion_properties_creationDate"
     - $ref: "#/general-religion_properties_latestUpdateDate"
 
@@ -97,6 +98,11 @@ general-religion_properties_latestUpdateDate:
   properties:
     latestUpdateDate:
       $ref: "#/general-religion_latestUpdateDate"
+
+general-religion_properties_name:
+  properties:
+    name:
+      $ref: "#/general-religion_name"
 
 general-religion_properties_creationUserId:
   properties:
@@ -143,6 +149,12 @@ general-religion_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to User
+
+general-religion_name:
+    type: string
+    example: "State"
+    readOnly: true
+    description: Unique identifier of the object
 
 #relationship
 

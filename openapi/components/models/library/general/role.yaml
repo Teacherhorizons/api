@@ -12,43 +12,21 @@ general-role_metaProperties_shared:
 #filter properties
 
 #relationship properties
-general-role_relationshipProperties_adminOnly:
-  properties:
-    creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-    latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-    role_typeId:
-      type: integer
-      example: 1
-      description: Relationship to Type
-
-# general-role_post_request_option1:
+# general-role_relationshipProperties_adminOnly:
 #   properties:
+#     creationUserId:
+#       type: integer
+#       example: 1
+#       description: Relationship to User
+#     latestUpdateUserId:
+#       type: integer
+#       example: 1
+#       description: Relationship to User
+#     role_typeId:
+#       type: integer
+#       example: 1
+#       description: Relationship to Type
 
-# general-role_post_request_option2:
-#   properties:
-#     date:
-#       $ref: "#/general-role_date"
-#     notes:
-#       $ref: "#/general-role_notes"
-
-# general-role_post_request_option3:
-#   allOf:
-#     - $ref: "#/general-role_properties_date"
-#     - $ref: "#/general-role_properties_notes"
-
-# general-role_post_200:
-#   allOf:
-#     - $ref: "#/general-role_properties_date"
-
-# general-role_post_404:
-#   allOf:
-#     - $ref: "#/general-role_properties_notes"
 
 # attributes
 general-role_attributes:
@@ -133,7 +111,7 @@ general-role_id:
 
 general-role_name:
   type: string
-  example: Secondary Subject Teacher"
+  example: Secondary Subject Teacher
 
 general-role_creationDate:
   type: string
@@ -184,7 +162,7 @@ general-role_type:
     id:
       type: string
       example: "1"
-  description: Relationship to Type
+      description: Relationship to Type
 # id
 # name
 # creationDate
