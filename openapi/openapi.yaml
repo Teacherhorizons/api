@@ -143,11 +143,23 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-currency" />
 
+  - name: simple-model-lists-academicSystem
+    x-displayName: Simple model - lists-academicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_lists-academicSystem" />
+
+  # - name: simple-model-general-worldLanguage
+  #   x-displayName: Simple model - general-worldLanguage
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-worldLanguage" />
+
   # - name: simple-model-lists
   #   x-displayName: Lists
   #   description: |
   #     ### AcademicSystem
   #     <SchemaDefinition schemaRef="#/components/schemas/AcademicSystem" />
+
+
   #     ### Accreditation
   #     <SchemaDefinition schemaRef="#/components/schemas/Accreditation" />
   #     ### ThDiscoveryMethod
@@ -257,6 +269,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
 
+  # - name: json-api-model-general-worldLanguage
+  #   x-displayName: JSON:API model - general-worldLanguage
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
+
   # tags - JSON:API models - regional
   - name: json-api-model-city
     x-displayName: JSON:API model - regional-city
@@ -299,6 +316,7 @@ x-tagGroups:
       - simple-model-general-roleType
       - simple-model-general-subject
       - simple-model-general-subjectGroup
+      - simple-model-general-worldLanguage
       - simple-model-regional-city
       - simple-model-regional-country
       - simple-model-regional-region
@@ -320,6 +338,7 @@ x-tagGroups:
       - json-api-model-general-roleType
       - json-api-model-general-subject
       - json-api-model-general-subjectGroup
+      - json-api-model-general-worldLanguage
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
