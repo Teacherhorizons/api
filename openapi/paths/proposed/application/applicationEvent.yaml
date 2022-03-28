@@ -17,7 +17,7 @@ patch:
           properties:
             type:
               type: string
-              example: applicationEvent
+              example: application-applicationEvent
             id:
               type: string
               example: "1"
@@ -35,6 +35,8 @@ patch:
             type: object
             default: null
       description: Item Updated
+    "404":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
   summary: Update application event (proposed)
   tags:
     - applications

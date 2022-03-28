@@ -38,28 +38,28 @@ JsonApiModel_error_404:
                   type: string
                   example: "Related entity not found"
 # list of possible values for 'code'
-# accessNotPermitted
-# invalidJSONInput
-# invalidOrExpiredAuthorisationToken
-# invalidOrExpiredUploadToken
+# accessNotPermitted - 400
+# invalidJSONInput - 400
+# invalidOrExpiredAuthorisationToken - 401
+# invalidOrExpiredUploadToken - 401
 # insufficientPermissions
-# missingMandatoryParameter
-# missingMandatoryJSONfield
+# missingMandatoryParameter - 400
+# missingMandatoryJSONfield - 400
 # nonExistentParameterPassed
-# entityNotFoundForId
-# entityNotFoundForSlug
-# entityNotFoundForAlias
-# secondaryEntityNotFound
+# entityNotFoundForId - 404
+# entityNotFoundForSlug - 404
+# entityNotFoundForAlias - 404
+# secondaryEntityNotFound - 404
 # wrongDataType
 # updateFailed
 # JSONfieldCannotBeNull
 # integrityViolation
-# contactSupport
-# fileTypeLimitReached
-# fileOnServerContactSupport
+# contactSupport - 400
+# fileTypeLimitReached - 400
+# fileOnServerContactSupport - 401
 # fileTooLargeForUpload
-# cannotManipulateFile
+# cannotManipulateFile - 400
 # entityAlreadyExists
-# callToExternalServiceFailed
-# callFailed
+# callToExternalServiceFailed - 404
+# callFailed - 400
 # valdationFailed

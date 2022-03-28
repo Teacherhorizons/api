@@ -9,16 +9,16 @@
 
 # applications
 /applications:
-  $ref: "./../paths/proposed/applications/applications.yaml"
+  $ref: "./../paths/proposed/application/applications.yaml"
 
 /application/{applicationId}:
-  $ref: "./../paths/proposed/applications/application.yaml"
+  $ref: "./../paths/proposed/application/application.yaml"
 
-/applicationEvents:
-  $ref: "./../paths/proposed/applications/applicationEvents.yaml"
+/application-applicationEvents:
+  $ref: "./../paths/proposed/application/applicationEvents.yaml"
 
-/applicationEvent/{applicationEventId}:
-  $ref: "./../paths/proposed/applications/applicationEvent.yaml"
+/application-applicationEvent/{applicationEventId}:
+  $ref: "./../paths/proposed/application/applicationEvent.yaml"
 
 # cities
 /v3/city/id/{cityId}/profile:

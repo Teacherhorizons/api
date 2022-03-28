@@ -17,7 +17,7 @@ info:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  # categories (alphabetical)
+  # tags - categories (alphabetical)
   - name: admin-notes
     description: Operations relating to admin-notes
   - name: applications
@@ -55,13 +55,13 @@ tags:
   - name: users
     description: Operations relating to users
 
-  # statuses
+  # tags - statuses
   - name: status-current
     description: ...
   - name: status-proposed
     description: ...
 
-  # non-th-examples
+  # tags - non-th-examples
   - name: Example - Echo
     description: Example echo operations.
   - name: Example - User
@@ -69,6 +69,9 @@ tags:
   - name: Example - Tag
     description: This is a tag description.
 
+  # tags - simple-models
+
+  # tags - simple-models - application
   - name: simple-model-application
     x-displayName: Simple model - application
     description: |
@@ -99,48 +102,39 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-thMatchType" />
 
-  - name: simple-model-city
-    x-displayName: Simple model - city
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_city" />
-
-  - name: simple-model-country
-    x-displayName: Simple model - country
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
-
+  # tags - simple-models - general
   - name: simple-model-general-educationLevel
-    x-displayName: Simple model - educationLevel
+    x-displayName: Simple model - general-educationLevel
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-educationLevel" />
 
   - name: simple-model-general-pensionSchemeType
-    x-displayName: Simple model - pensionSchemeType
+    x-displayName: Simple model - general-pensionSchemeType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-pensionSchemeType" />
 
   - name: simple-model-general-religion
-    x-displayName: Simple model - religion
+    x-displayName: Simple model - general-religion
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-religion" />
 
   - name: simple-model-general-role
-    x-displayName: Simple model - role
+    x-displayName: Simple model - general-role
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-role" />
 
   - name: simple-model-general-roleType
-    x-displayName: Simple model - roleType
+    x-displayName: Simple model - general-roleType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-roleType" />
 
   - name: simple-model-general-subjectGroup
-    x-displayName: Simple model - subjectGroup
+    x-displayName: Simple model - general-subjectGroup
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subjectGroup" />
 
   - name: simple-model-general-subject
-    x-displayName: Simple model - subject
+    x-displayName: Simple model - general-subject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subject" />
 
@@ -149,33 +143,46 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-currency" />
 
-  - name: simple-model-lists
-    x-displayName: Lists
-    description: |
-      ### AcademicSystem
-      <SchemaDefinition schemaRef="#/components/schemas/AcademicSystem" />
-      ### Accreditation
-      <SchemaDefinition schemaRef="#/components/schemas/Accreditation" />
-      ### ThDiscoveryMethod
-      <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethod" />
-      ### ThDiscoveryMethodCategory
-      <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethodCategory" />
+  # - name: simple-model-lists
+  #   x-displayName: Lists
+  #   description: |
+  #     ### AcademicSystem
+  #     <SchemaDefinition schemaRef="#/components/schemas/AcademicSystem" />
+  #     ### Accreditation
+  #     <SchemaDefinition schemaRef="#/components/schemas/Accreditation" />
+  #     ### ThDiscoveryMethod
+  #     <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethod" />
+  #     ### ThDiscoveryMethodCategory
+  #     <SchemaDefinition schemaRef="#/components/schemas/ThDiscoveryMethodCategory" />
 
-  - name: simple-model-pet
-    x-displayName: Pet (Non-TH)
+  # - name: simple-model-pet
+  #   x-displayName: Pet (Non-TH)
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/Pet" />
+
+  # tags - simple-models - regional
+  - name: simple-model-regional-city
+    x-displayName: Simple model - regional-city
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Pet" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_city" />
+
+  - name: simple-model-regional-country
+    x-displayName: Simple model - regional-country
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
   - name: simple-model-regional-region
     x-displayName: Simple model - regional-region
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-region" />
 
+  # tags - simple-models - school
   - name: simple-model-school
     x-displayName: School
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/School" />
 
+  # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
     description: |
@@ -183,6 +190,7 @@ tags:
 
   # JSON:API models
 
+  # tags - JSON:API models - application
   - name: json-api-model-application-action
     x-displayName: JSON:API model - application-action
     description: |
@@ -203,16 +211,12 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-status" />
 
-  - name: json-api-model-city
-    x-displayName: JSON:API model - city
+  - name: json-api-model-application-thMatchType
+    x-displayName: JSON:API model - application-thMatchType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-thMatchType" />
 
-  - name: json-api-model-country
-    x-displayName: JSON:API model - country
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
-
+  # tags - JSON:API models - general
   - name: json-api-model-general-currency
     x-displayName: JSON:API model - general-currency
     description: |
@@ -246,50 +250,57 @@ tags:
   - name: json-api-model-general-subject
     x-displayName: JSON:API model - general-subject
     description: |
-       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
 
   - name: json-api-model-general-subjectGroup
     x-displayName: JSON:API model - general-subjectGroup
     description: |
-       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
+
+  # tags - JSON:API models - regional
+  - name: json-api-model-city
+    x-displayName: JSON:API model - regional-city
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
+
+  - name: json-api-model-country
+    x-displayName: JSON:API model - regional-country
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
 
   - name: json-api-model-regional-region
     x-displayName: JSON:API model - regional-region
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-region" />
 
+  # tags - JSON:API models - teacher
   - name: json-api-model-teacher
     x-displayName: JSON:API model - teacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
-  - name: json-api-model-application-thMatchType
-    x-displayName: JSON:API model - application-thMatchType
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-thMatchType" />
-
 x-tagGroups:
   - name: Simple models
     tags:
-      - simple-model-accreditation-type
+      # - simple-model-lists
+      # - simple-model-pet
+      # - simple-model-accreditation-type
       - simple-model-application-action
       - simple-model-application
       - simple-model-application-applicationEvent
       - simple-model-application-eventType
       - simple-model-application-status
       - simple-model-application-thMatchType
-      - simple-model-city
-      - simple-model-country
       - simple-model-general-currency
       - simple-model-general-educationLevel
-      - simple-model-lists
       - simple-model-general-pensionSchemeType
       - simple-model-general-religion
       - simple-model-general-role
       - simple-model-general-roleType
       - simple-model-general-subject
       - simple-model-general-subjectGroup
-      - simple-model-pet
+      - simple-model-regional-city
+      - simple-model-regional-country
       - simple-model-regional-region
       - simple-model-school
       - simple-model-teacher
@@ -301,8 +312,6 @@ x-tagGroups:
       - json-api-model-application-eventType
       - json-api-model-application-status
       - json-api-model-application-thMatchType
-      - json-api-model-city
-      - json-api-model-country
       - json-api-model-general-currency
       - json-api-model-general-educationLevel
       - json-api-model-general-pensionSchemeType
@@ -311,6 +320,8 @@ x-tagGroups:
       - json-api-model-general-roleType
       - json-api-model-general-subject
       - json-api-model-general-subjectGroup
+      - json-api-model-regional-city
+      - json-api-model-regional-country
       - json-api-model-regional-region
       - json-api-model-teacher
 
