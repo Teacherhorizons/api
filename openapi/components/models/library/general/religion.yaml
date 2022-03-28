@@ -10,54 +10,6 @@ general-religion_metaProperties_shared:
       example: 2011-02-07T15:53:34Z
 
 #filter properties
-general-religion_filter_additionalProperties:
-  type: object
-  description: Direct attributes
-  properties:
-    application.id:
-      type: number
-      example: 1
-    application.teacher.memberNumber:
-      type: number
-      example: 123456
-
-#relationship properties
-general-religion_relationshipProperties_adminOnly:
-  properties:
-    creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-    latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-
-general-religion_post_request_option1:
-  properties:
-    date:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    notes:
-      type: string
-      example: Foo bar
-
-# general-religion_post_request_option2:
-#   properties:
-
-
-# general-religion_post_request_option3:
-#   allOf:
-
-
-# general-religion_post_200:
-#   allOf:
-
-
-# general-religion_post_404:
-#   allOf:
-
 
 # attributes
 general-religion_attributes:
@@ -80,14 +32,16 @@ general-religion_relationships:
     - $ref: "#/general-religion_properties_creationUser"
     - $ref: "#/general-religion_properties_latestUpdateUser"
 
-
 #properties
-
 general-religion_properties_id:
   properties:
     id:
       $ref: "#/general-religion_id"
 
+general-religion_properties_name:
+  properties:
+    name:
+      $ref: "#/general-religion_name"
 
 general-religion_properties_creationDate:
   properties:
@@ -98,11 +52,6 @@ general-religion_properties_latestUpdateDate:
   properties:
     latestUpdateDate:
       $ref: "#/general-religion_latestUpdateDate"
-
-general-religion_properties_name:
-  properties:
-    name:
-      $ref: "#/general-religion_name"
 
 general-religion_properties_creationUserId:
   properties:
@@ -125,10 +74,13 @@ general-religion_properties_latestUpdateUser:
       $ref: "#/general-religion_latestUpdateUser"
 
 #attributes
-
 general-religion_id:
   type: integer
   example: 1
+
+general-religion_name:
+  type: string
+  example: Secondary Subject Teacher
 
 general-religion_creationDate:
   type: string
@@ -150,14 +102,6 @@ general-religion_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
-general-religion_name:
-    type: string
-    example: "State"
-    readOnly: true
-    description: Unique identifier of the object
-
-#relationship
-
 general-religion_creationUser:
   type: object
   properties:
@@ -174,9 +118,3 @@ general-religion_latestUpdateUser:
       example: "1"
       description: Relationship to User
 
-# id
-# name
-# creationDate
-# latestUpdateDate
-# creationUserId
-# latestUpdateUserId

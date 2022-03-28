@@ -109,8 +109,8 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
 
-  - name: simple-model-general-educationlevel
-    x-displayName: Simple model - general-educationLevel
+  - name: simple-model-general-educationLevel
+    x-displayName: Simple model - educationLevel
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-educationLevel" />
 
@@ -134,10 +134,15 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-roleType" />
 
-  # - name: simple-model-general-subject
-  #   x-displayName: Simple model - subject
-  #   description: |
-  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subject" />
+  - name: simple-model-general-subjectGroup
+    x-displayName: Simple model - subjectGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subjectGroup" />
+
+  - name: simple-model-general-subject
+    x-displayName: Simple model - subject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subject" />
 
   - name: simple-model-general-currency
     x-displayName: Simple model - general-currency
@@ -238,10 +243,15 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-roleType" />
 
-  # - name: json-api-model-general-subject
-  #   x-displayName: JSON:API model - general-subject
-  #   description: |
-  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
+  - name: json-api-model-general-subject
+    x-displayName: JSON:API model - general-subject
+    description: |
+       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
+
+  - name: json-api-model-general-subjectGroup
+    x-displayName: JSON:API model - general-subjectGroup
+    description: |
+       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
 
   - name: json-api-model-regional-region
     x-displayName: JSON:API model - regional-region
@@ -278,6 +288,7 @@ x-tagGroups:
       - simple-model-general-role
       - simple-model-general-roleType
       - simple-model-general-subject
+      - simple-model-general-subjectGroup
       - simple-model-pet
       - simple-model-regional-region
       - simple-model-school
@@ -299,6 +310,7 @@ x-tagGroups:
       - json-api-model-general-role
       - json-api-model-general-roleType
       - json-api-model-general-subject
+      - json-api-model-general-subjectGroup
       - json-api-model-regional-region
       - json-api-model-teacher
 

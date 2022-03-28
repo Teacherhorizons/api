@@ -4,9 +4,8 @@ SimpleModel_general-religion:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_general-religion_id"
-        - $ref: "#/SimpleModel_general-religion_name"
         - $ref: "../../library/general/religion.yaml#/general-religion_attributes"
-        - $ref: "../../library/general/religion.yaml#/general-religion_relationships"
+        - $ref: "../../library/general/religion.yaml#/general-religion_relationshipIds"
 
 # shared
 SimpleModel_general-religion_id:
@@ -15,13 +14,5 @@ SimpleModel_general-religion_id:
       type: integer
       format: int32
       example: 1
-      readOnly: true
-      description: Unique identifier of the object
-
-SimpleModel_general-religion_name:
-  properties:
-    name:
-      type: string
-      example: "State"
       readOnly: true
       description: Unique identifier of the object

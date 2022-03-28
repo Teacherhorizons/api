@@ -1,25 +1,120 @@
-# standard properties
-general-educationLevel_standardProperties_all:
+# general-educationLevel_metaProperties_shared:
+#   properties:
+#     creationDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
+#     latestUpdateDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+general-educationLevel_attributes:
   allOf:
-    - $ref: "#/general-educationLevel_standardProperties_shared"
-    - $ref: "#/general-educationLevel_standardProperties_adminOnly"
+    - $ref: "#/general-educationLevel_properties_name"
+    # - $ref: "#/general-educationLevel_properties_creationDate"
+    # - $ref: "#/general-educationLevel_properties_latestUpdateDate"
 
-general-educationLevel_standardProperties_shared:
+# # relationshipIds
+# general-educationLevel_relationshipIds:
+#   allOf:
+#     - $ref: "#/general-educationLevel_properties_creationUserId"
+#     - $ref: "#/general-educationLevel_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+# general-educationLevel_relationships:
+#   allOf:
+#     - $ref: "#/general-educationLevel_properties_creationUser"
+#     - $ref: "#/general-educationLevel_properties_latestUpdateUser"
+
+#properties
+general-educationLevel_properties_id:
   properties:
     id:
-      type: integer
-      example: 1
-    name:
-      type: string
-      example: PhD
+      $ref: "#/general-educationLevel_id"
 
-general-educationLevel_standardProperties_adminOnly:
+general-educationLevel_properties_name:
   properties:
-    id:
-      type: integer
-      example: 1
     name:
-      type: string
-      example: PhD
+      $ref: "#/general-educationLevel_name"
 
-# relationship properties
+# general-educationLevel_properties_creationDate:
+#   properties:
+#     creationDate:
+#       $ref: "#/general-educationLevel_creationDate"
+
+# general-educationLevel_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/general-educationLevel_latestUpdateDate"
+
+# general-educationLevel_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/general-educationLevel_creationUserId"
+
+# general-educationLevel_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/general-educationLevel_latestUpdateUserId"
+
+# general-educationLevel_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/general-educationLevel_creationUser"
+
+# general-educationLevel_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/general-educationLevel_latestUpdateUser"
+
+#attributes
+general-educationLevel_id:
+  type: integer
+  example: 1
+
+general-educationLevel_name:
+  type: string
+  example: Secondary Subject Teacher
+
+# general-educationLevel_creationDate:
+#   type: string
+#   format: date-time
+#   example: 2011-02-07T15:53:34Z
+
+# general-educationLevel_latestUpdateDate:
+#   type: string
+#   format: date-time
+#   example: 2011-02-07T15:53:34Z
+
+# general-educationLevel_creationUserId:
+#   type: integer
+#   example: 1
+#   description: Relationship to User
+
+# general-educationLevel_latestUpdateUserId:
+#   type: integer
+#   example: 1
+#   description: Relationship to User
+
+# general-educationLevel_creationUser:
+#   type: object
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to User
+
+# general-educationLevel_latestUpdateUser:
+#   type: object
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to User
+

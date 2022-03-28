@@ -1,65 +1,14 @@
-SimpleModel_educationLevel:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      all: "#/SimpleModel_educationLevel_all"
-      admin: "#/SimpleModel_educationLevel_admin"
-      adminOnly: "#/SimpleModel_educationLevel_adminOnly"
-      school: "#/SimpleModel_educationLevel_school"
-      teacher: "#/SimpleModel_educationLevel_teacher"
-
-SimpleModel_educationLevel_all:
+SimpleModel_general-educationLevel:
   allOf:
-    - $ref: "#/SimpleModel_educationLevel"
+    - $ref: "#/SimpleModel_general-educationLevel"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_educationLevel_id"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_all"
-        # $ref: "../../library/general/educationLevel.yaml#/educationLevel_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_general-educationLevel_id"
+        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_attributes"
 
-SimpleModel_educationLevel_admin:
-  allOf:
-    - $ref: "#/SimpleModel_educationLevel"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_educationLevel_id"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_adminOnly"
-        # $ref: "../../library/general/educationLevel.yaml#/educationLevel_relationshipProperties_adminOnly"
-
-SimpleModel_educationLevel_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_educationLevel"
-    - type: object
-      allOf:
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_adminOnly"
-        # $ref: "../../library/general/educationLevel.yaml#/educationLevel_relationshipProperties_adminOnly"
-
-SimpleModel_educationLevel_school:
-  allOf:
-    - $ref: "#/SimpleModel_educationLevel"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_educationLevel_id"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
-        # - $ref: "../../library/general/educationLevel.yaml#/educationLevel_relationshipProperties_shared"
-
-SimpleModel_educationLevel_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_educationLevel"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_educationLevel_id"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_standardProperties_shared"
-        # - $ref: "../../library/general/educationLevel.yaml#/educationLevel_relationshipProperties_shared"
 
 # shared
-SimpleModel_educationLevel_id:
+SimpleModel_general-educationLevel_id:
   properties:
     id:
       type: integer
