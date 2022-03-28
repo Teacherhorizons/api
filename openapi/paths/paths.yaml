@@ -8,11 +8,11 @@
   $ref: "./../paths/current/admin-notes/teacher-member-number-admin-notes.yaml"
 
 # applications
+/applications:
+  $ref: "./../paths/proposed/applications/applications.yaml"
+
 /application/{applicationId}:
   $ref: "./../paths/proposed/applications/application.yaml"
-
-/applications/{applicationId}:
-  $ref: "./../paths/proposed/applications/applications.yaml"
 
 /applicationEvents:
   $ref: "./../paths/proposed/applications/applicationEvents.yaml"

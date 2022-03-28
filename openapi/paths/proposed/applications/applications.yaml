@@ -5,13 +5,6 @@ get:
     - status-proposed
   summary: Get list of first 20 applications (proposed)
   parameters:
-    - in: path
-      name: applicationId
-      required: true
-      example: 12
-      schema:
-        type: integer
-        format: int32
     - in: query
       name: schema
       required: true
@@ -84,3 +77,46 @@ get:
                       example: "Related entity not found"
   security:
     - api_key: []
+
+post:
+  description: ""
+  operationId: postApplication
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: application
+                attributes:
+                  allOf:
+                    - type: object
+                    - $ref: "../../../components/models/library/application/application.yaml#/application_standardProperties_shared"
+                    - required:
+                        - job
+                        - memberNumber
+  responses:
+    "201":
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    example: Application
+                  id:
+                    type: string
+                    example: "2"
+      description: Item created
+  summary: Create application (proposed)
+  tags:
+    - applications
