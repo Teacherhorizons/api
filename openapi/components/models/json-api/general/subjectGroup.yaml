@@ -1,0 +1,39 @@
+JsonApiModel_general-subjectGroup:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-subjectGroup_type"
+    id:
+      $ref: "#/JsonApiModel_general-subjectGroup_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_general-subjectGroup_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_general-subjectGroup_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_general-subjectGroup_type:
+  type: string
+  example: general-subjectGroup
+  description: general-subjectGroup
+  readOnly: true
+
+JsonApiModel_general-subjectGroup_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-subjectGroup (string)
