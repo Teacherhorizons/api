@@ -1,22 +1,5 @@
 JsonApiModel_error_400:
-  type: object
-  properties:
-    status:
-      type: string
-      example: "400"
-    code:
-      type: string
-      description: One of a list of possible values (previously 'frontEndErrorSlug')
-      example: "missingMandatoryParameter"
-    title:
-      type: string
-      example: "Invalid parameters"
-    detail:
-      type: string
-      example: "Parameter 'foo' or 'bar' must be passed"
-
-JsonApiModel_error_404:
-  description: Related entity not found
+  description: BAD_REQUEST
   content:
     application/json:
       schema:
@@ -25,41 +8,206 @@ JsonApiModel_error_404:
           errors:
             type: array
             items:
-              type: object
-              properties:
-                status:
-                  type: string
-                  example: "404"
-                code:
-                  type: string
-                  description: One of a list of possible values (previously 'frontEndErrorSlug')
-                  example: "entityNotFoundForId"
-                title:
-                  type: string
-                  example: "Related entity not found"
-# list of possible values for 'code'
-# accessNotPermitted - 400
-# invalidJSONInput - 400
-# invalidOrExpiredAuthorisationToken - 401
-# invalidOrExpiredUploadToken - 401
-# insufficientPermissions
-# missingMandatoryParameter - 400
-# missingMandatoryJSONfield - 400
-# nonExistentParameterPassed
-# entityNotFoundForId - 404
-# entityNotFoundForSlug - 404
-# entityNotFoundForAlias - 404
-# secondaryEntityNotFound - 404
-# wrongDataType
-# updateFailed
-# JSONfieldCannotBeNull
-# integrityViolation
-# contactSupport - 400
-# fileTypeLimitReached - 400
-# fileOnServerContactSupport - 401
-# fileTooLargeForUpload
-# cannotManipulateFile - 400
-# entityAlreadyExists
-# callToExternalServiceFailed - 404
-# callFailed - 400
-# valdationFailed
+              anyOf:
+                - $ref: "#/JsonApiModel_error_accessNotPermitted"
+                - $ref: "#/JsonApiModel_error_missingMandatoryParameter"
+            description: Foo bar
+            example:
+              - status: "400"
+                code: "accessNotPermitted"
+                title: "Access not permitted"
+                detail: "A school user does not have access to this functionality"
+              - status: "400"
+                code: "missingMandatoryParameter"
+                title: "Missing mandatory parameter"
+                detail: "Parameter 'foo' is missing"
+
+JsonApiModel_error_401:
+  description: UNAUTHORIZED
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_invalidOrExpiredAuthorisationToken"
+
+JsonApiModel_error_404:
+  description: NOT_FOUND
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_entityNotFoundForId"
+                - $ref: "#/JsonApiModel_error_entityNotFoundForSlug"
+                - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
+# 400 - BAD_REQUEST
+# Done: accessNotPermitted, missingMandatoryParameter
+# TODO AS: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
+JsonApiModel_error_accessNotPermitted:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'accessNotPermitted'
+      example: "accessNotPermitted"
+    title:
+      type: string
+      description: Always has value 'Access not permitted'
+      example: "Access not permitted"
+    detail:
+      type: string
+      description: Description of the error
+      example: "A school user does not have access to this functionality"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_missingMandatoryParameter:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'missingMandatoryParameter'
+      example: "missingMandatoryParameter"
+    title:
+      type: string
+      description: Always has value 'Missing mandatory parameter'
+      example: "Missing mandatory parameter"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Parameter 'foo' is missing"
+  required:
+    - status
+    - code
+    - title
+
+# 401 - UNAUTHORIZED
+# Done: invalidOrExpiredAuthorisationToken
+# TODO: invalidOrExpiredUploadToken, fileOnServerContactSupport
+JsonApiModel_error_invalidOrExpiredAuthorisationToken:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'invalidOrExpiredAuthorisationToken'
+      example: "invalidOrExpiredAuthorisationToken"
+    title:
+      type: string
+      description: Always has value 'Invalid or expired authorisation token'
+      example: "Invalid or expired authorisation token"
+    detail:
+      type: string
+      description: Description of the error
+  required:
+    - status
+    - code
+    - title
+
+# 403 - FORBIDDEN
+# Done:
+# TODO: insufficientPermissions
+
+# 404 - NOT_FOUND
+# Done: entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias
+# TODO: secondaryEntityNotFound, callToExternalServiceFailed
+JsonApiModel_error_entityNotFoundForId:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'entityNotFoundForId'
+      example: "entityNotFoundForId"
+    title:
+      type: string
+      description: Always has value 'Entity not found for id'
+      example: "Entity not found for id"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Foo with id 123 not found"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_entityNotFoundForSlug:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'entityNotFoundForSlug'
+      example: "entityNotFoundForSlug"
+    title:
+      type: string
+      description: Always has value 'Entity not found for slug'
+      example: "Entity not found for slug"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Foo with slug foo-slug not found"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_entityNotFoundForAlias:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'entityNotFoundForAlias'
+      example: "entityNotFoundForAlias"
+    title:
+      type: string
+      description: Always has value 'Entity not found for alias'
+      example: "Entity not found for alias"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Foo with alias Alias not found"
+  required:
+    - status
+    - code
+    - title
+# 413 - PAYLOAD_TOO_LARGE
+# Done:
+# TODO: fileTooLargeForUpload
+
+# 422 - UNPROCESSABLE_ENTITY
+# Done:
+# TODO: nonExistentParameterPassed, wrongDataType, updateFailed, JSONfieldCannotBeNull, integrityViolation, entityAlreadyExists, valdationFailed

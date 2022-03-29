@@ -40,53 +40,11 @@ get:
         application/json:
           schema:
             $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
-
     "400":
-      description: Invalid id supplied
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              errors:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    code:
-                      type: string
-                      description: One of a list of possible values (previously 'frontEndErrorSlug')
-                      example: "missingMandatoryParameter"
-                    status:
-                      type: string
-                      example: "400"
-                    title:
-                      type: string
-                      example: "Invalid id supplied"
-                    detail:
-                      type: string
-                      example: "Id must be an integer"
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "404":
-      description: Region not found
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              errors:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    code:
-                      type: string
-                      description: One of a list of possible values (previously 'frontEndErrorSlug')
-                      example: "entityNotFoundForId"
-                    status:
-                      type: string
-                      example: "404"
-                    title:
-                      type: string
-                      example: "Related entity not found"
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
   security:
     - api_key: []

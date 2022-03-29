@@ -117,6 +117,12 @@ post:
                     type: string
                     example: "2"
       description: Item created
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+    "404":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
   summary: Create application (proposed)
   tags:
     - applications
