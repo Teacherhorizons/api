@@ -1,0 +1,26 @@
+JsonApiModel_general-worldLanguage:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-worldLanguage_type"
+    id:
+      $ref: "#/JsonApiModel_general-worldLanguage_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_general-worldLanguage_type:
+  type: string
+  example: general-worldLanguage
+  description: general-worldLanguage
+  readOnly: true
+
+JsonApiModel_general-worldLanguage_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-worldLanguage (string)

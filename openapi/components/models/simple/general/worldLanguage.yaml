@@ -1,0 +1,28 @@
+SimpleModel_general-worldLanguage:
+  allOf:
+    - $ref: "#/SimpleModel_general-worldLanguage"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-worldLanguage_type"
+        - $ref: "#/SimpleModel_general-worldLanguage_id"
+        - $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_properties_name"
+
+# shared
+
+SimpleModel_general-worldLanguage_type:
+  properties:
+    type:
+      type: string
+      example: general-worldLanguage
+      description: general-worldLanguage
+      readOnly: true
+
+SimpleModel_general-worldLanguage_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

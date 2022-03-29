@@ -148,10 +148,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_lists-academicSystem" />
 
-  # - name: simple-model-general-worldLanguage
-  #   x-displayName: Simple model - general-worldLanguage
-  #   description: |
-  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-worldLanguage" />
+  - name: simple-model-general-worldLanguage
+    x-displayName: Simple model - general-worldLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-worldLanguage" />
 
   # - name: simple-model-lists
   #   x-displayName: Lists
@@ -194,6 +194,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/School" />
 
+  - name: simple-model-school-academicSystem
+    x-displayName: Simple model - school-academicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-academicSystem" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -207,6 +212,11 @@ tags:
     x-displayName: JSON:API model - application-action
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
+
+  - name: json-api-model-application
+    x-displayName: JSON:API model - application
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
 
   - name: json-api-model-application-applicationEvent
     x-displayName: JSON:API model - application-applicationEvent
@@ -269,10 +279,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
 
-  # - name: json-api-model-general-worldLanguage
-  #   x-displayName: JSON:API model - general-worldLanguage
-  #   description: |
-  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
+  - name: json-api-model-general-worldLanguage
+    x-displayName: JSON:API model - general-worldLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
 
   # tags - JSON:API models - regional
   - name: json-api-model-city
@@ -295,6 +305,12 @@ tags:
     x-displayName: JSON:API model - teacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
+
+  # tags - JSON:API models - school
+  - name: json-api-model-teacher
+    x-displayName: JSON:API model - school-academicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-academicSystem" />
 
 x-tagGroups:
   - name: Simple models
@@ -321,10 +337,12 @@ x-tagGroups:
       - simple-model-regional-country
       - simple-model-regional-region
       - simple-model-school
+      - simple-model-school-academicSystem
       - simple-model-teacher
 
   - name: JSON:API models
     tags:
+      - json-api-model-application
       - json-api-model-application-action
       - json-api-model-application-applicationEvent
       - json-api-model-application-eventType
@@ -342,6 +360,7 @@ x-tagGroups:
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
+      - json-api-model-school-academicSystem
       - json-api-model-teacher
 
   - name: API

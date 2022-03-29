@@ -1,78 +1,11 @@
 SimpleModel_application:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      all: "#/SimpleModel_application_all"
-      admin: "#/SimpleModel_application_admin"
-      adminOnly: "#/SimpleModel_application_adminOnly"
-      school: "#/SimpleModel_application_school"
-      teacher: "#/SimpleModel_application_teacher"
-
-SimpleModel_application_all:
   allOf:
     - $ref: "#/SimpleModel_application"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_standardProperties_all"
-
-SimpleModel_application_admin:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_standardProperties_shared"
-        - $ref: "../../library/application/application.yaml#/application_filter_additionalProperties"
-
-SimpleModel_application_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - type: object
-      properties:
-        recommendationText:
-          $ref: "../../library/application/application.yaml#/application_recommendationText"
-        creationDate:
-          $ref: "../../library/application/application.yaml#/application_creationDate"
-        creationUserId:
-          $ref: "../../library/application/application.yaml#/application_creationUserId"
-        latestUpdateDate:
-          $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
-        latestUpdateUserId:
-          $ref: "../../library/application/application.yaml#/application_latestUpdateUserId"
-        statusId:
-          $ref: "../../library/application/application.yaml#/application_statusId"
-        jobId:
-          $ref: "../../library/application/application.yaml#/application_jobId"
-        teacherId:
-          $ref: "../../library/application/application.yaml#/application_teacherId"
-        id:
-          $ref: "../../library/application/application.yaml#/application_id"
-        attributes:
-          type: object
-          allOf:
-            - $ref: "../../library/application/application.yaml#/application_filter_additionalProperties"
-
-SimpleModel_application_school:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_standardProperties_shared"
-
-SimpleModel_application_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_standardProperties_shared"
+        - $ref: "../../library/application/application.yaml#/application_attributes"
+        - $ref: "../../library/application/application.yaml#/application_relationshipIds"
 
 # shared
 SimpleModel_application_id:

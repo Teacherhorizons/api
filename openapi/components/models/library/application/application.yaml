@@ -1,112 +1,217 @@
-# standard properties
-application_standardProperties_all:
+application_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+# attributes
+application_attributes:
   allOf:
-    - $ref: "#/application_standardProperties_shared"
+    
+    - $ref: "#/application_properties_creationDate"
+    - $ref: "#/application_properties_latestUpdateDate"
 
-application_standardProperties_shared:
+# relationshipIds
+application_relationshipIds:
+  allOf:
+    - $ref: "#/application_properties_jobId"
+    - $ref: "#/application_properties_creationUserId"
+    - $ref: "#/application_properties_latestUpdateUserId"
+    - $ref: "#/application_properties_teacherId"
+    - $ref: "#/application_properties_thMatchTypeId"
+    - $ref: "#/application_properties_statusId"
+
+# attribute relationships
+
+# relationships
+application_relationships:
+  allOf:
+    - $ref: "#/application_properties_job"
+    - $ref: "#/application_properties_creationUser"
+    - $ref: "#/application_properties_latestUpdateUser"
+    - $ref: "#/application_properties_teacher"
+    - $ref: "#/application_properties_thMatchType"
+    - $ref: "#/application_properties_status"
+
+#properties
+application_properties_id:
   properties:
-    job:
-      type: object
-      properties:
-        id:
-          type: string
-          example: "1"
-    memberNumber:
-      type: number
-      example: 34567
+    id:
+      $ref: "#/application_id"
 
-application_filter_additionalProperties:
+application_properties_jobId:
   properties:
-    thMatchType:
-      type: object
-      properties:
-        id:
-          type: string
-          example: "1"
-    recommendationText:
-      type: object
-      example: Foo bar
-
-application_thMatchTypeId:
-  type: integer
-  example: 1
-application_recommendationText:
-  type: string
-  example:
-  description: Max 10,000 characters
-application_creationDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:35Z
-application_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-application_latestUpdateDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:35Z
-application_latestUpdateUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-application_statusId:
-  type: integer
-  example: 1
-  description: Relationship to application_status
-application_jobId:
-  type: integer
-  example:
-  description: Relationship to Job
-application_teacherId:
-  type: integer
-  example:
-  description: Relationship to Teacher
-application_id:
-  type: integer
-  example:
-
-application_properties_recommendationText:
-  properties:
-    recommendationText:
-      $ref: "#/application_recommendationText"
+    typeId:
+      $ref: "#/application_jobId"
 
 application_properties_creationDate:
   properties:
     creationDate:
       $ref: "#/application_creationDate"
 
-application_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/application_creationUserId"
-
 application_properties_latestUpdateDate:
   properties:
     latestUpdateDate:
       $ref: "#/application_latestUpdateDate"
+
+application_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/application_creationUserId"
 
 application_properties_latestUpdateUserId:
   properties:
     latestUpdateUserId:
       $ref: "#/application_latestUpdateUserId"
 
-application_properties_statusId:
-  properties:
-    statusId:
-      $ref: "#/application_statusId"
-
-application_properties_jobId:
-  properties:
-    jobId:
-      $ref: "#/application_jobId"
-
 application_properties_teacherId:
   properties:
-    teacherId:
+    latestUpdateUser:
       $ref: "#/application_teacherId"
 
-application_properties_id:
+application_properties_statusId:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_statusId"
+
+application_properties_thMatchTypeId:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_thMatchTypeId"
+
+application_properties_job:
+  properties:
+    type:
+      $ref: "#/application_job"
+
+application_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/application_creationUser"
+
+application_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_latestUpdateUser"
+
+application_properties_teacher:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_teacher"
+
+application_properties_status:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_status"
+
+application_properties_thMatchType:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application_thMatchType"
+
+#attributes
+application_id:
+  type: integer
+  example: 1
+
+application_name:
+  type: string
+  example: Secondary Subject Teacher
+
+application_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application_jobId:
+  type: integer
+  example: 1
+  description: Relationship to Job
+
+application_creationUser:
+  type: object
   properties:
     id:
-      $ref: "#/application_id"
+      type: string
+      example: "1"
+      description: Relationship to User
+
+application_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+application_statusId:
+  type: integer
+  example: 1
+  description: Relationship to application_status
+
+application_job:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Job
+
+application_teacherId:
+  type: integer
+  example: 
+  description: Relationship to teacher
+
+application_thMatchTypeId:
+  type: integer
+  example: 1
+  description: Relationship to application-thMatchType
+
+application_recommendationText:
+  type: string
+  example: 
+  description: Max 10,000 characters
+
+application_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to teacher
+
+application_thMatchType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to application-thMatchType
+
+application_status:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to application_status
