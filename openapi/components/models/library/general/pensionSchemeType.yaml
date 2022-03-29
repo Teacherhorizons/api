@@ -10,62 +10,11 @@ general-pensionSchemeType_metaProperties_shared:
       example: 2011-02-07T15:53:34Z
 
 #filter properties
-general-pensionSchemeType_filter_additionalProperties:
-  type: object
-  description: Direct attributes
-  properties:
-    application.id:
-      type: number
-      example: 1
-    application.teacher.memberNumber:
-      type: number
-      example: 123456
-
-#relationship properties
-general-pensionSchemeType_relationshipProperties_adminOnly:
-  properties:
-    creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-    latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User
-
-# general-pensionSchemeType_post_request_option1:
-#   properties:
-#     date:
-#       type: string
-#       format: date-time
-#       example: 2011-02-07T15:53:34Z
-#     notes:
-#       type: string
-#       example: Foo bar
-
-# general-pensionSchemeType_post_request_option2:
-#   properties:
-#     date:
-#       $ref: "#/general-pensionSchemeType_date"
-#     notes:
-#       $ref: "#/general-pensionSchemeType_notes"
-
-# general-pensionSchemeType_post_request_option3:
-#   allOf:
-#     - $ref: "#/general-pensionSchemeType_properties_date"
-#     - $ref: "#/general-pensionSchemeType_properties_notes"
-
-# general-pensionSchemeType_post_200:
-#   allOf:
-#     - $ref: "#/general-pensionSchemeType_properties_date"
-
-# general-pensionSchemeType_post_404:
-#   allOf:
-#     - $ref: "#/general-pensionSchemeType_properties_notes"
 
 # attributes
 general-pensionSchemeType_attributes:
   allOf:
+    - $ref: "#/general-pensionSchemeType_properties_name"
     - $ref: "#/general-pensionSchemeType_properties_creationDate"
     - $ref: "#/general-pensionSchemeType_properties_latestUpdateDate"
 
@@ -83,14 +32,16 @@ general-pensionSchemeType_relationships:
     - $ref: "#/general-pensionSchemeType_properties_creationUser"
     - $ref: "#/general-pensionSchemeType_properties_latestUpdateUser"
 
-
 #properties
-
 general-pensionSchemeType_properties_id:
   properties:
     id:
       $ref: "#/general-pensionSchemeType_id"
 
+general-pensionSchemeType_properties_name:
+  properties:
+    name:
+      $ref: "#/general-pensionSchemeType_name"
 
 general-pensionSchemeType_properties_creationDate:
   properties:
@@ -112,6 +63,7 @@ general-pensionSchemeType_properties_latestUpdateUserId:
     latestUpdateUserId:
       $ref: "#/general-pensionSchemeType_latestUpdateUserId"
 
+
 general-pensionSchemeType_properties_creationUser:
   properties:
     creationUser:
@@ -123,10 +75,13 @@ general-pensionSchemeType_properties_latestUpdateUser:
       $ref: "#/general-pensionSchemeType_latestUpdateUser"
 
 #attributes
-
 general-pensionSchemeType_id:
   type: integer
   example: 1
+
+general-pensionSchemeType_name:
+  type: string
+  example: Secondary Subject Teacher
 
 general-pensionSchemeType_creationDate:
   type: string
@@ -148,8 +103,6 @@ general-pensionSchemeType_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
-#relationship
-
 general-pensionSchemeType_creationUser:
   type: object
   properties:
@@ -166,9 +119,6 @@ general-pensionSchemeType_latestUpdateUser:
       example: "1"
       description: Relationship to User
 
-# id
-# name
-# creationDate
-# latestUpdateDate
-# creationUserId
-# latestUpdateUserId
+
+
+

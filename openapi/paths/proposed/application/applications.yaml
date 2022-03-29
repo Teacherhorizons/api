@@ -22,7 +22,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/application/application.yaml#/application_standardProperties_all"
+          $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
           # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
         example:
           application: application id, school name, job id
@@ -96,7 +96,7 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                    - $ref: "../../../components/models/library/application/application.yaml#/application_standardProperties_shared"
+                      $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
                     - required:
                         - job
                         - memberNumber
