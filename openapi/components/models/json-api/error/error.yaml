@@ -70,6 +70,19 @@ JsonApiModel_error_401:
                 - $ref: "#/JsonApiModel_error_invalidOrExpiredUploadToken" 
                 - $ref: "#/JsonApiModel_error_fileOnServerContactSupport"
 
+JsonApiModel_error_403:
+  description: NOT_FOUND
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_insufficientPermissions"
+
 JsonApiModel_error_404:
   description: NOT_FOUND
   content:
@@ -84,6 +97,9 @@ JsonApiModel_error_404:
                 - $ref: "#/JsonApiModel_error_entityNotFoundForId"
                 - $ref: "#/JsonApiModel_error_entityNotFoundForSlug"
                 - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
+                - $ref: "#/JsonApiModel_error_secondaryEntityNotFound"
+                - $ref: "#/JsonApiModel_error_callToExternalServiceFailed"
+                
 # 400 - BAD_REQUEST
 # Done: accessNotPermitted, missingMandatoryParameter
 # TODO AS - DONE: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
@@ -354,6 +370,28 @@ JsonApiModel_error_fileOnServerContactSupport:
 # 403 - FORBIDDEN
 # Done:
 # TODO: insufficientPermissions
+JsonApiModel_error_insufficientPermissions:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'insufficientPermissions'
+      example: "insufficientPermissions"
+    title:
+      type: string
+      description: Always has value 'insufficientPermissions'
+      example: "insufficientPermissions"
+    detail:
+      type: string
+      description: Description of the error
+  required:
+    - status
+    - code
+    - title
 
 # 404 - NOT_FOUND
 # Done: entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias
@@ -429,6 +467,57 @@ JsonApiModel_error_entityNotFoundForAlias:
     - status
     - code
     - title
+
+JsonApiModel_error_secondaryEntityNotFound:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'secondaryEntityNotFound'
+      example: "secondaryEntityNotFound"
+    title:
+      type: string
+      description: Always has value 'Secondary entity not found'
+      example: "secondaryEntityNotFound"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Secondary entity not found"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_callToExternalServiceFailed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'secondaryEntityNotFound'
+      example: "secondaryEntityNotFound"
+    title:
+      type: string
+      description: Always has value 'Secondary entity not found'
+      example: "secondaryEntityNotFound"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Secondary entity not found"
+  required:
+    - status
+    - code
+    - title
+
+    
+
 # 413 - PAYLOAD_TOO_LARGE
 # Done:
 # TODO: fileTooLargeForUpload

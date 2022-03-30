@@ -1,0 +1,18 @@
+SimpleModel_school-curriculumType:
+  allOf:
+    - $ref: "#/SimpleModel_school-curriculumType"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-curriculumType_id"
+        - $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_attributes"
+        - $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_relationshipIds"
+
+# shared
+SimpleModel_school-curriculumType_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
