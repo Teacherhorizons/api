@@ -71,7 +71,7 @@ JsonApiModel_error_401:
                 - $ref: "#/JsonApiModel_error_fileOnServerContactSupport"
 
 JsonApiModel_error_403:
-  description: NOT_FOUND
+  description: FORBIDDEN
   content:
     application/json:
       schema:
@@ -99,7 +99,39 @@ JsonApiModel_error_404:
                 - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
                 - $ref: "#/JsonApiModel_error_secondaryEntityNotFound"
                 - $ref: "#/JsonApiModel_error_callToExternalServiceFailed"
-                
+
+JsonApiModel_error_413:
+  description: PAYLOAD_TOO_LARGE
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_fileTooLargeForUpload"
+
+JsonApiModel_error_422:
+  description: UNPROCESSABLE_ENTITY
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_nonExistentParameterPassed"
+                - $ref: "#/JsonApiModel_error_wrongDataType"
+                - $ref: "#/JsonApiModel_error_updateFailed"
+                - $ref: "#/JsonApiModel_error_JSONfieldCannotBeNull"
+                - $ref: "#/JsonApiModel_error_integrityViolation"
+                - $ref: "#/JsonApiModel_error_entityAlreadyExists"
+                - $ref: "#/JsonApiModel_error_validationFailed"
+
 # 400 - BAD_REQUEST
 # Done: accessNotPermitted, missingMandatoryParameter
 # TODO AS - DONE: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
@@ -303,8 +335,8 @@ JsonApiModel_error_invalidOrExpiredAuthorisationToken:
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: "400"
+      description: Always has value '401'
+      example: "401"
     code:
       type: string
       description: Always has value 'invalidOrExpiredAuthorisationToken'
@@ -326,8 +358,8 @@ JsonApiModel_error_invalidOrExpiredUploadToken:
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: "400"
+      description: Always has value '401'
+      example: "401"
     code:
       type: string
       description: Always has value 'invalidOrExpiredUploadToken'
@@ -349,8 +381,8 @@ JsonApiModel_error_fileOnServerContactSupport:
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: "400"
+      description: Always has value '401'
+      example: "401"
     code:
       type: string
       description: Always has value 'fileOnServerContactSupport'
@@ -369,14 +401,14 @@ JsonApiModel_error_fileOnServerContactSupport:
 
 # 403 - FORBIDDEN
 # Done:
-# TODO: insufficientPermissions
+# DONE: insufficientPermissions
 JsonApiModel_error_insufficientPermissions:
   type: object
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: "400"
+      description: Always has value '403'
+      example: "403"
     code:
       type: string
       description: Always has value 'insufficientPermissions'
@@ -395,7 +427,7 @@ JsonApiModel_error_insufficientPermissions:
 
 # 404 - NOT_FOUND
 # Done: entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias
-# TODO: secondaryEntityNotFound, callToExternalServiceFailed
+# DONE: secondaryEntityNotFound, callToExternalServiceFailed
 JsonApiModel_error_entityNotFoundForId:
   type: object
   properties:
@@ -516,12 +548,202 @@ JsonApiModel_error_callToExternalServiceFailed:
     - code
     - title
 
-    
-
 # 413 - PAYLOAD_TOO_LARGE
 # Done:
-# TODO: fileTooLargeForUpload
+# DONE: fileTooLargeForUpload
+
+JsonApiModel_error_fileTooLargeForUpload:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '413'
+      example: "413"
+    code:
+      type: string
+      description: Always has value 'fileTooLargeForUpload'
+      example: "fileTooLargeForUpload"
+    title:
+      type: string
+      description: Always has value 'fileTooLargeForUpload'
+      example: "fileTooLargeForUpload"
+    detail:
+      type: string
+      description: Description of the error
+      example: "fileTooLargeForUpload"
+  required:
+    - status
+    - code
+    - title
 
 # 422 - UNPROCESSABLE_ENTITY
 # Done:
-# TODO: nonExistentParameterPassed, wrongDataType, updateFailed, JSONfieldCannotBeNull, integrityViolation, entityAlreadyExists, valdationFailed
+# TODO: nonExistentParameterPassed, wrongDataType, updateFailed, JSONfieldCannotBeNull, integrityViolation, entityAlreadyExists, validationFailed
+
+JsonApiModel_error_nonExistentParameterPassed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'nonExistentParameterPassed'
+      example: "nonExistentParameterPassed"
+    title:
+      type: string
+      description: Always has value 'nonExistentParameterPassed'
+      example: "nonExistentParameterPassed"
+    detail:
+      type: string
+      description: Description of the error
+      example: "nonExistentParameterPassed"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_wrongDataType:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'wrongDataType'
+      example: "wrongDataType"
+    title:
+      type: string
+      description: Always has value 'wrongDataType'
+      example: "wrongDataType"
+    detail:
+      type: string
+      description: Description of the error
+      example: "wrongDataType"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_updateFailed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'updateFailed'
+      example: "updateFailed"
+    title:
+      type: string
+      description: Always has value 'updateFailed'
+      example: "updateFailed"
+    detail:
+      type: string
+      description: Description of the error
+      example: "updateFailed"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_JSONfieldCannotBeNull:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'JSONfieldCannotBeNull'
+      example: "JSONfieldCannotBeNull"
+    title:
+      type: string
+      description: Always has value 'JSONfieldCannotBeNull'
+      example: "JSONfieldCannotBeNull"
+    detail:
+      type: string
+      description: Description of the error
+      example: "JSONfieldCannotBeNull"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_integrityViolation:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'integrityViolation'
+      example: "integrityViolation"
+    title:
+      type: string
+      description: Always has value 'integrityViolation'
+      example: "integrityViolation"
+    detail:
+      type: string
+      description: Description of the error
+      example: "integrityViolation"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_entityAlreadyExists:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'entityAlreadyExists'
+      example: "entityAlreadyExists"
+    title:
+      type: string
+      description: Always has value 'entityAlreadyExists'
+      example: "entityAlreadyExists"
+    detail:
+      type: string
+      description: Description of the error
+      example: "entityAlreadyExists"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_validationFailed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '422'
+      example: "422"
+    code:
+      type: string
+      description: Always has value 'validationFailed'
+      example: "validationFailed"
+    title:
+      type: string
+      description: Always has value 'validationFailed'
+      example: "validationFailed"
+    detail:
+      type: string
+      description: Description of the error
+      example: "validationFailed"
+  required:
+    - status
+    - code
+    - title
