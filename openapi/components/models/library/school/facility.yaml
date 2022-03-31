@@ -1,0 +1,124 @@
+school-facility_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+school-facility_attributes:
+  allOf:
+    - $ref: "#/school-facility_properties_name"
+    - $ref: "#/school-facility_properties_creationDate"
+    - $ref: "#/school-facility_properties_latestUpdateDate"
+
+# relationshipIds
+school-facility_relationshipIds:
+  allOf:
+    - $ref: "#/school-facility_properties_creationUserId"
+    - $ref: "#/school-facility_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+school-facility_relationships:
+  allOf:
+    - $ref: "#/school-facility_properties_creationUser"
+    - $ref: "#/school-facility_properties_latestUpdateUser"
+
+#properties
+school-facility_properties_id:
+  properties:
+    id:
+      $ref: "#/school-facility_id"
+
+school-facility_properties_name:
+  properties:
+    name:
+      $ref: "#/school-facility_name"
+
+school-facility_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-facility_creationDate"
+
+school-facility_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-facility_latestUpdateDate"
+
+school-facility_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-facility_creationUserId"
+
+school-facility_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-facility_latestUpdateUserId"
+
+
+school-facility_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-facility_creationUser"
+
+school-facility_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-facility_latestUpdateUser"
+
+#attributes
+school-facility_id:
+  type: integer
+  example: 1
+
+school-facility_name:
+  type: string
+  example: Outdoor Pitches
+
+school-facility_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-facility_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-facility_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-facility_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-facility_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+school-facility_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+
+
+

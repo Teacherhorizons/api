@@ -1,0 +1,39 @@
+JsonApiModel_school-curriculumType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-curriculumType_type"
+    id:
+      $ref: "#/JsonApiModel_school-curriculumType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-curriculumType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-curriculumType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-curriculumType_type:
+  type: string
+  example: school-curriculumType
+  description: school-curriculumType
+  readOnly: true
+
+JsonApiModel_school-curriculumType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-curriculumType (string)

@@ -11,6 +11,13 @@ JsonApiModel_error_400:
               anyOf:
                 - $ref: "#/JsonApiModel_error_accessNotPermitted"
                 - $ref: "#/JsonApiModel_error_missingMandatoryParameter"
+                - $ref: "#/JsonApiModel_error_invalidJSONInput"
+                - $ref: "#/JsonApiModel_error_missingMandatoryJSONfield"
+                - $ref: "#/JsonApiModel_error_contactSupport"
+                - $ref: "#/JsonApiModel_error_fileTypeLimitReached"
+                - $ref: "#/JsonApiModel_error_cannotManipulateFile"
+                - $ref: "#/JsonApiModel_error_callFailed"
+
             description: Foo bar
             example:
               - status: "400"
@@ -21,6 +28,32 @@ JsonApiModel_error_400:
                 code: "missingMandatoryParameter"
                 title: "Missing mandatory parameter"
                 detail: "Parameter 'foo' is missing"
+              - status: "400"
+                code: "invalidJSONInput"
+                title: "Invalid JSON input"
+                detail: ""
+              - status: "400"
+                code: "missingMandatoryJSONfield"
+                title: "Missing mandatory JSON field"
+                detail: "JSON file 'foo' is missing"
+              - status: "400"
+                code: "contactSupport"
+                title: "Contact support"
+                detail: "Please contact support to resolve the issue"
+              - status: "400"
+                code: "fileTypeLimitReached"
+                title: "File type limit reached"
+                detail: "Provided file type cannot be used" 
+              - status: "400"
+                code: "cannotManipulateFile"
+                title: "Cannot manipulate file"
+                detail: "File 'foo' cannot be updated"
+              - status: "400"
+                code: "callFailed"
+                title: "callFailed"
+                detail: ""
+                
+
 
 JsonApiModel_error_401:
   description: UNAUTHORIZED
@@ -34,6 +67,21 @@ JsonApiModel_error_401:
             items:
               anyOf:
                 - $ref: "#/JsonApiModel_error_invalidOrExpiredAuthorisationToken"
+                - $ref: "#/JsonApiModel_error_invalidOrExpiredUploadToken" 
+                - $ref: "#/JsonApiModel_error_fileOnServerContactSupport"
+
+JsonApiModel_error_403:
+  description: NOT_FOUND
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          errors:
+            type: array
+            items:
+              anyOf:
+                - $ref: "#/JsonApiModel_error_insufficientPermissions"
 
 JsonApiModel_error_404:
   description: NOT_FOUND
@@ -49,9 +97,12 @@ JsonApiModel_error_404:
                 - $ref: "#/JsonApiModel_error_entityNotFoundForId"
                 - $ref: "#/JsonApiModel_error_entityNotFoundForSlug"
                 - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
+                - $ref: "#/JsonApiModel_error_secondaryEntityNotFound"
+                - $ref: "#/JsonApiModel_error_callToExternalServiceFailed"
+                
 # 400 - BAD_REQUEST
 # Done: accessNotPermitted, missingMandatoryParameter
-# TODO AS: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
+# TODO AS - DONE: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
 JsonApiModel_error_accessNotPermitted:
   type: object
   properties:
@@ -100,9 +151,153 @@ JsonApiModel_error_missingMandatoryParameter:
     - code
     - title
 
+JsonApiModel_error_invalidJSONInput:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'invalidJSONInput'
+      example: "invalidJSONInput"
+    title:
+      type: string
+      description: Always has value 'invalidJSONInput'
+      example: "invalidJSONInput"
+    detail:
+      type: string
+      description: Description of the error
+      example: "JSON input is invalid"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_missingMandatoryJSONfield:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'missingMandatoryJSONfield'
+      example: "invalidJSONInput"
+    title:
+      type: string
+      description: Always has value 'missingMandatoryJSONfield'
+      example: "missingMandatoryJSONfield"
+    detail:
+      type: string
+      description: Description of the error
+      example: ""
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_contactSupport:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'contactSupport'
+      example: "contactSupport"
+    title:
+      type: string
+      description: Always has value 'contactSupport'
+      example: "contactSupport"
+    detail:
+      type: string
+      description: Description of the error
+      example: "A school user does not have access to this functionality"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_fileTypeLimitReached:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'fileTypeLimitReached'
+      example: "fileTypeLimitReached"
+    title:
+      type: string
+      description: Always has value 'fileTypeLimitReached'
+      example: "fileTypeLimitReached"
+    detail:
+      type: string
+      description: Description of the error
+      example: "fileTypeLimitReached"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_cannotManipulateFile:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'cannotManipulateFile'
+      example: "cannotManipulateFile"
+    title:
+      type: string
+      description: Always has value 'cannotManipulateFile'
+      example: "cannotManipulateFile"
+    detail:
+      type: string
+      description: Description of the error
+      example: "cannotManipulateFile"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_callFailed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'callFailed'
+      example: "callFailed"
+    title:
+      type: string
+      description: Always has value 'callFailed'
+      example: "callFailed"
+    detail:
+      type: string
+      description: Description of the error
+      example: "callFailed"
+  required:
+    - status
+    - code
+    - title
+
 # 401 - UNAUTHORIZED
 # Done: invalidOrExpiredAuthorisationToken
-# TODO: invalidOrExpiredUploadToken, fileOnServerContactSupport
+# TODO - DONE: invalidOrExpiredUploadToken, fileOnServerContactSupport
 JsonApiModel_error_invalidOrExpiredAuthorisationToken:
   type: object
   properties:
@@ -126,9 +321,77 @@ JsonApiModel_error_invalidOrExpiredAuthorisationToken:
     - code
     - title
 
+JsonApiModel_error_invalidOrExpiredUploadToken:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'invalidOrExpiredUploadToken'
+      example: "invalidOrExpiredUploadToken"
+    title:
+      type: string
+      description: Always has value 'invalid or expired upload token'
+      example: "invalidOrExpiredUploadToken"
+    detail:
+      type: string
+      description: Description of the error
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_fileOnServerContactSupport:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'fileOnServerContactSupport'
+      example: "fileOnServerContactSupport"
+    title:
+      type: string
+      description: Always has value 'fileOnServerContactSupport'
+      example: "fileOnServerContactSupport"
+    detail:
+      type: string
+      description: Description of the error
+  required:
+    - status
+    - code
+    - title
+
 # 403 - FORBIDDEN
 # Done:
 # TODO: insufficientPermissions
+JsonApiModel_error_insufficientPermissions:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '400'
+      example: "400"
+    code:
+      type: string
+      description: Always has value 'insufficientPermissions'
+      example: "insufficientPermissions"
+    title:
+      type: string
+      description: Always has value 'insufficientPermissions'
+      example: "insufficientPermissions"
+    detail:
+      type: string
+      description: Description of the error
+  required:
+    - status
+    - code
+    - title
 
 # 404 - NOT_FOUND
 # Done: entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias
@@ -204,6 +467,57 @@ JsonApiModel_error_entityNotFoundForAlias:
     - status
     - code
     - title
+
+JsonApiModel_error_secondaryEntityNotFound:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'secondaryEntityNotFound'
+      example: "secondaryEntityNotFound"
+    title:
+      type: string
+      description: Always has value 'Secondary entity not found'
+      example: "secondaryEntityNotFound"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Secondary entity not found"
+  required:
+    - status
+    - code
+    - title
+
+JsonApiModel_error_callToExternalServiceFailed:
+  type: object
+  properties:
+    status:
+      type: string
+      description: Always has value '404'
+      example: "404"
+    code:
+      type: string
+      description: Always has value 'secondaryEntityNotFound'
+      example: "secondaryEntityNotFound"
+    title:
+      type: string
+      description: Always has value 'Secondary entity not found'
+      example: "secondaryEntityNotFound"
+    detail:
+      type: string
+      description: Description of the error
+      example: "Secondary entity not found"
+  required:
+    - status
+    - code
+    - title
+
+    
+
 # 413 - PAYLOAD_TOO_LARGE
 # Done:
 # TODO: fileTooLargeForUpload

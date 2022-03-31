@@ -199,6 +199,21 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-academicSystem" />
 
+  - name: simple-model-school-communityQuestion
+    x-displayName: Simple model - school-communityQuestion
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-communityQuestion" />
+
+  - name: simple-model-school-curriculumType
+    x-displayName: Simple model - school-curriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-curriculumType" />
+
+  - name: simple-model-school-facility
+    x-displayName: Simple model - school-facility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-facility" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -307,10 +322,25 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
   # tags - JSON:API models - school
-  - name: json-api-model-teacher
+  - name: json-api-model-school-academicSystem
     x-displayName: JSON:API model - school-academicSystem
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-academicSystem" />
+
+  - name: json-api-model-school-communityQuestion
+    x-displayName: JSON:API model - school-communityQuestion
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-communityQuestion" />
+
+  - name: json-api-model-school-curriculumType
+    x-displayName: JSON:API model - school-curriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-curriculumType" />
+
+  - name: json-api-model-school-facility
+    x-displayName: JSON:API model - school-facility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-facility" />
 
 x-tagGroups:
   - name: Simple models
@@ -338,6 +368,9 @@ x-tagGroups:
       - simple-model-regional-region
       - simple-model-school
       - simple-model-school-academicSystem
+      - simple-model-school-communityQuestion
+      - simple-model-school-curriculumType
+      - simple-model-school-facility
       - simple-model-teacher
 
   - name: JSON:API models
@@ -361,6 +394,9 @@ x-tagGroups:
       - json-api-model-regional-country
       - json-api-model-regional-region
       - json-api-model-school-academicSystem
+      - json-api-model-school-communityQuestion
+      - json-api-model-school-curriculumType
+      - json-api-model-school-facility
       - json-api-model-teacher
 
   - name: API

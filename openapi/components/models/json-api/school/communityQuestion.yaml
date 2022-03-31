@@ -1,0 +1,25 @@
+JsonApiModel_school-communityQuestion:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-communityQuestion_type"
+    id:
+      $ref: "#/JsonApiModel_school-communityQuestion_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-communityQuestion_type:
+  type: string
+  example: school-communityQuestion
+  description: school-communityQuestion
+  readOnly: true
+
+JsonApiModel_school-communityQuestion_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-communityQuestion (string)

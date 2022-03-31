@@ -44,7 +44,9 @@ SimpleModels:
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem"
-  
+    - $ref: "../../models/simple/school/communityQuestion.yaml#/SimpleModel_school-communityQuestion"
+    - $ref: "../../models/simple/school/curriculumType.yaml#/SimpleModel_school-curriculumType"
+    - $ref: "../../models/simple/school/facility.yaml#/SimpleModel_school-facility"
 
 JsonApiModels:
   allOf:
@@ -68,3 +70,6 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
     - $ref: "../../models/json-api/school/academicSystem.yaml#/JsonApiModel_school-academicSystem"
+    - $ref: "../../models/json-api/school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion"
+    - $ref: "../../models/json-api/school/curriculumType.yaml#/JsonApiModel_school-curriculumType"
+    - $ref: "../../models/json-api/school/facility.yaml#/JsonApiModel_school-facility"
