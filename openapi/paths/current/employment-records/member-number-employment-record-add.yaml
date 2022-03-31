@@ -1,7 +1,7 @@
 post:
   description: ""
   operationId: addTeacherEmploymentRecord_current
-  parameters: 
+  parameters:
     - in: path
       name: member-number
       # description:
@@ -38,7 +38,9 @@ post:
             properties: {}
             type: object
       description: Item created
+    # TODO: add correct current errors (rather than json-api ones)
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
   summary: Create teacher employment-record(current)
   tags:
     - employment-records
-  

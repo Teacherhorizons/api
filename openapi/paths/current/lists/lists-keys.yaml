@@ -11,3 +11,6 @@ get:
         application/json:
           schema:
             $ref: "../../../components/schemas/current/lists/lists-keys.yaml"
+    # TODO: add correct current errors (rather than json-api ones)
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"

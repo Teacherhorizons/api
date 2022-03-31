@@ -17,8 +17,7 @@ JsonApiModel_error_400:
                 - $ref: "#/JsonApiModel_error_fileTypeLimitReached"
                 - $ref: "#/JsonApiModel_error_cannotManipulateFile"
                 - $ref: "#/JsonApiModel_error_callFailed"
-
-            description: Foo bar
+            description: ""
             example:
               - status: "400"
                 code: "accessNotPermitted"
@@ -43,7 +42,7 @@ JsonApiModel_error_400:
               - status: "400"
                 code: "fileTypeLimitReached"
                 title: "File type limit reached"
-                detail: "Provided file type cannot be used" 
+                detail: "Provided file type cannot be used"
               - status: "400"
                 code: "cannotManipulateFile"
                 title: "Cannot manipulate file"
@@ -52,8 +51,6 @@ JsonApiModel_error_400:
                 code: "callFailed"
                 title: "callFailed"
                 detail: ""
-                
-
 
 JsonApiModel_error_401:
   description: UNAUTHORIZED
@@ -67,8 +64,18 @@ JsonApiModel_error_401:
             items:
               anyOf:
                 - $ref: "#/JsonApiModel_error_invalidOrExpiredAuthorisationToken"
-                - $ref: "#/JsonApiModel_error_invalidOrExpiredUploadToken" 
+                - $ref: "#/JsonApiModel_error_invalidOrExpiredUploadToken"
                 - $ref: "#/JsonApiModel_error_fileOnServerContactSupport"
+            description: ""
+            example:
+              - status: "401"
+                code: "invalidOrExpiredAuthorisationToken"
+                title: "Invalid or expired authorisation token"
+                detail: ""
+              - status: "401"
+                code: "invalidOrExpiredUploadToken"
+                title: "Invalid or expired upload token"
+                detail: ""
 
 JsonApiModel_error_403:
   description: FORBIDDEN
@@ -82,6 +89,12 @@ JsonApiModel_error_403:
             items:
               anyOf:
                 - $ref: "#/JsonApiModel_error_insufficientPermissions"
+            description: ""
+            example:
+              - status: "403"
+                code: "insufficientPermissions"
+                title: "Insufficient permissions"
+                detail: ""
 
 JsonApiModel_error_404:
   description: NOT_FOUND
@@ -99,6 +112,16 @@ JsonApiModel_error_404:
                 - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
                 - $ref: "#/JsonApiModel_error_secondaryEntityNotFound"
                 - $ref: "#/JsonApiModel_error_callToExternalServiceFailed"
+            description: ""
+            example:
+              - status: "404"
+                code: "entityNotFoundForId"
+                title: "WIP"
+                detail: ""
+              - status: "404"
+                code: "entityNotFoundForSlug"
+                title: "WIP"
+                detail: ""
 
 JsonApiModel_error_413:
   description: PAYLOAD_TOO_LARGE
@@ -112,6 +135,12 @@ JsonApiModel_error_413:
             items:
               anyOf:
                 - $ref: "#/JsonApiModel_error_fileTooLargeForUpload"
+            description: ""
+            example:
+              - status: "413"
+                code: "fileTooLargeForUpload"
+                title: "WIP"
+                detail: ""
 
 JsonApiModel_error_422:
   description: UNPROCESSABLE_ENTITY
@@ -131,10 +160,15 @@ JsonApiModel_error_422:
                 - $ref: "#/JsonApiModel_error_integrityViolation"
                 - $ref: "#/JsonApiModel_error_entityAlreadyExists"
                 - $ref: "#/JsonApiModel_error_validationFailed"
+            description: ""
+            example:
+              - status: "422"
+                code: "nonExistentParameterPassed"
+                title: "WIP"
+                detail: ""
 
 # 400 - BAD_REQUEST
-# Done: accessNotPermitted, missingMandatoryParameter
-# TODO AS - DONE: invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
+# accessNotPermitted, missingMandatoryParameter, invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
 JsonApiModel_error_accessNotPermitted:
   type: object
   properties:
@@ -328,8 +362,7 @@ JsonApiModel_error_callFailed:
     - title
 
 # 401 - UNAUTHORIZED
-# Done: invalidOrExpiredAuthorisationToken
-# TODO - DONE: invalidOrExpiredUploadToken, fileOnServerContactSupport
+# invalidOrExpiredAuthorisationToken, invalidOrExpiredUploadToken, fileOnServerContactSupport
 JsonApiModel_error_invalidOrExpiredAuthorisationToken:
   type: object
   properties:
@@ -400,8 +433,7 @@ JsonApiModel_error_fileOnServerContactSupport:
     - title
 
 # 403 - FORBIDDEN
-# Done:
-# DONE: insufficientPermissions
+# insufficientPermissions
 JsonApiModel_error_insufficientPermissions:
   type: object
   properties:
@@ -426,8 +458,7 @@ JsonApiModel_error_insufficientPermissions:
     - title
 
 # 404 - NOT_FOUND
-# Done: entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias
-# DONE: secondaryEntityNotFound, callToExternalServiceFailed
+# entityNotFoundForId, entityNotFoundForSlug, entityNotFoundForAlias, secondaryEntityNotFound, callToExternalServiceFailed
 JsonApiModel_error_entityNotFoundForId:
   type: object
   properties:
@@ -549,8 +580,7 @@ JsonApiModel_error_callToExternalServiceFailed:
     - title
 
 # 413 - PAYLOAD_TOO_LARGE
-# Done:
-# DONE: fileTooLargeForUpload
+# fileTooLargeForUpload
 
 JsonApiModel_error_fileTooLargeForUpload:
   type: object
@@ -577,8 +607,7 @@ JsonApiModel_error_fileTooLargeForUpload:
     - title
 
 # 422 - UNPROCESSABLE_ENTITY
-# Done:
-# TODO: nonExistentParameterPassed, wrongDataType, updateFailed, JSONfieldCannotBeNull, integrityViolation, entityAlreadyExists, validationFailed
+# nonExistentParameterPassed, wrongDataType, updateFailed, JSONfieldCannotBeNull, integrityViolation, entityAlreadyExists, validationFailed
 
 JsonApiModel_error_nonExistentParameterPassed:
   type: object

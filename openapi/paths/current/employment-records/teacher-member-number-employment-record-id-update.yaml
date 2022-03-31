@@ -1,7 +1,7 @@
 put:
   description: ""
   operationId: updateTeacherEmploymentRecord_current
-  parameters: 
+  parameters:
     - in: path
       name: memberNumber
       # description:
@@ -23,7 +23,6 @@ put:
         example:
           data:
             countryOfEmployment: Egypt
-            
   responses:
     "200":
       content:
@@ -37,6 +36,9 @@ put:
             properties: {}
             type: object
       description: Item updated
+    # TODO: add correct current errors (rather than json-api ones)
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
   summary: Update teacher employment-record(current)
   tags:
     - employment-records
