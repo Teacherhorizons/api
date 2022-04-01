@@ -214,6 +214,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-facility" />
 
+  - name: simple-model-school-fileCategory
+    x-displayName: Simple model - school-fileCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-fileCategory" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -342,6 +347,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-facility" />
 
+  - name: json-api-model-school-fileCategory
+    x-displayName: JSON:API model - school-fileCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-fileCategory" />
+
 x-tagGroups:
   - name: Simple models
     tags:
@@ -371,6 +381,7 @@ x-tagGroups:
       - simple-model-school-communityQuestion
       - simple-model-school-curriculumType
       - simple-model-school-facility
+      - simple-model-school-fileCategory
       - simple-model-teacher
 
   - name: JSON:API models
@@ -397,6 +408,7 @@ x-tagGroups:
       - json-api-model-school-communityQuestion
       - json-api-model-school-curriculumType
       - json-api-model-school-facility
+      - json-api-model-school-fileCategory
       - json-api-model-teacher
 
   - name: API

@@ -1,0 +1,26 @@
+JsonApiModel_school-fileCategory:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-fileCategory_type"
+    id:
+      $ref: "#/JsonApiModel_school-fileCategory_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/fileCategory.yaml#/school-fileCategory_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_school-fileCategory_type:
+  type: string
+  example: school-fileCategory
+  description: school-fileCategory
+  readOnly: true
+
+JsonApiModel_school-fileCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-fileCategory (string)
