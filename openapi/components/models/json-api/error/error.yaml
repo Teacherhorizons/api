@@ -76,6 +76,10 @@ JsonApiModel_error_401:
                 code: "invalidOrExpiredUploadToken"
                 title: "Invalid or expired upload token"
                 detail: ""
+              - status: "401"
+                code: "fileOnServerContactSupport"
+                title: "File on server contact support"
+                detail: ""
 
 JsonApiModel_error_403:
   description: FORBIDDEN
@@ -122,6 +126,18 @@ JsonApiModel_error_404:
                 code: "entityNotFoundForSlug"
                 title: "WIP"
                 detail: ""
+              - status: "404"
+                code: "entityNotFoundForAlias"
+                title: "WIP"
+                detail: ""
+              - status: "404"
+                code: "secondaryEntityNotFound"
+                title: "WIP"
+                detail: ""  
+              - status: "404"
+                code: "callToExternalServiceFailed"
+                title: "WIP"
+                detail: ""  
 
 JsonApiModel_error_413:
   description: PAYLOAD_TOO_LARGE
@@ -166,6 +182,30 @@ JsonApiModel_error_422:
                 code: "nonExistentParameterPassed"
                 title: "WIP"
                 detail: ""
+              - status: "422"
+                code: "wrongDataType"
+                title: "WIP"
+                detail: ""
+              - status: "422"
+                code: "updateFailed"
+                title: "WIP"
+                detail: "" 
+              - status: "422"
+                code: "JSONfieldCannotBeNull"
+                title: "WIP"
+                detail: "" 
+              - status: "422"
+                code: "integrityViolation"
+                title: "WIP"
+                detail: "" 
+              - status: "422"
+                code: "entityAlreadyExists"
+                title: "WIP"
+                detail: "" 
+              - status: "422"
+                code: "validationFailed"
+                title: "WIP"
+                detail: "" 
 
 # 400 - BAD_REQUEST
 # accessNotPermitted, missingMandatoryParameter, invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
