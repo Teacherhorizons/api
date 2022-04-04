@@ -1,0 +1,39 @@
+JsonApiModel_school-flightAllowanceType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-flightAllowanceType_type"
+    id:
+      $ref: "#/JsonApiModel_school-flightAllowanceType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-flightAllowanceType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-flightAllowanceType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-flightAllowanceType_type:
+  type: string
+  example: school-flightAllowanceType
+  description: school-flightAllowanceType
+  readOnly: true
+
+JsonApiModel_school-flightAllowanceType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-flightAllowanceType (string)

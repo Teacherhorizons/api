@@ -1,0 +1,18 @@
+SimpleModel_school-schoolEmploymentAdvantage:
+  allOf:
+    - $ref: "#/SimpleModel_school-schoolEmploymentAdvantage"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-schoolEmploymentAdvantage_id"
+        - $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_attributes"
+        - $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_relationshipIds"
+
+# shared
+SimpleModel_school-schoolEmploymentAdvantage_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

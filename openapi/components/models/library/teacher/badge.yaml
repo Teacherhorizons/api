@@ -1,0 +1,70 @@
+teacher-badge_metaProperties_shared:
+  properties:
+    teacher-badge_precedence:
+      type: string
+      example: 
+
+    teacher-badge_slug:
+      type: string
+      example: guest-blogger
+
+    teacher-badge_isAutomated:
+      type: boolean
+      example: 0
+
+# attributes
+teacher-badge_attributes:
+  allOf:
+    - $ref: "#/teacher-badge_properties_name"
+    - $ref: "#/teacher-badge_properties_precedence"
+    - $ref: "#/teacher-badge_properties_slug"
+    - $ref: "#/teacher-badge_properties_isAutomated"
+
+#properties
+teacher-badge_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-badge_id"
+
+teacher-badge_properties_name:
+  properties:
+    name:
+      $ref: "#/teacher-badge_name"
+
+teacher-badge_properties_precedence:
+  properties:
+    precedence:
+      $ref: "#/teacher-badge_precedence"
+
+teacher-badge_properties_slug:
+  properties:
+    slug:
+      $ref: "#/teacher-badge_slug"
+
+teacher-badge_properties_isAutomated:
+  properties:
+    isAutomated:
+      $ref: "#/teacher-badge_isAutomated"
+
+#attributes
+teacher-badge_id:
+  type: integer
+  example: 1
+
+teacher-badge_name:
+  type: string
+  example: Guest blogger
+
+teacher-badge_precedence:
+  type: string
+  example: 
+
+teacher-badge_slug:
+  type: string
+  example: guest-blogger
+
+teacher-badge_isAutomated:
+  type: boolean
+  example: 0
+
+

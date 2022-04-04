@@ -219,11 +219,82 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-fileCategory" />
 
+  - name: simple-model-school-flightAllowanceType
+    x-displayName: Simple model - school-flightAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-flightAllowanceType" />
+
+  - name: simple-model-school-relocationAllowanceType
+    x-displayName: Simple model - school-relocationAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-relocationAllowanceType" />
+
+  - name: simple-model-school-schoolCommunityResponse
+    x-displayName: Simple model - school-schoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolCommunityResponse" />
+
+  - name: simple-model-school-schoolCurriculumType
+    x-displayName: Simple model - school-schoolCurriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolCurriculumType" />
+
+  - name: simple-model-school-schoolEmploymentAdvantage
+    x-displayName: Simple model - school-schoolEmploymentAdvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolEmploymentAdvantage" />
+
+  - name: simple-model-school-schoolEmploymentDisadvantage
+    x-displayName: Simple model - school-schoolEmploymentDisadvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolEmploymentDisadvantage" />
+
+  - name: simple-model-school-schoolFacility
+    x-displayName: Simple model - school-schoolFacility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolFacility" />
+
+  - name: simple-model-school-studentGenderMix
+    x-displayName: Simple model - school-studentGenderMix
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-studentGenderMix" />
+
+  - name: simple-model-school-teacherSchoolCommunityResponse
+    x-displayName: Simple model - school-teacherSchoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-teacherSchoolCommunityResponse" />
+
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
+
+  - name: simple-model-teacher-additionalPhotoCategory
+    x-displayName: Simple model - teacher-additionalPhotoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-additionalPhotoCategory" />
+
+  - name: simple-model-teacher-badge
+    x-displayName: Simple model - teacher-badge
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-badge" />   
+
+  - name: simple-model-teacher-qualificationType
+    x-displayName: Simple model - teacher-qualificationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-qualificationType" />   
+
+  - name: simple-model-teacher-teacherNote
+    x-displayName: Simple model - teacher-teacherNote
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNote" />  
+
+  - name: simple-model-teacher-teacherReference
+    x-displayName: Simple model - teacher-teacherReference
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReference" /> 
 
   # JSON:API models
 
@@ -326,6 +397,31 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
+  - name: json-api-model-teacher-additionalPhotoCategory
+    x-displayName: JSON:API model - teacher-additionalPhotoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-additionalPhotoCategory" />
+
+  - name: json-api-model-teacher-badge
+    x-displayName: JSON:API model - teacher-badge
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-badge" />
+
+  - name: json-api-model-teacher-qualificationType
+    x-displayName: JSON:API model - teacher-qualificationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-qualificationType" />
+
+  - name: json-api-model-teacher-teacherNote
+    x-displayName: JSON:API model - teacher-teacherNote
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNote" />
+
+  - name: json-api-model-teacher-teacherReference
+    x-displayName: JSON:API model - teacher-teacherReference
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReference" />
+
   # tags - JSON:API models - school
   - name: json-api-model-school-academicSystem
     x-displayName: JSON:API model - school-academicSystem
@@ -351,6 +447,51 @@ tags:
     x-displayName: JSON:API model - school-fileCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-fileCategory" />
+
+  - name: json-api-model-school-flightAllowanceType
+    x-displayName: JSON:API model - school-flightAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-flightAllowanceType" />
+
+  - name: json-api-model-school-relocationAllowanceType
+    x-displayName: JSON:API model - school-relocationAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-relocationAllowanceType" />
+
+  - name: json-api-model-school-schoolCommunityResponse
+    x-displayName: JSON:API model - school-schoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCommunityResponse" />
+
+  - name: json-api-model-school-schoolCurriculumType
+    x-displayName: JSON:API model - school-schoolCurriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCurriculumType" />
+
+  - name: json-api-model-school-schoolEmploymentAdvantage
+    x-displayName: JSON:API model - school-schoolEmploymentAdvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentAdvantage" />
+  
+  - name: json-api-model-school-schoolEmploymentDisadvantage
+    x-displayName: JSON:API model - school-schoolEmploymentDisadvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentDisadvantage" />
+
+  - name: json-api-model-school-schoolFacility
+    x-displayName: JSON:API model - school-schoolFacility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolFacility" />
+
+  - name: json-api-model-school-studentGenderMix
+    x-displayName: JSON:API model - school-studentGenderMix
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-studentGenderMix" />
+
+  - name: json-api-model-school-teacherSchoolCommunityResponse
+    x-displayName: JSON:API model - school-teacherSchoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teacherSchoolCommunityResponse" />
 
 x-tagGroups:
   - name: Simple models
@@ -382,7 +523,21 @@ x-tagGroups:
       - simple-model-school-curriculumType
       - simple-model-school-facility
       - simple-model-school-fileCategory
+      - simple-model-school-flightAllowanceType
+      - simple-model-school-relocationAllowanceType
+      - simple-model-school-schoolCommunityResponse
+      - simple-model-school-schoolCurriculumType
+      - simple-model-school-schoolEmploymentAdvantage
+      - simple-model-school-schoolEmploymentDisadvantage
+      - simple-model-school-schoolFacility
+      - simple-model-school-studentGenderMix
+      - simple-model-school-teacherSchoolCommunityResponse
       - simple-model-teacher
+      - simple-model-teacher-additionalPhotoCategory
+      - simple-model-teacher-badge
+      - simple-model-teacher-qualificationType
+      - simple-model-teacher-teacherNote
+      - simple-model-teacher-teacherReference
 
   - name: JSON:API models
     tags:
@@ -409,7 +564,21 @@ x-tagGroups:
       - json-api-model-school-curriculumType
       - json-api-model-school-facility
       - json-api-model-school-fileCategory
-      - json-api-model-teacher
+      - json-api-model-school-flightAllowanceType
+      - json-api-model-school-relocationAllowanceType
+      - json-api-model-school-schoolCommunityResponse
+      - json-api-model-school-schoolCurriculumType
+      - json-api-model-school-schoolEmploymentAdvantage
+      - json-api-model-school-schoolEmploymentDisadvantage
+      - json-api-model-school-schoolFacility
+      - json-api-model-school-studentGenderMix
+      - json-api-model-school-teacherSchoolCommunityResponse
+      - json-api-model-api-model-teacher
+      - json-api-model-teacher-additionalPhotoCategory
+      - json-api-model-teacher-badge
+      - json-api-model-teacher-qualificationType
+      - json-api-model-teacher-teacherNote
+      - json-api-model-teacher-teacherReference
 
   - name: API
     tags:

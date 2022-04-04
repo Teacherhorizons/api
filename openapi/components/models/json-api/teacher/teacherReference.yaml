@@ -1,0 +1,53 @@
+JsonApiModel_teacher-teacherReference:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherReference_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherReference_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherReference_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherReference_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    country:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    phoneCodeCountry:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherReference_type:
+  type: string
+  example: teacher-teacherReference
+  description: teacher-teacherReference
+  readOnly: true
+
+JsonApiModel_teacher-teacherReference_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherReference (string)
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+SimpleModel_teacher-teacherNote:
+  allOf:
+    - $ref: "#/SimpleModel_teacher-teacherNote"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_teacher-teacherNote_type"
+        - $ref: "#/SimpleModel_teacher-teacherNote_id"
+        - $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_attributes"
+
+# shared
+
+SimpleModel_teacher-teacherNote_type:
+  properties:
+    type:
+      type: string
+      example: teacher-teacherNote
+      description: teacher-teacherNote
+      readOnly: true
+
+SimpleModel_teacher-teacherNote_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

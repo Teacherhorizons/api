@@ -1,0 +1,43 @@
+JsonApiModel_school-schoolFacility:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolFacility_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolFacility_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolFacility_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolFacility_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    examTitle:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolFacility_type:
+  type: string
+  example: school-schoolFacility
+  description: school-schoolFacility
+  readOnly: true
+
+JsonApiModel_school-schoolFacility_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolFacility (string)

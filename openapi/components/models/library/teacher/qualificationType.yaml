@@ -1,0 +1,123 @@
+teacher-qualificationType_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+teacher-qualificationType_attributes:
+  allOf:
+    - $ref: "#/teacher-qualificationType_properties_name"
+    - $ref: "#/teacher-qualificationType_properties_creationDate"
+    - $ref: "#/teacher-qualificationType_properties_latestUpdateDate"
+
+# relationshipIds
+teacher-qualificationType_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-qualificationType_properties_creationUserId"
+    - $ref: "#/teacher-qualificationType_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+teacher-qualificationType_relationships:
+  allOf:
+    - $ref: "#/teacher-qualificationType_properties_creationUser"
+    - $ref: "#/teacher-qualificationType_properties_latestUpdateUser"
+
+#properties
+teacher-qualificationType_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-qualificationType_id"
+
+teacher-qualificationType_properties_name:
+  properties:
+    name:
+      $ref: "#/teacher-qualificationType_name"
+
+teacher-qualificationType_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/teacher-qualificationType_creationDate"
+
+teacher-qualificationType_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/teacher-qualificationType_latestUpdateDate"
+
+teacher-qualificationType_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/teacher-qualificationType_creationUserId"
+
+teacher-qualificationType_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/teacher-qualificationType_latestUpdateUserId"
+
+teacher-qualificationType_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/teacher-qualificationType_creationUser"
+
+teacher-qualificationType_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/teacher-qualificationType_latestUpdateUser"
+
+#attributes
+teacher-qualificationType_id:
+  type: integer
+  example: 1
+
+teacher-qualificationType_name:
+  type: string
+  example: Secondary Subject Teacher
+
+teacher-qualificationType_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+teacher-qualificationType_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+teacher-qualificationType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+teacher-qualificationType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+teacher-qualificationType_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+teacher-qualificationType_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+
+
+

@@ -1,0 +1,41 @@
+JsonApiModel_school-schoolCommunityResponse:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolCommunityResponse_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolCommunityResponse_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolCommunityResponse_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolCommunityResponse_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolCommunityResponse_type:
+  type: string
+  example: school-schoolCommunityResponse
+  description: school-schoolCommunityResponse
+  readOnly: true
+
+JsonApiModel_school-schoolCommunityResponse_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolCommunityResponse (string)
