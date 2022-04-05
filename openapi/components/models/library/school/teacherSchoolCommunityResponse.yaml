@@ -1,0 +1,180 @@
+school-teacherSchoolCommunityResponse_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+# attributes
+school-teacherSchoolCommunityResponse_attributes:
+  allOf:
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_name"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_responseText"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_creationDate"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_latestUpdateDate"
+
+# relationshipIds
+school-teacherSchoolCommunityResponse_relationshipIds:
+  allOf:
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_schoolId"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_questionId"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_creationUserId"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+school-teacherSchoolCommunityResponse_relationships:
+  allOf:
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_school"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_question"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_creationUser"
+    - $ref: "#/school-teacherSchoolCommunityResponse_properties_latestUpdateUser"
+
+#properties
+school-teacherSchoolCommunityResponse_properties_id:
+  properties:
+    id:
+      $ref: "#/school-teacherSchoolCommunityResponse_id"
+
+school-teacherSchoolCommunityResponse_properties_name:
+  properties:
+    name:
+      $ref: "#/school-teacherSchoolCommunityResponse_name"
+
+school-teacherSchoolCommunityResponse_properties_responseText:
+  properties:
+    name:
+      $ref: "#/school-teacherSchoolCommunityResponse_responseText"
+
+school-teacherSchoolCommunityResponse_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-teacherSchoolCommunityResponse_creationDate"
+
+school-teacherSchoolCommunityResponse_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-teacherSchoolCommunityResponse_latestUpdateDate"
+
+school-teacherSchoolCommunityResponse_properties_schoolId:
+  properties:
+    typeId:
+      $ref: "#/school-teacherSchoolCommunityResponse_schoolId"
+
+school-teacherSchoolCommunityResponse_properties_questionId:
+  properties:
+    typeId:
+      $ref: "#/school-teacherSchoolCommunityResponse_questionId"
+
+school-teacherSchoolCommunityResponse_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-teacherSchoolCommunityResponse_creationUserId"
+
+school-teacherSchoolCommunityResponse_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-teacherSchoolCommunityResponse_latestUpdateUserId"
+
+school-teacherSchoolCommunityResponse_properties_school:
+  properties:
+    type:
+      $ref: "#/school-teacherSchoolCommunityResponse_school"
+
+school-teacherSchoolCommunityResponse_properties_question:
+  properties:
+    type:
+      $ref: "#/school-teacherSchoolCommunityResponse_question"
+
+school-teacherSchoolCommunityResponse_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-teacherSchoolCommunityResponse_creationUser"
+
+school-teacherSchoolCommunityResponse_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-teacherSchoolCommunityResponse_latestUpdateUser"
+
+#attributes
+school-teacherSchoolCommunityResponse_id:
+  type: integer
+  example: 1
+
+school-teacherSchoolCommunityResponse_name:
+  type: string
+  example: Secondary Subject Teacher
+
+school-teacherSchoolCommunityResponse_responseText:
+  type: string
+  example: 
+
+school-teacherSchoolCommunityResponse_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-teacherSchoolCommunityResponse_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-teacherSchoolCommunityResponse_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+
+school-teacherSchoolCommunityResponse_question:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Question
+
+school-teacherSchoolCommunityResponse_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to School
+
+school-teacherSchoolCommunityResponse_questionId:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Question
+
+school-teacherSchoolCommunityResponse_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-teacherSchoolCommunityResponse_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-teacherSchoolCommunityResponse_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+school-teacherSchoolCommunityResponse_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User

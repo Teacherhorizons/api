@@ -1,0 +1,39 @@
+JsonApiModel_teacher-qualificationType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-qualificationType_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-qualificationType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-qualificationType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-qualificationType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-qualificationType_type:
+  type: string
+  example: teacher-qualificationType
+  description: teacher-qualificationType
+  readOnly: true
+
+JsonApiModel_teacher-qualificationType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-qualificationType (string)

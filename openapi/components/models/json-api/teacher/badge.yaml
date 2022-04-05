@@ -1,0 +1,26 @@
+JsonApiModel_teacher-badge:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-badge_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-badge_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/badge.yaml#/teacher-badge_attributes"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-badge_type:
+  type: string
+  example: teacher-badge
+  description: teacher-badge
+  readOnly: true
+
+JsonApiModel_teacher-badge_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-badge (string)

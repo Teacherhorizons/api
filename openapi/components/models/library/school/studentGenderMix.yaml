@@ -1,0 +1,123 @@
+school-studentGenderMix_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+school-studentGenderMix_attributes:
+  allOf:
+    - $ref: "#/school-studentGenderMix_properties_name"
+    - $ref: "#/school-studentGenderMix_properties_creationDate"
+    - $ref: "#/school-studentGenderMix_properties_latestUpdateDate"
+
+# relationshipIds
+school-studentGenderMix_relationshipIds:
+  allOf:
+    - $ref: "#/school-studentGenderMix_properties_creationUserId"
+    - $ref: "#/school-studentGenderMix_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+school-studentGenderMix_relationships:
+  allOf:
+    - $ref: "#/school-studentGenderMix_properties_creationUser"
+    - $ref: "#/school-studentGenderMix_properties_latestUpdateUser"
+
+#properties
+school-studentGenderMix_properties_id:
+  properties:
+    id:
+      $ref: "#/school-studentGenderMix_id"
+
+school-studentGenderMix_properties_name:
+  properties:
+    name:
+      $ref: "#/school-studentGenderMix_name"
+
+school-studentGenderMix_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-studentGenderMix_creationDate"
+
+school-studentGenderMix_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-studentGenderMix_latestUpdateDate"
+
+school-studentGenderMix_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-studentGenderMix_creationUserId"
+
+school-studentGenderMix_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-studentGenderMix_latestUpdateUserId"
+
+school-studentGenderMix_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-studentGenderMix_creationUser"
+
+school-studentGenderMix_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-studentGenderMix_latestUpdateUser"
+
+#attributes
+school-studentGenderMix_id:
+  type: integer
+  example: 1
+
+school-studentGenderMix_name:
+  type: string
+  example: Secondary Subject Teacher
+
+school-studentGenderMix_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-studentGenderMix_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-studentGenderMix_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-studentGenderMix_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-studentGenderMix_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+school-studentGenderMix_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+
+
+

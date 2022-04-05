@@ -1,0 +1,39 @@
+JsonApiModel_school-studentGenderMix:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-studentGenderMix_type"
+    id:
+      $ref: "#/JsonApiModel_school-studentGenderMix_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-studentGenderMix_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-studentGenderMix_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-studentGenderMix_type:
+  type: string
+  example: school-studentGenderMix
+  description: school-studentGenderMix
+  readOnly: true
+
+JsonApiModel_school-studentGenderMix_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-studentGenderMix (string)

@@ -1,0 +1,18 @@
+SimpleModel_school-flightAllowanceType:
+  allOf:
+    - $ref: "#/SimpleModel_school-flightAllowanceType"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-flightAllowanceType_id"
+        - $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_attributes"
+        - $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_relationshipIds"
+
+# shared
+SimpleModel_school-flightAllowanceType_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

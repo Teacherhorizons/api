@@ -1,0 +1,179 @@
+teacher-teacherNote_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+# attributes
+teacher-teacherNote_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherNote_properties_noteComment"
+    - $ref: "#/teacher-teacherNote_properties_creationDate"
+    - $ref: "#/teacher-teacherNote_properties_latestUpdateDate"
+
+# relationshipIds
+teacher-teacherNote_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherNote_properties_teacherId"
+    - $ref: "#/teacher-teacherNote_properties_noteTypeId"
+    - $ref: "#/teacher-teacherNote_properties_creationUserId"
+    - $ref: "#/teacher-teacherNote_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherNote_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherNote_properties_teacher"
+    - $ref: "#/teacher-teacherNote_properties_noteType"
+    - $ref: "#/teacher-teacherNote_properties_creationUser"
+    - $ref: "#/teacher-teacherNote_properties_latestUpdateUser"
+
+# noteComment
+# creationDate
+# latestUpdateDate
+# teacherId
+# noteTypeId
+# creationUserId
+# latestUpdateUserId
+# id
+
+#properties
+teacher-teacherNote_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherNote_id"
+
+teacher-teacherNote_properties_noteComment:
+  properties:
+    noteComment:
+      $ref: "#/teacher-teacherNote_noteComment"
+
+teacher-teacherNote_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/teacher-teacherNote_creationDate"
+
+teacher-teacherNote_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/teacher-teacherNote_latestUpdateDate"
+
+teacher-teacherNote_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/teacher-teacherNote_teacherId"
+
+teacher-teacherNote_properties_noteTypeId:
+  properties:
+    noteTypeId:
+      $ref: "#/teacher-teacherNote_noteTypeId"
+
+teacher-teacherNote_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/teacher-teacherNote_creationUserId"
+
+teacher-teacherNote_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/teacher-teacherNote_latestUpdateUserId"
+
+teacher-teacherNote_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/teacher-teacherNote_teacher"
+
+teacher-teacherNote_properties_noteType:
+  properties:
+    noteType:
+      $ref: "#/teacher-teacherNote_noteType"
+
+teacher-teacherNote_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/teacher-teacherNote_creationUser"
+
+teacher-teacherNote_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/teacher-teacherNote_latestUpdateUser"
+
+#attributes
+teacher-teacherNote_id:
+  type: integer
+  example: 1
+
+teacher-teacherNote_noteComment:
+  type: string
+  example: 
+
+teacher-teacherNote_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+teacher-teacherNote_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+teacher-teacherNote_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
+
+teacher-teacherNote_noteType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Type
+
+teacher-teacherNote_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to Teacher
+
+teacher-teacherNote_noteTypeId:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Type
+
+teacher-teacherNote_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+teacher-teacherNote_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+teacher-teacherNote_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+teacher-teacherNote_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User

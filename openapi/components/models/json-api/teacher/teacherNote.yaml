@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherNote:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherNote_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherNote_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherNote_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherNote_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    noteType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherNote_type:
+  type: string
+  example: teacher-teacherNote
+  description: teacher-teacherNote
+  readOnly: true
+
+JsonApiModel_teacher-teacherNote_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherNote (string)

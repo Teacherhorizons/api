@@ -1,0 +1,43 @@
+JsonApiModel_school-schoolCurriculumType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolCurriculumType_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolCurriculumType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolCurriculumType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolCurriculumType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    examTitle:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolCurriculumType_type:
+  type: string
+  example: school-schoolCurriculumType
+  description: school-schoolCurriculumType
+  readOnly: true
+
+JsonApiModel_school-schoolCurriculumType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolCurriculumType (string)

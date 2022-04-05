@@ -1,0 +1,39 @@
+JsonApiModel_school-schoolEmploymentAdvantage:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolEmploymentAdvantage_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolEmploymentAdvantage_type:
+  type: string
+  example: school-schoolEmploymentAdvantage
+  description: school-schoolEmploymentAdvantage
+  readOnly: true
+
+JsonApiModel_school-schoolEmploymentAdvantage_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolEmploymentAdvantage (string)
