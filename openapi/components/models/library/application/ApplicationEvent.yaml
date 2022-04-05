@@ -22,7 +22,7 @@ application-applicationEvent_attributes:
 application-applicationEvent_relationshipIds:
   allOf:
     - $ref: "#/application-applicationEvent_properties_applicationId"
-    - $ref: "#/application-applicationEvent_properties_eventTypeId"
+    - $ref: "#/application-applicationEvent_properties_typeId"
     - $ref: "#/application-applicationEvent_properties_emailId"
     - $ref: "#/application-applicationEvent_properties_creationUserId"
     - $ref: "#/application-applicationEvent_properties_latestUpdateUserId"
@@ -67,10 +67,10 @@ application-applicationEvent_properties_applicationId:
     applicationId:
       $ref: "#/application-applicationEvent_applicationId"
 
-application-applicationEvent_properties_eventTypeId:
+application-applicationEvent_properties_typeId:
   properties:
-    eventTypeId:
-      $ref: "#/application-applicationEvent_eventTypeId"
+    typeId:
+      $ref: "#/application-applicationEvent_typeId"
 
 application-applicationEvent_properties_emailId:
   properties:
@@ -137,7 +137,7 @@ application-applicationEvent_applicationId:
   example: 1
   description: Relationship to application
 
-application-applicationEvent_eventTypeId:
+application-applicationEvent_typeId:
   type: integer
   example: 1
   description: Relationship to application_eventType
