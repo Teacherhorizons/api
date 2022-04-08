@@ -27,6 +27,9 @@ ApplicationResponse:
                   id:
                     type: string
                     example: "1"
+              creationDate:
+                type: string
+                example: 2011-02-07T15:53:34:000Z
               latestUpdateDate:
                 type: string
                 example: 2011-02-07T15:53:34:000Z
@@ -85,6 +88,9 @@ ApplicationResponse:
           attributes:
             name: Maple Leaf International School
             city:
+              id": "1"
+            slug: asia-malaysia-kuala-lumpur-alice-smith-school
+            lraUser:
               id": "1"
 
 # {
@@ -224,3 +230,6 @@ ApplicationResponse_IncludedSchool:
             id:
               type: string
               example: "1"
+        slug:
+          type: string
+          example: asia-malaysia-kuala-lumpur-alice-smith-school
