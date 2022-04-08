@@ -1,0 +1,83 @@
+teacher-thDiscoveryMethod_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+teacher-thDiscoveryMethod_attributes:
+  allOf:
+    - $ref: "#/teacher-thDiscoveryMethod_properties_name"
+    - $ref: "#/teacher-thDiscoveryMethod_properties_precedence"
+    - $ref: "#/teacher-thDiscoveryMethod_properties_thDiscoveryMethodCategory"
+
+# relationshipIds
+teacher-thDiscoveryMethod_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-thDiscoveryMethod_properties_thDiscoveryMethodCategoryId"
+
+# attribute relationships
+
+# relationships
+teacher-thDiscoveryMethod_relationships:
+  allOf:
+    - $ref: "#/teacher-thDiscoveryMethod_properties_thDiscoveryMethodCategory"
+  
+
+#properties
+teacher-thDiscoveryMethod_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-thDiscoveryMethod_id"
+teacher-thDiscoveryMethod_properties_name:
+  properties:
+    name:
+      $ref: "#/teacher-thDiscoveryMethod_name"
+teacher-thDiscoveryMethod_properties_precedence:
+  properties:
+    precedence:
+      $ref: "#/teacher-thDiscoveryMethod_precedence"
+teacher-thDiscoveryMethod_properties_thDiscoveryMethodCategoryId:
+  properties:
+    thDiscoveryMethodCategoryId:
+      $ref: "#/teacher-thDiscoveryMethod_thDiscoveryMethodCategoryId"
+
+teacher-thDiscoveryMethod_properties_thDiscoveryMethodCategory:
+  properties:
+    thDiscoveryMethodCategory:
+      $ref: "#/teacher-thDiscoveryMethod_thDiscoveryMethodCategory"
+
+#attributes
+teacher-thDiscoveryMethod_id:
+  type: integer
+  example: 1
+  description: Unique identifier of the entity
+teacher-thDiscoveryMethod_name:
+  type: string
+  example: Friend / colleague
+teacher-thDiscoveryMethod_precedence:
+  type: integer
+  example: 1
+teacher-thDiscoveryMethod_thDiscoveryMethodCategoryId:
+  type: integer
+  example: 1
+  description: Relationship to ThDiscoveryMethodCategory
+
+teacher-thDiscoveryMethod_thDiscoveryMethodCategory:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to ThDiscoveryMethodCategory
+
+
+
+

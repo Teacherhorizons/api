@@ -1,0 +1,87 @@
+user-favouriteTeacher_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+# attributes
+user-favouriteTeacher_attributes:
+  allOf:
+    - $ref: "#/user-favouriteTeacher_properties_creationDate"
+
+# relationshipIds
+user-favouriteTeacher_relationshipIds:
+  allOf:
+    - $ref: "#/user-favouriteTeacher_properties_userId"
+    - $ref: "#/user-favouriteTeacher_properties_teacherId"
+
+# attribute relationships
+
+# relationships
+user-favouriteTeacher_relationships:
+  allOf:
+    - $ref: "#/user-favouriteTeacher_properties_user"
+    - $ref: "#/user-favouriteTeacher_properties_teacher"
+
+#properties
+user-favouriteTeacher_properties_id:
+  properties:
+    id:
+      $ref: "#/user-favouriteTeacher_id"
+user-favouriteTeacher_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/user-favouriteTeacher_creationDate"
+user-favouriteTeacher_properties_userId:
+  properties:
+    userId:
+      $ref: "#/user-favouriteTeacher_userId"
+user-favouriteTeacher_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/user-favouriteTeacher_teacherId"
+
+user-favouriteTeacher_properties_user:
+  properties:
+    user:
+      $ref: "#/user-favouriteTeacher_user"
+user-favouriteTeacher_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/user-favouriteTeacher_teacher"
+
+#attributes
+user-favouriteTeacher_id:
+  type: integer
+  example: 1
+user-favouriteTeacher_creationDate:
+  type: string
+  format: date-time
+  example: 2018-12-02T12:47:14Z
+user-favouriteTeacher_userId:
+  type: integer
+  example: 2
+  description: Relationship to user
+user-favouriteTeacher_teacherId:
+  type: integer
+  example: 2520
+  description: Relationship to Teacher
+user-favouriteTeacher_user:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+user-favouriteTeacher_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to Teacher

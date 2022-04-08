@@ -1,0 +1,17 @@
+SimpleModel_user-messageStatus:
+  allOf:
+    - $ref: "#/SimpleModel_user-messageStatus"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_user-messageStatus_id"
+        - $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_attributes"
+
+# shared
+SimpleModel_user-messageStatus_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

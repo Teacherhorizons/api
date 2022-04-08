@@ -1,0 +1,39 @@
+JsonApiModel_user-favouriteSchool:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-favouriteSchool_type"
+    id:
+      $ref: "#/JsonApiModel_user-favouriteSchool_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_user-favouriteSchool_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-favouriteSchool_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    user:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_user-favouriteSchool_type:
+  type: string
+  example: user-favouriteSchool
+  description: user-favouriteSchool
+  readOnly: true
+
+JsonApiModel_user-favouriteSchool_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the user-favouriteSchool (string)

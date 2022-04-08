@@ -1,0 +1,41 @@
+JsonApiModel_user-message:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-message_type"
+    id:
+      $ref: "#/JsonApiModel_user-message_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/message.yaml#/user-message_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_user-message_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/user/message.yaml#/user-message_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-message_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    toUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    fromUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    messageStatus:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_user-message_type:
+  type: string
+  example: user-message
+  description: user-message
+  readOnly: true
+
+JsonApiModel_user-message_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the user-message (string)

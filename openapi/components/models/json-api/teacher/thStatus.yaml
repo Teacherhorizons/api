@@ -1,0 +1,34 @@
+JsonApiModel_teacher-thStatus:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-thStatus_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-thStatus_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/thStatus.yaml#/teacher-thStatus_attributes"
+  required:
+    - type
+    - id
+
+
+JsonApiModel_teacher-thStatus_type:
+  type: string
+  example: teacher-thStatus
+  description: teacher-thStatus
+  readOnly: true
+
+JsonApiModel_teacher-thStatus_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-thStatus (string)
+
+
+
+
+
+
+
+

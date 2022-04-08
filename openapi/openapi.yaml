@@ -296,6 +296,63 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReference" /> 
 
+  - name: simple-model-teacher-thDiscoveryMethod
+    x-displayName: Simple model - teacher-thDiscoveryMethod
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-thDiscoveryMethod" /> 
+
+  - name: simple-model-teacher-thDiscoveryMethodCategory
+    x-displayName: Simple model - teacher-thDiscoveryMethodCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-thDiscoveryMethodCategory" /> 
+      
+  - name: simple-model-teacher-thStatus
+    x-displayName: Simple model - teacher-thStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-thStatus" /> 
+
+  - name: simple-model-teacher-videoUrlCategory
+    x-displayName: Simple model - teacher-videoUrlCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-videoUrlCategory" /> 
+
+  # tags - simple-models - teacher - users
+
+  - name: simple-model-user-favouriteJob
+    x-displayName: Simple model - user-favouriteJob
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-favouriteJob" /> 
+
+  - name: simple-model-user-favouriteSchool
+    x-displayName: Simple model - user-favouriteSchool
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-favouriteSchool" /> 
+
+  - name: simple-model-user-favouriteTeacher
+    x-displayName: Simple model - user-favouriteTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-favouriteTeacher" /> 
+
+  - name: simple-model-user-userCategory
+    x-displayName: Simple model - user-userCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-userCategory" /> 
+
+  - name: simple-model-user-message
+    x-displayName: Simple model - user-message
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-message" /> 
+
+  - name: simple-model-user-messageStatus
+    x-displayName: Simple model - user-messageStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-messageStatus" /> 
+
+  - name: simple-model-user-thUser
+    x-displayName: Simple model - user-thUser
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-thUser" /> 
+      
   # JSON:API models
 
   # tags - JSON:API models - application
@@ -422,6 +479,26 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReference" />
 
+  - name: json-api-model-teacher-thDiscoveryMethod
+    x-displayName: JSON:API model - teacher-thDiscoveryMethod
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-thDiscoveryMethod" />
+
+  - name: json-api-model-teacher-thDiscoveryMethodCategory
+    x-displayName: JSON:API model - teacher-thDiscoveryMethodCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-thDiscoveryMethodCategory" />
+
+  - name: json-api-model-teacher-thStatus
+    x-displayName: JSON:API model - teacher-thStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-thStatus" />
+
+  - name: json-api-model-teacher-videoUrlCategory
+    x-displayName: JSON:API model - teacher-videoUrlCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-videoUrlCategory" />
+
   # tags - JSON:API models - school
   - name: json-api-model-school-academicSystem
     x-displayName: JSON:API model - school-academicSystem
@@ -493,6 +570,43 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teacherSchoolCommunityResponse" />
 
+# tags - simple-models - teacher - users
+
+  - name: json-api-model-user-favouriteJob
+    x-displayName: JSON:API model - user-favouriteJob
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteJob" />
+
+  - name: json-api-model-user-favouriteSchool
+    x-displayName: JSON:API model - user-favouriteSchool
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteSchool" />
+
+  - name: json-api-model-user-favouriteTeacher
+    x-displayName: JSON:API model - user-favouriteTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteTeacher" />
+
+  - name: json-api-model-user-userCategory
+    x-displayName: JSON:API model - user-userCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-userCategory" />
+
+  - name: json-api-model-user-message
+    x-displayName: JSON:API model - user-message
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-message" />
+
+  - name: json-api-model-user-messageStatus
+    x-displayName: JSON:API model - user-messageStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
+
+  - name: json-api-model-user-thUser
+    x-displayName: JSON:API model - user-thUser
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
+
 x-tagGroups:
   - name: Simple models
     tags:
@@ -538,6 +652,17 @@ x-tagGroups:
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
       - simple-model-teacher-teacherReference
+      - simple-model-teacher-thDiscoveryMethod
+      - simple-model-teacher-thDiscoveryMethodCategory
+      - simple-model-teacher-thStatus
+      - simple-model-teacher-videoUrlCategory
+      - simple-model-user-favouriteJob
+      - simple-model-user-favouriteSchool
+      - simple-model-user-favouriteTeacher
+      - simple-model-user-userCategory
+      - simple-model-user-message
+      - simple-model-user-messageStatus
+      - simple-model-user-thUser
 
   - name: JSON:API models
     tags:
@@ -579,6 +704,17 @@ x-tagGroups:
       - json-api-model-teacher-qualificationType
       - json-api-model-teacher-teacherNote
       - json-api-model-teacher-teacherReference
+      - json-api-model-teacher-thDiscoveryMethod
+      - json-api-model-teacher-thDiscoveryMethodCategory
+      - json-api-model-teacher-thStatus
+      - json-api-model-teacher-videoUrlCategory
+      - json-api-model-user-favouriteJob
+      - json-api-model-user-favouriteSchool
+      - json-api-model-user-favouriteTeacher
+      - json-api-model-user-userCategory
+      - json-api-model-user-message
+      - json-api-model-user-messageStatus 
+      - json-api-model-user-thUser
 
   - name: API
     tags:

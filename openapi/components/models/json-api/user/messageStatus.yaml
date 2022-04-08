@@ -1,0 +1,26 @@
+JsonApiModel_user-messageStatus:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-messageStatus_type"
+    id:
+      $ref: "#/JsonApiModel_user-messageStatus_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_attributes"
+  required:
+    - type
+    - id
+
+
+JsonApiModel_user-messageStatus_type:
+  type: string
+  example: user-messageStatus
+  description: user-messageStatus
+  readOnly: true
+
+JsonApiModel_user-messageStatus_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the user-messageStatus (string)

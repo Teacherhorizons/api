@@ -1,0 +1,45 @@
+JsonApiModel_teacher-thDiscoveryMethod:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-thDiscoveryMethod_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    thDiscoveryMethodCategory:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-thDiscoveryMethod_type:
+  type: string
+  example: teacher-thDiscoveryMethod
+  description: teacher-thDiscoveryMethod
+  readOnly: true
+
+JsonApiModel_teacher-thDiscoveryMethod_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-thDiscoveryMethod (string)
+
+
+
+
+
+
+
+

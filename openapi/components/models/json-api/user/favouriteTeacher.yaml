@@ -1,0 +1,39 @@
+JsonApiModel_user-favouriteTeacher:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-favouriteTeacher_type"
+    id:
+      $ref: "#/JsonApiModel_user-favouriteTeacher_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_user-favouriteTeacher_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-favouriteTeacher_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    user:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_user-favouriteTeacher_type:
+  type: string
+  example: user-favouriteTeacher
+  description: user-favouriteTeacher
+  readOnly: true
+
+JsonApiModel_user-favouriteTeacher_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the user-favouriteTeacher (string)

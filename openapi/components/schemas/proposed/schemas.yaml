@@ -62,7 +62,17 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/qualificationType.yaml#/SimpleModel_teacher-qualificationType"
     - $ref: "../../models/simple/teacher/teacherNote.yaml#/SimpleModel_teacher-teacherNote"
     - $ref: "../../models/simple/teacher/teacherReference.yaml#/SimpleModel_teacher-teacherReference"
-
+    - $ref: "../../models/simple/teacher/thDiscoveryMethod.yaml#/SimpleModel_teacher-thDiscoveryMethod"
+    - $ref: "../../models/simple/teacher/thDiscoveryMethodCategory.yaml#/SimpleModel_teacher-thDiscoveryMethodCategory"
+    - $ref: "../../models/simple/teacher/thStatus.yaml#/SimpleModel_teacher-thStatus"
+    - $ref: "../../models/simple/teacher/videoUrlCategory.yaml#/SimpleModel_teacher-videoUrlCategory"
+    - $ref: "../../models/simple/user/favouriteJob.yaml#/SimpleModel_user-favouriteJob"
+    - $ref: "../../models/simple/user/favouriteSchool.yaml#/SimpleModel_user-favouriteSchool"
+    - $ref: "../../models/simple/user/favouriteTeacher.yaml#/SimpleModel_user-favouriteTeacher"
+    - $ref: "../../models/simple/user/userCategory.yaml#/SimpleModel_user-userCategory"
+    - $ref: "../../models/simple/user/message.yaml#/SimpleModel_user-message"
+    - $ref: "../../models/simple/user/messageStatus.yaml#/SimpleModel_user-messageStatus"
+    - $ref: "../../models/simple/user/thUser.yaml#/SimpleModel_user-thUser"
 
 JsonApiModels:
   allOf:
@@ -104,3 +114,15 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType"
     - $ref: "../../models/json-api/teacher/teacherNote.yaml#/JsonApiModel_teacher-teacherNote"
     - $ref: "../../models/json-api/teacher/teacherReference.yaml#/JsonApiModel_teacher-teacherReference"
+    - $ref: "../../models/json-api/teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod"
+    - $ref: "../../models/json-api/teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory"
+    - $ref: "../../models/json-api/teacher/thStatus.yaml#/JsonApiModel_teacher-thStatus" 
+    - $ref: "../../models/json-api/teacher/videoUrlCategory.yaml#/JsonApiModel_teacher-videoUrlCategory" 
+    - $ref: "../../models/json-api/user/favouriteJob.yaml#/JsonApiModel_user-favouriteJob"
+    - $ref: "../../models/json-api/user/favouriteSchool.yaml#/JsonApiModel_user-favouriteSchool"
+    - $ref: "../../models/json-api/user/favouriteTeacher.yaml#/JsonApiModel_user-favouriteTeacher"   
+    - $ref: "../../models/json-api/user/userCategory.yaml#/JsonApiModel_user-userCategory"    
+    - $ref: "../../models/json-api/user/message.yaml#/JsonApiModel_user-message"
+    - $ref: "../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus"
+    - $ref: "../../models/json-api/user/thUser.yaml#/JsonApiModel_user-thUser"
+    

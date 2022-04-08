@@ -1,0 +1,25 @@
+JsonApiModel_user-favouriteJob:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-favouriteJob_type"
+    id:
+      $ref: "#/JsonApiModel_user-favouriteJob_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-favouriteJob_type:
+  type: string
+  example: user-favouriteJob
+  description: user-favouriteJob
+  readOnly: true
+
+JsonApiModel_user-favouriteJob_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the user-favouriteJob (string)

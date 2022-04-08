@@ -1,0 +1,28 @@
+
+# attributes
+user-messageStatus_attributes:
+  allOf:
+    - $ref: "#/user-messageStatus_properties_name"
+
+
+#properties
+user-messageStatus_properties_id:
+  properties:
+    id:
+      $ref: "#/user-messageStatus_id"
+user-messageStatus_properties_name:
+  properties:
+    name:
+      $ref: "#/user-messageStatus_name"
+
+#attributes
+
+user-messageStatus_id:
+  type: integer
+  example: 1
+user-messageStatus_name:
+  type: string
+  example: Archived
+
+
+

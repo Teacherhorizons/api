@@ -1,0 +1,43 @@
+teacher-thStatus_metaProperties_shared:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+    latestUpdateDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:34Z
+
+#filter properties
+
+# attributes
+teacher-thStatus_attributes:
+  allOf:
+    - $ref: "#/teacher-thStatus_properties_description"
+
+#properties
+teacher-thStatus_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-thStatus_id"
+teacher-thStatus_properties_description:
+  properties:
+    description:
+      $ref: "#/teacher-thStatus_description"
+
+
+#attributes
+teacher-thStatus_id:
+  type: integer
+  example: 1
+  description: Unique identifier of the entity
+teacher-thStatus_description:
+  type: string
+  example: New
+
+
+
+
+
+

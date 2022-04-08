@@ -1,0 +1,28 @@
+SimpleModel_user-favouriteJob:
+  allOf:
+    - $ref: "#/SimpleModel_user-favouriteJob"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_user-favouriteJob_type"
+        - $ref: "#/SimpleModel_user-favouriteJob_id"
+        - $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_attributes"
+
+# shared
+
+SimpleModel_user-favouriteJob_type:
+  properties:
+    type:
+      type: string
+      example: user-favouriteJob
+      description: user-favouriteJob
+      readOnly: true
+
+SimpleModel_user-favouriteJob_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

@@ -1,0 +1,28 @@
+
+# attributes
+user-userCategory_attributes:
+  allOf:
+    - $ref: "#/user-userCategory_properties_profile"
+
+
+#properties
+user-userCategory_properties_id:
+  properties:
+    id:
+      $ref: "#/user-userCategory_id"
+user-userCategory_properties_profile:
+  properties:
+    profile:
+      $ref: "#/user-userCategory_profile"
+
+#attributes
+
+user-userCategory_id:
+  type: integer
+  example: 1
+user-userCategory_profile:
+  type: string
+  example: Admin
+
+
+
