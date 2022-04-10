@@ -1,0 +1,51 @@
+JsonApiModel_job-factJob:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_job-factJob_type"
+    id:
+      $ref: "#/JsonApiModel_job-factJob_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/job/factJob.yaml#/job-factJob_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_job-factJob_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/job-factJob/job-factJob.yaml#/job-factJob_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_job-factJob_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    subject:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    Type:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    role:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    thOwnerUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    status:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_job-factJob_type:
+  type: string
+  example: job-factJob
+  description: job-factJob
+  readOnly: true
+
+JsonApiModel_job-factJob_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the job-factJob (string)

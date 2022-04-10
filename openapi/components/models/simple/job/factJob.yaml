@@ -1,0 +1,18 @@
+SimpleModel_job-factJob:
+  allOf:
+    - $ref: "#/SimpleModel_job-factJob"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_job-factJob_id"
+        - $ref: "../../library/job/factJob.yaml#/job-factJob_attributes"
+        - $ref: "../../library/job/factJob.yaml#/job-factJob_relationshipIds"
+
+# shared
+SimpleModel_job-factJob_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

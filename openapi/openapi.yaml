@@ -172,6 +172,18 @@ tags:
   #   description: |
   #     <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
+
+  # tags - simple-models - job
+  - name: simple-model-job
+    x-displayName: Simple model - job
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job" />
+
+  - name: simple-model-job-factJob
+    x-displayName: Simple model - job-factJob
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job-factJob" />
+
   # tags - simple-models - regional
   - name: simple-model-regional-city
     x-displayName: Simple model - regional-city
@@ -432,13 +444,25 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
 
+  # tags - JSON:API models - job
+  - name: json-api-model-job
+    x-displayName: JSON:API model - job
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job" />
+
+  - name: json-api-model-job-factJob
+    x-displayName: JSON:API model - job-factJob
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job-factJob" />
+
+
   # tags - JSON:API models - regional
-  - name: json-api-model-city
+  - name: json-api-model-regional-city
     x-displayName: JSON:API model - regional-city
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
 
-  - name: json-api-model-country
+  - name: json-api-model-regional-country
     x-displayName: JSON:API model - regional-country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
@@ -663,6 +687,8 @@ x-tagGroups:
       - simple-model-user-message
       - simple-model-user-messageStatus
       - simple-model-user-thUser
+      - simple-model-job
+      - simple-model-job-factJob
 
   - name: JSON:API models
     tags:
@@ -715,6 +741,8 @@ x-tagGroups:
       - json-api-model-user-message
       - json-api-model-user-messageStatus 
       - json-api-model-user-thUser
+      - json-api-model-job
+      - json-api-model-job-factJob
 
   - name: API
     tags:
