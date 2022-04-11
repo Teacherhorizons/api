@@ -1,0 +1,17 @@
+SimpleModel_school-additionalUrlMediaCategory:
+  allOf:
+    - $ref: "#/SimpleModel_school-additionalUrlMediaCategory"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-additionalUrlMediaCategory_id"
+        - $ref: "../../library/school/additionalUrlMediaCategory.yaml#/school-additionalUrlMediaCategory_properties_name"
+
+# shared
+SimpleModel_school-additionalUrlMediaCategory_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

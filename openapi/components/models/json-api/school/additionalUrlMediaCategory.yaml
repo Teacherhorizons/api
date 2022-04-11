@@ -1,0 +1,22 @@
+JsonApiModel_school-additionalUrlMediaCategory:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-additionalUrlMediaCategory_type"
+    id:
+      $ref: "#/JsonApiModel_school-additionalUrlMediaCategory_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/additionalUrlMediaCategory.yaml#/school-additionalUrlMediaCategory_properties_name"
+
+JsonApiModel_school-additionalUrlMediaCategory_type:
+  type: string
+  example: school-additionalUrlMediaCategory
+  description: school-additionalUrlMediaCategory
+  readOnly: true
+
+JsonApiModel_school-additionalUrlMediaCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-additionalUrlMediaCategory (string)

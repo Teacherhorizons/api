@@ -276,6 +276,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-teacherSchoolCommunityResponse" />
 
+  - name: simple-model-school-accreditationType
+    x-displayName: Simple model - school-accreditationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-accreditationType" />
+
+  - name: simple-model-school-additionalPhotoCategory
+    x-displayName: Simple model - school-additionalPhotoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalPhotoCategory" />
+
+  - name: simple-model-school-additionalUrlMediaCategory
+    x-displayName: Simple model - school-additionalUrlMediaCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalUrlMediaCategory" />
 
   # tags - simple-models - teacher
   - name: simple-model-teacher
@@ -594,6 +608,22 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teacherSchoolCommunityResponse" />
 
+  - name: json-api-model-school-accreditationType
+    x-displayName: JSON:API model - school-accreditationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-accreditationType" />
+
+  - name: json-api-model-school-additionalPhotoCategory
+    x-displayName: JSON:API model - school-additionalPhotoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalPhotoCategory" />
+
+  - name: json-api-model-school-additionalUrlMediaCategory
+    x-displayName: JSON:API model - school-additionalUrlMediaCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalUrlMediaCategory" />
+      
+
 # tags - simple-models - teacher - users
 
   - name: json-api-model-user-favouriteJob
@@ -670,6 +700,9 @@ x-tagGroups:
       - simple-model-school-schoolFacility
       - simple-model-school-studentGenderMix
       - simple-model-school-teacherSchoolCommunityResponse
+      - simple-model-school-accreditationType
+      - simple-model-school-additionalPhotoCategory
+      - simple-model-school-additionalUrlMediaCategory
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-badge
@@ -689,6 +722,7 @@ x-tagGroups:
       - simple-model-user-thUser
       - simple-model-job
       - simple-model-job-factJob
+      
 
   - name: JSON:API models
     tags:
@@ -724,6 +758,9 @@ x-tagGroups:
       - json-api-model-school-schoolFacility
       - json-api-model-school-studentGenderMix
       - json-api-model-school-teacherSchoolCommunityResponse
+      - json-api-model-school-accreditationType
+      - json-api-model-school-additionalPhotoCategory
+      - json-api-model-school-additionalUrlMediaCategory
       - json-api-model-api-model-teacher
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
@@ -743,6 +780,7 @@ x-tagGroups:
       - json-api-model-user-thUser
       - json-api-model-job
       - json-api-model-job-factJob
+  
 
   - name: API
     tags:

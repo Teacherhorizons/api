@@ -1,0 +1,18 @@
+SimpleModel_school-accreditationType:
+  allOf:
+    - $ref: "#/SimpleModel_school-accreditationType"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-accreditationType_id"
+        - $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_attributes"
+        - $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_relationshipIds"
+
+# shared
+SimpleModel_school-accreditationType_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

@@ -1,0 +1,22 @@
+JsonApiModel_school-additionalPhotoCategory:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-additionalPhotoCategory_type"
+    id:
+      $ref: "#/JsonApiModel_school-additionalPhotoCategory_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/additionalPhotoCategory.yaml#/school-additionalPhotoCategory_properties_name"
+
+JsonApiModel_school-additionalPhotoCategory_type:
+  type: string
+  example: school-additionalPhotoCategory
+  description: school-additionalPhotoCategory
+  readOnly: true
+
+JsonApiModel_school-additionalPhotoCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-additionalPhotoCategory (string)
