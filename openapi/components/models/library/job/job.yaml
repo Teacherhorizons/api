@@ -1,4 +1,3 @@
-
 # attributes
 job_attributes:
   allOf:
@@ -141,10 +140,10 @@ job_properties_status:
 #attributes
 job_id:
   type: integer
-  example: 
+  example:
 job_subjectId:
   type: integer
-  example: 
+  example:
   description: Relationship to general-subject
 job_startDate:
   type: string
@@ -156,7 +155,7 @@ job_deadlineDate:
   example: 2011-02-07T15:53:32Z
 job_furtherInfo:
   type: string
-  example: 
+  example:
 job_creationDate:
   type: string
   format: date-time
@@ -167,24 +166,24 @@ job_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 job_title:
   type: string
-  example: 
+  example:
 job_typeId:
   type: integer
-  example: 
+  example:
 job_advertExpiryDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z"
 job_excludeFromJobSearch:
   type: integer
-  example: 
+  example:
 job_roleId:
   type: integer
-  example: 
+  example:
   description: Relationship to general-role
 job_schoolId:
   type: integer
-  example: 
+  example:
   description: Relationship to school
 job_creationUserId:
   type: integer
@@ -199,8 +198,8 @@ job_thOwnerUserId:
   example: 1
   description: Relationship to Adviser
 job_statusId:
-  type: 
-  example: 
+  type: integer
+  example:
   description: Relationship to JobStatus
 
 job_subject:
@@ -216,7 +215,7 @@ job_type:
     id:
       type: string
       example: "1"
-      description: 
+      description:
 
 job_role:
   type: object
