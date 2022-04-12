@@ -1,0 +1,126 @@
+# attributes
+school-schoolAcademicSystem_attributes:
+  allOf:
+    - $ref: "#/school-schoolAcademicSystem_properties_creationDate"
+    - $ref: "#/school-schoolAcademicSystem_properties_latestUpdateDate"
+
+# relationshipIds
+school-schoolAcademicSystem_relationshipIds:
+  allOf:
+    - $ref: "#/school-schoolAcademicSystem_properties_creationUserId"
+    - $ref: "#/school-schoolAcademicSystem_properties_latestUpdateUserId"
+    - $ref: "#/school-schoolAcademicSystem_properties_schoolId"
+    - $ref: "#/school-schoolAcademicSystem_properties_academicSystemId"
+
+# attribute relationships
+
+# relationships
+school-schoolAcademicSystem_relationships:
+  allOf:
+    - $ref: "#/school-schoolAcademicSystem_properties_creationUser"
+    - $ref: "#/school-schoolAcademicSystem_properties_latestUpdateUser"
+    - $ref: "#/school-schoolAcademicSystem_properties_school"
+    - $ref: "#/school-schoolAcademicSystem_properties_academicSystem"
+
+#properties
+school-schoolAcademicSystem_properties_id:
+  properties:
+    id:
+      $ref: "#/school-schoolAcademicSystem_id"
+school-schoolAcademicSystem_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-schoolAcademicSystem_creationDate"
+school-schoolAcademicSystem_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-schoolAcademicSystem_latestUpdateDate"
+school-schoolAcademicSystem_properties_schoolId:
+  properties:
+    schoolId:
+      $ref: "#/school-schoolAcademicSystem_schoolId"
+school-schoolAcademicSystem_properties_academicSystemId:
+  properties:
+    academicSystemId:
+      $ref: "#/school-schoolAcademicSystem_academicSystemId"
+school-schoolAcademicSystem_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-schoolAcademicSystem_creationUserId"
+school-schoolAcademicSystem_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-schoolAcademicSystem_latestUpdateUserId"
+school-schoolAcademicSystem_properties_school:
+  properties:
+    school:
+      $ref: "#/school-schoolAcademicSystem_school"
+school-schoolAcademicSystem_properties_academicSystem:
+  properties:
+    academicSystem:
+      $ref: "#/school-schoolAcademicSystem_academicSystem"
+school-schoolAcademicSystem_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-schoolAcademicSystem_creationUser"
+school-schoolAcademicSystem_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-schoolAcademicSystem_latestUpdateUser"
+
+#attributes
+school-schoolAcademicSystem_id:
+  type: integer
+  example: 
+school-schoolAcademicSystem_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAcademicSystem_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAcademicSystem_schoolId:
+  type: integer
+  example: 
+school-schoolAcademicSystem_academicSystemId:
+  type: integer
+  example: 
+  description: Relationship to SchoolAcademicSystem
+school-schoolAcademicSystem_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolAcademicSystem_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolAcademicSystem_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
+school-schoolAcademicSystem_academicSystem:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to SchoolAcademicSystem
+school-schoolAcademicSystem_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+school-schoolAcademicSystem_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+

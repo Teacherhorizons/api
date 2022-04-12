@@ -1,0 +1,7 @@
+SimpleModel_school-thRating:
+  allOf:
+    - $ref: "#/SimpleModel_school-thRating"
+    - type: object
+      allOf:
+        - $ref: "../../library/school/thRating.yaml#/school-thRating_properties_thRating"
+

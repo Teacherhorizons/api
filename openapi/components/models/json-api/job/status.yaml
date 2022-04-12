@@ -1,0 +1,26 @@
+JsonApiModel_job-status:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_job-status_type"
+    id:
+      $ref: "#/JsonApiModel_job-status_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/job/status.yaml#/job-status_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_job-status_type:
+  type: string
+  example: job-status
+  description: job-status
+  readOnly: true
+
+JsonApiModel_job-status_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the job-status (string)

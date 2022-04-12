@@ -1,0 +1,43 @@
+JsonApiModel_school-schoolAcademicSystem:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolAcademicSystem_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolAcademicSystem_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolAcademicSystem.yaml#/school-schoolAcademicSystem_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolAcademicSystem_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolAcademicSystem.yaml#/school-schoolAcademicSystem_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolAcademicSystem_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    academicSystem:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolAcademicSystem_type:
+  type: string
+  example: school-schoolAcademicSystem
+  description: school-schoolAcademicSystem
+  readOnly: true
+
+JsonApiModel_school-schoolAcademicSystem_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolAcademicSystem (string)

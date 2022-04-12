@@ -1,91 +1,35 @@
-# JsonApiModel_user:
-#   type: object
-#   properties:
-#     schema:
-#       type: string
-#       example: admin
-#   discriminator:
-#     propertyName: schema
-#     mapping:
-#       admin: "#/JsonApiModel_user_admin"
-#       school: "#/JsonApiModel_user_school"
-#       teacher: "#/JsonApiModel_user_teacher"
+JsonApiModel_user:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user_type"
+    id:
+      $ref: "#/JsonApiModel_user_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/user/user.yaml#/user_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_user_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/user/user.yaml#/user_relationships"
+  required:
+    - type
+    - id
 
-# JsonApiModel_user_admin:
-#   allOf:
-#     - $ref: "#/JsonApiModel_user"
-#     - type: object
-#     - properties:
-#         $ref: "#/JsonApiModel_user_attributes_admin"
-#     - required:
-#         - type
-#         - id
+JsonApiModel_user_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    profile:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    phoneCodeCountry:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
-# JsonApiModel_user_school:
-#   allOf:
-#     - $ref: "#/JsonApiModel_user"
-#     - type: object
-#     - properties:
-#         $ref: "#/JsonApiModel_user_attributes_school"
-#     - required:
-#         - type
-#         - id
-
-# JsonApiModel_user_teacher:
-#   allOf:
-#     - $ref: "#/JsonApiModel_user"
-#     - type: object
-#     - properties:
-#         $ref: "#/JsonApiModel_user_attributes_school"
-#     - required:
-#         - type
-#         - id
-
-# # admin
-# JsonApiModel_user_attributes_admin:
-#   type:
-#     $ref: "#/JsonApiModel_user_type"
-#   id:
-#     $ref: "#/JsonApiModel_user_id"
-#   attributes:
-#     allOf:
-#       - $ref: "../../library/user/User.yaml#/User_standardProperties_shared"
-#       - $ref: "../../library/user/User.yaml#/User_standardProperties_adminOnly"
-#   relationships:
-#     $ref: "#/JsonApiModel_user_relationships_admin"
-
-# JsonApiModel_user_relationships_admin:
-#   type: object
-#   description: Related attributes
-#   properties:
-#     creationUser:
-#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-#     latestUpdateUser:
-#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-
-# # school
-# JsonApiModel_user_attributes_school:
-#   type:
-#     $ref: "#/JsonApiModel_user_type"
-#   id:
-#     $ref: "#/JsonApiModel_user_id"
-#   attributes:
-#     allOf:
-#       - $ref: "../../library/user/User.yaml#/User_standardProperties_shared"
-#   # relationships:
-
-# # teacher
-# JsonApiModel_user_attributes_teacher:
-#   type:
-#     $ref: "#/JsonApiModel_user_type"
-#   id:
-#     $ref: "#/JsonApiModel_user_id"
-#   attributes:
-#     allOf:
-#       - $ref: "../../library/user/User.yaml#/User_standardProperties_shared"
-#   # relationships:
-
-# shared
 JsonApiModel_user_type:
   type: string
   example: user
@@ -97,19 +41,3 @@ JsonApiModel_user_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the user (string)
-
-JsonApiModel_user_fullName:
-  type: string
-  example: "John Smith"
-  readOnly: true
-
-JsonApiModel_user_relationship:
-  type: object
-  properties:
-    data:
-      type: object
-      properties:
-        type:
-          $ref: "#/JsonApiModel_user_type"
-        id:
-          $ref: "#/JsonApiModel_user_id"
