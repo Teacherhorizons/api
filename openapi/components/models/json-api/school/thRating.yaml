@@ -1,0 +1,16 @@
+JsonApiModel_school-thRating:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-thRating_type"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/thRating.yaml#/school-thRating_properties_thRating"
+
+JsonApiModel_school-thRating_type:
+  type: string
+  example: school-thRating
+  description: school-thRating
+  readOnly: true
+
+

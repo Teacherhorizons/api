@@ -184,6 +184,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job-factJob" />
 
+  - name: simple-model-job-status
+    x-displayName: Simple model - job-status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job-status" />
+
   # tags - simple-models - regional
   - name: simple-model-regional-city
     x-displayName: Simple model - regional-city
@@ -291,6 +296,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalUrlMediaCategory" />
 
+  - name: simple-model-school-schoolAcademicSystem
+    x-displayName: Simple model - school-schoolAcademicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolAcademicSystem" />
+
+  - name: simple-model-school-thRating
+    x-displayName: Simple model - school-thRating
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-thRating" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -317,6 +332,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNote" />  
 
+  - name: simple-model-teacher-teacherNoteType
+    x-displayName: Simple model - teacher-teacherNoteType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNoteType" />  
+
   - name: simple-model-teacher-teacherReference
     x-displayName: Simple model - teacher-teacherReference
     description: |
@@ -342,7 +362,12 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-videoUrlCategory" /> 
 
-  # tags - simple-models - teacher - users
+  # tags - simple-models - users
+
+  - name: simple-model-user
+    x-displayName: Simple model - user
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user" />
 
   - name: simple-model-user-favouriteJob
     x-displayName: Simple model - user-favouriteJob
@@ -469,6 +494,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job-factJob" />
 
+  - name: json-api-model-job-status
+    x-displayName: JSON:API model - job-status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job-status" />
+
 
   # tags - JSON:API models - regional
   - name: json-api-model-regional-city
@@ -511,6 +541,11 @@ tags:
     x-displayName: JSON:API model - teacher-teacherNote
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNote" />
+
+  - name: json-api-model-teacher-teacherNoteType
+    x-displayName: JSON:API model - teacher-teacherNoteType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNoteType" />
 
   - name: json-api-model-teacher-teacherReference
     x-displayName: JSON:API model - teacher-teacherReference
@@ -622,9 +657,23 @@ tags:
     x-displayName: JSON:API model - school-additionalUrlMediaCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalUrlMediaCategory" />
-      
 
-# tags - simple-models - teacher - users
+  - name: json-api-model-school-schoolAcademicSystem
+    x-displayName: JSON:API model - school-schoolAcademicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAcademicSystem" />
+
+  - name: json-api-model-school-thRating
+    x-displayName: JSON:API model - school-thRating
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
+
+# tags - simple-models - users
+
+  - name: json-api-model-user
+    x-displayName: JSON:API model - user
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user" />
 
   - name: json-api-model-user-favouriteJob
     x-displayName: JSON:API model - user-favouriteJob
@@ -703,16 +752,20 @@ x-tagGroups:
       - simple-model-school-accreditationType
       - simple-model-school-additionalPhotoCategory
       - simple-model-school-additionalUrlMediaCategory
+      - simple-model-school-schoolAcademicSystem
+      - simple-model-school-thRating
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-badge
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
+      - simple-model-teacher-teacherNoteType
       - simple-model-teacher-teacherReference
       - simple-model-teacher-thDiscoveryMethod
       - simple-model-teacher-thDiscoveryMethodCategory
       - simple-model-teacher-thStatus
       - simple-model-teacher-videoUrlCategory
+      - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
       - simple-model-user-favouriteTeacher
@@ -722,6 +775,7 @@ x-tagGroups:
       - simple-model-user-thUser
       - simple-model-job
       - simple-model-job-factJob
+      - simple-model-job-status
       
 
   - name: JSON:API models
@@ -761,16 +815,20 @@ x-tagGroups:
       - json-api-model-school-accreditationType
       - json-api-model-school-additionalPhotoCategory
       - json-api-model-school-additionalUrlMediaCategory
+      - json-api-model-school-schoolAcademicSystem
+      - json-api-model-school-thRating
       - json-api-model-api-model-teacher
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
       - json-api-model-teacher-qualificationType
       - json-api-model-teacher-teacherNote
+      - json-api-model-teacher-teacherNoteType
       - json-api-model-teacher-teacherReference
       - json-api-model-teacher-thDiscoveryMethod
       - json-api-model-teacher-thDiscoveryMethodCategory
       - json-api-model-teacher-thStatus
       - json-api-model-teacher-videoUrlCategory
+      - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
       - json-api-model-user-favouriteTeacher
@@ -780,6 +838,7 @@ x-tagGroups:
       - json-api-model-user-thUser
       - json-api-model-job
       - json-api-model-job-factJob
+      - json-api-model-job-status
   
 
   - name: API

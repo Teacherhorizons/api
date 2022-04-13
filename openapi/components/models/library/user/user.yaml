@@ -1,0 +1,242 @@
+
+
+# attributes
+user_attributes:
+  allOf:
+    - $ref: "#/user_properties_firstName"
+    - $ref: "#/user_properties_lastName"
+    - $ref: "#/user_properties_email"
+    - $ref: "#/user_properties_skype"
+    - $ref: "#/user_properties_password"
+    - $ref: "#/user_properties_phone"
+    - $ref: "#/user_properties_optin"
+    - $ref: "#/user_properties_active"
+    - $ref: "#/user_properties_creationDate"
+    - $ref: "#/user_properties_latestUpdateDate"
+    - $ref: "#/user_properties_authToken"
+    - $ref: "#/user_properties_latestLoginDate"
+    - $ref: "#/user_properties_encryptedPassword"
+    - $ref: "#/user_properties_allowLogin"
+    - $ref: "#/user_properties_thDoNotContact"
+    - $ref: "#/user_properties_latestMessageViewDate"
+
+# relationshipIds
+user_relationshipIds:
+  allOf:
+    - $ref: "#/user_properties_profileId"
+    - $ref: "#/user_properties_creationUserId"
+    - $ref: "#/user_properties_latestUpdateUserId"
+    - $ref: "#/user_properties_phoneCodeCountryId"
+
+# attribute relationships
+
+# relationships
+user_relationships:
+  allOf:
+    - $ref: "#/user_properties_profile"
+    - $ref: "#/user_properties_creationUser"
+    - $ref: "#/user_properties_latestUpdateUser"
+    - $ref: "#/user_properties_phoneCodeCountry"
+
+#properties
+user_properties_id:
+  properties:
+    id:
+      $ref: "#/user_id"
+user_properties_firstName:
+  properties:
+    firstName:
+      $ref: "#/user_firstName"
+user_properties_lastName:
+  properties:
+    lastName:
+      $ref: "#/user_lastName"
+user_properties_email:
+  properties:
+    email:
+      $ref: "#/user_email"
+user_properties_skype:
+  properties:
+    skype:
+      $ref: "#/user_skype"
+user_properties_password:
+  properties:
+    password:
+      $ref: "#/user_password"
+user_properties_phone:
+  properties:
+    phone:
+      $ref: "#/user_phone"
+user_properties_optin:
+  properties:
+    optin:
+      $ref: "#/user_optin"
+user_properties_active:
+  properties:
+    active:
+      $ref: "#/user_active"
+user_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/user_creationDate"
+user_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/user_latestUpdateDate"
+user_properties_authToken:
+  properties:
+    authToken:
+      $ref: "#/user_authToken"
+user_properties_latestLoginDate:
+  properties:
+    latestLoginDate:
+      $ref: "#/user_latestLoginDate"
+user_properties_encryptedPassword:
+  properties:
+    encryptedPassword:
+      $ref: "#/user_encryptedPassword"
+user_properties_allowLogin:
+  properties:
+    allowLogin:
+      $ref: "#/user_allowLogin"
+user_properties_thDoNotContact:
+  properties:
+    thDoNotContact:
+      $ref: "#/user_thDoNotContact"
+user_properties_latestMessageViewDate:
+  properties:
+    latestMessageViewDate:
+      $ref: "#/user_latestMessageViewDate"
+user_properties_profileId:
+  properties:
+    profileId:
+      $ref: "#/user_profileId"
+user_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/user_creationUserId"
+user_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/user_latestUpdateUserId"
+user_properties_phoneCodeCountryId:
+  properties:
+    phoneCodeCountryId:
+      $ref: "#/user_phoneCodeCountryId"
+user_properties_profile:
+  properties:
+    profile:
+      $ref: "#/user_profile"
+user_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/user_creationUser"
+user_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/user_latestUpdateUser"
+user_properties_phoneCodeCountry:
+  properties:
+    phoneCodeCountry:
+      $ref: "#/user_phoneCodeCountry"
+
+#attributes
+user_id:
+  type: integer
+  example: 1
+user_firstName:
+  type: string
+  example: Otto
+user_lastName:
+  type: string
+  example: Villarin
+user_email:
+  type: string
+  example: otto@tbtech.co.uk
+user_skype:
+  type: string
+  example: 
+user_password:
+  type: string
+  example: 
+user_phone:
+  type: string
+  example: 
+user_optin:
+  type: integer
+  example: 0
+user_active:
+  type: integer
+  example: 1
+user_creationDate:
+  type: string
+  format: date-time
+  example: 2010-11-04T20:55:08Z
+user_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2010-12-20T14:56:32Z
+user_authToken:
+  type: string
+  example: 2386dc3a-608f-424f-a1e0-44c3a02fc78b
+user_latestLoginDate:
+  type: string
+  format: date-time
+  example: 2017-04-06T10:57:04Z
+user_encryptedPassword:
+  type: string
+  example: kNBCYFF3McYxKDFiBVVHpQ==
+user_allowLogin:
+  type: integer
+  example: 0
+user_thDoNotContact:
+  type: integer
+  example: 0
+user_latestMessageViewDate:
+  type: string
+  format: date-time
+  example: 2017-04-06T10:57:04Z
+user_profileId:
+  type: integer
+  example: 5
+  description: Relationship to Profile
+user_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+user_latestUpdateUserId:
+  type: integer
+  example: 4
+  description: Relationship to user
+user_phoneCodeCountryId:
+  type: integer
+  example: 
+  description: Relationship to regional-country
+user_profile:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Profile
+user_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+user_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+user_phoneCodeCountry:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to regional-country

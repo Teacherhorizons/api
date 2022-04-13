@@ -12,7 +12,7 @@ JsonApiModel_school-academicSystem:
       $ref: "#/JsonApiModel_school-academicSystem_relationships"
       attributes:
         allOf:
-          $ref: "../../library/general/role.yaml#/school-academicSystem_relationships"
+          $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_relationships"
   required:
     - type
     - id

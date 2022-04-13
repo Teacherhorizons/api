@@ -15,14 +15,14 @@ application-applicationEvent_getResponse200:
             allOf:
               - $ref: "../../models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
               - $ref: "../../models/library/application/applicationEvent.yaml#/application-applicationEvent_attributeRelationships"
-          relationships:
-            # TODO: consider improving
-            type: object
-            properties:
-              creationUser:
-                $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-              latestUpdateUser:
-                $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+          # relationships:
+          #   # TODO: consider improving
+          #   type: object
+          #   properties:
+          #     creationUser:
+          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+          #     latestUpdateUser:
+          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
     included:
       type: array
       items:
@@ -32,9 +32,9 @@ application-applicationEvent_getResponse200:
             $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_type"
           id:
             $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_id"
-          attributes:
-            type: object
-            properties:
-              fullName:
-                $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_fullName"
+          # attributes:
+          #   type: object
+          #   properties:
+          #     fullName:
+          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_fullName"
 # consider having a 'rule' that says every property should be a reference to the models (rule A, say)
