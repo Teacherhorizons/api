@@ -1,0 +1,77 @@
+
+# attributes
+teacher-teacherLookingForSubject_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherLookingForSubject_properties_precedence"
+
+# relationshipIds
+teacher-teacherLookingForSubject_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherLookingForSubject_properties_subjectId"
+    - $ref: "#/teacher-teacherLookingForSubject_properties_teacherId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherLookingForSubject_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherLookingForSubject_properties_subject"
+    - $ref: "#/teacher-teacherLookingForSubject_properties_teacher"
+
+#properties
+teacher-teacherLookingForSubject_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherLookingForSubject_id"
+teacher-teacherLookingForSubject_properties_subjectId:
+  properties:
+    subjectId:
+      $ref: ""#/teacher-teacherLookingForSubject_subjectId"
+teacher-teacherLookingForSubject_properties_precedence:
+  properties:
+    precedence:
+      $ref: "#/teacher-teacherLookingForSubject_precedence"
+teacher-teacherLookingForSubject_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/teacher-teacherLookingForSubject_teacherId"
+teacher-teacherLookingForSubject_properties_subject:
+  properties:
+    subject:
+      $ref: "#/teacher-teacherLookingForSubject_subject"
+
+teacher-teacherLookingForSubject_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/teacher-teacherLookingForSubject_teacher"
+
+#attributes
+teacher-teacherLookingForSubject_id:
+  type: integer
+  example: 1
+  description: auto
+teacher-teacherLookingForSubject_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to general-subject"
+teacher-teacherLookingForSubject_precedence:
+  type: integer
+  example: 1
+teacher-teacherLookingForSubject_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
+teacher-teacherLookingForSubject_subject:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-subject
+teacher-teacherLookingForSubject_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher

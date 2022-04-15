@@ -102,6 +102,13 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-thMatchType" />
 
+  - name: simple-model-application-eventTypeAction
+    x-displayName: Simple model - application-eventTypeAction
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
+
+      
+
   # tags - simple-models - general
   - name: simple-model-general-educationLevel
     x-displayName: Simple model - general-educationLevel
@@ -152,6 +159,11 @@ tags:
     x-displayName: Simple model - general-worldLanguage
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-worldLanguage" />
+
+  - name: simple-model-general-manualEmailTemplate
+    x-displayName: Simple model - general-manualEmailTemplate
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-manualEmailTemplate" /> 
 
   # - name: simple-model-lists
   #   x-displayName: Lists
@@ -362,6 +374,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-videoUrlCategory" /> 
 
+  - name: simple-model-teacher-teacherLookingForSubject
+    x-displayName: Simple model - teacher-teacherLookingForSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForSubject" /> 
+
   # tags - simple-models - users
 
   - name: simple-model-user
@@ -403,6 +420,28 @@ tags:
     x-displayName: Simple model - user-thUser
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-thUser" /> 
+
+  # tags - simple-models - meta
+
+  - name: simple-model-meta-entityType
+    x-displayName: Simple model - meta-entityType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityType" />  
+
+  - name: simple-model-meta-entityChange
+    x-displayName: Simple model - meta-entityChange
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChange" /> 
+
+  - name: simple-model-meta-entityChangeSummary
+    x-displayName: Simple model - meta-entityChangeSummary
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChangeSummary" /> 
+
+  - name: simple-model-meta-entityChangeSummarySubscription
+    x-displayName: Simple model - meta-entityChangeSummarySubscription
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChangeSummarySubscription" /> 
       
   # JSON:API models
 
@@ -436,6 +475,11 @@ tags:
     x-displayName: JSON:API model - application-thMatchType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-thMatchType" />
+
+  - name: json-api-model-application-eventTypeAction
+    x-displayName: JSON:API model - application-eventTypeAction
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
   # tags - JSON:API models - general
   - name: json-api-model-general-currency
@@ -482,6 +526,11 @@ tags:
     x-displayName: JSON:API model - general-worldLanguage
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
+
+  - name: json-api-model-general-manualEmailTemplate
+    x-displayName: JSON:API model - general-manualEmailTemplate
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-manualEmailTemplate" />
 
   # tags - JSON:API models - job
   - name: json-api-model-job
@@ -571,6 +620,11 @@ tags:
     x-displayName: JSON:API model - teacher-videoUrlCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-videoUrlCategory" />
+
+  - name: json-api-model-teacher-teacherLookingForSubject
+    x-displayName: JSON:API model - teacher-teacherLookingForSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForSubject" />
 
   # tags - JSON:API models - school
   - name: json-api-model-school-academicSystem
@@ -668,7 +722,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
 
-# tags - simple-models - users
+# tags - json-api-models - users
 
   - name: json-api-model-user
     x-displayName: JSON:API model - user
@@ -710,6 +764,28 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
 
+# tags - json-api-models - meta
+
+  - name: json-api-model-meta-entityType
+    x-displayName: JSON:API model - meta-entityType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityType" />
+
+  - name: json-api-model-meta-entityChange
+    x-displayName: JSON:API model - meta-entityChange
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChange" />
+
+  - name: json-api-model-meta-entityChangeSummary
+    x-displayName: JSON:API model - meta-entityChangeSummary
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummary" />
+
+  - name: json-api-model-meta-entityChangeSummarySubscription
+    x-displayName: JSON:API model - meta-entityChangeSummarySubscription
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummarySubscription" />
+
 x-tagGroups:
   - name: Simple models
     tags:
@@ -722,6 +798,7 @@ x-tagGroups:
       - simple-model-application-eventType
       - simple-model-application-status
       - simple-model-application-thMatchType
+      - simple-model-application-eventTypeAction
       - simple-model-general-currency
       - simple-model-general-educationLevel
       - simple-model-general-pensionSchemeType
@@ -731,6 +808,7 @@ x-tagGroups:
       - simple-model-general-subject
       - simple-model-general-subjectGroup
       - simple-model-general-worldLanguage
+      - simple-model-general-manualEmailTemplate
       - simple-model-regional-city
       - simple-model-regional-country
       - simple-model-regional-region
@@ -765,6 +843,7 @@ x-tagGroups:
       - simple-model-teacher-thDiscoveryMethodCategory
       - simple-model-teacher-thStatus
       - simple-model-teacher-videoUrlCategory
+      - simple-model-teacher-teacherLookingForSubject
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -776,6 +855,11 @@ x-tagGroups:
       - simple-model-job
       - simple-model-job-factJob
       - simple-model-job-status
+      - simple-model-meta-entityType
+      - simple-model-meta-entityChange
+      - simple-model-meta-entityChangeSummary
+      - simple-model-meta-entityChangeSummarySubscription
+      - simple-model-meta-manualEmailTemplate
       
 
   - name: JSON:API models
@@ -786,6 +870,7 @@ x-tagGroups:
       - json-api-model-application-eventType
       - json-api-model-application-status
       - json-api-model-application-thMatchType
+      - json-api-model-application-eventTypeAction
       - json-api-model-general-currency
       - json-api-model-general-educationLevel
       - json-api-model-general-pensionSchemeType
@@ -795,6 +880,7 @@ x-tagGroups:
       - json-api-model-general-subject
       - json-api-model-general-subjectGroup
       - json-api-model-general-worldLanguage
+      - json-api-model-general-manualEmailTemplate
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
@@ -827,6 +913,7 @@ x-tagGroups:
       - json-api-model-teacher-thDiscoveryMethod
       - json-api-model-teacher-thDiscoveryMethodCategory
       - json-api-model-teacher-thStatus
+      - json-api-model-teacher-teacherLookingForSubject
       - json-api-model-teacher-videoUrlCategory
       - json-api-model-user
       - json-api-model-user-favouriteJob
@@ -839,7 +926,11 @@ x-tagGroups:
       - json-api-model-job
       - json-api-model-job-factJob
       - json-api-model-job-status
-  
+      - json-api-model-meta-entityType
+      - json-api-model-meta-entityChange
+      - json-api-model-meta-entityChangeSummary
+      - json-api-model-meta-entityChangeSummarySubscription
+      - json-api-model-meta-manualEmailTemplate
 
   - name: API
     tags:

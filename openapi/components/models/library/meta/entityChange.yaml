@@ -1,0 +1,106 @@
+
+# attributes
+meta-entityChange_attributes:
+  allOf:
+    - $ref: "#/meta-entityChange_properties_date"
+    - $ref: "#/meta-entityChange_properties_isProcessed"
+
+# relationshipIds
+meta-entityChange_relationshipIds:
+  allOf:
+    - $ref: "#/meta-entityChange_properties_entityTypeId"
+    - $ref: "#/meta-entityChange_properties_entityId"
+    - $ref: "#/meta-entityChange_properties_userId"
+
+# attribute relationships
+
+# relationships
+meta-entityChange_relationships:
+  allOf:
+    - $ref: "#/meta-entityChange_properties_entityType"
+    - $ref: "#/meta-entityChange_properties_entity"
+    - $ref: "#/meta-entityChange_properties_user"
+
+#properties
+meta-entityChange_properties_id:
+  properties:
+    id:
+      $ref: "#/meta-entityChange_id"
+meta-entityChange_properties_date:
+  properties:
+    date:
+      $ref: "#/meta-entityChange_date"
+meta-entityChange_properties_isProcessed:
+  properties:
+    isProcessed:
+      $ref: "#/meta-entityChange_isProcessed"
+meta-entityChange_properties_entityTypeId:
+  properties:
+    entityTypeId:
+      $ref: "#/meta-entityChange_entityTypeId"
+meta-entityChange_properties_entityId:
+  properties:
+    entityId:
+      $ref: "#/meta-entityChange_entityId"
+meta-entityChange_properties_userId:
+  properties:
+    userId:
+      $ref: "#/meta-entityChange_userId"
+meta-entityChange_properties_entityType:
+  properties:
+    entityType:
+      $ref: "#/meta-entityChange_entityType"
+meta-entityChange_properties_entity:
+  properties:
+    entity:
+      $ref: "#/meta-entityChange_entity"
+meta-entityChange_properties_user:
+  properties:
+    user:
+      $ref: "#/meta-entityChange_user"
+
+#attributes
+meta-entityChange_id:
+  type: integer
+  example: 1
+  description: auto
+meta-entityChange_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+meta-entityChange_isProcessed:
+  type: boolean
+  example: 
+meta-entityChange_entityTypeId:
+  type: integer
+  example: 1
+  description: Relationship to meta-entityType
+meta-entityChange_entityId:
+  type: integer
+  example: 1
+  description: Relationship to the related entity
+meta-entityChange_userId:
+  type: integer
+  example: 1
+  description: Relationship to user
+meta-entityChange_entityType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to meta-entityType
+meta-entityChange_entity:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to the related entity
+meta-entityChange_user:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user

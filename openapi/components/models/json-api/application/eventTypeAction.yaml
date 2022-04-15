@@ -1,0 +1,43 @@
+JsonApiModel_application-eventTypeAction:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_application-eventTypeAction_type"
+    id:
+      $ref: "#/JsonApiModel_application-eventTypeAction_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_application-eventTypeAction_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_application-eventTypeAction_relationships:
+  type: object
+  description: Related Attributes
+  properties:
+    applicationEventType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    actionType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    manualEmailTemplate:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    autoEmail:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_application-eventTypeAction_type:
+  type: string
+  example: application-eventTypeAction
+  description: application-eventTypeAction
+  readOnly: true
+
+JsonApiModel_application-eventTypeAction_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the application-eventTypeAction (string)

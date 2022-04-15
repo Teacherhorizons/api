@@ -1,0 +1,47 @@
+JsonApiModel_teacher-teacherLookingForSubject:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherLookingForSubject_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    subject:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherLookingForSubject_type:
+  type: string
+  example: teacher-teacherLookingForSubject
+  description: teacher-teacherLookingForSubject
+  readOnly: true
+
+JsonApiModel_teacher-teacherLookingForSubject_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherLookingForSubject (string)
+
+
+
+
+
+
+
+
