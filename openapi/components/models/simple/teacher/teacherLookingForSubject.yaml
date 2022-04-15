@@ -1,0 +1,28 @@
+SimpleModel_teacher-teacherLookingForSubject:
+  allOf:
+    - $ref: "#/SimpleModel_teacher-teacherLookingForSubject"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_teacher-teacherLookingForSubject_type"
+        - $ref: "#/SimpleModel_teacher-teacherLookingForSubject_id"
+        - $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_attributes"
+
+# shared
+
+SimpleModel_teacher-teacherLookingForSubject_type:
+  properties:
+    type:
+      type: string
+      example: teacher-teacherLookingForSubject
+      description: teacher-teacherLookingForSubject
+      readOnly: true
+
+SimpleModel_teacher-teacherLookingForSubject_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

@@ -1,0 +1,17 @@
+SimpleModel_general-manualEmailTemplate:
+  allOf:
+    - $ref: "#/SimpleModel_general-manualEmailTemplate"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-manualEmailTemplate_id"
+        - $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_attributes"
+
+# shared
+SimpleModel_general-manualEmailTemplate_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

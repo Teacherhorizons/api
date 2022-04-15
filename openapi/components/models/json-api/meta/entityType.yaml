@@ -1,0 +1,26 @@
+JsonApiModel_meta-entityType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_meta-entityType_type"
+    id:
+      $ref: "#/JsonApiModel_meta-entityType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/meta/entityType.yaml#/meta-entityType_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_meta-entityType_type:
+  type: string
+  example: meta-entityType
+  description: meta-entityType
+  readOnly: true
+
+JsonApiModel_meta-entityType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the meta-entityType (string)

@@ -1,0 +1,102 @@
+
+# attributes
+meta-entityChangeSummary_attributes:
+  allOf:
+    - $ref: "#/meta-entityChangeSummary_properties_fromDate"
+    - $ref: "#/meta-entityChangeSummary_properties_toDate"
+    - $ref: "#/meta-entityChangeSummary_properties_notes"
+    - $ref: "#/meta-entityChangeSummary_properties_isProcessed"
+
+# relationshipIds
+meta-entityChangeSummary_relationshipIds:
+  allOf:
+    - $ref: "#/meta-entityChangeSummary_properties_entityTypeId"
+    - $ref: "#/meta-entityChangeSummary_properties_entityId"
+
+# attribute relationships
+
+# relationships
+meta-entityChangeSummary_relationships:
+  allOf:
+    - $ref: "#/meta-entityChangeSummary_properties_entityType"
+    - $ref: "#/meta-entityChangeSummary_properties_entity"
+
+#properties
+meta-entityChangeSummary_properties_id:
+  properties:
+    id:
+      $ref: "#/meta-entityChangeSummary_id"
+meta-entityChangeSummary_properties_fromDate:
+  properties:
+    fromDate:
+      $ref: "#/meta-entityChangeSummary_fromDate"
+meta-entityChangeSummary_properties_toDate:
+  properties:
+    toDate:
+      $ref: "#/meta-entityChangeSummary_toDate"
+meta-entityChangeSummary_properties_notes:
+  properties:
+    notes:
+      $ref: "#/meta-entityChangeSummary_notes"
+meta-entityChangeSummary_properties_isProcessed:
+  properties:
+    isProcessed:
+      $ref: "#/meta-entityChangeSummary_isProcessed"
+meta-entityChangeSummary_properties_entityTypeId:
+  properties:
+    entityTypeId:
+      $ref: "#/meta-entityChangeSummary_entityTypeId"
+meta-entityChangeSummary_properties_entityId:
+  properties:
+    entityId:
+      $ref: "#/meta-entityChangeSummary_entityId"
+meta-entityChangeSummary_properties_entityType:
+  properties:
+    entityType:
+      $ref: "#/meta-entityChangeSummary_entityType"
+meta-entityChangeSummary_properties_entity:
+  properties:
+    entity:
+      $ref: "#/meta-entityChangeSummary_entity"
+
+#attributes
+meta-entityChangeSummary_id:
+  type: integer
+  example: 1
+  description: auto
+meta-entityChangeSummary_fromDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+meta-entityChangeSummary_toDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+meta-entityChangeSummary_notes:
+  type: string
+  example: 
+meta-entityChangeSummary_isProcessed:
+  type: boolean
+  example: 
+meta-entityChangeSummary_entityTypeId:
+  type: integer
+  example: 1
+  description: Relationship to meta-entityType
+meta-entityChangeSummary_entityId:
+  type: integer
+  example: 1
+  description: Relationship to the related entity
+meta-entityChangeSummary_entityType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to meta-entityType
+meta-entityChangeSummary_entity:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to the related entity

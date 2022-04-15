@@ -1,0 +1,39 @@
+JsonApiModel_meta-entityChangeSummary:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_meta-entityChangeSummary_type"
+    id:
+      $ref: "#/JsonApiModel_meta-entityChangeSummary_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_meta-entityChangeSummary_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_meta-entityChangeSummary_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    entityType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    entity:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_meta-entityChangeSummary_type:
+  type: string
+  example: meta-entityChangeSummary
+  description: meta-entityChangeSummary
+  readOnly: true
+
+JsonApiModel_meta-entityChangeSummary_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the meta-entityChangeSummary (string)
