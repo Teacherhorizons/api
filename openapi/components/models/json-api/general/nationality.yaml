@@ -1,0 +1,39 @@
+JsonApiModel_general-nationality:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-nationality_type"
+    id:
+      $ref: "#/JsonApiModel_general-nationality_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/general/nationality.yaml#/general-nationality_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_general-nationality_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/general/nationality.yaml#/general-nationality_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_general-nationality_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_general-nationality_type:
+  type: string
+  example: general-nationality
+  description: general-nationality
+  readOnly: true
+
+JsonApiModel_general-nationality_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-nationality (string)

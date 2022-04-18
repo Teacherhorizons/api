@@ -165,6 +165,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-manualEmailTemplate" /> 
 
+  - name: simple-model-general-nationality
+    x-displayName: Simple model - general-nationality
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-nationality" /> 
+
   # - name: simple-model-lists
   #   x-displayName: Lists
   #   description: |
@@ -547,6 +552,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-manualEmailTemplate" />
 
+  - name: json-api-model-general-nationality
+    x-displayName: JSON:API model - general-nationality
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationality" />
+
   # tags - JSON:API models - job
   - name: json-api-model-job
     x-displayName: JSON:API model - job
@@ -845,6 +855,7 @@ x-tagGroups:
       - simple-model-general-subjectGroup
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
+      - simple-model-general-nationality
       - simple-model-regional-city
       - simple-model-regional-country
       - simple-model-regional-region
@@ -920,6 +931,7 @@ x-tagGroups:
       - json-api-model-general-subjectGroup
       - json-api-model-general-worldLanguage
       - json-api-model-general-manualEmailTemplate
+      - json-api-model-general-nationality
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
