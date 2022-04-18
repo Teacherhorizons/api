@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherNationalities:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherNationalities_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherNationalities_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherNationalities_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherNationalities_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    nationality:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherNationalities_type:
+  type: string
+  example: teacher-teacherNationalities
+  description: teacher-teacherNationalities
+  readOnly: true
+
+JsonApiModel_teacher-teacherNationalities_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherNationalities (string)

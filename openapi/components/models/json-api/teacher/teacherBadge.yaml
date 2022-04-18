@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherBadge:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherBadge_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherBadge_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherBadge_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherBadge_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    teacherBadge:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherBadge_type:
+  type: string
+  example: teacher-teacherBadge
+  description: teacher-teacherBadge
+  readOnly: true
+
+JsonApiModel_teacher-teacherBadge_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherBadge (string)

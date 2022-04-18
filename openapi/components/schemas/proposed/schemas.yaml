@@ -13,9 +13,9 @@ RegionalRefs:
     - $ref: "./simple-models/Country.yaml#/CountryAttributes"
     - $ref: "./simple-models/region.yaml#/Region"
 
-SchoolRefs:
-  allOf:
-    - $ref: "./simple-models/School.yaml#/School"
+# SchoolRefs:
+#   allOf:
+#     - $ref: "./simple-models/School.yaml#/School"
 
 NonThRefs:
   allOf:
@@ -44,6 +44,7 @@ SimpleModels:
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction"
+    # - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
     - $ref: "../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem"
     - $ref: "../../models/simple/school/communityQuestion.yaml#/SimpleModel_school-communityQuestion"
     - $ref: "../../models/simple/school/curriculumType.yaml#/SimpleModel_school-curriculumType"
@@ -75,6 +76,9 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/thStatus.yaml#/SimpleModel_teacher-thStatus"
     - $ref: "../../models/simple/teacher/videoUrlCategory.yaml#/SimpleModel_teacher-videoUrlCategory"
     - $ref: "../../models/simple/teacher/teacherLookingForSubject.yaml#/SimpleModel_teacher-teacherLookingForSubject"
+    - $ref: "../../models/simple/teacher/teacherBadge.yaml#/SimpleModel_teacher-teacherBadge"
+    - $ref: "../../models/simple/teacher/teacherLookingForRole.yaml#/SimpleModel_teacher-teacherLookingForRole"
+    - $ref: "../../models/simple/teacher/teacherNationalities.yaml#/SimpleModel_teacher-teacherNationalities"
     - $ref: "../../models/simple/user/user.yaml#/SimpleModel_user"
     - $ref: "../../models/simple/user/favouriteJob.yaml#/SimpleModel_user-favouriteJob"
     - $ref: "../../models/simple/user/favouriteSchool.yaml#/SimpleModel_user-favouriteSchool"
@@ -113,6 +117,7 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage"
     - $ref: "../../models/json-api//general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
+    # - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
     - $ref: "../../models/json-api/school/academicSystem.yaml#/JsonApiModel_school-academicSystem"
     - $ref: "../../models/json-api/school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion"
     - $ref: "../../models/json-api/school/curriculumType.yaml#/JsonApiModel_school-curriculumType"
@@ -143,7 +148,10 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory"
     - $ref: "../../models/json-api/teacher/thStatus.yaml#/JsonApiModel_teacher-thStatus" 
     - $ref: "../../models/json-api/teacher/videoUrlCategory.yaml#/JsonApiModel_teacher-videoUrlCategory" 
-    - $ref: "../../models/json-api/teacher/teacherLookingForSubject.yaml#/JsonApiModel_teacher-teacherLookingForSubject" 
+    - $ref: "../../models/json-api/teacher/teacherLookingForSubject.yaml#/JsonApiModel_teacher-teacherLookingForSubject"
+    - $ref: "../../models/json-api/teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge"
+    - $ref: "../../models/json-api/teacher/teacherLookingForRole.yaml#/JsonApiModel_teacher-teacherLookingForRole"
+    - $ref: "../../models/json-api/teacher/teacherNationalities.yaml#/JsonApiModel_teacher-teacherNationalities"
     - $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user"
     - $ref: "../../models/json-api/user/favouriteJob.yaml#/JsonApiModel_user-favouriteJob"
     - $ref: "../../models/json-api/user/favouriteSchool.yaml#/JsonApiModel_user-favouriteSchool"

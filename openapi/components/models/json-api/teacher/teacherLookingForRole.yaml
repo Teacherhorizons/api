@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherLookingForRole:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForRole_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForRole_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForRole_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherLookingForRole_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    role:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherLookingForRole_type:
+  type: string
+  example: teacher-teacherLookingForRole
+  description: teacher-teacherLookingForRole
+  readOnly: true
+
+JsonApiModel_teacher-teacherLookingForRole_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherLookingForRole (string)

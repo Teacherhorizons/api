@@ -218,10 +218,10 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-region" />
 
   # tags - simple-models - school
-  - name: simple-model-school
-    x-displayName: School
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/School" />
+  # - name: simple-model-school
+  #   x-displayName: School
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/School" />
 
   - name: simple-model-school-academicSystem
     x-displayName: Simple model - school-academicSystem
@@ -378,6 +378,21 @@ tags:
     x-displayName: Simple model - teacher-teacherLookingForSubject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForSubject" /> 
+
+  - name: simple-model-teacher-teacherBadge
+    x-displayName: Simple model - teacher-teacherBadge
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherBadge" /> 
+
+  - name: simple-model-teacher-teacherLookingForRole
+    x-displayName: Simple model - teacher-teacherLookingForRole
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForRole" /> 
+      
+  - name: simple-model-teacher-teacherNationalities
+    x-displayName: Simple model - teacher-teacherNationalities
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNationalities" /> 
 
   # tags - simple-models - users
 
@@ -626,7 +641,28 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForSubject" />
 
+  - name: json-api-model-teacher-teacherBadge
+    x-displayName: JSON:API model - teacher-teacherBadge
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherBadge" />
+
+  - name: json-api-model-teacher-teacherLookingForRole
+    x-displayName: JSON:API model - teacher-teacherLookingForRole
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForRole" />
+
+  - name: json-api-model-teacher-teacherNationalities
+    x-displayName: JSON:API model - teacher-teacherNationalities
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNationalities" />
+
   # tags - JSON:API models - school
+
+  # - name: json-api-model-school
+  #   x-displayName: JSON:API model - school
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school" />
+
   - name: json-api-model-school-academicSystem
     x-displayName: JSON:API model - school-academicSystem
     description: |
@@ -844,6 +880,9 @@ x-tagGroups:
       - simple-model-teacher-thStatus
       - simple-model-teacher-videoUrlCategory
       - simple-model-teacher-teacherLookingForSubject
+      - simple-model-teacher-teacherBadge
+      - simple-model-teacher-teacherLookingForRole
+      - simple-model-teacher-teacherNationalities
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -884,6 +923,7 @@ x-tagGroups:
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
+      - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion
       - json-api-model-school-curriculumType
@@ -915,6 +955,9 @@ x-tagGroups:
       - json-api-model-teacher-thStatus
       - json-api-model-teacher-teacherLookingForSubject
       - json-api-model-teacher-videoUrlCategory
+      - json-api-model-teacher-teacherBadge
+      - json-api-model-teacher-teacherLookingForRole
+      - json-api-model-teacher-teacherNationalities
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
