@@ -1,36 +1,31 @@
 JsonApiModel_application-eventType:
   type: object
   properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      admin: "#/JsonApiModel_application-eventType_admin"
+    type:
+      $ref: "#/JsonApiModel_application-eventType_type"
+    id:
+      $ref: "#/JsonApiModel_application-eventType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/application/eventType.yaml#/application-eventType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_application-eventType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_relationships"
+  required:
+    - type
+    - id
 
-JsonApiModel_application-eventType_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application-eventType"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-eventType_attributes_admin"
-      
-    - required:
-        - type
-        - id
+JsonApiModel_application-eventType_relationships:
+  type: object
+  description: Related Attributes
+  properties:
+    applicationStatus:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    manualEmailTemplate:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
-# admin
-JsonApiModel_application-eventType_attributes_admin:
-  type:
-    $ref: "#/JsonApiModel_application-eventType_type"
-  id:
-    $ref: "#/JsonApiModel_application-eventType_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/application/eventType.yaml#/application-eventType_standardProperties_shared"
-
-# shared
 JsonApiModel_application-eventType_type:
   type: string
   example: application-eventType

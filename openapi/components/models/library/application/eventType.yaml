@@ -1,19 +1,74 @@
-# standard properties
-application-eventType_standardProperties_all:
-  allOf:
-    - $ref: "#/application-eventType_standardProperties_shared"
-    - $ref: "#/application-eventType_relationshipProperties_adminOnly"
 
-application-eventType_standardProperties_shared:
+# attributes
+application-eventType_attributes:
+  allOf:
+    - $ref: "#/application-eventType_properties_name"
+
+# relationshipIds
+application-eventType_relationshipIds:
+  allOf:
+    - $ref: "#/application-eventType_properties_applicationStatusId"
+    - $ref: "#/application-eventType_properties_manualEmailTemplateId"
+
+# attribute relationships
+
+# relationships
+application-eventType_relationships:
+  allOf:
+    - $ref: "#/application-eventType_properties_applicationStatus"
+    - $ref: "#/application-eventType_properties_manualEmailTemplate"
+
+#properties
+application-eventType_properties_id:
+  properties:
+    id:
+      $ref: "#/application-eventType_id"
+application-eventType_properties_name:
   properties:
     name:
-      type: string
-      example: Info request from Candidate
-
-#relationship properties
-application-eventType_relationshipProperties_adminOnly:
+      $ref: "#/application-eventType_name"
+application-eventType_properties_applicationStatusId:
   properties:
     applicationStatusId:
-      type: integer
-      example: 1
-      description: Relationship to application-status
+      $ref: "#/application-eventType_applicationStatusId"
+application-eventType_properties_manualEmailTemplateId:
+  properties:
+    manualEmailTemplateId:
+      $ref: "#/application-eventType_manualEmailTemplateId"
+application-eventType_properties_applicationStatus:
+  properties:
+    applicationStatus:
+      $ref: "#/application-eventType_applicationStatus"
+application-eventType_properties_manualEmailTemplate:
+  properties:
+    manualEmailTemplate:
+      $ref: "#/application-eventType_manualEmailTemplate"
+
+#attributes
+application-eventType_id:
+  type: integer
+  example: 1
+application-eventType_name:
+  type: string
+  example: Info request from Candidate
+application-eventType_applicationStatusId:
+  type: integer
+  example: 1
+  description: Relationship to application_status
+application-eventType_manualEmailTemplateId:
+  type: integer
+  example: 
+application-eventType_applicationStatus:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to application_status
+application-eventType_manualEmailTemplate:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
