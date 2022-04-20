@@ -1,1001 +1,1094 @@
-# # attributes
-# school_attributes:
-#   allOf:
-#     - $ref: "#/school_properties_creationDate"
-#     - $ref: "#/school_properties_latestUpdateDate"
+# attributes
+school_attributes:
+  allOf:
+    - $ref: "#/school_properties_creationDate"
+    - $ref: "#/school_properties_latestUpdateDate"
+    - $ref: "#/school_properties_name"
+    - $ref: "#/school_properties_slug"
+    - $ref: "#/school_properties_isActive"
+    - $ref: "#/school_properties_thRating"
+    - $ref: "#/school_properties_alias"
+    - $ref: "#/school_properties_address1"
+    - $ref: "#/school_properties_address2"
+    - $ref: "#/school_properties_address3"
+    - $ref: "#/school_properties_websiteUrl"
+    - $ref: "#/school_properties_phoneNumber"
+    - $ref: "#/school_properties_isEndorsedByTh"
+    - $ref: "#/school_properties_hasBeenVisitedByTh"
+    - $ref: "#/school_properties_acronym"
+    - $ref: "#/school_properties_profileStrengthPercentage"
+    - $ref: "#/school_properties_monthSchoolYearBegins"
+    - $ref: "#/school_properties_headTeacherName"
+    - $ref: "#/school_properties_numberOfExtraCurricularHoursPerWeek"
+    - $ref: "#/school_properties_numberOfTeachingHoursPerWeek"
+    - $ref: "#/school_properties_numberOfStudents"
+    - $ref: "#/school_properties_numberOfPreSchoolStudents"
+    - $ref: "#/school_properties_numberOfPrimaryStudents"
+    - $ref: "#/school_properties_numberOfSecondaryStudents"
+    - $ref: "#/school_properties_numberOfPost16Students"
+    - $ref: "#/school_properties_averagePreSchoolClassSize"
+    - $ref: "#/school_properties_averagePrimaryClassSize"
+    - $ref: "#/school_properties_averageSecondaryClassSize"
+    - $ref: "#/school_properties_averagePost16ClassSize"
+    - $ref: "#/school_properties_percentageOfInternationalStudents"
+    - $ref: "#/school_properties_isAcademicallySelective"
+    - $ref: "#/school_properties_yearFounded"
+    - $ref: "#/school_properties_promoVideoUrl"
+    - $ref: "#/school_properties_numberOfSchoolDaysPerYear"
+    - $ref: "#/school_properties_yearHeadTeacherStarted"
+    - $ref: "#/school_properties_yearLastAccredited"
+    - $ref: "#/school_properties_hasLocalAccreditation"
+    - $ref: "#/school_properties_missionStatementText"
+    - $ref: "#/school_properties_promoVideoCaption"
+    - $ref: "#/school_properties_percentageOfOverseasTeachers"
+    - $ref: "#/school_properties_isOpenToTeflTeachers"
+    - $ref: "#/school_properties_numberOfTeachingStaff"
+    - $ref: "#/school_properties_annualTeacherTurnoverPercentage"
+    - $ref: "#/school_properties_numberOfOverseasTeachersRecruitedPerYear"
+    - $ref: "#/school_properties_minimumYearsTeachingExperience"
+    - $ref: "#/school_properties_monthRecruitmentBegins"
+    - $ref: "#/school_properties_teacherUpperAgeLimit"
+    - $ref: "#/school_properties_isOpenToNewlyQualifiedTeachers"
+    - $ref: "#/school_properties_isOpenToUntrainedTeachers"
+    - $ref: "#/school_properties_isOpenToPgcei"
+    - $ref: "#/school_properties_isOpenToTeachingCouples"
+    - $ref: "#/school_properties_additionalVisaRequirementsText"
+    - $ref: "#/school_properties_additionalRecruitmentRequirementsText"
+    - $ref: "#/school_properties_monthForNoticeOfIntentionToLeave"
+    - $ref: "#/school_properties_monthContractEnds"
+    - $ref: "#/school_properties_additionalContractText"
+    - $ref: "#/school_properties_monthContractStarts"
+    - $ref: "#/school_properties_locationLatLong"
+    - $ref: "#/school_properties_yearCampusLastRenovated"
+    - $ref: "#/school_properties_locationText"
+    - $ref: "#/school_properties_locationLatLong.lat"
+    - $ref: "#/school_properties_locationLatLong.long"
+    - $ref: "#/school_properties_isPayScaleBasedOnExperience"
+    - $ref: "#/school_properties_contractLengthInYears"
+    - $ref: "#/school_properties_hasTeacherSavingScheme"
+    - $ref: "#/school_properties_canSalarySupportFamilyOfFour"
+    - $ref: "#/school_properties_hasFreePrivateHealthcareScheme"
+    - $ref: "#/school_properties_grossSalaryJuniorTeacher"
+    - $ref: "#/school_properties_grossSalaryJuniorTeacherInUsd"
+    - $ref: "#/school_properties_grossSalarySeniorTeacher"
+    - $ref: "#/school_properties_grossSalarySeniorTeacherInUsd"
+    - $ref: "#/school_properties_juniorTeacherTaxPercentage"
+    - $ref: "#/school_properties_seniorTeacherTaxPercentage"
+    - $ref: "#/school_properties_schoolPensionContributionPercentage"
+    - $ref: "#/school_properties_teacherPensionContributionPercentage"
+    - $ref: "#/school_properties_amountIndividualTeacherSavesYearly"
+    - $ref: "#/school_properties_amountIndividualTeacherSavesYearlyInUsd"
+    - $ref: "#/school_properties_numberOfDependentsPerTeacher"
+    - $ref: "#/school_properties_hasOpportunitiesAtSchoolForNonTeachingSpouses"
+    - $ref: "#/school_properties_additionalTaxText"
+    - $ref: "#/school_properties_billsExpenditurePercentage"
+    - $ref: "#/school_properties_foodAndDrinkExpenditurePercentage"
+    - $ref: "#/school_properties_travelExpenditurePercentage"
+    - $ref: "#/school_properties_otherExpenditurePercentage"
+    - $ref: "#/school_properties_accommodationExpenditurePercentage"
+    - $ref: "#/school_properties_hasTeacherInductionProgramme"
+    - $ref: "#/school_properties_hasTeacherPersonalLeaveDays"
+    - $ref: "#/school_properties_hasTeacherBereavementLeave"
+    - $ref: "#/school_properties_additionalAccommodationText"
+    - $ref: "#/school_properties_ambassadorMemberNumber"
+    - $ref: "#/school_properties_ambassadorTestimonial"
+    - $ref: "#/school_properties_leadRecruitmentContactName"
+    - $ref: "#/school_properties_leadRecruitmentContactEmail"
+    - $ref: "#/school_properties_isInterestedInRecruitmentServices"
+    - $ref: "#/school_properties_isSubscribedToCandidateSuggestionEmails"
+    - $ref: "#/school_properties_numberOfBasicActiveJobCredits"
+    - $ref: "#/school_properties_hasThSaferRecruitmentBadgeOnOwnWebsite"
+    - $ref: "#/school_properties_smallProfileImageUrl"
+    - $ref: "#/school_properties_largeProfileImageUrl"
+    - $ref: "#/school_properties_logoUrl"
 
-# # relationshipIds
-# school_relationshipIds:
-#   allOf:
-#     - $ref: "#/school_properties_creationUserId"
-#     - $ref: "#/school_properties_latestUpdateUserId"
-#     - $ref: "#/school_properties_schoolId"
-#     - $ref: "#/school_properties_academicSystemId"
+# relationshipIds
+school_relationshipIds:
+  allOf:
+    - $ref: "#/school_properties_creationUserId"
+    - $ref: "#/school_properties_latestUpdateUserId"
+    - $ref: "#/school_properties_cityId"
+    - $ref: "#/school_properties_phoneCodeCountryId"
+    - $ref: "#/school_properties_internationalWorkingCurrencyId"
+    - $ref: "#/school_properties_fundingTypeId"
+    - $ref: "#/school_properties_studentGenderMixId"
+    - $ref: "#/school_properties_affiliatedReligionId"
+    - $ref: "#/school_properties_pensionSchemeTypeId"
+    - $ref: "#/school_properties_relocationAllowanceTypeId"
+    - $ref: "#/school_properties_flightAllowanceTypeId"
+    - $ref: "#/school_properties_managedByUserId"
+    - $ref: "#/school_properties_lraUserId"
 
-# # attribute relationships
+# attribute relationships
 
-# # relationships
-# school_relationships:
-#   allOf:
-#     - $ref: "#/school_properties_creationUser"
-#     - $ref: "#/school_properties_latestUpdateUser"
-#     - $ref: "#/school_properties_school"
-#     - $ref: "#/school_properties_academicSystem"
+# relationships
+school_relationships:
+  allOf:
+    - $ref: "#/school_properties_creationUser"
+    - $ref: "#/school_properties_latestUpdateUser"
+    - $ref: "#/school_properties_phoneCodeCountry"
+    - $ref: "#/school_properties_internationalWorkingCurrency"
+    - $ref: "#/school_properties_fundingType"
+    - $ref: "#/school_properties_studentGenderMix"
+    - $ref: "#/school_properties_affiliatedReligion"
+    - $ref: "#/school_properties_pensionSchemeType"
+    - $ref: "#/school_properties_relocationAllowanceType"
+    - $ref: "#/school_properties_flightAllowanceType"
+    - $ref: "#/school_properties_managedByUser"
+    - $ref: "#/school_properties_lraUser"
 
-# #properties
-# "school_properties_id:
-#   properties:
-#     id:
-#       $ref: ""#/school_id"""
-# "school_properties_name:
-#   properties:
-#     name:
-#       $ref: ""#/school_name"""
-# "school_properties_slug:
-#   properties:
-#     slug:
-#       $ref: ""#/school_slug"""
-# "school_properties_isActive:
-#   properties:
-#     isActive:
-#       $ref: ""#/school_isActive"""
-# "school_properties_thRating:
-#   properties:
-#     thRating:
-#       $ref: ""#/school_thRating"""
-# "school_properties_alias:
-#   properties:
-#     alias:
-#       $ref: ""#/school_alias"""
-# "school_properties_address1:
-#   properties:
-#     address1:
-#       $ref: ""#/school_address1"""
-# "school_properties_address2:
-#   properties:
-#     address2:
-#       $ref: ""#/school_address2"""
-# "school_properties_address3:
-#   properties:
-#     address3:
-#       $ref: ""#/school_address3"""
-# "school_properties_cityId:
-#   properties:
-#     cityId:
-#       $ref: ""#/school_cityId"""
-# "school_properties_websiteUrl:
-#   properties:
-#     websiteUrl:
-#       $ref: ""#/school_websiteUrl"""
-# "school_properties_phoneNumber:
-#   properties:
-#     phoneNumber:
-#       $ref: ""#/school_phoneNumber"""
-# "school_properties_isEndorsedByTh:
-#   properties:
-#     isEndorsedByTh:
-#       $ref: ""#/school_isEndorsedByTh"""
-# "school_properties_hasBeenVisitedByTh:
-#   properties:
-#     hasBeenVisitedByTh:
-#       $ref: ""#/school_hasBeenVisitedByTh"""
-# "school_properties_acronym:
-#   properties:
-#     acronym:
-#       $ref: ""#/school_acronym"""
-# "school_properties_profileStrengthPercentage:
-#   properties:
-#     profileStrengthPercentage:
-#       $ref: ""#/school_profileStrengthPercentage"""
-# "school_properties_monthSchoolYearBegins:
-#   properties:
-#     monthSchoolYearBegins:
-#       $ref: ""#/school_monthSchoolYearBegins"""
-# "school_properties_headTeacherName:
-#   properties:
-#     headTeacherName:
-#       $ref: ""#/school_headTeacherName"""
-# "school_properties_numberOfExtraCurricularHoursPerWeek:
-#   properties:
-#     numberOfExtraCurricularHoursPerWeek:
-#       $ref: ""#/school_numberOfExtraCurricularHoursPerWeek"""
-# "school_properties_numberOfTeachingHoursPerWeek:
-#   properties:
-#     numberOfTeachingHoursPerWeek:
-#       $ref: ""#/school_numberOfTeachingHoursPerWeek"""
-# "school_properties_numberOfStudents:
-#   properties:
-#     numberOfStudents:
-#       $ref: ""#/school_numberOfStudents"""
-# "school_properties_numberOfPreSchoolStudents:
-#   properties:
-#     numberOfPreSchoolStudents:
-#       $ref: ""#/school_numberOfPreSchoolStudents"""
-# "school_properties_numberOfPrimaryStudents:
-#   properties:
-#     numberOfPrimaryStudents:
-#       $ref: ""#/school_numberOfPrimaryStudents"""
-# "school_properties_numberOfSecondaryStudents:
-#   properties:
-#     numberOfSecondaryStudents:
-#       $ref: ""#/school_numberOfSecondaryStudents"""
-# "school_properties_numberOfPost16Students:
-#   properties:
-#     numberOfPost16Students:
-#       $ref: ""#/school_numberOfPost16Students"""
-# "school_properties_averagePreSchoolClassSize:
-#   properties:
-#     averagePreSchoolClassSize:
-#       $ref: ""#/school_averagePreSchoolClassSize"""
-# "school_properties_averagePrimaryClassSize:
-#   properties:
-#     averagePrimaryClassSize:
-#       $ref: ""#/school_averagePrimaryClassSize"""
-# "school_properties_averageSecondaryClassSize:
-#   properties:
-#     averageSecondaryClassSize:
-#       $ref: ""#/school_averageSecondaryClassSize"""
-# "school_properties_averagePost16ClassSize:
-#   properties:
-#     averagePost16ClassSize:
-#       $ref: ""#/school_averagePost16ClassSize"""
-# "school_properties_percentageOfInternationalStudents:
-#   properties:
-#     percentageOfInternationalStudents:
-#       $ref: ""#/school_percentageOfInternationalStudents"""
-# "school_properties_isAcademicallySelective:
-#   properties:
-#     isAcademicallySelective:
-#       $ref: ""#/school_isAcademicallySelective"""
-# "school_properties_yearFounded:
-#   properties:
-#     yearFounded:
-#       $ref: ""#/school_yearFounded"""
-# "school_properties_promoVideoUrl:
-#   properties:
-#     promoVideoUrl:
-#       $ref: ""#/school_promoVideoUrl"""
-# "school_properties_numberOfSchoolDaysPerYear:
-#   properties:
-#     numberOfSchoolDaysPerYear:
-#       $ref: ""#/school_numberOfSchoolDaysPerYear"""
-# "school_properties_yearHeadTeacherStarted:
-#   properties:
-#     yearHeadTeacherStarted:
-#       $ref: ""#/school_yearHeadTeacherStarted"""
-# "school_properties_yearLastAccredited:
-#   properties:
-#     yearLastAccredited:
-#       $ref: ""#/school_yearLastAccredited"""
-# "school_properties_hasLocalAccreditation:
-#   properties:
-#     hasLocalAccreditation:
-#       $ref: ""#/school_hasLocalAccreditation"""
-# "school_properties_missionStatementText:
-#   properties:
-#     missionStatementText:
-#       $ref: ""#/school_missionStatementText"""
-# "school_properties_promoVideoCaption:
-#   properties:
-#     promoVideoCaption:
-#       $ref: ""#/school_promoVideoCaption"""
-# "school_properties_percentageOfOverseasTeachers:
-#   properties:
-#     percentageOfOverseasTeachers:
-#       $ref: ""#/school_percentageOfOverseasTeachers"""
-# "school_properties_isOpenToTeflTeachers:
-#   properties:
-#     isOpenToTeflTeachers:
-#       $ref: ""#/school_isOpenToTeflTeachers"""
-# "school_properties_numberOfTeachingStaff:
-#   properties:
-#     numberOfTeachingStaff:
-#       $ref: ""#/school_numberOfTeachingStaff"""
-# "school_properties_annualTeacherTurnoverPercentage:
-#   properties:
-#     annualTeacherTurnoverPercentage:
-#       $ref: ""#/school_annualTeacherTurnoverPercentage"""
-# "school_properties_numberOfOverseasTeachersRecruitedPerYear:
-#   properties:
-#     numberOfOverseasTeachersRecruitedPerYear:
-#       $ref: ""#/school_numberOfOverseasTeachersRecruitedPerYear"""
-# "school_properties_minimumYearsTeachingExperience:
-#   properties:
-#     minimumYearsTeachingExperience:
-#       $ref: ""#/school_minimumYearsTeachingExperience"""
-# "school_properties_monthRecruitmentBegins:
-#   properties:
-#     monthRecruitmentBegins:
-#       $ref: ""#/school_monthRecruitmentBegins"""
-# "school_properties_teacherUpperAgeLimit:
-#   properties:
-#     teacherUpperAgeLimit:
-#       $ref: ""#/school_teacherUpperAgeLimit"""
-# "school_properties_isOpenToNewlyQualifiedTeachers:
-#   properties:
-#     isOpenToNewlyQualifiedTeachers:
-#       $ref: ""#/school_isOpenToNewlyQualifiedTeachers"""
-# "school_properties_isOpenToUntrainedTeachers:
-#   properties:
-#     isOpenToUntrainedTeachers:
-#       $ref: ""#/school_isOpenToUntrainedTeachers"""
-# "school_properties_isOpenToPgcei:
-#   properties:
-#     isOpenToPgcei:
-#       $ref: ""#/school_isOpenToPgcei"""
-# "school_properties_isOpenToTeachingCouples:
-#   properties:
-#     isOpenToTeachingCouples:
-#       $ref: ""#/school_isOpenToTeachingCouples"""
-# "school_properties_additionalVisaRequirementsText:
-#   properties:
-#     additionalVisaRequirementsText:
-#       $ref: ""#/school_additionalVisaRequirementsText"""
-# "school_properties_additionalRecruitmentRequirementsText:
-#   properties:
-#     additionalRecruitmentRequirementsText:
-#       $ref: ""#/school_additionalRecruitmentRequirementsText"""
-# "school_properties_monthForNoticeOfIntentionToLeave:
-#   properties:
-#     monthForNoticeOfIntentionToLeave:
-#       $ref: ""#/school_monthForNoticeOfIntentionToLeave"""
-# "school_properties_monthContractEnds:
-#   properties:
-#     monthContractEnds:
-#       $ref: ""#/school_monthContractEnds"""
-# "school_properties_additionalContractText:
-#   properties:
-#     additionalContractText:
-#       $ref: ""#/school_additionalContractText"""
-# "school_properties_monthContractStarts:
-#   properties:
-#     monthContractStarts:
-#       $ref: ""#/school_monthContractStarts"""
-# "school_properties_locationLatLong:
-#   properties:
-#     locationLatLong:
-#       $ref: ""#/school_locationLatLong"""
-# "school_properties_yearCampusLastRenovated:
-#   properties:
-#     yearCampusLastRenovated:
-#       $ref: ""#/school_yearCampusLastRenovated"""
-# "school_properties_locationText:
-#   properties:
-#     locationText:
-#       $ref: ""#/school_locationText"""
-# "school_properties_locationLatLong.lat:
-#   properties:
-#     locationLatLong.lat:
-#       $ref: ""#/school_locationLatLong.lat"""
-# "school_properties_locationLatLong.long:
-#   properties:
-#     locationLatLong.long:
-#       $ref: ""#/school_locationLatLong.long"""
-# "school_properties_isPayScaleBasedOnExperience:
-#   properties:
-#     isPayScaleBasedOnExperience:
-#       $ref: ""#/school_isPayScaleBasedOnExperience"""
-# "school_properties_contractLengthInYears:
-#   properties:
-#     contractLengthInYears:
-#       $ref: ""#/school_contractLengthInYears"""
-# "school_properties_hasTeacherSavingScheme:
-#   properties:
-#     hasTeacherSavingScheme:
-#       $ref: ""#/school_hasTeacherSavingScheme"""
-# "school_properties_canSalarySupportFamilyOfFour:
-#   properties:
-#     canSalarySupportFamilyOfFour:
-#       $ref: ""#/school_canSalarySupportFamilyOfFour"""
-# "school_properties_hasFreePrivateHealthcareScheme:
-#   properties:
-#     hasFreePrivateHealthcareScheme:
-#       $ref: ""#/school_hasFreePrivateHealthcareScheme"""
-# "school_properties_grossSalaryJuniorTeacher:
-#   properties:
-#     grossSalaryJuniorTeacher:
-#       $ref: ""#/school_grossSalaryJuniorTeacher"""
-# "school_properties_grossSalaryJuniorTeacherInUsd:
-#   properties:
-#     grossSalaryJuniorTeacherInUsd:
-#       $ref: ""#/school_grossSalaryJuniorTeacherInUsd"""
-# "school_properties_grossSalarySeniorTeacher:
-#   properties:
-#     grossSalarySeniorTeacher:
-#       $ref: ""#/school_grossSalarySeniorTeacher"""
-# "school_properties_grossSalarySeniorTeacherInUsd:
-#   properties:
-#     grossSalarySeniorTeacherInUsd:
-#       $ref: ""#/school_grossSalarySeniorTeacherInUsd"""
-# "school_properties_juniorTeacherTaxPercentage:
-#   properties:
-#     juniorTeacherTaxPercentage:
-#       $ref: ""#/school_juniorTeacherTaxPercentage"""
-# "school_properties_seniorTeacherTaxPercentage:
-#   properties:
-#     seniorTeacherTaxPercentage:
-#       $ref: ""#/school_seniorTeacherTaxPercentage"""
-# "school_properties_schoolPensionContributionPercentage:
-#   properties:
-#     schoolPensionContributionPercentage:
-#       $ref: ""#/school_schoolPensionContributionPercentage"""
-# "school_properties_teacherPensionContributionPercentage:
-#   properties:
-#     teacherPensionContributionPercentage:
-#       $ref: ""#/school_teacherPensionContributionPercentage"""
-# "school_properties_amountIndividualTeacherSavesYearly:
-#   properties:
-#     amountIndividualTeacherSavesYearly:
-#       $ref: ""#/school_amountIndividualTeacherSavesYearly"""
-# "school_properties_amountIndividualTeacherSavesYearlyInUsd:
-#   properties:
-#     amountIndividualTeacherSavesYearlyInUsd:
-#       $ref: ""#/school_amountIndividualTeacherSavesYearlyInUsd"""
-# "school_properties_numberOfDependentsPerTeacher:
-#   properties:
-#     numberOfDependentsPerTeacher:
-#       $ref: ""#/school_numberOfDependentsPerTeacher"""
-# "school_properties_hasOpportunitiesAtSchoolForNonTeachingSpouses:
-#   properties:
-#     hasOpportunitiesAtSchoolForNonTeachingSpouses:
-#       $ref: ""#/school_hasOpportunitiesAtSchoolForNonTeachingSpouses"""
-# "school_properties_additionalTaxText:
-#   properties:
-#     additionalTaxText:
-#       $ref: ""#/school_additionalTaxText"""
-# "school_properties_billsExpenditurePercentage:
-#   properties:
-#     billsExpenditurePercentage:
-#       $ref: ""#/school_billsExpenditurePercentage"""
-# "school_properties_foodAndDrinkExpenditurePercentage:
-#   properties:
-#     foodAndDrinkExpenditurePercentage:
-#       $ref: ""#/school_foodAndDrinkExpenditurePercentage"""
-# "school_properties_travelExpenditurePercentage:
-#   properties:
-#     travelExpenditurePercentage:
-#       $ref: ""#/school_travelExpenditurePercentage"""
-# "school_properties_otherExpenditurePercentage:
-#   properties:
-#     otherExpenditurePercentage:
-#       $ref: ""#/school_otherExpenditurePercentage"""
-# "school_properties_accommodationExpenditurePercentage:
-#   properties:
-#     accommodationExpenditurePercentage:
-#       $ref: ""#/school_accommodationExpenditurePercentage"""
-# "school_properties_hasTeacherInductionProgramme:
-#   properties:
-#     hasTeacherInductionProgramme:
-#       $ref: ""#/school_hasTeacherInductionProgramme"""
-# "school_properties_hasTeacherPersonalLeaveDays:
-#   properties:
-#     hasTeacherPersonalLeaveDays:
-#       $ref: ""#/school_hasTeacherPersonalLeaveDays"""
-# "school_properties_hasTeacherBereavementLeave:
-#   properties:
-#     hasTeacherBereavementLeave:
-#       $ref: ""#/school_hasTeacherBereavementLeave"""
-# "school_properties_additionalAccommodationText:
-#   properties:
-#     additionalAccommodationText:
-#       $ref: ""#/school_additionalAccommodationText"""
-# "school_properties_ambassadorMemberNumber:
-#   properties:
-#     ambassadorMemberNumber:
-#       $ref: ""#/school_ambassadorMemberNumber"""
-# "school_properties_ambassadorTestimonial:
-#   properties:
-#     ambassadorTestimonial:
-#       $ref: ""#/school_ambassadorTestimonial"""
-# "school_properties_leadRecruitmentContactName:
-#   properties:
-#     leadRecruitmentContactName:
-#       $ref: ""#/school_leadRecruitmentContactName"""
-# "school_properties_leadRecruitmentContactEmail:
-#   properties:
-#     leadRecruitmentContactEmail:
-#       $ref: ""#/school_leadRecruitmentContactEmail"""
-# "school_properties_isInterestedInRecruitmentServices:
-#   properties:
-#     isInterestedInRecruitmentServices:
-#       $ref: ""#/school_isInterestedInRecruitmentServices"""
-# "school_properties_isSubscribedToCandidateSuggestionEmails:
-#   properties:
-#     isSubscribedToCandidateSuggestionEmails:
-#       $ref: ""#/school_isSubscribedToCandidateSuggestionEmails"""
-# "school_properties_numberOfBasicActiveJobCredits:
-#   properties:
-#     numberOfBasicActiveJobCredits:
-#       $ref: ""#/school_numberOfBasicActiveJobCredits"""
-# "school_properties_hasThSaferRecruitmentBadgeOnOwnWebsite:
-#   properties:
-#     hasThSaferRecruitmentBadgeOnOwnWebsite:
-#       $ref: ""#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"""
-# "school_properties_smallProfileImageUrl:
-#   properties:
-#     smallProfileImageUrl:
-#       $ref: ""#/school_smallProfileImageUrl"""
-# "school_properties_logoUrl:
-#   properties:
-#     logoUrl:
-#       $ref: ""#/school_logoUrl"""
-# "school_properties_creationDate:
-#   properties:
-#     creationDate:
-#       $ref: ""#/school_creationDate"""
-# "school_properties_latestUpdateDate:
-#   properties:
-#     latestUpdateDate:
-#       $ref: ""#/school_latestUpdateDate"""
-# "school_properties_phoneCodeCountryId:
-#   properties:
-#     phoneCodeCountryId:
-#       $ref: ""#/school_phoneCodeCountryId"""
-# "school_properties_internationalWorkingCurrencyId:
-#   properties:
-#     internationalWorkingCurrencyId:
-#       $ref: ""#/school_internationalWorkingCurrencyId"""
-# "school_properties_fundingTypeId:
-#   properties:
-#     fundingTypeId:
-#       $ref: ""#/school_fundingTypeId"""
-# "school_properties_studentGenderMixId:
-#   properties:
-#     studentGenderMixId:
-#       $ref: ""#/school_studentGenderMixId"""
-# "school_properties_affiliatedReligionId:
-#   properties:
-#     affiliatedReligionId:
-#       $ref: ""#/school_affiliatedReligionId"""
-# "school_properties_pensionSchemeTypeId:
-#   properties:
-#     pensionSchemeTypeId:
-#       $ref: ""#/school_pensionSchemeTypeId"""
-# "school_properties_relocationAllowanceTypeId:
-#   properties:
-#     relocationAllowanceTypeId:
-#       $ref: ""#/school_relocationAllowanceTypeId"""
-# "school_properties_flightAllowanceTypeId:
-#   properties:
-#     flightAllowanceTypeId:
-#       $ref: ""#/school_flightAllowanceTypeId"""
-# "school_properties_managedByUserId:
-#   properties:
-#     managedByUserId:
-#       $ref: ""#/school_managedByUserId"""
-# "school_properties_lraUserId:
-#   properties:
-#     lraUserId:
-#       $ref: ""#/school_lraUserId"""
-# "school_properties_creationUserId:
-#   properties:
-#     creationUserId:
-#       $ref: ""#/school_creationUserId"""
-# "school_properties_latestUpdateUserId:
-#   properties:
-#     latestUpdateUserId:
-#       $ref: ""#/school_latestUpdateUserId"""
-# "school_properties_largeProfileImageUrl:
-#   properties:
-#     largeProfileImageUrl:
-#       $ref: ""#/school_largeProfileImageUrl"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# "school_properties_phoneCodeCountry:
-#   properties:
-#     phoneCodeCountry:
-#       $ref: ""#/school_phoneCodeCountry"""
-# "school_properties_internationalWorkingCurrency:
-#   properties:
-#     internationalWorkingCurrency:
-#       $ref: ""#/school_internationalWorkingCurrency"""
-# "school_properties_fundingType:
-#   properties:
-#     fundingType:
-#       $ref: ""#/school_fundingType"""
-# "school_properties_studentGenderMix:
-#   properties:
-#     studentGenderMix:
-#       $ref: ""#/school_studentGenderMix"""
-# "school_properties_affiliatedReligion:
-#   properties:
-#     affiliatedReligion:
-#       $ref: ""#/school_affiliatedReligion"""
-# "school_properties_pensionSchemeType:
-#   properties:
-#     pensionSchemeType:
-#       $ref: ""#/school_pensionSchemeType"""
-# "school_properties_relocationAllowanceType:
-#   properties:
-#     relocationAllowanceType:
-#       $ref: ""#/school_relocationAllowanceType"""
-# "school_properties_flightAllowanceType:
-#   properties:
-#     flightAllowanceType:
-#       $ref: ""#/school_flightAllowanceType"""
-# "school_properties_managedByUser:
-#   properties:
-#     managedByUser:
-#       $ref: ""#/school_managedByUser"""
-# "school_properties_lraUser:
-#   properties:
-#     lraUser:
-#       $ref: ""#/school_lraUser"""
-# "school_properties_creationUser:
-#   properties:
-#     creationUser:
-#       $ref: ""#/school_creationUser"""
-# "school_properties_latestUpdateUser:
-#   properties:
-#     latestUpdateUser:
-#       $ref: ""#/school_latestUpdateUser"""
+#properties
+school_properties_id:
+  properties:
+    id:
+      $ref: "#/school_id"
+school_properties_name:
+  properties:
+    name:
+      $ref: "#/school_name"
+school_properties_slug:
+  properties:
+    slug:
+      $ref: "#/school_slug"
+school_properties_isActive:
+  properties:
+    isActive:
+      $ref: "#/school_isActive"
+school_properties_thRating:
+  properties:
+    thRating:
+      $ref: "#/school_thRating"
+school_properties_alias:
+  properties:
+    alias:
+      $ref: "#/school_alias"
+school_properties_address1:
+  properties:
+    address1:
+      $ref: "#/school_address1"
+school_properties_address2:
+  properties:
+    address2:
+      $ref: "#/school_address2"
+school_properties_address3:
+  properties:
+    address3:
+      $ref: "#/school_address3"
+school_properties_cityId:
+  properties:
+    cityId:
+      $ref: "#/school_cityId"
+school_properties_websiteUrl:
+  properties:
+    websiteUrl:
+      $ref: "#/school_websiteUrl"
+school_properties_phoneNumber:
+  properties:
+    phoneNumber:
+      $ref: "#/school_phoneNumber"
+school_properties_isEndorsedByTh:
+  properties:
+    isEndorsedByTh:
+      $ref: "#/school_isEndorsedByTh"
+school_properties_hasBeenVisitedByTh:
+  properties:
+    hasBeenVisitedByTh:
+      $ref: "#/school_hasBeenVisitedByTh"
+school_properties_acronym:
+  properties:
+    acronym:
+      $ref: "#/school_acronym"
+school_properties_profileStrengthPercentage:
+  properties:
+    profileStrengthPercentage:
+      $ref: "#/school_profileStrengthPercentage"
+school_properties_monthSchoolYearBegins:
+  properties:
+    monthSchoolYearBegins:
+      $ref: "#/school_monthSchoolYearBegins"
+school_properties_headTeacherName:
+  properties:
+    headTeacherName:
+      $ref: "#/school_headTeacherName"
+school_properties_numberOfExtraCurricularHoursPerWeek:
+  properties:
+    numberOfExtraCurricularHoursPerWeek:
+      $ref: "#/school_numberOfExtraCurricularHoursPerWeek"
+school_properties_numberOfTeachingHoursPerWeek:
+  properties:
+    numberOfTeachingHoursPerWeek:
+      $ref: "#/school_numberOfTeachingHoursPerWeek"
+school_properties_numberOfStudents:
+  properties:
+    numberOfStudents:
+      $ref: "#/school_numberOfStudents"
+school_properties_numberOfPreSchoolStudents:
+  properties:
+    numberOfPreSchoolStudents:
+      $ref: "#/school_numberOfPreSchoolStudents"
+school_properties_numberOfPrimaryStudents:
+  properties:
+    numberOfPrimaryStudents:
+      $ref: "#/school_numberOfPrimaryStudents"
+school_properties_numberOfSecondaryStudents:
+  properties:
+    numberOfSecondaryStudents:
+      $ref: "#/school_numberOfSecondaryStudents"
+school_properties_numberOfPost16Students:
+  properties:
+    numberOfPost16Students:
+      $ref: "#/school_numberOfPost16Students"
+school_properties_averagePreSchoolClassSize:
+  properties:
+    averagePreSchoolClassSize:
+      $ref: "#/school_averagePreSchoolClassSize"
+school_properties_averagePrimaryClassSize:
+  properties:
+    averagePrimaryClassSize:
+      $ref: "#/school_averagePrimaryClassSize"
+school_properties_averageSecondaryClassSize:
+  properties:
+    averageSecondaryClassSize:
+      $ref: "#/school_averageSecondaryClassSize"
+school_properties_averagePost16ClassSize:
+  properties:
+    averagePost16ClassSize:
+      $ref: "#/school_averagePost16ClassSize"
+school_properties_percentageOfInternationalStudents:
+  properties:
+    percentageOfInternationalStudents:
+      $ref: "#/school_percentageOfInternationalStudents"
+school_properties_isAcademicallySelective:
+  properties:
+    isAcademicallySelective:
+      $ref: "#/school_isAcademicallySelective"
+school_properties_yearFounded:
+  properties:
+    yearFounded:
+      $ref: "#/school_yearFounded"
+school_properties_promoVideoUrl:
+  properties:
+    promoVideoUrl:
+      $ref: "#/school_promoVideoUrl"
+school_properties_numberOfSchoolDaysPerYear:
+  properties:
+    numberOfSchoolDaysPerYear:
+      $ref: "#/school_numberOfSchoolDaysPerYear"
+school_properties_yearHeadTeacherStarted:
+  properties:
+    yearHeadTeacherStarted:
+      $ref: "#/school_yearHeadTeacherStarted"
+school_properties_yearLastAccredited:
+  properties:
+    yearLastAccredited:
+      $ref: "#/school_yearLastAccredited"
+school_properties_hasLocalAccreditation:
+  properties:
+    hasLocalAccreditation:
+      $ref: "#/school_hasLocalAccreditation"
+school_properties_missionStatementText:
+  properties:
+    missionStatementText:
+      $ref: "#/school_missionStatementText"
+school_properties_promoVideoCaption:
+  properties:
+    promoVideoCaption:
+      $ref: "#/school_promoVideoCaption"
+school_properties_percentageOfOverseasTeachers:
+  properties:
+    percentageOfOverseasTeachers:
+      $ref: "#/school_percentageOfOverseasTeachers"
+school_properties_isOpenToTeflTeachers:
+  properties:
+    isOpenToTeflTeachers:
+      $ref: "#/school_isOpenToTeflTeachers"
+school_properties_numberOfTeachingStaff:
+  properties:
+    numberOfTeachingStaff:
+      $ref: "#/school_numberOfTeachingStaff"
+school_properties_annualTeacherTurnoverPercentage:
+  properties:
+    annualTeacherTurnoverPercentage:
+      $ref: "#/school_annualTeacherTurnoverPercentage"
+school_properties_numberOfOverseasTeachersRecruitedPerYear:
+  properties:
+    numberOfOverseasTeachersRecruitedPerYear:
+      $ref: "#/school_numberOfOverseasTeachersRecruitedPerYear"
+school_properties_minimumYearsTeachingExperience:
+  properties:
+    minimumYearsTeachingExperience:
+      $ref: "#/school_minimumYearsTeachingExperience"
+school_properties_monthRecruitmentBegins:
+  properties:
+    monthRecruitmentBegins:
+      $ref: "#/school_monthRecruitmentBegins"
+school_properties_teacherUpperAgeLimit:
+  properties:
+    teacherUpperAgeLimit:
+      $ref: "#/school_teacherUpperAgeLimit"
+school_properties_isOpenToNewlyQualifiedTeachers:
+  properties:
+    isOpenToNewlyQualifiedTeachers:
+      $ref: "#/school_isOpenToNewlyQualifiedTeachers"
+school_properties_isOpenToUntrainedTeachers:
+  properties:
+    isOpenToUntrainedTeachers:
+      $ref: "#/school_isOpenToUntrainedTeachers"
+school_properties_isOpenToPgcei:
+  properties:
+    isOpenToPgcei:
+      $ref: "#/school_isOpenToPgcei"
+school_properties_isOpenToTeachingCouples:
+  properties:
+    isOpenToTeachingCouples:
+      $ref: "#/school_isOpenToTeachingCouples"
+school_properties_additionalVisaRequirementsText:
+  properties:
+    additionalVisaRequirementsText:
+      $ref: "#/school_additionalVisaRequirementsText"
+school_properties_additionalRecruitmentRequirementsText:
+  properties:
+    additionalRecruitmentRequirementsText:
+      $ref: "#/school_additionalRecruitmentRequirementsText"
+school_properties_monthForNoticeOfIntentionToLeave:
+  properties:
+    monthForNoticeOfIntentionToLeave:
+      $ref: "#/school_monthForNoticeOfIntentionToLeave"
+school_properties_monthContractEnds:
+  properties:
+    monthContractEnds:
+      $ref: "#/school_monthContractEnds"
+school_properties_additionalContractText:
+  properties:
+    additionalContractText:
+      $ref: "#/school_additionalContractText"
+school_properties_monthContractStarts:
+  properties:
+    monthContractStarts:
+      $ref: "#/school_monthContractStarts"
+school_properties_locationLatLong:
+  properties:
+    locationLatLong:
+      $ref: "#/school_locationLatLong"
+school_properties_yearCampusLastRenovated:
+  properties:
+    yearCampusLastRenovated:
+      $ref: "#/school_yearCampusLastRenovated"
+school_properties_locationText:
+  properties:
+    locationText:
+      $ref: "#/school_locationText"
+school_properties_locationLatLong.lat:
+  properties:
+    locationLatLong.lat:
+      $ref: "#/school_locationLatLong.lat"
+school_properties_locationLatLong.long:
+  properties:
+    locationLatLong.long:
+      $ref: "#/school_locationLatLong.long"
+school_properties_isPayScaleBasedOnExperience:
+  properties:
+    isPayScaleBasedOnExperience:
+      $ref: "#/school_isPayScaleBasedOnExperience"
+school_properties_contractLengthInYears:
+  properties:
+    contractLengthInYears:
+      $ref: "#/school_contractLengthInYears"
+school_properties_hasTeacherSavingScheme:
+  properties:
+    hasTeacherSavingScheme:
+      $ref: "#/school_hasTeacherSavingScheme"
+school_properties_canSalarySupportFamilyOfFour:
+  properties:
+    canSalarySupportFamilyOfFour:
+      $ref: "#/school_canSalarySupportFamilyOfFour"
+school_properties_hasFreePrivateHealthcareScheme:
+  properties:
+    hasFreePrivateHealthcareScheme:
+      $ref: "#/school_hasFreePrivateHealthcareScheme"
+school_properties_grossSalaryJuniorTeacher:
+  properties:
+    grossSalaryJuniorTeacher:
+      $ref: "#/school_grossSalaryJuniorTeacher"
+school_properties_grossSalaryJuniorTeacherInUsd:
+  properties:
+    grossSalaryJuniorTeacherInUsd:
+      $ref: "#/school_grossSalaryJuniorTeacherInUsd"
+school_properties_grossSalarySeniorTeacher:
+  properties:
+    grossSalarySeniorTeacher:
+      $ref: "#/school_grossSalarySeniorTeacher"
+school_properties_grossSalarySeniorTeacherInUsd:
+  properties:
+    grossSalarySeniorTeacherInUsd:
+      $ref: "#/school_grossSalarySeniorTeacherInUsd"
+school_properties_juniorTeacherTaxPercentage:
+  properties:
+    juniorTeacherTaxPercentage:
+      $ref: "#/school_juniorTeacherTaxPercentage"
+school_properties_seniorTeacherTaxPercentage:
+  properties:
+    seniorTeacherTaxPercentage:
+      $ref: "#/school_seniorTeacherTaxPercentage"
+school_properties_schoolPensionContributionPercentage:
+  properties:
+    schoolPensionContributionPercentage:
+      $ref: "#/school_schoolPensionContributionPercentage"
+school_properties_teacherPensionContributionPercentage:
+  properties:
+    teacherPensionContributionPercentage:
+      $ref: "#/school_teacherPensionContributionPercentage"
+school_properties_amountIndividualTeacherSavesYearly:
+  properties:
+    amountIndividualTeacherSavesYearly:
+      $ref: "#/school_amountIndividualTeacherSavesYearly"
+school_properties_amountIndividualTeacherSavesYearlyInUsd:
+  properties:
+    amountIndividualTeacherSavesYearlyInUsd:
+      $ref: "#/school_amountIndividualTeacherSavesYearlyInUsd"
+school_properties_numberOfDependentsPerTeacher:
+  properties:
+    numberOfDependentsPerTeacher:
+      $ref: "#/school_numberOfDependentsPerTeacher"
+school_properties_hasOpportunitiesAtSchoolForNonTeachingSpouses:
+  properties:
+    hasOpportunitiesAtSchoolForNonTeachingSpouses:
+      $ref: "#/school_hasOpportunitiesAtSchoolForNonTeachingSpouses"
+school_properties_additionalTaxText:
+  properties:
+    additionalTaxText:
+      $ref: "#/school_additionalTaxText"
+school_properties_billsExpenditurePercentage:
+  properties:
+    billsExpenditurePercentage:
+      $ref: "#/school_billsExpenditurePercentage"
+school_properties_foodAndDrinkExpenditurePercentage:
+  properties:
+    foodAndDrinkExpenditurePercentage:
+      $ref: "#/school_foodAndDrinkExpenditurePercentage"
+school_properties_travelExpenditurePercentage:
+  properties:
+    travelExpenditurePercentage:
+      $ref: "#/school_travelExpenditurePercentage"
+school_properties_otherExpenditurePercentage:
+  properties:
+    otherExpenditurePercentage:
+      $ref: "#/school_otherExpenditurePercentage"
+school_properties_accommodationExpenditurePercentage:
+  properties:
+    accommodationExpenditurePercentage:
+      $ref: "#/school_accommodationExpenditurePercentage"
+school_properties_hasTeacherInductionProgramme:
+  properties:
+    hasTeacherInductionProgramme:
+      $ref: "#/school_hasTeacherInductionProgramme"
+school_properties_hasTeacherPersonalLeaveDays:
+  properties:
+    hasTeacherPersonalLeaveDays:
+      $ref: "#/school_hasTeacherPersonalLeaveDays"
+school_properties_hasTeacherBereavementLeave:
+  properties:
+    hasTeacherBereavementLeave:
+      $ref: "#/school_hasTeacherBereavementLeave"
+school_properties_additionalAccommodationText:
+  properties:
+    additionalAccommodationText:
+      $ref: "#/school_additionalAccommodationText"
+school_properties_ambassadorMemberNumber:
+  properties:
+    ambassadorMemberNumber:
+      $ref: "#/school_ambassadorMemberNumber"
+school_properties_ambassadorTestimonial:
+  properties:
+    ambassadorTestimonial:
+      $ref: "#/school_ambassadorTestimonial"
+school_properties_leadRecruitmentContactName:
+  properties:
+    leadRecruitmentContactName:
+      $ref: "#/school_leadRecruitmentContactName"
+school_properties_leadRecruitmentContactEmail:
+  properties:
+    leadRecruitmentContactEmail:
+      $ref: "#/school_leadRecruitmentContactEmail"
+school_properties_isInterestedInRecruitmentServices:
+  properties:
+    isInterestedInRecruitmentServices:
+      $ref: "#/school_isInterestedInRecruitmentServices"
+school_properties_isSubscribedToCandidateSuggestionEmails:
+  properties:
+    isSubscribedToCandidateSuggestionEmails:
+      $ref: "#/school_isSubscribedToCandidateSuggestionEmails"
+school_properties_numberOfBasicActiveJobCredits:
+  properties:
+    numberOfBasicActiveJobCredits:
+      $ref: "#/school_numberOfBasicActiveJobCredits"
+school_properties_hasThSaferRecruitmentBadgeOnOwnWebsite:
+  properties:
+    hasThSaferRecruitmentBadgeOnOwnWebsite:
+      $ref: "#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
+school_properties_smallProfileImageUrl:
+  properties:
+    smallProfileImageUrl:
+      $ref: "#/school_smallProfileImageUrl"
+school_properties_logoUrl:
+  properties:
+    logoUrl:
+      $ref: "#/school_logoUrl"
+school_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school_creationDate"
+school_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school_latestUpdateDate"
+school_properties_phoneCodeCountryId:
+  properties:
+    phoneCodeCountryId:
+      $ref: "#/school_phoneCodeCountryId"
+school_properties_internationalWorkingCurrencyId:
+  properties:
+    internationalWorkingCurrencyId:
+      $ref: "#/school_internationalWorkingCurrencyId"
+school_properties_fundingTypeId:
+  properties:
+    fundingTypeId:
+      $ref: "#/school_fundingTypeId"
+school_properties_studentGenderMixId:
+  properties:
+    studentGenderMixId:
+      $ref: "#/school_studentGenderMixId"
+school_properties_affiliatedReligionId:
+  properties:
+    affiliatedReligionId:
+      $ref: "#/school_affiliatedReligionId"
+school_properties_pensionSchemeTypeId:
+  properties:
+    pensionSchemeTypeId:
+      $ref: "#/school_pensionSchemeTypeId"
+school_properties_relocationAllowanceTypeId:
+  properties:
+    relocationAllowanceTypeId:
+      $ref: "#/school_relocationAllowanceTypeId"
+school_properties_flightAllowanceTypeId:
+  properties:
+    flightAllowanceTypeId:
+      $ref: "#/school_flightAllowanceTypeId"
+school_properties_managedByUserId:
+  properties:
+    managedByUserId:
+      $ref: "#/school_managedByUserId"
+school_properties_lraUserId:
+  properties:
+    lraUserId:
+      $ref: "#/school_lraUserId"
+school_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school_creationUserId"
+school_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school_latestUpdateUserId"
+school_properties_largeProfileImageUrl:
+  properties:
+    largeProfileImageUrl:
+      $ref: "#/school_largeProfileImageUrl"
+school_properties_phoneCodeCountry:
+  properties:
+    phoneCodeCountry:
+      $ref: "#/school_phoneCodeCountry"
+school_properties_internationalWorkingCurrency:
+  properties:
+    internationalWorkingCurrency:
+      $ref: "#/school_internationalWorkingCurrency"
+school_properties_fundingType:
+  properties:
+    fundingType:
+      $ref: "#/school_fundingType"
+school_properties_studentGenderMix:
+  properties:
+    studentGenderMix:
+      $ref: "#/school_studentGenderMix"
+school_properties_affiliatedReligion:
+  properties:
+    affiliatedReligion:
+      $ref: "#/school_affiliatedReligion"
+school_properties_pensionSchemeType:
+  properties:
+    pensionSchemeType:
+      $ref: "#/school_pensionSchemeType"
+school_properties_relocationAllowanceType:
+  properties:
+    relocationAllowanceType:
+      $ref: "#/school_relocationAllowanceType"
+school_properties_flightAllowanceType:
+  properties:
+    flightAllowanceType:
+      $ref: "#/school_flightAllowanceType"
+school_properties_managedByUser:
+  properties:
+    managedByUser:
+      $ref: "#/school_managedByUser"
+school_properties_lraUser:
+  properties:
+    lraUser:
+      $ref: "#/school_lraUser"
+school_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school_creationUser"
+school_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school_latestUpdateUser"
 
 
-# #attributes
-# "school_id:
-#   type: integer
-#   example: 1"
-# "school_name:
-#   type: string
-#   example: English School Community of Luanda"
-# "school_slug:
-#   type: string
-#   example: africa-angola-luanda-english-school-community-of-luanda"
-# "school_isActive:
-#   type: integer
-#   example: 1"
-# "school_thRating:
-#   type: number
-#   example: "
-# "school_alias:
-#   type: string
-#   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda"
-# "school_address1:
-#   type: string
-#   example: Rua de Cambambe No 21-23"
-# "school_address2:
-#   type: string
-#   example: Bairro Patrice Lumumba"
-# "school_address3:
-#   type: string
-#   example: Luanda"
-# "school_cityId:
-#   type: integer
-#   example: 1"
-# "school_websiteUrl:
-#   type: string
-#   example: www.isbi.com"
-# "school_phoneNumber:
-#   type: string
-#   example: 935929501"
-# "school_isEndorsedByTh:
-#   type: integer
-#   example: 0"
-# "school_hasBeenVisitedByTh:
-#   type: integer
-#   example: "
-# "school_acronym:
-#   type: string
-#   example: ESCOLA"
-# "school_profileStrengthPercentage:
-#   type: number
-#   example: 75"
-# "school_monthSchoolYearBegins:
-#   type: integer
-#   example: 9"
-# "school_headTeacherName:
-#   type: string
-#   example: Mrs Sharon Morgan"
-# "school_numberOfExtraCurricularHoursPerWeek:
-#   type: number
-#   example: 1"
-# "school_numberOfTeachingHoursPerWeek:
-#   type: number
-#   example: 27"
-# "school_numberOfStudents:
-#   type: integer
-#   example: 142"
-# "school_numberOfPreSchoolStudents:
-#   type: integer
-#   example: 26"
-# "school_numberOfPrimaryStudents:
-#   type: integer
-#   example: 118"
-# "school_numberOfSecondaryStudents:
-#   type: integer
-#   example: "
-# "school_numberOfPost16Students:
-#   type: integer
-#   example: "
-# "school_averagePreSchoolClassSize:
-#   type: integer
-#   example: 21"
-# "school_averagePrimaryClassSize:
-#   type: integer
-#   example: 20"
-# "school_averageSecondaryClassSize:
-#   type: integer
-#   example: "
-# "school_averagePost16ClassSize:
-#   type: integer
-#   example: "
-# "school_percentageOfInternationalStudents:
-#   type: integer
-#   example: 50"
-# "school_isAcademicallySelective:
-#   type: boolean
-#   example: 0"
-# "school_yearFounded:
-#   type: integer
-#   example: 2003"
-# "school_promoVideoUrl:
-#   type: string
-#   example: "
-# "school_numberOfSchoolDaysPerYear:
-#   type: integer
-#   example: "
-# "school_yearHeadTeacherStarted:
-#   type: integer
-#   example: 2020"
-# "school_yearLastAccredited:
-#   type: integer
-#   example: "
-# "school_hasLocalAccreditation:
-#   type: boolean
-#   example: 1"
-# "school_missionStatementText:
-#   type: string
-#   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context."
-# "school_promoVideoCaption:
-#   type: string
-#   example: "
-# "school_percentageOfOverseasTeachers:
-#   type: integer
-#   example: 80"
-# "school_isOpenToTeflTeachers:
-#   type: boolean
-#   example: 1"
-# "school_numberOfTeachingStaff:
-#   type: integer
-#   example: 15"
-# "school_annualTeacherTurnoverPercentage:
-#   type: integer
-#   example: 20"
-# "school_numberOfOverseasTeachersRecruitedPerYear:
-#   type: integer
-#   example: 11"
-# "school_minimumYearsTeachingExperience:
-#   type: integer
-#   example: "
-# "school_monthRecruitmentBegins:
-#   type: integer
-#   example: 3"
-# "school_teacherUpperAgeLimit:
-#   type: integer
-#   example: "
-# "school_isOpenToNewlyQualifiedTeachers:
-#   type: boolean
-#   example: 1"
-# "school_isOpenToUntrainedTeachers:
-#   type: boolean
-#   example: 1"
-# "school_isOpenToPgcei:
-#   type: boolean
-#   example: "
-# "school_isOpenToTeachingCouples:
-#   type: boolean
-#   example: 1"
-# "school_additionalVisaRequirementsText:
-#   type: string
-#   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;"
-# "school_additionalRecruitmentRequirementsText:
-#   type: string
-#   example: "
-# "school_monthForNoticeOfIntentionToLeave:
-#   type: integer
-#   example: "
-# "school_monthContractEnds:
-#   type: integer
-#   example: "
-# "school_additionalContractText:
-#   type: string
-#   example: "
-# "school_monthContractStarts:
-#   type: integer
-#   example: "
-# "school_locationLatLong:
-#   type: string
-#   example: -8.91461649145998, 13.1904718044952"
-# "school_yearCampusLastRenovated:
-#   type: integer
-#   example: "
-# "school_locationText:
-#   type: string
-#   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar."
-# "school_locationLatLong.lat:
-#   type: number
-#   example: -8.91461649145998"
-# "school_locationLatLong.long:
-#   type: number
-#   example: 13.1904718044952"
-# "school_isPayScaleBasedOnExperience:
-#   type: boolean
-#   example: 0"
-# "school_contractLengthInYears:
-#   type: integer
-#   example: 2"
-# "school_hasTeacherSavingScheme:
-#   type: boolean
-#   example: 0"
-# "school_canSalarySupportFamilyOfFour:
-#   type: boolean
-#   example: 0"
-# "school_hasFreePrivateHealthcareScheme:
-#   type: boolean
-#   example: 1"
-# "school_grossSalaryJuniorTeacher:
-#   type: number
-#   example: "
-# "school_grossSalaryJuniorTeacherInUsd:
-#   type: number
-#   example: "
-# "school_grossSalarySeniorTeacher:
-#   type: number
-#   example: "
-# "school_grossSalarySeniorTeacherInUsd:
-#   type: number
-#   example: "
-# "school_juniorTeacherTaxPercentage:
-#   type: integer
-#   example: 20"
-# "school_seniorTeacherTaxPercentage:
-#   type: integer
-#   example: 20"
-# school_schoolPensionContributionPercentage:
-#   type: integer
-#   example: 8
-# school_teacherPensionContributionPercentage:
-#   type: integer
-#   example: 3
-# school_amountIndividualTeacherSavesYearly:
-#   type: number
-#   example: 
-# school_amountIndividualTeacherSavesYearlyInUsd:
-#   type: number
-#   example: 
-# school_numberOfDependentsPerTeacher:
-#   type: integer
-#   example: 
-# school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
-#   type: boolean
-#   example: 1
-# school_additionalTaxText:
-#   type: string
-#   example: 
-# school_billsExpenditurePercentage:
-#   type: integer
-#   example: 
-# school_foodAndDrinkExpenditurePercentage:
-#   type: integer
-#   example: 
-# school_travelExpenditurePercentage:
-#   type: integer
-#   example: 
-# school_otherExpenditurePercentage:
-#   type: integer
-#   example: 
-# school_accommodationExpenditurePercentage:
-#   type: integer
-#   example: 
-# school_hasTeacherInductionProgramme:
-#   type: boolean
-#   example: 
-# school_hasTeacherPersonalLeaveDays:
-#   type: boolean
-#   example: 
-# school_hasTeacherBereavementLeave:
-#   type: boolean
-#   example: 
-# school_additionalAccommodationText:
-#   type: string
-#   example: 
-# school_ambassadorMemberNumber:
-#   type: integer
-#   example: 
-# school_ambassadorTestimonial:
-#   type: string
-#   example: 
-# school_leadRecruitmentContactName:
-#   type: string
-#   example: Mrs Sharon Morgan
-# school_leadRecruitmentContactEmail:
-#   type: string
-#   example: smorgan@escolaangola.org
-# school_isInterestedInRecruitmentServices:
-#   type: boolean
-#   example: 1
-# school_isSubscribedToCandidateSuggestionEmails:
-#   type: boolean
-#   example: 1
-# school_numberOfBasicActiveJobCredits:
-#   type: integer
-#   example: 10
-# school_hasThSaferRecruitmentBadgeOnOwnWebsite:
-#   type: boolean
-#   example: 
-# school_smallProfileImageUrl:
-#   type: string
-#   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
-# school_logoUrl:
-#   type: string
-#   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
-# school_creationDate:
-#   type: string
-#   format: date-time
-#   example: 2011-02-07T15:53:34Z
-# school_latestUpdateDate:
-#   type: string
-#   format: date-time
-#   example: 2011-02-07T15:53:34Z
-# school_phoneCodeCountryId:
-#   type: integer
-#   example: 2
-#   description: Relationship to Country
-# school_internationalWorkingCurrencyId:
-#   type: integer
-#   example: 4
-# school_fundingTypeId:
-#   type: integer
-#   example: 1
-#   description: Relationship to SchoolFundingTypes
-# school_studentGenderMixId:
-#   type: integer
-#   example: 1
-#   description: Relationship to SchoolStudentGenderMix
-# school_affiliatedReligionId:
-#   type: integer
-#   example: 8
-#   description: Relationship to Religion
-# school_pensionSchemeTypeId:
-#   type: integer
-#   example: 1
-#   description: Relationship to PensionSchemeType
-# school_relocationAllowanceTypeId:
-#   type: integer
-#   example: 
-#   description: Relationship to SchoolRelocationAllowanceType
-# school_flightAllowanceTypeId:
-#   type: integer
-#   example: 
-#   description: Relationship to SchoolFlightAllowanceType
-# school_managedByUserId:
-#   type: integer
-#   example: 6
-#   description: Relationship to user
-# school_lraUserId:
-#   type: integer
-#   example: 14
-#   description: Relationship to Adviser
-# school_creationUserId:
-#   type: integer
-#   example: 1
-#   description: Relationship to user
-# school_latestUpdateUserId:
-#   type: integer
-#   example: 1
-#   description: Relationship to user
-# school_largeProfileImageUrl:
-#   type: string
-#   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
-# school_city:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: 
-# school_phoneCodeCountry:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to Country
-# school_internationalWorkingCurrency:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: 
-# school_fundingType:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to SchoolFundingTypes
-# school_studentGenderMix:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to SchoolStudentGenderMix
-# school_affiliatedReligion:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to Religion
-# school_pensionSchemeType:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to PensionSchemeType
-# school_relocationAllowanceType:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to SchoolRelocationAllowanceType
-# school_flightAllowanceType:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to SchoolFlightAllowanceType
-# school_managedByUser:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to user
-# school_lraUser:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to Adviser
-# school_creationUser:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to user
-# school_latestUpdateUser:
-#   type: object
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to user
+#attributes
+school_id:
+  type: integer
+  example: 1
+school_name:
+  type: string
+  example: English School Community of Luanda
+school_slug:
+  type: string
+  example: africa-angola-luanda-english-school-community-of-luanda
+school_isActive:
+  type: integer
+  example: 1
+school_thRating:
+  type: number
+  example: 
+school_alias:
+  type: string
+  example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
+school_address1:
+  type: string
+  example: Rua de Cambambe No 21-23
+school_address2:
+  type: string
+  example: Bairro Patrice Lumumba
+school_address3:
+  type: string
+  example: Luanda
+school_cityId:
+  type: integer
+  example: 1
+school_websiteUrl:
+  type: string
+  example: www.isbi.com
+school_phoneNumber:
+  type: string
+  example: 935929501
+school_isEndorsedByTh:
+  type: integer
+  example: 0
+school_hasBeenVisitedByTh:
+  type: integer
+  example: 
+school_acronym:
+  type: string
+  example: ESCOLA
+school_profileStrengthPercentage:
+  type: number
+  example: 75
+school_monthSchoolYearBegins:
+  type: integer
+  example: 9
+school_headTeacherName:
+  type: string
+  example: Mrs Sharon Morgan
+school_numberOfExtraCurricularHoursPerWeek:
+  type: number
+  example: 1
+school_numberOfTeachingHoursPerWeek:
+  type: number
+  example: 27
+school_numberOfStudents:
+  type: integer
+  example: 142
+school_numberOfPreSchoolStudents:
+  type: integer
+  example: 26
+school_numberOfPrimaryStudents:
+  type: integer
+  example: 118
+school_numberOfSecondaryStudents:
+  type: integer
+  example: 
+school_numberOfPost16Students:
+  type: integer
+  example: 
+school_averagePreSchoolClassSize:
+  type: integer
+  example: 21
+school_averagePrimaryClassSize:
+  type: integer
+  example: 20
+school_averageSecondaryClassSize:
+  type: integer
+  example: 
+school_averagePost16ClassSize:
+  type: integer
+  example: 
+school_percentageOfInternationalStudents:
+  type: integer
+  example: 50
+school_isAcademicallySelective:
+  type: boolean
+  example: 0
+school_yearFounded:
+  type: integer
+  example: 2003
+school_promoVideoUrl:
+  type: string
+  example: 
+school_numberOfSchoolDaysPerYear:
+  type: integer
+  example: 
+school_yearHeadTeacherStarted:
+  type: integer
+  example: 2020
+school_yearLastAccredited:
+  type: integer
+  example: 
+school_hasLocalAccreditation:
+  type: boolean
+  example: 1
+school_missionStatementText:
+  type: string
+  example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
+school_promoVideoCaption:
+  type: string
+  example: 
+school_percentageOfOverseasTeachers:
+  type: integer
+  example: 80
+school_isOpenToTeflTeachers:
+  type: boolean
+  example: 1
+school_numberOfTeachingStaff:
+  type: integer
+  example: 15
+school_annualTeacherTurnoverPercentage:
+  type: integer
+  example: 20
+school_numberOfOverseasTeachersRecruitedPerYear:
+  type: integer
+  example: 11
+school_minimumYearsTeachingExperience:
+  type: integer
+  example: 
+school_monthRecruitmentBegins:
+  type: integer
+  example: 3
+school_teacherUpperAgeLimit:
+  type: integer
+  example: 
+school_isOpenToNewlyQualifiedTeachers:
+  type: boolean
+  example: 1
+school_isOpenToUntrainedTeachers:
+  type: boolean
+  example: 1
+school_isOpenToPgcei:
+  type: boolean
+  example: 
+school_isOpenToTeachingCouples:
+  type: boolean
+  example: 1
+school_additionalVisaRequirementsText:
+  type: string
+  example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
+school_additionalRecruitmentRequirementsText:
+  type: string
+  example: 
+school_monthForNoticeOfIntentionToLeave:
+  type: integer
+  example: 
+school_monthContractEnds:
+  type: integer
+  example: 
+school_additionalContractText:
+  type: string
+  example: 
+school_monthContractStarts:
+  type: integer
+  example: 
+school_locationLatLong:
+  type: string
+  example: -8.91461649145998, 13.1904718044952
+school_yearCampusLastRenovated:
+  type: integer
+  example: 
+school_locationText:
+  type: string
+  example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
+school_locationLatLong.lat:
+  type: number
+  example: -8.91461649145998
+school_locationLatLong.long:
+  type: number
+  example: 13.1904718044952
+school_isPayScaleBasedOnExperience:
+  type: boolean
+  example: 0
+school_contractLengthInYears:
+  type: integer
+  example: 2
+school_hasTeacherSavingScheme:
+  type: boolean
+  example: 0
+school_canSalarySupportFamilyOfFour:
+  type: boolean
+  example: 0
+school_hasFreePrivateHealthcareScheme:
+  type: boolean
+  example: 1
+school_grossSalaryJuniorTeacher:
+  type: number
+  example: 
+school_grossSalaryJuniorTeacherInUsd:
+  type: number
+  example: 
+school_grossSalarySeniorTeacher:
+  type: number
+  example: 
+school_grossSalarySeniorTeacherInUsd:
+  type: number
+  example: 
+school_juniorTeacherTaxPercentage:
+  type: integer
+  example: 20
+school_seniorTeacherTaxPercentage:
+  type: integer
+  example: 20
+school_schoolPensionContributionPercentage:
+  type: integer
+  example: 8
+school_teacherPensionContributionPercentage:
+  type: integer
+  example: 3
+school_amountIndividualTeacherSavesYearly:
+  type: number
+  example: 
+school_amountIndividualTeacherSavesYearlyInUsd:
+  type: number
+  example: 
+school_numberOfDependentsPerTeacher:
+  type: integer
+  example: 
+school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
+  type: boolean
+  example: 1
+school_additionalTaxText:
+  type: string
+  example: 
+school_billsExpenditurePercentage:
+  type: integer
+  example: 
+school_foodAndDrinkExpenditurePercentage:
+  type: integer
+  example: 
+school_travelExpenditurePercentage:
+  type: integer
+  example: 
+school_otherExpenditurePercentage:
+  type: integer
+  example: 
+school_accommodationExpenditurePercentage:
+  type: integer
+  example: 
+school_hasTeacherInductionProgramme:
+  type: boolean
+  example: 
+school_hasTeacherPersonalLeaveDays:
+  type: boolean
+  example: 
+school_hasTeacherBereavementLeave:
+  type: boolean
+  example: 
+school_additionalAccommodationText:
+  type: string
+  example: 
+school_ambassadorMemberNumber:
+  type: integer
+  example: 
+school_ambassadorTestimonial:
+  type: string
+  example: 
+school_leadRecruitmentContactName:
+  type: string
+  example: Mrs Sharon Morgan
+school_leadRecruitmentContactEmail:
+  type: string
+  example: smorgan@escolaangola.org
+school_isInterestedInRecruitmentServices:
+  type: boolean
+  example: 1
+school_isSubscribedToCandidateSuggestionEmails:
+  type: boolean
+  example: 1
+school_numberOfBasicActiveJobCredits:
+  type: integer
+  example: 10
+school_hasThSaferRecruitmentBadgeOnOwnWebsite:
+  type: boolean
+  example: 
+school_smallProfileImageUrl:
+  type: string
+  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
+school_logoUrl:
+  type: string
+  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
+school_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school_phoneCodeCountryId:
+  type: integer
+  example: 2
+  description: Relationship to Country
+school_internationalWorkingCurrencyId:
+  type: integer
+  example: 4
+school_fundingTypeId:
+  type: integer
+  example: 1
+  description: Relationship to SchoolFundingTypes
+school_studentGenderMixId:
+  type: integer
+  example: 1
+  description: Relationship to SchoolStudentGenderMix
+school_affiliatedReligionId:
+  type: integer
+  example: 8
+  description: Relationship to Religion
+school_pensionSchemeTypeId:
+  type: integer
+  example: 1
+  description: Relationship to PensionSchemeType
+school_relocationAllowanceTypeId:
+  type: integer
+  example: 
+  description: Relationship to SchoolRelocationAllowanceType
+school_flightAllowanceTypeId:
+  type: integer
+  example: 
+  description: Relationship to SchoolFlightAllowanceType
+school_managedByUserId:
+  type: integer
+  example: 6
+  description: Relationship to user
+school_lraUserId:
+  type: integer
+  example: 14
+  description: Relationship to Adviser
+school_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school_largeProfileImageUrl:
+  type: string
+  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
+school_city:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
+school_phoneCodeCountry:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country
+school_internationalWorkingCurrency:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
+school_fundingType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to SchoolFundingTypes
+school_studentGenderMix:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to SchoolStudentGenderMix
+school_affiliatedReligion:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Religion
+school_pensionSchemeType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to PensionSchemeType
+school_relocationAllowanceType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to SchoolRelocationAllowanceType
+school_flightAllowanceType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to SchoolFlightAllowanceType
+school_managedByUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+school_lraUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Adviser
+school_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+school_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
 

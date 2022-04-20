@@ -13,9 +13,9 @@ RegionalRefs:
     - $ref: "./simple-models/Country.yaml#/CountryAttributes"
     - $ref: "./simple-models/region.yaml#/Region"
 
-# SchoolRefs:
-#   allOf:
-#     - $ref: "./simple-models/School.yaml#/School"
+SchoolRefs:
+  allOf:
+    - $ref: "./simple-models/School.yaml#/School"
 
 NonThRefs:
   allOf:
@@ -45,7 +45,7 @@ SimpleModels:
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction"
-    # - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
+    - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
     - $ref: "../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem"
     - $ref: "../../models/simple/school/communityQuestion.yaml#/SimpleModel_school-communityQuestion"
     - $ref: "../../models/simple/school/curriculumType.yaml#/SimpleModel_school-curriculumType"
@@ -119,7 +119,7 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate"
     - $ref: "../../models/json-api//general/nationality.yaml#/JsonApiModel_general-nationality"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
-    # - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
+    - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
     - $ref: "../../models/json-api/school/academicSystem.yaml#/JsonApiModel_school-academicSystem"
     - $ref: "../../models/json-api/school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion"
     - $ref: "../../models/json-api/school/curriculumType.yaml#/JsonApiModel_school-curriculumType"

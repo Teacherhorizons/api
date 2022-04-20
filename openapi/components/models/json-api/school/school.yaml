@@ -1,0 +1,61 @@
+JsonApiModel_school:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school_type"
+    id:
+      $ref: "#/JsonApiModel_school_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/school.yaml#/school_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/school.yaml#/school_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    city:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    phoneCodeCountry:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    internationalWorkingCurrency:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    fundingType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    studentGenderMix:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    affiliatedReligion:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    pensionSchemeType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    relocationAllowanceType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    flightAllowanceType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    managedByUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    lraUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school_type:
+  type: string
+  example: school
+  description: school
+  readOnly: true
+
+JsonApiModel_school_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school (string)
