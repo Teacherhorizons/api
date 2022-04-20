@@ -1,84 +1,37 @@
 JsonApiModel_application-applicationEvent:
   type: object
   properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      admin: "#/JsonApiModel_application-applicationEvent_admin"
-      school: "#/JsonApiModel_application-applicationEvent_school"
-      teacher: "#/JsonApiModel_application-applicationEvent_teacher"
+    type:
+      $ref: "#/JsonApiModel_application-applicationEvent_type"
+    id:
+      $ref: "#/JsonApiModel_application-applicationEvent_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_application-applicationEvent_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/application/applicationEvent.yaml#/application-ApplicationEvent_relationships"
+  required:
+    - type
+    - id
 
-JsonApiModel_application-applicationEvent_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application-applicationEvent"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-applicationEvent_attributes_admin"
-    - required:
-        - type
-        - id
-
-JsonApiModel_application-applicationEvent_school:
-  allOf:
-    - $ref: "#/JsonApiModel_application-applicationEvent"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-applicationEvent_attributes_school"
-    - required:
-        - type
-        - id
-
-JsonApiModel_application-applicationEvent_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_application-applicationEvent"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-applicationEvent_attributes_school"
-    - required:
-        - type
-        - id
-
-# admin
-JsonApiModel_application-applicationEvent_attributes_admin:
-  type:
-    $ref: "#/JsonApiModel_application-applicationEvent_type"
-  id:
-    $ref: "#/JsonApiModel_application-applicationEvent_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
-      - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributeRelationships"
-  relationships:
-    $ref: "#/JsonApiModel_application-applicationEvent_relationships_admin"
-    # $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationships"
-
-JsonApiModel_application-applicationEvent_relationships_admin:
+JsonApiModel_application-applicationEvent_relationships:
   type: object
-  description: Related attributes
+  description: Related Attributes
   properties:
+    application:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    type:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    email:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     creationUser:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     latestUpdateUser:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
-# school
-JsonApiModel_application-applicationEvent_attributes_school:
-  type:
-    $ref: "#/JsonApiModel_application-applicationEvent_type"
-  id:
-    $ref: "#/JsonApiModel_application-applicationEvent_id"
-
-# teacher
-JsonApiModel_application-applicationEvent_attributes_teacher:
-  type:
-    $ref: "#/JsonApiModel_application-applicationEvent_type"
-  id:
-    $ref: "#/JsonApiModel_application-applicationEvent_id"
-
-# shared
 JsonApiModel_application-applicationEvent_type:
   type: string
   example: application-applicationEvent
