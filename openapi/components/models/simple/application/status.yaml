@@ -1,57 +1,10 @@
 SimpleModel_application-status:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      all: "#/SimpleModel_application-status_all"
-      admin: "#/SimpleModel_application-status_admin"
-      adminOnly: "#/SimpleModel_application-status_adminOnly"
-      school: "#/SimpleModel_application-status_school"
-      teacher: "#/SimpleModel_application-status_teacher"
-
-SimpleModel_application-status_all:
   allOf:
     - $ref: "#/SimpleModel_application-status"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_all"
-
-SimpleModel_application-status_admin:
-  allOf:
-    - $ref: "#/SimpleModel_application-status"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
-
-SimpleModel_application-status_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_application-status"
-    - type: object
-      allOf:
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
-
-SimpleModel_application-status_school:
-  allOf:
-    - $ref: "#/SimpleModel_application-status"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
-
-SimpleModel_application-status_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_application-status"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/application/status.yaml#/application-status_standardProperties_shared"
+        - $ref: "../../library/application/status.yaml#/application-status_properties_name"
 
 # shared
 SimpleModel_application-status_id:

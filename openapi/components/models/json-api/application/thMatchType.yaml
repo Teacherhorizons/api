@@ -1,35 +1,17 @@
 JsonApiModel_application-thMatchType:
   type: object
   properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      admin: "#/JsonApiModel_application-thMatchType_admin"
+    type:
+      $ref: "#/JsonApiModel_application-thMatchType_type"
+    id:
+      $ref: "#/JsonApiModel_application-thMatchType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_properties_name"
+  required:
+    - type
+    - id
 
-JsonApiModel_application-thMatchType_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application-thMatchType"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-thMatchType_attributes_admin"
-    - required:
-        - type
-        - id
-
-# admin
-JsonApiModel_application-thMatchType_attributes_admin:
-  type:
-    $ref: "#/JsonApiModel_application-thMatchType_type"
-  id:
-    $ref: "#/JsonApiModel_application-thMatchType_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
-
-# shared
 JsonApiModel_application-thMatchType_type:
   type: string
   example: application-thMatchType

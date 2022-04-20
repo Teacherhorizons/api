@@ -1,64 +1,12 @@
 SimpleModel_application-thMatchType:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      all: "#/SimpleModel_application-thMatchType_all"
-      admin: "#/SimpleModel_application-thMatchType_admin"
-      adminOnly: "#/SimpleModel_application-thMatchType_adminOnly"
-      school: "#/SimpleModel_application-thMatchType_school"
-      teacher: "#/SimpleModel_application-thMatchType_teacher"
-
-SimpleModel_application-thMatchType_all:
   allOf:
     - $ref: "#/SimpleModel_application-thMatchType"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_all"
-
-SimpleModel_application-thMatchType_admin:
-  allOf:
-    - $ref: "#/SimpleModel_application-thMatchType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "#/SimpleModel_application-thMatchType_name"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
-
-SimpleModel_application-thMatchType_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_application-thMatchType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "#/SimpleModel_application-thMatchType_name"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
-
-SimpleModel_application-thMatchType_school:
-  allOf:
-    - $ref: "#/SimpleModel_application-thMatchType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
-        # - $ref: "../../library/application/application-thMatchType.yaml#/application-thMatchType_relationshipProperties_shared"
-
-SimpleModel_application-thMatchType_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_application-thMatchType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_standardProperties_shared"
-        # - $ref: "../../library/application/application-thMatchType.yaml#/application-thMatchType_relationshipProperties_shared"
+        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_properties_name"
 
 # shared
-# TODO: consider improving the structure of this name
 SimpleModel_application-thMatchType_id:
   properties:
     id:
@@ -67,10 +15,3 @@ SimpleModel_application-thMatchType_id:
       example: 1
       readOnly: true
       description: Unique identifier of the object
-
-SimpleModel_application-thMatchType_name:
-  properties:
-    name:
-      type: string
-      example: Excellent Fit
-      readOnly: true

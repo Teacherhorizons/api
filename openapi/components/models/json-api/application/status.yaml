@@ -1,35 +1,17 @@
 JsonApiModel_application-status:
   type: object
   properties:
-    schema:
-      type: string
-      example: admin
-  discriminator:
-    propertyName: schema
-    mapping:
-      admin: "#/JsonApiModel_application-status_admin"
+    type:
+      $ref: "#/JsonApiModel_application-status_type"
+    id:
+      $ref: "#/JsonApiModel_application-status_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/application/status.yaml#/application-status_properties_name"
+  required:
+    - type
+    - id
 
-JsonApiModel_application-status_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application-status"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_application-status_attributes_admin"
-    - required:
-        - type
-        - id
-
-# admin
-JsonApiModel_application-status_attributes_admin:
-  type:
-    $ref: "#/JsonApiModel_application-status_type"
-  id:
-    $ref: "#/JsonApiModel_application-status_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/application/status.yaml#/application-status_standardProperties_adminOnly"
-
-# shared
 JsonApiModel_application-status_type:
   type: string
   example: application-status

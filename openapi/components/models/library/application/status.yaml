@@ -1,15 +1,8 @@
-# standard properties
-application-status_standardProperties_all:
-  allOf:
-    - $ref: "#/application-status_standardProperties_shared"
-    - $ref: "#/application-status_standardProperties_adminOnly"
-
-application-status_standardProperties_shared:
+application-status_properties_name:
   properties:
     name:
-      type: string
-      example: Open
+      $ref: "#/application-status_name"
 
-application-status_standardProperties_adminOnly:
-  allOf:
-    - $ref: "#/application-status_standardProperties_shared"
+application-status_name:
+  type: string
+  example: Open

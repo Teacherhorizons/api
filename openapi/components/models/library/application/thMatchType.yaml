@@ -1,10 +1,8 @@
-# standard properties
-application-thMatchType_standardProperties_all:
-  allOf:
-    - $ref: "#/application-thMatchType_standardProperties_shared"
-
-application-thMatchType_standardProperties_shared:
+application-thMatchType_properties_name:
   properties:
     name:
-      type: string
-      example: Excellent Fit
+      $ref: "#/application-thMatchType_name"
+
+application-thMatchType_name:
+  type: string
+  example: Excellent fit
