@@ -1,0 +1,36 @@
+JsonApiModel_teacher-teacherPhotoCategory:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_id"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherPhotoCategory.yaml#/teacher-teacherPhotoCategory_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherPhotoCategory_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacherPhoto:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    photoCategory:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherPhotoCategory_type:
+  type: string
+  example: teacher-teacherPhotoCategory
+  description: teacher-teacherPhotoCategory
+  readOnly: true
+
+JsonApiModel_teacher-teacherPhotoCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherPhotoCategory (string)
