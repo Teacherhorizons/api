@@ -409,6 +409,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherPhoto" /> 
 
+  - name: simple-model-teacher-teacherEducationLevel
+    x-displayName: Simple model - teacher-teacherEducationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEducationLevel" /> 
+
   # tags - simple-models - users
 
   - name: simple-model-user
@@ -686,6 +691,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherPhoto" />
 
+  - name: json-api-model-teacher-teacherEducationLevel
+    x-displayName: JSON:API model - teacher-teacherEducationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEducationLevel" />
+
   # tags - JSON:API models - school
 
   - name: json-api-model-school
@@ -916,6 +926,7 @@ x-tagGroups:
       - simple-model-teacher-teacherNationalities
       - simple-model-teacher-teacherPhotoCategory
       - simple-model-teacher-teacherPhoto
+      - simple-model-teacher-teacherEducationLevel
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -994,6 +1005,7 @@ x-tagGroups:
       - json-api-model-teacher-teacherNationalities
       - json-api-model-teacher-teacherPhotoCategory
       - json-api-model-teacher-teacherPhoto
+      - json-api-model-teacher-teacherEducationLevel
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
