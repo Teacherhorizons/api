@@ -323,6 +323,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-thRating" />
 
+  - name: simple-model-school-ageLevel
+    x-displayName: Simple model - school-ageLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-ageLevel" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -413,6 +418,26 @@ tags:
     x-displayName: Simple model - teacher-teacherEducationLevel
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEducationLevel" /> 
+
+  - name: simple-model-teacher-internationalExperience
+    x-displayName: Simple model - teacher-internationalExperience
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-internationalExperience" /> 
+
+  - name: simple-model-teacher-teacherCurriculumType
+    x-displayName: Simple model - teacher-teacherCurriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherCurriculumType" /> 
+
+  - name: simple-model-teacher-teacherPreferredLocation
+    x-displayName: Simple model - teacher-teacherPreferredLocation
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherPreferredLocation" /> 
+
+  - name: simple-model-teacher-numberOfDependentChildren
+    x-displayName: Simple model - teacher-numberOfDependentChildren
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-numberOfDependentChildren" /> 
 
   # tags - simple-models - users
 
@@ -696,6 +721,26 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEducationLevel" />
 
+  - name: json-api-model-teacher-internationalExperience
+    x-displayName: JSON:API model - teacher-internationalExperience
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-internationalExperience" />
+
+  - name: json-api-model-teacher-teacherCurriculumType
+    x-displayName: JSON:API model - teacher-teacherCurriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherCurriculumType" />
+
+  - name: json-api-model-teacher-teacherPreferredLocation
+    x-displayName: JSON:API model - teacher-teacherPreferredLocation
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherPreferredLocation" />
+
+  - name: json-api-model-teacher-numberOfDependentChildren
+    x-displayName: JSON:API model - teacher-numberOfDependentChildren
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-numberOfDependentChildren" />
+
   # tags - JSON:API models - school
 
   - name: json-api-model-school
@@ -797,6 +842,11 @@ tags:
     x-displayName: JSON:API model - school-thRating
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
+
+  - name: json-api-model-school-ageLevel
+    x-displayName: JSON:API model - school-ageLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-ageLevel" />
 
 # tags - json-api-models - users
 
@@ -909,6 +959,7 @@ x-tagGroups:
       - simple-model-school-additionalUrlMediaCategory
       - simple-model-school-schoolAcademicSystem
       - simple-model-school-thRating
+      - simple-model-school-ageLevel
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-badge
@@ -927,6 +978,10 @@ x-tagGroups:
       - simple-model-teacher-teacherPhotoCategory
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
+      - simple-model-teacher-internationalExperience
+      - simple-model-teacher-teacherCurriculumType
+      - simple-model-teacher-teacherPreferredLocation
+      - simple-model-teacher-numberOfDependentChildren
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -988,6 +1043,7 @@ x-tagGroups:
       - json-api-model-school-additionalUrlMediaCategory
       - json-api-model-school-schoolAcademicSystem
       - json-api-model-school-thRating
+      - json-api-model-school-ageLevel
       - json-api-model-api-model-teacher
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
@@ -1006,6 +1062,10 @@ x-tagGroups:
       - json-api-model-teacher-teacherPhotoCategory
       - json-api-model-teacher-teacherPhoto
       - json-api-model-teacher-teacherEducationLevel
+      - json-api-model-teacher-internationalExperience
+      - json-api-model-teacher-teacherCurriculumType
+      - json-api-model-teacher-teacherPreferredLocation
+      - json-api-model-teacher-numberOfDependentChildren
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool

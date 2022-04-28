@@ -1,0 +1,28 @@
+SimpleModel_teacher-numberOfDependentChildren:
+  allOf:
+    - $ref: "#/SimpleModel_teacher-numberOfDependentChildren"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_teacher-numberOfDependentChildren_type"
+        - $ref: "#/SimpleModel_teacher-numberOfDependentChildren_id"
+        - $ref: "../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_properties_name"
+
+# shared
+
+SimpleModel_teacher-numberOfDependentChildren_type:
+  properties:
+    type:
+      type: string
+      example: teacher-numberOfDependentChildren
+      description: teacher-numberOfDependentChildren
+      readOnly: true
+
+SimpleModel_teacher-numberOfDependentChildren_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

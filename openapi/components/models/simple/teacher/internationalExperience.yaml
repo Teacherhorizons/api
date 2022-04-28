@@ -1,0 +1,28 @@
+SimpleModel_teacher-internationalExperience:
+  allOf:
+    - $ref: "#/SimpleModel_teacher-internationalExperience"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_teacher-internationalExperience_type"
+        - $ref: "#/SimpleModel_teacher-internationalExperience_id"
+        - $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_properties_name"
+
+# shared
+
+SimpleModel_teacher-internationalExperience_type:
+  properties:
+    type:
+      type: string
+      example: teacher-internationalExperience
+      description: teacher-internationalExperience
+      readOnly: true
+
+SimpleModel_teacher-internationalExperience_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

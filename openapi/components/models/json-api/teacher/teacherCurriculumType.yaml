@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherCurriculumType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherCurriculumType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    curriculumType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherCurriculumType_type:
+  type: string
+  example: teacher-teacherCurriculumType
+  description: teacher-teacherCurriculumType
+  readOnly: true
+
+JsonApiModel_teacher-teacherCurriculumType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherCurriculumType (string)

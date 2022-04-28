@@ -1,0 +1,25 @@
+JsonApiModel_teacher-numberOfDependentChildren:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_properties_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-numberOfDependentChildren_type:
+  type: string
+  example: teacher-numberOfDependentChildren
+  description: teacher-numberOfDependentChildren
+  readOnly: true
+
+JsonApiModel_teacher-numberOfDependentChildren_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-numberOfDependentChildren (string)

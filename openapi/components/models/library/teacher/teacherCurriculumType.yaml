@@ -1,0 +1,132 @@
+
+# attributes
+teacher-teacherCurriculumType_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherCurriculumType_properties_creationDate"
+    - $ref: "#/teacher-teacherCurriculumType_properties_latestUpdateDate"
+
+# relationshipIds
+teacher-teacherCurriculumType_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherCurriculumType_properties_teacherId"
+    - $ref: "#/teacher-teacherCurriculumType_properties_curriculumTypeId"
+    - $ref: "#/teacher-teacherCurriculumType_properties_creationUserId"
+    - $ref: "#/teacher-teacherCurriculumType_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherCurriculumType_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherCurriculumType_properties_teacher"
+    - $ref: "#/teacher-teacherCurriculumType_properties_curriculumType"
+    - $ref: "#/teacher-teacherCurriculumType_properties_creationUser"
+    - $ref: "#/teacher-teacherCurriculumType_properties_latestUpdateUser"
+
+#properties
+teacher-role_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherCurriculumType_id"
+teacher-teacherCurriculumType_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/teacher-teacherCurriculumType_creationDate"
+teacher-teacherCurriculumType_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/teacher-teacherCurriculumType_latestUpdateDate"
+teacher-teacherCurriculumType_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/teacher-teacherCurriculumType_teacherId"
+teacher-teacherCurriculumType_properties_curriculumTypeId:
+  properties:
+    curriculumTypeId:
+      $ref: "#/teacher-teacherCurriculumType_curriculumTypeId"
+teacher-teacherCurriculumType_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/teacher-teacherCurriculumType_creationUserId"
+teacher-teacherCurriculumType_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/teacher-teacherCurriculumType_latestUpdateUserId"
+teacher-teacherCurriculumType_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/teacher-teacherCurriculumType_teacher"
+teacher-teacherCurriculumType_properties_curriculumType:
+  properties:
+    curriculumType:
+      $ref: "#/teacher-teacherCurriculumType_curriculumType"
+teacher-teacherCurriculumType_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/teacher-teacherCurriculumType_creationUser"
+teacher-teacherCurriculumType_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/teacher-teacherCurriculumType_latestUpdateUser"
+
+#attributes
+teacher-teacherCurriculumType_id:
+  type: integer
+  example: 1
+  description: auto
+teacher-teacherCurriculumType_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+teacher-teacherCurriculumType_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+teacher-teacherCurriculumType_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
+teacher-teacherCurriculumType_curriculumTypeId:
+  type: integer
+  example: 1
+  description: Relationship to general-curriculumType
+teacher-teacherCurriculumType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+teacher-teacherCurriculumType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+teacher-teacherCurriculumType_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher
+teacher-teacherCurriculumType_curriculumType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-curriculumType"
+teacher-teacherCurriculumType_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+teacher-teacherCurriculumType_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+
+
+
+

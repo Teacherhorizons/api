@@ -1,0 +1,28 @@
+SimpleModel_teacher-teacherCurriculumType:
+  allOf:
+    - $ref: "#/SimpleModel_teacher-teacherCurriculumType"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_teacher-teacherCurriculumType_id"
+        - $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_attributes"
+        - $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_relationshipIds"
+
+# shared
+SimpleModel_teacher-teacherCurriculumType_type:
+  properties:
+    type:
+      type: string
+      example: teacher-badge
+      description: teacher-badge
+      readOnly: true
+
+SimpleModel_teacher-teacherCurriculumType_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+
+
