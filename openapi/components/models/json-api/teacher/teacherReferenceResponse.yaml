@@ -1,0 +1,47 @@
+JsonApiModel_teacher-teacherReferenceResponse:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherReferenceResponse_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    request:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    question:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherReferenceResponse_type:
+  type: string
+  example: teacher-teacherReferenceResponse
+  description: teacher-teacherReferenceResponse
+  readOnly: true
+
+JsonApiModel_teacher-teacherReferenceResponse_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherReferenceResponse (string)
+
+
+
+
+
+
+
+

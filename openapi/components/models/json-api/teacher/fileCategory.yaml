@@ -1,0 +1,25 @@
+JsonApiModel_teacher-fileCategory:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-fileCategory_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-fileCategory_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/fileCategory.yaml#/teacher-fileCategory_properties_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-fileCategory_type:
+  type: string
+  example: teacher-fileCategory
+  description: teacher-fileCategory
+  readOnly: true
+
+JsonApiModel_teacher-fileCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-fileCategory (string)

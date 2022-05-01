@@ -1,0 +1,46 @@
+JsonApiModel_teacher-teacherReferenceQuestion:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherReferenceQuestion_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    referenceType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+
+JsonApiModel_teacher-teacherReferenceQuestion_type:
+  type: string
+  example: teacher-teacherReferenceQuestion
+  description: teacher-teacherReferenceQuestion
+  readOnly: true
+
+JsonApiModel_teacher-teacherReferenceQuestion_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherReferenceQuestion (string)
+
+
+
+
+
+
+
+

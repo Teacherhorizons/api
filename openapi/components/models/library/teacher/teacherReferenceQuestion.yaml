@@ -1,0 +1,77 @@
+
+#filter properties
+
+# attributes
+teacher-teacherReferenceQuestion_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceQuestion_properties_text"
+    - $ref: "#/teacher-teacherReferenceQuestion_properties_precedence"
+    - $ref: "#/teacher-teacherReferenceQuestion_properties_isRequired"
+
+# relationshipIds
+teacher-teacherReferenceQuestion_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceQuestion_properties_referenceTypeId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherReferenceQuestion_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceQuestion_properties_referenceType"
+  
+
+#properties
+teacher-teacherReferenceQuestion_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherReferenceQuestion_id"
+teacher-teacherReferenceQuestion_properties_text:
+  properties:
+    text:
+      $ref: "#/teacher-teacherReferenceQuestion_text"
+teacher-teacherReferenceQuestion_properties_precedence:
+  properties:
+    precedence:
+      $ref: "#/teacher-teacherReferenceQuestion_precedence"
+teacher-teacherReferenceQuestion_properties_isRequired:
+  properties:
+    isRequired:
+      $ref: "#/teacher-teacherReferenceQuestion_isRequired"
+teacher-teacherReferenceQuestion_properties_referenceTypeId:
+  properties:
+    referenceTypeId:
+      $ref: "#/teacher-teacherReferenceQuestion_referenceTypeId"
+teacher-teacherReferenceQuestion_properties_referenceType:
+  properties:
+    referenceType:
+      $ref: "#/teacher-teacherReferenceQuestion_referenceType"
+
+#attributes
+teacher-teacherReferenceQuestion_id:
+  type: integer
+  example: 1
+teacher-teacherReferenceQuestion_text:
+  type: string
+  example: 
+teacher-teacherReferenceQuestion_precedence:
+  type: integer
+  example: 1
+teacher-teacherReferenceQuestion_isRequired:
+  type: boolean
+  example: 1
+teacher-teacherReferenceQuestion_referenceTypeId:
+  type: integer
+  example: 1
+  description: Relationship to teacher-referenceType
+teacher-teacherReferenceQuestion_referenceType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher-referenceType
+
+
+
+

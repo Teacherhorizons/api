@@ -1,0 +1,41 @@
+JsonApiModel_teacher-teacherFile:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherFile_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherFile_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_teacher-teacherFile_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherFile_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    teacher:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher-teacherFile_type:
+  type: string
+  example: teacher-teacherFile
+  description: teacher-teacherFile
+  readOnly: true
+
+JsonApiModel_teacher-teacherFile_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherFile (string)

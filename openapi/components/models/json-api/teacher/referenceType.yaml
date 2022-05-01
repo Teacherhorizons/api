@@ -1,0 +1,25 @@
+JsonApiModel_teacher-referenceType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-referenceType_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-referenceType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/referenceType.yaml#/teacher-referenceType_properties_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-referenceType_type:
+  type: string
+  example: teacher-referenceType
+  description: teacher-referenceType
+  readOnly: true
+
+JsonApiModel_teacher-referenceType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-referenceType (string)

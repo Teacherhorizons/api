@@ -1,0 +1,126 @@
+
+# attributes
+teacher-teacherFile_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherFile_properties_name"
+    - $ref: "#/teacher-teacherFile_properties_url"
+    - $ref: "#/teacher-teacherFile_properties_creationDate"
+    - $ref: "#/teacher-teacherFile_properties_latestUpdateDate"
+
+# relationshipIds
+teacher-teacherFile_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherFile_properties_teacherId"
+    - $ref: "#/teacher-teacherFile_properties_creationUserId"
+    - $ref: "#/teacher-teacherFile_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherFile_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherFile_properties_teacher"
+    - $ref: "#/teacher-teacherFile_properties_creationUser"
+    - $ref: "#/teacher-teacherFile_properties_latestUpdateUser"
+
+#properties
+teacher-teacherFile_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/teacher-teacherFile_creationDate"
+teacher-teacherFile_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/teacher-teacherFile_latestUpdateDate"
+teacher-teacherFile_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/teacher-teacherFile_creationUserId"
+teacher-teacherFile_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/teacher-teacherFile_latestUpdateUserId"
+teacher-teacherFile_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherFile_id"
+teacher-teacherFile_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/teacher-teacherFile_teacherId"
+teacher-teacherFile_properties_url:
+  properties:
+    url:
+      $ref: "#/teacher-teacherFile_url"
+teacher-teacherFile_properties_name:
+  properties:
+    name:
+      $ref: "#/teacher-teacherFile_name"
+teacher-teacherFile_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/teacher-teacherFile_creationUser"
+teacher-teacherFile_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/teacher-teacherFile_latestUpdateUser"
+teacher-teacherFile_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/teacher-teacherFile_teacher"
+
+#attributes
+teacher-teacherFile_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+teacher-teacherFile_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+teacher-teacherFile_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+teacher-teacherFile_latestUpdateUserId:
+  type: integer
+  example: 
+  description: Relationship to user
+teacher-teacherFile_id:
+  type: 
+  example: 
+teacher-teacherFile_teacherId:
+  type: 
+  example: 
+teacher-teacherFile_url:
+  type: 
+  example: 
+teacher-teacherFile_name:
+  type: 
+  example: 
+teacher-teacherFile_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+teacher-teacherFile_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+teacher-teacherFile_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
+
+
+
+
+
