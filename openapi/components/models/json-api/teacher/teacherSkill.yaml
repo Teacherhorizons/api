@@ -1,0 +1,26 @@
+JsonApiModel_teacher-teacherSkill:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherSkill_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherSkill_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/teacher/teacherSkill.yaml#/teacher-teacherSkill_attributes"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherSkill_type:
+  type: string
+  example: teacher-teacherSkill
+  description: teacher-teacherSkill
+  readOnly: true
+
+JsonApiModel_teacher-teacherSkill_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher-teacherSkill (string)
