@@ -170,6 +170,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-nationality" /> 
 
+  - name: simple-model-general-month
+    x-displayName: Simple model - general-month
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-month" /> 
+
   # - name: simple-model-lists
   #   x-displayName: Lists
   #   description: |
@@ -327,6 +332,31 @@ tags:
     x-displayName: Simple model - school-ageLevel
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-ageLevel" />
+
+  - name: simple-model-school-teachingLanguage
+    x-displayName: Simple model - school-teachingLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-teachingLanguage" />
+
+  - name: simple-model-school-acceptedTeacherQualification
+    x-displayName: Simple model - school-acceptedTeacherQualification
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-acceptedTeacherQualification" />
+
+  - name: simple-model-school-additionalVideoUrlCategory
+    x-displayName: Simple model - school-additionalVideoUrlCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalVideoUrlCategory" />
+
+  - name: simple-model-school-documentCategory
+    x-displayName: Simple model - school-documentCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-documentCategory" />
+
+  - name: simple-model-school-schoolAgeLevel
+    x-displayName: Simple model - school-schoolAgeLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolAgeLevel" />
 
   # tags - simple-models - teacher
   - name: simple-model-teacher
@@ -642,6 +672,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationality" />
 
+  - name: json-api-model-general-month
+    x-displayName: JSON:API model - general-month
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-month" />
+
   # tags - JSON:API models - job
   - name: json-api-model-job
     x-displayName: JSON:API model - job
@@ -938,6 +973,31 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-ageLevel" />
 
+  - name: json-api-model-school-teachingLanguage
+    x-displayName: JSON:API model - school-teachingLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teachingLanguage" />
+
+  - name: json-api-model-school-acceptedTeacherQualification
+    x-displayName: JSON:API model - school-acceptedTeacherQualification
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
+
+  - name: json-api-model-school-additionalVideoUrlCategory
+    x-displayName: JSON:API model - school-additionalVideoUrlCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalVideoUrlCategory" />
+
+  - name: json-api-model-school-documentCategory
+    x-displayName: JSON:API model - school-documentCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-documentCategory" />
+
+  - name: json-api-model-school-schoolAgeLevel
+    x-displayName: JSON:API model - school-schoolAgeLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAgeLevel" />
+
 # tags - json-api-models - users
 
   - name: json-api-model-user
@@ -1026,6 +1086,7 @@ x-tagGroups:
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
       - simple-model-general-nationality
+      - simple-model-general-month
       - simple-model-regional-city
       - simple-model-regional-country
       - simple-model-regional-region
@@ -1050,6 +1111,11 @@ x-tagGroups:
       - simple-model-school-schoolAcademicSystem
       - simple-model-school-thRating
       - simple-model-school-ageLevel
+      - simple-model-school-additionalVideoUrlCategory
+      - simple-model-school-teachingLanguage
+      - simple-model-school-acceptedTeacherQualification
+      - simple-model-school-documentCategory
+      - simple-model-school-schoolAgeLevel
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-badge
@@ -1119,6 +1185,7 @@ x-tagGroups:
       - json-api-model-general-worldLanguage
       - json-api-model-general-manualEmailTemplate
       - json-api-model-general-nationality
+      - json-api-model-general-month
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
@@ -1143,6 +1210,11 @@ x-tagGroups:
       - json-api-model-school-schoolAcademicSystem
       - json-api-model-school-thRating
       - json-api-model-school-ageLevel
+      - json-api-model-school-teachingLanguage
+      - json-api-model-school-acceptedTeacherQualification
+      - json-api-model-school-additionalVideoUrlCategory
+      - json-api-model-school-documentCategory
+      - json-api-model-school-schoolAgeLevel
       - json-api-model-api-model-teacher
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge

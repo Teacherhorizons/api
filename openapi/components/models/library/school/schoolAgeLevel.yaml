@@ -1,0 +1,127 @@
+# attributes
+school-schoolAgeLevel_attributes:
+  allOf:
+    - $ref: "#/school-schoolAgeLevel_properties_creationDate"
+    - $ref: "#/school-schoolAgeLevel_properties_latestUpdateDate"
+
+# relationshipIds
+school-schoolAgeLevel_relationshipIds:
+  allOf:
+    - $ref: "#/school-schoolAgeLevel_properties_creationUserId"
+    - $ref: "#/school-schoolAgeLevel_properties_latestUpdateUserId"
+    - $ref: "#/school-schoolAgeLevel_properties_schoolId"
+    - $ref: "#/school-schoolAgeLevel_properties_ageLevelId"
+
+# attribute relationships
+
+# relationships
+school-schoolAgeLevel_relationships:
+  allOf:
+    - $ref: "#/school-schoolAgeLevel_properties_creationUser"
+    - $ref: "#/school-schoolAgeLevel_properties_latestUpdateUser"
+    - $ref: "#/school-schoolAgeLevel_properties_school"
+    - $ref: "#/school-schoolAgeLevel_properties_ageLevel"
+
+#properties
+school-schoolAgeLevel_properties_id:
+  properties:
+    id:
+      $ref: "#/school-schoolAgeLevel_id"
+school-schoolAgeLevel_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-schoolAgeLevel_creationDate"
+school-schoolAgeLevel_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-schoolAgeLevel_latestUpdateDate"
+school-schoolAgeLevel_properties_schoolId:
+  properties:
+    schoolId:
+      $ref: "#/school-schoolAgeLevel_schoolId"
+school-schoolAgeLevel_properties_ageLevelId:
+  properties:
+    ageLevelId:
+      $ref: "#/school-schoolAgeLevel_ageLevelId"
+school-schoolAgeLevel_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-schoolAgeLevel_creationUserId"
+school-schoolAgeLevel_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-schoolAgeLevel_latestUpdateUserId"
+school-schoolAgeLevel_properties_school:
+  properties:
+    school:
+      $ref: "#/school-schoolAgeLevel_school"
+school-schoolAgeLevel_properties_ageLevel:
+  properties:
+    ageLevel:
+      $ref: "#/school-schoolAgeLevel_ageLevel"
+school-schoolAgeLevel_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-schoolAgeLevel_creationUser"
+school-schoolAgeLevel_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-schoolAgeLevel_latestUpdateUser"
+
+#attributes
+school-schoolAgeLevel_id:
+  type: integer
+  example: 1
+school-schoolAgeLevel_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAgeLevel_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAgeLevel_schoolId:
+  type: integer
+  example: 
+  description: Relationship to school
+school-schoolAgeLevel_ageLevelId:
+  type: integer
+  example: 
+  description: Relationship to school-ageLevel
+school-schoolAgeLevel_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolAgeLevel_latestUpdateUserId:
+  type: integer
+  example: 
+  description: Relationship to user
+school-schoolAgeLevel_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school
+school-schoolAgeLevel_ageLevel:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school-ageLeve
+school-schoolAgeLevel_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+school-schoolAgeLevel_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+

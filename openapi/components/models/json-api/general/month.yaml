@@ -1,0 +1,26 @@
+JsonApiModel_general-month:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-month_type"
+    id:
+      $ref: "#/JsonApiModel_general-month_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/general/month.yaml#/general-month_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_general-month_type:
+  type: string
+  example: general-month
+  description: general-month
+  readOnly: true
+
+JsonApiModel_general-month_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-month (string)

@@ -1,0 +1,41 @@
+JsonApiModel_school-teachingLanguage:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-teachingLanguage_type"
+    id:
+      $ref: "#/JsonApiModel_school-teachingLanguage_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-teachingLanguage_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-teachingLanguage_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-teachingLanguage_type:
+  type: string
+  example: school-teachingLanguage
+  description: school-teachingLanguage
+  readOnly: true
+
+JsonApiModel_school-teachingLanguage_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-teachingLanguage (string)

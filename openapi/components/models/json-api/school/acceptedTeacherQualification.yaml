@@ -1,0 +1,43 @@
+JsonApiModel_school-acceptedTeacherQualification:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_type"
+    id:
+      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-acceptedTeacherQualification_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    teacherQualificationType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-acceptedTeacherQualification_type:
+  type: string
+  example: school-acceptedTeacherQualification
+  description: school-acceptedTeacherQualification
+  readOnly: true
+
+JsonApiModel_school-acceptedTeacherQualification_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-acceptedTeacherQualification (string)

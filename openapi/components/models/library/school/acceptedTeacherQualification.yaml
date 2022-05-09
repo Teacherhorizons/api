@@ -1,0 +1,147 @@
+
+
+# attributes
+school-acceptedTeacherQualification_attributes:
+  allOf:
+    - $ref: "#/school-acceptedTeacherQualification_properties_creationDate"
+    - $ref: "#/school-acceptedTeacherQualification_properties_latestUpdateDate"
+
+# relationshipIds
+school-acceptedTeacherQualification_relationshipIds:
+  allOf:
+    - $ref: "#/school-acceptedTeacherQualification_properties_schoolId"
+    - $ref: "#/school-acceptedTeacherQualification_properties_teacherQualificationTypeId"
+    - $ref: "#/school-acceptedTeacherQualification_properties_creationUserId"
+    - $ref: "#/school-acceptedTeacherQualification_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+school-acceptedTeacherQualification_relationships:
+  allOf:
+    - $ref: "#/school-acceptedTeacherQualification_properties_school"
+    - $ref: "#/school-acceptedTeacherQualification_properties_creationUser"
+    - $ref: "#/school-acceptedTeacherQualification_properties_teacherQualificationType"
+    - $ref: "#/school-acceptedTeacherQualification_properties_latestUpdateUser"
+
+#properties
+school-acceptedTeacherQualification_properties_id:
+  properties:
+    id:
+      $ref: "#/school-acceptedTeacherQualification_id"
+
+school-acceptedTeacherQualification_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-acceptedTeacherQualification_creationDate"
+
+school-acceptedTeacherQualification_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-acceptedTeacherQualification_latestUpdateDate"
+
+school-acceptedTeacherQualification_properties_schoolId:
+  properties:
+    typeId:
+      $ref: "#/school-acceptedTeacherQualification_schoolId"
+
+school-acceptedTeacherQualification_properties_teacherQualificationTypeId:
+  properties:
+    teacherQualificationTypeId:
+      $ref: "#/school-acceptedTeacherQualification_teacherQualificationTypeId"
+
+school-acceptedTeacherQualification_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-acceptedTeacherQualification_creationUserId"
+
+school-acceptedTeacherQualification_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-acceptedTeacherQualification_latestUpdateUserId"
+
+school-acceptedTeacherQualification_properties_school:
+  properties:
+    type:
+      $ref: "#/school-acceptedTeacherQualification_school"
+
+school-acceptedTeacherQualification_properties_teacherQualificationType:
+  properties:
+    teacherQualificationType:
+      $ref: "#/school-acceptedTeacherQualification_teacherQualificationType"
+
+school-acceptedTeacherQualification_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-acceptedTeacherQualification_creationUser"
+
+school-acceptedTeacherQualification_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-acceptedTeacherQualification_latestUpdateUser"
+
+#attributes
+school-acceptedTeacherQualification_id:
+  type: integer
+  example: 1
+
+school-acceptedTeacherQualification_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-acceptedTeacherQualification_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-acceptedTeacherQualification_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+
+school-acceptedTeacherQualification_teacherQualificationType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: 
+
+school-acceptedTeacherQualification_teacherQualificationTypeId:
+  type: integer
+  example: 
+
+school-acceptedTeacherQualification_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to School
+
+school-acceptedTeacherQualification_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-acceptedTeacherQualification_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-acceptedTeacherQualification_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+
+school-acceptedTeacherQualification_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User

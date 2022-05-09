@@ -1,0 +1,18 @@
+SimpleModel_school-schoolAgeLevel:
+  allOf:
+    - $ref: "#/SimpleModel_school-schoolAgeLevel"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_school-schoolAgeLevel_id"
+        - $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_attributes"
+        - $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_relationshipIds"
+
+# shared
+SimpleModel_school-schoolAgeLevel_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
