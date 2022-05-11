@@ -1,0 +1,127 @@
+# attributes
+school-schoolAccreditationType_attributes:
+  allOf:
+    - $ref: "#/school-schoolAccreditationType_properties_creationDate"
+    - $ref: "#/school-schoolAccreditationType_properties_latestUpdateDate"
+
+# relationshipIds
+school-schoolAccreditationType_relationshipIds:
+  allOf:
+    - $ref: "#/school-schoolAccreditationType_properties_creationUserId"
+    - $ref: "#/school-schoolAccreditationType_properties_latestUpdateUserId"
+    - $ref: "#/school-schoolAccreditationType_properties_schoolId"
+    - $ref: "#/school-schoolAccreditationType_properties_accreditationTypeId"
+
+# attribute relationships
+
+# relationships
+school-schoolAccreditationType_relationships:
+  allOf:
+    - $ref: "#/school-schoolAccreditationType_properties_creationUser"
+    - $ref: "#/school-schoolAccreditationType_properties_latestUpdateUser"
+    - $ref: "#/school-schoolAccreditationType_properties_school"
+    - $ref: "#/school-schoolAccreditationType_properties_accreditationType"
+
+#properties
+school-schoolAccreditationType_properties_id:
+  properties:
+    id:
+      $ref: "#/school-schoolAccreditationType_id"
+school-schoolAccreditationType_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/school-schoolAccreditationType_creationDate"
+school-schoolAccreditationType_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/school-schoolAccreditationType_latestUpdateDate"
+school-schoolAccreditationType_properties_schoolId:
+  properties:
+    schoolId:
+      $ref: "#/school-schoolAccreditationType_schoolId"
+school-schoolAccreditationType_properties_accreditationTypeId:
+  properties:
+    accreditationTypeId:
+      $ref: "#/school-schoolAccreditationType_accreditationTypeId"
+school-schoolAccreditationType_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/school-schoolAccreditationType_creationUserId"
+school-schoolAccreditationType_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/school-schoolAccreditationType_latestUpdateUserId"
+school-schoolAccreditationType_properties_school:
+  properties:
+    school:
+      $ref: "#/school-schoolAccreditationType_school"
+school-schoolAccreditationType_properties_accreditationType:
+  properties:
+    accreditationType:
+      $ref: "#/school-schoolAccreditationType_accreditationType"
+school-schoolAccreditationType_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/school-schoolAccreditationType_creationUser"
+school-schoolAccreditationType_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/school-schoolAccreditationType_latestUpdateUser"
+
+#attributes
+school-schoolAccreditationType_id:
+  type: integer
+  example: 1
+school-schoolAccreditationType_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAccreditationType_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolAccreditationType_schoolId:
+  type: integer
+  example: 
+  description: Relationship to school
+school-schoolAccreditationType_accreditationTypeId:
+  type: integer
+  example: 
+  description: Relationship to school-accreditationType
+school-schoolAccreditationType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolAccreditationType_latestUpdateUserId:
+  type: integer
+  example: 
+  description: Relationship to user
+school-schoolAccreditationType_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school
+school-schoolAccreditationType_accreditationType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school-accreditationType
+school-schoolAccreditationType_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+school-schoolAccreditationType_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+

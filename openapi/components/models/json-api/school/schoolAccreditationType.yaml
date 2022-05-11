@@ -1,0 +1,43 @@
+JsonApiModel_school-schoolAccreditationType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolAccreditationType_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolAccreditationType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_school-schoolAccreditationType_relationships"
+      attributes:
+        allOf:
+          $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolAccreditationType_relationships:
+  type: object
+  description: Related attributes
+  properties:
+    creationUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    latestUpdateUser:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    school:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    accreditationType:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_school-schoolAccreditationType_type:
+  type: string
+  example: school-schoolAccreditationType
+  description: school-schoolAccreditationType
+  readOnly: true
+
+JsonApiModel_school-schoolAccreditationType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the school-schoolAccreditationType (string)
