@@ -1,6 +1,6 @@
 SimpleModel_general-worldLanguage:
   allOf:
-    - $ref: "#/SimpleModel_general-worldLanguage"
+    # - $ref: "#/SimpleModel_general-worldLanguage"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_general-worldLanguage_type"
@@ -25,4 +25,3 @@ SimpleModel_general-worldLanguage_id:
       example: 1
       readOnly: true
       description: Unique identifier of the object
-

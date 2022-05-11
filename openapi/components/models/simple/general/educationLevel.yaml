@@ -1,11 +1,10 @@
 SimpleModel_general-educationLevel:
   allOf:
-    - $ref: "#/SimpleModel_general-educationLevel"
+    # - $ref: "#/SimpleModel_general-educationLevel"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_general-educationLevel_id"
         - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_attributes"
-
 
 # shared
 SimpleModel_general-educationLevel_id:

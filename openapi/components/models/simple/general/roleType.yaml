@@ -1,6 +1,6 @@
 SimpleModel_general-roleType:
   allOf:
-    - $ref: "#/SimpleModel_general-roleType"
+    # - $ref: "#/SimpleModel_general-roleType"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_general-roleType_type"
@@ -25,4 +25,3 @@ SimpleModel_general-roleType_id:
       example: 1
       readOnly: true
       description: Unique identifier of the object
-

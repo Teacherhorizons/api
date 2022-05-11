@@ -29,14 +29,14 @@ get:
           schema:
             anyOf:
               - $ref: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
-              - $ref: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
-              - $ref: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
+              # - $ref: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
+              # - $ref: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
             discriminator:
               propertyName: apiSchema
               mapping:
                 JobApplicationsForAdminSet1: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
-                JobApplicationsForSchoolSet1: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
-                JobApplicationsForTeacherSet1: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
+                # JobApplicationsForSchoolSet1: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
+                # JobApplicationsForTeacherSet1: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
     "400":
       description: Invalid ID supplied
     "404":
