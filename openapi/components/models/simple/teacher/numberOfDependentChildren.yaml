@@ -1,6 +1,6 @@
 SimpleModel_teacher-numberOfDependentChildren:
   allOf:
-    - $ref: "#/SimpleModel_teacher-numberOfDependentChildren"
+    # - $ref: "#/SimpleModel_teacher-numberOfDependentChildren"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_teacher-numberOfDependentChildren_type"
