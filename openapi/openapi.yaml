@@ -225,10 +225,10 @@ tags:
 
   # tags - simple-models - school
 
-  #   - name: simple-model-school
-  #     x-displayName: School
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/School" />
+  - name: simple-model-school
+    x-displayName: Simple model - school
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school" />
 
   - name: simple-model-school-academicSystem
     x-displayName: Simple model - school-academicSystem
@@ -582,102 +582,102 @@ tags:
 
   #   # JSON:API models
 
-  #   # tags - JSON:API models - application
-  #   - name: json-api-model-application-action
-  #     x-displayName: JSON:API model - application-action
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
+  # tags - JSON:API models - application
+  - name: json-api-model-application-action
+    x-displayName: JSON:API model - application-action
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
 
-  #   - name: json-api-model-application
-  #     x-displayName: JSON:API model - application
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
+  - name: json-api-model-application
+    x-displayName: JSON:API model - application
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
 
-  #   - name: json-api-model-application-applicationEvent
-  #     x-displayName: JSON:API model - application-applicationEvent
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-applicationEvent" />
+  - name: json-api-model-application-applicationEvent
+    x-displayName: JSON:API model - application-applicationEvent
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-applicationEvent" />
 
-  #   - name: json-api-model-application-eventType
-  #     x-displayName: JSON:API model - application-eventType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventType" />
+  - name: json-api-model-application-eventType
+    x-displayName: JSON:API model - application-eventType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventType" />
 
-  #   - name: json-api-model-application-status
-  #     x-displayName: JSON:API model - application-status
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-status" />
+  - name: json-api-model-application-status
+    x-displayName: JSON:API model - application-status
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-status" />
 
-  #   - name: json-api-model-application-thMatchType
-  #     x-displayName: JSON:API model - application-thMatchType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-thMatchType" />
+  - name: json-api-model-application-thMatchType
+    x-displayName: JSON:API model - application-thMatchType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-thMatchType" />
 
-  #   - name: json-api-model-application-eventTypeAction
-  #     x-displayName: JSON:API model - application-eventTypeAction
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
+  - name: json-api-model-application-eventTypeAction
+    x-displayName: JSON:API model - application-eventTypeAction
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
-  #   # tags - JSON:API models - general
-  #   - name: json-api-model-general-currency
-  #     x-displayName: JSON:API model - general-currency
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-currency" />
+  # tags - JSON:API models - general
+  - name: json-api-model-general-currency
+    x-displayName: JSON:API model - general-currency
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-currency" />
 
-  #   - name: json-api-model-general-educationLevel
-  #     x-displayName: JSON:API model - general-educationLevel
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-educationLevel" />
+  - name: json-api-model-general-educationLevel
+    x-displayName: JSON:API model - general-educationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-educationLevel" />
 
-  #   - name: json-api-model-general-pensionSchemeType
-  #     x-displayName: JSON:API model - general-pensionSchemeType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-pensionSchemeType" />
+  - name: json-api-model-general-pensionSchemeType
+    x-displayName: JSON:API model - general-pensionSchemeType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-pensionSchemeType" />
 
-  #   - name: json-api-model-general-religion
-  #     x-displayName: JSON:API model - general-religion
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-religion" />
+  - name: json-api-model-general-religion
+    x-displayName: JSON:API model - general-religion
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-religion" />
 
-  #   - name: json-api-model-general-role
-  #     x-displayName: JSON:API model - general-role
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-role" />
+  - name: json-api-model-general-role
+    x-displayName: JSON:API model - general-role
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-role" />
 
-  #   - name: json-api-model-general-roleType
-  #     x-displayName: JSON:API model - general-roleType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-roleType" />
+  - name: json-api-model-general-roleType
+    x-displayName: JSON:API model - general-roleType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-roleType" />
 
-  #   - name: json-api-model-general-subject
-  #     x-displayName: JSON:API model - general-subject
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
+  - name: json-api-model-general-subject
+    x-displayName: JSON:API model - general-subject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
 
-  #   - name: json-api-model-general-subjectGroup
-  #     x-displayName: JSON:API model - general-subjectGroup
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
+  - name: json-api-model-general-subjectGroup
+    x-displayName: JSON:API model - general-subjectGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
 
-  #   - name: json-api-model-general-worldLanguage
-  #     x-displayName: JSON:API model - general-worldLanguage
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
+  - name: json-api-model-general-worldLanguage
+    x-displayName: JSON:API model - general-worldLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-worldLanguage" />
 
-  #   - name: json-api-model-general-manualEmailTemplate
-  #     x-displayName: JSON:API model - general-manualEmailTemplate
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-manualEmailTemplate" />
+  - name: json-api-model-general-manualEmailTemplate
+    x-displayName: JSON:API model - general-manualEmailTemplate
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-manualEmailTemplate" />
 
-  #   - name: json-api-model-general-nationality
-  #     x-displayName: JSON:API model - general-nationality
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationality" />
+  - name: json-api-model-general-nationality
+    x-displayName: JSON:API model - general-nationality
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationality" />
 
-  #   - name: json-api-model-general-month
-  #     x-displayName: JSON:API model - general-month
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-month" />
+  - name: json-api-model-general-month
+    x-displayName: JSON:API model - general-month
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-month" />
 
   #   # tags - JSON:API models - job
   #   - name: json-api-model-job
@@ -867,137 +867,137 @@ tags:
   #     description: |
   #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherSkill" />
 
-  #   # tags - JSON:API models - school
+  # tags - JSON:API models - school
 
-  #   - name: json-api-model-school
-  #     x-displayName: JSON:API model - school
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school" />
+  - name: json-api-model-school
+    x-displayName: JSON:API model - school
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school" />
 
-  #   - name: json-api-model-school-academicSystem
-  #     x-displayName: JSON:API model - school-academicSystem
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-academicSystem" />
+  - name: json-api-model-school-academicSystem
+    x-displayName: JSON:API model - school-academicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-academicSystem" />
 
-  #   - name: json-api-model-school-communityQuestion
-  #     x-displayName: JSON:API model - school-communityQuestion
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-communityQuestion" />
+  - name: json-api-model-school-communityQuestion
+    x-displayName: JSON:API model - school-communityQuestion
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-communityQuestion" />
 
-  #   - name: json-api-model-school-curriculumType
-  #     x-displayName: JSON:API model - school-curriculumType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-curriculumType" />
+  - name: json-api-model-school-curriculumType
+    x-displayName: JSON:API model - school-curriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-curriculumType" />
 
-  #   - name: json-api-model-school-facility
-  #     x-displayName: JSON:API model - school-facility
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-facility" />
+  - name: json-api-model-school-facility
+    x-displayName: JSON:API model - school-facility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-facility" />
 
-  #   - name: json-api-model-school-fileCategory
-  #     x-displayName: JSON:API model - school-fileCategory
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-fileCategory" />
+  - name: json-api-model-school-fileCategory
+    x-displayName: JSON:API model - school-fileCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-fileCategory" />
 
-  #   - name: json-api-model-school-flightAllowanceType
-  #     x-displayName: JSON:API model - school-flightAllowanceType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-flightAllowanceType" />
+  - name: json-api-model-school-flightAllowanceType
+    x-displayName: JSON:API model - school-flightAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-flightAllowanceType" />
 
-  #   - name: json-api-model-school-relocationAllowanceType
-  #     x-displayName: JSON:API model - school-relocationAllowanceType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-relocationAllowanceType" />
+  - name: json-api-model-school-relocationAllowanceType
+    x-displayName: JSON:API model - school-relocationAllowanceType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-relocationAllowanceType" />
 
-  #   - name: json-api-model-school-schoolCommunityResponse
-  #     x-displayName: JSON:API model - school-schoolCommunityResponse
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCommunityResponse" />
+  - name: json-api-model-school-schoolCommunityResponse
+    x-displayName: JSON:API model - school-schoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCommunityResponse" />
 
-  #   - name: json-api-model-school-schoolCurriculumType
-  #     x-displayName: JSON:API model - school-schoolCurriculumType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCurriculumType" />
+  - name: json-api-model-school-schoolCurriculumType
+    x-displayName: JSON:API model - school-schoolCurriculumType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCurriculumType" />
 
-  #   - name: json-api-model-school-schoolEmploymentAdvantage
-  #     x-displayName: JSON:API model - school-schoolEmploymentAdvantage
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentAdvantage" />
+  - name: json-api-model-school-schoolEmploymentAdvantage
+    x-displayName: JSON:API model - school-schoolEmploymentAdvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentAdvantage" />
 
-  #   - name: json-api-model-school-schoolEmploymentDisadvantage
-  #     x-displayName: JSON:API model - school-schoolEmploymentDisadvantage
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentDisadvantage" />
+  - name: json-api-model-school-schoolEmploymentDisadvantage
+    x-displayName: JSON:API model - school-schoolEmploymentDisadvantage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolEmploymentDisadvantage" />
 
-  #   - name: json-api-model-school-schoolFacility
-  #     x-displayName: JSON:API model - school-schoolFacility
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolFacility" />
+  - name: json-api-model-school-schoolFacility
+    x-displayName: JSON:API model - school-schoolFacility
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolFacility" />
 
-  #   - name: json-api-model-school-studentGenderMix
-  #     x-displayName: JSON:API model - school-studentGenderMix
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-studentGenderMix" />
+  - name: json-api-model-school-studentGenderMix
+    x-displayName: JSON:API model - school-studentGenderMix
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-studentGenderMix" />
 
-  #   - name: json-api-model-school-teacherSchoolCommunityResponse
-  #     x-displayName: JSON:API model - school-teacherSchoolCommunityResponse
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teacherSchoolCommunityResponse" />
+  - name: json-api-model-school-teacherSchoolCommunityResponse
+    x-displayName: JSON:API model - school-teacherSchoolCommunityResponse
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teacherSchoolCommunityResponse" />
 
-  #   - name: json-api-model-school-accreditationType
-  #     x-displayName: JSON:API model - school-accreditationType
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-accreditationType" />
+  - name: json-api-model-school-accreditationType
+    x-displayName: JSON:API model - school-accreditationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-accreditationType" />
 
-  #   - name: json-api-model-school-additionalPhotoCategory
-  #     x-displayName: JSON:API model - school-additionalPhotoCategory
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalPhotoCategory" />
+  - name: json-api-model-school-additionalPhotoCategory
+    x-displayName: JSON:API model - school-additionalPhotoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalPhotoCategory" />
 
-  #   - name: json-api-model-school-additionalUrlMediaCategory
-  #     x-displayName: JSON:API model - school-additionalUrlMediaCategory
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalUrlMediaCategory" />
+  - name: json-api-model-school-additionalUrlMediaCategory
+    x-displayName: JSON:API model - school-additionalUrlMediaCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalUrlMediaCategory" />
 
-  #   - name: json-api-model-school-schoolAcademicSystem
-  #     x-displayName: JSON:API model - school-schoolAcademicSystem
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAcademicSystem" />
+  - name: json-api-model-school-schoolAcademicSystem
+    x-displayName: JSON:API model - school-schoolAcademicSystem
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAcademicSystem" />
 
-  #   - name: json-api-model-school-thRating
-  #     x-displayName: JSON:API model - school-thRating
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
+  - name: json-api-model-school-thRating
+    x-displayName: JSON:API model - school-thRating
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
 
-  #   - name: json-api-model-school-ageLevel
-  #     x-displayName: JSON:API model - school-ageLevel
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-ageLevel" />
+  - name: json-api-model-school-ageLevel
+    x-displayName: JSON:API model - school-ageLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-ageLevel" />
 
-  #   - name: json-api-model-school-teachingLanguage
-  #     x-displayName: JSON:API model - school-teachingLanguage
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teachingLanguage" />
+  - name: json-api-model-school-teachingLanguage
+    x-displayName: JSON:API model - school-teachingLanguage
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teachingLanguage" />
 
-  #   - name: json-api-model-school-acceptedTeacherQualification
-  #     x-displayName: JSON:API model - school-acceptedTeacherQualification
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
+  - name: json-api-model-school-acceptedTeacherQualification
+    x-displayName: JSON:API model - school-acceptedTeacherQualification
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
 
-  #   - name: json-api-model-school-additionalVideoUrlCategory
-  #     x-displayName: JSON:API model - school-additionalVideoUrlCategory
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalVideoUrlCategory" />
+  - name: json-api-model-school-additionalVideoUrlCategory
+    x-displayName: JSON:API model - school-additionalVideoUrlCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalVideoUrlCategory" />
 
-  #   - name: json-api-model-school-documentCategory
-  #     x-displayName: JSON:API model - school-documentCategory
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-documentCategory" />
+  - name: json-api-model-school-documentCategory
+    x-displayName: JSON:API model - school-documentCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-documentCategory" />
 
-  #   - name: json-api-model-school-schoolAgeLevel
-  #     x-displayName: JSON:API model - school-schoolAgeLevel
-  #     description: |
-  #       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAgeLevel" />
+  - name: json-api-model-school-schoolAgeLevel
+    x-displayName: JSON:API model - school-schoolAgeLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAgeLevel" />
 
   # # tags - json-api-models - users
 
@@ -1299,25 +1299,25 @@ x-tagGroups:
 #       - Example - Tag
 servers:
   - url: "https://beta.teacherhorizons.com/th/api"
-# paths:
-#   $ref: "./paths/paths.yaml"
+paths:
+  $ref: "./paths/paths.yaml"
 
 components:
-  #   securitySchemes:
-  #     main_auth:
-  #       type: oauth2
-  #       flows:
-  #         implicit:
-  #           authorizationUrl: "http://example.com/api/oauth/dialog"
-  #           scopes:
-  #             "read:users": read users info
-  #             "write:users": modify or remove users
-  #     api_key:
-  #       type: apiKey
-  #       in: header
-  #       name: api_key
-  #     basic_auth:
-  #       type: http
-  #       scheme: basic
+  securitySchemes:
+    main_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: "http://example.com/api/oauth/dialog"
+          scopes:
+            "read:users": read users info
+            "write:users": modify or remove users
+    api_key:
+      type: apiKey
+      in: header
+      name: api_key
+    basic_auth:
+      type: http
+      scheme: basic
   schemas:
     $ref: "./components/schemas/proposed/schemas.yaml"

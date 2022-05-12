@@ -1,3 +1,4 @@
+# TODO RR: investigate whether the files in "./simple-models/..." (below) are still needed
 ListRefs:
   allOf:
     - $ref: "./simple-models/lists/AcademicSystem.yaml#/AcademicSystem"
@@ -25,8 +26,13 @@ SimpleModels:
   allOf:
     # TODO: organise by category and alphabetically
     - $ref: "../../models/simple/regional/region.yaml#/SimpleModel_regional-region"
+
+    # TODO AS: rename to SimpleModel_regional-city
     - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
+
+    # TODO AS: rename to SimpleModel_regional-country
     - $ref: "../../models/simple/regional/Country.yaml#/SimpleModel_country"
+
     - $ref: "../../models/simple/general/currency.yaml#/SimpleModel_general-currency"
     - $ref: "../../models/simple/general/educationLevel.yaml#/SimpleModel_general-educationLevel"
     - $ref: "../../models/simple/general/pensionSchemeType.yaml#/SimpleModel_general-pensionSchemeType"
@@ -46,7 +52,7 @@ SimpleModels:
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction"
-    # - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
+    - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
     - $ref: "../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem"
     - $ref: "../../models/simple/school/communityQuestion.yaml#/SimpleModel_school-communityQuestion"
     - $ref: "../../models/simple/school/curriculumType.yaml#/SimpleModel_school-curriculumType"
@@ -77,6 +83,8 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/additionalPhotoCategory.yaml#/SimpleModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/simple/teacher/badge.yaml#/SimpleModel_teacher-badge"
     - $ref: "../../models/simple/teacher/qualificationType.yaml#/SimpleModel_teacher-qualificationType"
+
+    # TODO AS: circular reference issue(s) somewhere below
     - $ref: "../../models/simple/teacher/teacherNote.yaml#/SimpleModel_teacher-teacherNote"
     - $ref: "../../models/simple/teacher/teacherNoteType.yaml#/SimpleModel_teacher-teacherNoteType"
     - $ref: "../../models/simple/teacher/teacherReference.yaml#/SimpleModel_teacher-teacherReference"

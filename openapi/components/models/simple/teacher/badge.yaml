@@ -1,6 +1,6 @@
 SimpleModel_teacher-badge:
   allOf:
-    - $ref: "#/SimpleModel_teacher-badge"
+    # - $ref: "#/SimpleModel_teacher-badge"
     - type: object
       allOf:
         - $ref: "#/SimpleModel_teacher-badge_type"
@@ -25,4 +25,3 @@ SimpleModel_teacher-badge_id:
       example: 1
       readOnly: true
       description: Unique identifier of the object
-
