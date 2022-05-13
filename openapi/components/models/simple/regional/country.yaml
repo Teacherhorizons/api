@@ -1,4 +1,4 @@
-SimpleModel_country:
+SimpleModel_regional-country:
   type: object
   properties:
     schema:
@@ -7,59 +7,59 @@ SimpleModel_country:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_country_all"
-      admin: "#/SimpleModel_country_admin"
-      adminOnly: "#/SimpleModel_country_adminOnly"
-      school: "#/SimpleModel_country_school"
-      teacher: "#/SimpleModel_country_teacher"
+      all: "#/SimpleModel_regional-country_all"
+      admin: "#/SimpleModel_regional-country_admin"
+      adminOnly: "#/SimpleModel_regional-country_adminOnly"
+      school: "#/SimpleModel_regional-country_school"
+      teacher: "#/SimpleModel_regional-country_teacher"
 
-SimpleModel_country_all:
+SimpleModel_regional-country_all:
   allOf:
-    - $ref: "#/SimpleModel_country"
+    - $ref: "#/SimpleModel_regional-country"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_all"
-        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional-country_id"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_all"
+        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
 
-SimpleModel_country_admin:
+SimpleModel_regional-country_admin:
   allOf:
-    - $ref: "#/SimpleModel_country"
+    - $ref: "#/SimpleModel_regional-country"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional-country_id"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
 
-SimpleModel_country_adminOnly:
+SimpleModel_regional-country_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_country"
+    - $ref: "#/SimpleModel_regional-country"
     - type: object
       allOf:
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
+        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
 
-SimpleModel_country_school:
+SimpleModel_regional-country_school:
   allOf:
-    - $ref: "#/SimpleModel_country"
+    - $ref: "#/SimpleModel_regional-country"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
-        # - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional-country_id"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
+        # - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_shared"
 
-SimpleModel_country_teacher:
+SimpleModel_regional-country_teacher:
   allOf:
-    - $ref: "#/SimpleModel_country"
+    - $ref: "#/SimpleModel_regional-country"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_country_id"
-        - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
-        # - $ref: "../../library/regional/country.yaml#/country_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional-country_id"
+        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
+        # - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_shared"
 
 # shared
-SimpleModel_country_id:
+SimpleModel_regional-country_id:
   properties:
     id:
       type: integer

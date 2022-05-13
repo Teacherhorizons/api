@@ -27,11 +27,11 @@ SimpleModels:
     # TODO: organise by category and alphabetically
     - $ref: "../../models/simple/regional/region.yaml#/SimpleModel_regional-region"
 
-    # TODO AS: rename to SimpleModel_regional-city
-    - $ref: "../../models/simple/regional/City.yaml#/SimpleModel_city"
+    # TODO AS: rename to SimpleModel_regional-city - DONE
+    - $ref: "../../models/simple/regional/city.yaml#/SimpleModel_regional-city"
 
-    # TODO AS: rename to SimpleModel_regional-country
-    - $ref: "../../models/simple/regional/Country.yaml#/SimpleModel_country"
+    # TODO AS: rename to SimpleModel_regional-country - DONE
+    - $ref: "../../models/simple/regional/country.yaml#/SimpleModel_regional-country"
 
     - $ref: "../../models/simple/general/currency.yaml#/SimpleModel_general-currency"
     - $ref: "../../models/simple/general/educationLevel.yaml#/SimpleModel_general-educationLevel"
@@ -137,8 +137,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/application/status.yaml#/JsonApiModel_application-status"
     - $ref: "../../models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType"
     - $ref: "../../models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction"
-    - $ref: "../../models/json-api/regional/City.yaml#/JsonApiModel_city"
-    - $ref: "../../models/json-api/regional/Country.yaml#/JsonApiModel_country"
+    - $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city"
+    - $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country"
     - $ref: "../../models/json-api/general/currency.yaml#/JsonApiModel_general-currency"
     - $ref: "../../models/json-api/general/educationLevel.yaml#/JsonApiModel_general-educationLevel"
     - $ref: "../../models/json-api/general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType"

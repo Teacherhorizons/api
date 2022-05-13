@@ -1,4 +1,4 @@
-JsonApiModel_city:
+JsonApiModel_regional-city:
   type: object
   properties:
     schema:
@@ -7,54 +7,54 @@ JsonApiModel_city:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_city_admin"
-      school: "#/JsonApiModel_city_school"
-      teacher: "#/JsonApiModel_city_teacher"
+      admin: "#/JsonApiModel_regional-city_admin"
+      school: "#/JsonApiModel_regional-city_school"
+      teacher: "#/JsonApiModel_regional-city_teacher"
 
-JsonApiModel_city_admin:
+JsonApiModel_regional-city_admin:
   allOf:
-    - $ref: "#/JsonApiModel_city"
+    - $ref: "#/JsonApiModel_regional-city"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_city_attributes_admin"
+        $ref: "#/JsonApiModel_regional-city_attributes_admin"
     - required:
         - type
         - id
 
-JsonApiModel_city_school:
+JsonApiModel_regional-city_school:
   allOf:
-    - $ref: "#/JsonApiModel_city"
+    - $ref: "#/JsonApiModel_regional-city"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_city_attributes_school"
+        $ref: "#/JsonApiModel_regional-city_attributes_school"
     - required:
         - type
         - id
 
-JsonApiModel_city_teacher:
+JsonApiModel_regional-city_teacher:
   allOf:
-    - $ref: "#/JsonApiModel_city"
+    - $ref: "#/JsonApiModel_regional-city"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_city_attributes_school"
+        $ref: "#/JsonApiModel_regional-city_attributes_school"
     - required:
         - type
         - id
 
 # admin
-JsonApiModel_city_attributes_admin:
+JsonApiModel_regional-city_attributes_admin:
   type:
-    $ref: "#/JsonApiModel_city_type"
+    $ref: "#/JsonApiModel_regional-city_type"
   id:
-    $ref: "#/JsonApiModel_city_id"
+    $ref: "#/JsonApiModel_regional-city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
-      - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
+      - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_adminOnly"
   relationships:
-    $ref: "#/JsonApiModel_city_relationships_admin"
+    $ref: "#/JsonApiModel_regional-city_relationships_admin"
 
-JsonApiModel_city_relationships_admin:
+JsonApiModel_regional-city_relationships_admin:
   type: object
   description: Related attributes
   properties:
@@ -64,36 +64,36 @@ JsonApiModel_city_relationships_admin:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
 # school
-JsonApiModel_city_attributes_school:
+JsonApiModel_regional-city_attributes_school:
   type:
-    $ref: "#/JsonApiModel_city_type"
+    $ref: "#/JsonApiModel_regional-city_type"
   id:
-    $ref: "#/JsonApiModel_city_id"
+    $ref: "#/JsonApiModel_regional-city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
   # relationships:
 
 # teacher
-JsonApiModel_city_attributes_teacher:
+JsonApiModel_regional-city_attributes_teacher:
   type:
-    $ref: "#/JsonApiModel_city_type"
+    $ref: "#/JsonApiModel_regional-city_type"
   id:
-    $ref: "#/JsonApiModel_city_id"
+    $ref: "#/JsonApiModel_regional-city_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
+      - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
   # relationships:
 
 # shared
-JsonApiModel_city_type:
+JsonApiModel_regional-city_type:
   type: string
-  example: city
-  description: city
+  example: regional-city
+  description: regional-city
   readOnly: true
 
-JsonApiModel_city_id:
+JsonApiModel_regional-city_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the city (string)
+  description: Unique identifier of the regional-city (string)

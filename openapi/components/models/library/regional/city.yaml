@@ -1,10 +1,10 @@
 # standard properties
-city_standardProperties_all:
+regional-city_standardProperties_all:
   allOf:
-    - $ref: "#/city_standardProperties_shared"
-    - $ref: "#/city_standardProperties_adminOnly"
+    - $ref: "#/regional-city_standardProperties_shared"
+    - $ref: "#/regional-city_standardProperties_adminOnly"
 
-city_standardProperties_shared:
+regional-city_standardProperties_shared:
   properties:
     id:
       type: integer
@@ -42,7 +42,7 @@ city_standardProperties_shared:
           example: 17.46826171875
           description: Longitude
 
-city_standardProperties_adminOnly:
+regional-city_standardProperties_adminOnly:
   properties:
     creationDate:
       type: string
@@ -57,14 +57,14 @@ city_standardProperties_adminOnly:
 
 # relationship properties
 
-city_relationshipProperties_all:
+regional-city_relationshipProperties_all:
   allOf:
-    # - $ref: "#/city_standardProperties_shared"
-    - $ref: "#/city_standardProperties_adminOnly"
+    # - $ref: "#/regional-city_standardProperties_shared"
+    - $ref: "#/regional-city_standardProperties_adminOnly"
 
-# city_relationshipProperties_shared:
+# regional-city_relationshipProperties_shared:
 
-city_relationshipProperties_adminOnly:
+regional-city_relationshipProperties_adminOnly:
   properties:
     creationUserId:
       type: integer

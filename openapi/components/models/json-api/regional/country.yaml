@@ -1,4 +1,4 @@
-JsonApiModel_country:
+JsonApiModel_regional-country:
   type: object
   properties:
     schema:
@@ -7,54 +7,54 @@ JsonApiModel_country:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_country_admin"
-      school: "#/JsonApiModel_country_school"
-      teacher: "#/JsonApiModel_country_teacher"
+      admin: "#/JsonApiModel_regional-country_admin"
+      school: "#/JsonApiModel_regional-country_school"
+      teacher: "#/JsonApiModel_regional-country_teacher"
 
-JsonApiModel_country_admin:
+JsonApiModel_regional-country_admin:
   allOf:
-    - $ref: "#/JsonApiModel_country"
+    - $ref: "#/JsonApiModel_regional-country"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_country_attributes_admin"
+        $ref: "#/JsonApiModel_regional-country_attributes_admin"
     - required:
         - type
         - id
 
-JsonApiModel_country_school:
+JsonApiModel_regional-country_school:
   allOf:
-    - $ref: "#/JsonApiModel_country"
+    - $ref: "#/JsonApiModel_regional-country"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_country_attributes_school"
+        $ref: "#/JsonApiModel_regional-country_attributes_school"
     - required:
         - type
         - id
 
-JsonApiModel_country_teacher:
+JsonApiModel_regional-country_teacher:
   allOf:
-    - $ref: "#/JsonApiModel_country"
+    - $ref: "#/JsonApiModel_regional-country"
     - type: object
     - properties:
-        $ref: "#/JsonApiModel_country_attributes_school"
+        $ref: "#/JsonApiModel_regional-country_attributes_school"
     - required:
         - type
         - id
 
 # admin
-JsonApiModel_country_attributes_admin:
+JsonApiModel_regional-country_attributes_admin:
   type:
-    $ref: "#/JsonApiModel_country_type"
+    $ref: "#/JsonApiModel_regional-country_type"
   id:
-    $ref: "#/JsonApiModel_country_id"
+    $ref: "#/JsonApiModel_regional-country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
-      - $ref: "../../library/regional/country.yaml#/country_standardProperties_adminOnly"
+      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
   relationships:
-    $ref: "#/JsonApiModel_country_relationships_admin"
+    $ref: "#/JsonApiModel_regional-country_relationships_admin"
 
-JsonApiModel_country_relationships_admin:
+JsonApiModel_regional-country_relationships_admin:
   type: object
   description: Related attributes
   properties:
@@ -64,36 +64,36 @@ JsonApiModel_country_relationships_admin:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
 # school
-JsonApiModel_country_attributes_school:
+JsonApiModel_regional-country_attributes_school:
   type:
-    $ref: "#/JsonApiModel_country_type"
+    $ref: "#/JsonApiModel_regional-country_type"
   id:
-    $ref: "#/JsonApiModel_country_id"
+    $ref: "#/JsonApiModel_regional-country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
   # relationships:
 
 # teacher
-JsonApiModel_country_attributes_teacher:
+JsonApiModel_regional-country_attributes_teacher:
   type:
-    $ref: "#/JsonApiModel_country_type"
+    $ref: "#/JsonApiModel_regional-country_type"
   id:
-    $ref: "#/JsonApiModel_country_id"
+    $ref: "#/JsonApiModel_regional-country_id"
   attributes:
     allOf:
-      - $ref: "../../library/regional/country.yaml#/country_standardProperties_shared"
+      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
   # relationships:
 
 # shared
-JsonApiModel_country_type:
+JsonApiModel_regional-country_type:
   type: string
-  example: country
-  description: country
+  example: regional-country
+  description: regional-country
   readOnly: true
 
-JsonApiModel_country_id:
+JsonApiModel_regional-country_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the country (string)
+  description: Unique identifier of the regional-country (string)

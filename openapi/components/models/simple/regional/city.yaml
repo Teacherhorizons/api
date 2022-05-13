@@ -1,4 +1,4 @@
-SimpleModel_city:
+SimpleModel_regional-city:
   type: object
   properties:
     schema:
@@ -7,59 +7,59 @@ SimpleModel_city:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_city_all"
-      admin: "#/SimpleModel_city_admin"
-      adminOnly: "#/SimpleModel_city_adminOnly"
-      school: "#/SimpleModel_city_school"
-      teacher: "#/SimpleModel_city_teacher"
+      all: "#/SimpleModel_regional-city_all"
+      admin: "#/SimpleModel_regional-city_admin"
+      adminOnly: "#/SimpleModel_regional-city_adminOnly"
+      school: "#/SimpleModel_regional-city_school"
+      teacher: "#/SimpleModel_regional-city_teacher"
 
-SimpleModel_city_all:
+SimpleModel_regional-city_all:
   allOf:
-    - $ref: "#/SimpleModel_city"
+    - $ref: "#/SimpleModel_regional-city"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_all"
-        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional-city_id"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_all"
+        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
 
-SimpleModel_city_admin:
+SimpleModel_regional-city_admin:
   allOf:
-    - $ref: "#/SimpleModel_city"
+    - $ref: "#/SimpleModel_regional-city"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
-        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
+        - $ref: "#/SimpleModel_regional-city_id"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
 
-SimpleModel_city_adminOnly:
+SimpleModel_regional-city_adminOnly:
   allOf:
-    - $ref: "#/SimpleModel_city"
+    - $ref: "#/SimpleModel_regional-city"
     - type: object
       allOf:
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_adminOnly"
-        - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_adminOnly"
+        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
 
-SimpleModel_city_school:
+SimpleModel_regional-city_school:
   allOf:
-    - $ref: "#/SimpleModel_city"
+    - $ref: "#/SimpleModel_regional-city"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
-        # - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional-city_id"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
+        # - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_shared"
 
-SimpleModel_city_teacher:
+SimpleModel_regional-city_teacher:
   allOf:
-    - $ref: "#/SimpleModel_city"
+    - $ref: "#/SimpleModel_regional-city"
     - type: object
       allOf:
-        - $ref: "#/SimpleModel_city_id"
-        - $ref: "../../library/regional/city.yaml#/city_standardProperties_shared"
-        # - $ref: "../../library/regional/city.yaml#/city_relationshipProperties_shared"
+        - $ref: "#/SimpleModel_regional-city_id"
+        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
+        # - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_shared"
 
 # shared
-SimpleModel_city_id:
+SimpleModel_regional-city_id:
   properties:
     id:
       type: integer
