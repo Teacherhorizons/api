@@ -211,12 +211,12 @@ tags:
   - name: simple-model-regional-city
     x-displayName: Simple model - regional-city
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_city" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-city" />
 
   - name: simple-model-regional-country
     x-displayName: Simple model - regional-country
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_country" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-country" />
 
   - name: simple-model-regional-region
     x-displayName: Simple model - regional-region
@@ -699,12 +699,12 @@ tags:
   - name: json-api-model-regional-city
     x-displayName: JSON:API model - regional-city
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_city" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-city" />
 
   - name: json-api-model-regional-country
     x-displayName: JSON:API model - regional-country
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_country" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-country" />
 
   - name: json-api-model-regional-region
     x-displayName: JSON:API model - regional-region
@@ -1004,69 +1004,69 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAccreditationType" />
 
-# tags - json-api-models - users
+  # tags - json-api-models - users
 
   - name: json-api-model-user
     x-displayName: JSON:API model - user
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user" />
 
-- name: json-api-model-user-favouriteJob
-  x-displayName: JSON:API model - user-favouriteJob
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteJob" />
+  - name: json-api-model-user-favouriteJob
+    x-displayName: JSON:API model - user-favouriteJob
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteJob" />
 
-- name: json-api-model-user-favouriteSchool
-  x-displayName: JSON:API model - user-favouriteSchool
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteSchool" />
+  - name: json-api-model-user-favouriteSchool
+    x-displayName: JSON:API model - user-favouriteSchool
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteSchool" />
 
-- name: json-api-model-user-favouriteTeacher
-  x-displayName: JSON:API model - user-favouriteTeacher
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteTeacher" />
+  - name: json-api-model-user-favouriteTeacher
+    x-displayName: JSON:API model - user-favouriteTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteTeacher" />
 
-- name: json-api-model-user-userCategory
-  x-displayName: JSON:API model - user-userCategory
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-userCategory" />
+  - name: json-api-model-user-userCategory
+    x-displayName: JSON:API model - user-userCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-userCategory" />
 
-- name: json-api-model-user-message
-  x-displayName: JSON:API model - user-message
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-message" />
+  - name: json-api-model-user-message
+    x-displayName: JSON:API model - user-message
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-message" />
 
-- name: json-api-model-user-messageStatus
-  x-displayName: JSON:API model - user-messageStatus
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
+  - name: json-api-model-user-messageStatus
+    x-displayName: JSON:API model - user-messageStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
 
-- name: json-api-model-user-thUser
-  x-displayName: JSON:API model - user-thUser
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
+  - name: json-api-model-user-thUser
+    x-displayName: JSON:API model - user-thUser
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
 
-# # tags - json-api-models - meta
+  # # tags - json-api-models - meta
 
-- name: json-api-model-meta-entityType
-  x-displayName: JSON:API model - meta-entityType
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityType" />
+  - name: json-api-model-meta-entityType
+    x-displayName: JSON:API model - meta-entityType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityType" />
 
-- name: json-api-model-meta-entityChange
-  x-displayName: JSON:API model - meta-entityChange
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChange" />
+  - name: json-api-model-meta-entityChange
+    x-displayName: JSON:API model - meta-entityChange
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChange" />
 
-- name: json-api-model-meta-entityChangeSummary
-  x-displayName: JSON:API model - meta-entityChangeSummary
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummary" />
+  - name: json-api-model-meta-entityChangeSummary
+    x-displayName: JSON:API model - meta-entityChangeSummary
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummary" />
 
-- name: json-api-model-meta-entityChangeSummarySubscription
-  x-displayName: JSON:API model - meta-entityChangeSummarySubscription
-  description: |
-    <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummarySubscription" />
+  - name: json-api-model-meta-entityChangeSummarySubscription
+    x-displayName: JSON:API model - meta-entityChangeSummarySubscription
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummarySubscription" />
 
 x-tagGroups:
   - name: Simple models

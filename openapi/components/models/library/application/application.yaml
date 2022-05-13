@@ -12,7 +12,6 @@ application_metaProperties_shared:
 # attributes
 application_attributes:
   allOf:
-    
     - $ref: "#/application_properties_creationDate"
     - $ref: "#/application_properties_latestUpdateDate"
     - $ref: "#/application_properties_hasDataIssues"
@@ -112,10 +111,10 @@ application_properties_status:
 #attributes
 application_id:
   type: integer
-  example: 
+  example:
 application_recommendationText:
   type: string
-  example: 
+  example:
   description: Max 10,000 characters
 application_creationDate:
   type: string
@@ -127,14 +126,14 @@ application_latestUpdateDate:
   example: 2011-02-07T15:53:35Z
 application_hasDataIssues:
   type: boolean
-  example: 1"
+  example: 1
 application_jobId:
   type: integer
-  example: 
+  example:
   description: Relationship to job
 application_teacherId:
   type: integer
-  example: 
+  example:
   description: Relationship to teacher
 application_thMatchTypeId:
   type: integer
