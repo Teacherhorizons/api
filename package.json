@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "openapi preview-docs",
+    "start": "openapi preview-docs -p 8080",
     "build": "openapi bundle --output=dist",
     "build-wip-2": "openapi bundle --output=dist/openapi.yaml --dereferenced",
     "build-wip-3": "openapi bundle --output=dist/openapi.json --dereferenced",

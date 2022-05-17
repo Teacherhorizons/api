@@ -41,3 +41,14 @@ JsonApiModel_user_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the user (string)
+
+JsonApiModel_user_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_user_type"
+        id:
+          $ref: "#/JsonApiModel_user_id"

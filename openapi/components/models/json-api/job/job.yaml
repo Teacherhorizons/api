@@ -49,3 +49,14 @@ JsonApiModel_job_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the job (string)
+
+JsonApiModel_job_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_job_type"
+        id:
+          $ref: "#/JsonApiModel_job_id"

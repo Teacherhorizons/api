@@ -23,3 +23,14 @@ JsonApiModel_application-thMatchType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the application-thMatchType (string)
+
+JsonApiModel_application-thMatchType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-thMatchType_type"
+        id:
+          $ref: "#/JsonApiModel_application-thMatchType_id"

@@ -36,3 +36,26 @@ JsonApiModel_teacher_relationships:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     currentCountry:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+
+JsonApiModel_teacher_type:
+  type: string
+  example: teacher
+  description: teacher
+  readOnly: true
+
+JsonApiModel_teacher_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the teacher (string)
+
+JsonApiModel_teacher_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher_type"
+        id:
+          $ref: "#/JsonApiModel_teacher_id"

@@ -7,35 +7,36 @@ ApplicationResponse:
         type: object
         properties:
           type:
-            type: string
-            example: application
+            $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
           id:
-            type: string
-            example: "123"
+            $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
           attributes:
-            type: object
-            properties:
-              thMatchType:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "2"
-              status:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
-              creationDate:
-                type: string
-                example: 2011-02-07T15:53:34:000Z
-              latestUpdateDate:
-                type: string
-                example: 2011-02-07T15:53:34:000Z
-              recommendationText:
-                type: string
-                example: Foo bar
+            allOf:
+              - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_all"
+          # attributes:
+          #   type: object
+          #   properties:
+          #     thMatchType:
+          #       type: object
+          #       properties:
+          #         id:
+          #           type: string
+          #           example: "2"
+          #     status:
+          #       type: object
+          #       properties:
+          #         id:
+          #           type: string
+          #           example: "1"
+          #     creationDate:
+          #       type: string
+          #       example: 2011-02-07T15:53:34:000Z
+          #     latestUpdateDate:
+          #       type: string
+          #       example: 2011-02-07T15:53:34:000Z
+          #     recommendationText:
+          #       type: string
+          #       example: Foo bar
           relationships:
             type: object
             properties:

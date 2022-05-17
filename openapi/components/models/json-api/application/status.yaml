@@ -23,3 +23,14 @@ JsonApiModel_application-status_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the application-status (string)
+
+JsonApiModel_application-status_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-status_type"
+        id:
+          $ref: "#/JsonApiModel_application-status_id"
