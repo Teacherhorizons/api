@@ -87,12 +87,12 @@ JsonApiModel_application_relationships_shared:
 
 # schema, type and id
 JsonApiModel_application_schema:
-  schema:
-    type: string
-    enum:
-      - admin
-      - school
-      - teacher
+  type: string
+  example: admin
+  enum:
+    - admin
+    - school
+    - teacher
 
 JsonApiModel_application_type:
   type: string

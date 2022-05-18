@@ -40,8 +40,7 @@ teacher_standardProperties_all:
 teacher_standardProperties_shared:
   properties:
     memberNumber:
-      type: integer
-      example: 1
+      $ref: "#/teacher_memberNumber"
     availableFromDate:
       type: string
       format: date-time
@@ -145,3 +144,224 @@ teacher_relationshipProperties_shared:
       type: integer
       example: 1
       description: Relationship to Country
+
+#
+teacher_id:
+  type: integer
+  example: 1
+teacher_memberNumber:
+  type: integer
+  example: 1
+teacher_availableFromDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+teacher_statement:
+  type: string
+  example:
+teacher_partnerMemberNumber:
+  type: integer
+  example:
+teacher_profileStrength:
+  type: integer
+  example:
+teacher_birthYear:
+  type: integer
+  example:
+teacher_latestAdviserCommentDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+teacher_interestedInPrivateTuition:
+  type: integer
+  example: 1
+teacher_neverPotentialRiskToChildren:
+  type: integer
+  example: 1
+teacher_neverBehaviouralConcernsTowardsChildren:
+  type: integer
+  example: 1
+teacher_thPlaceabilityRating:
+  type: integer
+  example: 1
+teacher_teacherDoesNotWantToBeContacted:
+  type: integer
+  example:
+teacher_isAvailableForRemoteTeaching:
+  type: boolean
+  example:
+teacher_twitterHandle:
+  type: string
+  example:
+teacher_instagramHandle:
+  type: string
+  example:
+teacher_linkedInProfileUrl:
+  type: string
+  example:
+teacher_facebookProfileUrl:
+  type: string
+  example:
+teacher_videoInterviewClipUrl:
+  type: string
+  example:
+teacher_numberOfYearsTeachingExperience:
+  type: integer
+  example:
+
+#
+teacher_userId:
+  type: integer
+  example: 1
+  description: Relationship to user
+teacher_teachingQualificationCountryId:
+  type: integer
+  example: 1
+  description: Relationship to Country
+teacher_qualificationTypeId:
+  type: integer
+  example: 1
+  description: Relationship to QualificationType
+teacher_jobSeekingStatusId:
+  type: integer
+  example:
+  description: Relationship to Status
+teacher_photoFileId:
+  type: integer
+  example:
+teacher_maritalStatusId:
+  type: integer
+  example:
+teacher_internationalSchoolExperienceId:
+  type: integer
+  example:
+teacher_userTypeId:
+  type: integer
+  example:
+  description: Relationship to userType
+teacher_thDiscoveryMethodId:
+  type: integer
+  example:
+  description: Relationship to teacher-thDiscoveryMethod
+teacher_latestAdviserCommentUserId:
+  type: integer
+  example:
+  description: Relationship to user
+teacher_currentCountryId:
+  type: integer
+  example:
+  description: Relationship to regional-country
+teacher_numberOfDependentChildrenId:
+  type: integer
+  example:
+  description: Relationship to teacher-numberOfDependentChildren
+
+#
+teacher_user:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+
+teacher_teachingQualificationCountry:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to regional-country
+
+teacher_qualificationType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to QualificationType
+
+teacher_jobSeekingStatus:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to Status
+
+teacher_photoFile:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description:
+
+teacher_maritalStatus:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description:
+
+teacher_internationalSchoolExperience:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description:
+
+teacher_userType:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to userType
+
+teacher_thDiscoveryMethod:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to teacher-thDiscoveryMethod
+
+teacher_latestAdviserCommentUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+
+teacher_currentCountry:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to regional-country
+
+teacher_numberOfDependentChildren:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to teacher-numberOfDependentChildren
+
+# TODO: review these 3
+teacher_thDoNotContact:
+  type: boolean
+  example: true
+
+teacher_fullName:
+  type: string
+  example: Foo Bar
+
+teacher_profileImageUrl:
+  type: string
+  example: ...

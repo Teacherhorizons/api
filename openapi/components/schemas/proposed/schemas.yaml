@@ -25,14 +25,12 @@ SchoolRefs:
 SimpleModels:
   allOf:
     # TODO: organise by category and alphabetically
+    # regional
     - $ref: "../../models/simple/regional/region.yaml#/SimpleModel_regional-region"
-
-    # TODO AS: rename to SimpleModel_regional-city - DONE
     - $ref: "../../models/simple/regional/city.yaml#/SimpleModel_regional-city"
-
-    # TODO AS: rename to SimpleModel_regional-country - DONE
     - $ref: "../../models/simple/regional/country.yaml#/SimpleModel_regional-country"
 
+    # general
     - $ref: "../../models/simple/general/currency.yaml#/SimpleModel_general-currency"
     - $ref: "../../models/simple/general/educationLevel.yaml#/SimpleModel_general-educationLevel"
     - $ref: "../../models/simple/general/pensionSchemeType.yaml#/SimpleModel_general-pensionSchemeType"
@@ -45,6 +43,8 @@ SimpleModels:
     - $ref: "../../models/simple/general/manualEmailTemplate.yaml#/SimpleModel_general-manualEmailTemplate"
     - $ref: "../../models/simple/general/nationality.yaml#/SimpleModel_general-nationality"
     - $ref: "../../models/simple/general/month.yaml#/SimpleModel_general-month"
+
+    # application
     - $ref: "../../models/simple/application/application.yaml#/SimpleModel_application"
     - $ref: "../../models/simple/application/action.yaml#/SimpleModel_application-action"
     - $ref: "../../models/simple/application/applicationEvent.yaml#/SimpleModel_application-applicationEvent"
@@ -52,6 +52,8 @@ SimpleModels:
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction"
+
+    # school
     - $ref: "../../models/simple/school/school.yaml#/SimpleModel_school"
     - $ref: "../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem"
     - $ref: "../../models/simple/school/communityQuestion.yaml#/SimpleModel_school-communityQuestion"
@@ -79,6 +81,8 @@ SimpleModels:
     - $ref: "../../models/simple/school/documentCategory.yaml#/SimpleModel_school-documentCategory"
     - $ref: "../../models/simple/school/schoolAgeLevel.yaml#/SimpleModel_school-schoolAgeLevel"
     - $ref: "../../models/simple/school/schoolAccreditationType.yaml#/SimpleModel_school-schoolAccreditationType"
+
+    # teacher
     - $ref: "../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
     - $ref: "../../models/simple/teacher/additionalPhotoCategory.yaml#/SimpleModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/simple/teacher/badge.yaml#/SimpleModel_teacher-badge"

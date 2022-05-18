@@ -19,6 +19,7 @@ application_attributes_admin:
     - $ref: "#/application_attributes_shared"
     - $ref: "#/application_properties_recommendationText"
     - $ref: "#/application_properties_hasDataIssues"
+    - $ref: "#/application_properties_thSystemMatchScore"
 
 application_attributes_teacher:
   allOf:
@@ -100,6 +101,11 @@ application_properties_hasDataIssues:
   properties:
     hasDataIssues:
       $ref: "#/application_hasDataIssues"
+
+application_properties_thSystemMatchScore:
+  properties:
+    thSystemMatchScore:
+      $ref: "#/application_thSystemMatchScore"
 
 #
 application_properties_jobId:
@@ -195,7 +201,13 @@ application_latestUpdateDate:
 
 application_hasDataIssues:
   type: boolean
-  example: 1
+  example: true
+
+application_thSystemMatchScore:
+  description: System match score of teacher and job, value between 0 and 1
+  type: number
+  format: double
+  example: 0.75
 
 #
 application_jobId:

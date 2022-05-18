@@ -1,11 +1,9 @@
 SimpleModel_general-pensionSchemeType:
+  type: object
   allOf:
-    # - $ref: "#/SimpleModel_general-pensionSchemeType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-pensionSchemeType_id"
-        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_attributes"
-        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipIds"
+    - $ref: "#/SimpleModel_general-pensionSchemeType_id"
+    - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_attributes"
+    - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationshipIds"
 
 # shared
 SimpleModel_general-pensionSchemeType_id:

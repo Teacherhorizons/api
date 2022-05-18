@@ -59,3 +59,14 @@ JsonApiModel_school_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the school (string)
+
+JsonApiModel_school_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school_type"
+        id:
+          $ref: "#/JsonApiModel_school_id"

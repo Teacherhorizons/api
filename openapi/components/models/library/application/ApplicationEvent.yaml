@@ -22,7 +22,7 @@ application-applicationEvent_relationshipIds:
 application-applicationEvent_attributeRelationships:
   allOf:
     - $ref: "#/application-applicationEvent_properties_application"
-    - $ref: "#/application-applicationEvent_properties_eventType"
+    - $ref: "#/application-applicationEvent_properties_type"
     - $ref: "#/application-applicationEvent_properties_email"
 
 # relationships
@@ -88,10 +88,10 @@ application-applicationEvent_properties_email:
     email:
       $ref: "#/application-applicationEvent_email"
 
-application-applicationEvent_properties_eventType:
+application-applicationEvent_properties_type:
   properties:
     eventType:
-      $ref: "#/application-applicationEvent_eventType"
+      $ref: "#/application-applicationEvent_type"
 
 application-applicationEvent_properties_creationUser:
   properties:
@@ -162,7 +162,7 @@ application-applicationEvent_email:
       type: string
       example: "1"
 
-application-applicationEvent_eventType:
+application-applicationEvent_type:
   type: object
   properties:
     id:

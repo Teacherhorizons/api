@@ -1,0 +1,225 @@
+ApplicationsResponse:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+      enum:
+        - admin
+        - school
+        - teacher
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/ApplicationsResponse_admin"
+      teacher: "#/ApplicationsResponse_teacher"
+  required:
+    - schema
+
+ApplicationsResponse_meta:
+  type: object
+  properties:
+    count:
+      type: integer
+      example: 123
+    pageCount:
+      type: integer
+      example: 20
+
+# admin
+ApplicationsResponse_admin:
+  allOf:
+    - $ref: "#/ApplicationsResponse"
+    - properties:
+        meta:
+          $ref: "#/ApplicationsResponse_meta"
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
+              id:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+              attributes:
+                allOf:
+                  - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
+                  - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+                  - $ref: "../../../components/models/library/application/application.yaml#/application_properties_thMatchType"
+              relationships:
+                type: object
+                properties:
+                  job:
+                    $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+                  teacher:
+                    $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+                  latestEvent:
+                    $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+        included:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/ApplicationsResponse_includedTeacher_admin"
+              - $ref: "#/ApplicationsResponse_includedJob_admin"
+              - $ref: "#/ApplicationsResponse_includedSchool_admin"
+              - $ref: "#/ApplicationsResponse_includedApplicationEvent_admin"
+
+ApplicationsResponse_includedTeacher_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
+    id:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
+    attributes:
+      type: object
+      properties:
+        memberNumber:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
+        thDoNotContact:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_thDoNotContact"
+        thPlaceabilityRating:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
+        fullName:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_fullName"
+        profileImageUrl:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_profileImageUrl"
+
+ApplicationsResponse_includedJob_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+
+ApplicationsResponse_includedSchool_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      properties:
+        acronym:
+          $ref: "../../../components/models/library/school/school.yaml#/school_acronym"
+        name:
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        thRating:
+          $ref: "../../../components/models/library/school/school.yaml#/school_thRating"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
+        city:
+          $ref: "../../../components/models/library/school/school.yaml#/school_city"
+
+ApplicationsResponse_includedApplicationEvent_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+    id:
+      $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+    attributes:
+      type: object
+      properties:
+        date:
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+        type:
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+
+# teacher
+ApplicationsResponse_teacher:
+  allOf:
+    - $ref: "#/ApplicationsResponse"
+    - properties:
+        meta:
+          $ref: "#/ApplicationsResponse_meta"
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
+              id:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+              attributes:
+                allOf:
+                  - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_teacher"
+                  - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+              relationships:
+                type: object
+                properties:
+                  job:
+                    $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+                  latestEvent:
+                    $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+        included:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/ApplicationsResponse_includedJob_teacher"
+              - $ref: "#/ApplicationsResponse_includedSchool_teacher"
+              - $ref: "#/ApplicationsResponse_includedApplicationEvent_teacher"
+
+ApplicationsResponse_includedJob_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+
+ApplicationsResponse_includedSchool_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      allOf:
+        - $ref: "../../../components/models/library/school/school.yaml#/school_properties_acronym"
+        - $ref: "../../../components/models/library/school/school.yaml#/school_properties_name"
+        - $ref: "../../../components/models/library/school/school.yaml#/school_properties_slug"
+        - $ref: "../../../components/models/library/school/school.yaml#/school_properties_city"
+        - $ref: "../../../components/models/library/school/school.yaml#/school_properties_smallProfileImageUrl"
+
+ApplicationsResponse_includedApplicationEvent_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+    id:
+      $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+    attributes:
+      type: object
+      properties:
+        date:
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+        type:
+          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"

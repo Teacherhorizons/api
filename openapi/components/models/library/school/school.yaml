@@ -126,6 +126,7 @@ school_relationships:
   allOf:
     - $ref: "#/school_properties_creationUser"
     - $ref: "#/school_properties_latestUpdateUser"
+    - $ref: "#/school_properties_city"
     - $ref: "#/school_properties_phoneCodeCountry"
     - $ref: "#/school_properties_internationalWorkingCurrency"
     - $ref: "#/school_properties_fundingType"
@@ -150,14 +151,17 @@ school_properties_slug:
   properties:
     slug:
       $ref: "#/school_slug"
+
 school_properties_isActive:
   properties:
     isActive:
       $ref: "#/school_isActive"
+
 school_properties_thRating:
   properties:
     thRating:
       $ref: "#/school_thRating"
+
 school_properties_alias:
   properties:
     alias:
@@ -642,7 +646,10 @@ school_properties_latestUpdateUser:
   properties:
     latestUpdateUser:
       $ref: "#/school_latestUpdateUser"
-
+school_properties_city:
+  properties:
+    city:
+      $ref: "#/school_city"
 
 #attributes
 school_id:
@@ -659,7 +666,8 @@ school_isActive:
   example: 1
 school_thRating:
   type: number
-  example: 
+  example: 7.5
+  description: Between 6 and 10, in steps of 0.5
 school_alias:
   type: string
   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
@@ -686,7 +694,7 @@ school_isEndorsedByTh:
   example: 0
 school_hasBeenVisitedByTh:
   type: integer
-  example: 
+  example:
 school_acronym:
   type: string
   example: ESCOLA
@@ -716,10 +724,10 @@ school_numberOfPrimaryStudents:
   example: 118
 school_numberOfSecondaryStudents:
   type: integer
-  example: 
+  example:
 school_numberOfPost16Students:
   type: integer
-  example: 
+  example:
 school_averagePreSchoolClassSize:
   type: integer
   example: 21
@@ -728,10 +736,10 @@ school_averagePrimaryClassSize:
   example: 20
 school_averageSecondaryClassSize:
   type: integer
-  example: 
+  example:
 school_averagePost16ClassSize:
   type: integer
-  example: 
+  example:
 school_percentageOfInternationalStudents:
   type: integer
   example: 50
@@ -743,16 +751,16 @@ school_yearFounded:
   example: 2003
 school_promoVideoUrl:
   type: string
-  example: 
+  example:
 school_numberOfSchoolDaysPerYear:
   type: integer
-  example: 
+  example:
 school_yearHeadTeacherStarted:
   type: integer
   example: 2020
 school_yearLastAccredited:
   type: integer
-  example: 
+  example:
 school_hasLocalAccreditation:
   type: boolean
   example: 1
@@ -761,7 +769,7 @@ school_missionStatementText:
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
 school_promoVideoCaption:
   type: string
-  example: 
+  example:
 school_percentageOfOverseasTeachers:
   type: integer
   example: 80
@@ -779,13 +787,13 @@ school_numberOfOverseasTeachersRecruitedPerYear:
   example: 11
 school_minimumYearsTeachingExperience:
   type: integer
-  example: 
+  example:
 school_monthRecruitmentBegins:
   type: integer
   example: 3
 school_teacherUpperAgeLimit:
   type: integer
-  example: 
+  example:
 school_isOpenToNewlyQualifiedTeachers:
   type: boolean
   example: 1
@@ -794,7 +802,7 @@ school_isOpenToUntrainedTeachers:
   example: 1
 school_isOpenToPgcei:
   type: boolean
-  example: 
+  example:
 school_isOpenToTeachingCouples:
   type: boolean
   example: 1
@@ -803,25 +811,25 @@ school_additionalVisaRequirementsText:
   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
 school_additionalRecruitmentRequirementsText:
   type: string
-  example: 
+  example:
 school_monthForNoticeOfIntentionToLeave:
   type: integer
-  example: 
+  example:
 school_monthContractEnds:
   type: integer
-  example: 
+  example:
 school_additionalContractText:
   type: string
-  example: 
+  example:
 school_monthContractStarts:
   type: integer
-  example: 
+  example:
 school_locationLatLong:
   type: string
   example: -8.91461649145998, 13.1904718044952
 school_yearCampusLastRenovated:
   type: integer
-  example: 
+  example:
 school_locationText:
   type: string
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
@@ -848,16 +856,16 @@ school_hasFreePrivateHealthcareScheme:
   example: 1
 school_grossSalaryJuniorTeacher:
   type: number
-  example: 
+  example:
 school_grossSalaryJuniorTeacherInUsd:
   type: number
-  example: 
+  example:
 school_grossSalarySeniorTeacher:
   type: number
-  example: 
+  example:
 school_grossSalarySeniorTeacherInUsd:
   type: number
-  example: 
+  example:
 school_juniorTeacherTaxPercentage:
   type: integer
   example: 20
@@ -872,52 +880,52 @@ school_teacherPensionContributionPercentage:
   example: 3
 school_amountIndividualTeacherSavesYearly:
   type: number
-  example: 
+  example:
 school_amountIndividualTeacherSavesYearlyInUsd:
   type: number
-  example: 
+  example:
 school_numberOfDependentsPerTeacher:
   type: integer
-  example: 
+  example:
 school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
   type: boolean
   example: 1
 school_additionalTaxText:
   type: string
-  example: 
+  example:
 school_billsExpenditurePercentage:
   type: integer
-  example: 
+  example:
 school_foodAndDrinkExpenditurePercentage:
   type: integer
-  example: 
+  example:
 school_travelExpenditurePercentage:
   type: integer
-  example: 
+  example:
 school_otherExpenditurePercentage:
   type: integer
-  example: 
+  example:
 school_accommodationExpenditurePercentage:
   type: integer
-  example: 
+  example:
 school_hasTeacherInductionProgramme:
   type: boolean
-  example: 
+  example: true
 school_hasTeacherPersonalLeaveDays:
   type: boolean
-  example: 
+  example: true
 school_hasTeacherBereavementLeave:
   type: boolean
-  example: 
+  example: true
 school_additionalAccommodationText:
   type: string
-  example: 
+  example:
 school_ambassadorMemberNumber:
   type: integer
-  example: 
+  example:
 school_ambassadorTestimonial:
   type: string
-  example: 
+  example:
 school_leadRecruitmentContactName:
   type: string
   example: Mrs Sharon Morgan
@@ -926,16 +934,16 @@ school_leadRecruitmentContactEmail:
   example: smorgan@escolaangola.org
 school_isInterestedInRecruitmentServices:
   type: boolean
-  example: 1
+  example: false
 school_isSubscribedToCandidateSuggestionEmails:
   type: boolean
-  example: 1
+  example: false
 school_numberOfBasicActiveJobCredits:
   type: integer
   example: 10
 school_hasThSaferRecruitmentBadgeOnOwnWebsite:
   type: boolean
-  example: 
+  example: false
 school_smallProfileImageUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
@@ -975,11 +983,11 @@ school_pensionSchemeTypeId:
   description: Relationship to PensionSchemeType
 school_relocationAllowanceTypeId:
   type: integer
-  example: 
+  example:
   description: Relationship to SchoolRelocationAllowanceType
 school_flightAllowanceTypeId:
   type: integer
-  example: 
+  example:
   description: Relationship to SchoolFlightAllowanceType
 school_managedByUserId:
   type: integer
@@ -1006,7 +1014,7 @@ school_city:
     id:
       type: string
       example: "1"
-      description: 
+      description: Relationship to regional-city
 school_phoneCodeCountry:
   type: object
   properties:
@@ -1020,7 +1028,7 @@ school_internationalWorkingCurrency:
     id:
       type: string
       example: "1"
-      description: 
+      description:
 school_fundingType:
   type: object
   properties:
@@ -1091,4 +1099,3 @@ school_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-

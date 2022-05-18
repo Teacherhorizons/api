@@ -1,240 +1,188 @@
 ApplicationResponse:
   type: object
   properties:
-    data:
-      type: array
-      items:
-        type: object
-        properties:
-          type:
-            $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
-          id:
-            $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
-          attributes:
-            allOf:
-              - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_all"
-          # attributes:
-          #   type: object
-          #   properties:
-          #     thMatchType:
-          #       type: object
-          #       properties:
-          #         id:
-          #           type: string
-          #           example: "2"
-          #     status:
-          #       type: object
-          #       properties:
-          #         id:
-          #           type: string
-          #           example: "1"
-          #     creationDate:
-          #       type: string
-          #       example: 2011-02-07T15:53:34:000Z
-          #     latestUpdateDate:
-          #       type: string
-          #       example: 2011-02-07T15:53:34:000Z
-          #     recommendationText:
-          #       type: string
-          #       example: Foo bar
-          relationships:
-            type: object
-            properties:
-              job:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        example: job
-                      id:
-                        type: string
-                        example: "22"
-              teacher:
-                type: object
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        example: teacher
-                      id:
-                        type: string
-                        example: "33"
-    included:
-      type: array
-      items:
-        anyOf:
-          - $ref: "#/ApplicationResponse_IncludedJob"
-          - $ref: "#/ApplicationResponse_IncludedTeacher"
-          - $ref: "#/ApplicationResponse_IncludedSchool"
-      description: All of job, teacher and school should be included
-      example:
-        # TODO AS: finish off
-        - type: job
-          id: "1"
-          attributes:
-            title: Humanities Teacher - Shenzhen campus (February 2022)
-            thOwnerUser:
-              id": "1"
-        - type: teacher
-          id: "1"
-          attributes:
-            memberNumber: 123456
-        - type: school
-          id: "1"
-          attributes:
-            name: Maple Leaf International School
-            city:
-              id": "1"
-            slug: asia-malaysia-kuala-lumpur-alice-smith-school
-            lraUser:
-              id": "1"
-            thRating: 7.5
-
-# {
-#       "type": "job",
-#       "id": "22",
-#       "attributes": {
-#         "title": "Humanities Teacher - Shenzhen campus (February 2022)",
-#         "thOwnerUser": { "id": "234" },
-#         "subject": { "id": "1" },
-#         "role": { "id": "1" },
-#            "startDate": "2011-02-07T00:00:00Z", // date only
-#            "status": { "id": 1 }
-#       },
-#       "relationships": {
-#         "school": {
-#           "data": { "type": "school", "id": "225" }
-#         }
-#       }
-#     },
-#     {
-#       "type": "teacher",
-#       "id": "33",
-#       "attributes": {
-#         "memberNumber": 1314160
-#       } // get remaining teacher data from separate call
-#     },
-#     {
-#       "type": "school",
-#       "id": "225",
-#       "attributes": {
-#         "name": "Maple Leaf International School",
-#         "city": { id: "2256" },
-#         "lraUser": { "id": "123" }
-#       }
-#     }
-
-ApplicationResponse_IncludedJob:
-  type: object
-  properties:
-    type:
+    schema:
       type: string
-      example: job
-    id:
-      type: string
-      example: "22"
-    attributes:
-      type: object
-      properties:
-        title:
-          type: string
-          example: Humanities Teacher - Shenzhen campus (February 2022)
-        thOwnerUser:
+      example: admin
+      enum:
+        - admin
+        - school
+        - teacher
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/ApplicationResponse_admin"
+      teacher: "#/ApplicationResponse_teacher"
+  required:
+    - schema
+
+# admin
+ApplicationResponse_admin:
+  allOf:
+    - $ref: "#/ApplicationResponse"
+    - properties:
+        data:
           type: object
           properties:
+            type:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
             id:
-              type: string
-              example: "234"
-        subject:
-          type: object
-          properties:
-            id:
-              type: string
-              example: "1"
-        role:
-          type: object
-          properties:
-            id:
-              type: string
-              example: "1"
-        startDate:
-          type: string
-          example: 2011-02-07T00:00:00Z
-          description: date only (e.g. 2011-02-07T00:00:00Z)
-        status:
-          type: object
-          properties:
-            id:
-              type: string
-              example: "1"
-    relationships:
-      type: object
-      properties:
-        school:
-          type: object
-          properties:
-            data:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+            attributes:
+              allOf:
+                - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
+                - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+                - $ref: "../../../components/models/library/application/application.yaml#/application_properties_thMatchType"
+            relationships:
               type: object
               properties:
-                type:
-                  type: string
-                  example: school
-                id:
-                  type: string
-                  example: "225"
+                job:
+                  $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+                teacher:
+                  $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+                # latestEvent:
+                #   $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+        included:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/ApplicationResponse_includedSchool_admin"
+              - $ref: "#/ApplicationResponse_includedJob_admin"
+              - $ref: "#/ApplicationResponse_includedTeacher_admin"
 
-ApplicationResponse_IncludedTeacher:
+ApplicationResponse_includedTeacher_admin:
   type: object
   properties:
     type:
-      type: string
-      example: teacher
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
     id:
-      type: string
-      example: 1
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
     attributes:
       type: object
       properties:
         memberNumber:
-          type: string
-          example: 1314160
-      description: memberNumber only; get remaining teacher data from separate call
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
 
-ApplicationResponse_IncludedSchool:
+ApplicationResponse_includedJob_admin:
   type: object
   properties:
     type:
-      type: string
-      example: school
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
     id:
-      type: string
-      example: 1
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+        startDate:
+          $ref: "../../../components/models/library/job/job.yaml#/job_startDate"
+        thOwnerUser:
+          $ref: "../../../components/models/library/job/job.yaml#/job_thOwnerUser"
+        status:
+          $ref: "../../../components/models/library/job/job.yaml#/job_status"
+        subject:
+          $ref: "../../../components/models/library/job/job.yaml#/job_subject"
+        role:
+          $ref: "../../../components/models/library/job/job.yaml#/job_role"
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+
+ApplicationResponse_includedSchool_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
     attributes:
       type: object
       properties:
         name:
-          type: string
-          example: Maple Leaf International School
-        city:
-          type: object
-          properties:
-            id:
-              type: string
-              example: "1"
-        lraUser:
-          type: object
-          properties:
-            id:
-              type: string
-              example: "1"
-        slug:
-          type: string
-          example: asia-malaysia-kuala-lumpur-alice-smith-school
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
         thRating:
-          type: number
-          example: 7.5
+          $ref: "../../../components/models/library/school/school.yaml#/school_thRating"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
+        city:
+          $ref: "../../../components/models/library/school/school.yaml#/school_city"
+        lraUser:
+          $ref: "../../../components/models/library/school/school.yaml#/school_lraUser"
+
+# teacher
+ApplicationResponse_teacher:
+  allOf:
+    - $ref: "#/ApplicationResponse"
+    - properties:
+        data:
+          type: object
+          properties:
+            type:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
+            id:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+            attributes:
+              allOf:
+                - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_teacher"
+                - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+            relationships:
+              type: object
+              properties:
+                job:
+                  $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+        included:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/ApplicationResponse_includedSchool_teacher"
+              - $ref: "#/ApplicationResponse_includedJob_teacher"
+
+ApplicationResponse_includedJob_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+        startDate:
+          $ref: "../../../components/models/library/job/job.yaml#/job_startDate"
+        thOwnerUser:
+          $ref: "../../../components/models/library/job/job.yaml#/job_thOwnerUser"
+        status:
+          $ref: "../../../components/models/library/job/job.yaml#/job_status"
+        subject:
+          $ref: "../../../components/models/library/job/job.yaml#/job_subject"
+        role:
+          $ref: "../../../components/models/library/job/job.yaml#/job_role"
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+
+ApplicationResponse_includedSchool_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      properties:
+        name:
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
+        city:
+          $ref: "../../../components/models/library/school/school.yaml#/school_city"
+        smallProfileImageUrl:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallProfileImageUrl"
