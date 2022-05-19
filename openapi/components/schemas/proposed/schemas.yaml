@@ -1,6 +1,6 @@
 # TODO RR: investigate whether the files in "./simple-models/..." (below) are still needed
 ListRefs:
-  allOf:
+  anyOf:
     - $ref: "./simple-models/lists/AcademicSystem.yaml#/AcademicSystem"
     - $ref: "./simple-models/lists/Accreditation.yaml#/Accreditation"
     - $ref: "./simple-models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
@@ -8,14 +8,14 @@ ListRefs:
     - $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
 
 RegionalRefs:
-  allOf:
+  anyOf:
     - $ref: "./simple-models/City.yaml#/City"
     - $ref: "./simple-models/Country.yaml#/Country"
     - $ref: "./simple-models/Country.yaml#/CountryAttributes"
     - $ref: "./simple-models/region.yaml#/Region"
 
 SchoolRefs:
-  allOf:
+  anyOf:
     - $ref: "./simple-models/School.yaml#/School"
 
 # NonThRefs:
@@ -23,7 +23,7 @@ SchoolRefs:
 #     - $ref: "../non-th-examples/pets/Pet.yaml#/Pet"
 
 SimpleModels:
-  allOf:
+  anyOf:
     # TODO: organise by category and alphabetically
     # regional
     - $ref: "../../models/simple/regional/region.yaml#/SimpleModel_regional-region"
@@ -87,8 +87,6 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/additionalPhotoCategory.yaml#/SimpleModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/simple/teacher/badge.yaml#/SimpleModel_teacher-badge"
     - $ref: "../../models/simple/teacher/qualificationType.yaml#/SimpleModel_teacher-qualificationType"
-
-    # TODO AS: circular reference issue(s) somewhere below
     - $ref: "../../models/simple/teacher/teacherNote.yaml#/SimpleModel_teacher-teacherNote"
     - $ref: "../../models/simple/teacher/teacherNoteType.yaml#/SimpleModel_teacher-teacherNoteType"
     - $ref: "../../models/simple/teacher/teacherReference.yaml#/SimpleModel_teacher-teacherReference"
@@ -116,6 +114,8 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/fileCategory.yaml#/SimpleModel_teacher-fileCategory"
     - $ref: "../../models/simple/teacher/teacherFile.yaml#/SimpleModel_teacher-teacherFile"
     - $ref: "../../models/simple/teacher/teacherSkill.yaml#/SimpleModel_teacher-teacherSkill"
+
+    # user
     - $ref: "../../models/simple/user/user.yaml#/SimpleModel_user"
     - $ref: "../../models/simple/user/favouriteJob.yaml#/SimpleModel_user-favouriteJob"
     - $ref: "../../models/simple/user/favouriteSchool.yaml#/SimpleModel_user-favouriteSchool"
@@ -124,16 +124,21 @@ SimpleModels:
     - $ref: "../../models/simple/user/message.yaml#/SimpleModel_user-message"
     - $ref: "../../models/simple/user/messageStatus.yaml#/SimpleModel_user-messageStatus"
     - $ref: "../../models/simple/user/thUser.yaml#/SimpleModel_user-thUser"
+
+    # job
     - $ref: "../../models/simple/job/job.yaml#/SimpleModel_job"
     - $ref: "../../models/simple/job/factJob.yaml#/SimpleModel_job-factJob"
     - $ref: "../../models/simple/job/status.yaml#/SimpleModel_job-status"
+
+    # meta
     - $ref: "../../models/simple/meta/entityType.yaml#/SimpleModel_meta-entityType"
     - $ref: "../../models/simple/meta/entityChange.yaml#/SimpleModel_meta-entityChange"
     - $ref: "../../models/simple/meta/entityChangeSummary.yaml#/SimpleModel_meta-entityChangeSummary"
     - $ref: "../../models/simple/meta/entityChangeSummarySubscription.yaml#/SimpleModel_meta-entityChangeSummarySubscription"
 
 JsonApiModels:
-  allOf:
+  anyOf:
+    # application
     - $ref: "../../models/json-api/application/application.yaml#/JsonApiModel_application"
     - $ref: "../../models/json-api/application/action.yaml#/JsonApiModel_application-action"
     - $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent"
@@ -141,8 +146,13 @@ JsonApiModels:
     - $ref: "../../models/json-api/application/status.yaml#/JsonApiModel_application-status"
     - $ref: "../../models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType"
     - $ref: "../../models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction"
+
+    # regional
     - $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city"
     - $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country"
+    - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
+
+    # general
     - $ref: "../../models/json-api/general/currency.yaml#/JsonApiModel_general-currency"
     - $ref: "../../models/json-api/general/educationLevel.yaml#/JsonApiModel_general-educationLevel"
     - $ref: "../../models/json-api/general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType"
@@ -155,7 +165,8 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate"
     - $ref: "../../models/json-api//general/nationality.yaml#/JsonApiModel_general-nationality"
     - $ref: "../../models/json-api//general/month.yaml#/JsonApiModel_general-month"
-    - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
+
+    # school
     - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
     - $ref: "../../models/json-api/school/academicSystem.yaml#/JsonApiModel_school-academicSystem"
     - $ref: "../../models/json-api/school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion"
@@ -183,6 +194,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/school/documentCategory.yaml#/JsonApiModel_school-documentCategory"
     - $ref: "../../models/json-api/school/schoolAgeLevel.yaml#/JsonApiModel_school-schoolAgeLevel"
     - $ref: "../../models/json-api/school/schoolAccreditationType.yaml#/JsonApiModel_school-schoolAccreditationType"
+
+    # teacher
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
     - $ref: "../../models/json-api/teacher/additionalPhotoCategory.yaml#/JsonApiModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/json-api/teacher/badge.yaml#/JsonApiModel_teacher-badge"
@@ -214,6 +227,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/fileCategory.yaml#/JsonApiModel_teacher-fileCategory"
     - $ref: "../../models/json-api/teacher/teacherFile.yaml#/JsonApiModel_teacher-teacherFile"
     - $ref: "../../models/json-api/teacher/teacherSkill.yaml#/JsonApiModel_teacher-teacherSkill"
+
+    # user
     - $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user"
     - $ref: "../../models/json-api/user/favouriteJob.yaml#/JsonApiModel_user-favouriteJob"
     - $ref: "../../models/json-api/user/favouriteSchool.yaml#/JsonApiModel_user-favouriteSchool"
@@ -222,9 +237,13 @@ JsonApiModels:
     - $ref: "../../models/json-api/user/message.yaml#/JsonApiModel_user-message"
     - $ref: "../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus"
     - $ref: "../../models/json-api/user/thUser.yaml#/JsonApiModel_user-thUser"
+
+    # job
     - $ref: "../../models/json-api/job/job.yaml#/JsonApiModel_job"
     - $ref: "../../models/json-api/job/factJob.yaml#/JsonApiModel_job-factJob"
     - $ref: "../../models/json-api/job/status.yaml#/JsonApiModel_job-status"
+
+    # meta
     - $ref: "../../models/json-api/meta/entityType.yaml#/JsonApiModel_meta-entityType"
     - $ref: "../../models/json-api/meta/entityChange.yaml#/JsonApiModel_meta-entityChange"
     - $ref: "../../models/json-api/meta/entityChangeSummary.yaml#/JsonApiModel_meta-entityChangeSummary"

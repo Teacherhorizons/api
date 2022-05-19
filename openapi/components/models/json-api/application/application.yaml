@@ -35,9 +35,10 @@ JsonApiModel_application_admin:
     - type: object
       properties:
         attributes:
+          type: object
           allOf:
             - $ref: "../../library/application/application.yaml#/application_attributes_admin"
-            - $ref: "../../library/application/application.yaml#/application_relationships_admin"
+            # - $ref: "../../library/application/application.yaml#/application_relationships_admin"
         relationships:
           $ref: "#/JsonApiModel_application_relationships_admin"
 
@@ -47,11 +48,51 @@ JsonApiModel_application_teacher:
     - type: object
       properties:
         attributes:
+          type: object
           allOf:
             - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
             - $ref: "../../library/application/application.yaml#/application_relationships_teacher"
+          # $ref: "#/JsonApiModel_application_attributes_teacher"
+          # type: object
+          # allOf:
+          # - properties:
+          #     creationDate:
+          #       $ref: "../../library/application/application.yaml#/application_creationDate"
+          #     latestUpdateDate:
+          #       $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+          # - $ref: "../../library/application/application.yaml#/application_properties_creationDate"
+          # - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
+        # - $ref: "../../library/application/application.yaml#/application_relationships_teacher"
         relationships:
           $ref: "#/JsonApiModel_application_relationships_teacher"
+
+JsonApiModel_application_attributes_teacher:
+  allOf:
+    # works
+    # - $ref: "#/application_properties_creationDate2"
+    # gives 'Recursive' error (even though essentially same as above - possibly because it's used elsewhere?)
+    # edit: works when application_properties_creationDate is removed from elsewhere
+    # edit: works when removed from only application_attributes_shared and application_attributes_teacher removed from C:\Dev\api\openapi\components\models\simple\application\application.yaml
+    # edit: works when only SimpleModel_application is removed
+    # - $ref: "../../library/application/application.yaml#/application_properties_creationDate"
+    # works (once above works)
+    - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
+    # works
+    # - $ref: "../../library/application/application.yaml#/application_properties_creationDate3"
+    # works
+    # - properties:
+    #     creationDate:
+    #       $ref: "../../library/application/application.yaml#/application_creationDate"
+
+application_properties_creationDate2:
+  properties:
+    creationDate:
+      $ref: "#/application_creationDate2"
+
+application_creationDate2:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:35Z
 
 # relationships
 JsonApiModel_application_relationships_all:

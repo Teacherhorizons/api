@@ -111,6 +111,10 @@ ApplicationResponse_includedSchool_admin:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
         lraUser:
           $ref: "../../../components/models/library/school/school.yaml#/school_lraUser"
+      required:
+        - name
+        - slug
+        - city
 
 # teacher
 ApplicationResponse_teacher:

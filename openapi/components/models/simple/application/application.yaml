@@ -8,8 +8,10 @@ SimpleModel_application:
     propertyName: schema
     mapping:
       all: "#/SimpleModel_application_all"
-      # admin: "#/SimpleModel_application_admin"
+      admin: "#/SimpleModel_application_admin"
       # teacher: "#/SimpleModel_application_teacher"
+  required:
+    - schema
 
 SimpleModel_application_all:
   allOf:
@@ -18,25 +20,25 @@ SimpleModel_application_all:
       allOf:
         - $ref: "#/SimpleModel_application_id"
         - $ref: "../../library/application/application.yaml#/application_attributes_all"
-        - $ref: "../../library/application/application.yaml#/application_relationshipIds_all"
+        # - $ref: "../../library/application/application.yaml#/application_relationshipIds_all"
 
-# SimpleModel_application_admin:
-#   allOf:
-#     - $ref: "#/SimpleModel_application"
-#     - type: object
-#       allOf:
-#         - $ref: "#/SimpleModel_application_id"
-#         - $ref: "../../library/application/application.yaml#/application_attributes_admin"
-#         - $ref: "../../library/application/application.yaml#/application_relationshipIds_admin"
+SimpleModel_application_admin:
+  allOf:
+    - $ref: "#/SimpleModel_application"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_application_id"
+        - $ref: "../../library/application/application.yaml#/application_attributes_admin"
+        - $ref: "../../library/application/application.yaml#/application_relationshipIds_admin"
 
-# SimpleModel_application_teacher:
-#   allOf:
-#     - $ref: "#/SimpleModel_application"
-#     - type: object
-#       allOf:
-#         - $ref: "#/SimpleModel_application_id"
-#         - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
-#         - $ref: "../../library/application/application.yaml#/application_relationshipIds_teacher"
+SimpleModel_application_teacher:
+  allOf:
+    - $ref: "#/SimpleModel_application"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_application_id"
+        # - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
+        - $ref: "../../library/application/application.yaml#/application_relationshipIds_teacher"
 
 # shared
 SimpleModel_application_id:

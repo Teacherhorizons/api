@@ -55,7 +55,7 @@ application_relationshipIds_shared:
 
 # relationships
 application_relationships_all:
-  allOf:
+  anyOf:
     - $ref: "#/application_relationships_admin"
 
 application_relationships_admin:
@@ -86,6 +86,13 @@ application_properties_creationDate:
   properties:
     creationDate:
       $ref: "#/application_creationDate"
+
+application_properties_creationDate3:
+  properties:
+    creationDate:
+      type: string
+      format: date-time
+      example: 2011-02-07T15:53:35Z
 
 application_properties_latestUpdateDate:
   properties:
