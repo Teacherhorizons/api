@@ -1,11 +1,17 @@
 SimpleModel_application-eventType:
+  type: object
   allOf:
-    # - $ref: "#/SimpleModel_application-eventType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-eventType_id"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_attributes"
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipIds"
+    - $ref: "#/SimpleModel_application-eventType_id"
+
+    # works
+    - properties:
+        name:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+
+    # doesn't work
+    # - $ref: "../../library/application/eventType.yaml#/application-eventType_properties_name"
+
+    - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipIds"
 
 # shared
 SimpleModel_application-eventType_id:

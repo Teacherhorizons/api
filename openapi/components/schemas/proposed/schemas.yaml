@@ -1,22 +1,22 @@
 # TODO RR: investigate whether the files in "./simple-models/..." (below) are still needed
-ListRefs:
-  anyOf:
-    - $ref: "./simple-models/lists/AcademicSystem.yaml#/AcademicSystem"
-    - $ref: "./simple-models/lists/Accreditation.yaml#/Accreditation"
-    - $ref: "./simple-models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
-    - $ref: "./simple-models/lists/ThDiscoveryMethodCategory.yaml#/ThDiscoveryMethodCategory"
-    - $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
+# ListRefs:
+#   anyOf:
+#     - $ref: "./simple-models/lists/AcademicSystem.yaml#/AcademicSystem"
+#     - $ref: "./simple-models/lists/Accreditation.yaml#/Accreditation"
+#     - $ref: "./simple-models/lists/ThDiscoveryMethod.yaml#/ThDiscoveryMethod"
+#     - $ref: "./simple-models/lists/ThDiscoveryMethodCategory.yaml#/ThDiscoveryMethodCategory"
+#     - $ref: "../../../components/responses/proposed/currency.yaml#/general-currencyResponse"
 
-RegionalRefs:
-  anyOf:
-    - $ref: "./simple-models/City.yaml#/City"
-    - $ref: "./simple-models/Country.yaml#/Country"
-    - $ref: "./simple-models/Country.yaml#/CountryAttributes"
-    - $ref: "./simple-models/region.yaml#/Region"
+# RegionalRefs:
+#   anyOf:
+#     - $ref: "./simple-models/City.yaml#/City"
+#     - $ref: "./simple-models/Country.yaml#/Country"
+#     - $ref: "./simple-models/Country.yaml#/CountryAttributes"
+#     - $ref: "./simple-models/region.yaml#/Region"
 
-SchoolRefs:
-  anyOf:
-    - $ref: "./simple-models/School.yaml#/School"
+# SchoolRefs:
+#   anyOf:
+#     - $ref: "./simple-models/School.yaml#/School"
 
 # NonThRefs:
 #   allOf:

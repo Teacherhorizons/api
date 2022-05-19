@@ -583,15 +583,15 @@ tags:
   #   # JSON:API models
 
   # tags - JSON:API models - application
-  - name: json-api-model-application-action
-    x-displayName: JSON:API model - application-action
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
-
   - name: json-api-model-application
     x-displayName: JSON:API model - application
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
+
+  - name: json-api-model-application-action
+    x-displayName: JSON:API model - application-action
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
 
   - name: json-api-model-application-applicationEvent
     x-displayName: JSON:API model - application-applicationEvent

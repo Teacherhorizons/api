@@ -1,5 +1,8 @@
 # Introduction
 
+## Issues
+- 19 May 2022: We're severly affected by a bug with redocly - a false positive recursion: https://github.com/Redocly/redoc/issues/1154#issuecomment-913846111. Referencing the same definition twice can cause things to break, which significantly affects breaking things down in a sensible way.
+
 ## Plan
 
 - Document current API here

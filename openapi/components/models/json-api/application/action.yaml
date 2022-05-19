@@ -6,16 +6,78 @@ JsonApiModel_application-action:
     id:
       $ref: "#/JsonApiModel_application-action_id"
     attributes:
+      type: object
+      # works
+      # properties:
+      #   detail:
+      #     type: string
+      #     example: already interviewed
+      #   politeEmailMessage:
+      #     type: string
+      #     example: foo bar
+
+      # works
+      # properties:
+      #   detail:
+      #     $ref: "../../library/application/action.yaml#/application-action_detail"
+      #   politeEmailMessage:
+      #     $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
+
+      # works
+      # allOf:
+      #   - properties:
+      #       detail:
+      #         type: string
+      #         example: already interviewed
+      #       politeEmailMessage:
+      #         type: string
+      #         example: foo bar
+
+      # works
+      # allOf:
+      #   - properties:
+      #       detail:
+      #         $ref: "../../library/application/action.yaml#/application-action_detail"
+      #       politeEmailMessage:
+      #         $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
+
+      # works
+      # allOf:
+      #   - $ref: "#/foo"
+
+      # works
+      # allOf:
+      #   - $ref: "#/foo"
+      #   - $ref: "#/bar"
+
+      # dosen't work ('Recursive')
       allOf:
-        - $ref: "../../library/application/action.yaml#/application-action_attributes"
+        - $ref: "../../library/application/action.yaml#/application-action_properties_detail"
+        - $ref: "#/bar"
+
+      # - $ref: "../../library/application/action.yaml#/application-action_properties_detail"
+
+      # - $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
+      # allOf:
+      #   - $ref: "../../library/application/action.yaml#/application-action_attributes"
     relationships:
       $ref: "#/JsonApiModel_application-action_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/application/action.yaml#/application-action_relationships"
+      # attributes:
+      #   allOf:
+      #     $ref: "../../library/application/action.yaml#/application-action_relationships"
   required:
     - type
     - id
+
+foo:
+  properties:
+    detail:
+      $ref: "../../library/application/action.yaml#/application-action_detail"
+
+bar:
+  properties:
+    politeEmailMessage:
+      $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
 
 JsonApiModel_application-action_relationships:
   type: object

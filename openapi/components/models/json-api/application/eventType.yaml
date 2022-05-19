@@ -7,7 +7,7 @@ JsonApiModel_application-eventType:
       $ref: "#/JsonApiModel_application-eventType_id"
     attributes:
       allOf:
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_attributes"
+        - $ref: "../../library/application/eventType.yaml#/application-eventType_properties_name"
     relationships:
       $ref: "#/JsonApiModel_application-eventType_relationships"
       attributes:
@@ -22,9 +22,7 @@ JsonApiModel_application-eventType_relationships:
   description: Related Attributes
   properties:
     applicationStatus:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    manualEmailTemplate:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
 
 JsonApiModel_application-eventType_type:
   type: string

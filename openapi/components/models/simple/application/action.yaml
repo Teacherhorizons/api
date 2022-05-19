@@ -1,11 +1,13 @@
 SimpleModel_application-action:
+  type: object
   allOf:
-    # - $ref: "#/SimpleModel_application-action"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-action_id"
-        - $ref: "../../library/application/action.yaml#/application-action_attributes"
-        - $ref: "../../library/application/action.yaml#/application-action_relationshipIds"
+    - $ref: "#/SimpleModel_application-action_id"
+    # - $ref: "../../library/application/action.yaml#/application-action_attributes"
+    # - $ref: "../../library/application/action.yaml#/application-action_relationshipIds"
+    - $ref: "../../library/application/action.yaml#/application-action_properties_endStateId"
+    - $ref: "../../library/application/action.yaml#/application-action_properties_emailId"
+    - $ref: "../../library/application/action.yaml#/application-action_properties_detail"
+    - $ref: "../../library/application/action.yaml#/application-action_properties_politeEmailMessage"
 
 # shared
 SimpleModel_application-action_id:

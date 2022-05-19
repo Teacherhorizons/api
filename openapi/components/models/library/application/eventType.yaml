@@ -1,14 +1,12 @@
-
-# attributes
-application-eventType_attributes:
-  allOf:
-    - $ref: "#/application-eventType_properties_name"
+# # attributes
+# application-eventType_attributes:
+#   allOf:
+#     - $ref: "#/application-eventType_properties_name"
 
 # relationshipIds
 application-eventType_relationshipIds:
   allOf:
     - $ref: "#/application-eventType_properties_applicationStatusId"
-    - $ref: "#/application-eventType_properties_manualEmailTemplateId"
 
 # attribute relationships
 
@@ -16,48 +14,46 @@ application-eventType_relationshipIds:
 application-eventType_relationships:
   allOf:
     - $ref: "#/application-eventType_properties_applicationStatus"
-    - $ref: "#/application-eventType_properties_manualEmailTemplate"
 
 #properties
 application-eventType_properties_id:
   properties:
     id:
       $ref: "#/application-eventType_id"
+
 application-eventType_properties_name:
   properties:
     name:
       $ref: "#/application-eventType_name"
+
 application-eventType_properties_applicationStatusId:
   properties:
     applicationStatusId:
       $ref: "#/application-eventType_applicationStatusId"
-application-eventType_properties_manualEmailTemplateId:
-  properties:
-    manualEmailTemplateId:
-      $ref: "#/application-eventType_manualEmailTemplateId"
+
 application-eventType_properties_applicationStatus:
   properties:
     applicationStatus:
       $ref: "#/application-eventType_applicationStatus"
-application-eventType_properties_manualEmailTemplate:
-  properties:
-    manualEmailTemplate:
-      $ref: "#/application-eventType_manualEmailTemplate"
 
 #attributes
 application-eventType_id:
   type: integer
   example: 1
+
 application-eventType_name:
   type: string
   example: Info request from Candidate
+
 application-eventType_applicationStatusId:
   type: integer
   example: 1
   description: Relationship to application_status
+
 application-eventType_manualEmailTemplateId:
   type: integer
-  example: 
+  example:
+
 application-eventType_applicationStatus:
   type: object
   properties:
@@ -65,10 +61,3 @@ application-eventType_applicationStatus:
       type: string
       example: "1"
       description: Relationship to application_status
-application-eventType_manualEmailTemplate:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: 

@@ -55,7 +55,7 @@ application_relationshipIds_shared:
 
 # relationships
 application_relationships_all:
-  anyOf:
+  allOf:
     - $ref: "#/application_relationships_admin"
 
 application_relationships_admin:
@@ -194,7 +194,7 @@ application_id:
 application_recommendationText:
   type: string
   example: Lorem ipsum
-  description: Max 10,000 characters
+  maxLength: 10000
 
 application_creationDate:
   type: string
@@ -216,7 +216,7 @@ application_thSystemMatchScore:
   format: double
   example: 0.75
 
-#
+# relationship attributes
 application_jobId:
   type: integer
   example: 1
