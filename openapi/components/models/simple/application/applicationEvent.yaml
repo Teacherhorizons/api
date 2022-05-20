@@ -4,8 +4,8 @@ SimpleModel_application-applicationEvent:
     - type: object
       allOf:
         - $ref: "#/SimpleModel_application-applicationEvent_id"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipIds"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes_all"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_relationshipIds_all"
 
 # shared
 SimpleModel_application-applicationEvent_id:

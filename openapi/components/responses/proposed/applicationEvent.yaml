@@ -1,40 +1,127 @@
-application-applicationEvent_getResponse200:
+Application-applicationEventResponse:
   type: object
   properties:
-    data:
-      type: array
-      items:
-        type: object
-        properties:
-          type:
-            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
-          id:
-            $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
-          attributes:
-            type: object
-            allOf:
-              - $ref: "../../models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
-              - $ref: "../../models/library/application/applicationEvent.yaml#/application-applicationEvent_attributeRelationships"
-          # relationships:
-          #   # TODO: consider improving
-          #   type: object
-          #   properties:
-          #     creationUser:
-          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-          #     latestUpdateUser:
-          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-    included:
-      type: array
-      items:
-        type: object
-        properties:
-          type:
-            $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_type"
-          id:
-            $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_id"
-          # attributes:
-          #   type: object
-          #   properties:
-          #     fullName:
-          #       $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user_fullName"
-# consider having a 'rule' that says every property should be a reference to the models (rule A, say)
+    schema:
+      type: string
+      example: admin
+      enum:
+        - admin
+        - teacher
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/Application-applicationEventResponse_admin"
+      teacher: "#/Application-applicationEventResponse_teacher"
+  required:
+    - schema
+
+# admin
+Application-applicationEventResponse_admin:
+  allOf:
+    - $ref: "#/Application-applicationEventResponse"
+    - properties:
+        data:
+          type: object
+          properties:
+            type:
+              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+            id:
+              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+            attributes:
+              allOf:
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_admin"
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_date"
+            relationships:
+              type: object
+              properties:
+                application:
+                  $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationships_all"
+                creationUser:
+                  $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationships"
+                latestUpdateUser:
+                  $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationships"
+
+application-applicationEventResponse_includedUser_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
+    id:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
+    attributes:
+      type: object
+      properties:
+        firstName:
+          $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
+        lastName:
+          $ref: "../../../components/models/library/user/user.yaml#/user_lastName"
+
+application-applicationEventResponse_includedApplication_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
+    id:
+      $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+    attributes:
+      type: object
+      properties:
+        status:
+          $ref: "../../../components/models/library/application/application.yaml#/application_status"
+    relationships:
+      type: object
+      properties:
+        job:
+          $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+
+application-applicationEventResponse_includedJob_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+
+application-applicationEventResponse_includedSchool_admin:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      properties:
+        name:
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
+      required:
+        - name
+        - slug
+        - city
+
+# teacher
+application-applicationEventResponse_teacher:
+  allOf:
+    - $ref: "#/application-applicationEventResponse_teacher"
+    - properties:
+        data:
+          type: object
+          properties:
+            type:
+              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+            id:
+              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+            attributes:
+              allOf:
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_shared"
+
