@@ -1,16 +1,37 @@
-application-applicationEvent_filter_additionalProperties:
+application-applicationEvent_attributes_all:
   allOf:
-    - $ref: "#/application-applicationEvent_properties_date"
+    - $ref: "#/application-applicationEvent_attributes_admin"
+
 # attributes
-application-applicationEvent_attributes:
+application-applicationEvent_attributes_admin:
   allOf:
-    - $ref: "#/application-applicationEvent_properties_date"
+    - $ref: "#/application-applicationEvent_attributes_shared"
     - $ref: "#/application-applicationEvent_properties_notes"
     - $ref: "#/application-applicationEvent_properties_creationDate"
     - $ref: "#/application-applicationEvent_properties_latestUpdateDate"
 
+application-applicationEvent_attributes_teacher:
+  allOf:
+    - $ref: "#/application-applicationEvent_attributes_shared"
+
+ # attributes
+application-applicationEvent_attributes_shared:   
+  allOf:
+    - $ref: "#/application-applicationEvent_properties_date"
+
+
+
 # relationshipIds
-application-applicationEvent_relationshipIds:
+
+application-applicationEvent_relationshipIds_all:
+  anyOf:
+    - $ref: "#/application-applicationEvent_relationshipIds_admin"
+
+application-applicationEvent_relationshipIds_admin:
+  allOf:
+    - $ref: "#/application-applicationEvent_relationshipIds_shared"
+
+application-applicationEvent_relationshipIds_shared:
   allOf:
     - $ref: "#/application-applicationEvent_properties_applicationId"
     - $ref: "#/application-applicationEvent_properties_typeId"
@@ -19,7 +40,16 @@ application-applicationEvent_relationshipIds:
     - $ref: "#/application-applicationEvent_properties_latestUpdateUserId"
 
 # attribute relationships
-application-applicationEvent_attributeRelationships:
+
+application-applicationEvent_relationships_all:
+  anyOf:
+    - $ref: "#/application-applicationEvent_relationships_admin"
+
+application-applicationEvent_relationships_admin:
+  allOf:
+    - $ref: "#/application-applicationEvent_relationships_shared"
+
+application-applicationEvent_relationships_shared:
   allOf:
     - $ref: "#/application-applicationEvent_properties_application"
     - $ref: "#/application-applicationEvent_properties_type"

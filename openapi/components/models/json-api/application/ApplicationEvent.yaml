@@ -7,7 +7,7 @@ JsonApiModel_application-applicationEvent:
       $ref: "#/JsonApiModel_application-applicationEvent_id"
     attributes:
       allOf:
-        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes"
+        - $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_attributes_admin"
     relationships:
       $ref: "#/JsonApiModel_application-applicationEvent_relationships"
       attributes:
