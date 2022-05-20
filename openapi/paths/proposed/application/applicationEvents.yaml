@@ -12,8 +12,8 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_filter_additionalProperties"
+        # additionalProperties:
+          # $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_filter_additionalProperties"
         example:
           application.id: 1
           application.teacher.memberNumber: 1
@@ -25,7 +25,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/applicationEvent.yaml#/application-applicationEvent_getResponse200"
+            $ref: "../../../components/responses/proposed/applicationEvent.yaml#/Application-applicationEventResponse"
     "400":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
@@ -59,7 +59,7 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_attributeRelationships"
+                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_attributeRelationships"
                     - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_date"
                     - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_notes"
                     - required:
