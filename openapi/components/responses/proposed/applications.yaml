@@ -54,8 +54,8 @@ ApplicationsResponse_admin:
                     $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
                   teacher:
                     $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-                  latestEvent:
-                    $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+                  # latestEvent:
+                  #   $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         included:
           type: array
           items:
@@ -165,8 +165,8 @@ ApplicationsResponse_teacher:
                 properties:
                   job:
                     $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
-                  latestEvent:
-                    $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+                  # latestEvent:
+                  #   $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         included:
           type: array
           items:

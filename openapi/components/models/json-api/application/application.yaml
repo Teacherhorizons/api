@@ -66,6 +66,17 @@ JsonApiModel_application_id:
   readOnly: true
   description: Unique identifier of the application (string)
 
+JsonApiModel_application_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application_type"
+        id:
+          $ref: "#/JsonApiModel_application_id"
+
 # attributes
 JsonApiModel_application_attributes_all:
   allOf:
@@ -140,5 +151,5 @@ JsonApiModel_application_relationships_shared:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     status:
       $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
-    latestEvent:
-      $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+    # latestEvent:
+    #   $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"

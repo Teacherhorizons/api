@@ -35,13 +35,13 @@ Application-applicationEventResponse_admin:
               type: object
               properties:
                 application:
-                  $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationships_all"
+                  $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
                 creationUser:
-                  $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationships"
+                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
                 latestUpdateUser:
-                  $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationships"
+                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
 
-application-applicationEventResponse_includedUser_admin:
+Application-applicationEventResponse_includedUser_admin:
   type: object
   properties:
     type:
@@ -56,7 +56,7 @@ application-applicationEventResponse_includedUser_admin:
         lastName:
           $ref: "../../../components/models/library/user/user.yaml#/user_lastName"
 
-application-applicationEventResponse_includedApplication_admin:
+Application-applicationEventResponse_includedApplication_admin:
   type: object
   properties:
     type:
@@ -74,7 +74,7 @@ application-applicationEventResponse_includedApplication_admin:
         job:
           $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
 
-application-applicationEventResponse_includedJob_admin:
+Application-applicationEventResponse_includedJob_admin:
   type: object
   properties:
     type:
@@ -92,7 +92,7 @@ application-applicationEventResponse_includedJob_admin:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
 
-application-applicationEventResponse_includedSchool_admin:
+Application-applicationEventResponse_includedSchool_admin:
   type: object
   properties:
     type:
@@ -110,9 +110,9 @@ application-applicationEventResponse_includedSchool_admin:
         - city
 
 # teacher
-application-applicationEventResponse_teacher:
+Application-applicationEventResponse_teacher:
   allOf:
-    - $ref: "#/application-applicationEventResponse_teacher"
+    - $ref: "#/Application-applicationEventResponse_teacher"
     - properties:
         data:
           type: object
@@ -124,4 +124,3 @@ application-applicationEventResponse_teacher:
             attributes:
               allOf:
                 - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_shared"
-
