@@ -42,6 +42,12 @@ JsonApiModel_user_id:
   readOnly: true
   description: Unique identifier of the user (string)
 
+JsonApiModel_user_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_user_id"
+
 JsonApiModel_user_relationship:
   type: object
   properties:

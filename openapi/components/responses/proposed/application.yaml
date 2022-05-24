@@ -29,10 +29,15 @@ ApplicationResponse_admin:
             id:
               $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
             attributes:
-              allOf:
-                - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
-                - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
-                - $ref: "../../../components/models/library/application/application.yaml#/application_properties_thMatchType"
+              type: object
+              properties:
+                # relationship attributes
+                thMatchType:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_thMatchTypeId"
+              # allOf:
+              #   - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
+              #   - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+              #   - $ref: "../../../components/models/library/application/application.yaml#/application_properties_thMatchType"
             relationships:
               type: object
               properties:

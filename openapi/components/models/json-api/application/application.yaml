@@ -94,7 +94,7 @@ JsonApiModel_application_attributes_admin:
         hasDataIssues:
           $ref: "../../library/application/application.yaml#/application_hasDataIssues"
         # relationship attributes
-        thMatchTypeId:
+        thMatchType:
           $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
 
 JsonApiModel_application_attributes_teacher:
@@ -109,17 +109,17 @@ JsonApiModel_application_attributes_shared:
     latestUpdateDate:
       $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
     # relationship attributes
-    jobId:
+    job:
       $ref: "../../library/application/application.yaml#/application_jobId"
-    teacherId:
+    teacher:
       $ref: "../../library/application/application.yaml#/application_teacherId"
-    creationUserId:
-      $ref: "../../library/application/application.yaml#/application_creationUserId"
-    latestUpdateUserId:
-      $ref: "../../library/application/application.yaml#/application_latestUpdateUserId"
-    statusId:
-      $ref: "../../library/application/application.yaml#/application_statusId"
-    latestEventId:
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_attribute"
+    status:
+      $ref: "../application/status.yaml#/JsonApiModel_application-status_attribute"
+    latestEvent:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
 
 # relationships

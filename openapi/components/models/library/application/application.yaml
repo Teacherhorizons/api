@@ -181,10 +181,10 @@ application_properties_latestEvent:
     latestEvent:
       $ref: "#/application_latestEvent"
 
-application_properties_thMatchType:
-  properties:
-    thMatchType:
-      $ref: "#/application_thMatchType"
+# application_properties_thMatchType:
+#   properties:
+#     thMatchType:
+#       $ref: "./thMatchType.yaml#/JsonApiModel_application-thMatchType_attribute"
 
 #attributes
 application_id:
@@ -300,11 +300,10 @@ application_latestEvent:
       type: string
       example: "1"
       description: Relationship to application-applicationEvent
-
-application_thMatchType:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to application-thMatchType
+# application_thMatchType:
+#   type: object
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to application-thMatchType
