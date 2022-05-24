@@ -30,7 +30,7 @@ Application-applicationEventResponse_admin:
             attributes:
               allOf:
                 - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_application"
-                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_eventType"
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_type"
                 - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_admin"
                 - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_date"
             relationships:
@@ -125,5 +125,5 @@ Application-applicationEventResponse_teacher:
               $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
             attributes:
               allOf:
-                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_eventType"
+                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_type"
                 - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_shared"

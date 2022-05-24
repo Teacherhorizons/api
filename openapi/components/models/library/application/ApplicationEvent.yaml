@@ -14,12 +14,10 @@ application-applicationEvent_attributes_teacher:
   allOf:
     - $ref: "#/application-applicationEvent_attributes_shared"
 
- # attributes
-application-applicationEvent_attributes_shared:   
+  # attributes
+application-applicationEvent_attributes_shared:
   allOf:
     - $ref: "#/application-applicationEvent_properties_date"
-
-
 
 # relationshipIds
 
@@ -34,7 +32,7 @@ application-applicationEvent_relationshipIds_admin:
 application-applicationEvent_relationshipIds_shared:
   allOf:
     - $ref: "#/application-applicationEvent_properties_applicationId"
-    - $ref: "#/application-applicationEvent_properties_eventTypeId"
+    - $ref: "#/application-applicationEvent_properties_typeId"
     - $ref: "#/application-applicationEvent_properties_emailId"
     - $ref: "#/application-applicationEvent_properties_creationUserId"
     - $ref: "#/application-applicationEvent_properties_latestUpdateUserId"
@@ -87,10 +85,10 @@ application-applicationEvent_properties_applicationId:
     applicationId:
       $ref: "#/application-applicationEvent_applicationId"
 
-application-applicationEvent_properties_eventTypeId:
+application-applicationEvent_properties_typeId:
   properties:
     eventTypeId:
-      $ref: "#/application-applicationEvent_eventTypeId"
+      $ref: "#/application-applicationEvent_typeId"
 
 application-applicationEvent_properties_emailId:
   properties:
@@ -117,10 +115,10 @@ application-applicationEvent_properties_email:
     email:
       $ref: "#/application-applicationEvent_email"
 
-application-applicationEvent_properties_eventType:
+application-applicationEvent_properties_type:
   properties:
-    eventType:
-      $ref: "#/application-applicationEvent_eventType"
+    type:
+      $ref: "#/application-applicationEvent_type"
 
 application-applicationEvent_properties_creationUser:
   properties:
@@ -157,7 +155,7 @@ application-applicationEvent_applicationId:
   example: 1
   description: Relationship to application
 
-application-applicationEvent_eventTypeId:
+application-applicationEvent_typeId:
   type: integer
   example: 1
   description: Relationship to application_eventType
@@ -191,7 +189,7 @@ application-applicationEvent_email:
       type: string
       example: "1"
 
-application-applicationEvent_eventType:
+application-applicationEvent_type:
   type: object
   properties:
     id:
