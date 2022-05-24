@@ -6,8 +6,15 @@ JsonApiModel_application-eventTypeAction:
     id:
       $ref: "#/JsonApiModel_application-eventTypeAction_id"
     attributes:
-      allOf:
-        - $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_attributes"
+      type: object
+      properties:
+        label:
+          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+        applicationEventType:
+          $ref: "./eventType.yaml#/JsonApiModel_application-eventType_attribute_relationship"
+        # actionTypeId": 1,
+        # manualEmailTemplateId": 1,
+        # autoEmailId": 1
     relationships:
       $ref: "#/JsonApiModel_application-eventTypeAction_relationships"
       attributes:
@@ -22,7 +29,7 @@ JsonApiModel_application-eventTypeAction_relationships:
   description: Related Attributes
   properties:
     applicationEventType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship"
     actionType:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     manualEmailTemplate:

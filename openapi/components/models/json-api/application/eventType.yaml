@@ -24,6 +24,7 @@ JsonApiModel_application-eventType_relationships:
     applicationStatus:
       $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
 
+#
 JsonApiModel_application-eventType_type:
   type: string
   example: application-eventType
@@ -35,3 +36,20 @@ JsonApiModel_application-eventType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the application-eventType (string)
+
+JsonApiModel_application-eventType_attribute_relationship:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_application-eventType_id"
+
+JsonApiModel_application-eventType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-eventType_type"
+        id:
+          $ref: "#/JsonApiModel_application-eventType_id"
