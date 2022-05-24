@@ -6,23 +6,25 @@ JsonApiModel_application-eventTypeAction:
     id:
       $ref: "#/JsonApiModel_application-eventTypeAction_id"
     attributes:
-      type: object
-      properties:
-        label:
-          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-        applicationEventType:
-          $ref: "./eventType.yaml#/JsonApiModel_application-eventType_attribute_relationship"
-        # actionTypeId": 1,
-        # manualEmailTemplateId": 1,
-        # autoEmailId": 1
+      $ref: "#/JsonApiModel_application-eventTypeAction_attributes"
     relationships:
       $ref: "#/JsonApiModel_application-eventTypeAction_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_relationships"
   required:
     - type
     - id
+
+JsonApiModel_application-eventTypeAction_attributes:
+  type: object
+  properties:
+    # simple attributes
+    label:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+    # relationship attributes
+    applicationEventType:
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_attribute_relationship"
+    # actionTypeId": 1,
+    # manualEmailTemplateId": 1,
+    # autoEmailId": 1
 
 JsonApiModel_application-eventTypeAction_relationships:
   type: object
@@ -37,6 +39,7 @@ JsonApiModel_application-eventTypeAction_relationships:
     autoEmail:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
+#
 JsonApiModel_application-eventTypeAction_type:
   type: string
   example: application-eventTypeAction

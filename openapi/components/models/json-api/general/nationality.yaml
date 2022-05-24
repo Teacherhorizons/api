@@ -6,26 +6,39 @@ JsonApiModel_general-nationality:
     id:
       $ref: "#/JsonApiModel_general-nationality_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/nationality.yaml#/general-nationality_attributes"
+      $ref: "#/JsonApiModel_general-nationality_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-nationality_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/general/nationality.yaml#/general-nationality_relationships"
   required:
     - type
     - id
+
+JsonApiModel_general-nationality_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_name"
+    # parent:
+    # flag:
+    # creationDate:
+    # latestUpdateDate:
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_general-nationality_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
+#
 JsonApiModel_general-nationality_type:
   type: string
   example: general-nationality

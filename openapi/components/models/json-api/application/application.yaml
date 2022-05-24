@@ -114,9 +114,9 @@ JsonApiModel_application_attributes_shared:
     teacher:
       $ref: "../../library/application/application.yaml#/application_teacherId"
     creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_attribute"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_attribute"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     status:
       $ref: "../application/status.yaml#/JsonApiModel_application-status_attribute"
     latestEvent:
