@@ -5,27 +5,41 @@ JsonApiModel_general-religion:
       $ref: "#/JsonApiModel_general-religion_type"
     id:
       $ref: "#/JsonApiModel_general-religion_id"
-      
     attributes:
-      allOf:
-        - $ref: "../../library/general/religion.yaml#/general-religion_attributes"
+      $ref: "#/JsonApiModel_general-religion_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-religion_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/general/religion.yaml#/general-religion_relationships"
   required:
     - type
     - id
+
+
+JsonApiModel_general-religion_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/religion.yaml#/general-religion_name"
+    creationDate:
+      $ref: "../../library/general/religion.yaml#/general-religion_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateDate" 
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_general-religion_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+
 
 JsonApiModel_general-religion_type:
   type: string

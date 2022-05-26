@@ -9,9 +9,6 @@ JsonApiModel_general-pensionSchemeType:
       $ref: "#/JsonApiModel_general-pensionSchemeType_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-pensionSchemeType_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_relationships"
   required:
     - type
     - id
@@ -22,11 +19,11 @@ JsonApiModel_general-pensionSchemeType_attributes:
   properties:
     # simple attributes
     name:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_name"
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_name"
     creationDate:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_creationDate"  
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_creationDate"  
     latestUpdateDate:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_latestUpdateDate" 
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_latestUpdateDate" 
 
     # relationship attributes
     creationUser:
