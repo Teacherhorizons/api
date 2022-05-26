@@ -28,7 +28,7 @@ JsonApiModel_application-eventTypeAction_attributes:
     manualEmailTemplate:
       $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_attribute_relationship"
     autoEmail:
-      $ref: "./eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_attribute_relationship"
+      $ref: "#/JsonApiModel_application-eventTypeAction_attribute_relationship"
 
 JsonApiModel_application-eventTypeAction_relationships:
   type: object
@@ -41,7 +41,7 @@ JsonApiModel_application-eventTypeAction_relationships:
     manualEmailTemplate:
       $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
     autoEmail:
-      $ref: "./eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_relationship"
+      $ref: "#/JsonApiModel_application-eventTypeAction_relationship"
 
 #
 JsonApiModel_application-eventTypeAction_type:

@@ -6,8 +6,7 @@ JsonApiModel_general-pensionSchemeType:
     id:
       $ref: "#/JsonApiModel_general-pensionSchemeType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_attributes"
+      $ref: "#/JsonApiModel_general-pensionSchemeType_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-pensionSchemeType_relationships"
       attributes:
@@ -17,14 +16,33 @@ JsonApiModel_general-pensionSchemeType:
     - type
     - id
 
+
+JsonApiModel_general-pensionSchemeType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_name"
+    creationDate:
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_properties_latestUpdateDate" 
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+
+
 JsonApiModel_general-pensionSchemeType_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_general-pensionSchemeType_type:
   type: string
