@@ -108,6 +108,17 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
 
   # tags - simple-models - general
+
+  - name: simple-model-general-applicationType
+    x-displayName: Simple model - general-applicationType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-applicationType" />
+
+  - name: simple-model-general-actionType
+    x-displayName: Simple model - general-actionType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-actionType" />
+
   - name: simple-model-general-educationLevel
     x-displayName: Simple model - general-educationLevel
     description: |
@@ -619,6 +630,12 @@ tags:
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
   # tags - JSON:API models - general
+
+  - name: json-api-model-general-actionType
+    x-displayName: JSON:API model - general-actionType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-actionType" />
+
   - name: json-api-model-general-currency
     x-displayName: JSON:API model - general-currency
     description: |
@@ -1081,6 +1098,7 @@ x-tagGroups:
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
+      - simple-model-general-actionType
       - simple-model-general-currency
       - simple-model-general-educationLevel
       - simple-model-general-pensionSchemeType
@@ -1180,6 +1198,7 @@ x-tagGroups:
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
+      - json-api-model-general-actionType
       - json-api-model-general-currency
       - json-api-model-general-educationLevel
       - json-api-model-general-pensionSchemeType

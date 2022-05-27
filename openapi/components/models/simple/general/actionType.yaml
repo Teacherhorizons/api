@@ -1,0 +1,28 @@
+SimpleModel_general-actionType:
+  allOf:
+    # - $ref: "#/SimpleModel_general-actionType"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-actionType_type"
+        - $ref: "#/SimpleModel_general-actionType_id"
+        - $ref: "../../library/general/actionType.yaml#/general-actionType_properties_name"
+
+# shared
+
+SimpleModel_general-actionType_type:
+  properties:
+    type:
+      type: string
+      example: general-actionType
+      description: general-actionType
+      readOnly: true
+
+SimpleModel_general-actionType_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object
+

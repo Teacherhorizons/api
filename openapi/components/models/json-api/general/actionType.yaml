@@ -1,0 +1,45 @@
+JsonApiModel_general-actionType:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-actionType_type"
+    id:
+      $ref: "#/JsonApiModel_general-actionType_id"
+    attributes:
+      allOf:
+        - $ref: "../../library/general/actionType.yaml#/general-actionType_properties_name"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_general-actionType_type:
+  type: string
+  example: general-actionType
+  description: general-actionType
+  readOnly: true
+
+JsonApiModel_general-actionType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-actionType (string)
+
+JsonApiModel_general-actionType_relationship_attribute:
+  type: object
+  properties:
+        id: 
+          $ref: "#/JsonApiModel_general-actionType_id"
+
+JsonApiModel_general-actionType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-actionType_type"
+        id:
+          $ref: "#/JsonApiModel_general-actionType_id"
+
+

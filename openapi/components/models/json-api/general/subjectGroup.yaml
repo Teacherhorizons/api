@@ -10,9 +10,6 @@ JsonApiModel_general-subjectGroup:
         - $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-subjectGroup_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_relationships"
   required:
     - type
     - id
@@ -37,3 +34,20 @@ JsonApiModel_general-subjectGroup_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-subjectGroup (string)
+
+JsonApiModel_general-subjectGroup_relationship_attribute:
+  type: object
+  properties:
+      id: 
+        $ref: "#/JsonApiModel_general-subjectGroup_id"
+
+JsonApiModel_general-subjectGroup_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-subjectGroup_type"
+        id:
+          $ref: "#/JsonApiModel_general-subjectGroup_id"
