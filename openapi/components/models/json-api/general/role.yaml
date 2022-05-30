@@ -6,27 +6,43 @@ JsonApiModel_general-role:
     id:
       $ref: "#/JsonApiModel_general-role_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/role.yaml#/general-role_attributes"
+      $ref: "#/JsonApiModel_general-role_attributes"
     relationships:
       $ref: "#/JsonApiModel_general-role_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/general/role.yaml#/general-role_relationships"
+
   required:
     - type
     - id
+
+JsonApiModel_general-role_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/role.yaml#/general-role_name"
+    creationDate:
+      $ref: "../../library/general/role.yaml#/general-role_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/role.yaml#/general-role_latestUpdateDate" 
+
+    # relationship attributes
+    roleType:
+      $ref: "../general/roleType.yaml#/JsonApiModel_general-roleType_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_general-role_relationships:
   type: object
   description: Related attributes
   properties:
     roleType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../general/roleType.yaml#/JsonApiModel_general-roleType_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_general-role_type:
   type: string
@@ -39,3 +55,5 @@ JsonApiModel_general-role_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-role (string)
+
+

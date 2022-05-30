@@ -6,16 +6,28 @@ JsonApiModel_meta-entityChange:
     id:
       $ref: "#/JsonApiModel_meta-entityChange_id"
     attributes:
-      allOf:
-        - $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_attributes"
+      $ref: "#/JsonApiModel_meta-entityChange_attributes"
     relationships:
       $ref: "#/JsonApiModel_meta-entityChange_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_relationships"
   required:
     - type
     - id
+
+JsonApiModel_meta-entityChange_attributes:
+  type: object
+  properties:
+    # simple attributes
+    date:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_date"  
+    isProcessed:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_isProcessed" 
+  # relationship attributes
+    entityType:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entityType" 
+    entity:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
+    user:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_user"
 
 JsonApiModel_meta-entityChange_relationships:
   type: object

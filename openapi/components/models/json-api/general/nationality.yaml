@@ -19,10 +19,15 @@ JsonApiModel_general-nationality_attributes:
     # simple attributes
     name:
       $ref: "../../library/general/nationality.yaml#/general-nationality_name"
-    # parent:
-    # flag:
-    # creationDate:
-    # latestUpdateDate:
+    parent:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_parent"
+    flag:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_flag"
+    creationDate:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_latestUpdateDate"
+
     # relationship attributes
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"

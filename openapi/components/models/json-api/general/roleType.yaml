@@ -24,3 +24,22 @@ JsonApiModel_general-roleType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-roleType (string)
+
+JsonApiModel_general-roleType_relationship_attribute:
+  type: object
+  properties:
+        id: 
+          $ref: "#/JsonApiModel_general-roleType_id"
+
+JsonApiModel_general-roleType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-roleType_type"
+        id:
+          $ref: "#/JsonApiModel_general-roleType_id"
+
+
