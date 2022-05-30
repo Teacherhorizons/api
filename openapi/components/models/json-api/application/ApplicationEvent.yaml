@@ -99,16 +99,16 @@ JsonApiModel_application-applicationEvent_id:
   readOnly: true
   description: Unique identifier of the application-applicationEvent (string)
 
-# JsonApiModel_application-applicationEvent_relationship:
-#   type: object
-#   properties:
-#     data:
-#       type: object
-#       properties:
-#         type:
-#           $ref: "#/JsonApiModel_application-applicationEvent_type"
-#         id:
-#           $ref: "#/JsonApiModel_application-applicationEvent_id"
+JsonApiModel_application-applicationEvent_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-applicationEvent_type"
+        id:
+          $ref: "#/JsonApiModel_application-applicationEvent_id"
 
 # attributes
 JsonApiModel_application-applicationEvent_attributes_all:

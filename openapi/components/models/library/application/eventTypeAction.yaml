@@ -1,4 +1,3 @@
-
 # attributes
 application-eventTypeAction_attributes:
   allOf:
@@ -78,15 +77,15 @@ application-eventTypeAction_applicationEventTypeId:
 application-eventTypeAction_actionTypeId:
   type: integer
   example: 1
-  description: Relationship to ...
+  description: Relationship to general-actionType
 application-eventTypeAction_manualEmailTemplateId:
   type: integer
   example: 1
-  description: Relationship to ...
+  description: Relationship to general-manualEmailTemplate
 application-eventTypeAction_autoEmailId:
   type: integer
   example: 1
-  description: Relationship to ...
+  description: Relationship to general-autoEmail
 application-eventTypeAction_applicationEventType:
   type: object
   properties:

@@ -31,13 +31,22 @@ ApplicationResponse_admin:
             attributes:
               type: object
               properties:
+                # simple attributes
+                creationDate:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_creationDate"
+                latestUpdateDate:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_latestUpdateDate"
+                recommendationText:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_recommendationText"
+                thSystemMatchScore:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_thSystemMatchScore"
+                hasDataIssues:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_hasDataIssues"
                 # relationship attributes
                 thMatchType:
-                  $ref: "../../../components/models/library/application/application.yaml#/application_thMatchTypeId"
-              # allOf:
-              #   - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
-              #   - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
-              #   - $ref: "../../../components/models/library/application/application.yaml#/application_properties_thMatchType"
+                  $ref: "../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_attribute"
+                status:
+                  $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_attribute"
             relationships:
               type: object
               properties:
@@ -45,8 +54,8 @@ ApplicationResponse_admin:
                   $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
                 teacher:
                   $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-                # latestEvent:
-                #   $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+                latestEvent:
+                  $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         included:
           type: array
           items:

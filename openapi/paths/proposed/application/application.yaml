@@ -21,18 +21,18 @@ get:
           - admin
           - school
           - teacher
-    - in: query
-      name: fields
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties:
-          $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
-          # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
-        example:
-          application: name,slug,locationLatLong
+    # - in: query
+    #   name: fields
+    #   style: deepObject
+    #   allowReserved: true
+    #   explode: true
+    #   schema:
+    #     type: object
+    #     additionalProperties:
+    #       $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
+    #       # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
+    #     example:
+    #       application: name,slug,locationLatLong
   responses:
     "200":
       description: OK (Request successful)
