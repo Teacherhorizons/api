@@ -37,3 +37,9 @@ JsonApiModel_teacher-qualificationType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the teacher-qualificationType (string)
+
+JsonApiModel_teacher-qualificationType_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-qualificationType_id"

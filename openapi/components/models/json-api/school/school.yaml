@@ -60,6 +60,12 @@ JsonApiModel_school_id:
   readOnly: true
   description: Unique identifier of the school (string)
 
+JsonApiModel_school_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school_id"
+
 JsonApiModel_school_relationship:
   type: object
   properties:

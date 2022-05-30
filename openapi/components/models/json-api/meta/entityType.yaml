@@ -24,3 +24,9 @@ JsonApiModel_meta-entityType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the meta-entityType (string)
+
+JsonApiModel_meta-entityType_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_meta-entityType_id"

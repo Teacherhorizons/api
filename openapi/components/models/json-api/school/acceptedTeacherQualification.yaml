@@ -6,16 +6,30 @@ JsonApiModel_school-acceptedTeacherQualification:
     id:
       $ref: "#/JsonApiModel_school-acceptedTeacherQualification_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_attributes"
+      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-acceptedTeacherQualification_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-acceptedTeacherQualification_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_properties_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_properties_latestUpdateDate"
+    # relationship attributes
+    school:
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+    teacherQualificationType:
+      $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-acceptedTeacherQualification_relationships:
   type: object

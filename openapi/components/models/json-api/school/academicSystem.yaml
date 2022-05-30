@@ -6,16 +6,29 @@ JsonApiModel_school-academicSystem:
     id:
       $ref: "#/JsonApiModel_school-academicSystem_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_attributes"
+      $ref: "#/JsonApiModel_school-academicSystem_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-academicSystem_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-academicSystem_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_name"
+    creationDate:
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-academicSystem_relationships:
   type: object
