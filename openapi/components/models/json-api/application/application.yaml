@@ -110,17 +110,17 @@ JsonApiModel_application_attributes_shared:
       $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
     # relationship attributes
     job:
-      $ref: "../../library/application/application.yaml#/application_jobId"
+      $ref: "../job/job.yaml#/JsonApiModel_job_relationship_attribute"
     teacher:
-      $ref: "../../library/application/application.yaml#/application_teacherId"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     latestUpdateUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     status:
-      $ref: "../application/status.yaml#/JsonApiModel_application-status_attribute"
+      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
     latestEvent:
-      $ref: "../../library/application/application.yaml#/application_latestEventId"
+      $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
 
 # relationships
 JsonApiModel_application_relationships_all:

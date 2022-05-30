@@ -8,11 +8,11 @@ JsonApiModel_general-actionType:
     attributes:
       allOf:
         - $ref: "../../library/general/actionType.yaml#/general-actionType_properties_name"
-
   required:
     - type
     - id
 
+#
 JsonApiModel_general-actionType_type:
   type: string
   example: general-actionType
@@ -28,8 +28,8 @@ JsonApiModel_general-actionType_id:
 JsonApiModel_general-actionType_relationship_attribute:
   type: object
   properties:
-        id: 
-          $ref: "#/JsonApiModel_general-actionType_id"
+    id:
+      $ref: "#/JsonApiModel_general-actionType_id"
 
 JsonApiModel_general-actionType_relationship:
   type: object
@@ -41,5 +41,3 @@ JsonApiModel_general-actionType_relationship:
           $ref: "#/JsonApiModel_general-actionType_type"
         id:
           $ref: "#/JsonApiModel_general-actionType_id"
-
-

@@ -24,7 +24,7 @@ JsonApiModel_general-manualEmailTemplate_id:
   readOnly: true
   description: Unique identifier of the general-manualEmailTemplate (string)
 
-JsonApiModel_general-manualEmailTemplate_attribute_relationship:
+JsonApiModel_general-manualEmailTemplate_relationship_attribute:
   type: object
   properties:
     id:
@@ -40,4 +40,3 @@ JsonApiModel_general-manualEmailTemplate_relationship:
           $ref: "#/JsonApiModel_general-manualEmailTemplate_type"
         id:
           $ref: "#/JsonApiModel_general-manualEmailTemplate_id"
-

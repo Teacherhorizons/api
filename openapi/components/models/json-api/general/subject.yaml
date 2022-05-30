@@ -21,7 +21,7 @@ JsonApiModel_general-subject_attributes:
     name:
       $ref: "../../library/general/subject.yaml#/general-subject_name"
     creationDate:
-      $ref: "../../library/general/subject.yaml#/general-subject_creationDate"  
+      $ref: "../../library/general/subject.yaml#/general-subject_creationDate"
     latestUpdateDate:
       $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
 
@@ -56,7 +56,7 @@ JsonApiModel_general-subject_id:
   readOnly: true
   description: Unique identifier of the general-subject (string)
 
-JsonApiModel_general-subject_attribute_relationship:
+JsonApiModel_general-subject_relationship_attribute:
   type: object
   properties:
     data:

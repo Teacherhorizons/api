@@ -19,16 +19,16 @@ JsonApiModel_application-eventTypeAction_attributes:
     # simple attributes
     label:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-      
+
     # relationship attributes
     applicationEventType:
-      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_attribute_relationship"
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
     actionType:
-      $ref: "./action.yaml#/JsonApiModel_application-actionType_attribute_relationship"
+      $ref: "../general/actionType.yaml#/JsonApiModel_general-actionType_relationship_attribute"
     manualEmailTemplate:
-      $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_attribute_relationship"
+      $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship_attribute"
     autoEmail:
-      $ref: "#/JsonApiModel_application-eventTypeAction_attribute_relationship"
+      $ref: "#/JsonApiModel_application-eventTypeAction_relationship_attribute"
 
 JsonApiModel_application-eventTypeAction_relationships:
   type: object
@@ -37,10 +37,12 @@ JsonApiModel_application-eventTypeAction_relationships:
     applicationEventType:
       $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship"
     actionType:
-      $ref: "./action.yaml#/JsonApiModel_application-actionType_relationship"
+      $ref: "../general/actionType.yaml#/JsonApiModel_general-actionType_relationship"
     manualEmailTemplate:
       $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
     autoEmail:
+      # TODO: currently wrong; switch once general-autoEmail has been added
+      # $ref: "../general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship"
       $ref: "#/JsonApiModel_application-eventTypeAction_relationship"
 
 #
@@ -56,7 +58,7 @@ JsonApiModel_application-eventTypeAction_id:
   readOnly: true
   description: Unique identifier of the application-eventTypeAction (string)
 
-JsonApiModel_application-eventTypeAction_attribute_relationship:
+JsonApiModel_application-eventTypeAction_relationship_attribute:
   type: object
   properties:
     id:
@@ -72,4 +74,3 @@ JsonApiModel_application-eventTypeAction_relationship:
           $ref: "#/JsonApiModel_application-eventTypeAction_type"
         id:
           $ref: "#/JsonApiModel_application-eventTypeAction_id"
-

@@ -28,7 +28,7 @@ JsonApiModel_general-job_attributes:
     excludeFromJobSearch:
       $ref: "../../library/job/job.yaml#/job_properties_excludeFromJobSearch"
     creationDate:
-      $ref: "../../library/job/job.yaml#/job_properties_creationDate"  
+      $ref: "../../library/job/job.yaml#/job_properties_creationDate"
     latestUpdateDate:
       $ref: "../../library/job/job.yaml#/job_properties_latestUpdateDate"
 
@@ -55,7 +55,7 @@ JsonApiModel_general-job_relationships:
   description: Related attributes
   properties:
     #subject:
-      #$ref: "../../../general/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+    #$ref: "../../../general/subject.yaml#/JsonApiModel_subject_relationship_attribute"
     type:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     role:
@@ -82,6 +82,12 @@ JsonApiModel_job_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the job (string)
+
+JsonApiModel_job_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_job_id"
 
 JsonApiModel_job_relationship:
   type: object

@@ -12,6 +12,7 @@ JsonApiModel_application-thMatchType:
     - type
     - id
 
+#
 JsonApiModel_application-thMatchType_type:
   type: string
   example: application-thMatchType
@@ -24,7 +25,7 @@ JsonApiModel_application-thMatchType_id:
   readOnly: true
   description: Unique identifier of the application-thMatchType (string)
 
-JsonApiModel_application-thMatchType_attribute:
+JsonApiModel_application-thMatchType_relationship_attribute:
   type: object
   properties:
     id:

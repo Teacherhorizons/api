@@ -88,6 +88,7 @@ JsonApiModel_application-action_relationships:
     email:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
+#
 JsonApiModel_application-action_type:
   type: string
   example: application-action
@@ -99,31 +100,29 @@ JsonApiModel_application-action_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the application-action (string)
+# JsonApiModel_application-actionType_type:
+#   type: string
+#   example: application-actionType
+#   description: application-actionType
+#   readOnly: true
 
-JsonApiModel_application-actionType_type:
-  type: string
-  example: application-actionType
-  description: application-actionType
-  readOnly: true
+# JsonApiModel_application-actionType_id:
+#   type: string
+#   example: "1"
 
-JsonApiModel_application-actionType_id:
-  type: string
-  example: "1"
+# JsonApiModel_application-actionType_relationship_attribute:
+#   type: object
+#   properties:
+#     id:
+#       $ref: "#/JsonApiModel_application-actionType_id"
 
-JsonApiModel_application-actionType_attribute_relationship:
-  type: object
-  properties:
-    id:
-      $ref: "#/JsonApiModel_application-actionType_id"
-
-
-JsonApiModel_application-actionType_relationship:
-  type: object
-  properties:
-    data:
-      type: object
-      properties:
-        type:
-          $ref: "#/JsonApiModel_application-actionType_type"
-        id:
-          $ref: "#/JsonApiModel_application-actionType_id"
+# JsonApiModel_application-actionType_relationship:
+#   type: object
+#   properties:
+#     data:
+#       type: object
+#       properties:
+#         type:
+#           $ref: "#/JsonApiModel_application-actionType_type"
+#         id:
+#           $ref: "#/JsonApiModel_application-actionType_id"
