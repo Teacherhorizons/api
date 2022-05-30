@@ -6,16 +6,31 @@ JsonApiModel_meta-entityChangeSummary:
     id:
       $ref: "#/JsonApiModel_meta-entityChangeSummary_id"
     attributes:
-      allOf:
-        - $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_attributes"
+      $ref: "#/JsonApiModel_meta-entityChangeSummary_attributes"
     relationships:
       $ref: "#/JsonApiModel_meta-entityChangeSummary_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_relationships"
   required:
     - type
     - id
+
+JsonApiModel_meta-entityChangeSummary_attributes:
+  type: object
+  properties:
+    # simple attributes
+    fromDate:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_fromDate"
+    toDate:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_toDate"  
+    notes:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_notes"
+    isProcessed:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_isProcessed" 
+
+  # relationship attributes
+    entityType:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_entityType" 
+    entity:
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_properties_entity"
 
 JsonApiModel_meta-entityChangeSummary_relationships:
   type: object

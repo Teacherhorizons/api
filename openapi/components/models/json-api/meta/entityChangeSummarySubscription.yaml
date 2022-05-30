@@ -6,16 +6,26 @@ JsonApiModel_meta-entityChangeSummarySubscription:
     id:
       $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_id"
     attributes:
-      allOf:
-        - $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_attributes"
+      $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_attributes"
     relationships:
       $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_relationships"
   required:
     - type
     - id
+
+JsonApiModel_meta-entityChangeSummarySubscription_attributes:
+  type: object
+  properties:
+    # simple attributes
+    notes:
+      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_notes"   
+  # relationship attributes
+    entityType:
+      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_entityType" 
+    entity:
+      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_entity"
+    user:
+      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_user"
 
 JsonApiModel_meta-entityChangeSummarySubscription_relationships:
   type: object

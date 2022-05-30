@@ -6,16 +6,49 @@ JsonApiModel_job-factJob:
     id:
       $ref: "#/JsonApiModel_job-factJob_id"
     attributes:
-      allOf:
-        - $ref: "../../library/job/factJob.yaml#/job-factJob_attributes"
+      $ref: "#/JsonApiModel_job-factJob_attributes"
     relationships:
       $ref: "#/JsonApiModel_job-factJob_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/job-factJob/job-factJob.yaml#/job-factJob_relationships"
   required:
     - type
     - id
+
+JsonApiModel_job-factJob_attributes:
+  type: object
+  properties:
+    # simple attributes
+    startDate:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_startDate"
+    deadlineDate:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_deadlineDate"
+    furtherInfo:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_furtherInfo"
+    title:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_title"
+    excludeFromJobSearch:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_excludeFromjob-factJobSearch"
+    creationDate:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/job/factJob.yaml#/job-factJob_properties_latestUpdateDate"
+
+    # relationship attributes
+    subject:
+      $ref: "../../library/job/job.yaml#/job_subject"
+    type:
+      $ref: "../../library/job/job.yaml#/job_type"
+    role:
+      $ref: "../../library/job/job.yaml#/job_role"
+    school:
+      $ref: "../../library/job/job.yaml#/job_school"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    thOwnerUser:
+      $ref: "../../library/job/job.yaml#/job_thOwnerUser"
+    status:
+      $ref: "../../library/job/job.yaml#/job_status"
 
 JsonApiModel_job-factJob_relationships:
   type: object

@@ -55,3 +55,14 @@ JsonApiModel_general-subject_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-subject (string)
+
+JsonApiModel_general-subject_attribute_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-subject_type"
+        id:
+          $ref: "#/JsonApiModel_general-subject_id"
