@@ -6,27 +6,17 @@ JsonApiModel_general-educationLevel:
     id:
       $ref: "#/JsonApiModel_general-educationLevel_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_attributes"
-    # relationships:
-    #   $ref: "#/JsonApiModel_general-educationLevel_relationships"
-    #   attributes:
-    #     allOf:
-    #       $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_relationships"
+      $ref: "#/JsonApiModel_general-educationLevel_attributes"
   required:
     - type
     - id
 
-# JsonApiModel_general-educationLevel_relationships:
-#   type: object
-#   description: Related attributes
-#   properties:
-#     educationLevelType:
-#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-#     creationUser:
-#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-#     latestUpdateUser:
-#       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+JsonApiModel_general-educationLevel_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_name"
 
 JsonApiModel_general-educationLevel_type:
   type: string

@@ -34,42 +34,48 @@ JsonApiModel_general-job_attributes:
 
     # relationship attributes
     subject:
-      $ref: "../../library/job/job.yaml#/job_subject"
+      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
     type:
       $ref: "../../library/job/job.yaml#/job_type"
+      #check "type" with Ryan
     role:
-      $ref: "../../library/job/job.yaml#/job_role"
+      $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship_attribute"
     school:
-      $ref: "../../library/job/job.yaml#/job_school"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     latestUpdateUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     thOwnerUser:
       $ref: "../../library/job/job.yaml#/job_thOwnerUser"
+      #check "thOwnerUser" with Ryan
     status:
       $ref: "../../library/job/job.yaml#/job_status"
+      #check "status" with Ryan
 
 JsonApiModel_general-job_relationships:
   type: object
   description: Related attributes
   properties:
-    #subject:
-    #$ref: "../../../general/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+    subject:
+      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
     type:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../library/job/job.yaml#/job_type"
+      #check "type" with Ryan
     role:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship"
     school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     thOwnerUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../library/job/job.yaml#/job_thOwnerUser"
+      #check "thOwnerUser" with Ryan
     status:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../library/job/job.yaml#/job_status"
+      #check "status" with Ryan
 
 JsonApiModel_job_type:
   type: string

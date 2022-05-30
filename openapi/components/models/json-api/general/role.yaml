@@ -33,6 +33,12 @@ JsonApiModel_general-role_attributes:
     latestUpdateUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
+JsonApiModel_general-role_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-role_id"
+
 JsonApiModel_general-role_relationships:
   type: object
   description: Related attributes
@@ -55,5 +61,16 @@ JsonApiModel_general-role_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-role (string)
+
+JsonApiModel_general-role_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-role_type"
+        id:
+          $ref: "#/JsonApiModel_general-role_id"
 
 

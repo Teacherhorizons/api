@@ -18,25 +18,27 @@ JsonApiModel_meta-entityChangeSummarySubscription_attributes:
   properties:
     # simple attributes
     notes:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_notes"   
+      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes"   
   # relationship attributes
     entityType:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_entityType" 
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute" 
     entity:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_entity"
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
+      #check "entity" with Ryan
     user:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_properties_user"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute" 
 
 JsonApiModel_meta-entityChangeSummarySubscription_relationships:
   type: object
   description: Related attributes
   properties:
     entityType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship" 
     entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
+      #check "entity" with Ryan
     user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship" 
 
 JsonApiModel_meta-entityChangeSummarySubscription_type:
   type: string

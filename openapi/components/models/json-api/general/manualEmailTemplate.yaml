@@ -6,11 +6,25 @@ JsonApiModel_general-manualEmailTemplate:
     id:
       $ref: "#/JsonApiModel_general-manualEmailTemplate_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_attributes"
+      $ref: "#/JsonApiModel_general-manualEmailTemplate_attributes"
   required:
     - type
     - id
+
+JsonApiModel_general-manualEmailTemplate_attributes:
+  type: object
+  properties:
+    # simple attributes
+    to:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+    cc:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+    bcc:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+    subject:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+    body:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
 
 JsonApiModel_general-manualEmailTemplate_type:
   type: string

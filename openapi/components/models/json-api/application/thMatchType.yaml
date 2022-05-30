@@ -6,11 +6,17 @@ JsonApiModel_application-thMatchType:
     id:
       $ref: "#/JsonApiModel_application-thMatchType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_properties_name"
+      $ref: "#/JsonApiModel_application-thMatchType_attributes"
   required:
     - type
     - id
+
+JsonApiModel_application-thMatchType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
 
 #
 JsonApiModel_application-thMatchType_type:

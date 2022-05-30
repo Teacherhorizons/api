@@ -6,13 +6,18 @@ JsonApiModel_general-actionType:
     id:
       $ref: "#/JsonApiModel_general-actionType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/actionType.yaml#/general-actionType_properties_name"
+      $ref: "#/JsonApiModel_application-actionType_attributes"
   required:
     - type
     - id
 
-#
+JsonApiModel_application-actionType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/actionType.yaml#/general-actionType_name"
+
 JsonApiModel_general-actionType_type:
   type: string
   example: general-actionType

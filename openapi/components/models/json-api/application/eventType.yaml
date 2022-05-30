@@ -6,16 +6,23 @@ JsonApiModel_application-eventType:
     id:
       $ref: "#/JsonApiModel_application-eventType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/application/eventType.yaml#/application-eventType_properties_name"
+      $ref: "#/JsonApiModel_application-eventType_attributes"
     relationships:
       $ref: "#/JsonApiModel_application-eventType_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_relationships"
   required:
     - type
     - id
+
+JsonApiModel_application-eventType_attributes:
+  type: object
+  properties:
+  # simple Attributes
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+
+  # relationship attributes
+    applicationStatus:
+      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
 
 JsonApiModel_application-eventType_relationships:
   type: object

@@ -6,12 +6,17 @@ JsonApiModel_application-status:
     id:
       $ref: "#/JsonApiModel_application-status_id"
     attributes:
-      allOf:
-        - $ref: "../../library/application/status.yaml#/application-status_properties_name"
+      $ref: "#/JsonApiModel_application-status_attributes"
   required:
     - type
     - id
 
+JsonApiModel_application-status_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/application/status.yaml#/application-status_name"
 #
 JsonApiModel_application-status_type:
   type: string

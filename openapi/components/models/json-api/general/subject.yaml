@@ -59,6 +59,12 @@ JsonApiModel_general-subject_id:
 JsonApiModel_general-subject_relationship_attribute:
   type: object
   properties:
+    id:
+      $ref: "#/JsonApiModel_general-subject_id"
+
+JsonApiModel_general-subject_relationship:
+  type: object
+  properties:
     data:
       type: object
       properties:

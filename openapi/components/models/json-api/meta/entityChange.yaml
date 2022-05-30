@@ -22,23 +22,26 @@ JsonApiModel_meta-entityChange_attributes:
     isProcessed:
       $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_isProcessed" 
   # relationship attributes
-    #entityType:
-     # $ref: "../meta/entityChange.yaml#/JsonApiModel_meta-entityType_relationship_attribute" 
+    entityType:
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute" 
     entity:
       $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
+      #check "entity" with Ryan
     user:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_user"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute" 
+      
 
 JsonApiModel_meta-entityChange_relationships:
   type: object
   description: Related attributes
   properties:
     entityType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship" 
     entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
+      #check "entity" with Ryan
     user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship" 
 
 JsonApiModel_meta-entityChange_type:
   type: string

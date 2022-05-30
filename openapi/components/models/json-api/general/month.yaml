@@ -6,12 +6,17 @@ JsonApiModel_general-month:
     id:
       $ref: "#/JsonApiModel_general-month_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/month.yaml#/general-month_properties_name"
-
+      $ref: "#/JsonApiModel_general-month_attributes"
   required:
     - type
     - id
+
+JsonApiModel_general-month_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/month.yaml#/general-month_name"
 
 JsonApiModel_general-month_type:
   type: string

@@ -6,12 +6,17 @@ JsonApiModel_job-status:
     id:
       $ref: "#/JsonApiModel_job-status_id"
     attributes:
-      allOf:
-        - $ref: "../../library/job/status.yaml#/job-status_properties_name"
-
+      $ref: "#/JsonApiModel_job-status_attributes"
   required:
     - type
     - id
+
+JsonApiModel_job-status_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/job/status.yaml#/job-status_name"
 
 JsonApiModel_job-status_type:
   type: string

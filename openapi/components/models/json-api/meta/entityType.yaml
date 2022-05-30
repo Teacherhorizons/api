@@ -6,12 +6,17 @@ JsonApiModel_meta-entityType:
     id:
       $ref: "#/JsonApiModel_meta-entityType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/meta/entityType.yaml#/meta-entityType_properties_name"
-
+      $ref: "#/JsonApiModel_meta-entityType_attributes"
   required:
     - type
     - id
+
+JsonApiModel_meta-entityType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
 
 JsonApiModel_meta-entityType_type:
   type: string
@@ -30,3 +35,14 @@ JsonApiModel_meta-entityType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_meta-entityType_id"
+
+JsonApiModel_meta-entityType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_meta-entityType_type"
+        id:
+          $ref: "#/JsonApiModel_meta-entityType_id"

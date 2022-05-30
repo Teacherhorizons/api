@@ -6,12 +6,17 @@ JsonApiModel_general-roleType:
     id:
       $ref: "#/JsonApiModel_general-roleType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/roleType.yaml#/general-roleType_properties_name"
-
+      $ref: "#/JsonApiModel_general-roleType_attributes"
   required:
     - type
     - id
+
+JsonApiModel_general-roleType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/roleType.yaml#/general-roleType_name"
 
 JsonApiModel_general-roleType_type:
   type: string

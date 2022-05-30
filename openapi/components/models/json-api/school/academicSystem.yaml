@@ -18,11 +18,11 @@ JsonApiModel_school-academicSystem_attributes:
   properties:
     # simple attributes
     name:
-      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_name"
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_name"
     creationDate:
-      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_creationDate"  
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_creationDate"  
     latestUpdateDate:
-      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_properties_latestUpdateDate"
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_latestUpdateDate"
 
     # relationship attributes
     creationUser:
@@ -35,9 +35,9 @@ JsonApiModel_school-academicSystem_relationships:
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-academicSystem_type:
   type: string

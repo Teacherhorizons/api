@@ -6,12 +6,17 @@ JsonApiModel_general-worldLanguage:
     id:
       $ref: "#/JsonApiModel_general-worldLanguage_id"
     attributes:
-      allOf:
-        - $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_properties_name"
-
+      $ref: "#/JsonApiModel_general-worldLanguage_attributes"
   required:
     - type
     - id
+
+JsonApiModel_general-worldLanguage_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_name"
 
 JsonApiModel_general-worldLanguage_type:
   type: string
