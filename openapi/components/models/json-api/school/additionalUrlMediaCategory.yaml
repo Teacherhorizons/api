@@ -6,8 +6,17 @@ JsonApiModel_school-additionalUrlMediaCategory:
     id:
       $ref: "#/JsonApiModel_school-additionalUrlMediaCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/additionalUrlMediaCategory.yaml#/school-additionalUrlMediaCategory_properties_name"
+      $ref: "#/JsonApiModel_school-additionalUrlMediaCategory_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-additionalUrlMediaCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/additionalUrlMediaCategory.yaml#/school-additionalUrlMediaCategory_name"
 
 JsonApiModel_school-additionalUrlMediaCategory_type:
   type: string

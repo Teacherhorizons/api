@@ -6,11 +6,23 @@ JsonApiModel_school-communityQuestion:
     id:
       $ref: "#/JsonApiModel_school-communityQuestion_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_attributes"
+      $ref: "#/JsonApiModel_school-communityQuestion_attributes"
   required:
     - type
     - id
+
+JsonApiModel_school-communityQuestion_attributes:
+  type: object
+  properties:
+    # simple attributes
+    questionText:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_questionText"
+    isActive:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_isActive"
+    shortText:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_shortText"
+    iconName:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_iconName"
 
 JsonApiModel_school-communityQuestion_type:
   type: string

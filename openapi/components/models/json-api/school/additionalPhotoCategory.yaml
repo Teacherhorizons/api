@@ -6,8 +6,17 @@ JsonApiModel_school-additionalPhotoCategory:
     id:
       $ref: "#/JsonApiModel_school-additionalPhotoCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/additionalPhotoCategory.yaml#/school-additionalPhotoCategory_properties_name"
+      $ref: "#/JsonApiModel_school-additionalPhotoCategory_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-additionalPhotoCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/additionalPhotoCategory.yaml#/school-additionalPhotoCategory_name"
 
 JsonApiModel_school-additionalPhotoCategory_type:
   type: string

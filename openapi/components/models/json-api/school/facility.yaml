@@ -6,25 +6,38 @@ JsonApiModel_school-facility:
     id:
       $ref: "#/JsonApiModel_school-facility_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/facility.yaml#/school-facility_attributes"
+      $ref: "#/JsonApiModel_school-facility_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-facility_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/facility.yaml#/school-facility_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-facility_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/facility.yaml#/school-facility_name"
+    creationDate:
+      $ref: "../../library/school/facility.yaml#/school-facility_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/facility.yaml#/school-facility_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-facility_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-facility_type:
   type: string

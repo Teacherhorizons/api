@@ -6,8 +6,17 @@ JsonApiModel_school-documentCategory:
     id:
       $ref: "#/JsonApiModel_school-documentCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/documentCategory.yaml#/school-documentCategory_properties_name"
+      $ref: "#/JsonApiModel_school-documentCategory_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-documentCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/documentCategory.yaml#/school-documentCategory_name"
 
 JsonApiModel_school-documentCategory_type:
   type: string

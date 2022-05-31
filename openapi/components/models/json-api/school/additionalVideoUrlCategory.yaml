@@ -6,16 +6,34 @@ JsonApiModel_school-additionalVideoUrlCategory:
     id:
       $ref: "#/JsonApiModel_school-additionalVideoUrlCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_attributes"
+      $ref: "#/JsonApiModel_school-additionaVideoUrlCategory_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-additionalVideoUrlCategory_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-additionaVideoUrlCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    url:
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_url"
+    caption:
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_caption"
+    creationDate:
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_latestUpdateDate"
+    # relationship attributes
+
+    category: 
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_category"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+
 
 JsonApiModel_school-additionalVideoUrlCategory_relationships:
   type: object
@@ -23,10 +41,11 @@ JsonApiModel_school-additionalVideoUrlCategory_relationships:
   properties:
     category:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      #check "category" with Ryan
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-additionalVideoUrlCategory_type:
   type: string

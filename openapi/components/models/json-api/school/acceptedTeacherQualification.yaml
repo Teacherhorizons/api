@@ -36,13 +36,13 @@ JsonApiModel_school-acceptedTeacherQualification_relationships:
   description: Related attributes
   properties:
     school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
     teacherQualificationType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-acceptedTeacherQualification_type:
   type: string

@@ -43,3 +43,14 @@ JsonApiModel_teacher-qualificationType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-qualificationType_id"
+
+JsonApiModel_teacher-qualificationType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-qualificationType_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-qualificationType_id"
