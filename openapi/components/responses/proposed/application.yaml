@@ -160,11 +160,16 @@ ApplicationResponse_teacher:
               # allOf:
               #   - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_teacher"
               #   - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+              required:
+                - creationDate
+                - status
             relationships:
               type: object
               properties:
                 job:
                   $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+              required:
+                - job
         included:
           type: array
           items:
@@ -208,6 +213,8 @@ ApplicationResponse_includedJob_teacher:
           allOf:
             - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
             - $ref: "#/ApplicationResponse_teacher_stage_2_description"
+      required:
+        - school
   required:
     - type
     - id
@@ -240,6 +247,11 @@ ApplicationResponse_includedSchool_teacher:
           allOf:
             - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
             - $ref: "#/ApplicationResponse_teacher_stage_3_description"
+      required:
+        - name
+        - slug
+        - city
+        - smallProfileImageUrl
     relationships:
       type: object
       properties:
@@ -247,6 +259,10 @@ ApplicationResponse_includedSchool_teacher:
           allOf:
             - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
             - $ref: "#/ApplicationResponse_teacher_stage_2_description"
+  required:
+    - type
+    - id
+    - attributes
 
 # descriptions
 ApplicationResponse_teacher_stage_2_description:
@@ -283,3 +299,7 @@ ApplicationResponse_includedUser_teacher:
         email:
           $ref: "../../../components/models/library/user/user.yaml#/user_email"
       description: Note that a user is only included if the lraUser or thOwnerUser are included
+      required:
+        - firstName
+        - lastName
+        - email

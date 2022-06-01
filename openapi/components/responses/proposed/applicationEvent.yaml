@@ -114,7 +114,7 @@ Application-applicationEventResponse_includedSchool_admin:
 # teacher
 Application-applicationEventResponse_teacher:
   allOf:
-    - $ref: "#/Application-applicationEventResponse_teacher"
+    - $ref: "#/Application-applicationEventResponse"
     - properties:
         data:
           type: object
@@ -124,6 +124,18 @@ Application-applicationEventResponse_teacher:
             id:
               $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
             attributes:
-              allOf:
-                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_properties_type"
-                - $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_attributes_shared"
+              type: object
+              properties:
+                type:
+                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+                date:
+                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+              required:
+                - type
+                - date
+          required:
+            - type
+            - id
+            - attributes
+    - required:
+        - data
