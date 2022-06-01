@@ -6,12 +6,23 @@ JsonApiModel_teacher-badge:
     id:
       $ref: "#/JsonApiModel_teacher-badge_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/badge.yaml#/teacher-badge_attributes"
-
+      $ref: "#/JsonApiModel_teacher-badge_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-badge_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/badge.yaml#/teacher-badge_name"
+    precedence:
+      $ref: "../../library/teacher/badge.yaml#/teacher-badge_precedence"
+    slug:
+      $ref: "../../library/teacher/badge.yaml#/teacher-badge_slug"
+    isAutomated:
+      $ref: "../../library/teacher/badge.yaml#/teacher-badge_isAutomated"
 
 JsonApiModel_teacher-badge_type:
   type: string

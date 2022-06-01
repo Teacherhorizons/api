@@ -6,12 +6,17 @@ JsonApiModel_teacher-additionalPhotoCategory:
     id:
       $ref: "#/JsonApiModel_teacher-additionalPhotoCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/additionalPhotoCategory.yaml#/teacher-additionalPhotoCategory_properties_name"
-
+      $ref: "#/JsonApiModel_teacher-additionalPhotoCategory_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-additionalPhotoCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/additionalPhotoCategory.yaml#/teacher-additionalPhotoCategory_name"
 
 JsonApiModel_teacher-additionalPhotoCategory_type:
   type: string

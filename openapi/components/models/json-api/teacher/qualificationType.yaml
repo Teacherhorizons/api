@@ -6,25 +6,38 @@ JsonApiModel_teacher-qualificationType:
     id:
       $ref: "#/JsonApiModel_teacher-qualificationType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_attributes"
+      $ref: "#/JsonApiModel_teacher-qualificationType_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-qualificationType_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-qualificationType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_name"
+    creationDate:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_teacher-qualificationType_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_teacher-qualificationType_type:
   type: string

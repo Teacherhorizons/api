@@ -6,11 +6,17 @@ JsonApiModel_teacher-numberOfDependentChildren:
     id:
       $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_properties_name"
+      $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-numberOfDependentChildren_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name"
 
 JsonApiModel_teacher-numberOfDependentChildren_type:
   type: string
