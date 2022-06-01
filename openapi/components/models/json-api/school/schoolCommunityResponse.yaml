@@ -6,27 +6,40 @@ JsonApiModel_school-schoolCommunityResponse:
     id:
       $ref: "#/JsonApiModel_school-schoolCommunityResponse_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_attributes"
+      $ref: "#/JsonApiModel_school-schoolCommunityResponse_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-schoolCommunityResponse_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-schoolCommunityResponse_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_name"
+    responseText:
+      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_responseText"
+    creationDate:
+      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-schoolCommunityResponse_relationships:
   type: object
   description: Related attributes
   properties:
-    school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-schoolCommunityResponse_type:
   type: string

@@ -6,29 +6,36 @@ JsonApiModel_school-schoolAccreditationType:
     id:
       $ref: "#/JsonApiModel_school-schoolAccreditationType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_attributes"
+      $ref: "#/JsonApiModel_school-schoolAccreditationType_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-schoolAccreditationType_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-schoolAccreditationType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-schoolAccreditationType_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    accreditationType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-schoolAccreditationType_type:
   type: string

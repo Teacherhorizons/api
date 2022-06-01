@@ -6,27 +6,42 @@ JsonApiModel_school-teacherSchoolCommunityResponse:
     id:
       $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_attributes"
+      $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-teacherSchoolCommunityResponse_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
+    creationDate:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_latestUpdateDate"
+
+    # relationship attributes
+    school:
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-teacherSchoolCommunityResponse_relationships:
   type: object
   description: Related attributes
   properties:
     school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-teacherSchoolCommunityResponse_type:
   type: string
