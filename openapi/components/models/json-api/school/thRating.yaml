@@ -4,8 +4,17 @@ JsonApiModel_school-thRating:
     type:
       $ref: "#/JsonApiModel_school-thRating_type"
     attributes:
-      allOf:
-        - $ref: "../../library/school/thRating.yaml#/school-thRating_properties_thRating"
+      $ref: "#/JsonApiModel_school-thRating_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-thRating_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/thRating.yaml#/school-thRating_thRating"
 
 JsonApiModel_school-thRating_type:
   type: string

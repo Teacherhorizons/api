@@ -6,25 +6,38 @@ JsonApiModel_school-studentGenderMix:
     id:
       $ref: "#/JsonApiModel_school-studentGenderMix_id"
     attributes:
-      allOf:
-        - $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_attributes"
+      $ref: "#/JsonApiModel_school-studentGenderMix_attributes"
     relationships:
       $ref: "#/JsonApiModel_school-studentGenderMix_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_relationships"
   required:
     - type
     - id
+
+JsonApiModel_school-studentGenderMix_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_name"
+    creationDate:
+      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_school-studentGenderMix_relationships:
   type: object
   description: Related attributes
   properties:
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_school-studentGenderMix_type:
   type: string
