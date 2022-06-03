@@ -105,3 +105,8 @@ JsonApiModel_job_relationship:
           $ref: "#/JsonApiModel_job_type"
         id:
           $ref: "#/JsonApiModel_job_id"
+      required:
+        - type
+        - id
+  required:
+    - data

@@ -260,6 +260,8 @@ application_job:
       type: string
       example: "1"
       description: Relationship to job
+  required:
+    - id
 
 application_teacher:
   type: object
@@ -268,6 +270,8 @@ application_teacher:
       type: string
       example: "1"
       description: Relationship to teacher
+  required:
+    - id
 
 application_creationUser:
   type: object
@@ -276,6 +280,8 @@ application_creationUser:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id
 
 application_latestUpdateUser:
   type: object
@@ -284,6 +290,8 @@ application_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id
 
 application_status:
   type: object
@@ -292,6 +300,8 @@ application_status:
       type: string
       example: "1"
       description: Relationship to application-status
+  required:
+    - id
 
 application_latestEvent:
   type: object
@@ -300,6 +310,8 @@ application_latestEvent:
       type: string
       example: "1"
       description: Relationship to application-applicationEvent
+  required:
+    - id
 # application_thMatchType:
 #   type: object
 #   properties:

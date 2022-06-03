@@ -58,3 +58,8 @@ JsonApiModel_user_relationship:
           $ref: "#/JsonApiModel_user_type"
         id:
           $ref: "#/JsonApiModel_user_id"
+      required:
+        - type
+        - id
+  required:
+    - data
