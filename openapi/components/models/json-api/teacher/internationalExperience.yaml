@@ -6,11 +6,17 @@ JsonApiModel_teacher-internationalExperience:
     id:
       $ref: "#/JsonApiModel_teacher-internationalExperience_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_properties_name"
+      $ref: "#/JsonApiModel_teacher-internationalExperience_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-internationalExperience_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
 
 JsonApiModel_teacher-internationalExperience_type:
   type: string

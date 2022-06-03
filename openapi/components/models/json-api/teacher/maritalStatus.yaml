@@ -6,11 +6,17 @@ JsonApiModel_teacher-maritalStatus:
     id:
       $ref: "#/JsonApiModel_teacher-maritalStatus_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/maritalStatus.yaml#/teacher-maritalStatus_properties_name"
+      $ref: "#/JsonApiModel_teacher-maritalStatus_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-maritalStatus_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/maritalStatus.yaml#/teacher-maritalStatus_name"
 
 JsonApiModel_teacher-maritalStatus_type:
   type: string

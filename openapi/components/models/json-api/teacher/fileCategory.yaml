@@ -6,11 +6,17 @@ JsonApiModel_teacher-fileCategory:
     id:
       $ref: "#/JsonApiModel_teacher-fileCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/fileCategory.yaml#/teacher-fileCategory_properties_name"
+      $ref: "#/JsonApiModel_teacher-fileCategory_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-fileCategory_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/fileCategory.yaml#/teacher-fileCategory_name"
 
 JsonApiModel_teacher-fileCategory_type:
   type: string

@@ -6,12 +6,19 @@ JsonApiModel_teacher-preferenceOption:
     id:
       $ref: "#/JsonApiModel_teacher-preferenceOption_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_attributes"
-
+      $ref: "#/JsonApiModel_teacher-preferenceOption_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-preferenceOption_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_name"
+    precedence:
+      $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_name"
 
 JsonApiModel_teacher-preferenceOption_type:
   type: string

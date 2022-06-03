@@ -6,11 +6,17 @@ JsonApiModel_teacher-referenceStatus:
     id:
       $ref: "#/JsonApiModel_teacher-referenceStatus_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/referenceStatus.yaml#/teacher-referenceStatus_properties_name"
+      $ref: "#/JsonApiModel_teacher-referenceStatus_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-referenceStatus_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/referenceStatus.yaml#/teacher-referenceStatus_name"
 
 JsonApiModel_teacher-referenceStatus_type:
   type: string
