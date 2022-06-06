@@ -6,27 +6,39 @@ JsonApiModel_user-message:
     id:
       $ref: "#/JsonApiModel_user-message_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/message.yaml#/user-message_attributes"
+      $ref: "#/JsonApiModel_user-message_attributes"
     relationships:
       $ref: "#/JsonApiModel_user-message_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/user/message.yaml#/user-message_relationships"
   required:
     - type
     - id
+
+JsonApiModel_user-message_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/user/message.yaml#/user-message_creationDate"
+    text:
+      $ref: "../../library/user/message.yaml#/user-message_text"
+   # relationship attributes
+    toUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    fromUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    messageStatus:
+      $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship_attribute"
 
 JsonApiModel_user-message_relationships:
   type: object
   description: Related attributes
   properties:
     toUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     fromUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     messageStatus:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship"
 
 JsonApiModel_user-message_type:
   type: string

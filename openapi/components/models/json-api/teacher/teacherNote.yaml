@@ -6,29 +6,47 @@ JsonApiModel_teacher-teacherNote:
     id:
       $ref: "#/JsonApiModel_teacher-teacherNote_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherNote_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherNote_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherNote_attributes:
+  type: object
+  properties:
+    # simple attributes
+    noteComment:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"  
+    creationDate:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateDate"
+
+    # relationship attributes
+    teacher:
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+    noteType:
+      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
+    #noteType : to be confirmed with RYAN
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_teacher-teacherNote_relationships:
   type: object
   description: Related attributes
   properties:
     teacher:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
     noteType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_teacher-teacherNote_type:
   type: string

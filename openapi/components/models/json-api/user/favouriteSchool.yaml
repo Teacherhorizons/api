@@ -6,25 +6,33 @@ JsonApiModel_user-favouriteSchool:
     id:
       $ref: "#/JsonApiModel_user-favouriteSchool_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_attributes"
+      $ref: "#/JsonApiModel_user-favouriteSchool_attributes"
     relationships:
       $ref: "#/JsonApiModel_user-favouriteSchool_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_relationships"
   required:
     - type
     - id
+
+JsonApiModel_user-favouriteSchool_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_creationDate"
+   # relationship attributes
+    user:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    school:
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
 
 JsonApiModel_user-favouriteSchool_relationships:
   type: object
   description: Related attributes
   properties:
     user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
 
 JsonApiModel_user-favouriteSchool_type:
   type: string

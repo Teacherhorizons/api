@@ -6,25 +6,34 @@ JsonApiModel_teacher-teacherLookingForSubject:
     id:
       $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherLookingForSubject_attributes:
+  type: object
+  properties:
+    # simple attributes
+    precedence:
+      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"  
+
+    # relationship attributes
+    subject:
+      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+    teacher:
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
 
 JsonApiModel_teacher-teacherLookingForSubject_relationships:
   type: object
   description: Related attributes
   properties:
     subject:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
     teacher:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
 
 JsonApiModel_teacher-teacherLookingForSubject_type:
   type: string

@@ -6,25 +6,33 @@ JsonApiModel_user-favouriteTeacher:
     id:
       $ref: "#/JsonApiModel_user-favouriteTeacher_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_attributes"
+      $ref: "#/JsonApiModel_user-favouriteTeacher_attributes"
     relationships:
       $ref: "#/JsonApiModel_user-favouriteTeacher_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_relationships"
   required:
     - type
     - id
+
+JsonApiModel_user-favouriteTeacher_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_creationDate"
+   # relationship attributes
+    user:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    teacher:
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
 
 JsonApiModel_user-favouriteTeacher_relationships:
   type: object
   description: Related attributes
   properties:
     user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     teacher:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
 
 JsonApiModel_user-favouriteTeacher_type:
   type: string

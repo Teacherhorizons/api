@@ -97,3 +97,25 @@ JsonApiModel_regional-country_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the regional-country (string)
+
+JsonApiModel_regional-country_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-country_id"
+
+JsonApiModel_regional-country_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-country_type"
+        id:
+          $ref: "#/JsonApiModel_regional-country_id"
+      required:
+        - type
+        - id
+  required:
+    - data

@@ -6,23 +6,33 @@ JsonApiModel_teacher-teacherReferenceQuestion:
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherReferenceQuestion_attributes:
+  type: object
+  properties:
+    # simple attributes
+    text:
+      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"  
+    precedence:
+      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_precedence"
+    isRequired:
+      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_isRequired"
+   # relationship attributes
+    referenceType:
+      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
 
 JsonApiModel_teacher-teacherReferenceQuestion_relationships:
   type: object
   description: Related attributes
   properties:
     referenceType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
 
 
 JsonApiModel_teacher-teacherReferenceQuestion_type:

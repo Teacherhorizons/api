@@ -6,11 +6,19 @@ JsonApiModel_teacher-teacherPreferredLocation:
     id:
       $ref: "#/JsonApiModel_teacher-teacherPreferredLocation_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherPreferredLocation_attributes"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherPreferredLocation_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_name"  
+    continent:
+      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_continent"
 
 JsonApiModel_teacher-teacherPreferredLocation_type:
   type: string

@@ -6,23 +6,31 @@ JsonApiModel_user-thUser:
     id:
       $ref: "#/JsonApiModel_user-thUser_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/thUser.yaml#/user-thUser_attributes"
+      $ref: "#/JsonApiModel_user-thUser_attributes"
     relationships:
       $ref: "#/JsonApiModel_user-thUser_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/user/thUser.yaml#/user-thUser_relationships"
   required:
     - type
     - id
+
+JsonApiModel_user-thUser_attributes:
+  type: object
+  properties:
+    # simple attributes
+    initials:
+      $ref: "../../library/user/thUser.yaml#/user-thUser_initials"
+    activeInTH:
+      $ref: "../../library/user/thUser.yaml#/user-thUser_activeInTH"
+   # relationship attributes
+    user:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_user-thUser_relationships:
   type: object
   description: Related attributes
   properties:
     user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_user-thUser_type:
   type: string

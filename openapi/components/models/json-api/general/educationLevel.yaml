@@ -29,3 +29,20 @@ JsonApiModel_general-educationLevel_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-educationLevel (string)
+
+JsonApiModel_educationLevel_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-educationLevel_id"
+
+JsonApiModel_educationLevel_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-educationLevel_type"
+        id:
+          $ref: "#/JsonApiModel_general-educationLevel_id"

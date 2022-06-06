@@ -6,29 +6,44 @@ JsonApiModel_teacher-teacherNationalities:
     id:
       $ref: "#/JsonApiModel_teacher-teacherNationalities_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherNationalities_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherNationalities_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherNationalities_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
+
+    # relationship attributes
+    teacher:
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+    nationality:
+      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_teacher-teacherNationalities_relationships:
   type: object
   description: Related attributes
   properties:
     teacher:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
     nationality:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_teacher-teacherNationalities_type:
   type: string

@@ -6,29 +6,73 @@ JsonApiModel_teacher-teacherReference:
     id:
       $ref: "#/JsonApiModel_teacher-teacherReference_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherReference_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherReference_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherReference_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_name"  
+    teacher:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_teacher"  
+    type:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_type"  
+    institution:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_institution"
+    position:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_position"  
+    email:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_email"  
+    phone:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_phone"  
+    submission:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_submission"
+    refuri:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_refuri"  
+    status:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_status"  
+    submissionDate:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_submissionDate"  
+    completionDate:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_completionDate"
+    score:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_score"  
+    isArchived:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_isArchived"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherReference.yaml#/teacher-teacherReference_latestUpdateDate"
+
+    # relationship attributes
+    school:
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+    country:
+      $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    phoneCodeCountry:
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    #phoneCodeCountry to check with Ryan
 
 JsonApiModel_teacher-teacherReference_relationships:
   type: object
   description: Related attributes
   properties:
     school:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
     country:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     phoneCodeCountry:
       $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 

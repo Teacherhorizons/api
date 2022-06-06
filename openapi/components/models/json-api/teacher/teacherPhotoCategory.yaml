@@ -5,23 +5,31 @@ JsonApiModel_teacher-teacherPhotoCategory:
       $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_id"
+    attributes:
+      $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherPhotoCategory.yaml#/teacher-teacherPhotoCategory_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherPhotoCategory_attributes:
+  type: object
+  properties:
+    # relationship attributes
+    teacherPhoto:
+      $ref: "../teacher/teacherPhoto.yaml#/JsonApiModel_teacherPhoto_relationship_attribute"
+    photoCategory:
+      $ref: "#/JsonApiModel_teacherPhotoCategory_relationship_attribute"
 
 JsonApiModel_teacher-teacherPhotoCategory_relationships:
   type: object
   description: Related attributes
   properties:
     teacherPhoto:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacherPhoto.yaml#/JsonApiModel_teacherPhoto_relationship"
     photoCategory:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "#/JsonApiModel_teacherPhotoCategory_relationship"
 
 JsonApiModel_teacher-teacherPhotoCategory_type:
   type: string
@@ -34,3 +42,20 @@ JsonApiModel_teacher-teacherPhotoCategory_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the teacher-teacherPhotoCategory (string)
+
+JsonApiModel_teacherPhotoCategory_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_id"
+
+JsonApiModel_teacherPhotoCategory_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-teacherPhotoCategory_id"

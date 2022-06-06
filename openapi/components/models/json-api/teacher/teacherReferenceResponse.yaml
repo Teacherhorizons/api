@@ -6,16 +6,25 @@ JsonApiModel_teacher-teacherReferenceResponse:
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherReferenceResponse_attributes:
+  type: object
+  properties:
+    # simple attributes
+    text:
+      $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"  
+   # relationship attributes
+    request:
+      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+    question:
+      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+#check about 'request' and 'question' with Ryan
 
 JsonApiModel_teacher-teacherReferenceResponse_relationships:
   type: object
