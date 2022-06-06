@@ -76,3 +76,8 @@ JsonApiModel_school_relationship:
           $ref: "#/JsonApiModel_school_type"
         id:
           $ref: "#/JsonApiModel_school_id"
+      required:
+        - type
+        - id
+  required:
+    - data

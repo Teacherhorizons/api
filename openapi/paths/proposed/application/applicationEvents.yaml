@@ -6,18 +6,38 @@ get:
   summary: Get application events (proposed)
   parameters:
     - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - admin-oneApplication
+          - admin-allApplications
+          - teacher
+      description: |
+        - admin-allApplications: use to get all events for a particular teacher
+        - admin-oneApplication: use to get all events for a particular application
+    - in: query
       name: filter
       style: deepObject
       allowReserved: true
       explode: true
       schema:
-        type: object
+        # type: object
         # additionalProperties:
-          # $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_filter_additionalProperties"
+        type: object
+        properties:
+          filter[application.id]:
+            type: number
+            example: 1
+            description: Required unless schema is 'admin-allApplications'
+          filter[application.teacher.memberNumber]:
+            type: number
+            example: 123456
+            description: Required if schema is 'admin-allApplications'
         example:
           application.id: 1
           application.teacher.memberNumber: 1
-        description: e.g. filter[application.id]=123 - gets the events related to application 123
 
   responses:
     "200":

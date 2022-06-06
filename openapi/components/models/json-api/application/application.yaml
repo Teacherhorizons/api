@@ -76,6 +76,11 @@ JsonApiModel_application_relationship:
           $ref: "#/JsonApiModel_application_type"
         id:
           $ref: "#/JsonApiModel_application_id"
+      required:
+        - type
+        - id
+  required:
+    - data
 
 # attributes
 JsonApiModel_application_attributes_all:
