@@ -50,3 +50,14 @@ JsonApiModel_school-curriculumType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the school-curriculumType (string)
+
+JsonApiModel_curriculumType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-curriculumType_type"
+        id:
+          $ref: "#/JsonApiModel_school-curriculumType_id"

@@ -6,29 +6,40 @@ JsonApiModel_teacher-teacherCurriculumType:
     id:
       $ref: "#/JsonApiModel_teacher-teacherCurriculumType_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_attributes"
+      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_attributes"
     relationships:
       $ref: "#/JsonApiModel_teacher-teacherCurriculumType_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_relationships"
   required:
     - type
     - id
+
+JsonApiModel_teacher-teacherCurriculumType_attributes:
+  type: object
+  properties:
+    # simple attributes
+    creationDate:
+      $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_latestUpdateDate"
+
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 JsonApiModel_teacher-teacherCurriculumType_relationships:
   type: object
   description: Related attributes
   properties:
     teacher:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
     curriculumType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../school/curriculumType.yaml#/JsonApiModel_curriculumType_relationship"
     creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
 
 JsonApiModel_teacher-teacherCurriculumType_type:
   type: string
