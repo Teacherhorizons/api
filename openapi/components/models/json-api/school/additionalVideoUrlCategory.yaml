@@ -1,3 +1,5 @@
+# TODO AS: review this against the spreadsheet - should be a simple 'list' entity
+
 JsonApiModel_school-additionalVideoUrlCategory:
   type: object
   properties:
@@ -22,18 +24,17 @@ JsonApiModel_school-additionaVideoUrlCategory_attributes:
     caption:
       $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_caption"
     creationDate:
-      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_creationDate"  
+      $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_latestUpdateDate"
     # relationship attributes
 
-    category: 
+    category:
       $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_category"
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     latestUpdateUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
 
 JsonApiModel_school-additionalVideoUrlCategory_relationships:
   type: object

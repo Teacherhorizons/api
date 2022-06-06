@@ -20,28 +20,27 @@ JsonApiModel_meta-entityChangeSummary_attributes:
     fromDate:
       $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_fromDate"
     toDate:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_toDate"  
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_toDate"
     notes:
       $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_notes"
     isProcessed:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_isProcessed" 
+      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_isProcessed"
 
-  # relationship attributes
+    # relationship attributes
     entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute" 
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
     entity:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
-      #check "entity" with Ryan
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+      # TODO RR: think about how to do this better (this attribute is an exception)
 
 JsonApiModel_meta-entityChangeSummary_relationships:
   type: object
   description: Related attributes
   properties:
     entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship" 
+      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
     entity:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_entity"
-      #check "entity" with Ryan
+      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
 
 JsonApiModel_meta-entityChangeSummary_type:
   type: string

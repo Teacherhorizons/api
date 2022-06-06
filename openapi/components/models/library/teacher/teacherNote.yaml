@@ -20,7 +20,7 @@ teacher-teacherNote_attributes:
 teacher-teacherNote_relationshipIds:
   allOf:
     - $ref: "#/teacher-teacherNote_properties_teacherId"
-    - $ref: "#/teacher-teacherNote_properties_noteTypeId"
+    - $ref: "#/teacher-teacherNote_properties_typeId"
     - $ref: "#/teacher-teacherNote_properties_creationUserId"
     - $ref: "#/teacher-teacherNote_properties_latestUpdateUserId"
 
@@ -30,10 +30,9 @@ teacher-teacherNote_relationshipIds:
 teacher-teacherNote_relationships:
   allOf:
     - $ref: "#/teacher-teacherNote_properties_teacher"
-    - $ref: "#/teacher-teacherNote_properties_noteType"
+    - $ref: "#/teacher-teacherNote_properties_type"
     - $ref: "#/teacher-teacherNote_properties_creationUser"
     - $ref: "#/teacher-teacherNote_properties_latestUpdateUser"
-
 
 #properties
 teacher-teacherNote_properties_id:
@@ -61,10 +60,10 @@ teacher-teacherNote_properties_teacherId:
     teacherId:
       $ref: "#/teacher-teacherNote_teacherId"
 
-teacher-teacherNote_properties_noteTypeId:
+teacher-teacherNote_properties_typeId:
   properties:
-    noteTypeId:
-      $ref: "#/teacher-teacherNote_noteTypeId"
+    typeId:
+      $ref: "#/teacher-teacherNote_typeId"
 
 teacher-teacherNote_properties_creationUserId:
   properties:
@@ -81,10 +80,10 @@ teacher-teacherNote_properties_teacher:
     teacher:
       $ref: "#/teacher-teacherNote_teacher"
 
-teacher-teacherNote_properties_noteType:
+teacher-teacherNote_properties_type:
   properties:
-    noteType:
-      $ref: "#/teacher-teacherNote_noteType"
+    type:
+      $ref: "#/teacher-teacherNote_type"
 
 teacher-teacherNote_properties_creationUser:
   properties:
@@ -103,7 +102,7 @@ teacher-teacherNote_id:
 
 teacher-teacherNote_noteComment:
   type: string
-  example: 
+  example:
 
 teacher-teacherNote_creationDate:
   type: string
@@ -123,7 +122,7 @@ teacher-teacherNote_teacher:
       example: "1"
       description: Relationship to Teacher
 
-teacher-teacherNote_noteType:
+teacher-teacherNote_type:
   type: object
   properties:
     id:
@@ -136,7 +135,7 @@ teacher-teacherNote_teacherId:
   example: 1
   description: Relationship to Teacher
 
-teacher-teacherNote_noteTypeId:
+teacher-teacherNote_typeId:
   type: object
   properties:
     id:

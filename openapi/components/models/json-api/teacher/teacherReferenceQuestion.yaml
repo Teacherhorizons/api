@@ -1,3 +1,5 @@
+# TODO RR: consider renaming this to 'teacher-referenceQuestion'
+
 JsonApiModel_teacher-teacherReferenceQuestion:
   type: object
   properties:
@@ -18,12 +20,12 @@ JsonApiModel_teacher-teacherReferenceQuestion_attributes:
   properties:
     # simple attributes
     text:
-      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"  
+      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"
     precedence:
       $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_precedence"
     isRequired:
       $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_isRequired"
-   # relationship attributes
+    # relationship attributes
     referenceType:
       $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
 
@@ -33,7 +35,6 @@ JsonApiModel_teacher-teacherReferenceQuestion_relationships:
   properties:
     referenceType:
       $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-
 
 JsonApiModel_teacher-teacherReferenceQuestion_type:
   type: string
@@ -46,11 +47,3 @@ JsonApiModel_teacher-teacherReferenceQuestion_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the teacher-teacherReferenceQuestion (string)
-
-
-
-
-
-
-
-

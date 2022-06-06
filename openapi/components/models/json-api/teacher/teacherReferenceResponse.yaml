@@ -18,13 +18,15 @@ JsonApiModel_teacher-teacherReferenceResponse_attributes:
   properties:
     # simple attributes
     text:
-      $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"  
-   # relationship attributes
+      $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"
+    # relationship attributes
     request:
       $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+    # TODO AS: add 'teacher-teacherReferenceRequest' and link to it from here
     question:
       $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-#check about 'request' and 'question' with Ryan
+    #check about 'request' and 'question' with Ryan
+    # TODO AS: link to teacherReferenceQuestion.yaml
 
 JsonApiModel_teacher-teacherReferenceResponse_relationships:
   type: object
@@ -46,11 +48,3 @@ JsonApiModel_teacher-teacherReferenceResponse_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the teacher-teacherReferenceResponse (string)
-
-
-
-
-
-
-
-

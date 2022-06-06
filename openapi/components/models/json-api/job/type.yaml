@@ -1,0 +1,54 @@
+JsonApiModel_job-type:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_job-type_type"
+    id:
+      $ref: "#/JsonApiModel_job-type_id"
+    attributes:
+      $ref: "#/JsonApiModel_job-type_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_job-type_attributes:
+  type: object
+  # properties:
+  #   # simple attributes
+  #   name:
+  #     # TODO AS
+  #     $ref: "../../library/teacher/referenceType.yaml#/job-type_name"
+
+JsonApiModel_job-type_type:
+  type: string
+  example: job-type
+  description: job-type
+  readOnly: true
+
+JsonApiModel_job-type_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the job-type (string)
+
+JsonApiModel_job-type_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_job-type_id"
+
+JsonApiModel_job-type_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_job-type_type"
+        id:
+          $ref: "#/JsonApiModel_job-type_id"
+      required:
+        - type
+        - id
+  required:
+    - data

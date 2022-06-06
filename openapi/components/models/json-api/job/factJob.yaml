@@ -1,3 +1,7 @@
+# Note: this file related to the data warehouse
+# TODO: we probably want to create a new 'DW' section/folder structure and move/rename this file
+# TODO: we probably want the DW files to be isolated from the 'transactional' database files
+
 JsonApiModel_job-factJob:
   type: object
   properties:
@@ -28,7 +32,7 @@ JsonApiModel_job-factJob_attributes:
     excludeFromJobSearch:
       $ref: "../../library/job/factJob.yaml#/job-factJob_excludeFromjob-factJobSearch"
     creationDate:
-      $ref: "../../library/job/factJob.yaml#/job-factJob_creationDate"  
+      $ref: "../../library/job/factJob.yaml#/job-factJob_creationDate"
     latestUpdateDate:
       $ref: "../../library/job/factJob.yaml#/job-factJob_latestUpdateDate"
 
@@ -71,8 +75,7 @@ JsonApiModel_job-factJob_relationships:
     latestUpdateUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     thOwnerUser:
-      $ref: "../../library/job/job.yaml#/job_thOwnerUser"
-      #check "thOwnerUser" with Ryan
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     status:
       $ref: "../../library/job/job.yaml#/job_status"
       #check "status" with Ryan
