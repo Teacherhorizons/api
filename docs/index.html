@@ -24,29 +24,109 @@
         /* workaround (hack): make full width */
         /* future: keep an eye on the issue */
         width: -webkit-fill-available !important;
-      } 
+      }
+      li[data-item-id*="group/"] {
+        margin-top: 0;
+      }
+      li[data-item-id*="group/"] > label {
+        cursor: pointer;
+        padding-bottom: 10px;
+      }
+      li[data-item-id*="group/"] > label:hover {
+        background-color: rgb(225, 225, 225);
+      }
+      .expandAllButton {
+        float: right;
+        margin: 8px;
+      }
     </style>
     {{{redocHead}}}
   </head>
   <body>
     {{{redocHTML}}}
     <script>
+      main();
+
+      function main() {
+        const mutationObserverCallback = () => {
+          const el = document.querySelector('.menu-content');
+          if (el) {
+            mutationObserver.disconnect();
+            menuLoaded();
+          }
+        };
+        const mutationObserver = new MutationObserver(mutationObserverCallback);
+        mutationObserver.observe(document.body, { subtree: true, childList: true });
+      }
+
+      function menuLoaded() {
+        createExpandableMenuGroups();
+        wip();
+      }
+
+      function createExpandableMenuGroups() {
+        document
+        .querySelectorAll('li[data-item-id*="group/"]')
+        .forEach((el) => {
+          // set visibility as remembered and create behaviour
+          const name = el.getAttribute('data-item-id');
+          el.children[1].hidden = window.localStorage.getItem(name) == 'true';
+
+          const label = el.children[0];
+          label.style.cursor = 'pointer';
+
+          label.onclick = function() {
+            // toggle visibility and save to local storage
+            const children = this.parentElement.children[1];
+            children.hidden = !children.hidden;
+
+            const name = this.parentElement.getAttribute('data-item-id');
+            window.localStorage.setItem(name, children.hidden);
+          };
+        });
+      }
+
+      function wip() {
+        document
+        .querySelectorAll('a[href*="#tag/"]')
+        .forEach((el) => {
+          const button = document.createElement('button');
+          button.innerText = 'Expand all';
+          // el.getele
+          el.parentElement.appendChild(button);
+          // el.insertBefore(button, el.firstChild);
+          button.classList.add('expandAllButton')
+          console.log(101, el, button);
+
+          button.onclick = function() {
+            console.log(102, this, this.innerText, this.parentElement, this.parentElement.parentElement.parentElement.parentElement);
+            const foo = this.parentElement.parentElement.parentElement.parentElement;
+            const action = this.innerText == 'Expand all' ? 'expand' : 'collapse';
+            expandOrCollapseAllSchemas(foo, action);
+            this.innerText = action == 'expand' ? 'Collapse all' : 'Expand all';
+          }
+          // .querySelectorAll('tr:not(.expanded) > td > button[aria-label*=expand]')
+        });
+      };
+
       // related issue: schemas are not expanded (https://github.com/Redocly/redoc/issues/593)
       // workaround (hack): add a button which will expand all schemas
       // future: keep an eye on the issue; make less hacky
-      function expandAllSchemaSectionsInCurrentDom() {
-        document
-        .querySelectorAll('tr:not(.expanded) > td > button[aria-label*=expand]')
-        .forEach((btn) => {
+      function expandOrCollapseAllSchemaSectionsInCurrentDom(el, action) {
+        const q = action == 'expand'
+          ? 'tr:not(.expanded) > td > button[aria-label*=expand]'
+          : 'tr.expanded > td > button[aria-label*=expand]';
+        el.querySelectorAll(q).forEach((btn) => {
           btn.click();
         });
       };
 
-      function expandAllSchemas() {
-        const expandInterval = setInterval(() => expandAllSchemaSectionsInCurrentDom(), 100);
-        setTimeout(() => clearInterval(expandInterval), 950);
+      function expandOrCollapseAllSchemas(el, expand) {
+        const expandInterval = setInterval(() => expandOrCollapseAllSchemaSectionsInCurrentDom(el, expand), 150);
+        setTimeout(() => clearInterval(expandInterval), 3000);
       }
     </script>
-    <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="expandAllSchemas()">Expand all (WIP)</button>
+    <!-- <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="wip()">WIP</button> -->
+    <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="expandOrCollapseAllSchemas(document, 'expand')">Expand all (WIP)</button>
   </body>
 </html>
