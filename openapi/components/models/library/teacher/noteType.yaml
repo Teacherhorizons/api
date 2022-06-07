@@ -1,6 +1,6 @@
 
 # attributes
-teacher-teacherNoteType_attributes:
+teacher-noteType_attributes:
   allOf:
     - $ref: "#/teacher-noteType_properties_name"
     - $ref: "#/teacher-noteType_properties_creationDate"
@@ -8,7 +8,7 @@ teacher-teacherNoteType_attributes:
     - $ref: "#/teacher-noteType_properties_precedence"
 
 # relationshipIds
-teacher-teacherNoteType_relationshipIds:
+teacher-noteType_relationshipIds:
   allOf:
     - $ref: "#/teacher-noteType_properties_creationUserId"
     - $ref: "#/teacher-noteType_properties_latestUpdateUserId"
@@ -16,7 +16,7 @@ teacher-teacherNoteType_relationshipIds:
 # attribute relationships
 
 # relationships
-teacher-teacherNoteType_relationships:
+teacher-noteType_relationships:
   allOf:
     - $ref: "#/teacher-noteType_properties_creationUser"
     - $ref: "#/teacher-noteType_properties_latestUpdateUser"
