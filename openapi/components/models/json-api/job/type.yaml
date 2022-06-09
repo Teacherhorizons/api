@@ -13,11 +13,10 @@ JsonApiModel_job-type:
 
 JsonApiModel_job-type_attributes:
   type: object
-  # properties:
-  #   # simple attributes
-  #   name:
-  #     # TODO AS
-  #     $ref: "../../library/teacher/referenceType.yaml#/job-type_name"
+  properties:
+  # simple attributes
+    name:
+      $ref: "../../library/job/type.yaml#/job-type_name"
 
 JsonApiModel_job-type_type:
   type: string

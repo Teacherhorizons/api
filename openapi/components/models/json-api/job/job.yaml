@@ -36,9 +36,7 @@ JsonApiModel_general-job_attributes:
     subject:
       $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
     type:
-      $ref: "../../library/job/job.yaml#/job_type"
-      #check "type" with Ryan
-      # TODO AS: add job/type.yaml and reference it here
+      $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship_attribute"
     role:
       $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship_attribute"
     school:
@@ -50,9 +48,7 @@ JsonApiModel_general-job_attributes:
     thOwnerUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     status:
-      $ref: "../../library/job/job.yaml#/job_status"
-      #check "status" with Ryan
-      # TODO AS: link to job/status
+      $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship_attribute"
 
 JsonApiModel_general-job_relationships:
   type: object
@@ -61,9 +57,7 @@ JsonApiModel_general-job_relationships:
     subject:
       $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
     type:
-      $ref: "../../library/job/job.yaml#/job_type"
-      #check "type" with Ryan
-      # TODO AS: add job/type.yaml and reference it here
+      $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship"
     role:
       $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship"
     school:
@@ -75,9 +69,7 @@ JsonApiModel_general-job_relationships:
     thOwnerUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     status:
-      $ref: "../../library/job/job.yaml#/job_status"
-      #check "status" with Ryan
-      # TODO AS: link to job/status
+      $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship"
 
 JsonApiModel_job_type:
   type: string
