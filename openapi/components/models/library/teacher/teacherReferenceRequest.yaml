@@ -1,0 +1,292 @@
+
+#filter properties
+
+# attributes
+teacher-teacherReferenceRequest_attributes:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereeFullName"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereeOrganisationName"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereeRoleName"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereeEmail"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereePhoneNumber"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_isArchived"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_creationDate"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_latestUpdateDate"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_completionDate"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_score"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_fileUri"
+
+# relationshipIds
+teacher-teacherReferenceRequest_relationshipIds:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceRequest_properties_id"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_typeId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_statusId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_teacherId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereePhoneCodeCountryId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_schoolId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_countryId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_creationUserId"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+teacher-teacherReference_relationships:
+  allOf:
+    - $ref: "#/teacher-teacherReferenceRequest_properties_type"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_status"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_teacher"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_refereePhoneCodeCountry"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_school"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_country"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_creationUser"
+    - $ref: "#/teacher-teacherReferenceRequest_properties_latestUpdateUser"
+
+#properties
+teacher-teacherReferenceRequest_properties_id:
+  properties:
+    id:
+      $ref: "#/teacher-teacherReferenceRequest_id"
+teacher-teacherReferenceRequest_properties_teacherId:
+  properties:
+    teacherId:
+      $ref: "#/teacher-teacherReferenceRequest_teacherId"
+teacher-teacherReferenceRequest_properties_typeId:
+  properties:
+    typeId:
+      $ref: "#/teacher-teacherReferenceRequest_typeId"
+teacher-teacherReferenceRequest_properties_refereeFullName:
+  properties:
+    refereeFullName:
+      $ref: "#/teacher-teacherReferenceRequest_refereeFullName"
+teacher-teacherReferenceRequest_properties_refereeOrganisationName:
+  properties:
+    refereeOrganisationName:
+      $ref: "#/teacher-teacherReferenceRequest_refereeOrganisationName"
+teacher-teacherReferenceRequest_properties_refereeRoleName:
+  properties:
+    refereeRoleName:
+      $ref: "#/teacher-teacherReferenceRequest_refereeRoleName"
+teacher-teacherReferenceRequest_properties_refereeEmail:
+  properties:
+    refereeEmail:
+      $ref: "#/teacher-teacherReferenceRequest_refereeEmail"
+teacher-teacherReferenceRequest_properties_refereePhoneNumber:
+  properties:
+    refereePhoneNumber:
+      $ref: "#/teacher-teacherReferenceRequest_refereePhoneNumber"
+teacher-teacherReferenceRequest_properties_fileUri:
+  properties:
+    fileUri:
+      $ref: "#/teacher-teacherReferenceRequest_fileUri"
+teacher-teacherReferenceRequest_properties_statusId:
+  properties:
+    statusId:
+      $ref: "#/teacher-teacherReferenceRequest_statusId"
+teacher-teacherReferenceRequest_properties_isArchived:
+  properties:
+    isArchived:
+      $ref: "#/teacher-teacherReferenceRequest_isArchived"
+teacher-teacherReferenceRequest_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/teacher-teacherReferenceRequest_creationDate"
+teacher-teacherReferenceRequest_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/teacher-teacherReferenceRequest_latestUpdateDate"
+teacher-teacherReferenceRequest_properties_completionDate:
+  properties:
+    completionDate:
+      $ref: "#/teacher-teacherReferenceRequest_completionDate"
+teacher-teacherReferenceRequest_properties_score:
+  properties:
+    score:
+      $ref: "#/teacher-teacherReferenceRequest_score"
+teacher-teacherReferenceRequest_properties_refereePhoneCodeCountryId:
+  properties:
+    refereePhoneCodeCountryId:
+      $ref: "#/teacher-teacherReferenceRequest_refereePhoneCodeCountryId"
+teacher-teacherReferenceRequest_properties_schoolId:
+  properties:
+    schoolId:
+      $ref: "#/teacher-teacherReferenceRequest_schoolId"
+teacher-teacherReferenceRequest_properties_countryId:
+  properties:
+    countryId:
+      $ref: "#/teacher-teacherReferenceRequest_countryId"
+teacher-teacherReferenceRequest_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/teacher-teacherReferenceRequest_creationUserId"
+teacher-teacherReferenceRequest_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/teacher-teacherReferenceRequest_latestUpdateUserId"
+teacher-teacherReferenceRequest_properties_teacher:
+  properties:
+    teacher:
+      $ref: "#/teacher-teacherReferenceRequest_teacher"
+teacher-teacherReferenceRequest_properties_type:
+  properties:
+    type:
+      $ref: "#/teacher-teacherReferenceRequest_type"
+teacher-teacherReferenceRequest_properties_status:
+  properties:
+    status:
+      $ref: "#/teacher-teacherReferenceRequest_status"
+teacher-teacherReferenceRequest_properties_refereePhoneCodeCountry:
+  properties:
+    refereePhoneCodeCountry:
+      $ref: "#/teacher-teacherReferenceRequest_refereePhoneCodeCountry"
+teacher-teacherReferenceRequest_properties_school:
+  properties:
+    school:
+      $ref: "#/teacher-teacherReferenceRequest_school"
+teacher-teacherReferenceRequest_properties_country:
+  properties:
+    country:
+      $ref: "#/teacher-teacherReferenceRequest_country"
+teacher-teacherReferenceRequest_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/teacher-teacherReferenceRequest_creationUser"
+teacher-teacherReferenceRequest_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/teacher-teacherReferenceRequest_latestUpdateUser"
+
+#attributes
+
+teacher-teacherReferenceRequest_id:
+  type: integer
+  example: 
+teacher-teacherReferenceRequest_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
+teacher-teacherReferenceRequest_typeId:
+  type: integer
+  example: 1
+  description: Relationship to teacher-referenceType
+teacher-teacherReferenceRequest_refereeFullName:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_refereeOrganisationName:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_refereeRoleName:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_refereeEmail:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_refereePhoneNumber:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_fileUri:
+  type: string
+  example: 
+teacher-teacherReferenceRequest_statusId:
+  type: integer
+  example: 
+  description: Relationship to teacher-referenceStatus
+teacher-teacherReferenceRequest_isArchived:
+  type: boolean
+  example: 
+teacher-teacherReferenceRequest_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+teacher-teacherReferenceRequest_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+teacher-teacherReferenceRequest_completionDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+teacher-teacherReferenceRequest_score:
+  type: integer
+  example: 
+teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
+  type: integer
+  example: 
+  description: Relationship to Country
+teacher-teacherReferenceRequest_schoolId:
+  type: integer
+  example: 
+  description: Relationship to School
+teacher-teacherReferenceRequest_countryId:
+  type: integer
+  example: 
+  description: Relationship to Country
+teacher-teacherReferenceRequest_creationUserId:
+  type: integer
+  example: 
+  description: Relationship to user
+teacher-teacherReferenceRequest_latestUpdateUserId:
+  type: integer
+  example: 
+  description: Relationship to user
+teacher-teacherReferenceRequest_teacher:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher
+teacher-teacherReferenceRequest_type:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher-referenceType
+teacher-teacherReferenceRequest_status:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher-referenceStatus
+teacher-teacherReferenceRequest_refereePhoneCodeCountry:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country
+teacher-teacherReferenceRequest_school:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+teacher-teacherReferenceRequest_country:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country
+teacher-teacherReferenceRequest_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+teacher-teacherReferenceRequest_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+
+
+
+

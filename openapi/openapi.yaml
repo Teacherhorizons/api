@@ -397,15 +397,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNote" />
 
-  - name: simple-model-teacher-teacherNoteType
-    x-displayName: Simple model - teacher-teacherNoteType
+  - name: simple-model-teacher-noteType
+    x-displayName: Simple model - teacher-noteType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNoteType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-noteType" />
 
   - name: simple-model-teacher-teacherReference
     x-displayName: Simple model - teacher-teacherReference
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReference" />
+
+  - name: simple-model-teacher-teacherReferenceRequest
+    x-displayName: Simple model - teacher-teacherReferenceRequest
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceRequest" />
 
   - name: simple-model-teacher-thDiscoveryMethod
     x-displayName: Simple model - teacher-thDiscoveryMethod
@@ -754,15 +759,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNote" />
 
-  - name: json-api-model-teacher-teacherNoteType
-    x-displayName: JSON:API model - teacher-teacherNoteType
+  - name: json-api-model-teacher-noteType
+    x-displayName: JSON:API model - teacher-noteType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNoteType" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-noteType" />
 
   - name: json-api-model-teacher-teacherReference
     x-displayName: JSON:API model - teacher-teacherReference
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReference" />
+
+  - name: json-api-model-teacher-teacherReferenceRequest
+    x-displayName: JSON:API model - teacher-teacherReferenceRequest
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceRequest" />
 
   - name: json-api-model-teacher-thDiscoveryMethod
     x-displayName: JSON:API model - teacher-thDiscoveryMethod
@@ -1146,8 +1156,9 @@ x-tagGroups:
       - simple-model-teacher-badge
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
-      - simple-model-teacher-teacherNoteType
+      - simple-model-teacher-noteType
       - simple-model-teacher-teacherReference
+      - simple-model-teacher-teacherReferenceRequest
       - simple-model-teacher-thDiscoveryMethod
       - simple-model-teacher-thDiscoveryMethodCategory
       - simple-model-teacher-thStatus
@@ -1246,8 +1257,9 @@ x-tagGroups:
       - json-api-model-teacher-badge
       - json-api-model-teacher-qualificationType
       - json-api-model-teacher-teacherNote
-      - json-api-model-teacher-teacherNoteType
+      - json-api-model-teacher-noteType
       - json-api-model-teacher-teacherReference
+      - json-api-model-teacher-teacherReferenceRequest
       - json-api-model-teacher-thDiscoveryMethod
       - json-api-model-teacher-thDiscoveryMethodCategory
       - json-api-model-teacher-thStatus

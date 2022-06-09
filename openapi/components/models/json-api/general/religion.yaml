@@ -53,4 +53,26 @@ JsonApiModel_general-religion_id:
   readOnly: true
   description: Unique identifier of the general-religion (string)
 
+JsonApiModel_general-religion_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-religion_id"
+
+JsonApiModel_general-religion_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-religion_type"
+        id:
+          $ref: "#/JsonApiModel_general-religion_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
 

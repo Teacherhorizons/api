@@ -50,3 +50,25 @@ JsonApiModel_school-flightAllowanceType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the school-flightAllowanceType (string)
+
+JsonApiModel_school-flightAllowanceType_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-flightAllowanceType_id"
+
+JsonApiModel_school-flightAllowanceType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-flightAllowanceType_type"
+        id:
+          $ref: "#/JsonApiModel_school-flightAllowanceType_id"
+      required:
+        - type
+        - id
+  required:
+    - data

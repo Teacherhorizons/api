@@ -50,3 +50,27 @@ JsonApiModel_school-relocationAllowanceType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the school-relocationAllowanceType (string)
+
+JsonApiModel_school-relocationAllowanceType_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-relocationAllowanceType_id"
+
+JsonApiModel_school-relocationAllowanceType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-relocationAllowanceType_type"
+        id:
+          $ref: "#/JsonApiModel_school-relocationAllowanceType_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+
