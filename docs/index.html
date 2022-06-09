@@ -39,6 +39,10 @@
         float: right;
         margin: 8px;
       }
+      .locateButton {
+        float: right;
+        margin-right: 38px;
+      }
     </style>
     {{{redocHead}}}
   </head>
@@ -90,22 +94,33 @@
         document
         .querySelectorAll('a[href*="#tag/"]')
         .forEach((el) => {
-          const button = document.createElement('button');
-          button.innerText = 'Expand all';
+          const button1 = document.createElement('button');
+          button1.innerText = 'Expand all';
           // el.getele
-          el.parentElement.appendChild(button);
+          el.parentElement.appendChild(button1);
           // el.insertBefore(button, el.firstChild);
-          button.classList.add('expandAllButton')
-          console.log(101, el, button);
+          button1.classList.add('expandAllButton')
+          console.log(101, el, button1);
 
-          button.onclick = function() {
+          button1.onclick = function() {
             console.log(102, this, this.innerText, this.parentElement, this.parentElement.parentElement.parentElement.parentElement);
             const foo = this.parentElement.parentElement.parentElement.parentElement;
             const action = this.innerText == 'Expand all' ? 'expand' : 'collapse';
             expandOrCollapseAllSchemas(foo, action);
             this.innerText = action == 'expand' ? 'Collapse all' : 'Expand all';
           }
-          // .querySelectorAll('tr:not(.expanded) > td > button[aria-label*=expand]')
+
+          const button2 = document.createElement('button');
+          button2.innerText = 'Locate';
+          el.parentElement.appendChild(button2);
+          button2.classList.add('locateButton')
+
+          button2.onclick = function() {
+            // TODO: consider doing this but on initial load (for # in url)
+            document.querySelector('li[data-item-id="tag/applications/operation/getApplications"]').scrollIntoView();
+            document.querySelector('div[data-section-id="operation/getApplications"]').scrollIntoView();
+          }
+
         });
       };
 
