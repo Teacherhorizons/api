@@ -50,3 +50,25 @@ JsonApiModel_school-studentGenderMix_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the school-studentGenderMix (string)
+
+JsonApiModel_school-studentGenderMix_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-studentGenderMix_id"
+
+JsonApiModel_school-studentGenderMix_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-studentGenderMix_type"
+        id:
+          $ref: "#/JsonApiModel_school-studentGenderMix_id"
+      required:
+        - type
+        - id
+  required:
+    - data

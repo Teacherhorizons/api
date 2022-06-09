@@ -52,3 +52,25 @@ JsonApiModel_general-pensionSchemeType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the general-pensionSchemeType (string)
+
+JsonApiModel_general-pensionSchemeType_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-pensionSchemeType_id"
+
+JsonApiModel_general-pensionSchemeType_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-pensionSchemeType_type"
+        id:
+          $ref: "#/JsonApiModel_general-pensionSchemeType_id"
+      required:
+        - type
+        - id
+  required:
+    - data
