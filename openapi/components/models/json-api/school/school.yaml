@@ -234,7 +234,7 @@ JsonApiModel_school_attributes:
     studentGenderMix:
       $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship_attribute"
     affiliatedReligion:
-      $ref:"../general/affiliatedReligion.yaml#/JsonApiModel_general-affiliatedReligion_relationship_attribute"
+      $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship_attribute"
     pensionSchemeType:
       $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship_attribute"
     relocationAllowanceType:
@@ -265,7 +265,7 @@ JsonApiModel_school_relationships:
     studentGenderMix:
       $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship"
     affiliatedReligion:
-      $ref:"../general/affiliatedReligion.yaml#/JsonApiModel_general-affiliatedReligion_relationship"
+      $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship"
     pensionSchemeType:
       $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship"
     relocationAllowanceType:
