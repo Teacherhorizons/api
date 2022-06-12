@@ -1,0 +1,18 @@
+SimpleModel_application-applicationDataIssue:
+  allOf:
+    # - $ref: "#/SimpleModel_application-applicationDataIssue"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_application-applicationDataIssue_id"
+        - $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_attributes"
+        - $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_relationshipIds"
+
+# shared
+SimpleModel_application-applicationDataIssue_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

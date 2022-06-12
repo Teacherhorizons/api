@@ -1,0 +1,67 @@
+JsonApiModel_application-applicationDataIssue:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_application-applicationDataIssue_type"
+    id:
+      $ref: "#/JsonApiModel_application-applicationDataIssue_id"
+    attributes:
+      $ref: "#/JsonApiModel_application-applicationDataIssue_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_application-applicationDataIssue_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_application-applicationDataIssue_attributes:
+  type: object
+  properties:
+  # simple Attributes
+    date:
+      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+
+  # relationship attributes
+    application:
+      $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
+    guideline:
+      $ref: "../application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_relationship_attribute"
+      #TODO guideline
+
+JsonApiModel_application-applicationDataIssue_relationships:
+  type: object
+  description: Related Attributes
+  properties:
+    application:
+      $ref: "../application/application.yaml#/JsonApiModel_application_relationship"
+    guideline:
+      $ref: "../application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_relationship"
+
+#
+JsonApiModel_application-applicationDataIssue_type:
+  type: string
+  example: application-applicationDataIssue
+  description: application-applicationDataIssue
+  readOnly: true
+
+JsonApiModel_application-applicationDataIssue_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the application-applicationDataIssue (string)
+
+JsonApiModel_application-applicationDataIssue_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_application-applicationDataIssue_id"
+
+JsonApiModel_application-applicationDataIssue_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-applicationDataIssue_type"
+        id:
+          $ref: "#/JsonApiModel_application-applicationDataIssue_id"
