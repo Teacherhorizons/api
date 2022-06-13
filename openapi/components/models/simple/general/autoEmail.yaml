@@ -1,0 +1,25 @@
+SimpleModel_general-autoEmail:
+  allOf:
+    # - $ref: "#/SimpleModel_general-autoEmail"
+    - type: object
+      allOf:
+        - $ref: "#/SimpleModel_general-autoEmail_id"
+        - $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_attributes"
+
+# shared
+SimpleModel_general-autoEmail_type:
+  properties:
+    type:
+      type: string
+      example: general-autoEmail
+      description: general-autoEmail
+      readOnly: true
+
+SimpleModel_general-autoEmail_id:
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1
+      readOnly: true
+      description: Unique identifier of the object

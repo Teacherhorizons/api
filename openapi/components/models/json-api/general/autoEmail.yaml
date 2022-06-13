@@ -1,0 +1,56 @@
+JsonApiModel_general-autoEmail:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-autoEmail_type"
+    id:
+      $ref: "#/JsonApiModel_general-autoEmail_id"
+    attributes:
+      $ref: "#/JsonApiModel_application-autoEmail_attributes"
+  required:
+    - type
+    - id
+
+JsonApiModel_application-autoEmail_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_name"
+    storedProcedureName:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_storedProcedureName"
+    mandrillTemplateSlug:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateSlug"
+    mandrillTemplateType:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateType"
+    includeInAllEmailJobsRun:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_includeInAllEmailJobsRun"
+
+JsonApiModel_general-autoEmail_type:
+  type: string
+  example: general-autoEmail
+  description: general-autoEmail
+  readOnly: true
+
+JsonApiModel_general-autoEmail_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the general-autoEmail (string)
+
+JsonApiModel_general-autoEmail_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-autoEmail_id"
+
+JsonApiModel_general-autoEmail_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-autoEmail_type"
+        id:
+          $ref: "#/JsonApiModel_general-autoEmail_id"
