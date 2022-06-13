@@ -4,6 +4,10 @@ get:
     - applications
     - status-proposed
   summary: Get list of 20 applications (proposed)
+  description: |
+    - Admin: Can see all applications and all related events
+    - Teacher: Can see only applications which relate to them, and all related events
+    - School: Can see only applications which have been submitted to them, and only events from that point onwards
   parameters:
     - in: query
       name: schema

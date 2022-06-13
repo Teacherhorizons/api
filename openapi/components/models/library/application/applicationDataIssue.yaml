@@ -1,0 +1,223 @@
+application-applicationDataIssue_attributes_all:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_attributes_admin"
+
+# attributes
+application-applicationDataIssue_attributes_admin:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_attributes_shared"
+    - $ref: "#/application-applicationDataIssue_properties_notes"
+    - $ref: "#/application-applicationDataIssue_properties_creationDate"
+    - $ref: "#/application-applicationDataIssue_properties_latestUpdateDate"
+
+application-applicationDataIssue_attributes_teacher:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_attributes_shared"
+
+  # attributes
+application-applicationDataIssue_attributes_shared:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_properties_date"
+
+# relationshipIds
+
+application-applicationDataIssue_relationshipIds_all:
+  anyOf:
+    - $ref: "#/application-applicationDataIssue_relationshipIds_admin"
+
+application-applicationDataIssue_relationshipIds_admin:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_relationshipIds_shared"
+
+application-applicationDataIssue_relationshipIds_shared:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_properties_applicationId"
+    - $ref: "#/application-applicationDataIssue_properties_typeId"
+    - $ref: "#/application-applicationDataIssue_properties_emailId"
+    - $ref: "#/application-applicationDataIssue_properties_creationUserId"
+    - $ref: "#/application-applicationDataIssue_properties_latestUpdateUserId"
+
+# attribute relationships
+
+application-applicationDataIssue_relationships_all:
+  anyOf:
+    - $ref: "#/application-applicationDataIssue_relationships_admin"
+
+application-applicationDataIssue_relationships_admin:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_properties_application"
+    - $ref: "#/application-applicationDataIssue_properties_type"
+
+application-applicationDataIssue_relationships_shared:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_properties_email"
+
+# relationships
+# TODO - not yet used; consider referring to the json-api user model here, and then trying to use
+application-applicationDataIssue_relationships:
+  allOf:
+    - $ref: "#/application-applicationDataIssue_properties_creationUser"
+    - $ref: "#/application-applicationDataIssue_properties_latestUpdateUser"
+
+# properties
+application-applicationDataIssue_properties_date:
+  properties:
+    date:
+      $ref: "#/application-applicationDataIssue_date"
+
+application-applicationDataIssue_properties_notes:
+  properties:
+    notes:
+      $ref: "#/application-applicationDataIssue_notes"
+
+application-applicationDataIssue_properties_creationDate:
+  properties:
+    creationDate:
+      $ref: "#/application-applicationDataIssue_creationDate"
+
+application-applicationDataIssue_properties_latestUpdateDate:
+  properties:
+    latestUpdateDate:
+      $ref: "#/application-applicationDataIssue_latestUpdateDate"
+
+application-applicationDataIssue_properties_applicationId:
+  properties:
+    applicationId:
+      $ref: "#/application-applicationDataIssue_applicationId"
+
+application-applicationDataIssue_properties_typeId:
+  properties:
+    eventTypeId:
+      $ref: "#/application-applicationDataIssue_typeId"
+
+application-applicationDataIssue_properties_emailId:
+  properties:
+    emailId:
+      $ref: "#/application-applicationDataIssue_emailId"
+
+application-applicationDataIssue_properties_creationUserId:
+  properties:
+    creationUserId:
+      $ref: "#/application-applicationDataIssue_creationUserId"
+
+application-applicationDataIssue_properties_latestUpdateUserId:
+  properties:
+    latestUpdateUserId:
+      $ref: "#/application-applicationDataIssue_latestUpdateUserId"
+
+application-applicationDataIssue_properties_application:
+  properties:
+    application:
+      $ref: "#/application-applicationDataIssue_application"
+
+application-applicationDataIssue_properties_email:
+  properties:
+    email:
+      $ref: "#/application-applicationDataIssue_email"
+
+application-applicationDataIssue_properties_type:
+  properties:
+    type:
+      $ref: "#/application-applicationDataIssue_type"
+
+application-applicationDataIssue_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/application-applicationDataIssue_creationUser"
+
+application-applicationDataIssue_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/application-applicationDataIssue_latestUpdateUser"
+
+# attributes
+application-applicationDataIssue_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationDataIssue_notes:
+  type: string
+  example: Foo bar
+
+application-applicationDataIssue_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationDataIssue_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+application-applicationDataIssue_applicationId:
+  type: integer
+  example: 1
+  description: Relationship to application
+
+application-applicationDataIssue_typeId:
+  type: integer
+  example: 1
+  description: Relationship to application_eventType
+
+application-applicationDataIssue_emailId:
+  type: integer
+  example: 1
+  description: Relationship to general_emails
+
+application-applicationDataIssue_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application-applicationDataIssue_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+application-applicationDataIssue_application:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  required:
+    - id
+
+application-applicationDataIssue_email:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  required:
+    - id
+
+application-applicationDataIssue_type:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  required:
+    - id
+
+application-applicationDataIssue_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to User
+  required:
+    - id
+
+application-applicationDataIssue_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to User
+  required:
+    - id
