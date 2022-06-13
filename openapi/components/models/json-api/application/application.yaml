@@ -158,3 +158,10 @@ JsonApiModel_application_relationships_shared:
       $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
     # latestEvent:
     #   $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+
+JsonApiModel_application_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "#/JsonApiModel_application_id"
+
