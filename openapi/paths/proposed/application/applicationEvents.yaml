@@ -3,7 +3,7 @@ get:
   tags:
     - applications
     - status-proposed
-  summary: Get application events (proposed)
+  summary: Get application events
   parameters:
     - in: query
       name: schema
@@ -45,7 +45,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/applicationEvent.yaml#/Application-applicationEventResponse"
+            $ref: "../../../components/responses/proposed/applicationEvents.yaml#/Application-applicationEventsResponse"
     "400":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
@@ -62,8 +62,11 @@ get:
     - api_key: []
 
 post:
-  description: ""
   operationId: postApplicationEvent
+  summary: Create application event
+  tags:
+    - applications
+  description: ""
   requestBody:
     content:
       application/json:
@@ -115,6 +118,3 @@ post:
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  summary: Create application event (proposed)
-  tags:
-    - applications

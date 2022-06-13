@@ -3,7 +3,7 @@ get:
   tags:
     - applications
     - status-proposed
-  summary: Get an application (proposed)
+  summary: Get an application
   parameters:
     - in: path
       name: applicationId
@@ -56,8 +56,11 @@ get:
     - api_key: []
 
 patch:
-  description: Update Application
   operationId: patchApplication
+  tags:
+    - applications
+  summary: Update application
+  description: ""
   requestBody:
     content:
       application/json:
@@ -91,6 +94,3 @@ patch:
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  summary: Update application (proposed)
-  tags:
-    - applications

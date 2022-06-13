@@ -1,4 +1,4 @@
-Application-applicationEventResponse:
+Application-applicationEventsResponse:
   type: object
   properties:
     schema:
@@ -11,16 +11,16 @@ Application-applicationEventResponse:
   discriminator:
     propertyName: schema
     mapping:
-      admin-oneApplication: "#/Application-applicationEventResponse_admin-oneApplication"
-      admin-allApplications: "#/Application-applicationEventResponse_admin-allApplications"
-      teacher: "#/Application-applicationEventResponse_teacher"
+      admin-oneApplication: "#/Application-applicationEventsResponse_admin-oneApplication"
+      admin-allApplications: "#/Application-applicationEventsResponse_admin-allApplications"
+      teacher: "#/Application-applicationEventsResponse_teacher"
   required:
     - schema
 
 # admin-oneApplication
-Application-applicationEventResponse_admin-oneApplication:
+Application-applicationEventsResponse_admin-oneApplication:
   allOf:
-    - $ref: "#/Application-applicationEventResponse"
+    - $ref: "#/Application-applicationEventsResponse"
     - properties:
         data:
           type: object
@@ -65,12 +65,12 @@ Application-applicationEventResponse_admin-oneApplication:
         included:
           type: array
           items:
-            $ref: "#/Application-applicationEventResponse_includedUser_admin-oneApplication"
+            $ref: "#/Application-applicationEventsResponse_includedUser_admin-oneApplication"
     - required:
         - data
         - included
 
-Application-applicationEventResponse_includedUser_admin-oneApplication:
+Application-applicationEventsResponse_includedUser_admin-oneApplication:
   type: object
   properties:
     type:
@@ -93,9 +93,9 @@ Application-applicationEventResponse_includedUser_admin-oneApplication:
     - attributes
 
 # admin-allApplications
-Application-applicationEventResponse_admin-allApplications:
+Application-applicationEventsResponse_admin-allApplications:
   allOf:
-    - $ref: "#/Application-applicationEventResponse"
+    - $ref: "#/Application-applicationEventsResponse"
     - properties:
         data:
           type: object
@@ -144,15 +144,15 @@ Application-applicationEventResponse_admin-allApplications:
           type: array
           items:
             anyOf:
-              - $ref: "#/Application-applicationEventResponse_includedUser_admin-allApplications"
-              - $ref: "#/Application-applicationEventResponse_includedApplication_admin-allApplications"
-              - $ref: "#/Application-applicationEventResponse_includedJob_admin-allApplications"
-              - $ref: "#/Application-applicationEventResponse_includedSchool_admin-allApplications"
+              - $ref: "#/Application-applicationEventsResponse_includedUser_admin-allApplications"
+              - $ref: "#/Application-applicationEventsResponse_includedApplication_admin-allApplications"
+              - $ref: "#/Application-applicationEventsResponse_includedJob_admin-allApplications"
+              - $ref: "#/Application-applicationEventsResponse_includedSchool_admin-allApplications"
     - required:
         - data
         - included
 
-Application-applicationEventResponse_includedUser_admin-allApplications:
+Application-applicationEventsResponse_includedUser_admin-allApplications:
   type: object
   properties:
     type:
@@ -174,7 +174,7 @@ Application-applicationEventResponse_includedUser_admin-allApplications:
     - id
     - attributes
 
-Application-applicationEventResponse_includedApplication_admin-allApplications:
+Application-applicationEventsResponse_includedApplication_admin-allApplications:
   type: object
   properties:
     type:
@@ -201,7 +201,7 @@ Application-applicationEventResponse_includedApplication_admin-allApplications:
     - attributes
     - relationships
 
-Application-applicationEventResponse_includedJob_admin-allApplications:
+Application-applicationEventsResponse_includedJob_admin-allApplications:
   type: object
   properties:
     type:
@@ -228,7 +228,7 @@ Application-applicationEventResponse_includedJob_admin-allApplications:
     - attributes
     - relationships
 
-Application-applicationEventResponse_includedSchool_admin-allApplications:
+Application-applicationEventsResponse_includedSchool_admin-allApplications:
   type: object
   properties:
     type:
@@ -251,9 +251,9 @@ Application-applicationEventResponse_includedSchool_admin-allApplications:
     - attributes
 
 # teacher
-Application-applicationEventResponse_teacher:
+Application-applicationEventsResponse_teacher:
   allOf:
-    - $ref: "#/Application-applicationEventResponse"
+    - $ref: "#/Application-applicationEventsResponse"
     - properties:
         data:
           type: object

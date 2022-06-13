@@ -1,6 +1,9 @@
 patch:
-  description: Update Application Event
   operationId: patchApplicationEvent
+  tags:
+    - applications
+  summary: Update application event
+  description: ""
   parameters:
     - in: path
       name: applicationEventId
@@ -46,6 +49,3 @@ patch:
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  summary: Update application event (proposed)
-  tags:
-    - applications

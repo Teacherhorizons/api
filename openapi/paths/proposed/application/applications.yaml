@@ -3,7 +3,7 @@ get:
   tags:
     - applications
     - status-proposed
-  summary: Get list of 20 applications (proposed)
+  summary: Get list of 20 applications
   description: |
     - Admin: Can see all applications and all related events
     - Teacher: Can see only applications which relate to them, and all related events
@@ -53,8 +53,11 @@ get:
     - api_key: []
 
 post:
-  description: ""
   operationId: postApplication
+  summary: Create application
+  tags:
+    - applications
+  description: ""
   requestBody:
     content:
       application/json:
@@ -103,6 +106,3 @@ post:
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  summary: Create application (proposed)
-  tags:
-    - applications
