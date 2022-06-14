@@ -92,6 +92,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventType" />
 
+  - name: simple-model-application-guideline
+    x-displayName: Simple model - application-guideline
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-guideline" />
+
   - name: simple-model-application-action
     x-displayName: Simple model - application-action
     description: |
@@ -634,6 +639,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventType" />
 
+  - name: json-api-model-application-guideline
+    x-displayName: JSON:API model - application-guideline
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-guideline" />
+
   - name: json-api-model-application-status
     x-displayName: JSON:API model - application-status
     description: |
@@ -1126,6 +1136,7 @@ x-tagGroups:
       - simple-model-application-applicationEvent
       - simple-model-application-applicationDataIssue
       - simple-model-application-eventType
+      - simple-model-application-guideline
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
@@ -1229,6 +1240,7 @@ x-tagGroups:
       - json-api-model-application-applicationEvent
       - json-api-model-application-applicationDataIssue
       - json-api-model-application-eventType
+      - json-api-model-application-guideline
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction

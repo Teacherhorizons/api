@@ -24,8 +24,7 @@ JsonApiModel_application-applicationDataIssue_attributes:
     application:
       $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
     guideline:
-      $ref: "../application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_relationship_attribute"
-      #TODO guideline
+      $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
 
 JsonApiModel_application-applicationDataIssue_relationships:
   type: object
@@ -34,7 +33,7 @@ JsonApiModel_application-applicationDataIssue_relationships:
     application:
       $ref: "../application/application.yaml#/JsonApiModel_application_relationship"
     guideline:
-      $ref: "../application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_relationship"
+      $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
 
 #
 JsonApiModel_application-applicationDataIssue_type:

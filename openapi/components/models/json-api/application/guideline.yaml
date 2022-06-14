@@ -1,0 +1,65 @@
+JsonApiModel_application-guideline:
+  type: object
+  properties:
+    type:
+      $ref: "#/JsonApiModel_application-guideline_type"
+    id:
+      $ref: "#/JsonApiModel_application-guideline_id"
+    attributes:
+      $ref: "#/JsonApiModel_application-guideline_attributes"
+    relationships:
+      $ref: "#/JsonApiModel_application-guideline_relationships"
+  required:
+    - type
+    - id
+
+JsonApiModel_application-guideline_attributes:
+  type: object
+  properties:
+    # simple attributes
+    name:
+      $ref: "../../library/application/guideline.yaml#/application-guideline_name"
+    # relationship attributes
+    fromEventType:
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+    toEventType:
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+
+JsonApiModel_application-guideline_relationships:
+  type: object
+  description: Related Attributes
+  properties:
+    fromEventType:
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship"
+    toEventType:
+      $ref: "./eventType.yaml#/JsonApiModel_application-eventType_relationship"
+
+#
+JsonApiModel_application-guideline_type:
+  type: string
+  example: application-guideline
+  description: application-guideline
+  readOnly: true
+
+JsonApiModel_application-guideline_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the application-guideline (string)
+
+JsonApiModel_application-guideline_relationship_attribute:
+  type: object
+  properties:
+    id:
+      $ref: "../../library/application/guideline.yaml#/application-guideline_id"
+
+JsonApiModel_application-guideline_relationship:
+  type: object
+  properties:
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "#/JsonApiModel_application-guideline_type"
+        id:
+          $ref: "#/JsonApiModel_application-guideline_id"

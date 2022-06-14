@@ -51,8 +51,9 @@ SimpleModels:
     - $ref: "../../models/simple/application/action.yaml#/SimpleModel_application-action"
     - $ref: "../../models/simple/application/applicationEvent.yaml#/SimpleModel_application-applicationEvent"
     - $ref: "../../models/simple/application/applicationDataIssue.yaml#/SimpleModel_application-applicationDataIssue"
-    - $ref: "../../models/simple/application/status.yaml#/SimpleModel_application-status"
     - $ref: "../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType"
+    - $ref: "../../models/simple/application/guideline.yaml#/SimpleModel_application-guideline"
+    - $ref: "../../models/simple/application/status.yaml#/SimpleModel_application-status"
     - $ref: "../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType"
     - $ref: "../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction"
 
@@ -148,6 +149,7 @@ JsonApiModels:
     - $ref: "../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent"
     - $ref: "../../models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue"
     - $ref: "../../models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType"
+    - $ref: "../../models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline"
     - $ref: "../../models/json-api/application/status.yaml#/JsonApiModel_application-status"
     - $ref: "../../models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType"
     - $ref: "../../models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction"
