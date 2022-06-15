@@ -1,0 +1,55 @@
+Application-eventTypeActionsResponse:
+  type: object
+  properties:
+    schema:
+      type: string
+      example: admin
+      enum:
+        - admin
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/Application-eventTypeActions_admin"
+  required:
+    - schema
+
+# admin
+Application-eventTypeActions_admin:
+  allOf:
+    - $ref: "#/Application-eventTypeActionsResponse"
+    - properties:
+        data:
+          type: object
+          properties:
+            type:
+              $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type"
+            id:
+              $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id"
+            attributes:
+              type: object
+              properties:
+                label:
+                  $ref: "../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+              required:
+                - date
+            relationships:
+              type: object
+              properties:
+                applicationEventType:
+                  $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship"
+                # actionType:
+                #   $ref: "../../../components/models/json-api/application/actionType.yaml#/JsonApiModel_application-actionType_relationship"
+                manualEmailTemplate:
+                  $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
+                autoEmail:
+                  $ref: "../../../components/models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship"
+              required:
+                - applicationEventType
+                - actionType
+                - manualEmailTemplate
+                - autoEmail
+          required:
+            - type
+            - id
+            - attributes
+            - relationships

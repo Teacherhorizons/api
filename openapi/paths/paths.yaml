@@ -23,6 +23,9 @@
 /application-applicationEvents/{applicationEventId}:
   $ref: "./../paths/proposed/application/applicationEvent.yaml"
 
+/application-eventTypeAction:
+  $ref: "./../paths/proposed/application/eventTypeAction.yaml"
+
 # cities
 /v3/city/id/{cityId}/profile:
   $ref: "./../paths/current/cities/city-id-profile.yaml"
