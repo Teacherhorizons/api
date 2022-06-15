@@ -38,10 +38,10 @@ general-manualEmailTemplate_properties_body:
 #attributes
 general-manualEmailTemplate_id:
   type: integer
-  example: 1
+  example: 3
 general-manualEmailTemplate_to:
   type: string
-  example: 
+  example: ${teacher.email}
 general-manualEmailTemplate_cc:
   type: string
   example: 
@@ -50,7 +50,7 @@ general-manualEmailTemplate_bcc:
   example: 
 general-manualEmailTemplate_subject:
   type: string
-  example: 
+  example: Your application to ${job.school.name} in ${job.school.city.country.name}
 general-manualEmailTemplate_body:
   type: string
-  example: 
+  example: Hi ${teacher.firstName},\r\n \r\nThanks for your interest in this '${job.title}' opportunity at ${job.school.name} in ${job.school.city.country.name}

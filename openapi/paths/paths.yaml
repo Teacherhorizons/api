@@ -23,7 +23,7 @@
 /application-applicationEvents/{applicationEventId}:
   $ref: "./../paths/proposed/application/applicationEvent.yaml"
 
-/application-eventTypeAction:
+/application-eventTypeActions:
   $ref: "./../paths/proposed/application/eventTypeAction.yaml"
 
 # cities
@@ -133,6 +133,12 @@
 
 /general/{currencyId}:
   $ref: "./../paths/proposed/general/currency.yaml"
+
+/general-manualEmailTemplate:
+  $ref: "./../paths/proposed/general/manualEmailTemplate.yaml"
+
+/general-manualEmailTemplates:
+  $ref: "./../paths/proposed/general/manualEmailTemplates.yaml"
 
 # regions
 /regional-regions/{regionId}:
