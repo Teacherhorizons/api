@@ -5,6 +5,13 @@ get:
     - status-proposed
   summary: Get manual email template
   parameters:
+    - in: path
+      name: manualEmailTemplateId
+      required: true
+      example: 12
+      schema:
+        type: integer
+        format: int32
     - in: query
       name: filter
       style: deepObject

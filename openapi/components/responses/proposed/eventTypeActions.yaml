@@ -33,6 +33,8 @@ Application-eventTypeActions_admin:
               properties:
                 label:
                   $ref: "../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+                applicationEventType:
+                  $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
               required:
                 - label
             id:
