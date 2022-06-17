@@ -12,6 +12,7 @@ ApplicationResponse:
     propertyName: schema
     mapping:
       admin: "#/ApplicationResponse_admin"
+      school: "#/ApplicationResponse_school"
       teacher: "#/ApplicationResponse_teacher"
   required:
     - schema
@@ -283,6 +284,170 @@ ApplicationResponse_teacher_stage_3_description:
 
 #
 ApplicationResponse_includedUser_teacher:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type"
+    id:
+      $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
+    attributes:
+      type: object
+      properties:
+        firstName:
+          $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
+        lastName:
+          $ref: "../../../components/models/library/user/user.yaml#/user_lastName"
+        email:
+          $ref: "../../../components/models/library/user/user.yaml#/user_email"
+      description: Note that a user is only included if the lraUser or thOwnerUser are included
+      required:
+        - firstName
+        - lastName
+        - email
+
+# school
+ApplicationResponse_school:
+  allOf:
+    - $ref: "#/ApplicationResponse"
+    - properties:
+        data:
+          type: object
+          properties:
+            type:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
+            id:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
+            attributes:
+              type: object
+              properties:
+                # simple attributes
+                creationDate:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_creationDate"
+                # relationship attributes
+                status:
+                  $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+              required:
+                - creationDate
+                - status
+            relationships:
+              type: object
+              properties:
+                job:
+                  $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+              required:
+                - job
+        included:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/ApplicationResponse_includedSchool_school"
+              - $ref: "#/ApplicationResponse_includedJob_school"
+              - $ref: "#/ApplicationResponse_includedUser_school"
+
+ApplicationResponse_includedJob_school:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      properties:
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+        startDate:
+          $ref: "../../../components/models/library/job/job.yaml#/job_startDate"
+        status:
+          $ref: "../../../components/models/library/job/job.yaml#/job_status"
+        subject:
+          $ref: "../../../components/models/library/job/job.yaml#/job_subject"
+        role:
+          $ref: "../../../components/models/library/job/job.yaml#/job_role"
+      required:
+        - title
+        - startDate
+        - status
+        - subject
+        - role
+    relationships:
+      type: object
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+        thOwnerUser:
+          allOf:
+            - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            - $ref: "#/ApplicationResponse_school_stage_2_description"
+      required:
+        - school
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+ApplicationResponse_includedSchool_school:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      properties:
+        name:
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
+        city:
+          $ref: "../../../components/models/library/school/school.yaml#/school_city"
+        leadRecruitmentContactName:
+          allOf:
+            - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
+            - $ref: "#/ApplicationResponse_school_stage_3_description"
+        leadRecruitmentContactEmail:
+          allOf:
+            - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
+            - $ref: "#/ApplicationResponse_school_stage_3_description"
+      required:
+        - name
+        - slug
+        - city
+    relationships:
+      type: object
+      properties:
+        lraUser:
+          allOf:
+            - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            - $ref: "#/ApplicationResponse_school_stage_2_description"
+  required:
+    - type
+    - id
+    - attributes
+
+# descriptions
+ApplicationResponse_school_stage_2_description:
+#verify these with Ryan
+  description: |
+    Included if application contains any of these events:
+    - Info request from candidate
+    - Interview with adviser - invited
+    - Interview with adviser - arranged
+    - Interview with adviser
+    - Submission to school
+
+ApplicationResponse_school_stage_3_description:
+#verify these with Ryan
+  description: |
+    Included if application contains any of these events:
+    - Interview with School - invited
+    - Interview with School - arranged
+    - Interview with School
+
+#
+ApplicationResponse_includedUser_school:
   type: object
   properties:
     type:
