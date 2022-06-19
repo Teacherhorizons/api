@@ -4,47 +4,47 @@ properties:
   stringProperty:
     description: Property name's description (type is string)
     type: string
-    examples:
-      - example
-      - sample
+    # example:
+    #   - example
+    #   - sample
   readOnlyStringProperty:
     description: Notice this only appears in the response.
     type: string
     readOnly: true
-    examples:
-      - example
+    # examples:
+    #   - example
   writeOnlyStringProperty:
     description: Notice this only appears in the request.
     type: string
     writeOnly: true
-    examples:
-      - example
+    # examples:
+    #   - example
   minLengthString:
     description: Property name's description (type is string)
     type: string
     minLength: 4
-    examples:
-      - example
+    # examples:
+    #   - example
   maxLengthString:
     description: Property name's description (type is string)
     type: string
     maxLength: 140
-    examples:
-      - example
+    # examples:
+    #   - example
   minAndMaxLengthString:
     description: Property name's description (type is string)
     type: string
     minLength: 4
     maxLength: 140
-    examples:
-      - example
+    # examples:
+    #   - example
   nullableOrStringProperty:
     description: Property name's description (type is string or null)
-    type:
-      - string
-      - null
-    examples:
-      - example
+    # type:
+    #   - string
+    #   - null
+    # examples:
+    #   - example
   stringEnumValues:
     description: Property name's description (type is string)
     type: string
@@ -110,11 +110,11 @@ properties:
   numberGreaterThan:
     description: Property name's description (type is number)
     type: number
-    exclusiveMinimum: 5
+    # exclusiveMinimum: 5
   numberLessThan:
     description: Property name's description (type is number)
     type: number
-    exclusiveMaximum: 8
+    # exclusiveMaximum: 8
   numberLessThanOrEquals:
     description: Property name's description (type is number)
     type: number
@@ -128,12 +128,12 @@ properties:
     description: Property name's description (type is number)
     type: number
     minimum: 5
-    exclusiveMaximum: 8
+    # exclusiveMaximum: 8
   numberRangeExclusiveMinimumAndMaximum:
     description: Property name's description (type is number)
     type: number
-    exclusiveMinimum: 5
-    exclusiveMaximum: 8
+    # exclusiveMinimum: 5
+    # exclusiveMaximum: 8
   numberMultipleOf:
     description: Property name's description (type is number)
     type: number
