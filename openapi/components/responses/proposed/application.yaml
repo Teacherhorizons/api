@@ -323,11 +323,14 @@ ApplicationResponse_school:
                 # simple attributes
                 creationDate:
                   $ref: "../../../components/models/library/application/application.yaml#/application_creationDate"
+                latestUpdateDate:
+                  $ref: "../../../components/models/library/application/application.yaml#/application_latestUpdateDate"
                 # relationship attributes
                 status:
                   $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
               required:
                 - creationDate
+                - latestUpdateDate
                 - status
             relationships:
               type: object
@@ -360,16 +363,10 @@ ApplicationResponse_includedJob_school:
           $ref: "../../../components/models/library/job/job.yaml#/job_startDate"
         status:
           $ref: "../../../components/models/library/job/job.yaml#/job_status"
-        subject:
-          $ref: "../../../components/models/library/job/job.yaml#/job_subject"
-        role:
-          $ref: "../../../components/models/library/job/job.yaml#/job_role"
       required:
         - title
         - startDate
         - status
-        - subject
-        - role
     relationships:
       type: object
       properties:
@@ -403,25 +400,25 @@ ApplicationResponse_includedSchool_school:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
-        leadRecruitmentContactName:
-          allOf:
-            - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
-            - $ref: "#/ApplicationResponse_school_stage_3_description"
-        leadRecruitmentContactEmail:
-          allOf:
-            - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
-            - $ref: "#/ApplicationResponse_school_stage_3_description"
+        # leadRecruitmentContactName:
+        #   allOf:
+        #     - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
+        #     - $ref: "#/ApplicationResponse_school_stage_3_description"
+        # leadRecruitmentContactEmail:
+        #   allOf:
+        #     - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
+        #     - $ref: "#/ApplicationResponse_school_stage_3_description"
       required:
         - name
         - slug
         - city
-    relationships:
-      type: object
-      properties:
-        lraUser:
-          allOf:
-            - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-            - $ref: "#/ApplicationResponse_school_stage_2_description"
+    # relationships:
+    #   type: object
+    #   properties:
+    #     lraUser:
+    #       allOf:
+    #         - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+    #         - $ref: "#/ApplicationResponse_school_stage_2_description"
   required:
     - type
     - id
