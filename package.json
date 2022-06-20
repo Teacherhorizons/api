@@ -12,11 +12,9 @@
   "scripts": {
     "start": "openapi preview-docs -p 8080",
     "build": "openapi bundle --output=dist",
-    "build-wip-2": "openapi bundle --output=dist/openapi.yaml --dereferenced",
-    "build-wip-3": "openapi bundle --output=dist/openapi.json --dereferenced",
-    "build-wip-4": "openapi bundle --output=dist/openapi.json",
     "validate": "openapi lint",
     "lint": "openapi lint",
+    "pretest": "openapi bundle --output=tests/specs/openapi.yaml --dereferenced",
     "test": "jest --watchAll=false",
     "jest": "jest --watchAll=false",
     "lint--generate-ignore-file": "openapi lint --generate-ignore-file"

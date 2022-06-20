@@ -17,7 +17,7 @@ export const api = axios.create({
 
 export function setup(context = {}) {
   beforeEach(() => {
-    jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi3.yaml'));
+    jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
   });
   // afterEach(...);
 

@@ -8,11 +8,11 @@ JsonApiModel_teacher-thDiscoveryMethod:
     attributes:
       allOf:
         - $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_attributes"
-    relationships:
-      $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_relationships"
+    # relationships:
+    #   $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_relationships"
+    #   attributes:
+    #     allOf:
+    #       $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_relationships"
   required:
     - type
     - id

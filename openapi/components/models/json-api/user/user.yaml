@@ -8,11 +8,11 @@ JsonApiModel_user:
     attributes:
       allOf:
         - $ref: "../../library/user/user.yaml#/user_attributes"
-    relationships:
-      $ref: "#/JsonApiModel_user_relationships"
-      attributes:
-        allOf:
-          $ref: "../../library/user/user.yaml#/user_relationships"
+    # relationships:
+    #   $ref: "#/JsonApiModel_user_relationships"
+    #   attributes:
+    #     allOf:
+    #       $ref: "../../library/user/user.yaml#/user_relationships"
   required:
     - type
     - id
