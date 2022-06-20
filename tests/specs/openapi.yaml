@@ -1,0 +1,121 @@
+openapi: 3.0.0
+servers:
+  - url: https://beta.teacherhorizons.com/th/api
+info:
+  title: Example API
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      responses:
+        200:
+          description: WIP
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getUsers_200"
+  /v1/lists:
+    get:
+      responses:
+        200:
+          description: WIP
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getLists_200"
+  /applications/{applicationId}:
+    get:
+      operationId: getApplication
+      tags:
+        - applications
+        - status-proposed
+      summary: Get an application (proposed)
+      parameters:
+        - in: path
+          name: applicationId
+          required: true
+          example: 12
+          schema:
+            type: integer
+            format: int32
+        - in: query
+          name: schema
+          required: true
+          schema:
+            type: string
+            enum:
+              - admin
+              - school
+              - teacher
+      responses:
+        "200":
+          description: OK (Request successful)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: &ref_103
+                  schema:
+                    type: string
+                    example: admin
+                    enum:
+                      - admin
+                      - school
+                      - teacher
+                discriminator: &ref_104
+                  propertyName: schema
+                  mapping:
+                    admin: "#/ApplicationResponse_admin"
+                    teacher: "#/ApplicationResponse_teacher"
+                required: &ref_105
+                  - schema
+components:
+  schemas:
+    getUsers_200:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: string
+          createdAt:
+            type: integer
+          name:
+            type: string
+          imageUrl:
+            type: string
+        required:
+          - id
+          - createdAt
+          - name
+          - imageUrl
+    getLists_200:
+      type: object
+      properties:
+        regions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+                example: 1
+              alias:
+                type: string
+                example: /Africa
+              slug:
+                type: string
+                example: africa
+              name:
+                type: string
+                example: Africa
+              locationLatLong:
+                type: string
+                example: 12.27559889056173117.46826171875
+            required:
+              - id
+              - alias
+              - slug
+              - name
+              - locationLatLong

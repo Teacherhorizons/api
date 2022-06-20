@@ -1,0 +1,77 @@
+openapi: 3.1.0
+servers:
+  - url: https://beta.teacherhorizons.com/th/api
+paths:
+  /applications/{applicationId}:
+    get:
+      operationId: getApplication
+      tags:
+        - applications
+        - status-proposed
+      summary: Get an application (proposed)
+      parameters:
+        - in: path
+          name: applicationId
+          required: true
+          example: 12
+          schema:
+            type: integer
+            format: int32
+        - in: query
+          name: schema
+          required: true
+          schema:
+            type: string
+            enum:
+              - admin
+              - school
+              - teacher
+      responses:
+        '200':
+          description: OK (Request successful)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: &ref_103
+                  schema:
+                    type: string
+                    example: admin
+                    enum:
+                      - admin
+                      - school
+                      - teacher
+                discriminator: &ref_104
+                  propertyName: schema
+                  mapping:
+                    admin: '#/ApplicationResponse_admin'
+                    teacher: '#/ApplicationResponse_teacher'
+                required: &ref_105
+                  - schema
+    patch:
+      description: Update Application
+      operationId: patchApplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: application
+                attributes:
+                  allOf:
+                    - type: object
+                    - properties: *ref_0
+      responses:
+        '204':
+          description: NO_CONTENT (Request successful)
+          content:
+            application/json:
+              schema:
+                type: object
+                default: null
+      summary: Update application (proposed)
+      tags:
+        - applications
