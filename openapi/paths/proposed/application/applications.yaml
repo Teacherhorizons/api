@@ -73,7 +73,11 @@ post:
                 attributes:
                   allOf:
                     - type: object
-                      $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
+                      properties:
+                        job:
+                          $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_attribute"
+                        memberNumber:
+                          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
                     - required:
                         - job
                         - memberNumber

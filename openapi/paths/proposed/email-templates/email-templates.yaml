@@ -12,13 +12,8 @@ get:
       explode: true
       schema:
         type: object
-        properties:
-          id:
-            description: Typically used as [id][contains]
-            type: object
-            properties:
-              contains:
-                type: string
+        example:
+          application: application id
         # example:
         # id.contains: 1,3
     - in: query

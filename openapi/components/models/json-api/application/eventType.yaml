@@ -19,7 +19,6 @@ JsonApiModel_application-eventType_attributes:
   # simple Attributes
     name:
       $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-
   # relationship attributes
     applicationStatus:
       $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
