@@ -321,8 +321,6 @@ ApplicationResponse_school:
               type: object
               properties:
                 # simple attributes
-                creationDate:
-                  $ref: "../../../components/models/library/application/application.yaml#/application_creationDate"
                 latestUpdateDate:
                   $ref: "../../../components/models/library/application/application.yaml#/application_latestUpdateDate"
                 # relationship attributes
@@ -426,7 +424,7 @@ ApplicationResponse_includedSchool_school:
 
 # descriptions
 ApplicationResponse_school_stage_2_description:
-#verify these with Ryan
+  #verify these with Ryan
   description: |
     Included if application contains any of these events:
     - Info request from candidate
@@ -436,7 +434,7 @@ ApplicationResponse_school_stage_2_description:
     - Submission to school
 
 ApplicationResponse_school_stage_3_description:
-#verify these with Ryan
+  #verify these with Ryan
   description: |
     Included if application contains any of these events:
     - Interview with School - invited

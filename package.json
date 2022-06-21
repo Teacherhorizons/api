@@ -11,10 +11,11 @@
   "private": true,
   "scripts": {
     "start": "openapi preview-docs -p 8080",
-    "build": "openapi bundle --output=dist",
+    "build-yaml": "openapi bundle --output=tests/specs/openapi.yaml --dereferenced",
+    "build-json": "openapi bundle --output=tests/specs/openapi.json --dereferenced",
     "validate": "openapi lint",
     "lint": "openapi lint",
-    "pretest": "openapi bundle --output=tests/specs/openapi.yaml --dereferenced",
+    "pretest": "npm run build-yaml",
     "test": "jest --watchAll=false",
     "jest": "jest --watchAll=false",
     "lint--generate-ignore-file": "openapi lint --generate-ignore-file"
