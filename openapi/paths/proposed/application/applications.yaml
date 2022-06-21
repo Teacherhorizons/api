@@ -25,11 +25,32 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "../../../components/models/library/application/application.yaml#/application_metaProperties_shared"
-          # $ref: "../../../components/schemas/proposed/simple-models/Application.yaml#/ApplicationProperties_all"
+        properties:
+          filter[id][contains]:
+            type: number
+          filter[status.id][contains]:
+            type: number
         example:
-          application: application id, school name, job id
+          id][contains: 1
+          status.id][contains: 1
+    - in: query
+      name: page
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        properties:
+          page[number]:
+            type: number
+          page[size]:
+            type: number
+        example:
+          number: 1
+          size: 1
+    - in: query
+      name: sort
+      example: -creationDate
   responses:
     "200":
       description: OK (Request successful)

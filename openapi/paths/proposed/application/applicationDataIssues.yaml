@@ -6,14 +6,28 @@ get:
   summary: Get application data issue
   parameters:
     - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - admin
+      description: |
+        - admin: only admin can see data issues
+    - in: query
       name: filter
       style: deepObject
       allowReserved: true
       explode: true
       schema:
         type: object
+        properties:
+          filter[application.id]:
+            type: number
         example:
-          application: application id
+          application.id: 1
+        required:
+          - filter[application.id]
 
   responses:
     "200":
