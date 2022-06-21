@@ -6,12 +6,9 @@ import config from './config';
 
 export const api = axios.create({
   baseURL: config.baseURL,
-  // @ts-ignore:
-  proxy: {
-    auth: config.auth
-  },
+  auth: config.auth,
   headers: {
-    Cookie: 'JSESSIONID=' + config.JSESSIONID
+    Cookie: 'JSESSIONID=' + config.JSESSIONID,
   },
 });
 
