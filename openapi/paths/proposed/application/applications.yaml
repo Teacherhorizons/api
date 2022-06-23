@@ -30,9 +30,58 @@ get:
             type: number
           filter[status.id][contains]:
             type: number
+          filter[job.school.name][matches]:
+            type: string
+          filter[job.id][contains]:
+            type: number
+          filter[job.title][matches]:
+            type: string
+          filter[teacher.memberNumber][contains]:
+            type: number
+          filter[teacher.fullName][matches]:
+            type: string
+          filter[job.adviser.id][contains]:
+            type: string
+          filter[job.school.lra.id][contains]:
+            type: number
+          filter[job.subject.id][contains]:
+            type: number
+          filter[latestEvent.type.id][contains]:
+            type: number
+          filter[latestEvent.date][lte]:
+            type: string
+          filter[event.type.id][contains]:
+            type: number
+          filter[minEvent.date][gte]:
+            type: string
+          filter[maxEvent.date][lte]:
+            type: string
+          filter[job.school.city.country.region.id][contains]:
+            type: number
+          filter[job.school.city.country.id][contains]:
+            type: number
+          filter[job.school.city.id][contains]:
+            type: number
         example:
           id][contains: 1
           status.id][contains: 1
+          job.school.name][matches: alic
+          job.id][contains: 1
+          job.title][matches: math
+          teacher.memberNumber][contains: 1
+          teacher.fullName][matches: smi
+          job.adviser.id][contains: 1
+          job.school.lra.id][contains: 1
+          job.subject.id][contains]: 1
+          latestEvent.type.id][contains: 1
+          latestEvent.date][lte: 44634
+          event.type.id][contains: 1
+          minEvent.date][gte: 44634
+          maxEvent.date][lte: 44634
+          job.school.city.country.region.id][contains: 1
+          job.school.city.country.id][contains: 1
+          job.school.city.id][contains: 1
+
     - in: query
       name: page
       style: deepObject
