@@ -1,33 +1,45 @@
 type: object
-properties: 
- stats: 
+additionalProperties: false
+properties:
+  stats:
     type: object
-    properties: 
-      dummy: 
+    additionalProperties: false
+    properties:
+      dummy:
         type: integer
         format: int32
         example: 1
-      countriesWithLiveSchoolsCount: 
+      countriesWithLiveSchoolsCount:
         type: integer
         format: int32
         example: 178
-      liveCountryCount: 
+      liveCountryCount:
         type: integer
         format: int32
         example: 198
-      allTeacherCount: 
+      allTeacherCount:
         type: integer
         format: int32
         example: 314741
-      liveTeacherCount: 
+      liveTeacherCount:
         type: integer
         format: int32
         example: 2899
-      liveSchoolCount: 
+      liveSchoolCount:
         type: integer
         format: int32
         example: 3276
-      liveJobCount: 
+      liveJobCount:
         type: integer
         format: int32
         example: 776
+    required:
+      - dummy
+      - countriesWithLiveSchoolsCount
+      - liveCountryCount
+      - allTeacherCount
+      - liveTeacherCount
+      - liveSchoolCount
+      - liveJobCount
+required:
+  - stats

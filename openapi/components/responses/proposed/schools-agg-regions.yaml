@@ -5,9 +5,9 @@ RegionsResponse_schoolsAgg:
       type: array
       items:
         type: object
-        allOf:
-          - $ref: "../../schemas/proposed/simple-models/region.yaml#/RegionProperties_typeAndId"
-          - properties:
-              attributes:
-                type: object
-                $ref: "../../schemas/proposed/simple-models/region.yaml#/RegionProperties_schoolsAgg"
+        # allOf:
+        #   - $ref: "../../schemas/proposed/simple-models/region.yaml#/RegionProperties_typeAndId"
+        #   - properties:
+        #       attributes:
+        #         type: object
+        #         $ref: "../../schemas/proposed/simple-models/region.yaml#/RegionProperties_schoolsAgg"

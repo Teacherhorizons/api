@@ -1,12 +1,6 @@
-import { setup, api } from '../shared';
+import { setup, api } from '../../shared';
 
 setup();
-
-test('GET applications/1?schema=school', async () => {
-  const response = await api.get('applications/1?schema=school');
-  expect(response.status).toEqual(200);
-  expect(response).toSatisfyApiSpec();
-});
 
 test('GET applications/1?schema=admin', async () => {
   const response = await api.get('applications/1?schema=admin');
@@ -14,8 +8,14 @@ test('GET applications/1?schema=admin', async () => {
   expect(response).toSatisfyApiSpec();
 });
 
-test('GET applications?schema=admin&filter[id][contains]=1', async () => {
-  const response = await api.get('applications?schema=admin&filter[id][contains]=1');
+test('GET applications/1?schema=school', async () => {
+  const response = await api.get('applications/1?schema=school');
+  expect(response.status).toEqual(200);
+  expect(response).toSatisfyApiSpec();
+});
+
+test('GET applications/1?schema=teacher', async () => {
+  const response = await api.get('applications/1?schema=teacher');
   expect(response.status).toEqual(200);
   expect(response).toSatisfyApiSpec();
 });

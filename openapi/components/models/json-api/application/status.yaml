@@ -35,6 +35,8 @@ JsonApiModel_application-status_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-status_id"
+  required:
+    - id
 
 JsonApiModel_application-status_relationship:
   type: object
@@ -46,3 +48,6 @@ JsonApiModel_application-status_relationship:
           $ref: "#/JsonApiModel_application-status_type"
         id:
           $ref: "#/JsonApiModel_application-status_id"
+      required:
+        - type
+        - id

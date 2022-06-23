@@ -201,6 +201,11 @@ application_creationDate:
   format: date-time
   example: 2011-02-07T15:53:35Z
 
+application_submissionToSchoolDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:35Z
+
 application_latestUpdateDate:
   type: string
   format: date-time
@@ -213,6 +218,7 @@ application_hasDataIssues:
 application_thSystemMatchScore:
   description: System match score of teacher and job, value between 0 and 1
   type: number
+  nullable: true
   format: double
   example: 0.75
 

@@ -6,18 +6,18 @@ get:
   summary: Get a list of teachers (proposed)
   description:
     $ref: "./foo.md"
-  parameters:
-    - $ref: "../../../components/parameters/current/general.yaml#/search"
-      description: |
-        Matches against a teacher name or member number.
+  # parameters:
+  #   - $ref: "../../../components/parameters/current/general.yaml#/search"
+  #     description: |
+  #       Matches against a teacher name or member number.
 
-          - let S = replace(search, ' ', '% ') + '%', then the WHERE clause is:
-          - firstName like S OR lastName like S OR fullName like S OR memberNumber like S
+  #         - let S = replace(search, ' ', '% ') + '%', then the WHERE clause is:
+  #         - firstName like S OR lastName like S OR fullName like S OR memberNumber like S
 
-        Examples:
-          - 1. 'br' - includes 'Brian Jones' and 'Steve Bronson', but not 'Abraham Jones' (S = 'br%')
-          - 2. 'j s' - includes 'John Smith' (S = 'j% s%')
-          - 3. 12345 - includes 12345 and 123456 (S = '12345%')
+  #       Examples:
+  #         - 1. 'br' - includes 'Brian Jones' and 'Steve Bronson', but not 'Abraham Jones' (S = 'br%')
+  #         - 2. 'j s' - includes 'John Smith' (S = 'j% s%')
+  #         - 3. 12345 - includes 12345 and 123456 (S = '12345%')
   responses:
     "200":
       description: successful operation

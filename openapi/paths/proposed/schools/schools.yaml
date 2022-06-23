@@ -5,8 +5,8 @@ get:
     - status-proposed
   summary: Get a list of schools (proposed)
   parameters:
-    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
-      name: ids
+    # - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+    #   name: ids
 
     - in: query
       name: include
@@ -152,9 +152,9 @@ get:
       schema:
         type: string
 
-    - $ref: "../../../components/parameters/current/list.yaml#/limit"
-    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
-    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+    # - $ref: "../../../components/parameters/current/list.yaml#/limit"
+    # - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+    # - $ref: "../../../components/parameters/current/list.yaml#/sort"
 
   responses:
     "200":

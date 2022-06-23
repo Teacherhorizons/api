@@ -51,6 +51,8 @@ get:
     - in: query
       name: sort
       example: -creationDate
+      schema:
+        type: string
   responses:
     "200":
       description: OK (Request successful)
