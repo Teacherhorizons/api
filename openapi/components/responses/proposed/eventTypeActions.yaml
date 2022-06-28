@@ -1,64 +1,71 @@
 Application-eventTypeActionsResponse:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-      enum:
-        - admin
+  oneOf:
+    - $ref: "#/Application-eventTypeActionsResponse_admin"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Application-eventTypeActions_admin"
-  required:
-    - schema
+      admin: "#/Application-eventTypeActionsResponse_admin"
 
 # admin
-Application-eventTypeActions_admin:
-  allOf:
-    - $ref: "#/Application-eventTypeActionsResponse"
-    - properties:
-        data:
+Application-eventTypeActionsResponse_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    data:
+      type: object
+      properties:
+        type:
+          $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type"
+        id:
+          $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id"
+        attributes:
           type: object
           properties:
-            relationships:
+            label:
+              $ref: "../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+            applicationEventType:
+              $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+            # TODO AS: refactor the below
+            autoEmail:
               type: object
               properties:
-                manualEmailTemplate:
-                  $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
-              required:
-                - manualEmailTemplate
-            attributes:
-              type: object
-              properties:
-                label:
-                  $ref: "../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-                applicationEventType:
-                  $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
-              required:
-                - label
-            id:
-              $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id"
-            type:
-              $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type"
+                id:
+                  type: string
+                  example: "1"
           required:
-            - type
-            - id
-            - attributes
-            - relationships
-        included:
-          type: array
-          items:
-            $ref: "#/Application-eventTypeActionsResponse_includedUser_admin"
-    - required:
-        - data
-        - included
+            - label
+        relationships:
+          type: object
+          properties:
+            manualEmailTemplate:
+              $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
+          required:
+            - manualEmailTemplate
+      required:
+        - type
+        - id
+        - attributes
+        - relationships
+    included:
+      type: array
+      items:
+        $ref: "#/Application-eventTypeActionsResponse_includedUser_admin"
+  required:
+    - schema
+    - data
+    - included
 
 Application-eventTypeActionsResponse_includedUser_admin:
   type: object
+  additionalProperties: false
   properties:
     attributes:
       type: object
+      additionalProperties: false
       properties:
         cc:
           $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
@@ -66,12 +73,12 @@ Application-eventTypeActionsResponse_includedUser_admin:
           $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
         subject:
           $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
-        to:
-          $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+        # to:
+        #   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
         body:
           $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
       required:
-        - to
+        # - to
         - cc
         - bcc
         - subject

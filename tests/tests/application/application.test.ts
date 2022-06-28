@@ -37,7 +37,7 @@ describe('admin@th.test', () => {
   test('POST applications', async () => {
     const payload = {"data":{"type":"application","attributes":{"job":{"id":"1549"},"memberNumber":111627}}};
     const response = await api.post('applications', payload);
-    expect(response.status).toEqual(200);
+    expect(response.status).toEqual(201);
     expect(response).toSatisfyApiSpec();
   });
 

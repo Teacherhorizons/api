@@ -1,4 +1,3 @@
-
 // test('POST auth/sign-in', async () => {
 //   const payload = "email=admin@th.test&password=password&keepMeSignedIn=1";
 //   const response = await api.post('auth/sign-in', payload);
