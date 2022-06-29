@@ -1,4 +1,4 @@
-import { setup, signIn, signOut, api } from '../../shared';
+import { setApi, setup, signIn, signOut, api } from '../../shared';
 
 setup();
 
@@ -23,10 +23,13 @@ describe('school-1-school@th.test', () => {
     await signIn('school-1-school@th.test');
   });
 
-  test('GET application-eventTypeActions?schema=school', async () => {
-    const response = await api.get('application-eventTypeActions?schema=school');
-    expect(response.status).toEqual(403);
-    expect(response).toSatisfyApiSpec();
+  test('GET application-eventTypeActions?schema=admin', async () => {
+    try {
+      await api.get('application-eventTypeActions?schema=admin');
+    } catch (error) {
+      expect(error.response.status).toEqual(401);
+      expect(error.response).toSatisfyApiSpec();  
+    }
   });
 
   afterAll(async() => {
@@ -39,13 +42,32 @@ describe('endorsed@th.test', () => {
     await signIn('endorsed@th.test');
   });
 
-  test('GET application-eventTypeActions?schema=teacher', async () => {
-    const response = await api.get('application-eventTypeActions?schema=teacher');
-    expect(response.status).toEqual(403);
-    expect(response).toSatisfyApiSpec();
+  test('GET application-eventTypeActions?schema=admin', async () => {
+    try {
+      await api.get('application-eventTypeActions?schema=admin');
+    } catch (error) {
+      expect(error.response.status).toEqual(401);
+      expect(error.response).toSatisfyApiSpec();  
+    }
   });
 
   afterAll(async() => {
     await signOut();
   });
 });
+
+describe('not signed in', () => {
+  beforeAll(async () => {
+    await setApi();
+  });
+
+  test('GET application-eventTypeActions?schema=admin', async () => {
+    try {
+      await api.get('application-eventTypeActions?schema=admin');
+    } catch (error) {
+      expect(error.response.status).toEqual(401);
+      expect(error.response).toSatisfyApiSpec();  
+    }
+  });
+});
+

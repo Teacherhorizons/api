@@ -1,5 +1,3 @@
-
-
 # attributes
 general-manualEmailTemplate_attributes:
   allOf:
@@ -44,10 +42,12 @@ general-manualEmailTemplate_to:
   example: ${teacher.email}
 general-manualEmailTemplate_cc:
   type: string
-  example: 
+  nullable: true
+  example:
 general-manualEmailTemplate_bcc:
   type: string
-  example: 
+  nullable: true
+  example:
 general-manualEmailTemplate_subject:
   type: string
   example: Your application to ${job.school.name} in ${job.school.city.country.name}

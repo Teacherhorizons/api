@@ -3950,67 +3950,69 @@ paths:
                         enum:
                           - admin
                       data:
-                        type: object
-                        properties:
-                          type:
-                            type: string
-                            example: application-eventTypeAction
-                            description: application-eventTypeAction
-                            readOnly: true
-                          id:
-                            type: string
-                            example: '1'
-                            readOnly: true
-                            description: >-
-                              Unique identifier of the
-                              application-eventTypeAction (string)
-                          attributes:
-                            type: object
-                            properties:
-                              label:
-                                type: string
-                                example: Email teacher
-                              applicationEventType:
-                                type: object
-                                properties: &ref_156
-                                  id:
-                                    type: string
-                                    example: '1'
-                                    readOnly: true
-                                    description: >-
-                                      Unique identifier of the
-                                      application-eventType (string)
-                              autoEmail:
-                                type: object
-                                properties:
-                                  id:
-                                    type: string
-                                    example: '1'
-                            required:
-                              - label
-                          relationships:
-                            type: object
-                            properties:
-                              manualEmailTemplate:
-                                type: object
-                                properties: &ref_157
-                                  data:
-                                    type: object
-                                    properties:
-                                      type:
-                                        type: string
-                                        example: general-manualEmailTemplate
-                                        description: general-manualEmailTemplate
-                                        readOnly: true
-                                      id:
-                                        type: string
-                                        example: '1'
-                                        readOnly: true
-                                        description: >-
-                                          Unique identifier of the
-                                          general-manualEmailTemplate (string)
-                            required:
-                              - manualEmailTemplate
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                              example: application-eventTypeAction
+                              description: application-eventTypeAction
+                              readOnly: true
+                            id:
+                              type: string
+                              example: '1'
+                              readOnly: true
+                              description: >-
+                                Unique identifier of the
+                                application-eventTypeAction (string)
+                            attributes:
+                              type: object
+                              properties:
+                                label:
+                                  type: string
+                                  example: Email teacher
+                                applicationEventType:
+                                  type: object
+                                  properties: &ref_156
+                                    id:
+                                      type: string
+                                      example: '1'
+                                      readOnly: true
+                                      description: >-
+                                        Unique identifier of the
+                                        application-eventType (string)
+                                autoEmail:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: string
+                                      example: '1'
+                              required:
+                                - label
+                            relationships:
+                              type: object
+                              properties:
+                                manualEmailTemplate:
+                                  type: object
+                                  properties: &ref_157
+                                    data:
+                                      type: object
+                                      properties:
+                                        type:
+                                          type: string
+                                          example: general-manualEmailTemplate
+                                          description: general-manualEmailTemplate
+                                          readOnly: true
+                                        id:
+                                          type: string
+                                          example: '1'
+                                          readOnly: true
+                                          description: >-
+                                            Unique identifier of the
+                                            general-manualEmailTemplate (string)
+                              required:
+                                - manualEmailTemplate
                         required:
                           - type
                           - id
@@ -4028,15 +4030,20 @@ paths:
                               properties:
                                 cc:
                                   type: string
+                                  nullable: true
                                   example: null
                                 bcc:
                                   type: string
+                                  nullable: true
                                   example: null
                                 subject:
                                   type: string
                                   example: >-
                                     Your application to ${job.school.name} in
                                     ${job.school.city.country.name}
+                                to:
+                                  type: string
+                                  example: ${teacher.email}
                                 body:
                                   type: string
                                   example: >-
@@ -4045,6 +4052,7 @@ paths:
                                     opportunity at ${job.school.name} in
                                     ${job.school.city.country.name}
                               required:
+                                - to
                                 - cc
                                 - bcc
                                 - subject
@@ -13329,15 +13337,20 @@ components:
       properties: *ref_157
     general-manualEmailTemplate_cc:
       type: string
+      nullable: true
       example: null
     general-manualEmailTemplate_bcc:
       type: string
+      nullable: true
       example: null
     general-manualEmailTemplate_subject:
       type: string
       example: >-
         Your application to ${job.school.name} in
         ${job.school.city.country.name}
+    general-manualEmailTemplate_to:
+      type: string
+      example: ${teacher.email}
     general-manualEmailTemplate_body:
       type: string
       example: >-
@@ -13677,9 +13690,6 @@ components:
       properties: *ref_22
       discriminator: *ref_23
       required: *ref_24
-    general-manualEmailTemplate_to:
-      type: string
-      example: ${teacher.email}
     Application-manualEmailTemplate_admin:
       allOf:
         - type: object
@@ -13710,9 +13720,11 @@ components:
                       example: ${teacher.email}
                     cc:
                       type: string
+                      nullable: true
                       example: null
                     bcc:
                       type: string
+                      nullable: true
                       example: null
                     subject:
                       type: string
@@ -14983,11 +14995,13 @@ components:
       properties: &ref_334
         cc:
           type: string
+          nullable: true
           example: null
     general-manualEmailTemplate_properties_bcc:
       properties: &ref_335
         bcc:
           type: string
+          nullable: true
           example: null
     general-manualEmailTemplate_properties_subject:
       properties: &ref_336
@@ -23501,9 +23515,11 @@ components:
           example: ${teacher.email}
         cc:
           type: string
+          nullable: true
           example: null
         bcc:
           type: string
+          nullable: true
           example: null
         subject:
           type: string
