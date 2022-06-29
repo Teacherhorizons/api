@@ -1,0 +1,19 @@
+get:
+  operationId: getUsers_internal_current
+  tags:
+    - users
+    - status-current
+  summary: Get internal user (current)
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/current/user/internal-users.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

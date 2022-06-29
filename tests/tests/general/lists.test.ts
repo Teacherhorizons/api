@@ -19,6 +19,12 @@ describe('admin@th.test', () => {
     expect(response).toSatisfyApiSpec();
   });
 
+  test('GET v1/lists?key=applicationEventTypes', async () => {
+    const response = await api.get('v1/lists?key=applicationEventTypes');
+    expect(response.status).toEqual(200);
+    expect(response).toSatisfyApiSpec();
+  });
+
   afterAll(async() => {
     await signOut();
   });
