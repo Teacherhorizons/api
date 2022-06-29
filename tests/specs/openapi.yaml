@@ -4122,6 +4122,7 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties: false
                 properties: &ref_164
                   city:
                     type: object
@@ -5820,6 +5821,7 @@ paths:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties: &ref_193
                         id:
                           type: integer
@@ -5828,9 +5830,10 @@ paths:
                         name:
                           type: string
                           example: Info request - update CV
-                        eventType:
-                          type: string
-                          example: 13
+                        applicationStatusId:
+                          type: integer
+                          format: int32
+                          example: 1
                   applicationEventTypes:
                     type: array
                     items:
@@ -5846,10 +5849,11 @@ paths:
                         applicationStatus:
                           type: string
                           example: 1
-                  thMatchTypes:
+                  applicationThMatchTypes:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties: &ref_195
                         id:
                           type: integer
@@ -5952,6 +5956,7 @@ paths:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties: &ref_200
                         id:
                           type: integer
@@ -6173,6 +6178,7 @@ paths:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties:
                         name:
                           type: string
@@ -6266,6 +6272,7 @@ paths:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties:
                         id:
                           type: integer
@@ -10624,6 +10631,7 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties: false
                 properties: &ref_228
                   internalusers:
                     type: array
@@ -11110,6 +11118,7 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties: false
                 properties: &ref_241
                   schema:
                     type: string
@@ -13416,6 +13425,7 @@ components:
       discriminator: *ref_163
     city-id-profile:
       type: object
+      additionalProperties: false
       properties: *ref_164
     school-community-school-responses-school-id:
       type: object
@@ -13538,14 +13548,16 @@ components:
       type: object
       additionalProperties: false
       properties: *ref_192
-    applicationEventAutoEmail:
+    applicationEventAutoEmails:
       type: object
+      additionalProperties: false
       properties: *ref_193
     applicationEventType:
       type: object
       properties: *ref_194
-    thMatchType:
+    applicationThMatchTypes:
       type: object
+      additionalProperties: false
       properties: *ref_195
     Attraction:
       type: object
@@ -13560,8 +13572,9 @@ components:
       type: object
       additionalProperties: false
       properties: *ref_199
-    JobStatus:
+    jobStatuses:
       type: object
+      additionalProperties: false
       properties: *ref_200
     lists:
       type: object
@@ -13671,8 +13684,9 @@ components:
     admin-users:
       type: object
       properties: *ref_227
-    internal-users:
+    internal:
       type: object
+      additionalProperties: false
       properties: *ref_228
     site-statistics:
       type: object
@@ -13906,11 +13920,13 @@ components:
                     - properties: *ref_236
     RegionsResponse:
       type: object
+      additionalProperties: false
       properties: *ref_241
       discriminator: *ref_242
     RegionsResponse_admin:
       allOf:
         - type: object
+          additionalProperties: false
           properties: *ref_241
           discriminator: *ref_242
         - type: object
@@ -13942,6 +13958,7 @@ components:
     RegionsResponse_school:
       allOf:
         - type: object
+          additionalProperties: false
           properties: *ref_241
           discriminator: *ref_242
         - type: object
@@ -13968,6 +13985,7 @@ components:
     RegionsResponse_teacher:
       allOf:
         - type: object
+          additionalProperties: false
           properties: *ref_241
           discriminator: *ref_242
         - type: object
@@ -15687,8 +15705,6 @@ components:
       type: string
       example: Open
     application-status_properties_name:
-      type: object
-      additionalProperties: false
       properties: &ref_415
         name:
           type: string
@@ -15698,9 +15714,7 @@ components:
         - type: object
           allOf:
             - properties: *ref_414
-            - type: object
-              additionalProperties: false
-              properties: *ref_415
+            - properties: *ref_415
     SimpleModel_application-thMatchType_id:
       properties: &ref_416
         id:

@@ -13,10 +13,38 @@ describe('admin@th.test', () => {
     expect(response).toSatisfyApiSpec();
   });
 
+  test('GET v1/lists?key=cities, regions', async () => {
+    const response = await api.get('v1/lists?key=cities, regions');
+    expect(response.status).toEqual(200);
+    expect(response).toSatisfyApiSpec();
+  });
+
   test('GET v1/lists?key=applicationStatuses', async () => {
     const response = await api.get('v1/lists?key=applicationStatuses');
     expect(response.status).toEqual(200);
     expect(response).toSatisfyApiSpec();
+
+  });
+
+  test('GET v1/lists?key=applicationThMatchTypes', async () => {
+    const response = await api.get('v1/lists?key=applicationThMatchTypes');
+    expect(response.status).toEqual(200);
+    expect(response).toSatisfyApiSpec();
+    
+  });
+
+  test('GET v1/lists?key=applicationEventAutoEmails', async () => {
+    const response = await api.get('v1/lists?key=applicationEventAutoEmails');
+    expect(response.status).toEqual(200);
+    expect(response).toSatisfyApiSpec();
+    
+  });
+
+  test('GET v1/lists?key=jobStatuses', async () => {
+    const response = await api.get('v1/lists?key=jobStatuses');
+    expect(response.status).toEqual(200);
+    expect(response).toSatisfyApiSpec();
+    
   });
 
   test('GET v1/lists?key=applicationEventTypes', async () => {

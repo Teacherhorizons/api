@@ -10,7 +10,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/user/internal-users.yaml"
+            $ref: "../../../components/schemas/current/users/internal.yaml"
     "400":
       description: Invalid ID supplied
     "404":
