@@ -13,6 +13,13 @@ describe('admin@th.test', () => {
     expect(response.data.data.length).toEqual(4);
     expect(response).toSatisfyApiSpec();
   });
+
+  test('GET application-applicationEvents?schema=school&filter[application.id]=30', async () => {
+    const response = await api.get('application-applicationEvents?schema=school&filter[application.id]=30');
+    expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(3);
+    expect(response).toSatisfyApiSpec();
+  });
   
   test('GET application-applicationEvents?schema=admin-allApplications&filter[application.teacher.memberNumber]=1314161', async () => {
     const response = await api.get('application-applicationEvents?schema=admin-allApplications&filter[application.teacher.memberNumber]=1314161');
