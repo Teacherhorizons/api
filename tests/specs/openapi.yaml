@@ -5906,7 +5906,7 @@ paths:
                           type: string
                           example: af
                         freeHealthCare:
-                          type: string
+                          type: integer
                           example: 0
                           description: Boolean; TODO - better if has values true or false
                         phoneCode:
@@ -5919,6 +5919,7 @@ paths:
                           description: Id; TODO - better if called 'currencyId'
                         location:
                           type: string
+                          nullable: true
                           example: 33,65
                           description: >-
                             Latitude and longitude (comma separated); TODO -
@@ -5931,7 +5932,7 @@ paths:
                             Amount in USD; TODO - better if called
                             'nationalAverageIncomeInUsd'
                         region:
-                          type: string
+                          type: integer
                           example: 2
                           description: Id; TODO - better if called 'regionId'
                   subjects:
@@ -10633,10 +10634,11 @@ paths:
                 type: object
                 additionalProperties: false
                 properties: &ref_228
-                  internalusers:
+                  users:
                     type: array
                     items:
                       type: object
+                      additionalProperties: false
                       properties:
                         id:
                           type: integer
@@ -10646,20 +10648,18 @@ paths:
                           type: string
                           example: AR
                         activeInTH:
-                          type: id
-                          format: int 32
+                          type: integer
+                          format: int32
                           example: 0
                         userId:
                           type: integer
                           format: int32
                           example: 3
-                        fullname:
+                        fullName:
                           type: string
                           example: Alexis Toye
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Pet not found
+        '403':
+          description: Unauthorized
       security:
         - api_key: []
   /v1/site/statistics:
