@@ -1,16 +1,16 @@
 get:
-  operationId: getUser_current
+  operationId: getUsers_admin_current
   tags:
     - users
     - status-current
-  summary: Get a user (current)
+  summary: Get admin user (current)
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/user/user-bundle.yaml"
+            $ref: "../../../components/schemas/current/users/admin-users.yaml"
     "400":
       description: Invalid ID supplied
     "404":

@@ -119,9 +119,11 @@
 
 # users
 /v1/user/bundle:
-  $ref: "./../paths/current/user/user-bundle.yaml"
+  $ref: "./../paths/current/users/user-bundle.yaml"
 /v1/admin-users:
-  $ref: "./../paths/current/user/admin-users.yaml"
+  $ref: "./../paths/current/users/admin-users.yaml"
+/v1/users/internal:
+  $ref: "./../paths/current/users/internal.yaml"
 
 # other
 /v1/site/statistics:

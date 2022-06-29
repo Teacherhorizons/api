@@ -29,15 +29,15 @@ properties:
   applicationEventAutoEmails:
     type: array
     items:
-      $ref: "./applicationEventAutoEmail.yaml"
+      $ref: "./applicationEventAutoEmails.yaml"
   applicationEventTypes:
     type: array
     items:
       $ref: "./applicationEventType.yaml"
-  thMatchTypes:
+  applicationThMatchTypes:
     type: array
     items:
-      $ref: "./thMatchType.yaml"
+      $ref: "./applicationThMatchTypes.yaml"
   attractions:
     type: array
     items:
@@ -57,7 +57,7 @@ properties:
   jobStatuses:
     type: array
     items:
-      $ref: "./JobStatus.yaml"
+      $ref: "./jobStatuses.yaml"
 
   # (TODO: create separate files for each of these)
   # don't bother with this now - don't need so much structure with the 'current' documentation
@@ -272,6 +272,7 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: false
       properties:
         name:
           type: string
@@ -365,6 +366,7 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: false
       properties:
         id:
           type: integer
