@@ -37,7 +37,7 @@ describe('school-1-school@th.test', () => {
     await signIn('school-1-school@th.test');
   });
 
-  test('GET applicationEvents for application user can see', async () => {
+  test('GET applicationEvents for application user can see (200)', async () => {
     // TODO: consider using variables rather than hard-coded ids (perhaps linked to test data)
     const response = await api.get('application-applicationEvents?schema=school&filter[application.id]=30');
     expect(response.status).toEqual(200);
@@ -45,7 +45,7 @@ describe('school-1-school@th.test', () => {
     expect(response).toSatisfyApiSpec();
   });
 
-  test('GET applicationEvents for application not yet submitted to the school', async () => {
+  test('GET applicationEvents for application not yet submitted to the school (401)', async () => {
     try {
       await api.get('application-applicationEvents?schema=school&filter[application.id]=16');
     } catch (error) {
@@ -54,7 +54,7 @@ describe('school-1-school@th.test', () => {
     };
   });
 
-  test('GET applicationEvents for application unrelated to this user', async () => {
+  test('GET applicationEvents for application unrelated to this user (401)', async () => {
     try {
       await api.get('application-applicationEvents?schema=school&filter[application.id]=1');
     } catch (error) {

@@ -1,49 +1,134 @@
 SimpleModel_application:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/SimpleModel_application_admin"
+    - $ref: "#/SimpleModel_application_school"
+    - $ref: "#/SimpleModel_application_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_application_all"
+      all: "#/SimpleModel_application_admin"
       admin: "#/SimpleModel_application_admin"
+      school: "#/SimpleModel_application_school"
       teacher: "#/SimpleModel_application_teacher"
-  required:
-    - schema
-
-SimpleModel_application_all:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_attributes_all"
-        - $ref: "../../library/application/application.yaml#/application_relationshipIds_all"
 
 SimpleModel_application_admin:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_attributes_admin"
-        - $ref: "../../library/application/application.yaml#/application_relationshipIds_admin"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_application_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/application/application.yaml#/application_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+    recommendationText:
+      $ref: "../../library/application/application.yaml#/application_recommendationText"
+    thSystemMatchScore:
+      $ref: "../../library/application/application.yaml#/application_thSystemMatchScore"
+    hasDataIssues:
+      $ref: "../../library/application/application.yaml#/application_hasDataIssues"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/application/application.yaml#/application_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/application/application.yaml#/application_latestUpdateUserId"
+    thMatchTypeId:
+      $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+    statusId:
+      $ref: "../../library/application/application.yaml#/application_statusId"
+    jobId:
+      $ref: "../../library/application/application.yaml#/application_jobId"
+    teacherId:
+      $ref: "../../library/application/application.yaml#/application_teacherId"
+    latestEventId:
+      $ref: "../../library/application/application.yaml#/application_latestEventId"
+  required:
+    - creationDate
+    - latestUpdateDate
+    - hasDataIssues
+    - creationUserId
+    - latestUpdateUserId
+    - statusId
+    - jobId
+    - teacherId
+    - latestEventId
+
+SimpleModel_application_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_application_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/application/application.yaml#/application_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+    recommendationText:
+      $ref: "../../library/application/application.yaml#/application_recommendationText"
+    # relationship attributes
+    thMatchTypeId:
+      $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+    statusId:
+      $ref: "../../library/application/application.yaml#/application_statusId"
+    jobId:
+      $ref: "../../library/application/application.yaml#/application_jobId"
+    teacherId:
+      $ref: "../../library/application/application.yaml#/application_teacherId"
+    latestEventId:
+      $ref: "../../library/application/application.yaml#/application_latestEventId"
+  required:
+    - creationDate
+    - latestUpdateDate
+    - statusId
+    - jobId
+    - teacherId
+    - latestEventId
 
 SimpleModel_application_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_application"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application_id"
-        - $ref: "../../library/application/application.yaml#/application_attributes_teacher"
-        - $ref: "../../library/application/application.yaml#/application_relationshipIds_teacher"
-
-# shared
-SimpleModel_application_id:
+  type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - teacher
     id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+      $ref: "#/SimpleModel_application_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/application/application.yaml#/application_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+    # relationship attributes
+    statusId:
+      $ref: "../../library/application/application.yaml#/application_statusId"
+    jobId:
+      $ref: "../../library/application/application.yaml#/application_jobId"
+    teacherId:
+      $ref: "../../library/application/application.yaml#/application_teacherId"
+    latestEventId:
+      $ref: "../../library/application/application.yaml#/application_latestEventId"
+  required:
+    - creationDate
+    - latestUpdateDate
+    - statusId
+    - jobId
+    - teacherId
+    - latestEventId
+
+SimpleModel_application_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
