@@ -31,11 +31,11 @@ describe('not signed in', () => {
     expect(response).toSatisfyApiSpec();
   });
 
-  test('GET v1/lists?key=applicationEventAutoEmails', async () => {
-    const response = await api.get('v1/lists?key=applicationEventAutoEmails');
-    expect(response.status).toEqual(200);
-    expect(response).toSatisfyApiSpec();
-  });
+  // test('GET v1/lists?key=applicationEventAutoEmails', async () => {
+  //   const response = await api.get('v1/lists?key=applicationEventAutoEmails');
+  //   expect(response.status).toEqual(200);
+  //   expect(response).toSatisfyApiSpec();
+  // });
 
   test('GET v1/lists?key=jobStatuses', async () => {
     const response = await api.get('v1/lists?key=jobStatuses');

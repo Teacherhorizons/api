@@ -48,9 +48,9 @@ describe('admin@th.test', () => {
     expect(response.status).toEqual(201)
     expect(response).toSatisfyApiSpec()
 
-    afterEach(async () => {
-      // TODO: remove added application
-    });
+    // afterEach(async () => {
+    //   // TODO: remove added application
+    // });
   })
 
   // TODO: fix this in java for localhost

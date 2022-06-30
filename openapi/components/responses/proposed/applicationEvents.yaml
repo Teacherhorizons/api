@@ -1,77 +1,83 @@
 Application-applicationEventsResponse:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin-oneApplication
-      enum:
-        - admin-oneApplication
-        - admin-allApplications
-        - teacher
+  oneOf:
+    - $ref: "#/Application-applicationEventsResponse_admin-oneApplication"
+    - $ref: "#/Application-applicationEventsResponse_admin-allApplications"
+    - $ref: "#/Application-applicationEventsResponse_school"
+    - $ref: "#/Application-applicationEventsResponse_teacher"
   discriminator:
     propertyName: schema
     mapping:
       admin-oneApplication: "#/Application-applicationEventsResponse_admin-oneApplication"
       admin-allApplications: "#/Application-applicationEventsResponse_admin-allApplications"
+      school: "#/Application-applicationEventsResponse_school"
       teacher: "#/Application-applicationEventsResponse_teacher"
-  required:
-    - schema
 
 # admin-oneApplication
 Application-applicationEventsResponse_admin-oneApplication:
-  allOf:
-    - $ref: "#/Application-applicationEventsResponse"
-    - properties:
-        data:
-          type: object
-          properties:
-            type:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
-            id:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
-            attributes:
-              type: object
-              properties:
-                type:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-                date:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-                creationDate:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
-                latestUpdateDate:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
-                notes:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
-              required:
-                - type
-                - date
-                - creationDate
-                - latestUpdateDate
-            relationships:
-              type: object
-              properties:
-                creationUser:
-                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-                latestUpdateUser:
-                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-              required:
-                - creationUser
-                - latestUpdateUser
-          required:
-            - type
-            - id
-            - attributes
-            - relationships
-        included:
-          type: array
-          items:
-            $ref: "#/Application-applicationEventsResponse_includedUser_admin-oneApplication"
-    - required:
-        - data
-        - included
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-oneApplication
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              type:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+              date:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+              creationDate:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
+              latestUpdateDate:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
+              notes:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+            required:
+              - type
+              - date
+              - creationDate
+              - latestUpdateDate
+          relationships:
+            type: object
+            additionalProperties: false
+            properties:
+              creationUser:
+                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+              latestUpdateUser:
+                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            required:
+              - creationUser
+              - latestUpdateUser
+        required:
+          - type
+          - id
+          - attributes
+          - relationships
+    included:
+      type: array
+      items:
+        $ref: "#/Application-applicationEventsResponse_includedUser_admin-oneApplication"
+  required:
+    - schema
+    - data
+    - included
 
 Application-applicationEventsResponse_includedUser_admin-oneApplication:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type"
@@ -79,6 +85,7 @@ Application-applicationEventsResponse_includedUser_admin-oneApplication:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         firstName:
           $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
@@ -94,66 +101,77 @@ Application-applicationEventsResponse_includedUser_admin-oneApplication:
 
 # admin-allApplications
 Application-applicationEventsResponse_admin-allApplications:
-  allOf:
-    - $ref: "#/Application-applicationEventsResponse"
-    - properties:
-        data:
-          type: object
-          properties:
-            type:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
-            id:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
-            attributes:
-              type: object
-              properties:
-                type:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-                date:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-                creationDate:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
-                latestUpdateDate:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
-                notes:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
-              required:
-                - type
-                - date
-                - creationDate
-                - latestUpdateDate
-            relationships:
-              type: object
-              properties:
-                application:
-                  $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-                creationUser:
-                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-                latestUpdateUser:
-                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-              required:
-                - application
-                - creationUser
-                - latestUpdateUser
-          required:
-            - type
-            - id
-            - attributes
-            - relationships
-        included:
-          type: array
-          items:
-            anyOf:
-              - $ref: "#/Application-applicationEventsResponse_includedUser_admin-allApplications"
-              - $ref: "#/Application-applicationEventsResponse_includedApplication_admin-allApplications"
-              - $ref: "#/Application-applicationEventsResponse_includedJob_admin-allApplications"
-              - $ref: "#/Application-applicationEventsResponse_includedSchool_admin-allApplications"
-    - required:
-        - data
-        - included
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-allApplications
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              type:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+              date:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+              creationDate:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
+              latestUpdateDate:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
+              notes:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+            required:
+              - type
+              - date
+              - creationDate
+              - latestUpdateDate
+          relationships:
+            type: object
+            additionalProperties: false
+            properties:
+              application:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
+              creationUser:
+                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+              latestUpdateUser:
+                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            required:
+              - application
+              - creationUser
+              - latestUpdateUser
+        required:
+          - type
+          - id
+          - attributes
+          - relationships
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "#/Application-applicationEventsResponse_includedUser_admin-allApplications"
+          - $ref: "#/Application-applicationEventsResponse_includedApplication_admin-allApplications"
+          - $ref: "#/Application-applicationEventsResponse_includedJob_admin-allApplications"
+          - $ref: "#/Application-applicationEventsResponse_includedSchool_admin-allApplications"
+  required:
+    - schema
+    - data
+    - included
 
 Application-applicationEventsResponse_includedUser_admin-allApplications:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type"
@@ -161,6 +179,7 @@ Application-applicationEventsResponse_includedUser_admin-allApplications:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         firstName:
           $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
@@ -176,6 +195,7 @@ Application-applicationEventsResponse_includedUser_admin-allApplications:
 
 Application-applicationEventsResponse_includedApplication_admin-allApplications:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type"
@@ -183,6 +203,7 @@ Application-applicationEventsResponse_includedApplication_admin-allApplications:
       $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         status:
           $ref: "../../../components/models/library/application/application.yaml#/application_status"
@@ -190,6 +211,7 @@ Application-applicationEventsResponse_includedApplication_admin-allApplications:
         - status
     relationships:
       type: object
+      additionalProperties: false
       properties:
         job:
           $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
@@ -203,6 +225,7 @@ Application-applicationEventsResponse_includedApplication_admin-allApplications:
 
 Application-applicationEventsResponse_includedJob_admin-allApplications:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
@@ -210,6 +233,7 @@ Application-applicationEventsResponse_includedJob_admin-allApplications:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         title:
           $ref: "../../../components/models/library/job/job.yaml#/job_title"
@@ -217,6 +241,7 @@ Application-applicationEventsResponse_includedJob_admin-allApplications:
         - title
     relationships:
       type: object
+      additionalProperties: false
       properties:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
@@ -230,6 +255,7 @@ Application-applicationEventsResponse_includedJob_admin-allApplications:
 
 Application-applicationEventsResponse_includedSchool_admin-allApplications:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
@@ -237,6 +263,7 @@ Application-applicationEventsResponse_includedSchool_admin-allApplications:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
@@ -252,29 +279,76 @@ Application-applicationEventsResponse_includedSchool_admin-allApplications:
 
 # teacher
 Application-applicationEventsResponse_teacher:
-  allOf:
-    - $ref: "#/Application-applicationEventsResponse"
-    - properties:
-        data:
-          type: object
-          properties:
-            type:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
-            id:
-              $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
-            attributes:
-              type: object
-              properties:
-                type:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-                date:
-                  $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-              required:
-                - type
-                - date
-          required:
-            - type
-            - id
-            - attributes
-    - required:
-        - data
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              type:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+              date:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+            required:
+              - type
+              - date
+        required:
+          - type
+          - id
+          - attributes
+  required:
+    - schema
+    - data
+
+# school
+Application-applicationEventsResponse_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              type:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
+              date:
+                $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+            required:
+              - type
+              - date
+        required:
+          - type
+          - id
+          - attributes
+  required:
+    - schema
+    - data
