@@ -381,18 +381,23 @@ ApplicationResponse_school:
               $ref: "../../../components/models/library/application/application.yaml#/application_submissionToSchoolDate"
             latestUpdateDate:
               $ref: "../../../components/models/library/application/application.yaml#/application_latestUpdateDate"
+            recommendationText:
+              $ref: "../../../components/models/library/application/application.yaml#/application_recommendationText"
             # relationship attributes
             status:
               $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
           required:
             - submissionToSchoolDate
             - latestUpdateDate
+            - recommendationText
             - status
         relationships:
           type: object
           properties:
             job:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+            teacher:
+              $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
           required:
             - job
       required:
@@ -406,6 +411,7 @@ ApplicationResponse_school:
         anyOf:
           - $ref: "#/ApplicationResponse_includedSchool_school"
           - $ref: "#/ApplicationResponse_includedJob_school"
+          - $ref: "#/ApplicationResponse_includedTeacher_school"
           - $ref: "#/ApplicationResponse_includedUser_school"
   required:
     - schema
@@ -484,6 +490,25 @@ ApplicationResponse_includedSchool_school:
     #       allOf:
     #         - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
     #         - $ref: "#/ApplicationResponse_school_stage_2_description"
+  required:
+    - type
+    - id
+    - attributes
+
+ApplicationResponse_includedTeacher_school:
+  type: object
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
+    id:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
+    attributes:
+      type: object
+      properties:
+        memberNumber:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
+      required:
+        - memberNumber
   required:
     - type
     - id
