@@ -22,32 +22,36 @@ SimpleModel_application-applicationEvent_admin:
     id:
       $ref: "#/SimpleModel_application-applicationEvent_id"
     # simple attributes
-      type:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-      date:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-      creationDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
-      latestUpdateDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
-      notes:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
-      nameForSchool:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_nameForSchool"
-      nameForTeacher:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_nameForTeacher"
-      isVisibleToSchool:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_isVisibleToSchool"
+    date:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_date"
+    creationDate:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
+    notes:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+    # nameForSchool:
+    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_nameForSchool"
+    # nameForTeacher:
+    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_nameForTeacher"
+    # isVisibleToSchool:
+    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_isVisibleToSchool"
+
     # relationship attributes
-      creationUserId:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationUserId"
-      latestUpdateUserId:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateUserId"
+    applicationId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_applicationId"
+    typeId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_typeId"
+    creationUserId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateUserId"
   required:
-    - type
+    - id
     - date
     - creationDate
     - latestUpdateDate
+    - typeId
     - creationUserId
     - latestUpdateUserId
 
@@ -62,21 +66,15 @@ SimpleModel_application-applicationEvent_school:
     id:
       $ref: "#/SimpleModel_application-applicationEvent_id"
     # simple attributes
-      type:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-      date:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-      creationDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
-      latestUpdateDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
-      notes:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+    date:
+      $ref: "../..//library/application/applicationEvent.yaml#/application-applicationEvent_date"
+    # relationship attributes
+    typeId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_typeId"
   required:
-    - type
+    - id
     - date
-    - creationDate
-    - latestUpdateDate
+    - typeId
 
 SimpleModel_application-applicationEvent_teacher:
   type: object
@@ -89,26 +87,20 @@ SimpleModel_application-applicationEvent_teacher:
     id:
       $ref: "#/SimpleModel_application-applicationEvent_id"
     # simple attributes
-      type:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
-      date:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
-      creationDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate"
-      latestUpdateDate:
-        $ref: "../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
+    date:
+      $ref: "../..//library/application/applicationEvent.yaml#/application-applicationEvent_date"
+    # relationship attributes
+    typeId:
+      $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_typeId"
   required:
-    - type
+    - id
     - date
-    - creationDate
-    - latestUpdateDate
+    - typeId
 
 # shared
 SimpleModel_application-applicationEvent_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

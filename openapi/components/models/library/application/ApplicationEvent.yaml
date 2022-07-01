@@ -151,20 +151,20 @@ application-applicationEvent_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-application-applicationEvent_nameForSchool:
-  type: string
-  nullable: true
-  example:  
+# application-applicationEvent_nameForSchool:
+#   type: string
+#   nullable: true
+#   example:
 
-application-applicationEvent_nameForTeacher:
-  type: string
-  nullable: true
-  example:  
+# application-applicationEvent_nameForTeacher:
+#   type: string
+#   nullable: true
+#   example:
 
-application-applicationEvent_isVisibleToSchool:
-  type: boolean
-  nullable: true
-  example:  1
+# application-applicationEvent_isVisibleToSchool:
+#   type: boolean
+#   nullable: true
+#   example:  1
 
 application-applicationEvent_applicationId:
   type: integer
@@ -191,16 +191,8 @@ application-applicationEvent_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+# relationships
 application-applicationEvent_application:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-  required:
-    - id
-
-application-applicationEvent_email:
   type: object
   properties:
     id:
@@ -235,5 +227,14 @@ application-applicationEvent_latestUpdateUser:
       type: string
       example: "1"
   description: Relationship to User
+  required:
+    - id
+
+application-applicationEvent_email:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
   required:
     - id
