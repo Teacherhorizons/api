@@ -67,13 +67,8 @@ const addSchool = async (num: number): Promise<School> => {
   };
   try {
     await api.get('admin/listing/Schools/edit/0');
-    await api.post(
-      'admin/listing/Schools/edit/0',
-      querystring.stringify(payload)
-    );
-    const getResponse = await api.get(
-      '/v3/school/slug/europe-germany-berlin-my-test-school-' + num + '/profile'
-    );
+    await api.post('admin/listing/Schools/edit/0', querystring.stringify(payload));
+    const getResponse = await api.get('/v3/school/slug/europe-germany-berlin-my-test-school-' + num + '/profile');
 
     return {
       id: getResponse.data.school.schoolId,
@@ -96,13 +91,8 @@ const addTeacher = async (num: number): Promise<Teacher> => {
   };
   try {
     await signOut();
-    const joinResponse = await api.post(
-      'user/join',
-      querystring.stringify(payload)
-    );
-    const JSESSIONID = cookie.parse(
-      joinResponse.headers['set-cookie'][0]
-    ).JSESSIONID;
+    const joinResponse = await api.post('user/join', querystring.stringify(payload));
+    const JSESSIONID = cookie.parse(joinResponse.headers['set-cookie'][0]).JSESSIONID;
     api.defaults.headers.Cookie = 'JSESSIONID=' + JSESSIONID;
     const userResponse = await api.get('v1/user/bundle');
     return { memberNumber: userResponse.data.memberno };
@@ -133,14 +123,8 @@ export const signIn = async (userName?: string) => {
     },
   };
   if (userName) {
-    const signInResponse = await axios.post(
-      'auth/sign-in',
-      axiosData,
-      axiosConfig
-    );
-    const JSESSIONID = cookie.parse(
-      signInResponse.headers['set-cookie'][0]
-    ).JSESSIONID;
+    const signInResponse = await axios.post('auth/sign-in', axiosData, axiosConfig);
+    const JSESSIONID = cookie.parse(signInResponse.headers['set-cookie'][0]).JSESSIONID;
     axiosConfig.headers.Cookie = 'JSESSIONID=' + JSESSIONID;
   }
   api = axios.create(axiosConfig);

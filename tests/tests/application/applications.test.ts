@@ -8,9 +8,7 @@ describe('admin@th.test', () => {
   });
 
   test('GET applications?schema=admin&filter[id][contains]=1', async () => {
-    const response = await api.get(
-      'applications?schema=admin&filter[id][contains]=1'
-    );
+    const response = await api.get('applications?schema=admin&filter[id][contains]=1');
     expect(response.status).toEqual(200);
     expect(response).toSatisfyApiSpec();
   });
