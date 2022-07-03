@@ -13,7 +13,7 @@ describe('admin@th.test', () => {
     expect(response).toSatisfyApiSpec();
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -28,11 +28,11 @@ describe('school-1-school@th.test', () => {
       await api.get('application-eventTypeActions?schema=admin');
     } catch (error) {
       expect(error.response.status).toEqual(401);
-      expect(error.response).toSatisfyApiSpec();  
+      expect(error.response).toSatisfyApiSpec();
     }
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -47,11 +47,11 @@ describe('endorsed@th.test', () => {
       await api.get('application-eventTypeActions?schema=admin');
     } catch (error) {
       expect(error.response.status).toEqual(401);
-      expect(error.response).toSatisfyApiSpec();  
+      expect(error.response).toSatisfyApiSpec();
     }
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -66,8 +66,7 @@ describe('not signed in', () => {
       await api.get('application-eventTypeActions?schema=admin');
     } catch (error) {
       expect(error.response.status).toEqual(401);
-      expect(error.response).toSatisfyApiSpec();  
+      expect(error.response).toSatisfyApiSpec();
     }
   });
 });
-

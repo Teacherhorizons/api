@@ -9,11 +9,11 @@ export interface Teacher {
 }
 
 export interface Data {
-  schools: School[],
-  teachers: Teacher[]
+  schools: School[];
+  teachers: Teacher[];
 }
 
 export const data: Data = {
   schools: [],
-  teachers: []
+  teachers: [],
 };

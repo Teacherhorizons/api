@@ -13,7 +13,7 @@ describe('admin@th.test', () => {
     expect(response).toSatisfyApiSpec();
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -30,10 +30,10 @@ describe('school-1-school@th.test', () => {
       expect(error.response.status).toEqual(403);
       // expect(error.response).toSatisfyApiSpec(); - TODO - add later
       // actual response: {"error":"User not authorized to make this call - not logged in","frontEndErrorSlug":"insufficientPermissions"}
-    };
+    }
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -49,10 +49,10 @@ describe('endorsed@th.test', () => {
     } catch (error) {
       expect(error.response.status).toEqual(403);
       // expect(error.response).toSatisfyApiSpec(); - TODO - add later
-    };
+    }
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
@@ -69,10 +69,10 @@ describe('not signed in', () => {
       expect(error.response.status).toEqual(403);
       // expect(error.response).toSatisfyApiSpec(); - TODO - add later
       // actual response: {"error":"User not authorized to make this call - not logged in","frontEndErrorSlug":"insufficientPermissions"}
-    };
+    }
   });
 
-  afterAll(async() => {
+  afterAll(async () => {
     await signOut();
   });
 });
