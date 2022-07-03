@@ -57,9 +57,11 @@ JsonApiModel_teacher_relationship_attribute:
 
 JsonApiModel_teacher_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_teacher_type"
