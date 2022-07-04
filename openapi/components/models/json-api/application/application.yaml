@@ -7,10 +7,14 @@ JsonApiModel_application:
       $ref: "#/JsonApiModel_application_type"
     id:
       $ref: "#/JsonApiModel_application_id"
+  oneOf:
+    - $ref: "#/JsonApiModel_application_admin"
+    - $ref: "#/JsonApiModel_application_school"
+    - $ref: "#/JsonApiModel_application_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/JsonApiModel_application_all"
+      all: "#/JsonApiModel_application_admin"
       admin: "#/JsonApiModel_application_admin"
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
@@ -20,9 +24,10 @@ JsonApiModel_application:
     - id
 
 JsonApiModel_application_all:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
+  type: object
+  additionalProperties: false
+  $ref: "#/JsonApiModel_application"
+  properties:
         attributes:
           $ref: "#/JsonApiModel_application_attributes_all"
         relationships:
