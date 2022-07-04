@@ -92,6 +92,7 @@ tags:
   - name: simple-model-application-eventType
     x-displayName: Simple model - application-eventType
     description: |
+      Note: Schools can only see records where isVisibleToSchool is true
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventType" />
 
   - name: simple-model-application-guideline
@@ -112,6 +113,7 @@ tags:
   - name: simple-model-application-thMatchType
     x-displayName: Simple model - application-thMatchType
     description: |
+      Available to Admin and School
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-thMatchType" />
 
   - name: simple-model-application-eventTypeAction

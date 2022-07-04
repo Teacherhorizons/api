@@ -6,15 +6,38 @@ SimpleModel_application-eventType:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_application-eventType_admin"
+      all: "#/SimpleModel_application-eventType_all"
       admin: "#/SimpleModel_application-eventType_admin"
       school: "#/SimpleModel_application-eventType_school"
       teacher: "#/SimpleModel_application-eventType_teacher"
 
 # new properties:
-#   nameForSchool
-#   nameForTeacher
-#   isVisibleToSchool (boolean)
+#   nameForSchool (string, required)
+#   nameForTeacher (string, required)
+#   isVisibleToSchool (boolean, required)
+
+SimpleModel_application-eventType_all:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - all
+    id:
+      $ref: "#/SimpleModel_application-eventType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    isVisibleToSchool:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool"
+    # relationship attributes
+    applicationStatusId:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
+  required:
+    - id
+    - name
+    - isVisibleToSchool
 
 SimpleModel_application-eventType_admin:
   type: object
@@ -29,23 +52,17 @@ SimpleModel_application-eventType_admin:
     # simple attributes
     name:
       $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-    # applicationStatus:
-    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
-
     # relationship attributes
     applicationStatusId:
       $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
-    manualEmailTemplateId:
-      $ref: "../../library/application/eventType.yaml#/application-eventType_manualEmailTemplateId"
   required:
-   - name
-   - applicationStatusId
-   - manualEmailTemplateId
-   - applicationStatus
+    - id
+    - name
 
 SimpleModel_application-eventType_school:
   type: object
   additionalProperties: false
+  description: foo
   properties:
     schema:
       type: string
@@ -54,13 +71,11 @@ SimpleModel_application-eventType_school:
     id:
       $ref: "#/SimpleModel_application-eventType_id"
     # simple attributes
-    name:
-      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-    # applicationStatus:
-    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
+    nameForSchool:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
   required:
-   - name
-   - applicationStatus
+    - id
+    - nameForSchool
 
 SimpleModel_application-eventType_teacher:
   type: object
@@ -75,16 +90,14 @@ SimpleModel_application-eventType_teacher:
     # simple attributes
     name:
       $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-    # applicationStatus:
-    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
   required:
-   - name
-   - applicationStatus
+    - id
+    - name
 
 # shared
 SimpleModel_application-eventType_id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

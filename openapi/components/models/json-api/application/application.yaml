@@ -1,12 +1,4 @@
 JsonApiModel_application:
-  type: object
-  properties:
-    schema:
-      $ref: "#/JsonApiModel_application_schema"
-    type:
-      $ref: "#/JsonApiModel_application_type"
-    id:
-      $ref: "#/JsonApiModel_application_id"
   oneOf:
     - $ref: "#/JsonApiModel_application_admin"
     - $ref: "#/JsonApiModel_application_school"
@@ -18,29 +10,37 @@ JsonApiModel_application:
       admin: "#/JsonApiModel_application_admin"
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
+
+# JsonApiModel_application_all:
+#   type: object
+#   additionalProperties: false
+#   $ref: "#/JsonApiModel_application"
+#   properties:
+#         attributes:
+#           $ref: "#/JsonApiModel_application_attributes_all"
+#         relationships:
+#           $ref: "#/JsonApiModel_application_relationships_all"
+
+JsonApiModel_application_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      $ref: "#/JsonApiModel_application_schema"
+    type:
+      $ref: "#/JsonApiModel_application_type"
+    id:
+      $ref: "#/JsonApiModel_application_id"  
+    attributes:
+      $ref: "#/JsonApiModel_application_attributes_admin"
+    relationships:
+      $ref: "#/JsonApiModel_application_relationships_admin"
   required:
     - schema
     - type
     - id
-
-JsonApiModel_application_all:
-  type: object
-  additionalProperties: false
-  $ref: "#/JsonApiModel_application"
-  properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_all"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_all"
-
-JsonApiModel_application_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_admin"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_admin"
+    - attributes
+    - relationships
 
 JsonApiModel_application_school:
   allOf:

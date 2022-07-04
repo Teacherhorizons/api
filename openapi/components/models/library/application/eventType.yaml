@@ -36,7 +36,7 @@ application-eventType_properties_applicationStatus:
     applicationStatus:
       $ref: "#/application-eventType_applicationStatus"
 
-#attributes
+# attributes
 application-eventType_id:
   type: integer
   example: 1
@@ -45,15 +45,25 @@ application-eventType_name:
   type: string
   example: Info request from Candidate
 
+application-eventType_nameForSchool:
+  type: string
+  example: Info request from Candidate
+
+application-eventType_nameForTeacher:
+  type: string
+  example: Info request from Candidate
+
+application-eventType_isVisibleToSchool:
+  type: boolean
+  example: true
+
+# relationship attributes
 application-eventType_applicationStatusId:
   type: integer
   example: 1
   description: Relationship to application_status
 
-application-eventType_manualEmailTemplateId:
-  type: integer
-  example:
-
+# relationships
 application-eventType_applicationStatus:
   type: object
   properties:

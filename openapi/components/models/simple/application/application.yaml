@@ -48,6 +48,7 @@ SimpleModel_application_admin:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - id
     - creationDate
     - latestUpdateDate
     - hasDataIssues
@@ -87,6 +88,7 @@ SimpleModel_application_school:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - id
     - creationDate
     - latestUpdateDate
     - statusId
@@ -119,6 +121,7 @@ SimpleModel_application_teacher:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - id
     - creationDate
     - latestUpdateDate
     - statusId

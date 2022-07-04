@@ -39,21 +39,16 @@ eventTypesResponse_admin:
             # relationship attributes
             applicationStatusId:
               $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
-            manualEmailTemplateId:
-              $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship_attribute"
           required:
             - name
             - creationDate
             - applicationStatusId
-            - manualEmailTemplateId
         relationships:
           type: object
           additionalProperties: false
           properties:
             applicationStatusId:
               $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship"
-            manualEmailTemplateId:
-              $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
           required:
             - job
             - teacher
