@@ -1,15 +1,71 @@
 SimpleModel_application-thMatchType:
-  allOf:
-    # - $ref: "#/SimpleModel_application-thMatchType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-thMatchType_id"
-        - $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_properties_name"
+  oneOf:
+    - $ref: "#/SimpleModel_application-thMatchType_admin"
+    - $ref: "#/SimpleModel_application-thMatchType_school"
+    # - $ref: "#/SimpleModel_application-thMatchType_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_application-thMatchType_admin"
+      admin: "#/SimpleModel_application-thMatchType_admin"
+      school: "#/SimpleModel_application-thMatchType_school"
+      # teacher: "#/SimpleModel_application-thMatchType_teacher"
+
+# new properties:
+#   nameForSchool
+#   nameForTeacher
+#   isVisibleToSchool (boolean)
+
+SimpleModel_application-thMatchType_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_application-thMatchType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
+  required:
+   - name
+
+SimpleModel_application-thMatchType_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_application-thMatchType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
+  required:
+   - name
+
+# SimpleModel_application-thMatchType_teacher:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     schema:
+#       type: string
+#       enum:
+#         - teacher
+#     id:
+#       $ref: "#/SimpleModel_application-thMatchType_id"
+#     # simple attributes
+#     name:
+#       $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
+#   required:
+#    - name
 
 # shared
 SimpleModel_application-thMatchType_id:
-  properties:
-    id:
       type: integer
       format: int32
       example: 1

@@ -1,15 +1,71 @@
 SimpleModel_application-status:
-  allOf:
-    # - $ref: "#/SimpleModel_application-status"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-status_id"
-        - $ref: "../../library/application/status.yaml#/application-status_properties_name"
+  oneOf:
+    - $ref: "#/SimpleModel_application-status_admin"
+    - $ref: "#/SimpleModel_application-status_school"
+    - $ref: "#/SimpleModel_application-status_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_application-status_admin"
+      admin: "#/SimpleModel_application-status_admin"
+      school: "#/SimpleModel_application-status_school"
+      teacher: "#/SimpleModel_application-status_teacher"
+
+# new properties:
+#   nameForSchool
+#   nameForTeacher
+#   isVisibleToSchool (boolean)
+
+SimpleModel_application-status_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_application-status_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/status.yaml#/application-status_name"
+  required:
+   - name
+
+SimpleModel_application-status_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_application-status_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/status.yaml#/application-status_name"
+  required:
+   - name
+
+SimpleModel_application-status_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_application-status_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/status.yaml#/application-status_name"
+  required:
+   - name
 
 # shared
 SimpleModel_application-status_id:
-  properties:
-    id:
       type: integer
       format: int32
       example: 1

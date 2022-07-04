@@ -12,6 +12,7 @@ JsonApiModel_application:
     mapping:
       all: "#/JsonApiModel_application_all"
       admin: "#/JsonApiModel_application_admin"
+      school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
   required:
     - schema
@@ -35,6 +36,15 @@ JsonApiModel_application_admin:
           $ref: "#/JsonApiModel_application_attributes_admin"
         relationships:
           $ref: "#/JsonApiModel_application_relationships_admin"
+
+JsonApiModel_application_school:
+  allOf:
+    - $ref: "#/JsonApiModel_application"
+    - properties:
+        attributes:
+          $ref: "#/JsonApiModel_application_attributes_school"
+        relationships:
+          $ref: "#/JsonApiModel_application_relationships_school"
 
 JsonApiModel_application_teacher:
   allOf:
@@ -102,6 +112,17 @@ JsonApiModel_application_attributes_admin:
         thMatchType:
           $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
 
+JsonApiModel_application_attributes_school:
+  allOf:
+    - $ref: "#/JsonApiModel_application_attributes_shared"
+    - properties:
+        # simple attributes
+        recommendationText:
+          $ref: "../../library/application/application.yaml#/application_recommendationText"
+        # relationship attributes
+        thMatchType:
+          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+
 JsonApiModel_application_attributes_teacher:
   allOf:
     - $ref: "#/JsonApiModel_application_attributes_shared"
@@ -135,6 +156,13 @@ JsonApiModel_application_relationships_all:
     - $ref: "#/JsonApiModel_application_relationships_admin"
 
 JsonApiModel_application_relationships_admin:
+  allOf:
+    - $ref: "#/JsonApiModel_application_relationships_shared"
+    - properties:
+        thMatchType:
+          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
+
+JsonApiModel_application_relationships_school:
   allOf:
     - $ref: "#/JsonApiModel_application_relationships_shared"
     - properties:

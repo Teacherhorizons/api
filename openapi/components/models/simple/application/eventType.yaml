@@ -1,27 +1,88 @@
 SimpleModel_application-eventType:
-  type: object
-  allOf:
-    - $ref: "#/SimpleModel_application-eventType_id"
-
-    # works
-    - properties:
-        name:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-
-    # doesn't work
-    # - $ref: "../../library/application/eventType.yaml#/application-eventType_properties_name"
-
-    - $ref: "../../library/application/eventType.yaml#/application-eventType_relationshipIds"
+  oneOf:
+    - $ref: "#/SimpleModel_application-eventType_admin"
+    - $ref: "#/SimpleModel_application-eventType_school"
+    - $ref: "#/SimpleModel_application-eventType_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_application-eventType_admin"
+      admin: "#/SimpleModel_application-eventType_admin"
+      school: "#/SimpleModel_application-eventType_school"
+      teacher: "#/SimpleModel_application-eventType_teacher"
 
 # new properties:
 #   nameForSchool
 #   nameForTeacher
 #   isVisibleToSchool (boolean)
 
+SimpleModel_application-eventType_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_application-eventType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    # applicationStatus:
+    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
+
+    # relationship attributes
+    applicationStatusId:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
+    manualEmailTemplateId:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_manualEmailTemplateId"
+  required:
+   - name
+   - applicationStatusId
+   - manualEmailTemplateId
+   - applicationStatus
+
+SimpleModel_application-eventType_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_application-eventType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    # applicationStatus:
+    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
+  required:
+   - name
+   - applicationStatus
+
+SimpleModel_application-eventType_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_application-eventType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    # applicationStatus:
+    #   $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatus"
+  required:
+   - name
+   - applicationStatus
+
 # shared
 SimpleModel_application-eventType_id:
-  properties:
-    id:
       type: integer
       format: int32
       example: 1
