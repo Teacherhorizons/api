@@ -6,14 +6,14 @@ import querystring from 'querystring';
 import shell from 'shelljs';
 
 import config from './config';
-import { Job, School, Teacher, data } from './data';
+import { Test, Job, School, Teacher, Data, data } from './data';
 
 export var api;
 
 export function setup(context = {}) {
   beforeAll(async () => {
     try {
-      // await addTestData();
+      await addTestData();
       shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
@@ -21,8 +21,8 @@ export function setup(context = {}) {
     }
   });
 
-  afterAll(() => {
-    // await deleteTestData();
+  afterAll(async () => {
+    await deleteTestData(data.test.id);
   });
 
   return context;
@@ -48,8 +48,29 @@ async function addTestData() {
   const job1: Job = await addJob(1);
   data.jobs.push(job1);
 
+  const test: Test = await addTest(data);
+
   console.log(104, JSON.stringify(data));
 }
+
+const addTest = async (data: Data): Promise<Test> => {
+  const payload = {
+    schoolIds: data.schools.map((x) => x.id),
+    teacherMemberNumbers: data.teachers.map((x) => x.memberNumber),
+    jobIds: data.jobs.map((x) => x.id),
+    // ...
+  };
+  console.log(102, payload);
+  try {
+    const response = await api.post('/test-apiTests', querystring.stringify(payload));
+    console.log(101, response.data);
+    return {
+      id: 123,
+    };
+  } catch (error) {
+    console.log('addTest', error);
+  }
+};
 
 /*
   [done] add school
@@ -140,6 +161,17 @@ const addApplication = async (num: number): Promise<any> => {
   //   },
   // }
   // const response = await api.post('applications', payload);
+};
+
+const deleteTestData = async (testId: number): Promise<Boolean> => {
+  try {
+    const response = await api.delete('test-apiTests/' + testId);
+    console.log(101, response.data);
+    return true;
+  } catch (error) {
+    console.log('deleteTestData', error);
+    return false;
+  }
 };
 
 export const signIn = async (userName?: string) => {

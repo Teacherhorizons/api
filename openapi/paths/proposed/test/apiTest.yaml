@@ -1,0 +1,24 @@
+delete:
+  operationId: deleteApiTest
+  tags:
+    - test
+  summary: Delete an API test
+  parameters:
+    - in: path
+      name: apiTestId
+      required: true
+      example: 1
+      schema:
+        type: integer
+        format: int32
+  responses:
+    "204":
+      description: NO_CONTENT (Request successful)
+      content:
+        application/json:
+          schema:
+            type: object
+            default: null
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+

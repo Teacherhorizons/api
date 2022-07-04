@@ -1,0 +1,63 @@
+post:
+  operationId: postApiTest
+  summary: Create an API test
+  tags:
+    - test
+  description: ""
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          additionalProperties: false
+          properties:
+            data:
+              type: object
+              additionalProperties: false
+              properties:
+                type:
+                  type: string
+                  enum:
+                    - test-apiTest
+                attributes:
+                  type: object
+                  additionalProperties: false
+                  properties:
+                    dataIds:
+                      type: string
+                      description: Must be valid json
+                      example: '{"jobIds": [1556], "schoolIds": [3275, 3276], "teacherMemberNumbers": [2223467, 2223468]}'
+                  required:
+                    - dataIds
+              required:
+                - type
+                - attributes
+          required:
+            - data
+  responses:
+    "201":
+      description: CREATED (Request successful)
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: false
+            properties:
+              data:
+                type: object
+                additionalProperties: false
+                properties:
+                  type:
+                    type: string
+                    enum:
+                      - test-apiTest
+                  id:
+                    type: string
+                    example: "1"
+                required:
+                  - type
+                  - id
+            required:
+              - data
+    "400":
+      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"

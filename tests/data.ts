@@ -1,3 +1,7 @@
+export interface Test {
+  id?: number;
+}
+
 export interface School {
   id?: number;
   slug?: string;
@@ -14,6 +18,7 @@ export interface Job {
 }
 
 export interface Data {
+  test?: Test;
   schools: School[];
   teachers: Teacher[];
   jobs: Job[];
