@@ -5,15 +5,21 @@ import path from 'path';
 import querystring from 'querystring';
 import shell from 'shelljs';
 
+import { Test, Job, School, Teacher, Data } from './interfaces';
 import config from './config';
-import { Test, Job, School, Teacher, Data, data } from './data';
 
 export var api;
+
+const data: Data = {
+  schools: [],
+  teachers: [],
+  jobs: [],
+};
 
 export function setup(context = {}) {
   beforeAll(async () => {
     try {
-      await addTestData();
+      if (config.createTestData) await addTestData();
       shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
@@ -22,7 +28,7 @@ export function setup(context = {}) {
   });
 
   afterAll(async () => {
-    await deleteTestData(data.test.id);
+    if (config.createTestData) await deleteTestData(data.test?.id);
   });
 
   return context;
