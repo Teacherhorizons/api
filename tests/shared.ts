@@ -6,14 +6,14 @@ import querystring from 'querystring';
 import shell from 'shelljs';
 
 import config from './config';
-import { School, Teacher, data } from './data';
+import { Job, School, Teacher, data } from './data';
 
 export var api;
 
 export function setup(context = {}) {
   beforeAll(async () => {
     try {
-      // await addTestData();
+      await addTestData();
       shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
@@ -40,7 +40,12 @@ async function addTestData() {
   // schools
   await signIn('admin@th.test');
   const school1: School = await addSchool(6);
+  const school2: School = await addSchool(7);
   data.schools.push(school1);
+  data.schools.push(school2);
+
+  const job1: Job = await addJob(12345678910);
+  data.jobs.push(job1);
 
   console.log(104, JSON.stringify(data));
 }
@@ -56,6 +61,60 @@ async function addTestData() {
       => stored procedure spTest_deleteData
     => only allow api call on beta and local
 */
+const addJob = async (num: number): Promise<Job> => {
+  const data = {
+    schoolId: 2520,
+    jobTypeId: 4,
+    startDate: '2022-07-02',
+    deadlineDate: '2022-07-01',
+    roleId: 1,
+    // "subjectIds":%5B4,5%5D,
+    // subjectIds: '\u005b\u0034\u002c\u0035\u005d',
+    subjectIds: [4, 5],
+    // '\u%5B'4,5'\u%5D'
+    furtherInfo: '<div><p>tttt</p></div>',
+  };
+  try {
+    // await api.get('v2/jobs/add');
+    await api.post('v2/jobs/add', querystring.stringify(data));
+    const getResponse = await api.get('/v3/school/slug/europe-germany-berlin-my-test-school-' + num + '/profile');
+
+    return {
+      id: getResponse.data.school.schoolId,
+      // slug: getResponse.data.school.slug,
+    };
+  } catch (error) {
+    console.log('addSchool', error);
+  }
+  // const payload = {
+  //   continent: 4,
+  //   country: 23,
+  //   'city.id': 86,
+  //   'data.city.id': 86,
+  //   name: 'My test school ' + num,
+  // }
+  //   try {
+  //     // await api.get('admin/listing/Schools/edit/0')
+  //     const encodedURL = encodeURI(
+  //       '/v2/jobs/insert?data={"schoolId":2520,"roleId":1,"subjectIds":%5B4,5%5D,"title":"hurdy gurdy Ian","furtherInfo":"<p>er er</p>","startDate":"2019-10-22","deadlineDate":"2019-10-15","jobTypeId":4,"advertExpiryDate":"2018-10-30","excludeFromJobSearch":0}'
+  //     );
+  //     const encodedUrl2 = encodeURI('<div><p>tttt</p></div>');
+  //     console.log(1234, encodedURL);
+  //     console.log(1234, encodedUrl2);
+  //     await api.post(
+  //       await api.post('encodedURL')
+  //       // 'admin/listing/Schools/edit/0',
+  //       // querystring.stringify(payload)
+  //     );
+  //     const getResponse = await api.get('/v3/school/slug/europe-germany-berlin-my-test-school-' + num + '/profile');
+
+  //     return {
+  //       id: getResponse.data.school.schoolId,
+  //     };
+  //   } catch (error) {
+  //     console.log('addJob', error);
+  //   }
+};
 
 const addSchool = async (num: number): Promise<School> => {
   const payload = {
@@ -134,4 +193,5 @@ export const setApi = signIn;
 
 export const signOut = async () => {
   await api.post('user/sign-out');
+  // await axios.post('user/sign-out')
 };
