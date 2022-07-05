@@ -1,57 +1,108 @@
-# standard properties
-general-currency_standardProperties_all:
+# attributes
+general-currency_attributes:
   allOf:
-    - $ref: "#/general-currency_standardProperties_shared"
-    - $ref: "#/general-currency_standardProperties_adminOnly"
+    - $ref: "#/general-currency_code"
+    - $ref: "#/general-currency_symbol"
+    - $ref: "#/general-currency_name"
+    - $ref: "#/general-currency_creationDate"
+    - $ref: "#/general-currency_latestUpdateDate"
 
-general-currency_noLongerUsedProperties:
+# relationshipIds
+general-currency_relationshipIds:
+  allOf:
+    - $ref: "#/general-currency_properties_creationUserId"
+    - $ref: "#/general-currency_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+general-currency_relationships:
+  allOf:
+    - $ref: "#/general-currency_properties_creationUser"
+    - $ref: "#/general-currency_properties_latestUpdateUser"
+
+#properties:
+general-currency_properties_id:
   properties:
-    exampleNoLongerUsedProperty:
-      type: string
-      example: TODO - remove once used for real elsewhere
-      description: NO LONGER USED
-
-general-currency_standardProperties_shared:
+    id:
+      $ref: "#/general-currency_id"
+general-currency_properties_code:
   properties:
     code:
-      type: string
-      example: GBP
+      $ref: "#/general-currency_code"
+general-currency_properties_symbol:
+  properties:
     symbol:
-      type: string
-      example: "£"
+      $ref: "#/general-currency_symbol"
+general-currency_properties_name:
+  properties:
     name:
-      type: string
-      example: Great Britain Pound
-
-general-currency_standardProperties_adminOnly:
+      $ref: "#/general-currency_name"
+general-currency_properties_creationDate:
   properties:
     creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
+      $ref: "#/general-currency_creationDate"
+general-currency_properties_latestUpdateDate:
+  properties:
     latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
-
-# relationship properties
-
-general-currency_relationshipProperties_all:
-  allOf:
-    # - $ref: "#/general-currency_standardProperties_shared"
-    - $ref: "#/general-currency_standardProperties_adminOnly"
-
-# general-currency_relationshipProperties_shared:
-
-general-currency_relationshipProperties_adminOnly:
+      $ref: "#/general-currency_latestUpdateDate"
+general-currency_properties_creationUserId:
   properties:
     creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
+      $ref: "#/general-currency_creationUserId"
+general-currency_properties_latestUpdateUserId:
+  properties:
     latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
+      $ref: "#/general-currency_latestUpdateUserId"
+general-currency_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/general-currency_creationUser"
+general-currency_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/general-currency_latestUpdateUser"
+
+#attributes
+general-currency_id:
+  type: integer
+  example: 1
+general-currency_code:
+  type: string
+  example: GBP
+general-currency_symbol:
+  type: string
+  example: &pound;
+general-currency_name:
+  type: string
+  example: Great Britain Pound
+general-currency_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+general-currency_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+general-currency_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+general-currency_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+general-currency_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+general-currency_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user

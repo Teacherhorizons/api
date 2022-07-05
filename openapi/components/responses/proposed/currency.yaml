@@ -22,8 +22,8 @@ general-currencyResponse_admin:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_adminOnly"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
             # relationships:
             #$ref: "../../models/json-api/general/general-currency.yaml#/JsonApiModel_regional-region_relationships_admin"
 
@@ -38,7 +38,7 @@ general-currencyResponse_school:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
 
 general-currencyResponse_teacher:
   allOf:
@@ -51,4 +51,4 @@ general-currencyResponse_teacher:
             attributes:
               type: object
               allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_standardProperties_shared"
+                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"

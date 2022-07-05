@@ -1,70 +1,100 @@
 SimpleModel_general-currency:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/SimpleModel_general-currency_admin"
+    - $ref: "#/SimpleModel_general-currency_school"
+    - $ref: "#/SimpleModel_general-currency_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_general-currency_all"
+      all: "#/SimpleModel_general-currency_admin"
       admin: "#/SimpleModel_general-currency_admin"
-      adminOnly: "#/SimpleModel_general-currency_adminOnly"
       school: "#/SimpleModel_general-currency_school"
       teacher: "#/SimpleModel_general-currency_teacher"
 
-SimpleModel_general-currency_all:
-  allOf:
-    - $ref: "#/SimpleModel_general-currency"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-currency_id"
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_all"
-        - $ref: "../../library/general/currency.yaml#/general-currency_relationshipProperties_adminOnly"
-        - $ref: "../../library/general/currency.yaml#/general-currency_noLongerUsedProperties"
-
 SimpleModel_general-currency_admin:
-  allOf:
-    - $ref: "#/SimpleModel_general-currency"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-currency_id"
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_adminOnly"
-        - $ref: "../../library/general/currency.yaml#/general-currency_relationshipProperties_adminOnly"
-
-SimpleModel_general-currency_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_general-currency"
-    - type: object
-      allOf:
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_adminOnly"
-        - $ref: "../../library/general/currency.yaml#/general-currency_relationshipProperties_adminOnly"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_general-currency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/currency.yaml#/general-currency_code"
+    symbol:
+      $ref: "../../library/general/currency.yaml#/general-currency_symbol"
+    name:
+      $ref: "../../library/general/currency.yaml#/general-currency_name"
+    creationDate:
+      $ref: "../../library/general/currency.yaml#/general-currency_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateDate"
+    # relationship attributes
+    # creationUser:
+    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    # latestUpdateUser:
+    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+  required:
+    - id
+    - code
+    - symbol
+    - name
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
 
 SimpleModel_general-currency_school:
-  allOf:
-    - $ref: "#/SimpleModel_general-currency"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-currency_id"
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
-        # - $ref: "../../library/general/general-currency.yaml#/general-currency_relationshipProperties_shared"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_general-currency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/currency.yaml#/general-currency_code"
+    symbol:
+      $ref: "../../library/general/currency.yaml#/general-currency_symbol"
+    name:
+      $ref: "../../library/general/currency.yaml#/general-currency_name"
+  required:
+    - id
+    - code
+    - symbol
+    - name
 
 SimpleModel_general-currency_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_general-currency"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-currency_id"
-        - $ref: "../../library/general/currency.yaml#/general-currency_standardProperties_shared"
-        # - $ref: "../../library/general/general-currency.yaml#/general-currency_relationshipProperties_shared"
-
-# shared
-SimpleModel_general-currency_id:
+  type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - teacher
     id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+      $ref: "#/SimpleModel_general-currency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/currency.yaml#/general-currency_code"
+    symbol:
+      $ref: "../../library/general/currency.yaml#/general-currency_symbol"
+    name:
+      $ref: "../../library/general/currency.yaml#/general-currency_name"
+  required:
+    - id
+    - code
+    - symbol
+    - name
+
+SimpleModel_general-currency_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
