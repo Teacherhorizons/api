@@ -1,0 +1,129 @@
+Application-eventTypesResponse:
+  oneOf:
+    - $ref: "#/Application-eventTypesResponse_admin"
+    - $ref: "#/Application-eventTypesResponse_school"
+    - $ref: "#/Application-eventTypesResponse_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/Application-eventTypesResponse_admin"
+      school: "#/Application-eventTypesResponse_school"
+      teacher: "#/Application-eventTypesResponse_teacher"
+
+# admin
+Application-eventTypesResponse_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+        id:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+        attributes:
+          type: object
+          additionalProperties: false
+          properties:
+            # simple attributes
+            name:
+              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_name"
+            # relationship attributes
+            applicationStatusId:
+              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          required:
+            - name
+            - applicationStatusId
+      required:
+        - type
+        - id
+        - attributes
+  required:
+    - schema
+    - data
+    - included
+
+# school
+Application-eventTypesResponse_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+        id:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+        attributes:
+          type: object
+          additionalProperties: false
+          properties:
+            # simple attributes
+            nameForSchool:
+              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool"
+            # relationship attributes
+            applicationStatusId:
+              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          required:
+            - nameForSchool
+            - applicationStatusId
+      required:
+        - type
+        - id
+        - attributes
+  required:
+    - schema
+    - data
+    - included
+
+
+# teacher
+Application-eventTypesResponse_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+        id:
+          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+        attributes:
+          type: object
+          additionalProperties: false
+          properties:
+            # simple attributes
+            nameForTeacher:
+              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher"
+            # relationship attributes
+            applicationStatusId:
+              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          required:
+            - nameForTeacher
+            - applicationStatusId
+      required:
+        - type
+        - id
+        - attributes
+  required:
+    - schema
+    - data
+    - included

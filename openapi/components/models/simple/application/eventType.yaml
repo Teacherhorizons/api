@@ -11,11 +11,6 @@ SimpleModel_application-eventType:
       school: "#/SimpleModel_application-eventType_school"
       teacher: "#/SimpleModel_application-eventType_teacher"
 
-# new properties:
-#   nameForSchool (string, required)
-#   nameForTeacher (string, required)
-#   isVisibleToSchool (boolean, required)
-
 SimpleModel_application-eventType_all:
   type: object
   additionalProperties: false
@@ -29,6 +24,10 @@ SimpleModel_application-eventType_all:
     # simple attributes
     name:
       $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    nameForSchool:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+    nameForTeacher:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
     isVisibleToSchool:
       $ref: "../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool"
     # relationship attributes
@@ -37,6 +36,8 @@ SimpleModel_application-eventType_all:
   required:
     - id
     - name
+    - nameForSchool
+    - nameForTeacher
     - isVisibleToSchool
 
 SimpleModel_application-eventType_admin:
@@ -62,7 +63,6 @@ SimpleModel_application-eventType_admin:
 SimpleModel_application-eventType_school:
   type: object
   additionalProperties: false
-  description: foo
   properties:
     schema:
       type: string
@@ -73,6 +73,9 @@ SimpleModel_application-eventType_school:
     # simple attributes
     nameForSchool:
       $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+    # relationship attributes
+    applicationStatusId:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
   required:
     - id
     - nameForSchool
@@ -88,8 +91,11 @@ SimpleModel_application-eventType_teacher:
     id:
       $ref: "#/SimpleModel_application-eventType_id"
     # simple attributes
-    name:
-      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+    nameForTeacher:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
+    # relationship attributes
+    applicationStatusId:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
   required:
     - id
     - name

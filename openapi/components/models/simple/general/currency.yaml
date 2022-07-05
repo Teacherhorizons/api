@@ -33,10 +33,10 @@ SimpleModel_general-currency_admin:
     latestUpdateDate:
       $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateDate"
     # relationship attributes
-    # creationUser:
-    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    # latestUpdateUser:
-    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    creationUserId:
+      $ref: "../../library/general/currency.yaml#/general-currency_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateUserId"
   required:
     - id
     - code
@@ -45,6 +45,7 @@ SimpleModel_general-currency_admin:
     - creationDate
     - latestUpdateDate
     - creationUserId
+    - latestUpdateUserId
 
 SimpleModel_general-currency_school:
   type: object

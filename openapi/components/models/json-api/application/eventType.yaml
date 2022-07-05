@@ -1,36 +1,135 @@
 JsonApiModel_application-eventType:
+  oneOf:
+    - $ref: "#/JsonApiModel_application-eventType_admin"
+    - $ref: "#/JsonApiModel_application-eventType_school"
+    - $ref: "#/JsonApiModel_application-eventType_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      admin: "#/JsonApiModel_application-eventType_admin"
+      school: "#/JsonApiModel_application-eventType_school"
+      teacher: "#/JsonApiModel_application-eventType_teacher"
+
+# admin
+JsonApiModel_application-eventType_admin:
   type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - admin
     type:
       $ref: "#/JsonApiModel_application-eventType_type"
     id:
       $ref: "#/JsonApiModel_application-eventType_id"
     attributes:
-      $ref: "#/JsonApiModel_application-eventType_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        name:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+        nameForSchool:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+        nameForTeacher:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
+        isVisibleToSchool:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool"
+      # relationship attributes
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+      required:
+        - name
     relationships:
-      $ref: "#/JsonApiModel_application-eventType_relationships"
+      type: object
+      description: Related Attributes
+      additionalProperties: false
+      properties:
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
   required:
+    - schema
     - type
     - id
+    - attributes
+    - relationships
 
-JsonApiModel_application-eventType_attributes:
+# school
+JsonApiModel_application-eventType_school:
   type: object
+  additionalProperties: false
   properties:
-  # simple Attributes
-    name:
-      $ref: "../../library/application/eventType.yaml#/application-eventType_name"
-  # relationship attributes
-    applicationStatus:
-      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+    schema:
+      type: string
+      enum:
+        - school
+    type:
+      $ref: "#/JsonApiModel_application-eventType_type"
+    id:
+      $ref: "#/JsonApiModel_application-eventType_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        nameForSchool:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+      # relationship attributes
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+    relationships:
+      type: object
+      description: Related Attributes
+      additionalProperties: false
+      properties:
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
-JsonApiModel_application-eventType_relationships:
+# teacher
+JsonApiModel_application-eventType_teacher:
   type: object
-  description: Related Attributes
+  additionalProperties: false
   properties:
-    applicationStatus:
-      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+    schema:
+      type: string
+      enum:
+        - teacher
+    type:
+      $ref: "#/JsonApiModel_application-eventType_type"
+    id:
+      $ref: "#/JsonApiModel_application-eventType_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        nameForTeacher:
+          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
+      # relationship attributes
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+    relationships:
+      type: object
+      description: Related Attributes
+      additionalProperties: false
+      properties:
+        applicationStatus:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
-#
+# type and id
 JsonApiModel_application-eventType_type:
   type: string
   example: application-eventType
@@ -45,15 +144,18 @@ JsonApiModel_application-eventType_id:
 
 JsonApiModel_application-eventType_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_application-eventType_id"
 
 JsonApiModel_application-eventType_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application-eventType_type"
