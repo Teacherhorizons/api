@@ -1,76 +1,172 @@
-# standard properties
-regional-city_standardProperties_all:
+# attributes
+general-currency_attributes:
   allOf:
-    - $ref: "#/regional-city_standardProperties_shared"
-    - $ref: "#/regional-city_standardProperties_adminOnly"
+    - $ref: "#/regional-city_name"
+    - $ref: "#/regional-city_alias"
+    - $ref: "#/regional-city_keyAttractions"
+    - $ref: "#/regional-city_creationDate"
+    - $ref: "#/regional-city_latestUpdateDate"
+    - $ref: "#/regional-city_slug"
+    - $ref: "#/regional-city_locationLatLong.lat"
+    - $ref: "#/regional-city_locationLatLong.long"
 
-regional-city_standardProperties_shared:
+# relationshipIds
+general-currency_relationshipIds:
+  allOf:
+    - $ref: "#/regional-city_properties_creationUserId"
+    - $ref: "#/regional-city_properties_latestUpdateUserId"
+
+# attribute relationships
+
+# relationships
+general-currency_relationships:
+  allOf:
+    - $ref: "#/regional-city_properties_creationUser"
+    - $ref: "#/regional-city_properties_latestUpdateUser"
+
+#properties:
+regional-city_properties_id:
   properties:
     id:
-      type: integer
-      example: 1
-      description: Unique identifier of the entity
+      $ref: "#/regional-city_id"
+regional-city_properties_name:
+  properties:
     name:
-      type: string
-      example: Luanda
+      $ref: "#/regional-city_name"
+regional-city_properties_alias:
+  properties:
     alias:
-      type: string
-      example: /Africa/Angola/Luanda
+      $ref: "#/regional-city_alias"
+regional-city_properties_keyAttractions:
+  properties:
     keyAttractions:
-      type: string
-      example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:32Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:32Z
-    slug:
-      type: string
-      example: africa-angola-luanda
-    locationLatLong:
-      type: object
-      properties:
-        lat:
-          type: number
-          example: 12.2755988905617
-          description: Latitude
-        long:
-          type: number
-          example: 17.46826171875
-          description: Longitude
-
-regional-city_standardProperties_adminOnly:
+      $ref: "#/regional-city_keyAttractions"
+regional-city_properties_creationDate:
   properties:
     creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
+      $ref: "#/regional-city_creationDate"
+regional-city_properties_latestUpdateDate:
+  properties:
     latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
-
-# relationship properties
-
-regional-city_relationshipProperties_all:
-  allOf:
-    # - $ref: "#/regional-city_standardProperties_shared"
-    - $ref: "#/regional-city_standardProperties_adminOnly"
-
-# regional-city_relationshipProperties_shared:
-
-regional-city_relationshipProperties_adminOnly:
+      $ref: "#/regional-city_latestUpdateDate"
+regional-city_properties_slug:
+  properties:
+    slug:
+      $ref: "#/regional-city_slug"
+regional-city_properties_locationLatLong.lat:
+  properties:
+    locationLatLong.lat:
+      $ref: "#/regional-city_locationLatLong.lat"
+regional-city_properties_locationLatLong.long:
+  properties:
+    locationLatLong.long:
+      $ref: "#/regional-city_locationLatLong.long"
+regional-city_properties_countryId:
+  properties:
+    countryId:
+      $ref: "#/regional-city_countryId"
+regional-city_properties_creationUserId:
   properties:
     creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
+      $ref: "#/regional-city_creationUserId"
+regional-city_properties_latestUpdateUserId:
+  properties:
     latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
+      $ref: "#/regional-city_latestUpdateUserId"
+regional-city_properties_languageId:
+  properties:
+    languageId:
+      $ref: "#/regional-city_languageId"
+regional-city_properties_country:
+  properties:
+    country:
+      $ref: "#/regional-city_country"
+regional-city_properties_creationUser:
+  properties:
+    creationUser:
+      $ref: "#/regional-city_creationUser"
+regional-city_properties_latestUpdateUser:
+  properties:
+    latestUpdateUser:
+      $ref: "#/regional-city_latestUpdateUser"
+regional-city_properties_language:
+  properties:
+    language:
+      $ref: "#/regional-city_language"
+#attributes
+regional-city_id:
+  type: integer
+  example: 1
+  description: Unique identifier of the entity
+regional-city_name:
+  type: string
+  example: Luanda
+regional-city_alias:
+  type: string
+  example: /Africa/Angola/Luanda
+regional-city_keyAttractions:
+  type: string
+  example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
+regional-city_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+regional-city_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:32Z
+regional-city_slug:
+  type: string
+  example: africa-angola-luanda
+regional-city_locationLatLong.lat:
+  type: number
+  example: -8.8383333
+  description: Latitude
+regional-city_locationLatLong.long:
+  type: number
+  example: 13.2344444
+  description: Longitude
+regional-city_countryId:
+  type: integer
+  example: 2
+  description: Relationship to Country
+regional-city_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-city_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-city_languageId:
+  type: integer
+  example: 
+  description: Relationship to Language
+regional-city_country:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to Country
+regional-city_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+regional-city_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to user
+regional-city_language:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+  description: Relationship to Language
