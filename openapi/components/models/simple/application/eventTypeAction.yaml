@@ -1,18 +1,120 @@
 SimpleModel_application-eventTypeAction:
-  allOf:
-    # - $ref: "#/SimpleModel_application-eventTypeAction"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-eventTypeAction_id"
-        - $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_attributes"
-        - $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_relationshipIds"
+  oneOf:
+    - $ref: "#/SimpleModel_application-eventTypeAction_admin"
+    - $ref: "#/SimpleModel_application-eventTypeAction_school"
+    - $ref: "#/SimpleModel_application-eventTypeAction_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_application-eventTypeAction_all"
+      admin: "#/SimpleModel_application-eventTypeAction_admin"
+      school: "#/SimpleModel_application-eventTypeAction_school"
+      teacher: "#/SimpleModel_application-eventTypeAction_teacher"
+
+SimpleModel_application-eventTypeAction_all:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - all
+    id:
+      $ref: "#/SimpleModel_application-eventTypeAction_id"
+  # simple Attributes
+    label:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+  # relationship attributes
+    applicationEventTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
+    actionTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_actionTypeId"
+    manualEmailTemplateId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_manualEmailTemplateId"
+    autoEmail:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmail"
+  required:
+    - label
+    - applicationEventType
+    - actionType
+    - manualEmailTemplate
+    - autoEmail
+
+SimpleModel_application-eventTypeAction_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_application-eventTypeAction_id"
+  # simple Attributes
+    label:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+  # relationship attributes
+    applicationEventTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
+    actionTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_actionTypeId"
+    manualEmailTemplateId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_manualEmailTemplateId"
+    autoEmail:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmail"
+  required:
+    - label
+    - applicationEventType
+    - actionType
+    - manualEmailTemplate
+    - autoEmail
+
+SimpleModel_application-eventTypeAction_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_application-eventTypeAction_id"
+  # simple Attributes
+    label:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+  # relationship attributes
+    applicationEventTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
+  required:
+    - id
+    - label
+    - applicationEventTypeId
+
+SimpleModel_application-eventTypeAction_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_application-eventTypeAction_id"
+  # simple Attributes
+    label:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+  # relationship attributes
+    applicationEventTypeId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
+  required:
+    - id
+    - label
+    - applicationEventTypeId
 
 # shared
 SimpleModel_application-eventTypeAction_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

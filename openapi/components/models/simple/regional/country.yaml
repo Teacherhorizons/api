@@ -1,69 +1,137 @@
 SimpleModel_regional-country:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/SimpleModel_regional-country_admin"
+    - $ref: "#/SimpleModel_regional-country_school"
+    - $ref: "#/SimpleModel_regional-country_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-country_all"
+      all: "#/SimpleModel_regional-country_admin"
       admin: "#/SimpleModel_regional-country_admin"
-      adminOnly: "#/SimpleModel_regional-country_adminOnly"
       school: "#/SimpleModel_regional-country_school"
       teacher: "#/SimpleModel_regional-country_teacher"
 
-SimpleModel_regional-country_all:
-  allOf:
-    - $ref: "#/SimpleModel_regional-country"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-country_id"
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_all"
-        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
-
 SimpleModel_regional-country_admin:
-  allOf:
-    - $ref: "#/SimpleModel_regional-country"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-country_id"
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
-
-SimpleModel_regional-country_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_regional-country"
-    - type: object
-      allOf:
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
-        - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_adminOnly"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_regional-country_id"
+    # simple Attributes
+    name:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    alias:
+      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+    creationDate:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateDate"
+    isoCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    phoneCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    slug:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    nationalAverageIncome:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateUserId"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - creationDate
+    - latestUpdateDate
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
+    - creationUser
+    - latestUpdateUser
 
 SimpleModel_regional-country_school:
-  allOf:
-    - $ref: "#/SimpleModel_regional-country"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-country_id"
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-        # - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_shared"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_regional-country_id"
+    # simple attributes
+    name:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    alias:
+      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+    isoCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    phoneCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    slug:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    nationalAverageIncome:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
 
 SimpleModel_regional-country_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_regional-country"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-country_id"
-        - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-        # - $ref: "../../library/regional/country.yaml#/regional-country_relationshipProperties_shared"
-
-# shared
-SimpleModel_regional-country_id:
+  type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - teacher
     id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+      $ref: "#/SimpleModel_regional-country_id"
+    # simple attributes
+    name:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    alias:
+      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+    isoCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    phoneCode:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    slug:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    nationalAverageIncome:
+      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
+
+SimpleModel_regional-country_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

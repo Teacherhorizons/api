@@ -1,69 +1,125 @@
 SimpleModel_regional-city:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/SimpleModel_regional-city_admin"
+    - $ref: "#/SimpleModel_regional-city_school"
+    - $ref: "#/SimpleModel_regional-city_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-city_all"
+      all: "#/SimpleModel_regional-city_admin"
       admin: "#/SimpleModel_regional-city_admin"
-      adminOnly: "#/SimpleModel_regional-city_adminOnly"
       school: "#/SimpleModel_regional-city_school"
       teacher: "#/SimpleModel_regional-city_teacher"
 
-SimpleModel_regional-city_all:
-  allOf:
-    - $ref: "#/SimpleModel_regional-city"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-city_id"
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_all"
-        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
-
 SimpleModel_regional-city_admin:
-  allOf:
-    - $ref: "#/SimpleModel_regional-city"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-city_id"
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_adminOnly"
-        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
-
-SimpleModel_regional-city_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_regional-city"
-    - type: object
-      allOf:
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_adminOnly"
-        - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_adminOnly"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_regional-city_id"
+    # simple Attributes
+    name:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    alias:
+      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+    keyAttractions:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    creationDate:
+      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
+    slug:
+      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/regional/city.yaml#/regional-city_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - creationDate
+    - latestUpdateDate
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
+    - creationUser
+    - latestUpdateUser
 
 SimpleModel_regional-city_school:
-  allOf:
-    - $ref: "#/SimpleModel_regional-city"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-city_id"
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
-        # - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_shared"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_regional-city_id"
+    # simple attributes
+    name:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    alias:
+      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+    keyAttractions:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    slug:
+      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
 
 SimpleModel_regional-city_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_regional-city"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-city_id"
-        - $ref: "../../library/regional/city.yaml#/regional-city_standardProperties_shared"
-        # - $ref: "../../library/regional/city.yaml#/regional-city_relationshipProperties_shared"
-
-# shared
-SimpleModel_regional-city_id:
+  type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - teacher
     id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+      $ref: "#/SimpleModel_regional-city_id"
+    # simple attributes
+    name:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    alias:
+      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+    keyAttractions:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    slug:
+      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+  required:
+    - name
+    - alias
+    - keyAtrractions
+    - slug
+    - locationLatLong.lat
+    - locationLatLong.long
+
+SimpleModel_regional-city_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

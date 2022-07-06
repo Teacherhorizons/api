@@ -1,9 +1,8 @@
 JsonApiModel_regional-country:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/JsonApiModel_regional-country_admin"
+    - $ref: "#/JsonApiModel_regional-country_school"
+    - $ref: "#/JsonApiModel_regional-country_teacher"
   discriminator:
     propertyName: schema
     mapping:
@@ -11,81 +10,173 @@ JsonApiModel_regional-country:
       school: "#/JsonApiModel_regional-country_school"
       teacher: "#/JsonApiModel_regional-country_teacher"
 
-JsonApiModel_regional-country_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_regional-country"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_regional-country_attributes_admin"
-    - required:
-        - type
-        - id
-
-JsonApiModel_regional-country_school:
-  allOf:
-    - $ref: "#/JsonApiModel_regional-country"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_regional-country_attributes_school"
-    - required:
-        - type
-        - id
-
-JsonApiModel_regional-country_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_regional-country"
-    - type: object
-    - properties:
-        $ref: "#/JsonApiModel_regional-country_attributes_school"
-    - required:
-        - type
-        - id
-
 # admin
-JsonApiModel_regional-country_attributes_admin:
-  type:
-    $ref: "#/JsonApiModel_regional-country_type"
-  id:
-    $ref: "#/JsonApiModel_regional-country_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_adminOnly"
-  relationships:
-    $ref: "#/JsonApiModel_regional-country_relationships_admin"
-
-JsonApiModel_regional-country_relationships_admin:
+JsonApiModel_regional-country_admin:
   type: object
-  description: Related attributes
+  additionalProperties: false
   properties:
-    creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    schema:
+      type: string
+      enum:
+        - admin
+    type:
+      $ref: "#/JsonApiModel_regional-country_type"
+    id:
+      $ref: "#/JsonApiModel_regional-country_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        name:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        alias:
+          $ref: "../../library/regional/country.yaml#/regional-country_alias"
+        creationDate:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateDate"
+        isoCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        phoneCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        slug:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        nationalAverageIncome:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        locationLatLong.lat:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+        locationLatLong.long:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+      # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        - name
+        - alias
+        - keyAtrractions
+        - creationDate
+        - latestUpdateDate
+        - slug
+        - locationLatLong.lat
+        - locationLatLong.long
+        - creationUser
+        - latestUpdateUser
+    relationships:
+      type: object
+      description: Related Attributes
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
 # school
-JsonApiModel_regional-country_attributes_school:
-  type:
-    $ref: "#/JsonApiModel_regional-country_type"
-  id:
-    $ref: "#/JsonApiModel_regional-country_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-  # relationships:
+JsonApiModel_regional-country_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    type:
+      $ref: "#/JsonApiModel_regional-country_type"
+    id:
+      $ref: "#/JsonApiModel_regional-country_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        name:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        alias:
+          $ref: "../../library/regional/country.yaml#/regional-country_alias"
+        isoCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        phoneCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        slug:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        nationalAverageIncome:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        locationLatLong.lat:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+        locationLatLong.long:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+      required:
+        - name
+        - alias
+        - keyAtrractions
+        - slug
+        - locationLatLong.lat
+        - locationLatLong.long
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
 # teacher
-JsonApiModel_regional-country_attributes_teacher:
-  type:
-    $ref: "#/JsonApiModel_regional-country_type"
-  id:
-    $ref: "#/JsonApiModel_regional-country_id"
-  attributes:
-    allOf:
-      - $ref: "../../library/regional/country.yaml#/regional-country_standardProperties_shared"
-  # relationships:
+JsonApiModel_regional-country_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    type:
+      $ref: "#/JsonApiModel_regional-country_type"
+    id:
+      $ref: "#/JsonApiModel_regional-country_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+      # simple Attributes
+        name:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        alias:
+          $ref: "../../library/regional/country.yaml#/regional-country_alias"
+        isoCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        phoneCode:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        slug:
+          $ref: "../../library/regional/country.yaml#/regional-country_name"
+        nationalAverageIncome:
+          $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+        locationLatLong.lat:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
+        locationLatLong.long:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+      required:
+        - name
+        - alias
+        - keyAtrractions
+        - slug
+        - locationLatLong.lat
+        - locationLatLong.long
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
-# shared
+# type and id
 JsonApiModel_regional-country_type:
   type: string
   example: regional-country
@@ -100,22 +191,20 @@ JsonApiModel_regional-country_id:
 
 JsonApiModel_regional-country_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_regional-country_id"
 
 JsonApiModel_regional-country_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_regional-country_type"
         id:
           $ref: "#/JsonApiModel_regional-country_id"
-      required:
-        - type
-        - id
-  required:
-    - data
