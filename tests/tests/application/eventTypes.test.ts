@@ -39,6 +39,8 @@ describe('school-1-school@th.test', () => {
     const response = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
     expect(response).toSatisfyApiSpec();
+    // TODO: add test to check school can see only application event types where isVisibleToSchool is true
+    // e.g. expected count
   });
 
   test('GET application-eventTypes?schema=admin', async () => {

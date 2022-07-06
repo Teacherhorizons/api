@@ -1,5 +1,6 @@
 SimpleModel_application-eventType:
   oneOf:
+    - $ref: "#/SimpleModel_application-eventType_all"
     - $ref: "#/SimpleModel_application-eventType_admin"
     - $ref: "#/SimpleModel_application-eventType_school"
     - $ref: "#/SimpleModel_application-eventType_teacher"
