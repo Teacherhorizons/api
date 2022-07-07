@@ -11,16 +11,6 @@ JsonApiModel_application:
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
 
-# JsonApiModel_application_all:
-#   type: object
-#   additionalProperties: false
-#   $ref: "#/JsonApiModel_application"
-#   properties:
-#         attributes:
-#           $ref: "#/JsonApiModel_application_attributes_all"
-#         relationships:
-#           $ref: "#/JsonApiModel_application_relationships_all"
-
 JsonApiModel_application_admin:
   type: object
   additionalProperties: false
@@ -43,22 +33,46 @@ JsonApiModel_application_admin:
     - relationships
 
 JsonApiModel_application_school:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_school"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_school"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      $ref: "#/JsonApiModel_application_schema"
+    type:
+      $ref: "#/JsonApiModel_application_type"
+    id:
+      $ref: "#/JsonApiModel_application_id"  
+    attributes:
+      $ref: "#/JsonApiModel_application_attributes_school"
+    relationships:
+      $ref: "#/JsonApiModel_application_relationships_school"
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
 JsonApiModel_application_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_teacher"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_teacher"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      $ref: "#/JsonApiModel_application_schema"
+    type:
+      $ref: "#/JsonApiModel_application_type"
+    id:
+      $ref: "#/JsonApiModel_application_id"  
+    attributes:
+      $ref: "#/JsonApiModel_application_attributes_teacher"
+    relationships:
+      $ref: "#/JsonApiModel_application_relationships_teacher"
+  required:
+    - schema
+    - type
+    - id
+    - attributes
+    - relationships
 
 # schema, type and id
 JsonApiModel_application_schema:

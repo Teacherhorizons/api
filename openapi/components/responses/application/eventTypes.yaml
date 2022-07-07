@@ -20,30 +20,32 @@ Application-eventTypesResponse_admin:
       enum:
         - admin
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
-        id:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            name:
-              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_name"
-            # relationship attributes
-            applicationStatusId:
-              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
-          required:
-            - name
-            - applicationStatusId
-      required:
-        - type
-        - id
-        - attributes
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+          id:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              # simple attributes
+              name:
+                $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_name"
+              # relationship attributes
+              applicationStatusId:
+                $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+            required:
+              - name
+              - applicationStatusId
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data
@@ -59,35 +61,36 @@ Application-eventTypesResponse_school:
       enum:
         - school
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
-        id:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            nameForSchool:
-              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool"
-            # relationship attributes
-            applicationStatusId:
-              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
-          required:
-            - nameForSchool
-            - applicationStatusId
-      required:
-        - type
-        - id
-        - attributes
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+          id:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              # simple attributes
+              nameForSchool:
+                $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool"
+              # relationship attributes
+              applicationStatusId:
+                $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+            required:
+              - nameForSchool
+              - applicationStatusId
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data
     - included
-
 
 # teacher
 Application-eventTypesResponse_teacher:
@@ -99,30 +102,32 @@ Application-eventTypesResponse_teacher:
       enum:
         - teacher
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
-        id:
-          $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            nameForTeacher:
-              $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher"
-            # relationship attributes
-            applicationStatusId:
-              $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
-          required:
-            - nameForTeacher
-            - applicationStatusId
-      required:
-        - type
-        - id
-        - attributes
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+          id:
+            $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              # simple attributes
+              nameForTeacher:
+                $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher"
+              # relationship attributes
+              applicationStatusId:
+                $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+            required:
+              - nameForTeacher
+              - applicationStatusId
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data

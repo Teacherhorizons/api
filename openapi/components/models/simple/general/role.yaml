@@ -1,11 +1,31 @@
 SimpleModel_general-role:
-  allOf:
-    # - $ref: "#/SimpleModel_general-role"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-role_id"
-        - $ref: "../../library/general/role.yaml#/general-role_attributes"
-        - $ref: "../../library/general/role.yaml#/general-role_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-role_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/role.yaml#/general-role_name"
+    creationDate:
+      $ref: "../../library/general/role.yaml#/general-role_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/role.yaml#/general-role_latestUpdateDate" 
+    # relationship attributes
+    roleTypeId:
+      $ref: "../../library/general/role.yaml#/general-role_roleTypeId"
+    creationUserId:
+      $ref: "../../library/general/role.yaml#/general-role_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/role.yaml#/general-role_latestUpdateUserId"
+  required:
+    - id
+    - name
+    - creationDate
+    - latestUpdateDate
+    - roleTypeId
+    - creationUserId
+    - latestUpdateUserId
 
 # shared
 SimpleModel_general-role_id:

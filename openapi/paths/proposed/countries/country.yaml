@@ -7,8 +7,9 @@ get:
   parameters:
     - in: path
       name: countryId
+      required: true      
       # description:
-      example: 12
+      example: 1
       schema:
         type: integer
         format: int32
