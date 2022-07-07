@@ -1,16 +1,25 @@
 SimpleModel_application-applicationDataIssue:
-  allOf:
-    # - $ref: "#/SimpleModel_application-applicationDataIssue"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_application-applicationDataIssue_id"
-        - $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_attributes"
-        - $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_application-applicationDataIssue_id"
+    # simple attributes
+    date:
+      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+    #relationship attributes
+    applicationId:
+      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_applicationId"
+    guidelineId:
+      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_guidelineId"
+  required:
+    - id
+    - date
+    - applicationId
+    - guidelineId
 
 # shared
 SimpleModel_application-applicationDataIssue_id:
-  properties:
-    id:
       type: integer
       format: int32
       example: 1

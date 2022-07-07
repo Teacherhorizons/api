@@ -15,71 +15,10 @@ SimpleModel_application-thMatchType:
     - id
     - name
 
-# SimpleModel_application-thMatchType:
-#   oneOf:
-#     - $ref: "#/SimpleModel_application-thMatchType_admin"
-#     - $ref: "#/SimpleModel_application-thMatchType_school"
-#     # - $ref: "#/SimpleModel_application-thMatchType_teacher"
-#   discriminator:
-#     propertyName: schema
-#     mapping:
-#       all: "#/SimpleModel_application-thMatchType_admin"
-#       admin: "#/SimpleModel_application-thMatchType_admin"
-#       school: "#/SimpleModel_application-thMatchType_school"
-#       # teacher: "#/SimpleModel_application-thMatchType_teacher"
-
-# SimpleModel_application-thMatchType_admin:
-#   type: object
-#   additionalProperties: false
-#   properties:
-#     schema:
-#       type: string
-#       enum:
-#         - admin
-#     id:
-#       $ref: "#/SimpleModel_application-thMatchType_id"
-#     # simple attributes
-#     name:
-#       $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
-#   required:
-#    - name
-
-# SimpleModel_application-thMatchType_school:
-#   type: object
-#   additionalProperties: false
-#   properties:
-#     schema:
-#       type: string
-#       enum:
-#         - school
-#     id:
-#       $ref: "#/SimpleModel_application-thMatchType_id"
-#     # simple attributes
-#     name:
-#       $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
-#   required:
-#    - name
-
-# SimpleModel_application-thMatchType_teacher:
-#   type: object
-#   additionalProperties: false
-#   properties:
-#     schema:
-#       type: string
-#       enum:
-#         - teacher
-#     id:
-#       $ref: "#/SimpleModel_application-thMatchType_id"
-#     # simple attributes
-#     name:
-#       $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
-#   required:
-#    - name
-
 # shared
 SimpleModel_application-thMatchType_id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -1,17 +1,20 @@
 SimpleModel_general-educationLevel:
-  allOf:
-    # - $ref: "#/SimpleModel_general-educationLevel"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-educationLevel_id"
-        - $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_attributes"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-educationLevel_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_name"
+  required:
+    - id
+    - name
 
 # shared
 SimpleModel_general-educationLevel_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
