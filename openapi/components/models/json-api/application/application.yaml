@@ -1,15 +1,15 @@
 JsonApiModel_application:
   oneOf:
     - $ref: "#/JsonApiModel_application_admin"
-    - $ref: "#/JsonApiModel_application_school"
-    - $ref: "#/JsonApiModel_application_teacher"
+    # - $ref: "#/JsonApiModel_application_school"
+    # - $ref: "#/JsonApiModel_application_teacher"
   discriminator:
     propertyName: schema
     mapping:
       all: "#/JsonApiModel_application_admin"
       admin: "#/JsonApiModel_application_admin"
-      school: "#/JsonApiModel_application_school"
-      teacher: "#/JsonApiModel_application_teacher"
+      # school: "#/JsonApiModel_application_school"
+      # teacher: "#/JsonApiModel_application_teacher"
 
 # JsonApiModel_application_all:
 #   type: object
@@ -42,23 +42,23 @@ JsonApiModel_application_admin:
     - attributes
     - relationships
 
-JsonApiModel_application_school:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_school"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_school"
+# JsonApiModel_application_school:
+#   allOf:
+#     - $ref: "#/JsonApiModel_application"
+#     - properties:
+#         attributes:
+#           $ref: "#/JsonApiModel_application_attributes_school"
+#         relationships:
+#           $ref: "#/JsonApiModel_application_relationships_school"
 
-JsonApiModel_application_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_application"
-    - properties:
-        attributes:
-          $ref: "#/JsonApiModel_application_attributes_teacher"
-        relationships:
-          $ref: "#/JsonApiModel_application_relationships_teacher"
+# JsonApiModel_application_teacher:
+#   allOf:
+#     - $ref: "#/JsonApiModel_application"
+#     - properties:
+#         attributes:
+#           $ref: "#/JsonApiModel_application_attributes_teacher"
+#         relationships:
+#           $ref: "#/JsonApiModel_application_relationships_teacher"
 
 # schema, type and id
 JsonApiModel_application_schema:
