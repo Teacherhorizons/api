@@ -10,19 +10,31 @@ describe('admin@th.test', () => {
   test('GET application-eventTypes?schema=admin', async () => {
     const response = await api.get('application-eventTypes?schema=admin');
     expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
   });
 
   test('GET application-eventTypes?schema=school', async () => {
     const response = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
   });
 
   test('GET application-eventTypes?schema=teacher', async () => {
     const response = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
+  });
+
+  test('GET application-eventTypes, no schema', async () => {
+    try {
+      await api.get('application-eventTypes');
+    } catch (error) {
+      expect(error.response.status).toEqual(400);
+      expect(error.response).toSatisfyApiSpec();
+    }
   });
 
   afterAll(async () => {
@@ -38,6 +50,7 @@ describe('school-1-school@th.test', () => {
   test('GET application-eventTypes?schema=school', async () => {
     const response = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(4);
     expect(response).toSatisfyApiSpec();
   });
 
@@ -45,7 +58,25 @@ describe('school-1-school@th.test', () => {
     try {
       await api.get('application-eventTypes?schema=admin');
     } catch (error) {
-      expect(error.response.status).toEqual(401);
+      expect(error.response.status).toEqual(400);
+      expect(error.response).toSatisfyApiSpec();
+    }
+  });
+
+  test('GET application-eventTypes?schema=teacher', async () => {
+    try {
+      await api.get('application-eventTypes?schema=teacher');
+    } catch (error) {
+      expect(error.response.status).toEqual(400);
+      expect(error.response).toSatisfyApiSpec();
+    }
+  });
+
+  test('GET application-eventTypes, no schema', async () => {
+    try {
+      await api.get('application-eventTypes');
+    } catch (error) {
+      expect(error.response.status).toEqual(400);
       expect(error.response).toSatisfyApiSpec();
     }
   });
@@ -63,6 +94,7 @@ describe('endorsed@th.test', () => {
   test('GET application-eventTypes?schema=teacher', async () => {
     const response = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
+    expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
   });
 
@@ -70,7 +102,25 @@ describe('endorsed@th.test', () => {
     try {
       await api.get('application-eventTypes?schema=admin');
     } catch (error) {
-      expect(error.response.status).toEqual(401);
+      expect(error.response.status).toEqual(400);
+      expect(error.response).toSatisfyApiSpec();
+    }
+  });
+
+  test('GET application-eventTypes?schema=school', async () => {
+    try {
+      await api.get('application-eventTypes?schema=school');
+    } catch (error) {
+      expect(error.response.status).toEqual(400);
+      expect(error.response).toSatisfyApiSpec();
+    }
+  });
+
+  test('GET application-eventTypes, no schema', async () => {
+    try {
+      await api.get('application-eventTypes');
+    } catch (error) {
+      expect(error.response.status).toEqual(400);
       expect(error.response).toSatisfyApiSpec();
     }
   });
