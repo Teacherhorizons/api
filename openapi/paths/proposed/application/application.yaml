@@ -60,6 +60,14 @@ patch:
     - applications
   summary: Update application
   description: ""
+  parameters:
+    - in: path
+      name: applicationId
+      required: true
+      example: 1
+      schema:
+        type: integer
+        format: int32
   requestBody:
     content:
       application/json:

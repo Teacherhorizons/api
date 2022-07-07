@@ -12,14 +12,14 @@
   },
   "private": true,
   "scripts": {
-    "start": "openapi preview-docs -p 8080",
-    "build-yaml": "openapi bundle --output=tests/specs/openapi.yaml --dereferenced",
-    "build-json": "openapi bundle --output=tests/specs/openapi.json --dereferenced",
-    "validate": "openapi lint",
-    "lint": "openapi lint",
+    "start": "redocly preview-docs -p 8080",
+    "build-yaml": "redocly bundle --output=tests/specs/openapi.yaml --dereferenced",
+    "build-json": "redocly bundle --output=tests/specs/openapi.json --dereferenced",
+    "validate": "redocly lint",
+    "lint": "redocly lint",
+    "lint--generate-ignore-file": "redocly lint --generate-ignore-file",
     "test": "jest --watchAll=false --unhandled-rejections=strict",
     "jest": "npm run test",
-    "lint--generate-ignore-file": "openapi lint --generate-ignore-file",
     "prettify-ts": "npx prettier --write **/*.ts"
   },
   "devDependencies": {
