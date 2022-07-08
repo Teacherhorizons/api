@@ -20,7 +20,7 @@ export function setup(context = {}) {
   beforeAll(async () => {
     try {
       if (config.createTestData) await addTestData();
-      shell.exec('npm run build-yaml');
+      // shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
       console.log(101, error);
@@ -35,20 +35,22 @@ export function setup(context = {}) {
 }
 
 async function addTestData() {
-  // teachers
-  await setApi();
-  const teacher1 = await addTeacher(3);
-  const teacher2 = await addTeacher(4);
-  data.teachers.push(teacher1);
-  data.teachers.push(teacher2);
-  await signOut();
+  // // teachers
+  // await setApi();
+  // const teacher1 = await addTeacher(3);
+  // const teacher2 = await addTeacher(4);
+  // data.teachers.push(teacher1);
+  // data.teachers.push(teacher2);
+  // await signOut();
 
-  // schools
+  // sign in as admin
   await signIn('admin@th.test');
-  const school1: School = await addSchool(6);
-  const school2: School = await addSchool(7);
-  data.schools.push(school1);
-  data.schools.push(school2);
+
+  // // schools
+  // const school1: School = await addSchool(6);
+  // const school2: School = await addSchool(7);
+  // data.schools.push(school1);
+  // data.schools.push(school2);
 
   // jobs
   const job1: Job = await addJob(1);

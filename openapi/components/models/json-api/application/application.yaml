@@ -10,6 +10,7 @@ JsonApiModel_application:
       admin: "#/JsonApiModel_application_admin"
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
+  foo: string
 
 JsonApiModel_application_admin:
   type: object
@@ -20,7 +21,7 @@ JsonApiModel_application_admin:
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
-      $ref: "#/JsonApiModel_application_id"  
+      $ref: "#/JsonApiModel_application_id"
     attributes:
       $ref: "#/JsonApiModel_application_attributes_admin"
     relationships:
@@ -41,7 +42,7 @@ JsonApiModel_application_school:
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
-      $ref: "#/JsonApiModel_application_id"  
+      $ref: "#/JsonApiModel_application_id"
     attributes:
       $ref: "#/JsonApiModel_application_attributes_school"
     relationships:
@@ -62,7 +63,7 @@ JsonApiModel_application_teacher:
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
-      $ref: "#/JsonApiModel_application_id"  
+      $ref: "#/JsonApiModel_application_id"
     attributes:
       $ref: "#/JsonApiModel_application_attributes_teacher"
     relationships:
