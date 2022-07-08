@@ -27,10 +27,10 @@ JsonApiModel_application-eventTypeAction_admin:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         label:
           $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-      # relationship attributes
+        # relationship attributes
         applicationEventType:
           $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
         actionType:
@@ -83,10 +83,10 @@ JsonApiModel_application-eventTypeAction_school:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         label:
           $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-      # relationship attributes
+        # relationship attributes
         applicationEventType:
           $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
       required:
@@ -123,10 +123,10 @@ JsonApiModel_application-eventTypeAction_teacher:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         label:
           $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
-      # relationship attributes
+        # relationship attributes
         applicationEventType:
           $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
       required:

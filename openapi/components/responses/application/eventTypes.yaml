@@ -37,7 +37,7 @@ Application-eventTypesResponse_admin:
               name:
                 $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_name"
               # relationship attributes
-              applicationStatusId:
+              applicationStatus:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - name
@@ -78,7 +78,7 @@ Application-eventTypesResponse_school:
               nameForSchool:
                 $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool"
               # relationship attributes
-              applicationStatusId:
+              applicationStatus:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - nameForSchool
@@ -119,7 +119,7 @@ Application-eventTypesResponse_teacher:
               nameForTeacher:
                 $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher"
               # relationship attributes
-              applicationStatusId:
+              applicationStatus:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - nameForTeacher

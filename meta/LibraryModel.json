@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/LibraryModel",
+  "definitions": {
+    "LibraryModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*(?<!Id)$": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Attribute"
+            },
+            {
+              "$ref": "#/definitions/Relationship"
+            }
+          ]
+        },
+        "^(application|job|school)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z]Id$": {
+          "$ref": "#/definitions/RelationshipAttribute"
+        }
+      },
+      "required": [],
+      "title": "LibraryModel"
+    },
+    "Attribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "example": {
+          "type": [
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "format": {
+          "type": "string"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxLength": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "example"
+      ],
+      "title": "Attribute"
+    },
+    "RelationshipAttribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "example": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "example",
+        "type"
+      ],
+      "title": "RelationshipAttribute"
+    },
+    "Relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "string"
+                },
+                "example": {
+                  "const": "1"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description",
+                "example",
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "required": {
+          "const": [
+            "id"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "Relationship"
+    }
+  }
+}

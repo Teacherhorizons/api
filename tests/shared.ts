@@ -20,7 +20,7 @@ export function setup(context = {}) {
   beforeAll(async () => {
     try {
       if (config.createTestData) await addTestData();
-      // shell.exec('npm run build-yaml');
+      shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
       console.log(101, error);
