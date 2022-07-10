@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/SimpleModel-MultipleSchemas",
+  "definitions": {
+    "SimpleModel-MultipleSchemas": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^SimpleModel_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)(?<!(_id|_all|_admin|_school|_teacher))$": {
+          "$ref": "#/definitions/SimpleModel-MultipleSchemas-OneOfSchema"
+        },
+        "^SimpleModel_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_(all|admin|school|teacher)$": {
+          "$ref": "#/definitions/SimpleModel-MultipleSchemas-Schema"
+        },
+        "^SimpleModel_(application|general|job|meta|regional|school|teacher|user)[a-zA-Z-]*_id$": {
+          "$ref": "#/definitions/SimpleModel-MultipleSchemas-Id"
+        }
+      },
+      "required": [],
+      "title": "SimpleModel-MultipleSchemas"
+    },
+    "SimpleModel-MultipleSchemas-OneOfSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "oneOf": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "$ref": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "$ref"
+            ]
+          }
+        },
+        "discriminator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "propertyName": {
+              "const": "schema"
+            },
+            "mapping": {
+              "type": "object",
+              "patternProperties": {
+                "^(all|admin|school|teacher)$": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "all"
+              ]
+            }
+          }
+        },
+        "required": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "oneOf",
+        "discriminator"
+      ],
+      "title": "SimpleModel-MultipleSchemas-OneOfSchema"
+    },
+    "SimpleModel-MultipleSchemas-Schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "string"
+                },
+                "enum": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "maxItems": 1
+                }
+              },
+              "required": [
+                "type",
+                "enum"
+              ]
+            }
+          },
+          "patternProperties": {
+            "^[a-zA-Z_]*$": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$ref"
+              ]
+            }
+          },
+          "required": [
+            "schema",
+            "id"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "allOf": [
+            {
+              "contains": {
+                "const": "schema"
+              }
+            },
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "SimpleModel-MultipleSchemas-Schema"
+    },
+    "SimpleModel-MultipleSchemas-Id": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "example": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "readOnly": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "description",
+        "example",
+        "type"
+      ],
+      "title": "SimpleModel-MultipleSchemas-Id"
+    }
+  }
+}

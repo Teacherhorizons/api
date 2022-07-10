@@ -6,24 +6,24 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*(?<!Id)$": {
+        "^(application|general|job|meta|regional|school|teacher|user)(-?)[a-zA-Z]*_[a-zA-Z_]*(?<!Id)$": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Attribute"
+              "$ref": "#/definitions/LibraryModel-Attribute"
             },
             {
-              "$ref": "#/definitions/Relationship"
+              "$ref": "#/definitions/LibraryModel-Relationship"
             }
           ]
         },
         "^(application|job|school)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z]Id$": {
-          "$ref": "#/definitions/RelationshipAttribute"
+          "$ref": "#/definitions/LibraryModel-RelationshipAttribute"
         }
       },
       "required": [],
       "title": "LibraryModel"
     },
-    "Attribute": {
+    "LibraryModel-Attribute": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -56,9 +56,9 @@
         "type",
         "example"
       ],
-      "title": "Attribute"
+      "title": "LibraryModel-Attribute"
     },
-    "RelationshipAttribute": {
+    "LibraryModel-RelationshipAttribute": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -77,9 +77,9 @@
         "example",
         "type"
       ],
-      "title": "RelationshipAttribute"
+      "title": "LibraryModel-RelationshipAttribute"
     },
-    "Relationship": {
+    "LibraryModel-Relationship": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -130,7 +130,7 @@
         "properties",
         "required"
       ],
-      "title": "Relationship"
+      "title": "LibraryModel-Relationship"
     }
   }
 }

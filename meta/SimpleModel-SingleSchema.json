@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/SimpleModel-SingleSchema",
+  "definitions": {
+    "SimpleModel-SingleSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^SimpleModel_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*(?<!_id)$": {
+          "$ref": "#/definitions/SimpleModel-SingleSchema-Schema"
+        },
+        "^SimpleModel_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*[a-z]_id$": {
+          "$ref": "#/definitions/SimpleModel-SingleSchema-Id"
+        }
+      },
+      "required": [],
+      "title": "SimpleModel-SingleSchema"
+    },
+    "SimpleModel-SingleSchema-Schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[a-zA-Z_]*$": {
+              "type": "object",
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "allOf": [
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "SimpleModel-SingleSchema-Schema"
+    },
+    "SimpleModel-SingleSchema-Id": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "example": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "readOnly": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "description",
+        "example",
+        "type"
+      ],
+      "title": "SimpleModel-SingleSchema-Id"
+    }
+  }
+}
