@@ -49,6 +49,7 @@ SimpleModel_application-applicationEvent_admin:
     latestUpdateUserId:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateUserId"
   required:
+    - schema
     - id
     - date
     - creationDate

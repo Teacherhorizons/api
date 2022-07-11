@@ -1,74 +1,75 @@
-# attributes
-application-guideline_attributes:
-  allOf:
-    - $ref: "#/application-guideline_properties_name"
+# # attributes
+# application-guideline_attributes:
+#   allOf:
+#     - $ref: "#/application-guideline_properties_name"
 
-# relationshipIds
-application-guideline_relationshipIds:
-  allOf:
-    - $ref: "#/application-guideline_properties_fromEventTypeId"
-    - $ref: "#/application-guideline_properties_toEventTypeId"
+# # relationshipIds
+# application-guideline_relationshipIds:
+#   allOf:
+#     - $ref: "#/application-guideline_properties_fromEventTypeId"
+#     - $ref: "#/application-guideline_properties_toEventTypeId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-application-guideline_relationships:
-  allOf:
-    - $ref: "#/application-guideline_properties_fromEventType"
-    - $ref: "#/application-guideline_properties_toEventType"
+# # relationships
+# application-guideline_relationships:
+#   allOf:
+#     - $ref: "#/application-guideline_properties_fromEventType"
+#     - $ref: "#/application-guideline_properties_toEventType"
 
 #properties
-application-guideline_properties_id:
-  properties:
-    id:
-      $ref: "#/application-guideline_id"
-application-guideline_properties_name:
-  properties:
-    name:
-      $ref: "#/application-guideline_name"
-application-guideline_properties_fromEventTypeId:
-  properties:
-    fromEventTypeId:
-      $ref: "#/application-guideline_fromEventTypeId"
-application-guideline_properties_toEventTypeId:
-  properties:
-    toEventTypeId:
-      $ref: "#/application-guideline_toEventTypeId"
-application-guideline_properties_fromEventType:
-  properties:
-    fromEventType:
-      $ref: "#/application-guideline_fromEventType"
-application-guideline_properties_toEventType:
-  properties:
-    toEventType:
-      $ref: "#/application-guideline_toEventType"
+# application-guideline_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/application-guideline_id"
+# application-guideline_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/application-guideline_name"
+# application-guideline_properties_fromEventTypeId:
+#   properties:
+#     fromEventTypeId:
+#       $ref: "#/application-guideline_fromEventTypeId"
+# application-guideline_properties_toEventTypeId:
+#   properties:
+#     toEventTypeId:
+#       $ref: "#/application-guideline_toEventTypeId"
+# application-guideline_properties_fromEventType:
+#   properties:
+#     fromEventType:
+#       $ref: "#/application-guideline_fromEventType"
+# application-guideline_properties_toEventType:
+#   properties:
+#     toEventType:
+#       $ref: "#/application-guideline_toEventType"
 
 #attributes
-application-guideline_id:
-  type: integer
-  example: 1
 application-guideline_name:
   type: string
-  example: Submission to Adviser' should not come directly after 'Submission to Adviser'
+  example: "'Submission to Adviser' should not come directly after 'Submission to Adviser'"
+
+# relationship attributes
 application-guideline_fromEventTypeId:
   type: integer
   example: 1
   description: Relationship to application-eventType
+
 application-guideline_toEventTypeId:
   type: integer
   example: 1
   description: Relationship to application-eventType
-application-guideline_fromEventType:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to application-eventType
-application-guideline_toEventType:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to application-eventType
+# application-guideline_fromEventType:
+#   type: object
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to application-eventType
+
+# application-guideline_toEventType:
+#   type: object
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to application-eventType

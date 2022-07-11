@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(application|general|job|meta|regional|school|teacher|user)(-?)[a-zA-Z]*_[a-zA-Z_]*(?<!Id)$": {
+        "^(application|general|job|meta|regional|school|teacher|user)(-?)[a-zA-Z_]*(?<!(Id|_id))$": {
           "oneOf": [
             {
               "$ref": "#/definitions/LibraryModel-Attribute"
@@ -63,10 +63,12 @@
       "additionalProperties": false,
       "properties": {
         "type": {
-          "type": "string"
+          "type": "string",
+          "const": "integer"
         },
         "example": {
-          "type": "number"
+          "type": "number",
+          "const": 1
         },
         "description": {
           "type": "string"

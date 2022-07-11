@@ -1,5 +1,6 @@
 JsonApiModel_application-status:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_application-status_type"
@@ -40,9 +41,11 @@ JsonApiModel_application-status_relationship_attribute:
 
 JsonApiModel_application-status_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application-status_type"
@@ -51,3 +54,5 @@ JsonApiModel_application-status_relationship:
       required:
         - type
         - id
+  required:
+    - data

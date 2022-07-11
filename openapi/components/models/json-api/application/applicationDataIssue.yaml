@@ -16,15 +16,19 @@ JsonApiModel_application-applicationDataIssue:
 JsonApiModel_application-applicationDataIssue_attributes:
   type: object
   properties:
-  # simple Attributes
+    # simple Attributes
     date:
       $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
 
-  # relationship attributes
+    # relationship attributes
     application:
       $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
     guideline:
-      $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
+      type: object
+      properties:
+        id:
+          $ref: "./guideline.yaml#/JsonApiModel_application-guideline_id"
+      # $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
 
 JsonApiModel_application-applicationDataIssue_relationships:
   type: object

@@ -27,7 +27,7 @@ JsonApiModel_application-eventType_admin:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         name:
           $ref: "../../library/application/eventType.yaml#/application-eventType_name"
         nameForSchool:
@@ -36,7 +36,7 @@ JsonApiModel_application-eventType_admin:
           $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
         isVisibleToSchool:
           $ref: "../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool"
-      # relationship attributes
+        # relationship attributes
         applicationStatus:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
       required:
@@ -72,10 +72,10 @@ JsonApiModel_application-eventType_school:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         nameForSchool:
           $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
-      # relationship attributes
+        # relationship attributes
         applicationStatus:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
     relationships:
@@ -109,10 +109,10 @@ JsonApiModel_application-eventType_teacher:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         nameForTeacher:
           $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
-      # relationship attributes
+        # relationship attributes
         applicationStatus:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
     relationships:
@@ -148,6 +148,8 @@ JsonApiModel_application-eventType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-eventType_id"
+  required:
+    - id
 
 JsonApiModel_application-eventType_relationship:
   type: object
@@ -161,3 +163,8 @@ JsonApiModel_application-eventType_relationship:
           $ref: "#/JsonApiModel_application-eventType_type"
         id:
           $ref: "#/JsonApiModel_application-eventType_id"
+      required:
+        - type
+        - id
+  required:
+    - data
