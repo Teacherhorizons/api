@@ -1,58 +1,10 @@
 # attributes
-application-applicationDataIssue_attributes:
-  allOf:
-    - $ref: "#/application-applicationDataIssue_properties_date"
+application-applicationDataIssue_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:35Z
 
-# relationshipIds
-application-applicationDataIssue_relationshipIds:
-  allOf:
-    - $ref: "#/application-applicationDataIssue_properties_applicationId"
-    - $ref: "#/application-applicationDataIssue_properties_guidelineId"
-
-# attribute relationships
-
-# relationships
-application-applicationDataIssue_relationships:
-  allOf:
-    - $ref: "#/application-applicationDataIssue_properties_application"
-    - $ref: "#/application-applicationDataIssue_properties_guideline"
-
-#properties
-application-applicationDataIssue_properties_id:
-  properties:
-    id:
-      $ref: "#/application-applicationDataIssue_id"
-
-application-applicationDataIssue_properties_application:
-  properties:
-    name:
-      $ref: "#/application-applicationDataIssue_application"
-
-application-applicationDataIssue_properties_applicationId:
-  properties:
-    applicationId:
-      $ref: "#/application-applicationDataIssue_applicationId"
-
-application-applicationDataIssue_properties_guideline:
-  properties:
-    guideline:
-      $ref: "#/application-applicationDataIssue_guideline"
-
-application-applicationDataIssue_properties_guidelineId:
-  properties:
-    guidelineId:
-      $ref: "#/application-applicationDataIssue_guidelineId"
-
-application-applicationDataIssue_properties_date:
-  properties:
-    date:
-      $ref: "#/application-applicationDataIssue_date"
-
-#attributes
-application-applicationDataIssue_id:
-  type: integer
-  example: 1
-
+# relationship attributes
 application-applicationDataIssue_applicationId:
   type: integer
   example: 1
@@ -62,24 +14,3 @@ application-applicationDataIssue_guidelineId:
   type: integer
   example: 1
   description: Relationship to application_dataissue
-
-application-applicationDataIssue_guideline:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to application_dataissue
-
-application-applicationDataIssue_application:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to application_dataissue
-
-application-applicationDataIssue_date:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:35Z

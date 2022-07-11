@@ -1,70 +1,76 @@
 JsonApiModel_application-applicationDataIssue:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_application-applicationDataIssue_type"
     id:
       $ref: "#/JsonApiModel_application-applicationDataIssue_id"
     attributes:
-      $ref: "#/JsonApiModel_application-applicationDataIssue_attributes"
+      type: object
+      properties:
+        # simple attributes
+        date:
+          $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+
+        # relationship attributes
+        application:
+          $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
+        guideline:
+          # type: object
+          # properties:
+          #   id:
+          #     $ref: "./guideline.yaml#/JsonApiModel_application-guideline_id"
+          $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
+
     relationships:
-      $ref: "#/JsonApiModel_application-applicationDataIssue_relationships"
+      # $ref: "#/JsonApiModel_application-applicationDataIssue_relationships"
+      type: object
+      # description: Related Attributes
+      properties:
+        application:
+          $ref: "../application/application.yaml#/JsonApiModel_application_relationship"
+        guideline:
+          $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
   required:
     - type
     - id
 
-JsonApiModel_application-applicationDataIssue_attributes:
-  type: object
-  properties:
-    # simple Attributes
-    date:
-      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
-
-    # relationship attributes
-    application:
-      $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
-    guideline:
-      type: object
-      properties:
-        id:
-          $ref: "./guideline.yaml#/JsonApiModel_application-guideline_id"
-      # $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
-
-JsonApiModel_application-applicationDataIssue_relationships:
-  type: object
-  description: Related Attributes
-  properties:
-    application:
-      $ref: "../application/application.yaml#/JsonApiModel_application_relationship"
-    guideline:
-      $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
-
-#
 JsonApiModel_application-applicationDataIssue_type:
   type: string
   example: application-applicationDataIssue
-  description: application-applicationDataIssue
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_application-applicationDataIssue_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the application-applicationDataIssue (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_application-applicationDataIssue_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_application-applicationDataIssue_id"
+  required:
+    - id
 
 JsonApiModel_application-applicationDataIssue_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application-applicationDataIssue_type"
         id:
           $ref: "#/JsonApiModel_application-applicationDataIssue_id"
+      required:
+        - type
+        - id
+  required:
+    - data
