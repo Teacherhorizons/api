@@ -38,3 +38,18 @@ export const data: Data = {
   teachers: [],
   jobs: [],
 };
+
+export interface JsonApi_ApplicationEventType_ResponseData {
+  schema: string;
+  data: JsonApi_ApplicationEventType[];
+}
+
+export interface ApplicationEventType {
+  name: string;
+  applicationStatus: any;
+}
+export interface JsonApi_ApplicationEventType {
+  type: string;
+  id: string;
+  attributes: ApplicationEventType;
+}

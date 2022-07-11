@@ -1,3 +1,4 @@
+import { JsonApi_ApplicationEventType_ResponseData } from './../../interfaces';
 import { setApi, setup, signIn, signOut, api } from '../../shared';
 
 setup();
@@ -11,6 +12,11 @@ describe('admin@th.test', () => {
     const response = await api.get('application-eventTypes?schema=admin');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(22);
+
+    const data: JsonApi_ApplicationEventType_ResponseData = response.data;
+    const countWithStatus = data.data.filter((x) => !!x.attributes.applicationStatus).length;
+    expect(countWithStatus).toEqual(21);
+
     expect(response).toSatisfyApiSpec();
   });
 
@@ -96,7 +102,7 @@ describe('endorsed@th.test', () => {
   test('GET application-eventTypes?schema=teacher', async () => {
     const response = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(22);
+    expect(response.data.data.length).toEqual(3);
     expect(response).toSatisfyApiSpec();
   });
 

@@ -41,7 +41,6 @@ Application-eventTypesResponse_admin:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - name
-              - applicationStatusId
         required:
           - type
           - id
@@ -49,7 +48,6 @@ Application-eventTypesResponse_admin:
   required:
     - schema
     - data
-    - included
 
 # school
 Application-eventTypesResponse_school:
@@ -82,7 +80,6 @@ Application-eventTypesResponse_school:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - nameForSchool
-              - applicationStatusId
         required:
           - type
           - id
@@ -90,7 +87,6 @@ Application-eventTypesResponse_school:
   required:
     - schema
     - data
-    - included
 
 # teacher
 Application-eventTypesResponse_teacher:
@@ -123,7 +119,6 @@ Application-eventTypesResponse_teacher:
                 $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
             required:
               - nameForTeacher
-              - applicationStatusId
         required:
           - type
           - id
@@ -131,4 +126,3 @@ Application-eventTypesResponse_teacher:
   required:
     - schema
     - data
-    - included
