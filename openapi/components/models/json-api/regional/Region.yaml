@@ -159,14 +159,14 @@ JsonApiModel_regional-region_teacher:
 JsonApiModel_regional-region_type:
   type: string
   example: regional-region
-  description: regional-region
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_regional-region_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the regional-region (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_regional-region_relationship_attribute:
   type: object
@@ -174,6 +174,8 @@ JsonApiModel_regional-region_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-region_id"
+  required:
+    - id
 
 JsonApiModel_regional-region_relationship:
   type: object
@@ -187,4 +189,8 @@ JsonApiModel_regional-region_relationship:
           $ref: "#/JsonApiModel_regional-region_type"
         id:
           $ref: "#/JsonApiModel_regional-region_id"
-
+      required:
+        - type
+        - id
+  required:
+    - data

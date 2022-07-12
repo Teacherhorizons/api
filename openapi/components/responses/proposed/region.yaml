@@ -29,7 +29,14 @@ RegionResponse_admin:
                 - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_shared"
                 - $ref: "../../models/library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
             relationships:
-              $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationships_admin"
+              type: object
+              description: Related Attributes
+              additionalProperties: false
+              properties:
+                creationUser:
+                  $ref: "../../models/library/regional/region.yaml#/regional-region_creationUser"
+                latestUpdateUser:
+                  $ref: "../../models/library/regional/region.yaml#/regional-region_latestUpdateUser"
 
 RegionResponse_school:
   allOf:

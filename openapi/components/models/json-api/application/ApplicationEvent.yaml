@@ -110,12 +110,16 @@ JsonApiModel_application-applicationEvent_id:
 
 JsonApiModel_application-applicationEvent_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_application-applicationEvent_id"
+  required:
+   - id
 
 JsonApiModel_application-applicationEvent_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
@@ -124,3 +128,8 @@ JsonApiModel_application-applicationEvent_relationship:
           $ref: "#/JsonApiModel_application-applicationEvent_type"
         id:
           $ref: "#/JsonApiModel_application-applicationEvent_id"
+      required:
+      - type
+      - id
+  required:
+    - data

@@ -8,11 +8,11 @@ JsonApiModel_application-applicationDataIssue:
       $ref: "#/JsonApiModel_application-applicationDataIssue_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         # simple attributes
         date:
           $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
-
         # relationship attributes
         application:
           $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
@@ -22,10 +22,10 @@ JsonApiModel_application-applicationDataIssue:
           #   id:
           #     $ref: "./guideline.yaml#/JsonApiModel_application-guideline_id"
           $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
-
     relationships:
       # $ref: "#/JsonApiModel_application-applicationDataIssue_relationships"
       type: object
+      additionalProperties: false
       # description: Related Attributes
       properties:
         application:

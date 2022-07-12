@@ -8,7 +8,6 @@ JsonApiModel_application:
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/JsonApiModel_application_admin"
       admin: "#/JsonApiModel_application_admin"
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
@@ -25,9 +24,53 @@ JsonApiModel_application_admin:
     id:
       $ref: "#/JsonApiModel_application_id"
     attributes:
-      $ref: "#/JsonApiModel_application_attributes_admin"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/application/application.yaml#/application_creationDate"
+        submissionToSchoolDate:
+          $ref: "../../library/application/application.yaml#/application_submissionToSchoolDate"
+        latestUpdateDate:
+          $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+        recommendationText:
+          $ref: "../../library/application/application.yaml#/application_recommendationText"
+        thSystemMatchScore:
+          $ref: "../../library/application/application.yaml#/application_thSystemMatchScore"
+        hasDataIssues:
+          $ref: "../../library/application/application.yaml#/application_hasDataIssues"
+        # relationship attributes
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
+        thMatchType:
+          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
     relationships:
-      $ref: "#/JsonApiModel_application_relationships_admin"
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+        thMatchType:
+          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
     - schema
     - type
@@ -46,9 +89,49 @@ JsonApiModel_application_school:
     id:
       $ref: "#/JsonApiModel_application_id"
     attributes:
-      $ref: "#/JsonApiModel_application_attributes_school"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/application/application.yaml#/application_creationDate"
+        submissionToSchoolDate:
+          $ref: "../../library/application/application.yaml#/application_submissionToSchoolDate"
+        latestUpdateDate:
+          $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+        recommendationText:
+          $ref: "../../library/application/application.yaml#/application_recommendationText"
+        # relationship attributes
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
+        thMatchType:
+          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
     relationships:
-      $ref: "#/JsonApiModel_application_relationships_school"
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+        thMatchType:
+              $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
   required:
     - schema
     - type
@@ -67,9 +150,43 @@ JsonApiModel_application_teacher:
     id:
       $ref: "#/JsonApiModel_application_id"
     attributes:
-      $ref: "#/JsonApiModel_application_attributes_teacher"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/application/application.yaml#/application_creationDate"
+        submissionToSchoolDate:
+          $ref: "../../library/application/application.yaml#/application_submissionToSchoolDate"
+        latestUpdateDate:
+          $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
+        # relationship attributes
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_application_relationships_teacher"
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        status:
+          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
   required:
     - schema
     - type
@@ -113,104 +230,6 @@ JsonApiModel_application_relationship:
         - id
   required:
     - data
-
-# attributes
-JsonApiModel_application_attributes_all:
-  allOf:
-    - $ref: "#/JsonApiModel_application_attributes_admin"
-
-JsonApiModel_application_attributes_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application_attributes_shared"
-    - properties:
-        # simple attributes
-        recommendationText:
-          $ref: "../../library/application/application.yaml#/application_recommendationText"
-        thSystemMatchScore:
-          $ref: "../../library/application/application.yaml#/application_thSystemMatchScore"
-        hasDataIssues:
-          $ref: "../../library/application/application.yaml#/application_hasDataIssues"
-        # relationship attributes
-        thMatchType:
-          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
-
-JsonApiModel_application_attributes_school:
-  allOf:
-    - $ref: "#/JsonApiModel_application_attributes_shared"
-    - properties:
-        # simple attributes
-        recommendationText:
-          $ref: "../../library/application/application.yaml#/application_recommendationText"
-        # relationship attributes
-        thMatchType:
-          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
-
-JsonApiModel_application_attributes_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_application_attributes_shared"
-
-JsonApiModel_application_attributes_shared:
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/application/application.yaml#/application_creationDate"
-    submissionToSchoolDate:
-      $ref: "../../library/application/application.yaml#/application_submissionToSchoolDate"
-    latestUpdateDate:
-      $ref: "../../library/application/application.yaml#/application_latestUpdateDate"
-    # relationship attributes
-    job:
-      $ref: "../job/job.yaml#/JsonApiModel_job_relationship_attribute"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    status:
-      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
-    latestEvent:
-      $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
-
-# relationships
-JsonApiModel_application_relationships_all:
-  allOf:
-    - $ref: "#/JsonApiModel_application_relationships_admin"
-
-JsonApiModel_application_relationships_admin:
-  allOf:
-    - $ref: "#/JsonApiModel_application_relationships_shared"
-    - properties:
-        thMatchType:
-          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
-
-JsonApiModel_application_relationships_school:
-  allOf:
-    - $ref: "#/JsonApiModel_application_relationships_shared"
-    - properties:
-        thMatchType:
-          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
-
-JsonApiModel_application_relationships_teacher:
-  allOf:
-    - $ref: "#/JsonApiModel_application_relationships_shared"
-
-JsonApiModel_application_relationships_shared:
-  type: object
-  properties:
-    job:
-      $ref: "../job/job.yaml#/JsonApiModel_job_relationship"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    status:
-      $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
-    # latestEvent:
-    #   $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
-
 JsonApiModel_application_relationship_attribute:
   type: object
   properties:

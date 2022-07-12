@@ -1,49 +1,57 @@
 JsonApiModel_application-thMatchType:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_application-thMatchType_type"
     id:
       $ref: "#/JsonApiModel_application-thMatchType_id"
     attributes:
-      $ref: "#/JsonApiModel_application-thMatchType_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
   required:
     - type
     - id
-
-JsonApiModel_application-thMatchType_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
-
 #
 JsonApiModel_application-thMatchType_type:
   type: string
   example: application-thMatchType
-  description: application-thMatchType
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_application-thMatchType_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the application-thMatchType (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_application-thMatchType_relationship_attribute:
+  additionalProperties: false
   type: object
   properties:
     id:
       $ref: "#/JsonApiModel_application-thMatchType_id"
+  required:
+    - id
 
 JsonApiModel_application-thMatchType_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application-thMatchType_type"
         id:
           $ref: "#/JsonApiModel_application-thMatchType_id"
+      required:
+      - type
+      - id
+  required:
+    - data

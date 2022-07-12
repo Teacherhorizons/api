@@ -59,3 +59,56 @@ regional-region_relationshipProperties_adminOnly:
       type: integer
       example: 1
       description: Relationship to User; admin only
+#attributes
+regional-region_alias:
+  type: string
+  example: /Africa
+regional-region_name:
+  type: string
+  example: Africa
+regional-region_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:31Z
+regional-region_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:31Z
+regional-region_slug:
+  type: string
+  example: africa
+regional-region_locationLatLong.lat:
+  type: number
+  example: 12.2755988905617
+  description: Latitude
+regional-region_locationLatLong.long:
+  type: number
+  example: 17.46826171875
+  description: Longitude
+#relationship attribute
+regional-region_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-region_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-region_numberOfSchools:
+  type: integer
+  example: 123
+  description: Number of schools in region
+regional-region_creationUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+regional-region_latestUpdateUser:
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user

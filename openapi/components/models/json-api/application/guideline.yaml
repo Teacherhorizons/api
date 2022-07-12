@@ -8,6 +8,7 @@ JsonApiModel_application-guideline:
       $ref: "#/JsonApiModel_application-guideline_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         # simple attributes
         name:
