@@ -56,10 +56,12 @@ JsonApiModel_regional-country_admin:
       required:
         - name
         - alias
-        - keyAtrractions
         - creationDate
         - latestUpdateDate
+        - isoCode
+        - phoneCode
         - slug
+        - nationalAverageIncome
         - locationLatLong.lat
         - locationLatLong.long
         - creationUser
@@ -117,8 +119,10 @@ JsonApiModel_regional-country_school:
       required:
         - name
         - alias
-        - keyAtrractions
+        - isoCode
+        - phoneCode
         - slug
+        - nationalAverageIncome
         - locationLatLong.lat
         - locationLatLong.long
   required:
@@ -165,8 +169,10 @@ JsonApiModel_regional-country_teacher:
       required:
         - name
         - alias
-        - keyAtrractions
+        - isoCode
+        - phoneCode
         - slug
+        - nationalAverageIncome
         - locationLatLong.lat
         - locationLatLong.long
   required:
