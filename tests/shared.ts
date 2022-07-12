@@ -1,16 +1,16 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import cookie from 'cookie';
 import jestOpenAPI from 'jest-openapi';
 import path from 'path';
 import querystring from 'querystring';
 import shell from 'shelljs';
 
-import { Test, Job, School, Teacher, Data } from './interfaces';
+// import { Test, Job, School, Teacher, Data } from './interfaces';
 import config from './config';
 
-export var api;
+export var api: AxiosInstance;
 
-const data: Data = {
+const data: Config.Data = {
   schools: [],
   teachers: [],
   jobs: [],
@@ -53,15 +53,15 @@ async function addTestData() {
   // data.schools.push(school2);
 
   // jobs
-  const job1: Job = await addJob(1);
+  const job1: Config.Job = await addJob(1);
   data.jobs.push(job1);
 
-  const test: Test = await addTest(data);
+  const test: Config.Test = await addTest(data);
 
   console.log(104, JSON.stringify(data));
 }
 
-const addTest = async (data: Data): Promise<Test> => {
+const addTest = async (data: Config.Data): Promise<Config.Test> => {
   const payload = {
     schoolIds: data.schools.map((x) => x.id),
     teacherMemberNumbers: data.teachers.map((x) => x.memberNumber),
@@ -91,7 +91,7 @@ const addTest = async (data: Data): Promise<Test> => {
       => stored procedure spTest_deleteData
     => only allow api call on beta and local
 */
-const addJob = async (num: number): Promise<Job> => {
+const addJob = async (num: number): Promise<Config.Job> => {
   const data = {
     schoolId: 2520,
     title: 'Test job ' + num,
@@ -116,7 +116,7 @@ const addJob = async (num: number): Promise<Job> => {
   }
 };
 
-const addSchool = async (num: number): Promise<School> => {
+const addSchool = async (num: number): Promise<Config.School> => {
   const payload = {
     continent: 4,
     country: 23,
@@ -138,7 +138,7 @@ const addSchool = async (num: number): Promise<School> => {
   }
 };
 
-const addTeacher = async (num: number): Promise<Teacher> => {
+const addTeacher = async (num: number): Promise<Config.Teacher> => {
   const payload = {
     keepMeSignedIn: false,
     firstName: 'Test',
@@ -152,7 +152,8 @@ const addTeacher = async (num: number): Promise<Teacher> => {
     await signOut();
     const joinResponse = await api.post('user/join', querystring.stringify(payload));
     const JSESSIONID = cookie.parse(joinResponse.headers['set-cookie'][0]).JSESSIONID;
-    api.defaults.headers.Cookie = 'JSESSIONID=' + JSESSIONID;
+    // TODO: check this change (needed for typescript) doesn't break things
+    api.defaults.headers.common['Cookie'] = 'JSESSIONID=' + JSESSIONID;
     const userResponse = await api.get('v1/user/bundle');
     return { memberNumber: userResponse.data.memberno };
   } catch (error) {
