@@ -1,7 +1,9 @@
-import { JsonApi_ApplicationEventType_ResponseData } from './../../interfaces';
+import { AxiosResponse } from 'axios';
 import { setApi, setup, signIn, signOut, api } from '../../shared';
 
 setup();
+
+type GetListResponse = JsonApi.HttpResponse<JsonApi.Application_eventTypesResponse>;
 
 describe('admin@th.test', () => {
   beforeAll(async () => {
@@ -9,26 +11,25 @@ describe('admin@th.test', () => {
   });
 
   test('GET application-eventTypes?schema=admin', async () => {
-    const response = await api.get('application-eventTypes?schema=admin');
+    const response: GetListResponse = await api.get('application-eventTypes?schema=admin');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(22);
 
-    const data: JsonApi_ApplicationEventType_ResponseData = response.data;
-    const countWithStatus = data.data.filter((x) => !!x.attributes.applicationStatus).length;
+    const countWithStatus = response.data.data.filter((x) => !!x.attributes.applicationStatus).length;
     expect(countWithStatus).toEqual(21);
 
     expect(response).toSatisfyApiSpec();
   });
 
   test('GET application-eventTypes?schema=school', async () => {
-    const response = await api.get('application-eventTypes?schema=school');
+    const response: GetListResponse = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
   });
 
   test('GET application-eventTypes?schema=teacher', async () => {
-    const response = await api.get('application-eventTypes?schema=teacher');
+    const response: GetListResponse = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(22);
     expect(response).toSatisfyApiSpec();
@@ -38,8 +39,9 @@ describe('admin@th.test', () => {
     try {
       await api.get('application-eventTypes');
     } catch (error) {
-      expect(error.response.status).toEqual(400);
-      expect(error.response).toSatisfyApiSpec();
+      const response = <AxiosResponse>error.response;
+      expect(response.status).toEqual(400);
+      expect(response).toSatisfyApiSpec();
     }
   });
 
@@ -54,7 +56,7 @@ describe('school-1-school@th.test', () => {
   });
 
   test('GET application-eventTypes?schema=school', async () => {
-    const response = await api.get('application-eventTypes?schema=school');
+    const response: GetListResponse = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(4);
     expect(response).toSatisfyApiSpec();
@@ -100,7 +102,7 @@ describe('endorsed@th.test', () => {
   });
 
   test('GET application-eventTypes?schema=teacher', async () => {
-    const response = await api.get('application-eventTypes?schema=teacher');
+    const response: GetListResponse = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
     expect(response.data.data.length).toEqual(3);
     expect(response).toSatisfyApiSpec();

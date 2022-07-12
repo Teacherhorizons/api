@@ -4,9 +4,9 @@ get:
     - application
   summary: Get event types
   description: |
-    - Admin: Can see all application event types
-    - Teacher: Can see all application event types
-    - School: Can see only application event types where isVisibleToSchool is true
+    - admin schema: Responds with all application event types
+    - teacher schema: Responds with only application event types where isVisibleToTeacher is true
+    - school schema: Responds with only application event types where isVisibleToSchool is true
   parameters:
     - in: query
       name: schema
