@@ -1,72 +1,4 @@
-# attributes
-general-currency_attributes:
-  allOf:
-    - $ref: "#/general-currency_code"
-    - $ref: "#/general-currency_symbol"
-    - $ref: "#/general-currency_name"
-    - $ref: "#/general-currency_creationDate"
-    - $ref: "#/general-currency_latestUpdateDate"
-
-# relationshipIds
-general-currency_relationshipIds:
-  allOf:
-    - $ref: "#/general-currency_properties_creationUserId"
-    - $ref: "#/general-currency_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-general-currency_relationships:
-  allOf:
-    - $ref: "#/general-currency_properties_creationUser"
-    - $ref: "#/general-currency_properties_latestUpdateUser"
-
-#properties:
-general-currency_properties_id:
-  properties:
-    id:
-      $ref: "#/general-currency_id"
-general-currency_properties_code:
-  properties:
-    code:
-      $ref: "#/general-currency_code"
-general-currency_properties_symbol:
-  properties:
-    symbol:
-      $ref: "#/general-currency_symbol"
-general-currency_properties_name:
-  properties:
-    name:
-      $ref: "#/general-currency_name"
-general-currency_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/general-currency_creationDate"
-general-currency_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/general-currency_latestUpdateDate"
-general-currency_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/general-currency_creationUserId"
-general-currency_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/general-currency_latestUpdateUserId"
-general-currency_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/general-currency_creationUser"
-general-currency_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/general-currency_latestUpdateUser"
-
 #attributes
-general-currency_id:
-  type: integer
-  example: 1
 general-currency_code:
   type: string
   example: GBP
@@ -93,16 +25,22 @@ general-currency_latestUpdateUserId:
   example: 1
   description: Relationship to user
 general-currency_creationUser:
+  additionalProperties: false
   type: object
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required:
+    - id
 general-currency_latestUpdateUser:
+  additionalProperties: false
   type: object
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required:
+    - id

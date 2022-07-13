@@ -1,42 +1,4 @@
-# attributes
-general-manualEmailTemplate_attributes:
-  allOf:
-    - $ref: "#/general-manualEmailTemplate_properties_to"
-    - $ref: "#/general-manualEmailTemplate_properties_cc"
-    - $ref: "#/general-manualEmailTemplate_properties_bcc"
-    - $ref: "#/general-manualEmailTemplate_properties_subject"
-    - $ref: "#/general-manualEmailTemplate_properties_body"
-
-#properties
-general-manualEmailTemplate_properties_id:
-  properties:
-    id:
-      $ref: "#/general-manualEmailTemplate_id"
-general-manualEmailTemplate_properties_to:
-  properties:
-    to:
-      $ref: "#/general-manualEmailTemplate_to"
-general-manualEmailTemplate_properties_cc:
-  properties:
-    cc:
-      $ref: "#/general-manualEmailTemplate_cc"
-general-manualEmailTemplate_properties_bcc:
-  properties:
-    bcc:
-      $ref: "#/general-manualEmailTemplate_bcc"
-general-manualEmailTemplate_properties_subject:
-  properties:
-    subject:
-      $ref: "#/general-manualEmailTemplate_subject"
-general-manualEmailTemplate_properties_body:
-  properties:
-    body:
-      $ref: "#/general-manualEmailTemplate_body"
-
 #attributes
-general-manualEmailTemplate_id:
-  type: integer
-  example: 3
 general-manualEmailTemplate_to:
   type: string
   example: ${teacher.email}

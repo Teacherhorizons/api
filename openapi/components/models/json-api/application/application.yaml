@@ -55,7 +55,7 @@ JsonApiModel_application_admin:
         latestEvent:
           $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
         thMatchType:
-          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -118,7 +118,7 @@ JsonApiModel_application_school:
         latestEvent:
           $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
         thMatchType:
-          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false

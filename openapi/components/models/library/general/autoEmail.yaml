@@ -1,43 +1,4 @@
-
-# attributes
-general-autoEmail_attributes:
-  allOf:
-    - $ref: "#/general-autoEmail_properties_name"
-    - $ref: "#/general-autoEmail_properties_storedProcedureName"
-    - $ref: "#/general-autoEmail_properties_mandrillTemplateSlug"
-    - $ref: "#/general-autoEmail_properties_mandrillTemplateType"
-    - $ref: "#/general-autoEmail_properties_includeInAllEmailJobsRun"
-
-#properties
-general-autoEmail_properties_id:
-  properties:
-    id:
-      $ref: "#/general-autoEmail_id"
-general-autoEmail_properties_name:
-  properties:
-    name:
-      $ref: "#/general-autoEmail_name"
-general-autoEmail_properties_storedProcedureName:
-  properties:
-    storedProcedureName:
-      $ref: "#/general-autoEmail_storedProcedureName"
-general-autoEmail_properties_mandrillTemplateSlug:
-  properties:
-    mandrillTemplateSlug:
-      $ref: "#/general-autoEmail_mandrillTemplateSlug"
-general-autoEmail_properties_mandrillTemplateType:
-  properties:
-    mandrillTemplateType:
-      $ref: "#/general-autoEmail_mandrillTemplateType"
-general-autoEmail_properties_includeInAllEmailJobsRun:
-  properties:
-    includeInAllEmailJobsRun:
-      $ref: "#/general-autoEmail_includeInAllEmailJobsRun"
-
 #attributes
-general-autoEmail_id:
-  type: integer
-  example: 1
 general-autoEmail_name:
   type: string
   example: Registration email

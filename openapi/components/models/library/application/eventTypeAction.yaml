@@ -1,72 +1,4 @@
-# attributes
-application-eventTypeAction_attributes:
-  allOf:
-    - $ref: "#/application-eventTypeAction_properties_label"
-
-# relationshipIds
-application-eventTypeAction_relationshipIds:
-  allOf:
-    - $ref: "#/application-eventTypeAction_properties_applicationEventTypeId"
-    - $ref: "#/application-eventTypeAction_properties_actionTypeId"
-    - $ref: "#/application-eventTypeAction_properties_manualEmailTemplateId"
-    - $ref: "#/application-eventTypeAction_properties_autoEmailId"
-
-# attribute relationships
-
-# relationships
-application-eventTypeAction_relationships:
-  allOf:
-    - $ref: "#/application-eventTypeAction_properties_applicationEventType"
-    - $ref: "#/application-eventTypeAction_properties_actionType"
-    - $ref: "#/application-eventTypeAction_properties_manualEmailTemplate"
-    - $ref: "#/application-eventTypeAction_properties_autoEmail"
-
-#properties
-application-eventTypeAction_properties_id:
-  properties:
-    id:
-      $ref: "#/application-eventTypeAction_id"
-application-eventTypeAction_properties_label:
-  properties:
-    label:
-      $ref: "#/application-eventTypeAction_label"
-application-eventTypeAction_properties_applicationEventTypeId:
-  properties:
-    applicationEventTypeId:
-      $ref: "#/application-eventTypeAction_applicationEventTypeId"
-application-eventTypeAction_properties_actionTypeId:
-  properties:
-    actionTypeId:
-      $ref: "#/application-eventTypeAction_actionTypeId"
-application-eventTypeAction_properties_manualEmailTemplateId:
-  properties:
-    manualEmailTemplateId:
-      $ref: "#/application-eventTypeAction_manualEmailTemplateId"
-application-eventTypeAction_properties_autoEmailId:
-  properties:
-    autoEmailId:
-      $ref: "#/application-eventTypeAction_autoEmailId"
-application-eventTypeAction_properties_applicationEventType:
-  properties:
-    applicationEventType:
-      $ref: "#/application-eventTypeAction_applicationEventType"
-application-eventTypeAction_properties_actionType:
-  properties:
-    actionType:
-      $ref: "#/application-eventTypeAction_actionType"
-application-eventTypeAction_properties_manualEmailTemplate:
-  properties:
-    manualEmailTemplate:
-      $ref: "#/application-eventTypeAction_manualEmailTemplate"
-application-eventTypeAction_properties_autoEmail:
-  properties:
-    autoEmail:
-      $ref: "#/application-eventTypeAction_autoEmail"
-
 #attributes
-application-eventTypeAction_id:
-  type: integer
-  example: 1
 application-eventTypeAction_label:
   type: string
   example: Email teacher
@@ -88,29 +20,41 @@ application-eventTypeAction_autoEmailId:
   description: Relationship to general-autoEmail
 application-eventTypeAction_applicationEventType:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to meta-entityType
+  required: 
+    - id
 application-eventTypeAction_actionType:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to ...
+  required: 
+    - id
 application-eventTypeAction_manualEmailTemplate:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to ...
+  required: 
+    - id
 application-eventTypeAction_autoEmail:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to ...
+  required: 
+    - id

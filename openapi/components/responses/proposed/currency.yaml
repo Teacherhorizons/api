@@ -21,11 +21,24 @@ general-currencyResponse_admin:
           properties:
             attributes:
               type: object
-              allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
-            # relationships:
-            #$ref: "../../models/json-api/general/general-currency.yaml#/JsonApiModel_regional-region_relationships_admin"
+              additionalProperties: false
+              properties:
+                code:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+                symbol:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+                name:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+                creationDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+                latestUpdateDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+              required:
+                - code
+                - symbol
+                - name
+                - creationDate
+                - latestUpdateDate
 
 general-currencyResponse_school:
   allOf:
@@ -37,8 +50,24 @@ general-currencyResponse_school:
           properties:
             attributes:
               type: object
-              allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
+              additionalProperties: false
+              properties:
+                code:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+                symbol:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+                name:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+                creationDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+                latestUpdateDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+              required:
+                - code
+                - symbol
+                - name
+                - creationDate
+                - latestUpdateDate
 
 general-currencyResponse_teacher:
   allOf:
@@ -50,5 +79,21 @@ general-currencyResponse_teacher:
           properties:
             attributes:
               type: object
-              allOf:
-                - $ref: "../../models/library/general/currency.yaml#/general-currency_attributes"
+              additionalProperties: false
+              properties:
+                code:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+                symbol:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+                name:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+                creationDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+                latestUpdateDate:
+                  $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+              required:
+                - code
+                - symbol
+                - name
+                - creationDate
+                - latestUpdateDate

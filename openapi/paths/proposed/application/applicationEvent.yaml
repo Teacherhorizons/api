@@ -25,10 +25,13 @@ patch:
               type: string
               example: "1"
             attributes:
-              allOf:
-                - type: object
-                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_date"
-                - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_notes"
+              type: object
+              additionalProperties: false
+              properties:
+                date:
+                  $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
+                notes:
+                  $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
   responses:
     "204":
       description: NO_CONTENT (Request successful)

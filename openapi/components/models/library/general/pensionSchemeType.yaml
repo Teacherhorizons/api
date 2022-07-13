@@ -1,84 +1,4 @@
-general-pensionSchemeType_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-#filter properties
-
-# attributes
-general-pensionSchemeType_attributes:
-  allOf:
-    - $ref: "#/general-pensionSchemeType_properties_name"
-    - $ref: "#/general-pensionSchemeType_properties_creationDate"
-    - $ref: "#/general-pensionSchemeType_properties_latestUpdateDate"
-
-# relationshipIds
-general-pensionSchemeType_relationshipIds:
-  allOf:
-    - $ref: "#/general-pensionSchemeType_properties_creationUserId"
-    - $ref: "#/general-pensionSchemeType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-general-pensionSchemeType_relationships:
-  allOf:
-    - $ref: "#/general-pensionSchemeType_properties_creationUser"
-    - $ref: "#/general-pensionSchemeType_properties_latestUpdateUser"
-
-#properties
-general-pensionSchemeType_properties_id:
-  properties:
-    id:
-      $ref: "#/general-pensionSchemeType_id"
-
-general-pensionSchemeType_properties_name:
-  properties:
-    name:
-      $ref: "#/general-pensionSchemeType_name"
-
-general-pensionSchemeType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/general-pensionSchemeType_creationDate"
-
-general-pensionSchemeType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/general-pensionSchemeType_latestUpdateDate"
-
-general-pensionSchemeType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/general-pensionSchemeType_creationUserId"
-
-general-pensionSchemeType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/general-pensionSchemeType_latestUpdateUserId"
-
-
-general-pensionSchemeType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/general-pensionSchemeType_creationUser"
-
-general-pensionSchemeType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/general-pensionSchemeType_latestUpdateUser"
-
 #attributes
-general-pensionSchemeType_id:
-  type: integer
-  example: 1
-
 general-pensionSchemeType_name:
   type: string
   example: Secondary Subject Teacher
@@ -105,19 +25,25 @@ general-pensionSchemeType_latestUpdateUserId:
 
 general-pensionSchemeType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+    - id
 
 general-pensionSchemeType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+    - id
 
 
 

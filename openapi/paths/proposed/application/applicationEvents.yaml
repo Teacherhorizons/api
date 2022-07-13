@@ -78,15 +78,17 @@ post:
                   type: string
                   example: application-applicationEvent
                 attributes:
-                  allOf:
-                    - type: object
-                    # - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_attributeRelationships"
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_date"
-                    - $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_properties_notes"
-                    - required:
-                        - application
-                        - eventType
-                        - date
+                  type: object
+                  additionalProperties: false
+                  properties:
+                    date:
+                      $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
+                    notes:
+                      $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
+                  required:
+                    - application
+                    - eventType
+                    - date
   responses:
     "201":
       description: CREATED (Request successful)

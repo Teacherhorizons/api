@@ -1,11 +1,23 @@
 SimpleModel_general-manualEmailTemplate:
-  allOf:
-    # - $ref: "#/SimpleModel_general-manualEmailTemplate"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-manualEmailTemplate_id"
-        - $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_attributes"
-
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-manualEmailTemplate_id"
+    # simple attributes
+    to:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+    cc:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+    bcc:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+    subject:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+    body:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+  required:
+    - id
+    - name
 # shared
 SimpleModel_general-manualEmailTemplate_id:
   properties:

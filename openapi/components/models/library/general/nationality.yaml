@@ -1,69 +1,3 @@
-
-# attributes
-general-nationality_attributes:
-  allOf:
-    - $ref: "#/general-nationality_properties_name"
-    - $ref: "#/general-nationality_properties_parent"
-    - $ref: "#/general-nationality_properties_flag"
-    - $ref: "#/general-nationality_properties_creationDate"
-    - $ref: "#/general-nationality_properties_latestUpdateDate"
-
-# relationshipIds
-general-nationality_relationshipIds:
-  allOf:
-    - $ref: "#/general-nationality_properties_creationUserId"
-    - $ref: "#/general-nationality_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-general-nationality_relationships:
-  allOf:
-    - $ref: "#/general-nationality_properties_creationUser"
-    - $ref: "#/general-nationality_properties_latestUpdateUser"
-
-#properties
-general-nationality_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/general-nationality_creationDate"
-general-nationality_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/general-nationality_latestUpdateDate"
-general-nationality_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/general-nationality_creationUserId"
-general-nationality_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/general-nationality_latestUpdateUserId"
-general-nationality_properties_id:
-  properties:
-    id:
-      $ref: "#/general-nationality_id"
-general-nationality_properties_name:
-  properties:
-    name:
-      $ref: "#/general-nationality_name"
-general-nationality_properties_parent:
-  properties:
-    parent:
-      $ref: "#/general-nationality_parent"
-general-nationality_properties_flag:
-  properties:
-    flag:
-      $ref: "#/general-nationality_flag"
-general-nationality_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/general-nationality_creationUser"
-general-nationality_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/general-nationality_latestUpdateUser"
-
 #attributes
 general-nationality_creationDate:
   type: integer
@@ -81,9 +15,6 @@ general-nationality_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-general-nationality_id:
-  type: integer
-  example: 1
 general-nationality_name:
   type: string
   example: American
@@ -95,15 +26,21 @@ general-nationality_flag:
   example: us
 general-nationality_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id
 general-nationality_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id

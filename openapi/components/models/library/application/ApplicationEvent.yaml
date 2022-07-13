@@ -1,135 +1,3 @@
-application-applicationEvent_attributes_all:
-  allOf:
-    - $ref: "#/application-applicationEvent_attributes_admin"
-
-# attributes
-application-applicationEvent_attributes_admin:
-  allOf:
-    - $ref: "#/application-applicationEvent_attributes_shared"
-    - $ref: "#/application-applicationEvent_properties_notes"
-    - $ref: "#/application-applicationEvent_properties_creationDate"
-    - $ref: "#/application-applicationEvent_properties_latestUpdateDate"
-
-application-applicationEvent_attributes_teacher:
-  allOf:
-    - $ref: "#/application-applicationEvent_attributes_shared"
-
-  # attributes
-application-applicationEvent_attributes_shared:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_date"
-
-# relationshipIds
-
-application-applicationEvent_relationshipIds_all:
-  anyOf:
-    - $ref: "#/application-applicationEvent_relationshipIds_admin"
-
-application-applicationEvent_relationshipIds_admin:
-  allOf:
-    - $ref: "#/application-applicationEvent_relationshipIds_shared"
-
-application-applicationEvent_relationshipIds_shared:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_applicationId"
-    - $ref: "#/application-applicationEvent_properties_typeId"
-    - $ref: "#/application-applicationEvent_properties_emailId"
-    - $ref: "#/application-applicationEvent_properties_creationUserId"
-    - $ref: "#/application-applicationEvent_properties_latestUpdateUserId"
-
-# attribute relationships
-
-application-applicationEvent_relationships_all:
-  anyOf:
-    - $ref: "#/application-applicationEvent_relationships_admin"
-
-application-applicationEvent_relationships_admin:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_application"
-    - $ref: "#/application-applicationEvent_properties_type"
-
-application-applicationEvent_relationships_shared:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_email"
-
-# relationships
-# TODO - not yet used; consider referring to the json-api user model here, and then trying to use
-application-applicationEvent_relationships:
-  allOf:
-    - $ref: "#/application-applicationEvent_properties_creationUser"
-    - $ref: "#/application-applicationEvent_properties_latestUpdateUser"
-
-# properties
-application-applicationEvent_properties_date:
-  properties:
-    date:
-      $ref: "#/application-applicationEvent_date"
-
-application-applicationEvent_properties_notes:
-  properties:
-    notes:
-      $ref: "#/application-applicationEvent_notes"
-
-application-applicationEvent_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/application-applicationEvent_creationDate"
-
-application-applicationEvent_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/application-applicationEvent_latestUpdateDate"
-
-application-applicationEvent_properties_applicationId:
-  properties:
-    applicationId:
-      $ref: "#/application-applicationEvent_applicationId"
-
-application-applicationEvent_properties_typeId:
-  properties:
-    eventTypeId:
-      $ref: "#/application-applicationEvent_typeId"
-
-application-applicationEvent_properties_emailId:
-  properties:
-    emailId:
-      $ref: "#/application-applicationEvent_emailId"
-
-application-applicationEvent_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/application-applicationEvent_creationUserId"
-
-application-applicationEvent_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/application-applicationEvent_latestUpdateUserId"
-
-application-applicationEvent_properties_application:
-  properties:
-    application:
-      $ref: "#/application-applicationEvent_application"
-
-application-applicationEvent_properties_email:
-  properties:
-    email:
-      $ref: "#/application-applicationEvent_email"
-
-application-applicationEvent_properties_type:
-  properties:
-    type:
-      $ref: "#/application-applicationEvent_type"
-
-application-applicationEvent_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/application-applicationEvent_creationUser"
-
-application-applicationEvent_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/application-applicationEvent_latestUpdateUser"
-
 # attributes
 application-applicationEvent_date:
   type: string
@@ -194,47 +62,55 @@ application-applicationEvent_latestUpdateUserId:
 # relationships
 application-applicationEvent_application:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
+      description: ""
   required:
     - id
 
 application-applicationEvent_type:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
+      description: Relationship to ..
   required:
     - id
 
 application-applicationEvent_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to User
+      description: Relationship to User
   required:
     - id
 
 application-applicationEvent_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to User
+      description: Relationship to User
   required:
     - id
 
 application-applicationEvent_email:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
+      description: Relationship to ..
   required:
     - id

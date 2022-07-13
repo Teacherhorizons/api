@@ -28,9 +28,24 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_attributes"
-          # $ref: "../../../components/schemas/proposed/simple-models/region.yaml#/RegionProperties_all"
+        additionalProperties: false
+        properties:
+          code:
+            $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+          symbol:
+            $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+          name:
+            $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+          creationDate:
+            $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+          latestUpdateDate:
+            $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+        required:
+          - code
+          - symbol
+          - name
+          - creationDate
+          - latestUpdateDate
         example:
           region: name,creationDate
   responses:
