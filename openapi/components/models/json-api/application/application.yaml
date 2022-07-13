@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
-
 JsonApiModel_application:
   oneOf:
     - $ref: "#/JsonApiModel_application_admin"
@@ -232,6 +231,9 @@ JsonApiModel_application_relationship:
     - data
 JsonApiModel_application_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_application_id"
+  required:
+   - id

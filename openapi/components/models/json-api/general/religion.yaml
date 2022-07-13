@@ -1,67 +1,67 @@
 JsonApiModel_general-religion:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_general-religion_type"
     id:
       $ref: "#/JsonApiModel_general-religion_id"
     attributes:
-      $ref: "#/JsonApiModel_general-religion_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/general/religion.yaml#/general-religion_name"
+        creationDate:
+          $ref: "../../library/general/religion.yaml#/general-religion_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateDate" 
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_general-religion_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_general-religion_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/general/religion.yaml#/general-religion_name"
-    creationDate:
-      $ref: "../../library/general/religion.yaml#/general-religion_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateDate" 
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_general-religion_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
-
 JsonApiModel_general-religion_type:
   type: string
   example: general-religion
-  description: general-religion
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_general-religion_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the general-religion (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_general-religion_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_general-religion_id"
+  required:
+    - id
 
 JsonApiModel_general-religion_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_general-religion_type"

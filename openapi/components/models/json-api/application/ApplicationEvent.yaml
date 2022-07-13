@@ -99,13 +99,13 @@ JsonApiModel_application-applicationEvent_teacher:
 JsonApiModel_application-applicationEvent_type:
   type: string
   example: application-applicationEvent
-  description: application-applicationEvent
+  description: Unique identifier of the entity
   readOnly: true
 
 JsonApiModel_application-applicationEvent_id:
   type: string
   example: "1"
-  description: Unique identifier of the application-applicationEvent (string)
+  description: Unique identifier of the entity (string)
   readOnly: true
 
 JsonApiModel_application-applicationEvent_relationship_attribute:
@@ -123,6 +123,7 @@ JsonApiModel_application-applicationEvent_relationship:
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application-applicationEvent_type"

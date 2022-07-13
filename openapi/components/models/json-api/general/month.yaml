@@ -1,31 +1,30 @@
 JsonApiModel_general-month:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_general-month_type"
     id:
       $ref: "#/JsonApiModel_general-month_id"
     attributes:
-      $ref: "#/JsonApiModel_general-month_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/general/month.yaml#/general-month_name"
   required:
     - type
     - id
 
-JsonApiModel_general-month_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/general/month.yaml#/general-month_name"
-
 JsonApiModel_general-month_type:
   type: string
   example: general-month
-  description: general-month
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_general-month_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the general-month (string)
+  description: Unique identifier of the entity (string)
