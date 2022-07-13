@@ -1,4 +1,5 @@
 # yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
+
 JsonApiModel_application:
   oneOf:
     - $ref: "#/JsonApiModel_application_admin"
@@ -10,14 +11,15 @@ JsonApiModel_application:
       admin: "#/JsonApiModel_application_admin"
       school: "#/JsonApiModel_application_school"
       teacher: "#/JsonApiModel_application_teacher"
-  # foo: string
 
 JsonApiModel_application_admin:
   type: object
   additionalProperties: false
   properties:
     schema:
-      $ref: "#/JsonApiModel_application_schema"
+      type: string
+      enum:
+        - admin
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
@@ -82,7 +84,9 @@ JsonApiModel_application_school:
   additionalProperties: false
   properties:
     schema:
-      $ref: "#/JsonApiModel_application_schema"
+      type: string
+      enum:
+        - school
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
@@ -130,7 +134,7 @@ JsonApiModel_application_school:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
         thMatchType:
-              $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
   required:
     - schema
     - type
@@ -143,7 +147,9 @@ JsonApiModel_application_teacher:
   additionalProperties: false
   properties:
     schema:
-      $ref: "#/JsonApiModel_application_schema"
+      type: string
+      enum:
+        - teacher
     type:
       $ref: "#/JsonApiModel_application_type"
     id:
@@ -193,32 +199,26 @@ JsonApiModel_application_teacher:
     - attributes
     - relationships
 
-# schema, type and id
-JsonApiModel_application_schema:
-  type: string
-  example: admin
-  enum:
-    - admin
-    - school
-    - teacher
-
+# type, id, relationship and relationship_attribute
 JsonApiModel_application_type:
   type: string
   example: application
-  description: application
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_application_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the application (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_application_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_application_type"
@@ -229,6 +229,7 @@ JsonApiModel_application_relationship:
         - id
   required:
     - data
+
 JsonApiModel_application_relationship_attribute:
   type: object
   additionalProperties: false
@@ -236,4 +237,4 @@ JsonApiModel_application_relationship_attribute:
     id:
       $ref: "#/JsonApiModel_application_id"
   required:
-   - id
+    - id

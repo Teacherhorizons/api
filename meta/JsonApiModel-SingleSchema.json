@@ -32,27 +32,113 @@
         "type": {
           "const": "object"
         },
-        "id": {
-          "const": "object"
-        },
         "additionalProperties": {
           "const": false
         },
         "properties": {
           "type": "object",
           "additionalProperties": false,
-          "patternProperties": {
-            "^[a-zA-Z_]*$": {
+          "properties": {
+            "type": {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "$ref": {
-                  "type": "string"
+                  "type": "string",
+                  "pattern": "^#/JsonApiModel_(application|general)[a-zA-Z-]*_type$"
                 }
               }
+            },
+            "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^#/JsonApiModel_(application|general)[a-zA-Z-]*_id$"
+                }
+              }
+            },
+            "attributes": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "object"
+                },
+                "additionalProperties": {
+                  "const": false
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-zA-Z_]*$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "$ref": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "$ref"
+                      ]
+                    }
+                  },
+                  "required": []
+                }
+              },
+              "required": [
+                "type",
+                "additionalProperties",
+                "properties"
+              ]
+            },
+            "relationships": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "object"
+                },
+                "additionalProperties": {
+                  "const": false
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-zA-Z_]*$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "$ref": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "$ref"
+                      ]
+                    }
+                  },
+                  "required": []
+                }
+              },
+              "required": [
+                "type",
+                "additionalProperties",
+                "properties"
+              ]
             }
           },
           "required": [
-            "id"
+            "type",
+            "id",
+            "attributes",
+            "relationships"
           ]
         },
         "required": {
