@@ -17,10 +17,6 @@ JsonApiModel_application-applicationDataIssue:
         application:
           $ref: "../application/application.yaml#/JsonApiModel_application_relationship_attribute"
         guideline:
-          # type: object
-          # properties:
-          #   id:
-          #     $ref: "./guideline.yaml#/JsonApiModel_application-guideline_id"
           $ref: "../application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute"
     relationships:
       # $ref: "#/JsonApiModel_application-applicationDataIssue_relationships"

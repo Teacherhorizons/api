@@ -145,7 +145,7 @@ JsonApiModel_application-eventTypeAction_teacher:
     - attributes
     - relationships
 
-# type and id
+# type, id, attribute and relationship
 JsonApiModel_application-eventTypeAction_type:
   type: string
   example: application-eventTypeAction
@@ -164,6 +164,8 @@ JsonApiModel_application-eventTypeAction_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-eventTypeAction_id"
+  required:
+   - id
 
 JsonApiModel_application-eventTypeAction_relationship:
   type: object

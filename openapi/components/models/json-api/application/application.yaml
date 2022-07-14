@@ -134,7 +134,7 @@ JsonApiModel_application_school:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
         thMatchType:
-          $ref: "../../library/application/application.yaml#/application_thMatchTypeId"
+          $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
     - schema
     - type

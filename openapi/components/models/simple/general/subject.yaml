@@ -1,11 +1,26 @@
 SimpleModel_general-subject:
-  allOf:
-    # - $ref: "#/SimpleModel_general-subject"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-subject_id"
-        - $ref: "../../library/general/subject.yaml#/general-subject_attributes"
-        - $ref: "../../library/general/subject.yaml#/general-subject_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-subject_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/subject.yaml#/general-subject_name"
+    creationDate:
+      $ref: "../../library/general/subject.yaml#/general-subject_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
+    # relationship attributes
+    subjectGroup:
+      $ref: "../general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup_relationship_attribute"
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+  # required:
+  #   - id
+  #   - name
 
 # shared
 SimpleModel_general-subject_id:
