@@ -1,4 +1,4 @@
-import { setApi, setup, signIn, signOut, api } from '../../shared';
+import { api, setApi, setup, signIn, signOut } from '../../shared';
 
 setup();
 
