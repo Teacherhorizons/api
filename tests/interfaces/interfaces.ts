@@ -27,11 +27,16 @@ declare namespace Config {
     id?: number;
   }
 
+  export interface Application {
+    id?: number;
+  }
+
   export interface Data {
     test?: Test;
     schools: School[];
     teachers: Teacher[];
     jobs: Job[];
+    applications: Application[];
   }
 
   // export const data: Data = {

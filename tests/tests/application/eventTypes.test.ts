@@ -13,10 +13,10 @@ describe('admin@th.test', () => {
   test('GET application-eventTypes?schema=admin', async () => {
     const response: GetListResponse = await api.get('application-eventTypes?schema=admin');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(22);
+    expect(response.data.data.length).toEqual(24);
 
     const countWithStatus = response.data.data.filter((x) => !!x.attributes.applicationStatus).length;
-    expect(countWithStatus).toEqual(21);
+    expect(countWithStatus).toEqual(23);
 
     expect(response).toSatisfyApiSpec();
   });
@@ -24,14 +24,14 @@ describe('admin@th.test', () => {
   test('GET application-eventTypes?schema=school', async () => {
     const response: GetListResponse = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(22);
+    expect(response.data.data.length).toEqual(15);
     expect(response).toSatisfyApiSpec();
   });
 
   test('GET application-eventTypes?schema=teacher', async () => {
     const response: GetListResponse = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(22);
+    expect(response.data.data.length).toEqual(21);
     expect(response).toSatisfyApiSpec();
   });
 
@@ -58,7 +58,7 @@ describe('school-1-school@th.test', () => {
   test('GET application-eventTypes?schema=school', async () => {
     const response: GetListResponse = await api.get('application-eventTypes?schema=school');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(4);
+    expect(response.data.data.length).toEqual(15);
     expect(response).toSatisfyApiSpec();
     // TODO: add test to check school can see only application event types where isVisibleToSchool is true
     // e.g. expected count
@@ -104,7 +104,7 @@ describe('endorsed@th.test', () => {
   test('GET application-eventTypes?schema=teacher', async () => {
     const response: GetListResponse = await api.get('application-eventTypes?schema=teacher');
     expect(response.status).toEqual(200);
-    expect(response.data.data.length).toEqual(3);
+    expect(response.data.data.length).toEqual(21);
     expect(response).toSatisfyApiSpec();
   });
 
