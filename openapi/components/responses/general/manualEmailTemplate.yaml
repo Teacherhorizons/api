@@ -1,4 +1,4 @@
-Application-manualEmailTemplatesResponse:
+General-manualEmailTemplateResponse:
   type: object
   properties:
     schema:
@@ -9,14 +9,14 @@ Application-manualEmailTemplatesResponse:
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Application-manualEmailTemplates_admin"
+      admin: "#/General-manualEmailTemplate_admin"
   required:
     - schema
 
 # admin
-Application-manualEmailTemplates_admin:
+General-manualEmailTemplate_admin:
   allOf:
-    - $ref: "#/Application-manualEmailTemplatesResponse"
+    - $ref: "#/General-manualEmailTemplateResponse"
     - properties:
         data:
           type: object
@@ -49,4 +49,3 @@ Application-manualEmailTemplates_admin:
             - id
             - attributes
             - relationships
-

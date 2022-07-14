@@ -34,7 +34,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/applicationDataIssues.yaml#/Application-applicationDataIssuesResponse"
+            $ref: "../../../components/responses/application/applicationDataIssues.yaml#/Application-applicationDataIssuesResponse"
     "400":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":

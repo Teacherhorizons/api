@@ -1,8 +1,7 @@
 get:
   operationId: getApplications
   tags:
-    - applications
-    - status-proposed
+    - application
   summary: Get list of 20 applications
   description: |
     - Admin: Can see all applications and all related events
@@ -108,7 +107,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/applications.yaml#/ApplicationsResponse"
+            $ref: "../../../components/responses/application/applications.yaml#/ApplicationsResponse"
     "400":
       $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
@@ -128,7 +127,7 @@ post:
   operationId: postApplication
   summary: Create application
   tags:
-    - applications
+    - application
   description: ""
   requestBody:
     content:

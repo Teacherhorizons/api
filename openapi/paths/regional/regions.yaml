@@ -22,7 +22,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
+          $ref: "../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
         example:
           region: name,slug,locationLatLong
     - in: query
@@ -33,7 +33,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
+          $ref: "../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
         example:
           name: foo
           slug: bar
@@ -43,7 +43,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/regions.yaml#/RegionsResponse"
+            $ref: "../../components/responses/regional/regions.yaml#/RegionsResponse"
     "400":
       description: Invalid ID supplied
     "404":

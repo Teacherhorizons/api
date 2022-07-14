@@ -7,7 +7,7 @@ get:
   parameters:
     - in: path
       name: countryId
-      required: true      
+      required: true
       # description:
       example: 1
       schema:
@@ -36,7 +36,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/country.yaml"
+            $ref: "../../../components/responses/regional/country.yaml"
     "400":
       description: Invalid ID supplied
     "404":

@@ -1,45 +1,45 @@
-get:
-  operationId: getJobApplications_proposed
-  tags:
-    - job applications
-    - status-proposed
-  summary: Get a list of job applications (proposed)
-  parameters:
-    # current
-    - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
+# get:
+#   operationId: getJobApplications_proposed
+#   tags:
+#     - job applications
+#     - status-proposed
+#   summary: Get a list of job applications (proposed)
+#   parameters:
+#     # current
+#     - $ref: "../../../components/parameters/current/school.yaml#/school-ids"
 
-    - $ref: "../../../components/parameters/current/job.yaml#/job-ids"
-    - $ref: "../../../components/parameters/current/job.yaml#/job-subjects"
+#     - $ref: "../../../components/parameters/current/job.yaml#/job-ids"
+#     - $ref: "../../../components/parameters/current/job.yaml#/job-subjects"
 
-    - $ref: "../../../components/parameters/current/teacher.yaml#/member-numbers"
+#     - $ref: "../../../components/parameters/current/teacher.yaml#/member-numbers"
 
-    - $ref: "../../../components/parameters/current/job-application.yaml#/actioned-by-user-ids"
+#     - $ref: "../../../components/parameters/current/job-application.yaml#/actioned-by-user-ids"
 
-    - $ref: "../../../components/parameters/current/list.yaml#/limit"
-    - $ref: "../../../components/parameters/current/list.yaml#/page-number"
-    - $ref: "../../../components/parameters/current/list.yaml#/sort"
+#     - $ref: "../../../components/parameters/current/list.yaml#/limit"
+#     - $ref: "../../../components/parameters/current/list.yaml#/page-number"
+#     - $ref: "../../../components/parameters/current/list.yaml#/sort"
 
-    # deprecated
-    - $ref: "../../../components/parameters/deprecated/job-application.yaml#/job-application-statuses"
-  responses:
-    "200":
-      description: successful operation
-      content:
-        application/json:
-          schema:
-            anyOf:
-              - $ref: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
-              # - $ref: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
-              # - $ref: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
-            discriminator:
-              propertyName: apiSchema
-              mapping:
-                JobApplicationsForAdminSet1: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
-                # JobApplicationsForSchoolSet1: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
-                # JobApplicationsForTeacherSet1: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
-    "400":
-      description: Invalid ID supplied
-    "404":
-      description: Pet not found
-  security:
-    - api_key: []
+#     # deprecated
+#     - $ref: "../../../components/parameters/deprecated/job-application.yaml#/job-application-statuses"
+#   responses:
+#     "200":
+#       description: successful operation
+#       content:
+#         application/json:
+#           schema:
+#             anyOf:
+#               - $ref: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
+#               # - $ref: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
+#               # - $ref: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
+#             discriminator:
+#               propertyName: apiSchema
+#               mapping:
+#                 JobApplicationsForAdminSet1: "../../../components/schemas/proposed/job-applications/for-admin/response.yaml"
+#                 # JobApplicationsForSchoolSet1: "../../../components/schemas/proposed/job-applications/for-school/response.yaml"
+#                 # JobApplicationsForTeacherSet1: "../../../components/schemas/proposed/job-applications/for-teacher/response.yaml"
+#     "400":
+#       description: Invalid ID supplied
+#     "404":
+#       description: Pet not found
+#   security:
+#     - api_key: []

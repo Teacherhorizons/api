@@ -12,7 +12,7 @@
   $ref: "./../paths/proposed/application/applications.yaml"
 
 /applications/{applicationId}:
-  $ref: "./../paths/proposed/application/application.yaml"
+  $ref: "./../paths/application/application.yaml"
 
 /application-applicationDataIssues:
   $ref: "./../paths/proposed/application/applicationDataIssues.yaml"
@@ -40,10 +40,6 @@
 # documents
 /v2/teacher/member-number/{memberNumber}/documents:
   $ref: "./../paths/current/documents/teacher-member-number-documents.yaml"
-
-# email-templates
-/email-templates:
-  $ref: "./../paths/proposed/email-templates/email-templates.yaml"
 
 # employment records
 /v1/teacher/member-number/{memberNumber}/employment-records:
@@ -132,32 +128,29 @@
 /v1/site/statistics:
   $ref: "./../paths/current/other/site-statistics.yaml"
 
-# proposed
-
 #general
-
 /general/{currencyId}:
-  $ref: "./../paths/proposed/general/currency.yaml"
+  $ref: "./../paths/general/currency.yaml"
 
 /general-manualEmailTemplates/{manualEmailTemplateId}:
-  $ref: "./../paths/proposed/general/manualEmailTemplate.yaml"
+  $ref: "./../paths/general/manualEmailTemplate.yaml"
 
 /general-manualEmailTemplates:
-  $ref: "./../paths/proposed/general/manualEmailTemplates.yaml"
+  $ref: "./../paths/general/manualEmailTemplates.yaml"
 
 # regions
 /regional-regions/{regionId}:
-  $ref: "./../paths/proposed/regional/region.yaml"
+  $ref: "./../paths/regional/region.yaml"
 /regional-regions:
-  $ref: "./../paths/proposed/regional/regions.yaml"
+  $ref: "./../paths/regional/regions.yaml"
 /schools-agg-regions:
-  $ref: "./../paths/proposed/regional/schools-agg-regions.yaml"
+  $ref: "./../paths/regional/schools-agg-regions.yaml"
 
 /countries/{countryId}:
   $ref: "./../paths/proposed/countries/country.yaml"
 
-/job-applications:
-  $ref: "./../paths/proposed/job-applications/job-applications.yaml"
+# /job-applications:
+#   $ref: "./../paths/proposed/job-applications/job-applications.yaml"
 /schools:
   $ref: "./../paths/proposed/schools/schools.yaml"
 # /schools/{schoolId}:
@@ -176,8 +169,7 @@
   $ref: "./../paths/non-th-examples/path-item-with-examples.yaml"
 
 # test
-
 /test-apiTests:
-  $ref: "./../paths/proposed/test/apiTests.yaml"
+  $ref: "./../paths/test/apiTests.yaml"
 /test-apiTests/{apiTestId}:
-  $ref: "./../paths/proposed/test/apiTest.yaml"
+  $ref: "./../paths/test/apiTest.yaml"

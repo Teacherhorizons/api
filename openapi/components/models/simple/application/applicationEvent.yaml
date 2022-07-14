@@ -32,13 +32,6 @@ SimpleModel_application-applicationEvent_admin:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate"
     notes:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_notes"
-    # nameForSchool:
-    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_nameForSchool"
-    # nameForTeacher:
-    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_nameForTeacher"
-    # isVisibleToSchool:
-    #   $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_isVisibleToSchool"
-
     # relationship attributes
     applicationId:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_applicationId"
@@ -75,6 +68,7 @@ SimpleModel_application-applicationEvent_school:
     typeId:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_typeId"
   required:
+    - schema
     - id
     - date
     - typeId
@@ -96,11 +90,12 @@ SimpleModel_application-applicationEvent_teacher:
     typeId:
       $ref: "../../library/application/applicationEvent.yaml#/application-applicationEvent_typeId"
   required:
+    - schema
     - id
     - date
     - typeId
 
-# shared
+# id
 SimpleModel_application-applicationEvent_id:
   type: integer
   format: int32

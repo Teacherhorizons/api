@@ -12,7 +12,7 @@ delete:
         type: integer
         format: int32
   responses:
-    '204':
+    "204":
       description: NO_CONTENT (Request successful)
-    '400':
-      $ref: '../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400'
+    "400":
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"

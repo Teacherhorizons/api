@@ -70,6 +70,8 @@ JsonApiModel_application_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
@@ -133,6 +135,8 @@ JsonApiModel_application_school:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
@@ -192,6 +196,8 @@ JsonApiModel_application_teacher:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+        latestEvent:
+          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
   required:
     - schema
     - type

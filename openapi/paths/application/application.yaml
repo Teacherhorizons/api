@@ -38,26 +38,26 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/proposed/application.yaml#/ApplicationResponse"
+            $ref: "../../components/responses/application/application.yaml#/ApplicationResponse"
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
   security:
     - api_key: []
 
 patch:
   operationId: patchApplication
   tags:
-    - applications
+    - application
   summary: Update application
   description: ""
   parameters:
@@ -78,17 +78,17 @@ patch:
               type: string
               example: application
             attributes:
-                type: object
-                additionalProperties: false
-                properties:
-                    creationDate:
-                      type: string
-                      format: date-time
-                      example: 2011-02-07T15:53:34Z
-                    latestUpdateDate:
-                      type: string
-                      format: date-time
-                      example: 2011-02-07T15:53:34Z
+              type: object
+              additionalProperties: false
+              properties:
+                creationDate:
+                  type: string
+                  format: date-time
+                  example: 2011-02-07T15:53:34Z
+                latestUpdateDate:
+                  type: string
+                  format: date-time
+                  example: 2011-02-07T15:53:34Z
   responses:
     "204":
       description: NO_CONTENT (Request successful)
@@ -98,14 +98,14 @@ patch:
             type: object
             default: null
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"

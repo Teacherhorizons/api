@@ -1,0 +1,52 @@
+# General-manualEmailTemplatesResponse:
+#   type: object
+#   properties:
+#     schema:
+#       type: string
+#       example: admin
+#       enum:
+#         - admin
+#   discriminator:
+#     propertyName: schema
+#     mapping:
+#       admin: "#/General-manualEmailTemplates_admin"
+#   required:
+#     - schema
+
+# # admin
+# General-manualEmailTemplates_admin:
+#   allOf:
+#     - $ref: "#/General-manualEmailTemplatesResponse"
+#     - properties:
+#         data:
+#           type: object
+#           properties:
+#             type:
+#               $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_type"
+#             id:
+#               $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
+#             attributes:
+#               type: object
+#               properties:
+#                 to:
+#                   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+#                 cc:
+#                   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+#                 bcc:
+#                   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+#                 subject:
+#                   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+#                 body:
+#                   $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+#               required:
+#                 - to
+#                 - cc
+#                 - bcc
+#                 - subject
+#                 - body
+#           required:
+#             - type
+#             - id
+#             - attributes
+#             - relationships
+
