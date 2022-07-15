@@ -33,8 +33,8 @@ SimpleModel_application-eventTypeAction_all:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_actionTypeId"
     manualEmailTemplateId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_manualEmailTemplateId"
-    autoEmail:
-      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmail"
+    autoEmailId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmailId"
   required:
     - label
     - applicationEventType
@@ -62,8 +62,8 @@ SimpleModel_application-eventTypeAction_admin:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_actionTypeId"
     manualEmailTemplateId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_manualEmailTemplateId"
-    autoEmail:
-      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmail"
+    autoEmailId:
+      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmailId"
   required:
     - label
     - applicationEventType

@@ -11,16 +11,16 @@ SimpleModel_general-subject:
       $ref: "../../library/general/subject.yaml#/general-subject_creationDate"
     latestUpdateDate:
       $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
-    # # relationship attributes
-    # subjectGroup:
-    #   $ref: "../general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup_relationship_attribute"
-    # creationUser:
-    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    # latestUpdateUser:
-    #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-  # required:
-  #   - id
-  #   - name
+    # relationship attributes
+    subjectGroupId:
+        $ref: "../../library/general/subject.yaml#/general-subject_subjectGroupId"
+    creationUserId:
+      $ref: "../../library/general/subject.yaml#/general-subject_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateUserId"
+  required:
+    - id
+    - name
 
 # shared
 SimpleModel_general-subject_id:
