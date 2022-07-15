@@ -9,25 +9,25 @@
 
 # applications
 /applications:
-  $ref: "./../paths/proposed/application/applications.yaml"
+  $ref: "./../paths/application/applications.yaml"
 
 /applications/{applicationId}:
   $ref: "./../paths/application/application.yaml"
 
 /application-applicationDataIssues:
-  $ref: "./../paths/proposed/application/applicationDataIssues.yaml"
+  $ref: "./../paths/application/applicationDataIssues.yaml"
 
 /application-applicationEvents:
-  $ref: "./../paths/proposed/application/applicationEvents.yaml"
+  $ref: "./../paths/application/applicationEvents.yaml"
 
 /application-applicationEvents/{applicationEventId}:
-  $ref: "./../paths/proposed/application/applicationEvent.yaml"
+  $ref: "./../paths/application/applicationEvent.yaml"
 
 /application-eventTypes:
   $ref: "./../paths/application/eventTypes.yaml"
 
 /application-eventTypeActions:
-  $ref: "./../paths/proposed/application/eventTypeActions.yaml"
+  $ref: "./../paths/application/eventTypeActions.yaml"
 
 # cities
 /v3/city/id/{cityId}/profile:
@@ -147,7 +147,7 @@
   $ref: "./../paths/regional/schools-agg-regions.yaml"
 
 /countries/{countryId}:
-  $ref: "./../paths/proposed/countries/country.yaml"
+  $ref: "./../paths/regional/country.yaml"
 
 # /job-applications:
 #   $ref: "./../paths/proposed/job-applications/job-applications.yaml"

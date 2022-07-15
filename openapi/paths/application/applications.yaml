@@ -107,19 +107,19 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/application/applications.yaml#/ApplicationsResponse"
+            $ref: "../../components/responses/application/applications.yaml#/ApplicationsResponse"
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
   security:
     - api_key: []
 
@@ -146,9 +146,9 @@ post:
                     - type: object
                       properties:
                         job:
-                          $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_attribute"
+                          $ref: "../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_attribute"
                         memberNumber:
-                          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
+                          $ref: "../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
                     - required:
                         - job
                         - memberNumber
@@ -170,14 +170,14 @@ post:
                     type: string
                     example: "2"
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"

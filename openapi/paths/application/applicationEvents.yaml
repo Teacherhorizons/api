@@ -42,19 +42,19 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/application/applicationEvents.yaml#/Application-applicationEventsResponse"
+            $ref: "../../components/responses/application/applicationEvents.yaml#/Application-applicationEventsResponse"
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
   security:
     - api_key: []
 
@@ -81,9 +81,9 @@ post:
                   additionalProperties: false
                   properties:
                     date:
-                      $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
+                      $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
                     notes:
-                      $ref: "../../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
+                      $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
                   required:
                     - application
                     - eventType
@@ -106,14 +106,14 @@ post:
                     type: string
                     example: "1"
     "400":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"

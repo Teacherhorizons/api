@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/cities/city-id-profile.yaml"
+            $ref: "../../components/schemas/current/cities/city-id-profile.yaml"
     "400":
       description: Invalid ID supplied
     "404":

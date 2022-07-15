@@ -1,9 +1,8 @@
 get:
   operationId: getCountry
   tags:
-    - countries
-    - status-proposed
-  summary: Get a country (proposed)
+    - regional
+  summary: Get a country 
   parameters:
     - in: path
       name: countryId
@@ -21,7 +20,7 @@ get:
       schema:
         type: object
         additionalProperties:
-          $ref: "../../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
+          $ref: "../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
         example:
           country: name,isoCode,locationLatLong
     - in: query
@@ -36,7 +35,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/responses/regional/country.yaml"
+            $ref: "../../components/responses/regional/country.yaml"
     "400":
       description: Invalid ID supplied
     "404":

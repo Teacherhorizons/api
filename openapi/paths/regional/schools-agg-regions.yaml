@@ -1,9 +1,8 @@
 get:
   operationId: getSchoolsAggRegions
   tags:
-    - regional-regions
-    - status-proposed
-  summary: Get an aggregation of schools into regions (proposed)
+    - regional
+  summary: Get an aggregation of schools into regions
   parameters:
     - in: query
       name: fields
