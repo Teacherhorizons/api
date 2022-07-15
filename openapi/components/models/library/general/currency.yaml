@@ -16,6 +16,8 @@ general-currency_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+
+# relationship attributes
 general-currency_creationUserId:
   type: integer
   example: 1
@@ -24,6 +26,8 @@ general-currency_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
+
+# relationships
 general-currency_creationUser:
   additionalProperties: false
   type: object
@@ -34,6 +38,7 @@ general-currency_creationUser:
       description: Relationship to user
   required:
     - id
+
 general-currency_latestUpdateUser:
   additionalProperties: false
   type: object

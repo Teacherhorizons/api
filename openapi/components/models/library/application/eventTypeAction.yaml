@@ -1,7 +1,9 @@
-#attributes
+# attributes
 application-eventTypeAction_label:
   type: string
   example: Email teacher
+
+# relationship attributes
 application-eventTypeAction_applicationEventTypeId:
   type: integer
   example: 1
@@ -18,6 +20,8 @@ application-eventTypeAction_autoEmailId:
   type: integer
   example: 1
   description: Relationship to general-autoEmail
+
+# relationships
 application-eventTypeAction_applicationEventType:
   type: object
   additionalProperties: false

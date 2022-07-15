@@ -1,84 +1,80 @@
-general-subjectGroup_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
+# general-subjectGroup_metaProperties_shared:
+#   properties:
+#     creationDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
+#     latestUpdateDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
 
-#filter properties
+# #filter properties
 
-# attributes
-general-subjectGroup_attributes:
-  allOf:
-    - $ref: "#/general-subjectGroup_properties_name"
-    - $ref: "#/general-subjectGroup_properties_creationDate"
-    - $ref: "#/general-subjectGroup_properties_latestUpdateDate"
+# # attributes
+# general-subjectGroup_attributes:
+#   allOf:
+#     - $ref: "#/general-subjectGroup_properties_name"
+#     - $ref: "#/general-subjectGroup_properties_creationDate"
+#     - $ref: "#/general-subjectGroup_properties_latestUpdateDate"
 
-# relationshipIds
-general-subjectGroup_relationshipIds:
-  allOf:
-    - $ref: "#/general-subjectGroup_properties_creationUserId"
-    - $ref: "#/general-subjectGroup_properties_latestUpdateUserId"
+# # relationshipIds
+# general-subjectGroup_relationshipIds:
+#   allOf:
+#     - $ref: "#/general-subjectGroup_properties_creationUserId"
+#     - $ref: "#/general-subjectGroup_properties_latestUpdateUserId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-general-subjectGroup_relationships:
-  allOf:
-    - $ref: "#/general-subjectGroup_properties_creationUser"
-    - $ref: "#/general-subjectGroup_properties_latestUpdateUser"
+# # relationships
+# general-subjectGroup_relationships:
+#   allOf:
+#     - $ref: "#/general-subjectGroup_properties_creationUser"
+#     - $ref: "#/general-subjectGroup_properties_latestUpdateUser"
 
-#properties
-general-subjectGroup_properties_id:
-  properties:
-    id:
-      $ref: "#/general-subjectGroup_id"
+# #properties
+# general-subjectGroup_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/general-subjectGroup_id"
 
-general-subjectGroup_properties_name:
-  properties:
-    name:
-      $ref: "#/general-subjectGroup_name"
+# general-subjectGroup_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/general-subjectGroup_name"
 
-general-subjectGroup_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/general-subjectGroup_creationDate"
+# general-subjectGroup_properties_creationDate:
+#   properties:
+#     creationDate:
+#       $ref: "#/general-subjectGroup_creationDate"
 
-general-subjectGroup_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/general-subjectGroup_latestUpdateDate"
+# general-subjectGroup_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/general-subjectGroup_latestUpdateDate"
 
-general-subjectGroup_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/general-subjectGroup_creationUserId"
+# general-subjectGroup_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/general-subjectGroup_creationUserId"
 
-general-subjectGroup_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/general-subjectGroup_latestUpdateUserId"
+# general-subjectGroup_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/general-subjectGroup_latestUpdateUserId"
 
 
-general-subjectGroup_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/general-subjectGroup_creationUser"
+# general-subjectGroup_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/general-subjectGroup_creationUser"
 
-general-subjectGroup_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/general-subjectGroup_latestUpdateUser"
+# general-subjectGroup_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/general-subjectGroup_latestUpdateUser"
 
 #attributes
-general-subjectGroup_id:
-  type: integer
-  example: 1
-
 general-subjectGroup_name:
   type: string
   example: Early Years
@@ -93,6 +89,7 @@ general-subjectGroup_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 general-subjectGroup_creationUserId:
   type: integer
   example: 1
@@ -103,21 +100,29 @@ general-subjectGroup_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
 general-subjectGroup_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 general-subjectGroup_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 

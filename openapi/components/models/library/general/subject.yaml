@@ -1,91 +1,4 @@
-# general-subject_metaProperties_shared:
-#   properties:
-#     creationDate:
-#       type: string
-#       format: date-time
-#       example: 2011-02-07T15:53:34Z
-#     latestUpdateDate:
-#       type: string
-#       format: date-time
-#       example: 2011-02-07T15:53:34Z
-
-# #filter properties
-
-# # attributes
-# general-subject_attributes:
-#   allOf:
-#     - $ref: "#/general-subject_properties_name"
-#     - $ref: "#/general-subject_properties_creationDate"
-#     - $ref: "#/general-subject_properties_latestUpdateDate"
-
-# # relationshipIds
-# general-subject_relationshipIds:
-#   allOf:
-#     - $ref: "#/general-subject_properties_creationUserId"
-#     - $ref: "#/general-subject_properties_latestUpdateUserId"
-#     - $ref: "#/general-subject_properties_subjectGroupId"
-
-# # attribute relationships
-
-# # relationships
-# general-subject_relationships:
-#   allOf:
-#     - $ref: "#/general-subject_properties_creationUser"
-#     - $ref: "#/general-subject_properties_latestUpdateUser"
-#     - $ref: "#/general-subject_properties_subjectGroup"
-
-# #properties
-# general-subject_properties_id:
-#   properties:
-#     id:
-#       $ref: "#/general-subject_id"
-
-# general-subject_properties_name:
-#   properties:
-#     name:
-#       $ref: "#/general-subject_name"
-
-# general-subject_properties_creationDate:
-#   properties:
-#     creationDate:
-#       $ref: "#/general-subject_creationDate"
-
-# general-subject_properties_latestUpdateDate:
-#   properties:
-#     latestUpdateDate:
-#       $ref: "#/general-subject_latestUpdateDate"
-
-# general-subject_properties_subjectGroupId:
-#   properties:
-#     subjectGroupId:
-#       $ref: "#/general-subject_subjectGroupId"
-
-# general-subject_properties_creationUserId:
-#   properties:
-#     creationUserId:
-#       $ref: "#/general-subject_creationUserId"
-
-# general-subject_properties_latestUpdateUserId:
-#   properties:
-#     latestUpdateUserId:
-#       $ref: "#/general-subject_latestUpdateUserId"
-
-# general-subject_properties_subjectGroup:
-#   properties:
-#     subjectGroup:
-#       $ref: "#/general-subject_subjectGroup"
-
-# general-subject_properties_creationUser:
-#   properties:
-#     creationUser:
-#       $ref: "#/general-subject_creationUser"
-
-# general-subject_properties_latestUpdateUser:
-#   properties:
-#     latestUpdateUser:
-#       $ref: "#/general-subject_latestUpdateUser"
-
-#attributes
+# attributes
 general-subject_name:
   type: string
   example: Secondary Subject Teacher
@@ -100,6 +13,7 @@ general-subject_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 general-subject_creationUserId:
   type: integer
   example: 1
@@ -115,6 +29,7 @@ general-subject_subjectGroupId:
   example: 1
   description: Relationship to Group
 
+#relationships
 general-subject_creationUser:
   type: object
   properties:

@@ -13,6 +13,7 @@ general-role_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 general-role_creationUserId:
   type: integer
   example: 1
@@ -28,6 +29,7 @@ general-role_roleTypeId:
   example: 1
   description: Relationship to Type
 
+#relationships
 general-role_creationUser:
   type: object
   properties:

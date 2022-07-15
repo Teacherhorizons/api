@@ -1,18 +1,27 @@
 SimpleModel_general-subjectGroup:
-  allOf:
-    # - $ref: "#/SimpleModel_general-subjectGroup"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_general-subjectGroup_id"
-        - $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_attributes"
-        - $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-subjectGroup_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_name"
+    creationDate:
+      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_latestUpdateDate"
+    # relationship attributes
+    creationUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    latestUpdateUser:
+      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
 
 # shared
 SimpleModel_general-subjectGroup_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+

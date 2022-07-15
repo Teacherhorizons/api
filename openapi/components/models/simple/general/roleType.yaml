@@ -13,12 +13,10 @@ SimpleModel_general-roleType:
 
 # shared
 SimpleModel_general-roleType_type:
-  properties:
-    type:
-      type: string
-      example: general-roleType
-      description: general-roleType
-      readOnly: true
+  type: string
+  example: general-roleType
+  description: Unique identifier of the object type
+  readOnly: true
 
 SimpleModel_general-roleType_id:
   type: integer
