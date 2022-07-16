@@ -1,18 +1,27 @@
 SimpleModel_meta-entityChange:
-  allOf:
-    # - $ref: "#/SimpleModel_meta-entityChange"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_meta-entityChange_id"
-        - $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_attributes"
-        - $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_meta-entityChange"
+    # simple attributes
+    date:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_date"
+    isProcessed:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_isProcessed"
+    # relationship attributes
+    entityTypeId:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_entityTypeId"
+    entityId:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_entityId"
+      # TODO RR: think about how to do this better (this attribute is an exception)
+    userId:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_userId"
 
 # shared
 SimpleModel_meta-entityChange_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

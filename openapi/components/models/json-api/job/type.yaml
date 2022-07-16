@@ -1,46 +1,50 @@
 JsonApiModel_job-type:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_job-type_type"
     id:
       $ref: "#/JsonApiModel_job-type_id"
     attributes:
-      $ref: "#/JsonApiModel_job-type_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+      # simple attributes
+        name:
+          $ref: "../../library/job/type.yaml#/job-type_name"
   required:
     - type
     - id
 
-JsonApiModel_job-type_attributes:
-  type: object
-  properties:
-  # simple attributes
-    name:
-      $ref: "../../library/job/type.yaml#/job-type_name"
-
 JsonApiModel_job-type_type:
   type: string
   example: job-type
-  description: job-type
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_job-type_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the job-type (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_job-type_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_job-type_id"
+  required:
+    - id
 
 JsonApiModel_job-type_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_job-type_type"

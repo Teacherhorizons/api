@@ -1,0 +1,20 @@
+SimpleModel_job-type:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_job-type_id"
+    # simple attributes
+    name:
+      $ref: "../../library/job/type.yaml#/job-type_name"
+  required:
+    - id
+    - name
+
+SimpleModel_job-type_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+
