@@ -1,9 +1,8 @@
 get:
   operationId: getTeacher_core_current
   tags:
-    - teachers
-    - status-current
-  summary: Get teacher record by core (current)
+    - teacher-not-jsonapi
+  summary: Get teacher record by core
   parameters:
     - in: path
       name: memberNumber
@@ -19,7 +18,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../components/schemas/current/teachers/teacher-member-number-core.yaml"
+            $ref: "../../components/schemas/current/teachers/teacher-member-number-core.yaml"
     "400":
       description: Invalid ID supplied
     "404":

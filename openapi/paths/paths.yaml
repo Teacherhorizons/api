@@ -3,11 +3,13 @@
 # current
 # $ref should be of the form: "./../paths/current/{category}/{path-words-in-kebab-form}.yaml"
 
+## jsonapi
+
 # admin-notes
 /v1/teacher/member-number/{memberNumber}/admin-notes:
   $ref: "./../paths/current/admin-notes/teacher-member-number-admin-notes.yaml"
 
-# applications
+# application
 /applications:
   $ref: "./../paths/application/applications.yaml"
 
@@ -54,7 +56,7 @@
 /v1/jobs/applications/search:
   $ref: "./../paths/current/job-applications/job-application-search.yaml"
 
-# jobs
+# job
 /v1/jobs/search/city-area/by-city/count:
   $ref: "./../paths/current/jobs/job-search-city-area-by-city-count.yaml"
 /v1/jobs/search/school-area/full/count:
@@ -78,9 +80,9 @@
 /v2/teacher/member-number/2123428/references:
   $ref: "./../paths/current/references/teacher-member-number-references.yaml"
 
-# regions
+# regional
 
-# schools
+# school
 /v1/school/id/{schoolId}/jobs:
   $ref: "./../paths/current/jobs/school-id-jobs.yaml"
 /v1/schools/search/city-area/by-city/count:
@@ -91,12 +93,10 @@
   $ref: "./../paths/current/schools/schools-search-country-area-by-country-count.yaml"
 /v1/schools/search/region-area/by-region/count:
   $ref: "./../paths/current/schools/schools-search-region-area-by-region-count.yaml"
-/v3/school/slug/{schoolSlug}/profile:
-  $ref: "./../paths/current/schools/school-slug-profile.yaml"
 /v3/schools/search/school-area/full:
   $ref: "./../paths/current/schools/schools-search-school-area-full.yaml"
 
-# teachers
+# teacher
 /v2/candidates/search/country-area/full:
   $ref: "./../paths/current/teachers/candidates-search-country-area-full.yaml"
 /v1/candidates/search/full/count:
@@ -105,8 +105,6 @@
   $ref: "./../paths/current/teachers/candidates-search-country-area-by-country-count.yaml"
 /v2/candidates/search/region-area/by-region/count:
   $ref: "./../paths/current/teachers/candidates-search-region-area-by-region-count.yaml"
-/v3/teacher/member-number/{memberNumber}/core:
-  $ref: "./../paths/current/teachers/teacher-member-number-core.yaml"
 /v2/teacher/member-number/{member-number}/related:
   $ref: "./../paths/current/teachers/teacher-member-number-related.yaml"
 /v1/candidates:
@@ -173,3 +171,13 @@
   $ref: "./../paths/test/apiTests.yaml"
 /test-apiTests/{apiTestId}:
   $ref: "./../paths/test/apiTest.yaml"
+
+## not-jsonapi
+
+# school
+/v3/school/slug/{schoolSlug}/profile:
+  $ref: "./../paths-not-jsonapi/school/school-slug-profile.yaml"
+
+# teacher
+/v3/teacher/member-number/{memberNumber}/core:
+  $ref: "./../paths-not-jsonapi/teacher/teacher-member-number-core.yaml"
