@@ -141,7 +141,7 @@ job_deadlineDate:
   example: 2011-02-07T15:53:32Z
 job_furtherInfo:
   type: string
-  example:
+  example: Foo bar
 job_creationDate:
   type: string
   format: date-time
@@ -159,23 +159,24 @@ job_advertExpiryDate:
   example: 2011-02-07T15:53:32Z"
 job_excludeFromJobSearch:
   type: integer
-  example:
+  example: 1
 
 # relationship attributes
 job_subjectId:
   type: integer
-  example:
+  example: 1
   description: Relationship to general-subject
 job_typeId:
   type: integer
-  example:
+  example: 1
+  description: Relationship to job-type
 job_roleId:
   type: integer
-  example:
+  example: 1
   description: Relationship to general-role
 job_schoolId:
   type: integer
-  example:
+  example: 1
   description: Relationship to school
 job_creationUserId:
   type: integer
@@ -191,7 +192,7 @@ job_thOwnerUserId:
   description: Relationship to Adviser
 job_statusId:
   type: integer
-  example:
+  example: 1
   description: Relationship to JobStatus
 
 # relationships

@@ -1,8 +1,5 @@
 # note: can't break down the structure here better than to have one file for each route
 
-# current
-# $ref should be of the form: "./../paths/current/{category}/{path-words-in-kebab-form}.yaml"
-
 ## jsonapi
 
 # admin-notes
@@ -147,25 +144,6 @@
 /countries/{countryId}:
   $ref: "./../paths/regional/country.yaml"
 
-# /job-applications:
-#   $ref: "./../paths/proposed/job-applications/job-applications.yaml"
-# /schools:
-#   $ref: "./../paths/proposed/schools/schools.yaml"
-# /schools/{schoolId}:
-#   $ref: "./../paths/proposed/schools/school.yaml"
-# /teachers:
-#   $ref: "./../paths/proposed/teachers/teachers.yaml"
-
-# non-th-examples
-# "/users/{username}":
-#   $ref: "./../paths/non-th-examples/users@{username}.yaml"
-/echo:
-  $ref: "./../paths/non-th-examples/echo.yaml"
-/pathItem:
-  $ref: "./../paths/non-th-examples/path-item.yaml"
-/pathItemWithExamples:
-  $ref: "./../paths/non-th-examples/path-item-with-examples.yaml"
-
 # test
 /test-apiTests:
   $ref: "./../paths/test/apiTests.yaml"
@@ -173,6 +151,7 @@
   $ref: "./../paths/test/apiTest.yaml"
 
 ## not-jsonapi
+# $ref should be of the form: "./../paths-not-jsonapi/{category}/{path-words-in-kebab-form}.yaml"
 
 # school
 /v3/school/slug/{schoolSlug}/profile:
