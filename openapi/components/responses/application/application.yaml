@@ -1,14 +1,14 @@
 ApplicationResponse:
   oneOf:
-    - $ref: "#/ApplicationResponse_admin"
+    # - $ref: "#/ApplicationResponse_admin"
     - $ref: "#/ApplicationResponse_school"
-    - $ref: "#/ApplicationResponse_teacher"
+    # - $ref: "#/ApplicationResponse_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/ApplicationResponse_admin"
+      # admin: "#/ApplicationResponse_admin"
       school: "#/ApplicationResponse_school"
-      teacher: "#/ApplicationResponse_teacher"
+      # teacher: "#/ApplicationResponse_teacher"
 
 # admin
 ApplicationResponse_admin:
@@ -384,12 +384,15 @@ ApplicationResponse_school:
             recommendationText:
               $ref: "../../../components/models/library/application/application.yaml#/application_recommendationText"
             # relationship attributes
+            thMatchType:
+              $ref: "../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute"
             status:
               $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
           required:
             - submissionToSchoolDate
             - latestUpdateDate
             - recommendationText
+            - thMatchType
             - status
         relationships:
           type: object
