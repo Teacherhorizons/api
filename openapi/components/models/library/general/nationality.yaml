@@ -1,20 +1,4 @@
 #attributes
-general-nationality_creationDate:
-  type: integer
-  format: date-time
-  example: 2011-02-07T15:53:34Z
-general-nationality_latestUpdateDate:
-  type: integer
-  format: date-time
-  example: 2011-02-07T15:53:34Z
-general-nationality_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to user
-general-nationality_latestUpdateUserId:
-  type: integer
-  example: 1
-  description: Relationship to user
 general-nationality_name:
   type: string
   example: American
@@ -24,6 +8,26 @@ general-nationality_parent:
 general-nationality_flag:
   type: string
   example: us
+general-nationality_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+general-nationality_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+# relationship attributes
+general-nationality_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+general-nationality_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+# relationships
 general-nationality_creationUser:
   type: object
   additionalProperties: false

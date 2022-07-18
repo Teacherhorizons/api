@@ -1,48 +1,57 @@
 JsonApiModel_job-status:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_job-status_type"
     id:
       $ref: "#/JsonApiModel_job-status_id"
     attributes:
-      $ref: "#/JsonApiModel_job-status_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/job/status.yaml#/job-status_name"
   required:
     - type
     - id
 
-JsonApiModel_job-status_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/job/status.yaml#/job-status_name"
-
 JsonApiModel_job-status_type:
   type: string
   example: job-status
-  description: job-status
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_job-status_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the job-status (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_job-status_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_job-status_id"
+  required:
+    - id
 
 JsonApiModel_job-status_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_job-status_type"
         id:
           $ref: "#/JsonApiModel_job-status_id"
+      required:
+        - type
+        - id
+  required:
+    - data

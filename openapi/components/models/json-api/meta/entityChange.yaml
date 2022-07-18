@@ -1,54 +1,50 @@
 JsonApiModel_meta-entityChange:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_meta-entityChange_type"
     id:
       $ref: "#/JsonApiModel_meta-entityChange_id"
     attributes:
-      $ref: "#/JsonApiModel_meta-entityChange_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_date"
+        isProcessed:
+          $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_isProcessed"
+        # relationship attributes
+        entityType:
+          $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
+        entity:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+          # TODO RR: think about how to do this better (this attribute is an exception)
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_meta-entityChange_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        entityType:
+          $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
+        entity:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_meta-entityChange_attributes:
-  type: object
-  properties:
-    # simple attributes
-    date:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_date"
-    isProcessed:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_properties_isProcessed"
-    # relationship attributes
-    entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
-    entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-      # TODO RR: think about how to do this better (this attribute is an exception)
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_meta-entityChange_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
-    entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_meta-entityChange_type:
   type: string
   example: meta-entityChange
-  description: meta-entityChange
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_meta-entityChange_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the meta-entityChange (string)
+  description: Unique identifier of the entity (string)

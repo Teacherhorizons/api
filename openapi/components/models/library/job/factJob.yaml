@@ -1,150 +1,4 @@
 # attributes
-job-factJob_attributes:
-  allOf:
-    - $ref: "#/job-factJob_properties_startDate"
-    - $ref: "#/job-factJob_properties_deadlineDate"
-    - $ref: "#/job-factJob_properties_furtherInfo"
-    - $ref: "#/job-factJob_properties_creationDate"
-    - $ref: "#/job-factJob_properties_latestUpdateDate"
-    - $ref: "#/job-factJob_properties_title"
-    - $ref: "#/job-factJob_properties_excludeFromjob-factJobSearch"
-
-# relationshipIds
-job-factJob_relationshipIds:
-  allOf:
-    - $ref: "#/job-factJob_properties_subjectId"
-    - $ref: "#/job-factJob_properties_typeId"
-    - $ref: "#/job-factJob_properties_roleId"
-    - $ref: "#/job-factJob_properties_schoolId"
-    - $ref: "#/job-factJob_properties_creationUserId"
-    - $ref: "#/job-factJob_properties_latestUpdateUserId"
-    - $ref: "#/job-factJob_properties_thOwnerUserId"
-    - $ref: "#/job-factJob_properties_statusId"
-
-# attribute relationships
-
-# relationships
-job-factJob_relationships:
-  allOf:
-    - $ref: "#/job-factJob_properties_subject"
-    - $ref: "#/job-factJob_properties_type"
-    - $ref: "#/job-factJob_properties_role"
-    - $ref: "#/job-factJob_properties_school"
-    - $ref: "#/job-factJob_properties_creationUser"
-    - $ref: "#/job-factJob_properties_latestUpdateUser"
-    - $ref: "#/job-factJob_properties_thOwnerUser"
-    - $ref: "#/job-factJob_properties_status"
-
-#properties
-job-factJob_properties_id:
-  properties:
-    id:
-      $ref: "#/job-factJob_id"
-job-factJob_properties_subjectId:
-  properties:
-    subjectId:
-      $ref: "#/job-factJob_subjectId"
-job-factJob_properties_subject:
-  properties:
-    subject:
-      $ref: "#/job-factJob_subject"
-job-factJob_properties_startDate:
-  properties:
-    startDate:
-      $ref: "#/job-factJob_startDate"
-job-factJob_properties_deadlineDate:
-  properties:
-    deadlineDate:
-      $ref: "#/job-factJob_deadlineDate"
-job-factJob_properties_furtherInfo:
-  properties:
-    furtherInfo:
-      $ref: "#/job-factJob_furtherInfo"
-job-factJob_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/job-factJob_creationDate"
-job-factJob_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/job-factJob_latestUpdateDate"
-job-factJob_properties_title:
-  properties:
-    title:
-      $ref: "#/job-factJob_title"
-job-factJob_properties_typeId:
-  properties:
-    typeId:
-      $ref: "#/job-factJob_typeId"
-job-factJob_properties_advertExpiryDate:
-  properties:
-    advertExpiryDate:
-      $ref: "#/job-factJob_advertExpiryDate"
-job-factJob_properties_excludeFromjob-factJobSearch:
-  properties:
-    excludeFromjob-factJobSearch:
-      $ref: "#/job-factJob_excludeFromjob-factJobSearch"
-job-factJob_properties_roleId:
-  properties:
-    roleId:
-      $ref: "#/job-factJob_roleId"
-job-factJob_properties_schoolId:
-  properties:
-    schoolId:
-      $ref: "#/job-factJob_schoolId"
-job-factJob_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/job-factJob_creationUserId"
-job-factJob_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/job-factJob_latestUpdateUserId"
-job-factJob_properties_thOwnerUserId:
-  properties:
-    thOwnerUserId:
-      $ref: "#/job-factJob_thOwnerUserId"
-job-factJob_properties_statusId:
-  properties:
-    statusId:
-      $ref: "#/job-factJob_statusId"
-job-factJob_properties_type:
-  properties:
-    type:
-      $ref: "#/job-factJob_type"
-job-factJob_properties_role:
-  properties:
-    role:
-      $ref: "#/job-factJob_role"
-job-factJob_properties_school:
-  properties:
-    school:
-      $ref: "#/job-factJob_school"
-job-factJob_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/job-factJob_creationUser"
-job-factJob_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/job-factJob_latestUpdateUser"
-job-factJob_properties_thOwnerUser:
-  properties:
-    thOwnerUser:
-      $ref: "#/job-factJob_thOwnerUser"
-job-factJob_properties_status:
-  properties:
-    status:
-      $ref: "#/job-factJob_status"
-
-#attributes
-job-factJob_id:
-  type: integer
-  example:
-job-factJob_subjectId:
-  type: integer
-  example:
-  description: Relationship to general-subject
 job-factJob_startDate:
   type: string
   format: date
@@ -167,9 +21,6 @@ job-factJob_latestUpdateDate:
 job-factJob_title:
   type: string
   example:
-job-factJob_typeId:
-  type: integer
-  example:
 job-factJob_advertExpiryDate:
   type: string
   format: date-time
@@ -177,6 +28,15 @@ job-factJob_advertExpiryDate:
 job-factJob_excludeFromjob-factJobSearch:
   type: integer
   example:
+
+# relationship attributes
+job-factJob_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to general-subject
+job-factJob_typeId:
+  type: integer
+  example: 1
 job-factJob_roleId:
   type: integer
   example:
@@ -202,60 +62,89 @@ job-factJob_statusId:
   example:
   description: Relationship to job-factJobStatus
 
+# relationships
 job-factJob_subject:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to general-subject
+  required: 
+    - id
+  
 job-factJob_type:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description:
+  required: 
+    - id
 
 job-factJob_role:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to general-role
+      description: Relationship to general-role
+  required: 
+    - id
 job-factJob_school:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to school
+  required: 
+    - id
 job-factJob_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
 job-factJob_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 job-factJob_thOwnerUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Adviser
+  required: 
+    - id
+  
 job-factJob_status:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to job-factJobStatus
+  required: 
+    - id
+  

@@ -1,150 +1,136 @@
-# attributes
-job_attributes:
-  allOf:
-    - $ref: "#/job_properties_startDate"
-    - $ref: "#/job_properties_deadlineDate"
-    - $ref: "#/job_properties_furtherInfo"
-    - $ref: "#/job_properties_creationDate"
-    - $ref: "#/job_properties_latestUpdateDate"
-    - $ref: "#/job_properties_title"
-    - $ref: "#/job_properties_excludeFromJobSearch"
+# # attributes
+# job_attributes:
+#   allOf:
+#     - $ref: "#/job_properties_startDate"
+#     - $ref: "#/job_properties_deadlineDate"
+#     - $ref: "#/job_properties_furtherInfo"
+#     - $ref: "#/job_properties_creationDate"
+#     - $ref: "#/job_properties_latestUpdateDate"
+#     - $ref: "#/job_properties_title"
+#     - $ref: "#/job_properties_excludeFromJobSearch"
 
-# relationshipIds
-job_relationshipIds:
-  allOf:
-    - $ref: "#/job_properties_subjectId"
-    - $ref: "#/job_properties_typeId"
-    - $ref: "#/job_properties_roleId"
-    - $ref: "#/job_properties_schoolId"
-    - $ref: "#/job_properties_creationUserId"
-    - $ref: "#/job_properties_latestUpdateUserId"
-    - $ref: "#/job_properties_thOwnerUserId"
-    - $ref: "#/job_properties_statusId"
+# # relationshipIds
+# job_relationshipIds:
+#   allOf:
+#     - $ref: "#/job_properties_subjectId"
+#     - $ref: "#/job_properties_typeId"
+#     - $ref: "#/job_properties_roleId"
+#     - $ref: "#/job_properties_schoolId"
+#     - $ref: "#/job_properties_creationUserId"
+#     - $ref: "#/job_properties_latestUpdateUserId"
+#     - $ref: "#/job_properties_thOwnerUserId"
+#     - $ref: "#/job_properties_statusId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-job_relationships:
-  allOf:
-    - $ref: "#/job_properties_subject"
-    - $ref: "#/job_properties_type"
-    - $ref: "#/job_properties_role"
-    - $ref: "#/job_properties_school"
-    - $ref: "#/job_properties_creationUser"
-    - $ref: "#/job_properties_latestUpdateUser"
-    - $ref: "#/job_properties_thOwnerUser"
-    - $ref: "#/job_properties_status"
+# # relationships
+# job_relationships:
+#   allOf:
+#     - $ref: "#/job_properties_subject"
+#     - $ref: "#/job_properties_type"
+#     - $ref: "#/job_properties_role"
+#     - $ref: "#/job_properties_school"
+#     - $ref: "#/job_properties_creationUser"
+#     - $ref: "#/job_properties_latestUpdateUser"
+#     - $ref: "#/job_properties_thOwnerUser"
+#     - $ref: "#/job_properties_status"
 
 #properties
-job_properties_id:
-  properties:
-    id:
-      $ref: "#/job_id"
-job_properties_subjectId:
-  properties:
-    subjectId:
-      $ref: "#/job_subjectId"
-job_properties_subject:
-  properties:
-    subject:
-      $ref: "#/job_subject"
-job_properties_startDate:
-  properties:
-    startDate:
-      $ref: "#/job_startDate"
-job_properties_deadlineDate:
-  properties:
-    deadlineDate:
-      $ref: "#/job_deadlineDate"
-job_properties_furtherInfo:
-  properties:
-    furtherInfo:
-      $ref: "#/job_furtherInfo"
-job_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/job_creationDate"
-job_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/job_latestUpdateDate"
-job_properties_title:
-  properties:
-    title:
-      $ref: "#/job_title"
-job_properties_typeId:
-  properties:
-    typeId:
-      $ref: "#/job_typeId"
-job_properties_advertExpiryDate:
-  properties:
-    advertExpiryDate:
-      $ref: "#/job_advertExpiryDate"
-job_properties_excludeFromJobSearch:
-  properties:
-    excludeFromJobSearch:
-      $ref: "#/job_excludeFromJobSearch"
-job_properties_roleId:
-  properties:
-    roleId:
-      $ref: "#/job_roleId"
-job_properties_schoolId:
-  properties:
-    schoolId:
-      $ref: "#/job_schoolId"
-job_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/job_creationUserId"
-job_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/job_latestUpdateUserId"
-job_properties_thOwnerUserId:
-  properties:
-    thOwnerUserId:
-      $ref: "#/job_thOwnerUserId"
-job_properties_statusId:
-  properties:
-    statusId:
-      $ref: "#/job_statusId"
-job_properties_type:
-  properties:
-    type:
-      $ref: "#/job_type"
-job_properties_role:
-  properties:
-    role:
-      $ref: "#/job_role"
-job_properties_school:
-  properties:
-    school:
-      $ref: "#/job_school"
-job_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/job_creationUser"
-job_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/job_latestUpdateUser"
-job_properties_thOwnerUser:
-  properties:
-    thOwnerUser:
-      $ref: "#/job_thOwnerUser"
-job_properties_status:
-  properties:
-    status:
-      $ref: "#/job_status"
 
-#attributes
-job_id:
-  type: integer
-  example:
-job_subjectId:
-  type: integer
-  example:
-  description: Relationship to general-subject
+# job_properties_subject:
+#   properties:
+#     subject:
+#       $ref: "#/job_subject"
+# job_properties_startDate:
+#   properties:
+#     startDate:
+#       $ref: "#/job_startDate"
+# job_properties_deadlineDate:
+#   properties:
+#     deadlineDate:
+#       $ref: "#/job_deadlineDate"
+# job_properties_furtherInfo:
+#   properties:
+#     furtherInfo:
+#       $ref: "#/job_furtherInfo"
+# job_properties_creationDate:
+#   properties:
+#     creationDate:
+#       $ref: "#/job_creationDate"
+# job_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/job_latestUpdateDate"
+# job_properties_title:
+#   properties:
+#     title:
+#       $ref: "#/job_title"
+# job_properties_typeId:
+#   properties:
+#     typeId:
+#       $ref: "#/job_typeId"
+# job_properties_advertExpiryDate:
+#   properties:
+#     advertExpiryDate:
+#       $ref: "#/job_advertExpiryDate"
+# job_properties_excludeFromJobSearch:
+#   properties:
+#     excludeFromJobSearch:
+#       $ref: "#/job_excludeFromJobSearch"
+# job_properties_roleId:
+#   properties:
+#     roleId:
+#       $ref: "#/job_roleId"
+# job_properties_schoolId:
+#   properties:
+#     schoolId:
+#       $ref: "#/job_schoolId"
+# job_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/job_creationUserId"
+# job_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/job_latestUpdateUserId"
+# job_properties_thOwnerUserId:
+#   properties:
+#     thOwnerUserId:
+#       $ref: "#/job_thOwnerUserId"
+# job_properties_statusId:
+#   properties:
+#     statusId:
+#       $ref: "#/job_statusId"
+# job_properties_type:
+#   properties:
+#     type:
+#       $ref: "#/job_type"
+# job_properties_role:
+#   properties:
+#     role:
+#       $ref: "#/job_role"
+# job_properties_school:
+#   properties:
+#     school:
+#       $ref: "#/job_school"
+# job_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/job_creationUser"
+# job_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/job_latestUpdateUser"
+# job_properties_thOwnerUser:
+#   properties:
+#     thOwnerUser:
+#       $ref: "#/job_thOwnerUser"
+# job_properties_status:
+#   properties:
+#     status:
+#       $ref: "#/job_status"
+
+# attributes
 job_startDate:
   type: string
   format: date
@@ -167,14 +153,20 @@ job_latestUpdateDate:
 job_title:
   type: string
   example: foo
-job_typeId:
-  type: integer
-  example:
 job_advertExpiryDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z"
 job_excludeFromJobSearch:
+  type: integer
+  example:
+
+# relationship attributes
+job_subjectId:
+  type: integer
+  example:
+  description: Relationship to general-subject
+job_typeId:
   type: integer
   example:
 job_roleId:
@@ -202,6 +194,7 @@ job_statusId:
   example:
   description: Relationship to JobStatus
 
+# relationships
 job_subject:
   type: object
   properties:
@@ -216,7 +209,6 @@ job_type:
       type: string
       example: "1"
       description: ..
-
 job_role:
   type: object
   properties:
