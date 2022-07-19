@@ -1,31 +1,30 @@
 JsonApiModel_general-worldLanguage:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_general-worldLanguage_type"
     id:
       $ref: "#/JsonApiModel_general-worldLanguage_id"
     attributes:
-      $ref: "#/JsonApiModel_general-worldLanguage_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_name"
   required:
     - type
     - id
 
-JsonApiModel_general-worldLanguage_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_name"
-
 JsonApiModel_general-worldLanguage_type:
   type: string
   example: general-worldLanguage
-  description: general-worldLanguage
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_general-worldLanguage_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the general-worldLanguage (string)
+  description: Unique identifier of the entity (string)

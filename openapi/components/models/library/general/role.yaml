@@ -32,24 +32,34 @@ general-role_roleTypeId:
 #relationships
 general-role_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+  - id
 
 general-role_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 general-role_roleType:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Type
+  required: 
+    - id
+  

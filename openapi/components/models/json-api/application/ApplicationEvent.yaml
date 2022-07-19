@@ -70,6 +70,10 @@ JsonApiModel_application-applicationEvent_school:
       type: string
       enum:
         - school
+    type:
+      $ref: "#/JsonApiModel_application-applicationEvent_type"
+    id:
+      $ref: "#/JsonApiModel_application-applicationEvent_id"      
     attributes:
       type: object
       additionalProperties: false
@@ -93,6 +97,10 @@ JsonApiModel_application-applicationEvent_teacher:
       type: string
       enum:
         - teacher
+    type:
+      $ref: "#/JsonApiModel_application-applicationEvent_type"
+    id:
+      $ref: "#/JsonApiModel_application-applicationEvent_id"     
     attributes:
       type: object
       additionalProperties: false

@@ -9,7 +9,7 @@ job-factJob_deadlineDate:
   example: 2011-02-07T15:53:32Z
 job-factJob_furtherInfo:
   type: string
-  example:
+  example: ""
 job-factJob_creationDate:
   type: string
   format: date-time
@@ -20,14 +20,14 @@ job-factJob_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 job-factJob_title:
   type: string
-  example:
+  example: ""
 job-factJob_advertExpiryDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z"
 job-factJob_excludeFromjob-factJobSearch:
   type: integer
-  example:
+  example: ""
 
 # relationship attributes
 job-factJob_subjectId:
@@ -37,13 +37,14 @@ job-factJob_subjectId:
 job-factJob_typeId:
   type: integer
   example: 1
+  description: Relationship to general-type
 job-factJob_roleId:
   type: integer
-  example:
+  example: 1
   description: Relationship to general-role
 job-factJob_schoolId:
   type: integer
-  example:
+  example: 1
   description: Relationship to school
 job-factJob_creationUserId:
   type: integer
@@ -59,8 +60,8 @@ job-factJob_thOwnerUserId:
   description: Relationship to Adviser
 job-factJob_statusId:
   type: integer
-  example:
-  description: Relationship to job-factJobStatus
+  example: 1
+  description: Relationship to job-status
 
 # relationships
 job-factJob_subject:
@@ -81,7 +82,7 @@ job-factJob_type:
     id:
       type: string
       example: "1"
-      description:
+      description: Relationship to job-type
   required: 
     - id
 
@@ -144,7 +145,7 @@ job-factJob_status:
     id:
       type: string
       example: "1"
-      description: Relationship to job-factJobStatus
+      description: Relationship to job-status
   required: 
     - id
   

@@ -27,17 +27,23 @@ general-religion_latestUpdateUserId:
 #relationships
 general-religion_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+  - id
 
 general-religion_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+  - id
 

@@ -1,11 +1,4 @@
 SimpleModel_job-status:
-  # allOf:
-  #   # - $ref: "#/SimpleModel_job-status"
-  #   - type: object
-  #     allOf:
-  #       - $ref: "#/SimpleModel_job-status_type"
-  #       - $ref: "#/SimpleModel_job-status_id"
-  #       - $ref: "../../library/job/status.yaml#/job-status_properties_name"
   type: object
   additionalProperties: false
   properties:

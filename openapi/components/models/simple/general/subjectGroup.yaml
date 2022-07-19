@@ -16,6 +16,9 @@ SimpleModel_general-subjectGroup:
       $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_latestUpdateUserId"
+  required:
+    - id
+    - name
 
 # shared
 SimpleModel_general-subjectGroup_id:

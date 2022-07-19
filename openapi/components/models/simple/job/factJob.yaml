@@ -36,6 +36,9 @@ SimpleModel_job-factJob:
       $ref: "../../library/job/job.yaml#/job_thOwnerUserId"
     statusId:
       $ref: "../../library/job/job.yaml#/job_statusId"
+  required:
+    - id
+    - name
 
 # shared
 SimpleModel_job-factJob_id:

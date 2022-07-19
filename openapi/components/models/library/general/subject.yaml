@@ -32,26 +32,36 @@ general-subject_subjectGroupId:
 #relationships
 general-subject_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 general-subject_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 general-subject_subjectGroup:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Group
+  required: 
+    - id
+  
 
 
