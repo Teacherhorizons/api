@@ -20,7 +20,7 @@ export function setup(context = {}) {
       shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
-      console.log('setup', error);
+      console.log('setup - beforeAll:', error);
     }
   });
 
