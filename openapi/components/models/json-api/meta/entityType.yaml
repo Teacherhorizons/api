@@ -1,48 +1,57 @@
 JsonApiModel_meta-entityType:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_meta-entityType_type"
     id:
       $ref: "#/JsonApiModel_meta-entityType_id"
     attributes:
-      $ref: "#/JsonApiModel_meta-entityType_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
   required:
     - type
     - id
 
-JsonApiModel_meta-entityType_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
-
 JsonApiModel_meta-entityType_type:
   type: string
   example: meta-entityType
-  description: meta-entityType
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_meta-entityType_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the meta-entityType (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_meta-entityType_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_meta-entityType_id"
+  required:
+    - id
 
 JsonApiModel_meta-entityType_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_meta-entityType_type"
         id:
           $ref: "#/JsonApiModel_meta-entityType_id"
+      required:
+        - type
+        - id
+  required:
+    - data

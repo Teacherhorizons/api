@@ -1,103 +1,4 @@
 # attributes
-general-currency_attributes:
-  allOf:
-    - $ref: "#/regional-city_name"
-    - $ref: "#/regional-city_alias"
-    - $ref: "#/regional-city_keyAttractions"
-    - $ref: "#/regional-city_creationDate"
-    - $ref: "#/regional-city_latestUpdateDate"
-    - $ref: "#/regional-city_slug"
-    - $ref: "#/regional-city_locationLatLong.lat"
-    - $ref: "#/regional-city_locationLatLong.long"
-
-# relationshipIds
-general-currency_relationshipIds:
-  allOf:
-    - $ref: "#/regional-city_properties_creationUserId"
-    - $ref: "#/regional-city_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-general-currency_relationships:
-  allOf:
-    - $ref: "#/regional-city_properties_creationUser"
-    - $ref: "#/regional-city_properties_latestUpdateUser"
-
-#properties:
-regional-city_properties_id:
-  properties:
-    id:
-      $ref: "#/regional-city_id"
-regional-city_properties_name:
-  properties:
-    name:
-      $ref: "#/regional-city_name"
-regional-city_properties_alias:
-  properties:
-    alias:
-      $ref: "#/regional-city_alias"
-regional-city_properties_keyAttractions:
-  properties:
-    keyAttractions:
-      $ref: "#/regional-city_keyAttractions"
-regional-city_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/regional-city_creationDate"
-regional-city_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/regional-city_latestUpdateDate"
-regional-city_properties_slug:
-  properties:
-    slug:
-      $ref: "#/regional-city_slug"
-regional-city_properties_locationLatLong.lat:
-  properties:
-    locationLatLong.lat:
-      $ref: "#/regional-city_locationLatLong.lat"
-regional-city_properties_locationLatLong.long:
-  properties:
-    locationLatLong.long:
-      $ref: "#/regional-city_locationLatLong.long"
-regional-city_properties_countryId:
-  properties:
-    countryId:
-      $ref: "#/regional-city_countryId"
-regional-city_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/regional-city_creationUserId"
-regional-city_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/regional-city_latestUpdateUserId"
-regional-city_properties_languageId:
-  properties:
-    languageId:
-      $ref: "#/regional-city_languageId"
-regional-city_properties_country:
-  properties:
-    country:
-      $ref: "#/regional-city_country"
-regional-city_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/regional-city_creationUser"
-regional-city_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/regional-city_latestUpdateUser"
-regional-city_properties_language:
-  properties:
-    language:
-      $ref: "#/regional-city_language"
-#attributes
-regional-city_id:
-  type: integer
-  example: 1
-  description: Unique identifier of the entity
 regional-city_name:
   type: string
   example: Luanda
@@ -126,9 +27,11 @@ regional-city_locationLatLong.long:
   type: number
   example: 13.2344444
   description: Longitude
+
+# Relationship attributes
 regional-city_countryId:
   type: integer
-  example: 2
+  example: 1
   description: Relationship to Country
 regional-city_creationUserId:
   type: integer
@@ -140,33 +43,51 @@ regional-city_latestUpdateUserId:
   description: Relationship to user
 regional-city_languageId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to Language
+
+# Relationships
 regional-city_country:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Country
+      description: Relationship to Country
+  required: 
+    - id
+  
 regional-city_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required: 
+    - id
+  
 regional-city_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required: 
+    - id
+  
 regional-city_language:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Language
+      description: Relationship to Language
+  required: 
+    - id
+  

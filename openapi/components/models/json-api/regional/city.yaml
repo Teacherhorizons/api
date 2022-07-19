@@ -64,7 +64,6 @@ JsonApiModel_regional-city_admin:
         - latestUpdateUser
     relationships:
       type: object
-      description: Related Attributes
       additionalProperties: false
       properties:
         creationUser:
@@ -170,14 +169,14 @@ JsonApiModel_regional-city_teacher:
 JsonApiModel_regional-city_type:
   type: string
   example: regional-city
-  description: regional-city
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_regional-city_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the regional-city (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_regional-city_relationship_attribute:
   type: object
@@ -185,6 +184,8 @@ JsonApiModel_regional-city_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-city_id"
+  required:
+    - id
 
 JsonApiModel_regional-city_relationship:
   type: object
@@ -198,3 +199,8 @@ JsonApiModel_regional-city_relationship:
           $ref: "#/JsonApiModel_regional-city_type"
         id:
           $ref: "#/JsonApiModel_regional-city_id"
+      required:
+      - type
+      - id
+  required:
+    - data

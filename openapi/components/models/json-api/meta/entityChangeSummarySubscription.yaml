@@ -1,51 +1,47 @@
 JsonApiModel_meta-entityChangeSummarySubscription:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_type"
     id:
       $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_id"
     attributes:
-      $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        notes:
+          $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes"
+        # relationship attributes
+        entityType:
+          $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
+        entity:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_meta-entityChangeSummarySubscription_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        entityType:
+          $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
+        entity:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_meta-entityChangeSummarySubscription_attributes:
-  type: object
-  properties:
-    # simple attributes
-    notes:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes"
-    # relationship attributes
-    entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
-    entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_meta-entityChangeSummarySubscription_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    entityType:
-      $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
-    entity:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_meta-entityChangeSummarySubscription_type:
   type: string
   example: meta-entityChangeSummarySubscription
-  description: meta-entityChangeSummarySubscription
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_meta-entityChangeSummarySubscription_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the meta-entityChangeSummarySubscription (string)
+  description: Unique identifier of the entity (string)

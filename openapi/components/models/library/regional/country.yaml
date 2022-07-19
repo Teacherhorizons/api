@@ -1,113 +1,4 @@
 # attributes
-general-currency_attributes:
-  allOf:
-    - $ref: "#/regional-country_name"
-    - $ref: "#/regional-country_alias"
-    - $ref: "#/regional-country_isoCode"
-    - $ref: "#/regional-country_phoneCode"
-    - $ref: "#/regional-country_nationalAverageIncome"
-    - $ref: "#/regional-country_creationDate"
-    - $ref: "#/regional-country_latestUpdateDate"
-    - $ref: "#/regional-country_slug"
-    - $ref: "#/regional-country_locationLatLong.lat"
-    - $ref: "#/regional-country_locationLatLong.long"
-
-# relationshipIds
-general-currency_relationshipIds:
-  allOf:
-    - $ref: "#/regional-country_properties_creationUserId"
-    - $ref: "#/regional-country_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-general-currency_relationships:
-  allOf:
-    - $ref: "#/regional-country_properties_creationUser"
-    - $ref: "#/regional-country_properties_latestUpdateUser"
-
-#properties:
-regional-country_properties_id:
-  properties:
-    id:
-      $ref: "#/regional-country_id"
-regional-country_properties_name:
-  properties:
-    name:
-      $ref: "#/regional-country_name"
-regional-country_properties_alias:
-  properties:
-    alias:
-      $ref: "#/regional-country_alias"
-regional-country_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/regional-country_creationDate"
-regional-country_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/regional-country_latestUpdateDate"
-regional-country_properties_isoCode:
-  properties:
-    isoCode:
-      $ref: "#/regional-country_isoCode"
-regional-country_properties_phoneCode:
-  properties:
-    phoneCode:
-      $ref: "#/regional-country_phoneCode"
-regional-country_properties_nationalAverageIncome:
-  properties:
-    nationalAverageIncome:
-      $ref: "#/regional-country_nationalAverageIncome"
-regional-country_properties_slug:
-  properties:
-    slug:
-      $ref: "#/regional-country_slug"
-regional-country_properties_locationLatLong.lat:
-  properties:
-    locationLatLong.lat:
-      $ref: "#/regional-country_locationLatLong.lat"
-regional-country_properties_locationLatLong.long:
-  properties:
-    locationLatLong.long:
-      $ref: "#/regional-country_locationLatLong.long"
-regional-country_properties_countryId:
-  properties:
-    countryId:
-      $ref: "#/regional-country_countryId"
-regional-country_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/regional-country_creationUserId"
-regional-country_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/regional-country_latestUpdateUserId"
-regional-country_properties_languageId:
-  properties:
-    languageId:
-      $ref: "#/regional-country_languageId"
-regional-country_properties_country:
-  properties:
-    country:
-      $ref: "#/regional-country_country"
-regional-country_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/regional-country_creationUser"
-regional-country_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/regional-country_latestUpdateUser"
-regional-country_properties_language:
-  properties:
-    language:
-      $ref: "#/regional-country_language"
-#attributes
-regional-country_id:
-  type: integer
-  example: 1
-  description: Unique identifier of the entity
 regional-country_name:
   type: string
   example: Luanda
@@ -135,7 +26,7 @@ regional-country_locationLatLong.long:
   description: Longitude
 regional-country_countryId:
   type: integer
-  example: 2
+  example: 1
   description: Relationship to Country
 regional-country_creationUserId:
   type: integer
@@ -156,33 +47,49 @@ regional-country_nationalAverageIncome:
   example: 4032.6
 regional-country_languageId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to Language
 regional-country_country:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Country
+      description: Relationship to Country
+  required: 
+    - id
+  
 regional-country_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required: 
+    - id
+  
 regional-country_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required: 
+    - id
+  
 regional-country_language:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Language
+      description: Relationship to Language
+  required: 
+    - id
+  
