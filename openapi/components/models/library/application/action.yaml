@@ -1,64 +1,4 @@
 # attributes
-application-action_attributes:
-  allOf:
-    - $ref: "#/application-action_properties_detail"
-    - $ref: "#/application-action_properties_politeEmailMessage"
-
-# relationshipIds
-application-action_relationshipIds:
-  allOf:
-    - $ref: "#/application-action_properties_endStateId"
-    - $ref: "#/application-action_properties_emailId"
-
-# attribute relationships
-
-# relationships
-application-action_relationships:
-  allOf:
-    - $ref: "#/application-action_properties_endState"
-    - $ref: "#/application-action_properties_email"
-
-#properties
-application-action_properties_id:
-  properties:
-    id:
-      $ref: "#/application-action_id"
-
-application-action_properties_detail:
-  properties:
-    detail:
-      $ref: "#/application-action_detail"
-
-application-action_properties_politeEmailMessage:
-  properties:
-    politeEmailMessage:
-      $ref: "#/application-action_politeEmailMessage"
-
-application-action_properties_endStateId:
-  properties:
-    endStateId:
-      $ref: "#/application-action_endStateId"
-
-application-action_properties_emailId:
-  properties:
-    emailId:
-      $ref: "#/application-action_emailId"
-
-application-action_properties_endState:
-  properties:
-    endState:
-      $ref: "#/application-action_endState"
-
-application-action_properties_email:
-  properties:
-    email:
-      $ref: "#/application-action_email"
-
-#attributes
-application-action_id:
-  type: integer
-  example: 1
-
 application-action_detail:
   type: string
   example: already interviewed
@@ -67,6 +7,7 @@ application-action_politeEmailMessage:
   type: string
   example: foo bar
 
+# relationship attributes
 application-action_endStateId:
   type: integer
   example: 1
@@ -77,18 +18,26 @@ application-action_emailId:
   example: 1
   description: Relationship to Email
 
+# relationships
 application-action_endState:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to State
-
+  required: 
+    - id
+  
 application-action_email:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Email
+  required: 
+    - id
+  

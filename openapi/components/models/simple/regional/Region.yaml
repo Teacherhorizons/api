@@ -1,69 +1,117 @@
-SimpleModel_regional-region:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+# yaml-language-server: $schema=../../../../../meta/SimpleModel-MultipleSchemas.json
+
+SimpleModel_regional-Region:
+  oneOf:
+    - $ref: "#/SimpleModel_regional-Region_admin"
+    - $ref: "#/SimpleModel_regional-Region_school"
+    - $ref: "#/SimpleModel_regional-Region_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-region_all"
-      admin: "#/SimpleModel_regional-region_admin"
-      adminOnly: "#/SimpleModel_regional-region_adminOnly"
-      school: "#/SimpleModel_regional-region_school"
-      teacher: "#/SimpleModel_regional-region_teacher"
+      all: "#/SimpleModel_regional-Region_admin"
+      admin: "#/SimpleModel_regional-Region_admin"
+      school: "#/SimpleModel_regional-Region_school"
+      teacher: "#/SimpleModel_regional-Region_teacher"
 
-SimpleModel_regional-region_all:
-  allOf:
-    - $ref: "#/SimpleModel_regional-region"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_all"
-        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
-
-SimpleModel_regional-region_admin:
-  allOf:
-    - $ref: "#/SimpleModel_regional-region"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
-
-SimpleModel_regional-region_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_regional-region"
-    - type: object
-      allOf:
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_adminOnly"
-        - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_adminOnly"
-
-SimpleModel_regional-region_school:
-  allOf:
-    - $ref: "#/SimpleModel_regional-region"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
-        # - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_shared"
-
-SimpleModel_regional-region_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_regional-region"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_regional-region_id"
-        - $ref: "../../library/regional/region.yaml#/regional-region_standardProperties_shared"
-        # - $ref: "../../library/regional/region.yaml#/regional-region_relationshipProperties_shared"
-
-# shared
-SimpleModel_regional-region_id:
+SimpleModel_regional-Region_admin:
+  type: object
+  additionalProperties: false
   properties:
+    schema:
+      type: string
+      enum:
+        - admin
     id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the region (integer)
+      $ref: "#/SimpleModel_regional-Region_id"
+    # simple Attributes
+    name:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    alias:
+      $ref: "../../library/regional/region.yaml#/regional-region_alias"
+    creationDate:
+      $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
+    nationalAverageIncome:
+      $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
+    locationLatLong.lat:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
+  # relationship attributes
+    creationUserId:
+      $ref: "../../library/regional/region.yaml#/regional-region_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateUserId"
+  # required:
+  #   - name
+  #   - alias
+  #   - creationDate
+  #   - latestUpdateDate
+  #   - slug
+  #   - locationLatLong.lat
+  #   - locationLatLong.long
+  #   - creationUser
+  #   - latestUpdateUser
+
+SimpleModel_regional-Region_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_regional-Region_id"
+    # simple Attributes
+    name:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    alias:
+      $ref: "../../library/regional/region.yaml#/regional-region_alias"
+    slug:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    locationLatLong.lat:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
+  # required:
+  #   - name
+  #   - alias
+  #   - slug
+  #   - locationLatLong.lat
+  #   - locationLatLong.long
+SimpleModel_regional-Region_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_regional-Region_id"
+    # simple Attributes
+    name:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    alias:
+      $ref: "../../library/regional/region.yaml#/regional-region_alias"
+    slug:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    locationLatLong.lat:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
+    locationLatLong.long:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
+  # required:
+  #   - name
+  #   - alias
+  #   - slug
+  #   - locationLatLong.lat
+  #   - locationLatLong.long
+
+SimpleModel_regional-Region_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

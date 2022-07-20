@@ -1,20 +1,27 @@
 SimpleModel_application-action:
   type: object
-  allOf:
-    - $ref: "#/SimpleModel_application-action_id"
-    # - $ref: "../../library/application/action.yaml#/application-action_attributes"
-    # - $ref: "../../library/application/action.yaml#/application-action_relationshipIds"
-    - $ref: "../../library/application/action.yaml#/application-action_properties_endStateId"
-    - $ref: "../../library/application/action.yaml#/application-action_properties_emailId"
-    - $ref: "../../library/application/action.yaml#/application-action_properties_detail"
-    - $ref: "../../library/application/action.yaml#/application-action_properties_politeEmailMessage"
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_application-action_id"
+    #simple attributes
+    detail:
+      $ref: "../../library/application/action.yaml#/application-action_detail"
+    politeEmailMessage:
+      $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
+    #relationship attributes
+    endStateId:
+      $ref: "../../library/application/action.yaml#/application-action_endStateId"
+      #endState - check with Ryan
+    emailId:
+      $ref: "../../library/application/action.yaml#/application-action_emailId"
+  required:
+    - id
 
 # shared
 SimpleModel_application-action_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
