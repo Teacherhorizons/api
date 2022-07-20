@@ -13,9 +13,12 @@ JsonApiModel_application-status:
         # simple attributes
         name:
           $ref: "../../library/application/status.yaml#/application-status_name"
+      required:
+        - name
   required:
     - type
     - id
+    - attributes
 
 # type, id, attribute and relationship
 JsonApiModel_application-status_type:

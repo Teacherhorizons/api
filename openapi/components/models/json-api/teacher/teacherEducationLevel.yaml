@@ -18,7 +18,7 @@ JsonApiModel_teacher-teacherEducationLevel_attributes:
   properties:
     # simple attributes
     creationDate:
-      $ref: "../../library/teacher/teacherEducationLevel.yaml#/teacher-teacherEducationLevel_creationDate"  
+      $ref: "../../library/teacher/teacherEducationLevel.yaml#/teacher-teacherEducationLevel_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/teacherEducationLevel.yaml#/teacher-teacherEducationLevel_latestUpdateDate"
 
@@ -26,7 +26,7 @@ JsonApiModel_teacher-teacherEducationLevel_attributes:
     teacher:
       $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     educationLevel:
-      $ref: "../general/educationLevel.yaml#/JsonApiModel_educationLevel_relationship_attribute"
+      $ref: "../general/educationLevel.yaml#/JsonApiModel_general-educationLevel_relationship_attribute"
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     latestUpdateUser:
@@ -39,7 +39,7 @@ JsonApiModel_teacher-teacherEducationLevel_relationships:
     teacher:
       $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
     educationLevel:
-      $ref: "../general/educationLevel.yaml#/JsonApiModel_educationLevel_relationship"
+      $ref: "../general/educationLevel.yaml#/JsonApiModel_general-educationLevel_relationship"
     creationUser:
       $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
     latestUpdateUser:

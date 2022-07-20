@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
+
 JsonApiModel_application-eventType:
   oneOf:
     - $ref: "#/JsonApiModel_application-eventType_admin"
@@ -43,7 +45,7 @@ JsonApiModel_application-eventType_admin:
         - name
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationStatus:
@@ -80,7 +82,7 @@ JsonApiModel_application-eventType_school:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationStatus:
@@ -117,7 +119,7 @@ JsonApiModel_application-eventType_teacher:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationStatus:

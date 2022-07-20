@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
+
 JsonApiModel_general-currency:
   oneOf:
     - $ref: "#/JsonApiModel_general-currency_admin"
@@ -27,7 +29,7 @@ JsonApiModel_general-currency_admin:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         code:
           $ref: "../../library/general/currency.yaml#/general-currency_code"
         symbol:
@@ -38,7 +40,7 @@ JsonApiModel_general-currency_admin:
           $ref: "../../library/general/currency.yaml#/general-currency_creationDate"
         latestUpdateDate:
           $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateDate"
-      # relationship attributes
+        # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -53,7 +55,7 @@ JsonApiModel_general-currency_admin:
         - latestUpdateUser
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         creationUser:
@@ -84,7 +86,7 @@ JsonApiModel_general-currency_school:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         code:
           $ref: "../../library/general/currency.yaml#/general-currency_code"
         symbol:
@@ -119,7 +121,7 @@ JsonApiModel_general-currency_teacher:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         code:
           $ref: "../../library/general/currency.yaml#/general-currency_code"
         symbol:
@@ -157,7 +159,7 @@ JsonApiModel_general-currency_relationship_attribute:
     id:
       $ref: "#/JsonApiModel_general-currency_id"
   required:
-   - id
+    - id
 
 JsonApiModel_general-currency_relationship:
   type: object

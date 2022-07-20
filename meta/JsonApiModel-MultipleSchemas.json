@@ -160,6 +160,9 @@
                     }
                   },
                   "required": []
+                },
+                "required": {
+                  "type": "array"
                 }
               },
               "required": [
@@ -197,6 +200,10 @@
                     }
                   },
                   "required": []
+                },
+                "description": {
+                  "type": "string",
+                  "const": "Related attributes"
                 }
               },
               "required": [
@@ -209,8 +216,7 @@
           "required": [
             "type",
             "id",
-            "attributes",
-            "relationships"
+            "attributes"
           ]
         },
         "required": {

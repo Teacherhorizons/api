@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
+
 JsonApiModel_application-eventTypeAction:
   oneOf:
     - $ref: "#/JsonApiModel_application-eventTypeAction_admin"
@@ -47,7 +49,7 @@ JsonApiModel_application-eventTypeAction_admin:
         - autoEmail
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationEventType:
@@ -93,7 +95,7 @@ JsonApiModel_application-eventTypeAction_school:
         - applicationEventType
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationEventType:
@@ -133,7 +135,7 @@ JsonApiModel_application-eventTypeAction_teacher:
         - applicationEventType
     relationships:
       type: object
-      description: Related Attributes
+      description: Related attributes
       additionalProperties: false
       properties:
         applicationEventType:
@@ -165,7 +167,7 @@ JsonApiModel_application-eventTypeAction_relationship_attribute:
     id:
       $ref: "#/JsonApiModel_application-eventTypeAction_id"
   required:
-   - id
+    - id
 
 JsonApiModel_application-eventTypeAction_relationship:
   type: object
@@ -180,8 +182,7 @@ JsonApiModel_application-eventTypeAction_relationship:
         id:
           $ref: "#/JsonApiModel_application-eventTypeAction_id"
       required:
-      - type
-      - id
+        - type
+        - id
   required:
     - data
-
