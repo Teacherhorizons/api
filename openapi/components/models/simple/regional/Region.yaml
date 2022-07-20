@@ -1,19 +1,19 @@
 # yaml-language-server: $schema=../../../../../meta/SimpleModel-MultipleSchemas.json
 
-SimpleModel_regional-Region:
+SimpleModel_regional-region:
   oneOf:
-    - $ref: "#/SimpleModel_regional-Region_admin"
-    - $ref: "#/SimpleModel_regional-Region_school"
-    - $ref: "#/SimpleModel_regional-Region_teacher"
+    - $ref: "#/SimpleModel_regional-region_admin"
+    - $ref: "#/SimpleModel_regional-region_school"
+    - $ref: "#/SimpleModel_regional-region_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-Region_admin"
-      admin: "#/SimpleModel_regional-Region_admin"
-      school: "#/SimpleModel_regional-Region_school"
-      teacher: "#/SimpleModel_regional-Region_teacher"
+      all: "#/SimpleModel_regional-region_admin"
+      admin: "#/SimpleModel_regional-region_admin"
+      school: "#/SimpleModel_regional-region_school"
+      teacher: "#/SimpleModel_regional-region_teacher"
 
-SimpleModel_regional-Region_admin:
+SimpleModel_regional-region_admin:
   type: object
   additionalProperties: false
   properties:
@@ -22,7 +22,7 @@ SimpleModel_regional-Region_admin:
       enum:
         - admin
     id:
-      $ref: "#/SimpleModel_regional-Region_id"
+      $ref: "#/SimpleModel_regional-region_id"
     # simple Attributes
     name:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
@@ -54,7 +54,7 @@ SimpleModel_regional-Region_admin:
   #   - creationUser
   #   - latestUpdateUser
 
-SimpleModel_regional-Region_school:
+SimpleModel_regional-region_school:
   type: object
   additionalProperties: false
   properties:
@@ -63,7 +63,7 @@ SimpleModel_regional-Region_school:
       enum:
         - school
     id:
-      $ref: "#/SimpleModel_regional-Region_id"
+      $ref: "#/SimpleModel_regional-region_id"
     # simple Attributes
     name:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
@@ -81,7 +81,7 @@ SimpleModel_regional-Region_school:
   #   - slug
   #   - locationLatLong.lat
   #   - locationLatLong.long
-SimpleModel_regional-Region_teacher:
+SimpleModel_regional-region_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -90,7 +90,7 @@ SimpleModel_regional-Region_teacher:
       enum:
         - teacher
     id:
-      $ref: "#/SimpleModel_regional-Region_id"
+      $ref: "#/SimpleModel_regional-region_id"
     # simple Attributes
     name:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
@@ -109,7 +109,7 @@ SimpleModel_regional-Region_teacher:
   #   - locationLatLong.lat
   #   - locationLatLong.long
 
-SimpleModel_regional-Region_id:
+SimpleModel_regional-region_id:
   type: integer
   format: int32
   example: 1
