@@ -45,7 +45,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general)[a-zA-Z-]*_type$"
+                  "pattern": "^#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)[a-zA-Z-]*_type$"
                 }
               }
             },
@@ -55,7 +55,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general)[a-zA-Z-]*_id$"
+                  "pattern": "^#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)[a-zA-Z-]*_id$"
                 }
               }
             },
