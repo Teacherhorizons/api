@@ -1,0 +1,518 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Response-MultipleSchemas",
+  "definitions": {
+    "Response-MultipleSchemas": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-OneOfSchema"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-Schema"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_type$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-Type"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_id$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-Id"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-RelationshipAttribute"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_relationship$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-Relationship"
+        }
+      },
+      "required": [],
+      "title": "Response-MultipleSchemas"
+    },
+    "Response-MultipleSchemas-OneOfSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "oneOf": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "$ref": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "$ref"
+            ]
+          }
+        },
+        "discriminator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "propertyName": {
+              "const": "schema"
+            },
+            "mapping": {
+              "type": "object",
+              "patternProperties": {
+                "^(all|admin|school|teacher)$": {
+                  "type": "string"
+                }
+              },
+              "required": []
+            }
+          }
+        },
+        "required": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "oneOf",
+        "discriminator"
+      ],
+      "title": "Response-MultipleSchemas-OneOfSchema"
+    },
+    "Response-MultipleSchemas-Schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema": {
+              "$ref": "#/definitions/Response-MultipleSchemas-SchemaEnum"
+            },
+            "data": {
+              "$ref": "#/definitions/Response-MultipleSchemas-Data"
+            }
+          },
+          "required": [
+            "schema",
+            "data"
+          ]
+        },
+        "required": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "Response-MultipleSchemas-Schema"
+    },
+    "Response-MultipleSchemas-SchemaEnum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "string"
+        },
+        "enum": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 1
+        }
+      },
+      "required": [
+        "type",
+        "enum"
+      ],
+      "title": "Response-MultipleSchemas-Baz"
+    },
+    "Response-MultipleSchemas-Data": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "string"
+                },
+                "enum": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "maxItems": 1
+                }
+              },
+              "required": [
+                "type",
+                "enum"
+              ]
+            },
+            "type": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^#/Response_(application|general|job|regional|school)[a-zA-Z-]*_type$"
+                }
+              }
+            },
+            "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^#/Response_(application|general|job|regional|school)[a-zA-Z-]*_id$"
+                }
+              }
+            },
+            "attributes": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "object"
+                },
+                "additionalProperties": {
+                  "const": false
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-zA-Z_]*$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "$ref": {
+                          "type": "string",
+                          "pattern": "^([a-zA-Z./]*.yaml#/Response_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school)[a-zA-Z-_]*(?<!(Id)))$"
+                        }
+                      },
+                      "required": [
+                        "$ref"
+                      ]
+                    }
+                  },
+                  "required": []
+                },
+                "required": {
+                  "type": "array"
+                }
+              },
+              "required": [
+                "type",
+                "additionalProperties",
+                "properties"
+              ]
+            },
+            "relationships": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "object"
+                },
+                "additionalProperties": {
+                  "const": false
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^[a-zA-Z_]*$": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "$ref": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "$ref"
+                      ]
+                    }
+                  },
+                  "required": []
+                },
+                "description": {
+                  "type": "string",
+                  "const": "Related attributes"
+                }
+              },
+              "required": [
+                "type",
+                "additionalProperties",
+                "properties"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "id",
+            "attributes"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "allOf": [
+            {
+              "contains": {
+                "const": "type"
+              }
+            },
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "Response-MultipleSchemas-Data"
+    },
+    "Response-MultipleSchemas-Type": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "string"
+        },
+        "example": {
+          "type": "string"
+        },
+        "readOnly": {
+          "type": "boolean",
+          "const": true
+        },
+        "description": {
+          "type": "string",
+          "const": "Unique identifier of the entity type"
+        }
+      },
+      "required": [
+        "type",
+        "example",
+        "readOnly",
+        "description"
+      ],
+      "title": "Response-MultipleSchemas-Type"
+    },
+    "Response-MultipleSchemas-Id": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "string"
+        },
+        "example": {
+          "const": "1"
+        },
+        "description": {
+          "type": "string",
+          "const": "Unique identifier of the entity (string)"
+        },
+        "format": {
+          "type": "string"
+        },
+        "readOnly": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "description",
+        "example",
+        "type"
+      ],
+      "title": "Response-MultipleSchemas-Id"
+    },
+    "Response-MultipleSchemas-RelationshipAttribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$ref"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "Response-MultipleSchemas-RelationshipAttribute"
+    },
+    "Response-MultipleSchemas-Relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "object"
+                },
+                "additionalProperties": {
+                  "const": false
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "$ref": "#/definitions/Response-MultipleSchemas-Ref"
+                    },
+                    "id": {
+                      "$ref": "#/definitions/Response-MultipleSchemas-Ref"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id"
+                  ]
+                },
+                "required": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "allOf": [
+                    {
+                      "contains": {
+                        "const": "type"
+                      }
+                    },
+                    {
+                      "contains": {
+                        "const": "id"
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "additionalProperties",
+                "properties",
+                "required"
+              ]
+            }
+          },
+          "required": [
+            "data"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "data"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "Response-MultipleSchemas-Relationship"
+    },
+    "Response-MultipleSchemas-Ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$ref"
+      ]
+    }
+  }
+}

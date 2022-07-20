@@ -1,49 +1,52 @@
-Application-applicationDataIssuesResponse:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
-      enum:
-        - admin
+Response_application-applicationDataIssues:
+  oneOf:
+    - $ref: "#/Response_application-applicationDataIssues_admin"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Application-applicationDataIssues_admin"
-  required:
-    - schema
+      admin: "#/Response_application-applicationDataIssues_admin"
 
 # admin
-Application-applicationDataIssues_admin:
-  allOf:
-    - $ref: "#/Application-applicationDataIssuesResponse"
-    - properties:
-        data:
+Response_application-applicationDataIssues_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+        id:
+          $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+        attributes:
           type: object
+          additionalProperties: false
           properties:
-            type:
-              $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
-            id:
-              $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
-            attributes:
-              type: object
-              properties:
-                date:
-                  $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
-              required:
-                - date
-            relationships:
-              type: object
-              properties:
-                applicationId:
-                  $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-                guidelineId:
-                  $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-              required:
-                - application
-                - guideline
+            date:
+              $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
           required:
-            - type
-            - id
-            - attributes
-            - relationships
+            - date
+        relationships:
+          type: object
+          additionalProperties: false
+          properties:
+            applicationId:
+              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
+            guidelineId:
+              $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+          required:
+            - application
+            - guideline
+      required:
+        - type
+        - id
+        - attributes
+        - relationships
+  required:
+    - data
+    - schema
