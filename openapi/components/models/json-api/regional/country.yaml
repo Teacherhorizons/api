@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../../../meta/JsonApiModel-MultipleSchemas.json
+
 JsonApiModel_regional-country:
   oneOf:
     - $ref: "#/JsonApiModel_regional-country_admin"
@@ -68,7 +70,6 @@ JsonApiModel_regional-country_admin:
         - latestUpdateUser
     relationships:
       type: object
-      description: Related Attributes
       additionalProperties: false
       properties:
         creationUser:
