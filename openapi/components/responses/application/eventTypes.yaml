@@ -1,17 +1,17 @@
-Application-eventTypesResponse:
+Response_application-eventTypes:
   oneOf:
-    - $ref: "#/Application-eventTypesResponse_admin"
-    - $ref: "#/Application-eventTypesResponse_school"
-    - $ref: "#/Application-eventTypesResponse_teacher"
+    - $ref: "#/Response_application-eventTypes_admin"
+    - $ref: "#/Response_application-eventTypes_school"
+    - $ref: "#/Response_application-eventTypes_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Application-eventTypesResponse_admin"
-      school: "#/Application-eventTypesResponse_school"
-      teacher: "#/Application-eventTypesResponse_teacher"
+      admin: "#/Response_application-eventTypes_admin"
+      school: "#/Response_application-eventTypes_school"
+      teacher: "#/Response_application-eventTypes_teacher"
 
 # admin
-Application-eventTypesResponse_admin:
+Response_application-eventTypes_admin:
   type: object
   additionalProperties: false
   properties:
@@ -50,7 +50,7 @@ Application-eventTypesResponse_admin:
     - data
 
 # school
-Application-eventTypesResponse_school:
+Response_application-eventTypes_school:
   type: object
   additionalProperties: false
   properties:
@@ -89,7 +89,7 @@ Application-eventTypesResponse_school:
     - data
 
 # teacher
-Application-eventTypesResponse_teacher:
+Response_application-eventTypes_teacher:
   type: object
   additionalProperties: false
   properties:

@@ -16,37 +16,39 @@ Response_application-applicationDataIssues_admin:
       enum:
         - admin
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
-        id:
-          $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            date:
-              $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
-          required:
-            - date
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            applicationId:
-              $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-            guidelineId:
-              $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-          required:
-            - application
-            - guideline
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              date:
+                $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+            required:
+              - date
+          relationships:
+            type: object
+            additionalProperties: false
+            properties:
+              applicationId:
+                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
+              guidelineId:
+                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            required:
+              - applicationId
+              - guidelineId
+        required:
+          - type
+          - id
+          - attributes
+          - relationships
   required:
-    - data
     - schema
+    - data
