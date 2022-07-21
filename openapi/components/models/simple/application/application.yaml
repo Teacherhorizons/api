@@ -50,6 +50,7 @@ SimpleModel_application_admin:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - schema
     - id
     - creationDate
     - latestUpdateDate
@@ -90,6 +91,7 @@ SimpleModel_application_school:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - schema
     - id
     - creationDate
     - latestUpdateDate
@@ -123,6 +125,7 @@ SimpleModel_application_teacher:
     latestEventId:
       $ref: "../../library/application/application.yaml#/application_latestEventId"
   required:
+    - schema
     - id
     - creationDate
     - latestUpdateDate
