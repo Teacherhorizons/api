@@ -34,11 +34,11 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
     nationalAverageIncome:
       $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
-  # relationship attributes
+    locationLatitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+    # relationship attributes
     creationUserId:
       $ref: "../../library/regional/region.yaml#/regional-region_creationUserId"
     latestUpdateUserId:
@@ -49,8 +49,8 @@ SimpleModel_regional-region_admin:
   #   - creationDate
   #   - latestUpdateDate
   #   - slug
-  #   - locationLatLong.lat
-  #   - locationLatLong.long
+  #   - locationLatitude
+  #   - locationLongitude
   #   - creationUser
   #   - latestUpdateUser
 
@@ -71,16 +71,16 @@ SimpleModel_regional-region_school:
       $ref: "../../library/regional/region.yaml#/regional-region_alias"
     slug:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
-    locationLatLong.lat:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
   # required:
   #   - name
   #   - alias
   #   - slug
-  #   - locationLatLong.lat
-  #   - locationLatLong.long
+  #   - locationLatitude
+  #   - locationLongitude
 SimpleModel_regional-region_teacher:
   type: object
   additionalProperties: false
@@ -98,16 +98,16 @@ SimpleModel_regional-region_teacher:
       $ref: "../../library/regional/region.yaml#/regional-region_alias"
     slug:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
-    locationLatLong.lat:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/region.yaml#/regional-region_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
   # required:
   #   - name
   #   - alias
   #   - slug
-  #   - locationLatLong.lat
-  #   - locationLatLong.long
+  #   - locationLatitude
+  #   - locationLongitude
 
 SimpleModel_regional-region_id:
   type: integer

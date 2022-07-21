@@ -29,7 +29,7 @@ JsonApiModel_regional-country_admin:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         name:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         alias:
@@ -46,11 +46,11 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         nationalAverageIncome:
           $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
-      # relationship attributes
+        locationLatitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
+        # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -64,8 +64,8 @@ JsonApiModel_regional-country_admin:
         - phoneCode
         - slug
         - nationalAverageIncome
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
         - creationUser
         - latestUpdateUser
     relationships:
@@ -100,7 +100,7 @@ JsonApiModel_regional-country_school:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         name:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         alias:
@@ -113,10 +113,10 @@ JsonApiModel_regional-country_school:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         nationalAverageIncome:
           $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+        locationLatitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
       required:
         - name
         - alias
@@ -124,8 +124,8 @@ JsonApiModel_regional-country_school:
         - phoneCode
         - slug
         - nationalAverageIncome
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
   required:
     - schema
     - type
@@ -150,7 +150,7 @@ JsonApiModel_regional-country_teacher:
       type: object
       additionalProperties: false
       properties:
-      # simple Attributes
+        # simple Attributes
         name:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         alias:
@@ -163,10 +163,10 @@ JsonApiModel_regional-country_teacher:
           $ref: "../../library/regional/country.yaml#/regional-country_name"
         nationalAverageIncome:
           $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+        locationLatitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
       required:
         - name
         - alias
@@ -174,8 +174,8 @@ JsonApiModel_regional-country_teacher:
         - phoneCode
         - slug
         - nationalAverageIncome
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
   required:
     - schema
     - type
@@ -218,7 +218,7 @@ JsonApiModel_regional-country_relationship:
         id:
           $ref: "#/JsonApiModel_regional-country_id"
       required:
-        - type 
+        - type
         - id
   required:
     - data

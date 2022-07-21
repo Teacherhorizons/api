@@ -61,8 +61,8 @@ school_attributes:
     - $ref: "#/school_properties_locationLatLong"
     - $ref: "#/school_properties_yearCampusLastRenovated"
     - $ref: "#/school_properties_locationText"
-    - $ref: "#/school_properties_locationLatLong.lat"
-    - $ref: "#/school_properties_locationLatLong.long"
+    - $ref: "#/school_properties_locationLatitude"
+    - $ref: "#/school_properties_locationLongitude"
     - $ref: "#/school_properties_isPayScaleBasedOnExperience"
     - $ref: "#/school_properties_contractLengthInYears"
     - $ref: "#/school_properties_hasTeacherSavingScheme"
@@ -382,14 +382,14 @@ school_properties_locationText:
   properties:
     locationText:
       $ref: "#/school_locationText"
-school_properties_locationLatLong.lat:
+school_properties_locationLatitude:
   properties:
-    locationLatLong.lat:
-      $ref: "#/school_locationLatLong.lat"
-school_properties_locationLatLong.long:
+    locationLatitude:
+      $ref: "#/school_locationLatitude"
+school_properties_locationLongitude:
   properties:
-    locationLatLong.long:
-      $ref: "#/school_locationLatLong.long"
+    locationLongitude:
+      $ref: "#/school_locationLongitude"
 school_properties_isPayScaleBasedOnExperience:
   properties:
     isPayScaleBasedOnExperience:
@@ -834,10 +834,10 @@ school_locationText:
   type: string
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
   maxLength: 1000
-school_locationLatLong.lat:
+school_locationLatitude:
   type: number
   example: -8.91461649145998
-school_locationLatLong.long:
+school_locationLongitude:
   type: number
   example: 13.1904718044952
 school_isPayScaleBasedOnExperience:

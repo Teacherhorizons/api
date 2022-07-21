@@ -42,10 +42,10 @@ JsonApiModel_regional-city_admin:
           $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
         slug:
           $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+        locationLatitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -58,8 +58,8 @@ JsonApiModel_regional-city_admin:
         - creationDate
         - latestUpdateDate
         - slug
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
         - creationUser
         - latestUpdateUser
     relationships:
@@ -103,17 +103,17 @@ JsonApiModel_regional-city_school:
           $ref: "../../library/regional/city.yaml#/regional-city_name"
         slug:
           $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+        locationLatitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
       required:
         - name
         - alias
         - keyAtrractions
         - slug
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
   required:
     - schema
     - type
@@ -147,17 +147,17 @@ JsonApiModel_regional-city_teacher:
           $ref: "../../library/regional/city.yaml#/regional-city_name"
         slug:
           $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-        locationLatLong.lat:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-        locationLatLong.long:
-          $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+        locationLatitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
       required:
         - name
         - alias
         - keyAtrractions
         - slug
-        - locationLatLong.lat
-        - locationLatLong.long
+        - locationLatitude
+        - locationLongitude
   required:
     - schema
     - type
@@ -200,7 +200,7 @@ JsonApiModel_regional-city_relationship:
         id:
           $ref: "#/JsonApiModel_regional-city_id"
       required:
-      - type
-      - id
+        - type
+        - id
   required:
     - data

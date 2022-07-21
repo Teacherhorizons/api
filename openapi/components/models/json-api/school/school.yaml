@@ -18,7 +18,7 @@ JsonApiModel_school_attributes:
   properties:
     # simple attributes
     creationDate:
-      $ref: "../../library/school/school.yaml#/school_creationDate"  
+      $ref: "../../library/school/school.yaml#/school_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/school.yaml#/school_latestUpdateDate"
     name:
@@ -137,10 +137,10 @@ JsonApiModel_school_attributes:
       $ref: "../../library/school/school.yaml#/school_yearCampusLastRenovated"
     locationText:
       $ref: "../../library/school/school.yaml#/school_locationText"
-    locationLatLong.lat:
-      $ref: "../../library/school/school.yaml#/school_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/school/school.yaml#/school_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/school/school.yaml#/school_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/school/school.yaml#/school_locationLongitude"
     isPayScaleBasedOnExperience:
       $ref: "../../library/school/school.yaml#/school_isPayScaleBasedOnExperience"
     contractLengthInYears:

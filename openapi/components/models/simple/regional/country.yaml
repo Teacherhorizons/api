@@ -40,10 +40,10 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
     nationalAverageIncome:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
     # relationship attributes
     creationUserId:
       $ref: "../../library/regional/country.yaml#/regional-country_creationUserId"
@@ -56,8 +56,8 @@ SimpleModel_regional-country_admin:
     - creationDate
     - latestUpdateDate
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
     - creationUser
     - latestUpdateUser
 
@@ -84,17 +84,17 @@ SimpleModel_regional-country_school:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
     nationalAverageIncome:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
   required:
     - name
     - alias
     - keyAtrractions
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
 
 SimpleModel_regional-country_teacher:
   type: object
@@ -119,17 +119,17 @@ SimpleModel_regional-country_teacher:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
     nationalAverageIncome:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
   required:
     - name
     - alias
     - keyAtrractions
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
 
 SimpleModel_regional-country_id:
   type: integer

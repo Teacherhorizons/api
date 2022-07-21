@@ -16,11 +16,11 @@ regional-country_latestUpdateDate:
 regional-country_slug:
   type: string
   example: africa-angola-luanda
-regional-country_locationLatLong.lat:
+regional-country_locationLatitude:
   type: number
   example: -8.8383333
   description: Latitude
-regional-country_locationLatLong.long:
+regional-country_locationLongitude:
   type: number
   example: 13.2344444
   description: Longitude
@@ -57,9 +57,9 @@ regional-country_country:
       type: string
       example: "1"
       description: Relationship to Country
-  required: 
+  required:
     - id
-  
+
 regional-country_creationUser:
   type: object
   additionalProperties: false
@@ -68,9 +68,9 @@ regional-country_creationUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 regional-country_latestUpdateUser:
   type: object
   additionalProperties: false
@@ -79,9 +79,9 @@ regional-country_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 regional-country_language:
   type: object
   additionalProperties: false
@@ -90,6 +90,5 @@ regional-country_language:
       type: string
       example: "1"
       description: Relationship to Language
-  required: 
+  required:
     - id
-  

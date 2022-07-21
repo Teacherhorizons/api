@@ -36,10 +36,10 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
     slug:
       $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
     # relationship attributes
     creationUserId:
       $ref: "../../library/regional/city.yaml#/regional-city_creationUserId"
@@ -52,8 +52,8 @@ SimpleModel_regional-city_admin:
     - creationDate
     - latestUpdateDate
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
     - creationUser
     - latestUpdateUser
 
@@ -76,17 +76,17 @@ SimpleModel_regional-city_school:
       $ref: "../../library/regional/city.yaml#/regional-city_name"
     slug:
       $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
   required:
     - name
     - alias
     - keyAtrractions
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
 
 SimpleModel_regional-city_teacher:
   type: object
@@ -107,17 +107,17 @@ SimpleModel_regional-city_teacher:
       $ref: "../../library/regional/city.yaml#/regional-city_name"
     slug:
       $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
-    locationLatLong.lat:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.lat"
-    locationLatLong.long:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatLong.long"
+    locationLatitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+    locationLongitude:
+      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
   required:
     - name
     - alias
     - keyAtrractions
     - slug
-    - locationLatLong.lat
-    - locationLatLong.long
+    - locationLatitude
+    - locationLongitude
 
 SimpleModel_regional-city_id:
   type: integer
