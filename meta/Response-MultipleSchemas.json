@@ -93,7 +93,14 @@
               "$ref": "#/definitions/Response-MultipleSchemas-SchemaEnum"
             },
             "data": {
-              "$ref": "#/definitions/Response-MultipleSchemas-Data"
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
+                },
+                {
+                  "$ref": "#/definitions/Response-MultipleSchemas-DataArray"
+                }
+              ]
             }
           },
           "required": [
@@ -160,7 +167,19 @@
       ],
       "title": "Response-MultipleSchemas-SchemaEnum"
     },
-    "Response-MultipleSchemas-Data": {
+    "Response-MultipleSchemas-DataArray": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "array"
+        },
+        "items": {
+          "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
+        }
+      }
+    },
+    "Response-MultipleSchemas-DataItem": {
       "type": "object",
       "additionalProperties": false,
       "properties": {

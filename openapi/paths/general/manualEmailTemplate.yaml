@@ -37,7 +37,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/general/manualEmailTemplate.yaml#/General-manualEmailTemplateResponse"
+            $ref: "../../components/responses/general/manualEmailTemplate.yaml#/Response_general-manualEmailTemplate"
     "400":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":
