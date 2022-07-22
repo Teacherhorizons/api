@@ -1,18 +1,28 @@
 SimpleModel_school-facility:
-  allOf:
-    # - $ref: "#/SimpleModel_school-facility"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_school-facility_id"
-        - $ref: "../../library/school/facility.yaml#/school-facility_attributes"
-        - $ref: "../../library/school/facility.yaml#/school-facility_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_school-facility_id"
+    # simple attributes
+    name:
+      $ref: "../../library/school/facility.yaml#/school-facility_name"
+    creationDate:
+      $ref: "../../library/school/facility.yaml#/school-facility_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/facility.yaml#/school-facility_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/school/facility.yaml#/school-facility_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/facility.yaml#/school-facility_latestUpdateUserId"
+  required:
+    - id
 
 # shared
 SimpleModel_school-facility_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -1,84 +1,4 @@
-school-curriculumType_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-#filter properties
-
 # attributes
-school-curriculumType_attributes:
-  allOf:
-    - $ref: "#/school-curriculumType_properties_name"
-    - $ref: "#/school-curriculumType_properties_creationDate"
-    - $ref: "#/school-curriculumType_properties_latestUpdateDate"
-
-# relationshipIds
-school-curriculumType_relationshipIds:
-  allOf:
-    - $ref: "#/school-curriculumType_properties_creationUserId"
-    - $ref: "#/school-curriculumType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-curriculumType_relationships:
-  allOf:
-    - $ref: "#/school-curriculumType_properties_creationUser"
-    - $ref: "#/school-curriculumType_properties_latestUpdateUser"
-
-#properties
-school-curriculumType_properties_id:
-  properties:
-    id:
-      $ref: "#/school-curriculumType_id"
-
-school-curriculumType_properties_name:
-  properties:
-    name:
-      $ref: "#/school-curriculumType_name"
-
-school-curriculumType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-curriculumType_creationDate"
-
-school-curriculumType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-curriculumType_latestUpdateDate"
-
-school-curriculumType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-curriculumType_creationUserId"
-
-school-curriculumType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-curriculumType_latestUpdateUserId"
-
-
-school-curriculumType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-curriculumType_creationUser"
-
-school-curriculumType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-curriculumType_latestUpdateUser"
-
-#attributes
-school-curriculumType_id:
-  type: integer
-  example: 1
-
 school-curriculumType_name:
   type: string
   example: International Baccalaureate (DP)
@@ -93,6 +13,7 @@ school-curriculumType_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 school-curriculumType_creationUserId:
   type: integer
   example: 1
@@ -103,21 +24,29 @@ school-curriculumType_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
 school-curriculumType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 school-curriculumType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 
