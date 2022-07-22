@@ -1,18 +1,30 @@
 SimpleModel_school-accreditationType:
-  allOf:
-    # - $ref: "#/SimpleModel_school-accreditationType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_school-accreditationType_id"
-        - $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_attributes"
-        - $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_school-accreditationType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_name" 
+    url:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_url" 
+    creationDate:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_latestUpdateUserId"
+  required:
+    - id
 
 # shared
 SimpleModel_school-accreditationType_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

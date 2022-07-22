@@ -1,84 +1,11 @@
-
-# attributes
-school-accreditationType_attributes:
-  allOf:
-    - $ref: "#/school-accreditationType_properties_name"
-    - $ref: "#/school-accreditationType_properties_creationDate"
-    - $ref: "#/school-accreditationType_properties_latestUpdateDate"
-    - $ref: "#/school-accreditationType_properties_url"
-
-# relationshipIds
-school-accreditationType_relationshipIds:
-  allOf:
-    - $ref: "#/school-accreditationType_properties_creationUserId"
-    - $ref: "#/school-accreditationType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-accreditationType_relationships:
-  allOf:
-    - $ref: "#/school-accreditationType_properties_creationUser"
-    - $ref: "#/school-accreditationType_properties_latestUpdateUser"
-
-#properties
-school-accreditationType_properties_id:
-  properties:
-    id:
-      $ref: "#/school-accreditationType_id"
-school-accreditationType_properties_name:
-  properties:
-    name:
-      $ref: "#/school-accreditationType_name"
-school-accreditationType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-accreditationType_creationUserId"
-school-accreditationType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-accreditationType_creationDate"
-school-accreditationType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-accreditationType_latestUpdateUserId"
-school-accreditationType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-accreditationType_latestUpdateDate"
-school-accreditationType_properties_url:
-  properties:
-    url:
-      $ref: "#/school-accreditationType_url"
-school-accreditationType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-accreditationType_creationUser"
-school-accreditationType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-accreditationType_latestUpdateUser"
-
 #attributes
-school-accreditationType_id:
-  type: integer
-  example: 1
-  description: Unique identifier of the entity
 school-accreditationType_name:
   type: string
   example: CIS
-school-accreditationType_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to user
 school-accreditationType_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:35Z
-school-accreditationType_latestUpdateUserId:
-  type: integer
-  example: 1
-  description: Relationship to user
 school-accreditationType_latestUpdateDate:
   type: string
   format: date-time
@@ -86,18 +13,39 @@ school-accreditationType_latestUpdateDate:
 school-accreditationType_url:
   type: string
   example: https://www.cois.org/
+
+# relationship attributes
+school-accreditationType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+school-accreditationType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+#relationsahips
 school-accreditationType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 school-accreditationType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 
