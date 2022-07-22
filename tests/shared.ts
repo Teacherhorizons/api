@@ -12,6 +12,32 @@ import { addTestData, deleteTestData } from './data/main';
 // export var api: AxiosInstance;
 export var data: Config.Data;
 
+const mockGetData = async (): Promise<Config.Data> => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const data: Config.Data = {
+    schools: [],
+    teachers: [],
+    jobs: [],
+    applications: [{ id: 30 }, { id: 31 }],
+  };
+  return data;
+};
+
+export const setupBeforeAll = async () => {
+  try {
+    console.log('setupBeforeAll');
+    if (data) return;
+    // if (config.createTestData) data = await addTestData();
+    data = await mockGetData();
+    console.log(202, data);
+
+    shell.exec('npm run build-yaml');
+    jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
+  } catch (error) {
+    console.log('setup - beforeAll:', error);
+  }
+};
+
 export function setup(context = {}) {
   jest.setTimeout(90 * 1000);
   beforeAll(async () => {
