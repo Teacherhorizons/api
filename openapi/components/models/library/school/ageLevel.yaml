@@ -1,74 +1,4 @@
-
-#filter properties
-
-# attributes
-school-ageLevel_attributes:
-  allOf:
-    - $ref: "#/school-ageLevel_properties_type"
-    - $ref: "#/school-ageLevel_properties_creationDate"
-    - $ref: "#/school-ageLevel_properties_latestUpdateDate"
-
-# relationshipIds
-school-ageLevel_relationshipIds:
-  allOf:
-    - $ref: "#/school-ageLevel_properties_creationUserId"
-    - $ref: "#/school-ageLevel_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-ageLevel_relationships:
-  allOf:
-    - $ref: "#/school-ageLevel_properties_creationUser"
-    - $ref: "#/school-ageLevel_properties_latestUpdateUser"
-
-#properties
-school-ageLevel_properties_id:
-  properties:
-    id:
-      $ref: "#/school-ageLevel_id"
-
-school-ageLevel_properties_type:
-  properties:
-    type:
-      $ref: "#/school-ageLevel_type"
-
-school-ageLevel_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-ageLevel_creationDate"
-
-school-ageLevel_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-ageLevel_latestUpdateDate"
-
-school-ageLevel_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-ageLevel_creationUserId"
-
-school-ageLevel_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-ageLevel_latestUpdateUserId"
-
-
-school-ageLevel_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-ageLevel_creationUser"
-
-school-ageLevel_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-ageLevel_latestUpdateUser"
-
 #attributes
-school-ageLevel_id:
-  type: integer
-  example: 1
-
 school-ageLevel_type:
   type: string
   example: Outdoor Pitches
@@ -83,6 +13,7 @@ school-ageLevel_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 school-ageLevel_creationUserId:
   type: integer
   example: 1
@@ -93,21 +24,29 @@ school-ageLevel_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
 school-ageLevel_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 school-ageLevel_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 

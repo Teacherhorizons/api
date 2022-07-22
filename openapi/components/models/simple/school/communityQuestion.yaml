@@ -1,17 +1,25 @@
 SimpleModel_school-communityQuestion:
-  allOf:
-    # - $ref: "#/SimpleModel_school-communityQuestion"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_school-communityQuestion_id"
-        - $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_attributes"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_school-communityQuestion_id"
+    # simple attributes
+    questionText:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_questionText"
+    isActive:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_isActive"
+    shortText:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_shortText"
+    iconName:
+      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_iconName"
+  required:
+    - id
 
 # shared
 SimpleModel_school-communityQuestion_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

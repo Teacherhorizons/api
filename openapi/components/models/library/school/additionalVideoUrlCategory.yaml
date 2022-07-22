@@ -1,85 +1,10 @@
-
-
-# attributes
-school-additionalVideoUrlCategory_attributes:
-  allOf:
-    - $ref: "#/school-additionalVideoUrlCategory_properties_url"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_caption"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_creationDate"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_latestUpdateDate"
-
-# relationshipIds
-school-additionalVideoUrlCategory_relationshipIds:
-  allOf:
-    - $ref: "#/school-additionalVideoUrlCategory_properties_categoryId"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_creationUserId"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-additionalVideoUrlCategory_relationships:
-  allOf:
-    - $ref: "#/school-additionalVideoUrlCategory_properties_category"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_creationUser"
-    - $ref: "#/school-additionalVideoUrlCategory_properties_latestUpdateUser"
-
-#properties
-school-additionalVideoUrlCategory_properties_id:
-  properties:
-    id:
-      $ref: "#/school-additionalVideoUrlCategory_id"
-school-additionalVideoUrlCategory_properties_url:
-  properties:
-    url:
-      $ref: "#/school-additionalVideoUrlCategory_url"
-school-additionalVideoUrlCategory_properties_caption:
-  properties:
-    caption:
-      $ref: "#/school-additionalVideoUrlCategory_caption"
-school-additionalVideoUrlCategory_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-additionalVideoUrlCategory_creationDate"
-school-additionalVideoUrlCategory_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-additionalVideoUrlCategory_latestUpdateDate"
-school-additionalVideoUrlCategory_properties_categoryId:
-  properties:
-    categoryId:
-      $ref: "#/school-additionalVideoUrlCategory_categoryId"
-school-additionalVideoUrlCategory_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-additionalVideoUrlCategory_creationUserId"
-school-additionalVideoUrlCategory_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-additionalVideoUrlCategory_latestUpdateUserId"
-school-additionalVideoUrlCategory_properties_category:
-  properties:
-    category:
-      $ref: "#/school-additionalVideoUrlCategory_category"
-school-additionalVideoUrlCategory_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-additionalVideoUrlCategory_creationUser"
-school-additionalVideoUrlCategory_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-additionalVideoUrlCategory_latestUpdateUser"
-
 #attributes
-school-additionalVideoUrlCategory_id:
-  type: integer
-  example: 1
 school-additionalVideoUrlCategory_url:
   type: string
-  example: 
+  example: ""
 school-additionalVideoUrlCategory_caption:
   type: string
-  example: 
+  example: ""
 school-additionalVideoUrlCategory_creationDate:
   type: integer
   format: date-time
@@ -88,6 +13,8 @@ school-additionalVideoUrlCategory_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+
+#relationship attribites
 school-additionalVideoUrlCategory_categoryId:
   type: integer
   example: 1
@@ -98,26 +25,40 @@ school-additionalVideoUrlCategory_creationUserId:
   description: Relationship to user
 school-additionalVideoUrlCategory_latestUpdateUserId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to user
+
+# relatoinships
 school-additionalVideoUrlCategory_category:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Category
+  required: 
+    - id
+  
 school-additionalVideoUrlCategory_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 school-additionalVideoUrlCategory_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  

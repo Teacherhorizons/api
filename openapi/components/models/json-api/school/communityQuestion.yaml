@@ -1,37 +1,36 @@
 JsonApiModel_school-communityQuestion:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-communityQuestion_type"
     id:
       $ref: "#/JsonApiModel_school-communityQuestion_id"
     attributes:
-      $ref: "#/JsonApiModel_school-communityQuestion_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        questionText:
+          $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_questionText"
+        isActive:
+          $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_isActive"
+        shortText:
+          $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_shortText"
+        iconName:
+          $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_iconName"
   required:
     - type
     - id
 
-JsonApiModel_school-communityQuestion_attributes:
-  type: object
-  properties:
-    # simple attributes
-    questionText:
-      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_questionText"
-    isActive:
-      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_isActive"
-    shortText:
-      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_shortText"
-    iconName:
-      $ref: "../../library/school/communityQuestion.yaml#/school-communityQuestion_iconName"
-
 JsonApiModel_school-communityQuestion_type:
   type: string
   example: school-communityQuestion
-  description: school-communityQuestion
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-communityQuestion_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-communityQuestion (string)
+  description: Unique identifier of the entity (string)
