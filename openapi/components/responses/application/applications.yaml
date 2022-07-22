@@ -10,7 +10,7 @@ Response_applications:
       school: "#/Response_applications_school"
       teacher: "#/Response_applications_teacher"
 
-ApplicationsResponse_meta:
+Response_applications_meta:
   type: object
   properties:
     count:
@@ -33,7 +33,7 @@ Response_applications_admin:
       enum:
         - admin
     meta:
-      $ref: "#/ApplicationsResponse_meta"
+      $ref: "#/Response_applications_meta"
     data:
       type: array
       items:
@@ -179,7 +179,7 @@ ApplicationsResponse_includedApplicationEvent_admin:
 Response_applications_teacher:
   properties:
     meta:
-      $ref: "#/ApplicationsResponse_meta"
+      $ref: "#/Response_applications_meta"
     data:
       type: array
       items:
@@ -300,7 +300,7 @@ ApplicationsResponse_includedApplicationEvent_teacher:
 Response_applications_school:
   properties:
     meta:
-      $ref: "#/ApplicationsResponse_meta"
+      $ref: "#/Response_applications_meta"
     data:
       type: array
       items:

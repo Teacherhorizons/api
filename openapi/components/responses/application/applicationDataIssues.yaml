@@ -37,13 +37,13 @@ Response_application-applicationDataIssues_admin:
             type: object
             additionalProperties: false
             properties:
-              applicationId:
+              application:
                 $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-              guidelineId:
-                $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+              guideline:
+                $ref: "../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
             required:
-              - applicationId
-              - guidelineId
+              - application
+              - guideline
         required:
           - type
           - id
