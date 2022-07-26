@@ -1,58 +1,10 @@
-
-# attributes
-user-favouriteJob_attributes:
-  allOf:
-    - $ref: "#/user-favouriteJob_properties_creationDate"
-
-# relationshipIds
-user-userNote_relationshipIds:
-  allOf:
-    - $ref: "#/user-favouriteJob_properties_userId"
-    - $ref: "#/user-favouriteJob_properties_jobId"
-
-# attribute relationships
-
-# relationships
-user-favouriteJob_relationships:
-  allOf:
-    - $ref: "#/user-favouriteJob_properties_user"
-    - $ref: "#/user-favouriteJob_properties_job"
-
-#properties
-user-favouriteJob_properties_id:
-  properties:
-    id:
-      $ref: "#/user-favouriteJob_id"
-user-favouriteJob_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/user-favouriteJob_creationDate"
-user-favouriteJob_properties_userId:
-  properties:
-    userId:
-      $ref: "#/user-favouriteJob_userId"
-user-favouriteJob_properties_jobId:
-  properties:
-    jobId:
-      $ref: "#/user-favouriteJob_jobId"
-
-user-favouriteJob_properties_user:
-  properties:
-    user:
-      $ref: "#/user-favouriteJob_user"
-user-favouriteJob_properties_job:
-  properties:
-    job:
-      $ref: "#/user-favouriteJob_job"
-
 #attributes
-user-favouriteJob_id:
-  type: integer
-  example: 
 user-favouriteJob_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+
+#relationship attributes
 user-favouriteJob_userId:
   type: integer
   example: 1
@@ -62,19 +14,26 @@ user-favouriteJob_jobId:
   example: 1
   description: Relationship to Job
 
+#relationships
 user-favouriteJob_user:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
 user-favouriteJob_job:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Job
+  required: 
+    - id
 
 

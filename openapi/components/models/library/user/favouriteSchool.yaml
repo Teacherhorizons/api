@@ -1,87 +1,39 @@
-user-favouriteSchool_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-# attributes
-user-favouriteSchool_attributes:
-  allOf:
-    - $ref: "#/user-favouriteSchool_properties_creationDate"
-
-# relationshipIds
-user-favouriteSchool_relationshipIds:
-  allOf:
-    - $ref: "#/user-favouriteSchool_properties_userId"
-    - $ref: "#/user-favouriteSchool_properties_schoolId"
-
-# attribute relationships
-
-# relationships
-user-favouriteSchool_relationships:
-  allOf:
-    - $ref: "#/user-favouriteSchool_properties_user"
-    - $ref: "#/user-favouriteSchool_properties_school"
-
-#properties
-user-favouriteSchool_properties_id:
-  properties:
-    id:
-      $ref: "#/user-favouriteSchool_id"
-user-favouriteSchool_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/user-favouriteSchool_creationDate"
-user-favouriteSchool_properties_userId:
-  properties:
-    userId:
-      $ref: "#/user-favouriteSchool_userId"
-user-favouriteSchool_properties_schoolId:
-  properties:
-    schoolId:
-      $ref: "#/user-favouriteSchool_schoolId"
-
-user-favouriteSchool_properties_user:
-  properties:
-    user:
-      $ref: "#/user-favouriteSchool_user"
-user-favouriteSchool_properties_school:
-  properties:
-    school:
-      $ref: "#/user-favouriteSchool_school"
-
 #attributes
-user-favouriteSchool_id:
-  type: integer
-  example: 1
 user-favouriteSchool_creationDate:
   type: string
   format: date-time
   example: 2018-12-02T12:47:14Z
+  description: ""
+
+#relationship attributes
 user-favouriteSchool_userId:
   type: integer
-  example: 2
+  example: 1
   description: Relationship to user
 user-favouriteSchool_schoolId:
   type: integer
-  example: 2520
+  example: 1
   description: Relationship to School
+
+##relationships
 user-favouriteSchool_user:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to user
+      description: Relationship to user
+  required: 
+    - id
+  
 user-favouriteSchool_school:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to School
+      description: Relationship to School
+  required: 
+    - id

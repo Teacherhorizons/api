@@ -1,53 +1,49 @@
 JsonApiModel_user-message:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-message_type"
     id:
       $ref: "#/JsonApiModel_user-message_id"
     attributes:
-      $ref: "#/JsonApiModel_user-message_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/user/message.yaml#/user-message_creationDate"
+        text:
+          $ref: "../../library/user/message.yaml#/user-message_text"
+      # relationship attributes
+        toUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        fromUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        messageStatus:
+          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_user-message_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        toUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        fromUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        messageStatus:
+          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user-message_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/user/message.yaml#/user-message_creationDate"
-    text:
-      $ref: "../../library/user/message.yaml#/user-message_text"
-   # relationship attributes
-    toUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    fromUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    messageStatus:
-      $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship_attribute"
-
-JsonApiModel_user-message_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    toUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    fromUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    messageStatus:
-      $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship"
-
 JsonApiModel_user-message_type:
   type: string
   example: user-message
-  description: user-message
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-message_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-message (string)
+  description: Unique identifier of the entity (string)

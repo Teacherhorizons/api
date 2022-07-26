@@ -1,64 +1,26 @@
-
-
-# attributes
-user-thUser_attributes:
-  allOf:
-    - $ref: "#/user-thUser_properties_initials"
-    - $ref: "#/user-thUser_properties_activeInTH"
-
-# relationshipIds
-user-thUser_relationshipIds:
-  allOf:
-    - $ref: "#/user-thUser_properties_userId"
-
-# attribute relationships
-
-# relationships
-user-thUser_relationships:
-  allOf:
-    - $ref: "#/user-thUser_properties_user"
-
-#properties
-user-thUser_properties_id:
-  properties:
-    id:
-      $ref: "#/user-thUser_id"
-user-thUser_properties_userId:
-  properties:
-    userId:
-      $ref: "#/user-thUser_userId"
-user-thUser_properties_initials:
-  properties:
-    initials:
-      $ref: "#/user-thUser_initials"
-user-thUser_properties_activeInTH:
-  properties:
-    activeInTH:
-      $ref: "#/user-thUser_activeInTH"
-
-user-thUser_properties_user:
-  properties:
-    user:
-      $ref: "#/user-thUser_user"
-
 #attributes
-
-user-thUser_id:
-  type: integer
-  example: 1
-user-thUser_userId:
-  type: integer
-  example: 222807
 user-thUser_initials:
   type: string
   example: SW
 user-thUser_activeInTH:
   type: integer
   example: 1
+
+#relationship attribute
+user-thUser_userId:
+  type: integer
+  example: 1
+  description: ""
+
+#relationship
 user-thUser_user:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: 
+      description: "" 
+  required: 
+    - id
+  

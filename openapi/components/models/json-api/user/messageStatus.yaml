@@ -1,46 +1,50 @@
 JsonApiModel_user-messageStatus:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-messageStatus_type"
     id:
       $ref: "#/JsonApiModel_user-messageStatus_id"
     attributes:
-      $ref: "#/JsonApiModel_user-messageStatus_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_name"
   required:
     - type
     - id
 
-JsonApiModel_user-messageStatus_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_name"
-
 JsonApiModel_user-messageStatus_type:
   type: string
   example: user-messageStatus
-  description: user-messageStatus
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-messageStatus_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-messageStatus (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_user-messageStatus_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_user-messageStatus_id"
+  required:
+    - id
 
 JsonApiModel_user-messageStatus_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_user-messageStatus_type"

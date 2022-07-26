@@ -1,47 +1,43 @@
 JsonApiModel_user-favouriteSchool:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-favouriteSchool_type"
     id:
       $ref: "#/JsonApiModel_user-favouriteSchool_id"
     attributes:
-      $ref: "#/JsonApiModel_user-favouriteSchool_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_creationDate"
+      # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_user-favouriteSchool_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user-favouriteSchool_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/user/favouriteSchool.yaml#/user-favouriteSchool_creationDate"
-   # relationship attributes
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
-
-JsonApiModel_user-favouriteSchool_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
-
 JsonApiModel_user-favouriteSchool_type:
   type: string
   example: user-favouriteSchool
-  description: user-favouriteSchool
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-favouriteSchool_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-favouriteSchool (string)
+  description: Unique identifier of the entity (string)

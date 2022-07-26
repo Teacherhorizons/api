@@ -1,47 +1,43 @@
 JsonApiModel_user-favouriteTeacher:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-favouriteTeacher_type"
     id:
       $ref: "#/JsonApiModel_user-favouriteTeacher_id"
     attributes:
-      $ref: "#/JsonApiModel_user-favouriteTeacher_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_creationDate"
+      # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_user-favouriteTeacher_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user-favouriteTeacher_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/user/favouriteTeacher.yaml#/user-favouriteTeacher_creationDate"
-   # relationship attributes
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-
-JsonApiModel_user-favouriteTeacher_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-
 JsonApiModel_user-favouriteTeacher_type:
   type: string
   example: user-favouriteTeacher
-  description: user-favouriteTeacher
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-favouriteTeacher_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-favouriteTeacher (string)
+  description: Unique identifier of the entity (string)
