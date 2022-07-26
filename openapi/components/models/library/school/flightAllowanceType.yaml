@@ -1,84 +1,4 @@
-school-flightAllowanceType_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-#filter properties
-
-# attributes
-school-flightAllowanceType_attributes:
-  allOf:
-    - $ref: "#/school-flightAllowanceType_properties_name"
-    - $ref: "#/school-flightAllowanceType_properties_creationDate"
-    - $ref: "#/school-flightAllowanceType_properties_latestUpdateDate"
-
-# relationshipIds
-school-flightAllowanceType_relationshipIds:
-  allOf:
-    - $ref: "#/school-flightAllowanceType_properties_creationUserId"
-    - $ref: "#/school-flightAllowanceType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-flightAllowanceType_relationships:
-  allOf:
-    - $ref: "#/school-flightAllowanceType_properties_creationUser"
-    - $ref: "#/school-flightAllowanceType_properties_latestUpdateUser"
-
-#properties
-school-flightAllowanceType_properties_id:
-  properties:
-    id:
-      $ref: "#/school-flightAllowanceType_id"
-
-school-flightAllowanceType_properties_name:
-  properties:
-    name:
-      $ref: "#/school-flightAllowanceType_name"
-
-school-flightAllowanceType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-flightAllowanceType_creationDate"
-
-school-flightAllowanceType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-flightAllowanceType_latestUpdateDate"
-
-school-flightAllowanceType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-flightAllowanceType_creationUserId"
-
-school-flightAllowanceType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-flightAllowanceType_latestUpdateUserId"
-
-
-school-flightAllowanceType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-flightAllowanceType_creationUser"
-
-school-flightAllowanceType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-flightAllowanceType_latestUpdateUser"
-
 #attributes
-school-flightAllowanceType_id:
-  type: integer
-  example: 1
-
 school-flightAllowanceType_name:
   type: string
   example: Start of placement
@@ -93,6 +13,7 @@ school-flightAllowanceType_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
 school-flightAllowanceType_creationUserId:
   type: integer
   example: 1
@@ -105,19 +26,26 @@ school-flightAllowanceType_latestUpdateUserId:
 
 school-flightAllowanceType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 school-flightAllowanceType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 

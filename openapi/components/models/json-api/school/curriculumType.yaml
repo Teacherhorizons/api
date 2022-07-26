@@ -52,13 +52,14 @@ JsonApiModel_school-curriculumType_relationship:
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_school-curriculumType_type"
         id:
           $ref: "#/JsonApiModel_school-curriculumType_id"
-    # required:
-    #   - type
-    #   - id
+      required:
+        - type
+        - id
   required:
     - data

@@ -1,180 +1,178 @@
-school-schoolCommunityResponse_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
+# school-schoolCommunityResponse_metaProperties_shared:
+#   properties:
+#     creationDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
+#     latestUpdateDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
 
-# attributes
-school-schoolCommunityResponse_attributes:
-  allOf:
-    - $ref: "#/school-schoolCommunityResponse_properties_name"
-    - $ref: "#/school-schoolCommunityResponse_properties_responseText"
-    - $ref: "#/school-schoolCommunityResponse_properties_creationDate"
-    - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateDate"
+# # attributes
+# school-schoolCommunityResponse_attributes:
+#   allOf:
+#     - $ref: "#/school-schoolCommunityResponse_properties_name"
+#     - $ref: "#/school-schoolCommunityResponse_properties_responseText"
+#     - $ref: "#/school-schoolCommunityResponse_properties_creationDate"
+#     - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateDate"
 
-# relationshipIds
-school-schoolCommunityResponse_relationshipIds:
-  allOf:
-    - $ref: "#/school-schoolCommunityResponse_properties_schoolId"
-    - $ref: "#/school-schoolCommunityResponse_properties_questionId"
-    - $ref: "#/school-schoolCommunityResponse_properties_creationUserId"
-    - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateUserId"
+# # relationshipIds
+# school-schoolCommunityResponse_relationshipIds:
+#   allOf:
+#     - $ref: "#/school-schoolCommunityResponse_properties_schoolId"
+#     - $ref: "#/school-schoolCommunityResponse_properties_questionId"
+#     - $ref: "#/school-schoolCommunityResponse_properties_creationUserId"
+#     - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateUserId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-school-schoolCommunityResponse_relationships:
-  allOf:
-    - $ref: "#/school-schoolCommunityResponse_properties_school"
-    - $ref: "#/school-schoolCommunityResponse_properties_question"
-    - $ref: "#/school-schoolCommunityResponse_properties_creationUser"
-    - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateUser"
+# # relationships
+# school-schoolCommunityResponse_relationships:
+#   allOf:
+#     - $ref: "#/school-schoolCommunityResponse_properties_school"
+#     - $ref: "#/school-schoolCommunityResponse_properties_question"
+#     - $ref: "#/school-schoolCommunityResponse_properties_creationUser"
+#     - $ref: "#/school-schoolCommunityResponse_properties_latestUpdateUser"
 
-#properties
-school-schoolCommunityResponse_properties_id:
-  properties:
-    id:
-      $ref: "#/school-schoolCommunityResponse_id"
+# #properties
+# school-schoolCommunityResponse_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/school-schoolCommunityResponse_id"
 
-school-schoolCommunityResponse_properties_name:
-  properties:
-    name:
-      $ref: "#/school-schoolCommunityResponse_name"
+# school-schoolCommunityResponse_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/school-schoolCommunityResponse_name"
 
-school-schoolCommunityResponse_properties_responseText:
-  properties:
-    responseText:
-      $ref: "#/school-schoolCommunityResponse_responseText"
+# school-schoolCommunityResponse_properties_responseText:
+#   properties:
+#     responseText:
+#       $ref: "#/school-schoolCommunityResponse_responseText"
 
-school-schoolCommunityResponse_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-schoolCommunityResponse_creationDate"
+# school-schoolCommunityResponse_properties_creationDate:
+#   properties:
+#     creationDate:
+#       $ref: "#/school-schoolCommunityResponse_creationDate"
 
-school-schoolCommunityResponse_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-schoolCommunityResponse_latestUpdateDate"
+# school-schoolCommunityResponse_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/school-schoolCommunityResponse_latestUpdateDate"
 
-school-schoolCommunityResponse_properties_schoolId:
-  properties:
-    schoolId:
-      $ref: "#/school-schoolCommunityResponse_schoolId"
+# school-schoolCommunityResponse_properties_schoolId:
+#   properties:
+#     schoolId:
+#       $ref: "#/school-schoolCommunityResponse_schoolId"
 
-school-schoolCommunityResponse_properties_questionId:
-  properties:
-    questionId:
-      $ref: "#/school-schoolCommunityResponse_questionId"
+# school-schoolCommunityResponse_properties_questionId:
+#   properties:
+#     questionId:
+#       $ref: "#/school-schoolCommunityResponse_questionId"
 
-school-schoolCommunityResponse_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-schoolCommunityResponse_creationUserId"
+# school-schoolCommunityResponse_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/school-schoolCommunityResponse_creationUserId"
 
-school-schoolCommunityResponse_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-schoolCommunityResponse_latestUpdateUserId"
+# school-schoolCommunityResponse_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/school-schoolCommunityResponse_latestUpdateUserId"
 
-school-schoolCommunityResponse_properties_school:
-  properties:
-    school:
-      $ref: "#/school-schoolCommunityResponse_school"
+# school-schoolCommunityResponse_properties_school:
+#   properties:
+#     school:
+#       $ref: "#/school-schoolCommunityResponse_school"
 
-school-schoolCommunityResponse_properties_question:
-  properties:
-    question:
-      $ref: "#/school-schoolCommunityResponse_question"
+# school-schoolCommunityResponse_properties_question:
+#   properties:
+#     question:
+#       $ref: "#/school-schoolCommunityResponse_question"
 
-school-schoolCommunityResponse_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-schoolCommunityResponse_creationUser"
+# school-schoolCommunityResponse_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/school-schoolCommunityResponse_creationUser"
 
-school-schoolCommunityResponse_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-schoolCommunityResponse_latestUpdateUser"
+# school-schoolCommunityResponse_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/school-schoolCommunityResponse_latestUpdateUser"
 
 #attributes
-school-schoolCommunityResponse_id:
-  type: integer
-  example: 1
-
 school-schoolCommunityResponse_name:
   type: string
   example: Secondary Subject Teacher
-
 school-schoolCommunityResponse_responseText:
   type: string
-  example: 
-
+  example: ""
 school-schoolCommunityResponse_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-
 school-schoolCommunityResponse_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-schoolCommunityResponse_school:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-
-school-schoolCommunityResponse_question:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Question
-
+#relationship attributes
+school-schoolCommunityResponse_questionId:
+  type: integer
+  example: 1
+  description: Relationship to Question
+school-schoolCommunityResponse_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+school-schoolCommunityResponse_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
 school-schoolCommunityResponse_schoolId:
   type: integer
   example: 1
   description: Relationship to School
 
-school-schoolCommunityResponse_questionId:
+#relationships
+school-schoolCommunityResponse_school:
   type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+school-schoolCommunityResponse_question:
+  type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to Question
-
-school-schoolCommunityResponse_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-
-school-schoolCommunityResponse_latestUpdateUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-
+  required: 
+    - id
 school-schoolCommunityResponse_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
 school-schoolCommunityResponse_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id

@@ -1,13 +1,37 @@
 JsonApiModel_user-favouriteJob:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-favouriteJob_type"
     id:
       $ref: "#/JsonApiModel_user-favouriteJob_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/user/favoriteJob.yaml#/user-favouriteJob_creationDate"  
+        # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        job:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        job:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+
+#creationDate
+#userId
+#jobId
+#user
+#job
   required:
     - type
     - id
@@ -15,11 +39,11 @@ JsonApiModel_user-favouriteJob:
 JsonApiModel_user-favouriteJob_type:
   type: string
   example: user-favouriteJob
-  description: user-favouriteJob
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-favouriteJob_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-favouriteJob (string)
+  description: Unique identifier of the entity (string)

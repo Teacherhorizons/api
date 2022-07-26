@@ -1,84 +1,4 @@
-school-relocationAllowanceType_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-#filter properties
-
-# attributes
-school-relocationAllowanceType_attributes:
-  allOf:
-    - $ref: "#/school-relocationAllowanceType_properties_name"
-    - $ref: "#/school-relocationAllowanceType_properties_creationDate"
-    - $ref: "#/school-relocationAllowanceType_properties_latestUpdateDate"
-
-# relationshipIds
-school-relocationAllowanceType_relationshipIds:
-  allOf:
-    - $ref: "#/school-relocationAllowanceType_properties_creationUserId"
-    - $ref: "#/school-relocationAllowanceType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-relocationAllowanceType_relationships:
-  allOf:
-    - $ref: "#/school-relocationAllowanceType_properties_creationUser"
-    - $ref: "#/school-relocationAllowanceType_properties_latestUpdateUser"
-
-#properties
-school-relocationAllowanceType_properties_id:
-  properties:
-    id:
-      $ref: "#/school-relocationAllowanceType_id"
-
-school-relocationAllowanceType_properties_name:
-  properties:
-    name:
-      $ref: "#/school-relocationAllowanceType_name"
-
-school-relocationAllowanceType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-relocationAllowanceType_creationDate"
-
-school-relocationAllowanceType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-relocationAllowanceType_latestUpdateDate"
-
-school-relocationAllowanceType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-relocationAllowanceType_creationUserId"
-
-school-relocationAllowanceType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-relocationAllowanceType_latestUpdateUserId"
-
-
-school-relocationAllowanceType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-relocationAllowanceType_creationUser"
-
-school-relocationAllowanceType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-relocationAllowanceType_latestUpdateUser"
-
 #attributes
-school-relocationAllowanceType_id:
-  type: integer
-  example: 1
-
 school-relocationAllowanceType_name:
   type: string
   example: Start of placement
@@ -105,19 +25,26 @@ school-relocationAllowanceType_latestUpdateUserId:
 
 school-relocationAllowanceType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 school-relocationAllowanceType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 
