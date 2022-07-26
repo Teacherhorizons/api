@@ -1,118 +1,11 @@
-school-schoolCurriculumType_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-# attributes
-school-schoolCurriculumType_attributes:
-  allOf:
-    - $ref: "#/school-schoolCurriculumType_properties_name"
-    - $ref: "#/school-schoolCurriculumType_properties_scoreValue"
-    - $ref: "#/school-schoolCurriculumType_properties_creationDate"
-    - $ref: "#/school-schoolCurriculumType_properties_latestUpdateDate"
-
-# relationshipIds
-school-schoolCurriculumType_relationshipIds:
-  allOf:
-    - $ref: "#/school-schoolCurriculumType_properties_schoolId"
-    - $ref: "#/school-schoolCurriculumType_properties_examTitleId"
-    - $ref: "#/school-schoolCurriculumType_properties_creationUserId"
-    - $ref: "#/school-schoolCurriculumType_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-schoolCurriculumType_relationships:
-  allOf:
-    - $ref: "#/school-schoolCurriculumType_properties_school"
-    - $ref: "#/school-schoolCurriculumType_properties_examTitle"
-    - $ref: "#/school-schoolCurriculumType_properties_creationUser"
-    - $ref: "#/school-schoolCurriculumType_properties_latestUpdateUser"
-
-#properties
-school-schoolCurriculumType_properties_id:
-  properties:
-    id:
-      $ref: "#/school-schoolCurriculumType_id"
-
-school-schoolCurriculumType_properties_name:
-  properties:
-    name:
-      $ref: "#/school-schoolCurriculumType_name"
-
-school-schoolCurriculumType_properties_scoreValue:
-  properties:
-    name:
-      $ref: "#/school-schoolCurriculumType_scoreValue"
-
-school-schoolCurriculumType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-schoolCurriculumType_creationDate"
-
-school-schoolCurriculumType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-schoolCurriculumType_latestUpdateDate"
-
-school-schoolCurriculumType_properties_schoolId:
-  properties:
-    typeId:
-      $ref: "#/school-schoolCurriculumType_schoolId"
-
-school-schoolCurriculumType_properties_examTitleId:
-  properties:
-    typeId:
-      $ref: "#/school-schoolCurriculumType_examTitleId"
-
-school-schoolCurriculumType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-schoolCurriculumType_creationUserId"
-
-school-schoolCurriculumType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-schoolCurriculumType_latestUpdateUserId"
-
-school-schoolCurriculumType_properties_school:
-  properties:
-    type:
-      $ref: "#/school-schoolCurriculumType_school"
-
-school-schoolCurriculumType_properties_examTitle:
-  properties:
-    type:
-      $ref: "#/school-schoolCurriculumType_examTitle"
-
-school-schoolCurriculumType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-schoolCurriculumType_creationUser"
-
-school-schoolCurriculumType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-schoolCurriculumType_latestUpdateUser"
-
 #attributes
-school-schoolCurriculumType_id:
-  type: integer
-  example: 1
-
 school-schoolCurriculumType_name:
   type: string
   example: Secondary Subject Teacher
 
 school-schoolCurriculumType_scoreValue:
   type: string
-  example: 
+  example: ""
 
 school-schoolCurriculumType_creationDate:
   type: string
@@ -124,57 +17,65 @@ school-schoolCurriculumType_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
+#relationship attributes
+school-schoolCurriculumType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+school-schoolCurriculumType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+school-schoolCurriculumType_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to School
+school-schoolCurriculumType_examTitleId:
+      type: integer
+      example: 1
+      description: Relationship to examTitle
+
+#relationships
+school-schoolCurriculumType_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+
+school-schoolCurriculumType_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+
 school-schoolCurriculumType_school:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to School
+  required: 
+    - id
 
 school-schoolCurriculumType_examTitle:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to examTitle
-
-school-schoolCurriculumType_schoolId:
-  type: integer
-  example: 1
-  description: Relationship to School
-
-school-schoolCurriculumType_examTitleId:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to examTitle
-
-school-schoolCurriculumType_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-
-school-schoolCurriculumType_latestUpdateUserId:
-  type: integer
-  example: 1
-  description: Relationship to User
-
-school-schoolCurriculumType_creationUser:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to User
-
-school-schoolCurriculumType_latestUpdateUser:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to User
+  required: 
+    - id

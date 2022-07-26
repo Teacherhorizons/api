@@ -1,121 +1,11 @@
-school-schoolEmploymentAdvantage_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-# attributes
-school-schoolEmploymentAdvantage_attributes:
-  allOf:
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_name"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_sequenceNumber"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_reason"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_creationDate"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_latestUpdateDate"
-
-# relationshipIds
-school-schoolEmploymentAdvantage_relationshipIds:
-  allOf:
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_schoolId"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_creationUserId"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-schoolEmploymentAdvantage_relationships:
-  allOf:
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_school"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_creationUser"
-    - $ref: "#/school-schoolEmploymentAdvantage_properties_latestUpdateUser"
-
-#properties
-school-schoolEmploymentAdvantage_properties_id:
-  properties:
-    id:
-      $ref: "#/school-schoolEmploymentAdvantage_id"
-
-school-schoolEmploymentAdvantage_properties_name:
-  properties:
-    name:
-      $ref: "#/school-schoolEmploymentAdvantage_name"
-
-school-schoolEmploymentAdvantage_properties_sequenceNumber:
-  properties:
-    name:
-      $ref: "#/school-schoolEmploymentAdvantage_sequenceNumber"
-
-school-schoolEmploymentAdvantage_properties_reason:
-  properties:
-    type:
-      $ref: "#/school-schoolEmploymentAdvantage_reason"
-
-school-schoolEmploymentAdvantage_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-schoolEmploymentAdvantage_creationDate"
-
-school-schoolEmploymentAdvantage_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-schoolEmploymentAdvantage_latestUpdateDate"
-
-school-schoolEmploymentAdvantage_properties_schoolId:
-  properties:
-    typeId:
-      $ref: "#/school-schoolEmploymentAdvantage_schoolId"
-
-
-school-schoolEmploymentAdvantage_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-schoolEmploymentAdvantage_creationUserId"
-
-school-schoolEmploymentAdvantage_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-schoolEmploymentAdvantage_latestUpdateUserId"
-
-school-schoolEmploymentAdvantage_properties_school:
-  properties:
-    type:
-      $ref: "#/school-schoolEmploymentAdvantage_school"
-
-school-schoolEmploymentAdvantage_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-schoolEmploymentAdvantage_creationUser"
-
-school-schoolEmploymentAdvantage_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-schoolEmploymentAdvantage_latestUpdateUser"
-
 #attributes
-school-schoolEmploymentAdvantage_id:
-  type: integer
-  example: 1
-
 school-schoolEmploymentAdvantage_name:
   type: string
   example: Secondary Subject Teacher
 
 school-schoolEmploymentAdvantage_sequenceNumber:
   type: string
-  example: 
-
-school-schoolEmploymentAdvantage_reason:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Reason
+  example: ""
 
 school-schoolEmploymentAdvantage_creationDate:
   type: string
@@ -127,14 +17,7 @@ school-schoolEmploymentAdvantage_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-schoolEmploymentAdvantage_school:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-
+#relationship attributes
 school-schoolEmploymentAdvantage_schoolId:
   type: integer
   example: 1
@@ -150,18 +33,47 @@ school-schoolEmploymentAdvantage_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
+school-schoolEmploymentAdvantage_reason:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Reason
+  required: 
+    - id
+
+school-schoolEmploymentAdvantage_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
 school-schoolEmploymentAdvantage_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 school-schoolEmploymentAdvantage_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id

@@ -1,53 +1,47 @@
 JsonApiModel_school-schoolEmploymentAdvantage:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_type"
     id:
       $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_id"
     attributes:
-      $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_name"
+        creationDate:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school-schoolEmploymentAdvantage_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school-schoolEmploymentAdvantage_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_name"
-    #type
-    creationDate:
-      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_latestUpdateDate"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school-schoolEmploymentAdvantage_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school-schoolEmploymentAdvantage_type:
   type: string
   example: school-schoolEmploymentAdvantage
-  description: school-schoolEmploymentAdvantage
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-schoolEmploymentAdvantage_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-schoolEmploymentAdvantage (string)
+  description: Unique identifier of the entity (string)
