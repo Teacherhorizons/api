@@ -74,7 +74,6 @@ describe('test.each WIP1', () => {
   });
 
   test.each(tests)('test.each WIP2', async (fooTest: Test) => {
-    console.log(101, fooTest, data);
     await signIn(fooTest.userEmail);
     const url = fooTest.getUrl(data);
     try {
@@ -83,7 +82,6 @@ describe('test.each WIP1', () => {
       expect(response.data.data.length).toEqual(fooTest.expectedDataLength);
       expect(response).toSatisfyApiSpec();
     } catch (error) {
-      console.log(103, error);
       expect(error.response.status).toEqual(fooTest.expectedStatus);
       expect(error.response).toSatisfyApiSpec();
     }

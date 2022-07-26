@@ -211,6 +211,12 @@ describe('school-2-schools@th.test', () => {
     const response = await api.get('applications/1001?schema=school');
     expect(response.status).toEqual(200);
     expect(response).toSatisfyApiSpec();
+
+    /* TODO
+    const application = <JsonApi.Application>response.data;
+    const job: JsonApi.Job = null; // TODO
+    expect(job.attributes.thOwnerUser).toBeDefined();
+    */
   });
 
   test('GET applications/1?schema=school', async () => {

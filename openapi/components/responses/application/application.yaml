@@ -450,9 +450,6 @@ ApplicationResponse_includedJob_school:
         thOwnerUser:
           allOf:
             - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-            - $ref: "#/ApplicationResponse_school_stage_2_description"
-      required:
-        - school
   required:
     - type
     - id
@@ -475,25 +472,16 @@ ApplicationResponse_includedSchool_school:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
-        # leadRecruitmentContactName:
-        #   allOf:
-        #     - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
-        #     - $ref: "#/ApplicationResponse_school_stage_3_description"
-        # leadRecruitmentContactEmail:
-        #   allOf:
-        #     - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
-        #     - $ref: "#/ApplicationResponse_school_stage_3_description"
       required:
         - name
         - slug
         - city
-    # relationships:
-    #   type: object
-    #   properties:
-    #     lraUser:
-    #       allOf:
-    #         - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-    #         - $ref: "#/ApplicationResponse_school_stage_2_description"
+    relationships:
+      type: object
+      properties:
+        lraUser:
+          allOf:
+            - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
@@ -517,25 +505,6 @@ ApplicationResponse_includedTeacher_school:
     - type
     - id
     - attributes
-
-# descriptions
-ApplicationResponse_school_stage_2_description:
-  #verify these with Ryan
-  description: |
-    Included if application contains any of these events:
-    - Info request from candidate
-    - Interview with adviser - invited
-    - Interview with adviser - arranged
-    - Interview with adviser
-    - Submission to school
-
-ApplicationResponse_school_stage_3_description:
-  #verify these with Ryan
-  description: |
-    Included if application contains any of these events:
-    - Interview with School - invited
-    - Interview with School - arranged
-    - Interview with School
 
 #
 ApplicationResponse_includedUser_school:
