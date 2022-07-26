@@ -1,70 +1,4 @@
-
-
-# attributes
-user-message_attributes:
-  allOf:
-    - $ref: "#/user-message_properties_creationDate"
-    - $ref: "#/user-message_properties_text"
-
-# relationshipIds
-user-message_relationshipIds:
-  allOf:
-    - $ref: "#/user-message_properties_toUserId"
-    - $ref: "#/user-message_properties_fromUserId"
-    - $ref: "#/user-message_properties_messageStatusId"
-
-# attribute relationships
-
-# relationships
-user-message_relationships:
-  allOf:
-    - $ref: "#/user-message_properties_toUser"
-    - $ref: "#/user-message_properties_fromUser"
-    - $ref: "#/user-message_properties_messageStatus"
-
-#properties
-user-message_properties_id:
-  properties:
-    id:
-      $ref: "#/user-message_id"
-user-message_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/user-message_creationDate"
-user-message_properties_text:
-  properties:
-    text:
-      $ref: "#/user-message_text"
-user-message_properties_toUserId:
-  properties:
-    toUserId:
-      $ref: "#/user-message_toUserId"
-user-message_properties_fromUserId:
-  properties:
-    fromUserId:
-      $ref: "#/user-message_fromUserId"
-user-message_properties_messageStatusId:
-  properties:
-    messageStatusId:
-      $ref: "#/user-message_messageStatusId"
-
-user-message_properties_toUser:
-  properties:
-    toUser:
-      $ref: "#/user-message_toUser"
-user-message_properties_fromUser:
-  properties:
-    fromUser:
-      $ref: "#/user-message_fromUser"
-user-message_properties_messageStatus:
-  properties:
-    messageStatus:
-      $ref: "#/user-message_messageStatus"
-
 #attributes
-user-message_id:
-  type: integer
-  example: 1
 user-message_creationDate:
   type: string
   format: date-time
@@ -72,6 +6,8 @@ user-message_creationDate:
 user-message_text:
   type: string
   example: Foo bar
+
+#relationship attributes
 user-message_toUserId:
   type: integer
   example: 1
@@ -85,24 +21,34 @@ user-message_messageStatusId:
   example: 1
   description: Relationship to message_messageStatus
 
+#relationships
 user-message_toUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+   - id
 user-message_fromUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+   - id
 user-message_messageStatus:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to message_messageStatus
+  required: 
+    - id

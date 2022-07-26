@@ -1,58 +1,102 @@
 JsonApiModel_user:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user_type"
     id:
       $ref: "#/JsonApiModel_user_id"
     attributes:
-      allOf:
-        - $ref: "../../library/user/user.yaml#/user_attributes"
-    # relationships:
-    #   $ref: "#/JsonApiModel_user_relationships"
-    #   attributes:
-    #     allOf:
-    #       $ref: "../../library/user/user.yaml#/user_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        firstName:
+          $ref: "../../library/user/user.yaml#/user_firstName"
+        lastName:
+          $ref: "../../library/user/user.yaml#/user_lastName"
+        email:
+          $ref: "../../library/user/user.yaml#/user_email"
+        skype:
+          $ref: "../../library/user/user.yaml#/user_skype"
+        password:
+          $ref: "../../library/user/user.yaml#/user_password"
+        phone:
+          $ref: "../../library/user/user.yaml#/user_phone"
+        optin:
+          $ref: "../../library/user/user.yaml#/user_optin"
+        active:
+          $ref: "../../library/user/user.yaml#/user_active"
+        creationDate:
+          $ref: "../../library/user/user.yaml#/user_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/user/user.yaml#/user_latestUpdateDate"
+        authToken:
+          $ref: "../../library/user/user.yaml#/user_authToken"
+        latestLoginDate:
+          $ref: "../../library/user/user.yaml#/user_latestLoginDate"
+        encryptedPassword:
+          $ref: "../../library/user/user.yaml#/user_encryptedPassword"
+        allowLogin:
+          $ref: "../../library/user/user.yaml#/user_allowLogin"
+        thDoNotContact:
+          $ref: "../../library/user/user.yaml#/user_thDoNotContact"
+        latestMessageViewDate:
+          $ref: "../../library/user/user.yaml#/user_latestMessageViewDate"
+        # relationship attributes
+        profile:
+          $ref: "../../library/user/user.yaml#/user_profile"
+          #profile - check with RR
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        phoneCodeCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        profile:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        phoneCodeCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    profile:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    creationUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    latestUpdateUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    phoneCodeCountry:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-
 JsonApiModel_user_type:
   type: string
   example: user
-  description: user
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_user_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_user_id"
+  required:
+    - id
 
 JsonApiModel_user_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_user_type"

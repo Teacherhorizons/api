@@ -12,7 +12,7 @@ JsonApiModel_user-favouriteJob:
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/user/favoriteJob.yaml#/user-favouriteJob_creationDate"  
+          $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_creationDate"  
         # relationship attributes
         user:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -26,12 +26,6 @@ JsonApiModel_user-favouriteJob:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         job:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
-#creationDate
-#userId
-#jobId
-#user
-#job
   required:
     - type
     - id

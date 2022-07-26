@@ -1,45 +1,41 @@
 JsonApiModel_user-thUser:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_user-thUser_type"
     id:
       $ref: "#/JsonApiModel_user-thUser_id"
     attributes:
-      $ref: "#/JsonApiModel_user-thUser_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        initials:
+          $ref: "../../library/user/thUser.yaml#/user-thUser_initials"
+        activeInTH:
+          $ref: "../../library/user/thUser.yaml#/user-thUser_activeInTH"
+      # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_user-thUser_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user-thUser_attributes:
-  type: object
-  properties:
-    # simple attributes
-    initials:
-      $ref: "../../library/user/thUser.yaml#/user-thUser_initials"
-    activeInTH:
-      $ref: "../../library/user/thUser.yaml#/user-thUser_activeInTH"
-   # relationship attributes
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_user-thUser_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    user:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_user-thUser_type:
   type: string
   example: user-thUser
-  description: user-thUser
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_user-thUser_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the user-thUser (string)
+  description: Unique identifier of the entity (string)
