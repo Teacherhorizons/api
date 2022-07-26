@@ -1,10 +1,23 @@
 get:
-  operationId: getmanualEmailTemplates
+  operationId: getManualEmailTemplates
   tags:
     - general
     - status-proposed
   summary: Get manual email templates
+  description: |
+    - admin schema: Responds with only templates where isVisibleToAdmin is true
+    - teacher schema: Responds with only templates where isVisibleToTeacher is true
+    - school schema: Responds with only templates where isVisibleToSchool is true
   parameters:
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - admin
+          - school
+          - teacher
     - in: query
       name: filter
       style: deepObject
@@ -12,8 +25,11 @@ get:
       explode: true
       schema:
         type: object
+        properties:
+          filter[id][contains]:
+            type: string
         example:
-          id,contains: 1,3
+          id][contains: 1,3
 
   responses:
     "200":
@@ -22,7 +38,7 @@ get:
         application/json:
           schema:
             # TODO: check (not multiple?)
-            $ref: "../../components/responses/general/manualEmailTemplate.yaml#/Response_general-manualEmailTemplate"
+            $ref: "../../components/responses/general/manualEmailTemplates.yaml#/Response_general-manualEmailTemplates"
     "400":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":

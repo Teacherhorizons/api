@@ -15,6 +15,13 @@ SimpleModel_general-manualEmailTemplate:
       $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
     body:
       $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+    isVisibleToAdmin:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_isVisibleToAdmin"
+    isVisibleToSchool:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_isVisibleToSchool"
+    isVisibleToTeacher:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_isVisibleToTeacher"
+
   required:
     - id
     - name
