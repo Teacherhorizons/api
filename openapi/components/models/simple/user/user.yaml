@@ -3,7 +3,7 @@ SimpleModel_user:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_user_id"
+      $ref: "#/SimpleModel_user-user_id"
     # simple attributes
     firstName:
       $ref: "../../library/user/user.yaml#/user_firstName"
@@ -50,7 +50,8 @@ SimpleModel_user:
     - id
 
 # shared
-SimpleModel_user_id:
+SimpleModel_user-user_id:
+#check with RR
   type: integer
   format: int32
   example: 1

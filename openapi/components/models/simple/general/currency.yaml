@@ -40,6 +40,7 @@ SimpleModel_general-currency_admin:
     latestUpdateUserId:
       $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateUserId"
   required:
+    - schema
     - id
     - code
     - symbol
@@ -67,6 +68,7 @@ SimpleModel_general-currency_school:
     name:
       $ref: "../../library/general/currency.yaml#/general-currency_name"
   required:
+    - schema
     - id
     - code
     - symbol
@@ -90,6 +92,7 @@ SimpleModel_general-currency_teacher:
     name:
       $ref: "../../library/general/currency.yaml#/general-currency_name"
   required:
+    - schema
     - id
     - code
     - symbol

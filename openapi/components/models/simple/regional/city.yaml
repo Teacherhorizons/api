@@ -46,6 +46,8 @@ SimpleModel_regional-city_admin:
     latestUpdateUserId:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions
@@ -81,6 +83,8 @@ SimpleModel_regional-city_school:
     locationLongitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions
@@ -112,6 +116,8 @@ SimpleModel_regional-city_teacher:
     locationLongitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions

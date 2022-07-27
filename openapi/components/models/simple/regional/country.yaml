@@ -50,6 +50,8 @@ SimpleModel_regional-country_admin:
     latestUpdateUserId:
       $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateUserId"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions
@@ -89,6 +91,8 @@ SimpleModel_regional-country_school:
     locationLongitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions
@@ -124,6 +128,8 @@ SimpleModel_regional-country_teacher:
     locationLongitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAtrractions

@@ -64,6 +64,7 @@ SimpleModel_application-eventType_admin:
     applicationStatusId:
       $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
   required:
+    - schema
     - id
     - name
 
@@ -84,6 +85,7 @@ SimpleModel_application-eventType_school:
     applicationStatusId:
       $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
   required:
+    - schema
     - id
     - nameForSchool
 
@@ -104,6 +106,7 @@ SimpleModel_application-eventType_teacher:
     applicationStatusId:
       $ref: "../../library/application/eventType.yaml#/application-eventType_applicationStatusId"
   required:
+    - schema
     - id
 
 # id

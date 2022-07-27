@@ -7,14 +7,15 @@ SimpleModel_meta-entityType:
          # simple attributes
     name:
       $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
-
+  required:
+    - id
 # shared
 
-SimpleModel_meta-entityType_type:
-  type: string
-  example: meta-entityType
-  description: Unique identifier of the object type
-  readOnly: true
+# SimpleModel_meta-entityType_type:
+#   type: string
+#   example: meta-entityType
+#   description: Unique identifier of the object type
+#   readOnly: true
 
 SimpleModel_meta-entityType_id:
   type: integer

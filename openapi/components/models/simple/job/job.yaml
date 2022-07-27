@@ -3,7 +3,7 @@ SimpleModel_job:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_job_id"
+      $ref: "#/SimpleModel_job-job_id"
     # simple attributes
     startDate:
       $ref: "../../library/job/job.yaml#/job_startDate"
@@ -41,7 +41,8 @@ SimpleModel_job:
     - name
 
 # shared
-SimpleModel_job_id:
+SimpleModel_job-job_id:
+#check with RR - job id not allowed?
   type: integer
   format: int32
   example: 1

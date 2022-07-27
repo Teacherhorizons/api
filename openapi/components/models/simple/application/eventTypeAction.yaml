@@ -36,6 +36,8 @@ SimpleModel_application-eventTypeAction_all:
     autoEmailId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmailId"
   required:
+    - schema
+    - id
     - label
     - applicationEventType
     - actionType
@@ -65,6 +67,8 @@ SimpleModel_application-eventTypeAction_admin:
     autoEmailId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_autoEmailId"
   required:
+    - schema
+    - id
     - label
     - applicationEventType
     - actionType
@@ -88,6 +92,7 @@ SimpleModel_application-eventTypeAction_school:
     applicationEventTypeId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
   required:
+    - schema
     - id
     - label
     - applicationEventTypeId
@@ -109,6 +114,7 @@ SimpleModel_application-eventTypeAction_teacher:
     applicationEventTypeId:
       $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_applicationEventTypeId"
   required:
+    - schema
     - id
     - label
     - applicationEventTypeId
