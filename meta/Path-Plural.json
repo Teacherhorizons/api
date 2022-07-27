@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Path-Plural",
+  "definitions": {
+    "Path-Plural": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "get": {
+          "$ref": "#/definitions/Path-Plural-get"
+        }
+      },
+      "title": "Path-Plural"
+    },
+    "Path-Plural-get": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^get(Application|General|Job|Meta|Regional|School|Teacher|User)([a-zA-Z]*)s$"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "const": "application"
+              },
+              {
+                "const": "general"
+              },
+              {
+                "const": "job"
+              },
+              {
+                "const": "meta"
+              },
+              {
+                "const": "regional"
+              },
+              {
+                "const": "school"
+              },
+              {
+                "const": "teacher"
+              },
+              {
+                "const": "user"
+              }
+            ]
+          }
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array"
+        },
+        "responses": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "400": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400$"
+                }
+              }
+            },
+            "401": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401$"
+                }
+              }
+            },
+            "403": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403$"
+                }
+              }
+            },
+            "404": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404$"
+                }
+              }
+            },
+            "413": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413$"
+                }
+              }
+            },
+            "422": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

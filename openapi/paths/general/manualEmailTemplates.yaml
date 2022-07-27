@@ -1,8 +1,7 @@
 get:
-  operationId: getManualEmailTemplates
+  operationId: getGeneralManualEmailTemplates
   tags:
     - general
-    - status-proposed
   summary: Get manual email templates
   description: |
     - admin schema: Responds with only templates where isVisibleToAdmin is true
@@ -37,7 +36,6 @@ get:
       content:
         application/json:
           schema:
-            # TODO: check (not multiple?)
             $ref: "../../components/responses/general/manualEmailTemplates.yaml#/Response_general-manualEmailTemplates"
     "400":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
@@ -51,5 +49,3 @@ get:
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  security:
-    - api_key: []
