@@ -1,56 +1,51 @@
 JsonApiModel_school-teacherSchoolCommunityResponse:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_type"
     id:
       $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_id"
     attributes:
-      $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
+        creationDate:
+          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_latestUpdateDate"
+        # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school-teacherSchoolCommunityResponse_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school-teacherSchoolCommunityResponse_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
-    creationDate:
-      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_latestUpdateDate"
-
-    # relationship attributes
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school-teacherSchoolCommunityResponse_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school-teacherSchoolCommunityResponse_type:
   type: string
   example: school-teacherSchoolCommunityResponse
-  description: school-teacherSchoolCommunityResponse
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-teacherSchoolCommunityResponse_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-teacherSchoolCommunityResponse (string)
+  description: Unique identifier of the entity (string)

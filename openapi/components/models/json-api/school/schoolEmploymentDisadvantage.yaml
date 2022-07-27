@@ -1,53 +1,48 @@
 JsonApiModel_school-schoolEmploymentDisadvantage:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-schoolEmploymentDisadvantage_type"
     id:
       $ref: "#/JsonApiModel_school-schoolEmploymentDisadvantage_id"
     attributes:
-      $ref: "#/JsonApiModel_school-schoolEmploymentDisadvantage_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_name"
+        #type:
+        creationDate:
+          $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school-schoolEmploymentDisadvantage_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school-schoolEmploymentDisadvantage_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_name"
-    #type:
-    creationDate:
-      $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/school/schoolEmploymentDisadvantage.yaml#/school-schoolEmploymentDisadvantage_latestUpdateDate"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school-schoolEmploymentDisadvantage_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school-schoolEmploymentDisadvantage_type:
   type: string
   example: school-schoolEmploymentDisadvantage
-  description: school-schoolEmploymentDisadvantage
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-schoolEmploymentDisadvantage_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-schoolEmploymentDisadvantage (string)
+  description: Unique identifier of the entity (string)

@@ -1,18 +1,30 @@
 SimpleModel_school-teacherSchoolCommunityResponse:
-  allOf:
-    # - $ref: "#/SimpleModel_school-teacherSchoolCommunityResponse"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_school-teacherSchoolCommunityResponse_id"
-        - $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_attributes"
-        - $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_school-teacherSchoolCommunityResponse_id"
+    # simple attributes
+    name:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
+    creationDate:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_latestUpdateDate"
+    # relationship attributes
+    schoolId:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_schoolId"
+    creationUserId:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_latestUpdateUserId"
+  required:
+    - id
 
 # shared
 SimpleModel_school-teacherSchoolCommunityResponse_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

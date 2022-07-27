@@ -1,95 +1,4 @@
-school-schoolFacility_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-#filter properties
-
-# attributes
-school-schoolFacility_attributes:
-  allOf:
-    - $ref: "#/school-schoolFacility_properties_name"
-    - $ref: "#/school-schoolFacility_properties_creationDate"
-    - $ref: "#/school-schoolFacility_properties_latestUpdateDate"
-
-# relationshipIds
-school-schoolFacility_relationshipIds:
-  allOf:
-    - $ref: "#/school-schoolFacility_properties_schoolId"
-    - $ref: "#/school-schoolFacility_properties_creationUserId"
-    - $ref: "#/school-schoolFacility_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-schoolFacility_relationships:
-  allOf:
-    - $ref: "#/school-schoolFacility_properties_school"
-    - $ref: "#/school-schoolFacility_properties_creationUser"
-    - $ref: "#/school-schoolFacility_properties_latestUpdateUser"
-
-#properties
-school-schoolFacility_properties_id:
-  properties:
-    id:
-      $ref: "#/school-schoolFacility_id"
-
-school-schoolFacility_properties_name:
-  properties:
-    name:
-      $ref: "#/school-schoolFacility_name"
-
-school-schoolFacility_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-schoolFacility_creationDate"
-
-school-schoolFacility_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-schoolFacility_latestUpdateDate"
-
-school-schoolFacility_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-schoolFacility_creationUserId"
-
-school-schoolFacility_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-schoolFacility_latestUpdateUserId"
-
-school-schoolFacility_properties_schoolId:
-  properties:
-    typeId:
-      $ref: "#/school-schoolFacility_schoolId"
-
-school-schoolFacility_properties_school:
-  properties:
-    type:
-      $ref: "#/school-schoolFacility_school"
-
-school-schoolFacility_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-schoolFacility_creationUser"
-
-school-schoolFacility_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-schoolFacility_latestUpdateUser"
-
 #attributes
-school-schoolFacility_id:
-  type: integer
-  example: 1
-
 school-schoolFacility_name:
   type: string
   example: Outdoor Pitches
@@ -104,14 +13,7 @@ school-schoolFacility_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-schoolFacility_school:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-
+#relationship attributes
 school-schoolFacility_schoolId:
   type: integer
   example: 1
@@ -127,21 +29,40 @@ school-schoolFacility_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
+school-schoolFacility_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
 school-schoolFacility_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
-
+  required: 
+    - id
+  
 school-schoolFacility_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  
 
 
 

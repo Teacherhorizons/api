@@ -1,79 +1,4 @@
-
-
-# attributes
-school-teachingLanguage_attributes:
-  allOf:
-    - $ref: "#/school-teachingLanguage_properties_creationDate"
-    - $ref: "#/school-teachingLanguage_properties_latestUpdateDate"
-
-# relationshipIds
-school-teachingLanguage_relationshipIds:
-  allOf:
-    - $ref: "#/school-teachingLanguage_properties_schoolId"
-    - $ref: "#/school-teachingLanguage_properties_creationUserId"
-    - $ref: "#/school-teachingLanguage_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-teachingLanguage_relationships:
-  allOf:
-    - $ref: "#/school-teachingLanguage_properties_school"
-    - $ref: "#/school-teachingLanguage_properties_creationUser"
-    - $ref: "#/school-teachingLanguage_properties_latestUpdateUser"
-
-#properties
-school-teachingLanguage_properties_id:
-  properties:
-    id:
-      $ref: "#/school-teachingLanguage_id"
-
-school-teachingLanguage_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-teachingLanguage_creationDate"
-
-school-teachingLanguage_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-teachingLanguage_latestUpdateDate"
-
-school-teachingLanguage_properties_schoolId:
-  properties:
-    typeId:
-      $ref: "#/school-teachingLanguage_schoolId"
-
-school-teachingLanguage_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-teachingLanguage_creationUserId"
-
-school-teachingLanguage_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-teachingLanguage_latestUpdateUserId"
-
-school-teachingLanguage_properties_school:
-  properties:
-    type:
-      $ref: "#/school-teachingLanguage_school"
-
-
-school-teachingLanguage_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-teachingLanguage_creationUser"
-
-school-teachingLanguage_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-teachingLanguage_latestUpdateUser"
-
 #attributes
-school-teachingLanguage_id:
-  type: integer
-  example: 1
-
 school-teachingLanguage_creationDate:
   type: string
   format: date-time
@@ -84,14 +9,7 @@ school-teachingLanguage_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-teachingLanguage_school:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-
+#relationship attributes
 school-teachingLanguage_schoolId:
   type: integer
   example: 1
@@ -107,18 +25,36 @@ school-teachingLanguage_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
+school-teachingLanguage_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
 school-teachingLanguage_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 school-teachingLanguage_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id

@@ -1,121 +1,11 @@
-school-schoolEmploymentDisadvantage_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-
-# attributes
-school-schoolEmploymentDisadvantage_attributes:
-  allOf:
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_name"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_sequenceNumber"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_reason"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_creationDate"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_latestUpdateDate"
-
-# relationshipIds
-school-schoolEmploymentDisadvantage_relationshipIds:
-  allOf:
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_schoolId"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_creationUserId"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-school-schoolEmploymentDisadvantage_relationships:
-  allOf:
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_school"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_creationUser"
-    - $ref: "#/school-schoolEmploymentDisadvantage_properties_latestUpdateUser"
-
-#properties
-school-schoolEmploymentDisadvantage_properties_id:
-  properties:
-    id:
-      $ref: "#/school-schoolEmploymentDisadvantage_id"
-
-school-schoolEmploymentDisadvantage_properties_name:
-  properties:
-    name:
-      $ref: "#/school-schoolEmploymentDisadvantage_name"
-
-school-schoolEmploymentDisadvantage_properties_sequenceNumber:
-  properties:
-    name:
-      $ref: "#/school-schoolEmploymentDisadvantage_sequenceNumber"
-
-school-schoolEmploymentDisadvantage_properties_reason:
-  properties:
-    type:
-      $ref: "#/school-schoolEmploymentDisadvantage_reason"
-
-school-schoolEmploymentDisadvantage_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/school-schoolEmploymentDisadvantage_creationDate"
-
-school-schoolEmploymentDisadvantage_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/school-schoolEmploymentDisadvantage_latestUpdateDate"
-
-school-schoolEmploymentDisadvantage_properties_schoolId:
-  properties:
-    typeId:
-      $ref: "#/school-schoolEmploymentDisadvantage_schoolId"
-
-
-school-schoolEmploymentDisadvantage_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/school-schoolEmploymentDisadvantage_creationUserId"
-
-school-schoolEmploymentDisadvantage_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/school-schoolEmploymentDisadvantage_latestUpdateUserId"
-
-school-schoolEmploymentDisadvantage_properties_school:
-  properties:
-    type:
-      $ref: "#/school-schoolEmploymentDisadvantage_school"
-
-school-schoolEmploymentDisadvantage_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/school-schoolEmploymentDisadvantage_creationUser"
-
-school-schoolEmploymentDisadvantage_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/school-schoolEmploymentDisadvantage_latestUpdateUser"
-
 #attributes
-school-schoolEmploymentDisadvantage_id:
-  type: integer
-  example: 1
-
 school-schoolEmploymentDisadvantage_name:
   type: string
   example: Secondary Subject Teacher
 
 school-schoolEmploymentDisadvantage_sequenceNumber:
   type: string
-  example: 
-
-school-schoolEmploymentDisadvantage_reason:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Reason
+  example: ""
 
 school-schoolEmploymentDisadvantage_creationDate:
   type: string
@@ -127,14 +17,7 @@ school-schoolEmploymentDisadvantage_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-schoolEmploymentDisadvantage_school:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-
+#relationship attributes
 school-schoolEmploymentDisadvantage_schoolId:
   type: integer
   example: 1
@@ -150,18 +33,48 @@ school-schoolEmploymentDisadvantage_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
+school-schoolEmploymentDisadvantage_reason:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Reason
+  required: 
+    - id
+
+school-schoolEmploymentDisadvantage_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
 school-schoolEmploymentDisadvantage_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
 
 school-schoolEmploymentDisadvantage_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required: 
+    - id
+  

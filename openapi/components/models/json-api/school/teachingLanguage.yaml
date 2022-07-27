@@ -1,54 +1,49 @@
 JsonApiModel_school-teachingLanguage:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-teachingLanguage_type"
     id:
       $ref: "#/JsonApiModel_school-teachingLanguage_id"
     attributes:
-      $ref: "#/JsonApiModel_school-teachingLanguage_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_latestUpdateDate"
+        # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school-teachingLanguage_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school-teachingLanguage_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_latestUpdateDate"
-
-    # relationship attributes
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school-teachingLanguage_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    school:
-      $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school-teachingLanguage_type:
   type: string
   example: school-teachingLanguage
-  description: school-teachingLanguage
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-teachingLanguage_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-teachingLanguage (string)
+  description: Unique identifier of the entity (string)

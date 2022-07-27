@@ -1,67 +1,67 @@
 JsonApiModel_school-studentGenderMix:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-studentGenderMix_type"
     id:
       $ref: "#/JsonApiModel_school-studentGenderMix_id"
     attributes:
-      $ref: "#/JsonApiModel_school-studentGenderMix_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_name"
+        creationDate:
+          $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school-studentGenderMix_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school-studentGenderMix_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_name"
-    creationDate:
-      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_latestUpdateDate"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school-studentGenderMix_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school-studentGenderMix_type:
   type: string
   example: school-studentGenderMix
-  description: school-studentGenderMix
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school-studentGenderMix_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school-studentGenderMix (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_school-studentGenderMix_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_school-studentGenderMix_id"
+  required:
+    - id
 
 JsonApiModel_school-studentGenderMix_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_school-studentGenderMix_type"

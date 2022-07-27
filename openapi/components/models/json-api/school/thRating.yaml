@@ -1,25 +1,32 @@
 JsonApiModel_school-thRating:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school-thRating_type"
+    id:
+      $ref: "#/JsonApiModel_school-thRating_id"
     attributes:
-      $ref: "#/JsonApiModel_school-thRating_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/school/thRating.yaml#/school-thRating_thRating"
   required:
     - type
     - id
 
-JsonApiModel_school-thRating_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/school/thRating.yaml#/school-thRating_thRating"
-
 JsonApiModel_school-thRating_type:
   type: string
   example: school-thRating
-  description: school-thRating
+  description: Unique identifier of the entity type
   readOnly: true
+
+JsonApiModel_school-thRating_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
 
 
