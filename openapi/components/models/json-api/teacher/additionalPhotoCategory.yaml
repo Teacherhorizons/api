@@ -1,31 +1,30 @@
 JsonApiModel_teacher-additionalPhotoCategory:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-additionalPhotoCategory_type"
     id:
       $ref: "#/JsonApiModel_teacher-additionalPhotoCategory_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-additionalPhotoCategory_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/additionalPhotoCategory.yaml#/teacher-additionalPhotoCategory_name"
   required:
     - type
     - id
 
-JsonApiModel_teacher-additionalPhotoCategory_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/additionalPhotoCategory.yaml#/teacher-additionalPhotoCategory_name"
-
 JsonApiModel_teacher-additionalPhotoCategory_type:
   type: string
   example: teacher-additionalPhotoCategory
-  description: teacher-additionalPhotoCategory
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-additionalPhotoCategory_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-additionalPhotoCategory (string)
+  description: Unique identifier of the entity (string)

@@ -1,31 +1,30 @@
 JsonApiModel_teacher-maritalStatus:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-maritalStatus_type"
     id:
       $ref: "#/JsonApiModel_teacher-maritalStatus_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-maritalStatus_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/maritalStatus.yaml#/teacher-maritalStatus_name"
   required:
     - type
     - id
 
-JsonApiModel_teacher-maritalStatus_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/maritalStatus.yaml#/teacher-maritalStatus_name"
-
 JsonApiModel_teacher-maritalStatus_type:
   type: string
   example: teacher-maritalStatus
-  description: teacher-maritalStatus
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-maritalStatus_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-maritalStatus (string)
+  description: Unique identifier of the entity (string)

@@ -1,54 +1,49 @@
 JsonApiModel_teacher-noteType:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-noteType_type"
     id:
       $ref: "#/JsonApiModel_teacher-noteType_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-noteType_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_name"  
+        precedence:
+          $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_precedence"  
+        creationDate:
+          $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-noteType_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-noteType_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_name"  
-    precedence:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_precedence"  
-    creationDate:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_latestUpdateDate"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_teacher-noteType_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_teacher-noteType_type:
   type: string
   example: teacher-noteType
-  description: teacher-noteType
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-noteType_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-noteType (string)
+  description: Unique identifier of the entity (string)

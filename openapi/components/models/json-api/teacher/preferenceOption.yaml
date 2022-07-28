@@ -1,33 +1,32 @@
 JsonApiModel_teacher-preferenceOption:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-preferenceOption_type"
     id:
       $ref: "#/JsonApiModel_teacher-preferenceOption_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-preferenceOption_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_name"
+        precedence:
+          $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_precedence"
   required:
     - type
     - id
 
-JsonApiModel_teacher-preferenceOption_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_name"
-    precedence:
-      $ref: "../../library/teacher/preferenceOption.yaml#/teacher-preferenceOption_name"
-
 JsonApiModel_teacher-preferenceOption_type:
   type: string
   example: teacher-preferenceOption
-  description: teacher-preferenceOption
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-preferenceOption_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-preferenceOption (string)
+  description: Unique identifier of the entity (string)

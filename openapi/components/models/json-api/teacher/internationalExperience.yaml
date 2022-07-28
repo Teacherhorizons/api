@@ -1,31 +1,30 @@
 JsonApiModel_teacher-internationalExperience:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-internationalExperience_type"
     id:
       $ref: "#/JsonApiModel_teacher-internationalExperience_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-internationalExperience_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
   required:
     - type
     - id
 
-JsonApiModel_teacher-internationalExperience_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
-
 JsonApiModel_teacher-internationalExperience_type:
   type: string
   example: teacher-internationalExperience
-  description: teacher-internationalExperience
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-internationalExperience_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-internationalExperience (string)
+  description: Unique identifier of the entity (string)

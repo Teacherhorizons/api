@@ -1,69 +1,66 @@
 
-# attributes
-teacher-noteType_attributes:
-  allOf:
-    - $ref: "#/teacher-noteType_properties_name"
-    - $ref: "#/teacher-noteType_properties_creationDate"
-    - $ref: "#/teacher-noteType_properties_latestUpdateDate"
-    - $ref: "#/teacher-noteType_properties_precedence"
+# # attributes
+# teacher-noteType_attributes:
+#   allOf:
+#     - $ref: "#/teacher-noteType_properties_name"
+#     - $ref: "#/teacher-noteType_properties_creationDate"
+#     - $ref: "#/teacher-noteType_properties_latestUpdateDate"
+#     - $ref: "#/teacher-noteType_properties_precedence"
 
-# relationshipIds
-teacher-noteType_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-noteType_properties_creationUserId"
-    - $ref: "#/teacher-noteType_properties_latestUpdateUserId"
+# # relationshipIds
+# teacher-noteType_relationshipIds:
+#   allOf:
+#     - $ref: "#/teacher-noteType_properties_creationUserId"
+#     - $ref: "#/teacher-noteType_properties_latestUpdateUserId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-teacher-noteType_relationships:
-  allOf:
-    - $ref: "#/teacher-noteType_properties_creationUser"
-    - $ref: "#/teacher-noteType_properties_latestUpdateUser"
+# # relationships
+# teacher-noteType_relationships:
+#   allOf:
+#     - $ref: "#/teacher-noteType_properties_creationUser"
+#     - $ref: "#/teacher-noteType_properties_latestUpdateUser"
 
 
-#properties
-teacher-noteType_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-noteType_id"
-teacher-noteType_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-noteType_name"
-teacher-noteType_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/teacher-noteType_creationDate"
-teacher-noteType_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-noteType_creationUserId"
-teacher-noteType_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-noteType_latestUpdateDate"
-teacher-noteType_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-noteType_latestUpdateUserId"
-teacher-noteType_properties_precedence:
-  properties:
-    precedence:
-      $ref: "#/teacher-noteType_precedence"
-teacher-noteType_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-noteType_creationUser"
-teacher-noteType_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-noteType_latestUpdateUser"
+# #properties
+# teacher-noteType_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/teacher-noteType_id"
+# teacher-noteType_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/teacher-noteType_name"
+# teacher-noteType_properties_creationDate:
+#   properties:
+#     creationDate:
+#       $ref: "#/teacher-noteType_creationDate"
+# teacher-noteType_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/teacher-noteType_creationUserId"
+# teacher-noteType_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/teacher-noteType_latestUpdateDate"
+# teacher-noteType_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/teacher-noteType_latestUpdateUserId"
+# teacher-noteType_properties_precedence:
+#   properties:
+#     precedence:
+#       $ref: "#/teacher-noteType_precedence"
+# teacher-noteType_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/teacher-noteType_creationUser"
+# teacher-noteType_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/teacher-noteType_latestUpdateUser"
 
 #attributes
-teacher-noteType_id:
-  type: integer
-  example: 1
 teacher-noteType_name:
   type: string
   example: Interview
@@ -71,32 +68,44 @@ teacher-noteType_creationDate:
   type: string
   format: date-time
   example: 2020-11-10T13:46:34Z
-teacher-noteType_creationUserId:
-  type: integer
-  example: 3
-  description: Relationship to user
 teacher-noteType_latestUpdateDate:
   type: string
   format: date-time
   example: 2020-11-10T13:46:34Z
+
+#relationship attributes
+teacher-noteType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
 teacher-noteType_latestUpdateUserId:
   type: integer
-  example: 3
+  example: 1
   description: Relationship to user
 teacher-noteType_precedence:
   type: integer
   example: 10
+
+#relationships
 teacher-noteType_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 teacher-noteType_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id

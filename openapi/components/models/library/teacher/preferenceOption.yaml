@@ -1,32 +1,28 @@
 
-# attributes
-teacher-preferenceOption_attributes:
-  allOf:
-    - $ref: "#/teacher-preferenceOption_properties_name"
-    - $ref: "#/teacher-preferenceOption_properties_precedence"
+# # attributes
+# teacher-preferenceOption_attributes:
+#   allOf:
+#     - $ref: "#/teacher-preferenceOption_properties_name"
+#     - $ref: "#/teacher-preferenceOption_properties_precedence"
 
-#properties
-teacher-preferenceOption_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-preferenceOption_id"
+# #properties
+# teacher-preferenceOption_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/teacher-preferenceOption_id"
 
-teacher-preferenceOption_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-preferenceOption_name"
+# teacher-preferenceOption_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/teacher-preferenceOption_name"
 
-teacher-preferenceOption_properties_precedence:
-  properties:
-    precedence:
-      $ref: "#/teacher-preferenceOption_precedence"
+# teacher-preferenceOption_properties_precedence:
+#   properties:
+#     precedence:
+#       $ref: "#/teacher-preferenceOption_precedence"
 
 
 #attributes
-teacher-preferenceOption_id:
-  type: integer
-  example: 1
-
 teacher-preferenceOption_name:
   type: string
   example: Important

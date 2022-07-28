@@ -1,37 +1,36 @@
 JsonApiModel_teacher-badge:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-badge_type"
     id:
       $ref: "#/JsonApiModel_teacher-badge_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-badge_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/badge.yaml#/teacher-badge_name"
+        precedence:
+          $ref: "../../library/teacher/badge.yaml#/teacher-badge_precedence"
+        slug:
+          $ref: "../../library/teacher/badge.yaml#/teacher-badge_slug"
+        isAutomated:
+          $ref: "../../library/teacher/badge.yaml#/teacher-badge_isAutomated"
   required:
     - type
     - id
 
-JsonApiModel_teacher-badge_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/badge.yaml#/teacher-badge_name"
-    precedence:
-      $ref: "../../library/teacher/badge.yaml#/teacher-badge_precedence"
-    slug:
-      $ref: "../../library/teacher/badge.yaml#/teacher-badge_slug"
-    isAutomated:
-      $ref: "../../library/teacher/badge.yaml#/teacher-badge_isAutomated"
-
 JsonApiModel_teacher-badge_type:
   type: string
   example: teacher-badge
-  description: teacher-badge
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-badge_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-badge (string)
+  description: Unique identifier of the entity (string)
