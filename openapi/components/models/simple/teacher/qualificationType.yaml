@@ -1,18 +1,28 @@
 SimpleModel_teacher-qualificationType:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-qualificationType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-qualificationType_id"
-        - $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_attributes"
-        - $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_relationships"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_teacher-qualificationType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_name"
+    creationDate:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_latestUpdateUserId"
+  required:
+    - id
 
 # shared
 SimpleModel_teacher-qualificationType_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

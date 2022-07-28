@@ -1,79 +1,4 @@
-
-# attributes
-teacher-teacherBadge_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherBadge_properties_creationDate"
-    - $ref: "#/teacher-teacherBadge_properties_latestUpdateDate"
-
-# relationshipIds
-teacher-teacherBadge_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherBadge_properties_teacherId"
-    - $ref: "#/teacher-teacherBadge_properties_teacherBadgeId"
-    - $ref: "#/teacher-teacherBadge_properties_creationUserId"
-    - $ref: "#/teacher-teacherBadge_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-teacher-teacherBadge_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherBadge_properties_teacher"
-    - $ref: "#/teacher-teacherBadge_properties_teacherBadge"
-    - $ref: "#/teacher-teacherBadge_properties_creationUser"
-    - $ref: "#/teacher-teacherBadge_properties_latestUpdateUser"
-
-#properties
-teacher-teacherBadge_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherBadge_id"
-teacher-teacherBadge_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/teacher-teacherBadge_creationDate"
-teacher-teacherBadge_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-teacherBadge_latestUpdateDate"
-teacher-teacherBadge_properties_teacherId:
-  properties:
-    teacherId:
-      $ref: "#/teacher-teacherBadge_teacherId"
-teacher-teacherBadge_properties_teacherBadgeId:
-  properties:
-    teacherBadgeId:
-      $ref: "#/teacher-teacherBadge_teacherBadgeId"
-teacher-teacherBadge_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-teacherBadge_creationUserId"
-teacher-teacherBadge_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-teacherBadge_latestUpdateUserId"
-teacher-teacherBadge_properties_teacher:
-  properties:
-    teacher:
-      $ref: "#/teacher-teacherBadge_teacher"
-teacher-teacherBadge_properties_teacherBadge:
-  properties:
-    teacherBadge:
-      $ref: "#/teacher-teacherBadge_teacherBadge"
-teacher-teacherBadge_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-teacherBadge_creationUser"
-teacher-teacherBadge_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-teacherBadge_latestUpdateUser"
-
 #attributes
-teacher-teacherBadge_id:
-  type: integer
-  example: 1
-  description: auto
 teacher-teacherBadge_creationDate:
   type: string
   format: date-time
@@ -82,6 +7,8 @@ teacher-teacherBadge_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+
+#relationship attributes 
 teacher-teacherBadge_teacherId:
   type: integer
   example: 1
@@ -98,34 +25,49 @@ teacher-teacherBadge_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
+
+#relationships
 teacher-teacherBadge_teacher:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher
+  required: 
+    - id
 teacher-teacherBadge_teacherBadge:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-badge
+  required: 
+    - id
 teacher-teacherBadge_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
 teacher-teacherBadge_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 
 
 

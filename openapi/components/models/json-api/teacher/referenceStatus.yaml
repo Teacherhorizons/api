@@ -1,31 +1,30 @@
 JsonApiModel_teacher-referenceStatus:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-referenceStatus_type"
     id:
       $ref: "#/JsonApiModel_teacher-referenceStatus_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-referenceStatus_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/referenceStatus.yaml#/teacher-referenceStatus_name"
   required:
     - type
     - id
 
-JsonApiModel_teacher-referenceStatus_attributes:
-  type: object
-  properties:
-    # simple attributes
-    name:
-      $ref: "../../library/teacher/referenceStatus.yaml#/teacher-referenceStatus_name"
-
 JsonApiModel_teacher-referenceStatus_type:
   type: string
   example: teacher-referenceStatus
-  description: teacher-referenceStatus
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-referenceStatus_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-referenceStatus (string)
+  description: Unique identifier of the entity (string)

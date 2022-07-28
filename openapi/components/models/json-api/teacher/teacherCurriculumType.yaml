@@ -1,54 +1,49 @@
 JsonApiModel_teacher-teacherCurriculumType:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherCurriculumType_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherCurriculumType_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        curriculumType:
+          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherCurriculumType_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_latestUpdateDate"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_teacher-teacherCurriculumType_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    curriculumType:
-      $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_teacher-teacherCurriculumType_type:
   type: string
   example: teacher-teacherCurriculumType
-  description: teacher-teacherCurriculumType
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherCurriculumType_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherCurriculumType (string)
+  description: Unique identifier of the entity (string)

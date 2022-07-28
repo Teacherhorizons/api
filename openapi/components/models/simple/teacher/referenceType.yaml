@@ -1,28 +1,27 @@
 SimpleModel_teacher-referenceType:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-referenceType"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-referenceType_type"
-        - $ref: "#/SimpleModel_teacher-referenceType_id"
-        - $ref: "../../library/teacher/referenceType.yaml#/teacher-referenceType_properties_name"
-
-# shared
-
-SimpleModel_teacher-referenceType_type:
+  type: object
+  additionalProperties: false
   properties:
-    type:
-      type: string
-      example: teacher-referenceType
-      description: teacher-referenceType
-      readOnly: true
+    id: 
+      $ref: "#/SimpleModel_teacher-referenceType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/referenceType.yaml#/teacher-referenceType_name"
+  required:
+    - id
+# shared
+# SimpleModel_teacher-referenceType_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-referenceType
+#       description: teacher-referenceType
+#       readOnly: true
 
 SimpleModel_teacher-referenceType_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 
