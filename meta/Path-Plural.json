@@ -8,6 +8,9 @@
       "properties": {
         "get": {
           "$ref": "#/definitions/Path-Plural-get"
+        },
+        "post": {
+          "$ref": "#/definitions/Path-Plural-post"
         }
       },
       "title": "Path-Plural"
@@ -58,12 +61,65 @@
           "type": "string"
         },
         "parameters": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Path-Plural-parameter"
+              },
+              {
+                "$ref": "#/definitions/Path-Plural-deepParameter"
+              }
+            ]
+          }
         },
         "responses": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "200": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "application/json": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "schema": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "$ref": {
+                              "type": "string",
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)$"
+                            }
+                          },
+                          "required": [
+                            "$ref"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "schema"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "application/json"
+                  ]
+                }
+              },
+              "required": [
+                "description"
+              ]
+            },
             "400": {
               "type": "object",
               "additionalProperties": false,
@@ -126,7 +182,345 @@
             }
           }
         }
-      }
+      },
+      "required": [
+        "operationId",
+        "tags",
+        "summary",
+        "parameters",
+        "responses"
+      ],
+      "title": "Path-Plural-get"
+    },
+    "Path-Plural-post": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^post(Application|General|Job|Meta|Regional|School|Teacher|User)([a-zA-Z]*)$"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "const": "application"
+              },
+              {
+                "const": "general"
+              },
+              {
+                "const": "job"
+              },
+              {
+                "const": "meta"
+              },
+              {
+                "const": "regional"
+              },
+              {
+                "const": "school"
+              },
+              {
+                "const": "teacher"
+              },
+              {
+                "const": "user"
+              }
+            ]
+          }
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "requestBody": {
+          "type": "object",
+          "content": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "application/json": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "$ref": {
+                        "type": "string",
+                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)$"
+                      }
+                    },
+                    "required": [
+                      "$ref"
+                    ]
+                  }
+                },
+                "required": [
+                  "schema"
+                ]
+              }
+            },
+            "required": [
+              "application/json"
+            ]
+          }
+        },
+        "responses": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "201": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "application/json": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "schema": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "$ref": {
+                              "type": "string",
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)$"
+                            }
+                          },
+                          "required": [
+                            "$ref"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "schema"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "application/json"
+                  ]
+                }
+              },
+              "required": [
+                "description"
+              ]
+            },
+            "400": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400$"
+                }
+              }
+            },
+            "401": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401$"
+                }
+              }
+            },
+            "403": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403$"
+                }
+              }
+            },
+            "404": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404$"
+                }
+              }
+            },
+            "413": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413$"
+                }
+              }
+            },
+            "422": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422$"
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "operationId",
+        "tags",
+        "summary",
+        "responses"
+      ],
+      "title": "Path-Plural-post"
+    },
+    "Path-Plural-parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "in": {
+          "type": "string",
+          "const": "query"
+        },
+        "name": {
+          "type": "string"
+        },
+        "example": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean",
+          "const": true
+        },
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "enum": {
+              "type": "array"
+            }
+          },
+          "required": []
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "title": "Path-Plural-parameter"
+    },
+    "Path-Plural-deepParameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "in": {
+          "type": "string",
+          "const": "query"
+        },
+        "name": {
+          "type": "string"
+        },
+        "style": {
+          "type": "string",
+          "const": "deepObject"
+        },
+        "allowReserved": {
+          "type": "boolean",
+          "const": true
+        },
+        "explode": {
+          "type": "boolean",
+          "const": true
+        },
+        "required": {
+          "type": "boolean",
+          "const": true
+        },
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "object"
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "const": false
+            },
+            "properties": {
+              "type": "object",
+              "additionalProperties": false,
+              "patternProperties": {
+                "^filter[[][a-zA-Z.]*][[](contains|matches|lte|gte)]$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "string"
+                        },
+                        {
+                          "const": "number"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                },
+                "^page[[](number|size)]$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "number"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                }
+              }
+            },
+            "example": {
+              "type": "object"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": []
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "title": "Path-Plural-parameter"
     }
   }
 }
