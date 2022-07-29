@@ -1,80 +1,62 @@
-import { api, setupBeforeAll, setup, signIn, signOut, data } from '../shared';
+import { addTestGroups, api, setupBeforeAll, signIn, data, compareFnGenerator } from '../shared';
 
-export interface Test {
-  getUrl: (data: Config.Data) => string;
-  userEmail: string;
-  expectedStatus: number;
-  expectedDataLength?: number;
-}
+var tests = addTestGroups(
+  [],
+  [
+    {
+      getUrl: (data) =>
+        `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[0].id}`,
+      tests: [
+        {
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          expectedDataLength: 5,
+          signIn: true,
+        },
+        {
+          userEmail: 'school1@th.test',
+          expectedStatus: 401,
+          signIn: true,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[1].id}`,
+      tests: [
+        {
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          expectedDataLength: 2,
+        },
+        {
+          userEmail: 'school1@th.test',
+          expectedStatus: 401,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationEvents?schema=school&filter[application.id]=${data.applications[0].id}`,
+      tests: [
+        {
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          expectedDataLength: 2,
+        },
+      ],
+    },
+  ]
+);
 
-export interface TestGroup {
-  getUrl: (data: Config.Data) => string;
-  tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength'>[];
-}
+tests = tests.sort(compareFnGenerator(['userEmail']));
 
-const tests: Test[] = [];
-
-const addTestGroup = (testGroup: TestGroup) => {
-  testGroup.tests.forEach((testGroupTest) => {
-    tests.push({ getUrl: testGroup.getUrl, ...testGroupTest });
-  });
-};
-
-const addTestGroups = (testGroups: TestGroup[]) => {
-  testGroups.forEach(addTestGroup);
-};
-
-addTestGroups([
-  {
-    getUrl: (data) =>
-      `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[0].id}`,
-    tests: [
-      {
-        userEmail: 'admin@th.test',
-        expectedStatus: 200,
-        expectedDataLength: 5,
-      },
-      {
-        userEmail: 'school1@th.test',
-        expectedStatus: 401,
-      },
-    ],
-  },
-  {
-    getUrl: (data) =>
-      `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[1].id}`,
-    tests: [
-      {
-        userEmail: 'admin@th.test',
-        expectedStatus: 200,
-        expectedDataLength: 2,
-      },
-      {
-        userEmail: 'school1@th.test',
-        expectedStatus: 401,
-      },
-    ],
-  },
-  {
-    getUrl: (data) => `application-applicationEvents?schema=school&filter[application.id]=${data.applications[0].id}`,
-    tests: [
-      {
-        userEmail: 'admin@th.test',
-        expectedStatus: 200,
-        expectedDataLength: 2,
-      },
-    ],
-  },
-]);
-
-describe('test.each WIP1', () => {
+describe('Sign in every user', () => {
   beforeAll(async () => {
-    // await signIn('admin@th.test');
     await setupBeforeAll();
   });
 
-  test.each(tests)('test.each WIP2', async (fooTest: Test) => {
-    await signIn(fooTest.userEmail);
+  test.each(tests)('Sign in every user - $userEmail - $signIn', async (fooTest: Test.Test) => {
+    if (fooTest.signIn) await signIn(fooTest.userEmail);
     const url = fooTest.getUrl(data);
     try {
       const response = await api.get(url);

@@ -43,8 +43,8 @@ export function setup(context = {}) {
   beforeAll(async () => {
     try {
       if (config.createTestData) data = await addTestData();
-      shell.exec('npm run build-yaml');
-      jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
+      // shell.exec('npm run build-yaml');
+      // jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
       console.log('setup - beforeAll:', error);
     }
@@ -102,3 +102,40 @@ export const setApi = signIn;
 //   await api.post('user/sign-out');
 //   // console.log('sign out successful');
 // };
+
+// TODO: move elsewhere
+export function compareFnGenerator<T extends object>(
+  keys: (keyof T | Sort.SortConfig<T>)[]
+): (a: T, b: T) => 0 | 1 | -1 {
+  // use to generate a compare function for sorting
+  // based on: https://stackoverflow.com/a/56192318 (improved)
+  // e.g. foos.sort(compareFnGenerator<Bar.Foo>(['baz', { key: 'qux', reverse: true }]));
+  // e.g. foos.sort(compareFnGenerator<Bar.Foo>([{ key: 'quux', map: (x: number) => (x === -1)]));
+  return function (a: T, b: T) {
+    const firstKey: keyof T | Sort.SortConfig<T> = keys[0];
+    const isSimple = typeof firstKey === 'string';
+    const key: keyof T = isSimple ? (firstKey as keyof T) : (firstKey as Sort.SortConfig<T>).key;
+    const reverse: boolean = isSimple ? false : !!(firstKey as Sort.SortConfig<T>).reverse;
+    const map: Sort.ItemMap | null = isSimple ? null : (firstKey as Sort.SortConfig<T>).map || null;
+
+    const valA = map ? map(a[key]) : a[key];
+    const valB = map ? map(b[key]) : b[key];
+
+    if (valA > valB) return reverse ? -1 : 1;
+    if (valA < valB) return reverse ? 1 : -1;
+    if (keys.length === 1) return 0;
+    return compareFnGenerator(keys.slice(1))(a, b);
+  };
+}
+
+export const addTestGroup = (tests: Test.Test[], testGroup: Test.TestGroup) => {
+  testGroup.tests.forEach((testGroupTest) => {
+    tests.push({ getUrl: testGroup.getUrl, ...testGroupTest });
+  });
+  return tests;
+};
+
+export const addTestGroups = (tests: Test.Test[], testGroups: Test.TestGroup[]) => {
+  testGroups.forEach((testGroup) => (tests = addTestGroup(tests, testGroup)));
+  return tests;
+};

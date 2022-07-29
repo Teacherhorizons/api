@@ -34,3 +34,29 @@ declare namespace JsonApi {
     | 'teacher'
     | 'user';
 }
+
+// TODO: move elsewhere
+declare namespace Sort {
+  export type ItemMap = (n: any) => any;
+
+  export interface SortConfig<T> {
+    key: keyof T;
+    reverse?: boolean;
+    map?: ItemMap;
+  }
+}
+
+declare namespace Test {
+  export interface Test {
+    getUrl: (data: Config.Data) => string;
+    userEmail: string;
+    expectedStatus: number;
+    expectedDataLength?: number;
+    signIn?: boolean;
+  }
+
+  export interface TestGroup {
+    getUrl: (data: Config.Data) => string;
+    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'signIn'>[];
+  }
+}
