@@ -1,79 +1,4 @@
-
-# attributes
-teacher-teacherEducationLevel_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherEducationLevel_properties_creationDate"
-    - $ref: "#/teacher-teacherEducationLevel_properties_latestUpdateDate"
-
-# relationshipIds
-teacher-teacherEducationLevel_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherEducationLevel_properties_teacherId"
-    - $ref: "#/teacher-teacherEducationLevel_properties_educationLevelId"
-    - $ref: "#/teacher-teacherEducationLevel_properties_creationUserId"
-    - $ref: "#/teacher-teacherEducationLevel_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-teacher-teacherEducationLevel_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherEducationLevel_properties_teacher"
-    - $ref: "#/teacher-teacherEducationLevel_properties_educationLevel"
-    - $ref: "#/teacher-teacherEducationLevel_properties_creationUser"
-    - $ref: "#/teacher-teacherEducationLevel_properties_latestUpdateUser"
-
-#properties
-teacher-role_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherEducationLevel_id"
-teacher-teacherEducationLevel_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/teacher-teacherEducationLevel_creationDate"
-teacher-teacherEducationLevel_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-teacherEducationLevel_latestUpdateDate"
-teacher-teacherEducationLevel_properties_teacherId:
-  properties:
-    teacherId:
-      $ref: "#/teacher-teacherEducationLevel_teacherId"
-teacher-teacherEducationLevel_properties_educationLevelId:
-  properties:
-    educationLevelId:
-      $ref: "#/teacher-teacherEducationLevel_educationLevelId"
-teacher-teacherEducationLevel_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-teacherEducationLevel_creationUserId"
-teacher-teacherEducationLevel_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-teacherEducationLevel_latestUpdateUserId"
-teacher-teacherEducationLevel_properties_teacher:
-  properties:
-    teacher:
-      $ref: "#/teacher-teacherEducationLevel_teacher"
-teacher-teacherEducationLevel_properties_educationLevel:
-  properties:
-    educationLevel:
-      $ref: "#/teacher-teacherEducationLevel_educationLevel"
-teacher-teacherEducationLevel_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-teacherEducationLevel_creationUser"
-teacher-teacherEducationLevel_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-teacherEducationLevel_latestUpdateUser"
-
 #attributes
-teacher-teacherEducationLevel_id:
-  type: integer
-  example: 1
-  description: auto
 teacher-teacherEducationLevel_creationDate:
   type: string
   format: date-time
@@ -82,6 +7,8 @@ teacher-teacherEducationLevel_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+
+#relationship attributes
 teacher-teacherEducationLevel_teacherId:
   type: integer
   example: 1
@@ -98,34 +25,49 @@ teacher-teacherEducationLevel_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
+
+#relationships 
 teacher-teacherEducationLevel_teacher:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher
+  required: 
+    - id
 teacher-teacherEducationLevel_educationLevel:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to general-educationLevel"
+  required: 
+    - id
 teacher-teacherEducationLevel_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
 teacher-teacherEducationLevel_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 
 
 
