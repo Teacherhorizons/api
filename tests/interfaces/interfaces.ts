@@ -6,6 +6,13 @@ declare namespace Config {
       password: string;
     };
     createTestData?: boolean;
+    local?: boolean;
+  }
+
+  export interface User {
+    // token?: string;
+    userTypeSlug?: string;
+    // userId?: number;
   }
 
   export interface Test {
@@ -31,12 +38,18 @@ declare namespace Config {
     id?: number;
   }
 
+  export interface ApplicationEvent {
+    id?: number;
+  }
+
   export interface Data {
     test?: Test;
     schools: School[];
     teachers: Teacher[];
     jobs: Job[];
     applications: Application[];
+    applicationEvents: ApplicationEvent[];
+    user?: User;
   }
 
   // export const data: Data = {

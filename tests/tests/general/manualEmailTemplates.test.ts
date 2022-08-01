@@ -1,4 +1,4 @@
-import { api, setupBeforeAll, setup, signIn, signOut, data } from '../../shared';
+import { api, setupAfterAll, setupBeforeAll, setup, signIn, signOut, data } from '../../shared';
 
 export interface Test {
   getUrl: (data: Config.Data) => string;
@@ -178,6 +178,10 @@ describe('test.each general-manualEmailTemplates', () => {
       expect(error.response).toSatisfyApiSpec();
     }
   });
+
+  // afterAll(async () => {
+  //   await setupAfterAll();
+  // });
 });
 
 // indivual test example:

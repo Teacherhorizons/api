@@ -7,28 +7,66 @@ import shell from 'shelljs';
 
 import config from './config';
 import { api as api1, signOut as signOut1, signIn as signIn1 } from './api';
-import { addTestData, deleteTestData } from './data/main';
+import { addTestData, deleteTestData, getAddTestData } from './data/main';
 
 // export var api: AxiosInstance;
 export var data: Config.Data;
 
+// START MOCK DATA --------------------------
 const mockGetData = async (): Promise<Config.Data> => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  const data: Config.Data = {
-    schools: [],
-    teachers: [],
-    jobs: [],
-    applications: [{ id: 30 }, { id: 31 }],
-  };
+  if (!config.createTestData && config.local)
+    var data: Config.Data = {
+      schools: [
+        { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
+        { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
+      ],
+      teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
+      jobs: [{ id: 1662 }, { id: 1663 }],
+      applications: [{ id: '62103' }, { id: '62104' }, { id: '62105' }, { id: '62106' }, { id: '62107' }],
+      applicationEvents: [
+        { id: '131487' },
+        { id: '131488' },
+        { id: '131489' },
+        { id: '131490' },
+        { id: '131491' },
+        { id: '131492' },
+        { id: '131493' },
+        { id: '131494' },
+      ],
+      test: { id: '109' },
+    };
+  else if (!config.createTestData && !config.local)
+    var data: Config.Data = {
+      schools: [
+        { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
+        { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
+      ],
+      teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
+      jobs: [{ id: 1852 }, { id: 1853 }],
+      applications: [{ id: '135370' }, { id: '135371' }, { id: '135372' }, { id: '135373' }, { id: '135374' }],
+      applicationEvents: [
+        { id: '2408108' },
+        { id: '2408109' },
+        { id: '2408110' },
+        { id: '2408111' },
+        { id: '2408112' },
+        { id: '2408113' },
+        { id: '2408114' },
+        { id: '2408115' },
+      ],
+      test: { id: '116' },
+    };
   return data;
 };
 
 export const setupBeforeAll = async () => {
+  jest.setTimeout(60 * 1000);
   try {
     console.log('setupBeforeAll');
     if (data) return;
-    // if (config.createTestData) data = await addTestData();
-    data = await mockGetData();
+    if (config.createTestData) data = await getAddTestData();
+    else data = await mockGetData();
     console.log(202, data);
 
     shell.exec('npm run build-yaml');
@@ -38,11 +76,65 @@ export const setupBeforeAll = async () => {
   }
 };
 
+export const setupAfterAll = async () => {
+  jest.setTimeout(60 * 1000);
+  try {
+    if (config.createTestData) await deleteTestData(data.test.id);
+  } catch (error) {
+    console.log('afterAll', error);
+  }
+};
+
+// START AGAIN ------------------------
 export function setup(context = {}) {
   jest.setTimeout(90 * 1000);
   beforeAll(async () => {
     try {
       if (config.createTestData) data = await addTestData();
+      else if (!config.createTestData && config.local)
+        data = {
+          schools: [
+            { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
+            { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
+          ],
+          teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
+          jobs: [{ id: 1662 }, { id: 1663 }],
+          applications: [{ id: '62103' }, { id: '62104' }, { id: '62105' }, { id: '62106' }, { id: '62107' }],
+          applicationEvents: [
+            { id: '131487' },
+            { id: '131488' },
+            { id: '131489' },
+            { id: '131490' },
+            { id: '131491' },
+            { id: '131492' },
+            { id: '131493' },
+            { id: '131494' },
+          ],
+          test: { id: '109' },
+        };
+      else if (!config.createTestData && !config.local)
+        data = {
+          schools: [
+            { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
+            { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
+          ],
+          teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
+          jobs: [{ id: 1832 }, { id: 1833 }],
+          applications: [{ id: '135338' }, { id: '135339' }, { id: '135340' }, { id: '135341' }, { id: '135342' }],
+          applicationEvents: [
+            { id: '2407997' },
+            { id: '2407998' },
+            { id: '2407999' },
+            { id: '2408000' },
+            { id: '2408001' },
+            { id: '2408002' },
+            { id: '2408003' },
+            { id: '2408004' },
+          ],
+          test: { id: '109' },
+        };
+      console.log('data: ', data);
+      // start ---
       shell.exec('npm run build-yaml');
       jestOpenAPI(path.join(process.cwd(), 'tests/specs/openapi.yaml'));
     } catch (error) {
@@ -51,7 +143,7 @@ export function setup(context = {}) {
   });
 
   afterAll(async () => {
-    jest.setTimeout(30 * 1000);
+    jest.setTimeout(60 * 1000);
     try {
       // if (config.createTestData) await deleteTestData(45);
       if (config.createTestData) await deleteTestData(data.test.id);
@@ -102,7 +194,6 @@ export const setApi = signIn;
 //   await api.post('user/sign-out');
 //   // console.log('sign out successful');
 // };
-
 // TODO: move elsewhere
 export function compareFnGenerator<T extends object>(
   keys: (keyof T | Sort.SortConfig<T>)[]
