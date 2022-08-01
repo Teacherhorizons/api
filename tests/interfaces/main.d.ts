@@ -49,14 +49,14 @@ declare namespace Sort {
 declare namespace Test {
   export interface Test {
     getUrl: (data: Config.Data) => string;
+    name?: string;
     userEmail: string;
     expectedStatus: number;
     expectedDataLength?: number;
-    signIn?: boolean;
   }
 
   export interface TestGroup {
     getUrl: (data: Config.Data) => string;
-    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'signIn'>[];
+    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'name'>[];
   }
 }
