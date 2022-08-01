@@ -1,4 +1,13 @@
-import { addTestGroups, api, setupBeforeAll, signIn, data, compareFnGenerator, signedInAs } from '../../shared';
+import {
+  addTestGroups,
+  api,
+  setupAfterAll,
+  setupBeforeAll,
+  signIn,
+  data,
+  compareFnGenerator,
+  signedInAs,
+} from '../../shared';
 
 var testsForGet = addTestGroups(
   [],
@@ -52,7 +61,7 @@ var testsForGet = addTestGroups(
 );
 
 testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
-testsForGet = [testsForGet[0]]; // TEMP
+// testsForGet = [testsForGet[0]]; // TEMP
 jest.setTimeout(60 * 1000);
 
 describe('applicationEvents', () => {
@@ -77,5 +86,11 @@ describe('applicationEvents', () => {
         expect(error.response).toSatisfyApiSpec();
       }
     }
+  });
+
+  jest.setTimeout(60 * 1000);
+  afterAll(async () => {
+    // await signIn('admin@th.test');
+    await setupAfterAll();
   });
 });
