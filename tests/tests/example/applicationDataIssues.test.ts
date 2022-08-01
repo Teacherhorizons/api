@@ -1,50 +1,85 @@
-import { addTestGroups, api, setupBeforeAll, signIn, data, compareFnGenerator, signedInAs } from '../../shared';
+import {
+  addTestGroups,
+  api,
+  setupAfterAll,
+  setupBeforeAll,
+  signIn,
+  data,
+  compareFnGenerator,
+  signedInAs,
+} from '../../shared';
 
 var testsForGet = addTestGroups(
   [],
   [
     {
-      getUrl: (data) =>
-        `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[0].id}`,
+      getUrl: (data) => `application-applicationDataIssues`,
+      // 400	missingMandatoryParameter	schema must be passed
       tests: [
         {
-          name: 'schema=admin-oneApplication',
+          name: 'application-applicationDataIssues|schema must be passed',
           userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 4,
-        },
-        {
-          name: 'schema=admin-oneApplication',
-          userEmail: 'school1@th.test',
-          expectedStatus: 401,
+          expectedStatus: 400,
         },
       ],
     },
     {
-      getUrl: (data) =>
-        `application-applicationEvents?schema=admin-oneApplication&filter[application.id]=${data.applications[1].id}`,
+      getUrl: (data) => `application-applicationDataIssues?schema=school`,
+      // 400	missingMandatoryParameter	schema must be correct
       tests: [
         {
-          name: 'schema=admin-oneApplication',
+          name: '?schema=school|schema must be correct',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationDataIssues?schema=teacher`,
+      // 400	missingMandatoryParameter	schema must be correct
+      tests: [
+        {
+          name: '?schema=teacher|schema must be correct',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationDataIssues?schema=admin`,
+      // 400 missingMandatoryParameter filter[application.id] must be passed
+      tests: [
+        {
+          name: '?schema=admin|Missing [application.id]',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationDataIssues?filter[application.id]=10&schema=admin`,
+      // working for admin only
+      tests: [
+        {
+          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          userEmail: 'signedOut',
+          expectedStatus: 401,
+        },
+        {
+          name: '?filter[application.id]=10&schema=admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           expectedDataLength: 2,
         },
         {
-          name: 'schema=admin-oneApplication',
-          userEmail: 'school1@th.test',
+          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          userEmail: 'school-1-school@th.test', //accessNotPermitted|user type must be correct
           expectedStatus: 401,
         },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents?schema=school&filter[application.id]=${data.applications[0].id}`,
-      tests: [
         {
-          name: 'schema=school',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 3,
+          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted|user type must be correct
         },
       ],
     },
@@ -52,9 +87,9 @@ var testsForGet = addTestGroups(
 );
 
 testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
-// testsForGet = [testsForGet[0]]; // TEMP
+jest.setTimeout(60 * 1000);
 
-describe('applicationEvents', () => {
+describe('application-applicationDataIssues', () => {
   beforeAll(async () => {
     await setupBeforeAll();
   });
@@ -76,5 +111,10 @@ describe('applicationEvents', () => {
         expect(error.response).toSatisfyApiSpec();
       }
     }
+  });
+
+  jest.setTimeout(60 * 1000);
+  afterAll(async () => {
+    await setupAfterAll();
   });
 });
