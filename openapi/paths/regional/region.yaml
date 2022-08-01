@@ -1,5 +1,7 @@
+# yaml-language-server: $schema=../../../meta/Path-Singular.json
+
 get:
-  operationId: get_regional-region
+  operationId: get-regional-region
   tags:
     - regional
   summary: Get a region (City)
@@ -10,7 +12,6 @@ get:
       example: 1
       schema:
         type: integer
-        format: int32
     - in: query
       name: schema
       required: true

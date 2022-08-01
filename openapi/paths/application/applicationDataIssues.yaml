@@ -1,8 +1,8 @@
 get:
-  operationId: getApplicationDataIssues
+  operationId: get-application-applicationDataIssues
   tags:
     - application
-  summary: Get application data issue
+  summary: Get application data issues
   parameters:
     - in: query
       name: schema
@@ -28,7 +28,6 @@ get:
           application.id: 1
         required:
           - filter[application.id]
-
   responses:
     "200":
       description: OK (Request successful)

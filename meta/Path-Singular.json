@@ -1,27 +1,27 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Path-Plural",
+  "$ref": "#/definitions/Path-Singular",
   "definitions": {
-    "Path-Plural": {
+    "Path-Singular": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "get": {
-          "$ref": "#/definitions/Path-Plural-get"
+          "$ref": "#/definitions/Path-Singular-get"
         },
         "post": {
-          "$ref": "#/definitions/Path-Plural-post"
+          "$ref": "#/definitions/Path-Singular-post"
         }
       },
-      "title": "Path-Plural"
+      "title": "Path-Singular"
     },
-    "Path-Plural-get": {
+    "Path-Singular-get": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^get-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)s$"
+          "pattern": "^get-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)$"
         },
         "tags": {
           "type": "array",
@@ -65,10 +65,10 @@
           "items": {
             "anyOf": [
               {
-                "$ref": "#/definitions/Path-Plural-parameter"
+                "$ref": "#/definitions/Path-Singular-parameter"
               },
               {
-                "$ref": "#/definitions/Path-Plural-deepParameter"
+                "$ref": "#/definitions/Path-Singular-deepParameter"
               }
             ]
           }
@@ -191,15 +191,15 @@
         "parameters",
         "responses"
       ],
-      "title": "Path-Plural-get"
+      "title": "Path-Singular-get"
     },
-    "Path-Plural-post": {
+    "Path-Singular-post": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^post-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)$"
+          "pattern": "^post-(Application|General|Job|Meta|Regional|School|Teacher|User)([a-zA-Z]*)$"
         },
         "tags": {
           "type": "array",
@@ -389,21 +389,32 @@
         "summary",
         "responses"
       ],
-      "title": "Path-Plural-post"
+      "title": "Path-Singular-post"
     },
-    "Path-Plural-parameter": {
+    "Path-Singular-parameter": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "in": {
-          "type": "string",
-          "const": "query"
+          "oneOf": [
+            {
+              "type": "string",
+              "const": "query"
+            },
+            {
+              "type": "string",
+              "const": "path"
+            }
+          ]
         },
         "name": {
           "type": "string"
         },
         "example": {
-          "type": "string"
+          "type": [
+            "integer",
+            "string"
+          ]
         },
         "required": {
           "type": "boolean",
@@ -426,9 +437,9 @@
           "type": "string"
         }
       },
-      "title": "Path-Plural-parameter"
+      "title": "Path-Singular-parameter"
     },
-    "Path-Plural-deepParameter": {
+    "Path-Singular-deepParameter": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -525,7 +536,7 @@
           "type": "string"
         }
       },
-      "title": "Path-Plural-parameter"
+      "title": "Path-Singular-parameter"
     }
   }
 }

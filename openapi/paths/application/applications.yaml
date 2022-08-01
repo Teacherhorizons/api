@@ -1,5 +1,5 @@
 get:
-  operationId: getApplications
+  operationId: get-applications
   tags:
     - application
   summary: Get list of 20 applications
@@ -122,7 +122,7 @@ get:
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
 
 post:
-  operationId: postApplication
+  operationId: post-application
   summary: Create application
   tags:
     - application
@@ -156,17 +156,7 @@ post:
       content:
         application/json:
           schema:
-            type: object
-            properties:
-              data:
-                type: object
-                properties:
-                  type:
-                    type: string
-                    example: application
-                  id:
-                    type: string
-                    example: "2"
+            $ref: "../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
     "400":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
     "401":

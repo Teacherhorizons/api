@@ -1,17 +1,17 @@
+# yaml-language-server: $schema=../../../meta/Path-Singular.json
+
 get:
-  operationId: getManualEmailTemplate
+  operationId: get-general-manualEmailTemplate
   tags:
     - general
-    - status-proposed
   summary: Get manual email template
   parameters:
     - in: path
       name: manualEmailTemplateId
       required: true
-      example: 12
+      example: 1
       schema:
         type: integer
-        format: int32
     - in: query
       name: filter
       style: deepObject
@@ -22,15 +22,13 @@ get:
         properties:
           filter[id][contains]:
             type: number
-            example: 1
             description: Required unless schema is 'admin-allApplications'
           # filter[application.teacher.memberNumber]:
           #   type: number
           #   example: 123456
           #   description: Required if schema is 'admin-allApplications'
         example:
-          id: 1
-
+          id][contains: 1
   responses:
     "200":
       description: OK (Request successful)
@@ -50,5 +48,3 @@ get:
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
-  security:
-    - api_key: []
