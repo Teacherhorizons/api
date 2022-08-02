@@ -5,6 +5,8 @@ SimpleModel_teacher-teacherPhoto:
     id: 
       $ref: "#/SimpleModel_teacher-teacherPhoto_id"
     # simple attributes
+  required:
+    - id
 
 # shared
 # SimpleModel_teacher-teacherPhoto_type:
@@ -16,11 +18,9 @@ SimpleModel_teacher-teacherPhoto:
 #       readOnly: true
 
 SimpleModel_teacher-teacherPhoto_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

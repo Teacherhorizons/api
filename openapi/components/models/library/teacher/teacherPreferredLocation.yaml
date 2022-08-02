@@ -1,31 +1,7 @@
-
-# attributes
-teacher-teacherPreferredLocation_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherPreferredLocation_properties_name"
-    - $ref: "#/teacher-teacherPreferredLocation_properties_continent"
-
-#properties
-teacher-teacherPreferredLocation_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherPreferredLocation_id"
-teacher-teacherPreferredLocation_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-teacherPreferredLocation_name"
-teacher-teacherPreferredLocation_properties_continent:
-  properties:
-    continent:
-      $ref: "#/teacher-teacherPreferredLocation_continent"
-
 #attributes
-teacher-teacherPreferredLocation_id:
-  type: integer
-  example: 
 teacher-teacherPreferredLocation_name:
   type: string
-  example: 
+  example: ""
 teacher-teacherPreferredLocation_continent:
   type: string
-  example: 
+  example: ""
