@@ -1,6 +1,7 @@
 #attributes
 general-manualEmailTemplate_to:
   type: string
+  nullable: true
   example: ${teacher.email}
 general-manualEmailTemplate_cc:
   type: string
@@ -12,19 +13,18 @@ general-manualEmailTemplate_bcc:
   example: ""
 general-manualEmailTemplate_subject:
   type: string
+  nullable: true
   example: Your application to ${job.school.name} in ${job.school.city.country.name}
 general-manualEmailTemplate_body:
   type: string
+  nullable: true
   example: ""
-
 general-manualEmailTemplate_isVisibleToAdmin:
   type: boolean
   example: true
-
 general-manualEmailTemplate_isVisibleToSchool:
   type: boolean
   example: true
-
 general-manualEmailTemplate_isVisibleToTeacher:
   type: boolean
   example: true
