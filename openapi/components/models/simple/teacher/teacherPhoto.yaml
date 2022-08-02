@@ -1,20 +1,19 @@
 SimpleModel_teacher-teacherPhoto:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-teacherPhoto"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-teacherPhoto_type"
-        - $ref: "#/SimpleModel_teacher-teacherPhoto_id"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_teacher-teacherPhoto_id"
+    # simple attributes
 
 # shared
-
-SimpleModel_teacher-teacherPhoto_type:
-  properties:
-    type:
-      type: string
-      example: teacher-teacherPhoto
-      description: teacher-teacherPhoto
-      readOnly: true
+# SimpleModel_teacher-teacherPhoto_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-teacherPhoto
+#       description: teacher-teacherPhoto
+#       readOnly: true
 
 SimpleModel_teacher-teacherPhoto_id:
   properties:

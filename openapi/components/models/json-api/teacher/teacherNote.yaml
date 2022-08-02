@@ -1,62 +1,57 @@
 JsonApiModel_teacher-teacherNote:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherNote_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherNote_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherNote_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        noteComment:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
+        creationDate:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateDate"
+        # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        type:
+          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
+        #noteType : to be confirmed with RYAN
+        # TODO AS: link to teacherNoteType.yaml
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherNote_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        type:
+          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherNote_attributes:
-  type: object
-  properties:
-    # simple attributes
-    noteComment:
-      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
-    creationDate:
-      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateDate"
-
-    # relationship attributes
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-    type:
-      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
-    #noteType : to be confirmed with RYAN
-    # TODO AS: link to teacherNoteType.yaml
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_teacher-teacherNote_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    type:
-      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_teacher-teacherNote_type:
   type: string
   example: teacher-teacherNote
-  description: teacher-teacherNote
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherNote_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherNote (string)
+  description: Unique identifier of the entity (string)

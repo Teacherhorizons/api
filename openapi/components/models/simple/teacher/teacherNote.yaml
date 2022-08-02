@@ -1,28 +1,43 @@
 SimpleModel_teacher-teacherNote:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-teacherNote"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-teacherNote_type"
-        - $ref: "#/SimpleModel_teacher-teacherNote_id"
-        - $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_attributes"
-
-# shared
-
-SimpleModel_teacher-teacherNote_type:
+  type: object
+  additionalProperties: false
   properties:
-    type:
-      type: string
-      example: teacher-teacherNote
-      description: teacher-teacherNote
-      readOnly: true
+    id: 
+      $ref: "#/SimpleModel_teacher-teacherNote_id"
+    # simple attributes
+    noteComment:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
+    creationDate:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_teacherId"
+    typeId:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_typeId"
+    #noteType : to be confirmed with RYAN
+    # TODO AS: link to teacherNoteType.yaml
+    creationUserId:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateUserId"
+  required:
+    - id
+    
+# shared
+# SimpleModel_teacher-teacherNote_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-teacherNote
+#       description: teacher-teacherNote
+#       readOnly: true
 
 SimpleModel_teacher-teacherNote_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

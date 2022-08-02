@@ -1,58 +1,53 @@
 JsonApiModel_teacher-teacherLookingForRole:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherLookingForRole_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherLookingForRole_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherLookingForRole_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_latestUpdateDate"
+        # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        role:
+          $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherLookingForRole_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        role:
+          $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherLookingForRole_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_latestUpdateDate"
-
-    # relationship attributes
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-    role:
-      $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship_attribute"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_teacher-teacherLookingForRole_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    role:
-      $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_teacher-teacherLookingForRole_type:
   type: string
   example: teacher-teacherLookingForRole
-  description: teacher-teacherLookingForRole
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherLookingForRole_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherLookingForRole (string)
+  description: Unique identifier of the entity (string)

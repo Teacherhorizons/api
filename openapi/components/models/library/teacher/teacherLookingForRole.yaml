@@ -1,79 +1,4 @@
-
-# attributes
-teacher-teacherLookingForRole_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherLookingForRole_properties_creationDate"
-    - $ref: "#/teacher-teacherLookingForRole_properties_latestUpdateDate"
-
-# relationshipIds
-teacher-teacherLookingForRole_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherLookingForRole_properties_teacherId"
-    - $ref: "#/teacher-teacherLookingForRole_properties_roleId"
-    - $ref: "#/teacher-teacherLookingForRole_properties_creationUserId"
-    - $ref: "#/teacher-teacherLookingForRole_properties_latestUpdateUserId"
-
-# attribute relationships
-
-# relationships
-teacher-teacherLookingForRole_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherLookingForRole_properties_teacher"
-    - $ref: "#/teacher-teacherLookingForRole_properties_teacherLookingForRole"
-    - $ref: "#/teacher-teacherLookingForRole_properties_creationUser"
-    - $ref: "#/teacher-teacherLookingForRole_properties_latestUpdateUser"
-
-#properties
-teacher-role_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherLookingForRole_id"
-teacher-teacherLookingForRole_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/teacher-teacherLookingForRole_creationDate"
-teacher-teacherLookingForRole_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-teacherLookingForRole_latestUpdateDate"
-teacher-teacherLookingForRole_properties_teacherId:
-  properties:
-    teacherId:
-      $ref: "#/teacher-teacherLookingForRole_teacherId"
-teacher-teacherLookingForRole_properties_roleId:
-  properties:
-    roleId:
-      $ref: "#/teacher-teacherLookingForRole_roleId"
-teacher-teacherLookingForRole_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-teacherLookingForRole_creationUserId"
-teacher-teacherLookingForRole_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-teacherLookingForRole_latestUpdateUserId"
-teacher-teacherLookingForRole_properties_teacher:
-  properties:
-    teacher:
-      $ref: "#/teacher-teacherLookingForRole_teacher"
-teacher-teacherLookingForRole_properties_teacherLookingForRole:
-  properties:
-    teacherLookingForRole:
-      $ref: "#/teacher-teacherLookingForRole_role"
-teacher-teacherLookingForRole_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-teacherLookingForRole_creationUser"
-teacher-teacherLookingForRole_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-teacherLookingForRole_latestUpdateUser"
-
 #attributes
-teacher-teacherLookingForRole_id:
-  type: integer
-  example: 1
-  description: auto
 teacher-teacherLookingForRole_creationDate:
   type: string
   format: date-time
@@ -82,6 +7,8 @@ teacher-teacherLookingForRole_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+
+#relationship attributes
 teacher-teacherLookingForRole_teacherId:
   type: integer
   example: 1
@@ -98,34 +25,52 @@ teacher-teacherLookingForRole_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
+
+#relationships 
 teacher-teacherLookingForRole_teacher:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher
+  required: 
+    - id
+  
 teacher-teacherLookingForRole_role:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-badge
+  required: 
+    - id
+  
 teacher-teacherLookingForRole_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 teacher-teacherLookingForRole_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 
 
 

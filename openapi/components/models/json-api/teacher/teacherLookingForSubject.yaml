@@ -1,51 +1,46 @@
 JsonApiModel_teacher-teacherLookingForSubject:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        precedence:
+          $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"  
+        # relationship attributes
+        subject:
+          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherLookingForSubject_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        subject:
+          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherLookingForSubject_attributes:
-  type: object
-  properties:
-    # simple attributes
-    precedence:
-      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"  
-
-    # relationship attributes
-    subject:
-      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-
-JsonApiModel_teacher-teacherLookingForSubject_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    subject:
-      $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-
 JsonApiModel_teacher-teacherLookingForSubject_type:
   type: string
   example: teacher-teacherLookingForSubject
-  description: teacher-teacherLookingForSubject
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherLookingForSubject_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherLookingForSubject (string)
+  description: Unique identifier of the entity (string)
 
 
 

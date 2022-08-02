@@ -1,18 +1,30 @@
 SimpleModel_teacher-teacherNationalities:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-teacherNationalities"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-teacherNationalities_id"
-        - $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_attributes"
-        - $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_relationshipIds"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_teacher-teacherNationalities_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_teacherId"
+    nationalityId:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_nationalityId"
+    creationUserId:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateUserId"
+  required:
+    - id
 
 # shared
 SimpleModel_teacher-teacherNationalities_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

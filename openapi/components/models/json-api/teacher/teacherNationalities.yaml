@@ -1,58 +1,53 @@
 JsonApiModel_teacher-teacherNationalities:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherNationalities_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherNationalities_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherNationalities_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
+        # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        nationality:
+          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherNationalities_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        nationality:
+          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherNationalities_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
-
-    # relationship attributes
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-    nationality:
-      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_teacher-teacherNationalities_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    nationality:
-      $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_teacher-teacherNationalities_type:
   type: string
   example: teacher-teacherNationalities
-  description: teacher-teacherNationalities
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherNationalities_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherNationalities (string)
+  description: Unique identifier of the entity (string)

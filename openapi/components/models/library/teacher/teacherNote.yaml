@@ -1,147 +1,62 @@
-teacher-teacherNote_metaProperties_shared:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:34Z
+# teacher-teacherNote_metaProperties_shared:
+#   properties:
+#     creationDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
+#     latestUpdateDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:34Z
 
-# attributes
-teacher-teacherNote_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherNote_properties_noteComment"
-    - $ref: "#/teacher-teacherNote_properties_creationDate"
-    - $ref: "#/teacher-teacherNote_properties_latestUpdateDate"
+# # attributes
+# teacher-teacherNote_attributes:
+#   allOf:
+#     - $ref: "#/teacher-teacherNote_properties_noteComment"
+#     - $ref: "#/teacher-teacherNote_properties_creationDate"
+#     - $ref: "#/teacher-teacherNote_properties_latestUpdateDate"
 
-# relationshipIds
-teacher-teacherNote_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherNote_properties_teacherId"
-    - $ref: "#/teacher-teacherNote_properties_typeId"
-    - $ref: "#/teacher-teacherNote_properties_creationUserId"
-    - $ref: "#/teacher-teacherNote_properties_latestUpdateUserId"
+# # relationshipIds
+# teacher-teacherNote_relationshipIds:
+#   allOf:
+#     - $ref: "#/teacher-teacherNote_properties_teacherId"
+#     - $ref: "#/teacher-teacherNote_properties_typeId"
+#     - $ref: "#/teacher-teacherNote_properties_creationUserId"
+#     - $ref: "#/teacher-teacherNote_properties_latestUpdateUserId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-teacher-teacherNote_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherNote_properties_teacher"
-    - $ref: "#/teacher-teacherNote_properties_type"
-    - $ref: "#/teacher-teacherNote_properties_creationUser"
-    - $ref: "#/teacher-teacherNote_properties_latestUpdateUser"
-
-#properties
-teacher-teacherNote_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherNote_id"
-
-teacher-teacherNote_properties_noteComment:
-  properties:
-    noteComment:
-      $ref: "#/teacher-teacherNote_noteComment"
-
-teacher-teacherNote_properties_creationDate:
-  properties:
-    creationDate:
-      $ref: "#/teacher-teacherNote_creationDate"
-
-teacher-teacherNote_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-teacherNote_latestUpdateDate"
-
-teacher-teacherNote_properties_teacherId:
-  properties:
-    teacherId:
-      $ref: "#/teacher-teacherNote_teacherId"
-
-teacher-teacherNote_properties_typeId:
-  properties:
-    typeId:
-      $ref: "#/teacher-teacherNote_typeId"
-
-teacher-teacherNote_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-teacherNote_creationUserId"
-
-teacher-teacherNote_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-teacherNote_latestUpdateUserId"
-
-teacher-teacherNote_properties_teacher:
-  properties:
-    teacher:
-      $ref: "#/teacher-teacherNote_teacher"
-
-teacher-teacherNote_properties_type:
-  properties:
-    type:
-      $ref: "#/teacher-teacherNote_type"
-
-teacher-teacherNote_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-teacherNote_creationUser"
-
-teacher-teacherNote_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-teacherNote_latestUpdateUser"
+# # relationships
+# teacher-teacherNote_relationships:
+#   allOf:
+#     - $ref: "#/teacher-teacherNote_properties_teacher"
+#     - $ref: "#/teacher-teacherNote_properties_type"
+#     - $ref: "#/teacher-teacherNote_properties_creationUser"
+#     - $ref: "#/teacher-teacherNote_properties_latestUpdateUser"
 
 #attributes
-teacher-teacherNote_id:
-  type: integer
-  example: 1
-
 teacher-teacherNote_noteComment:
   type: string
-  example:
-
+  example: ""
 teacher-teacherNote_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-
 teacher-teacherNote_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-teacher-teacherNote_teacher:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Teacher
-
-teacher-teacherNote_type:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Type
-
+#relationship attributes
 teacher-teacherNote_teacherId:
   type: integer
   example: 1
   description: Relationship to Teacher
 
 teacher-teacherNote_typeId:
-  type: object
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Type
+  type: integer
+  example: 1
+  description: Relationship to Type
 
 teacher-teacherNote_creationUserId:
   type: integer
@@ -153,18 +68,47 @@ teacher-teacherNote_latestUpdateUserId:
   example: 1
   description: Relationship to User
 
+#relationships
+teacher-teacherNote_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
+  required:
+    - id
+
+teacher-teacherNote_type:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Type
+  required:
+    - id
+
 teacher-teacherNote_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+    - id
 
 teacher-teacherNote_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to User
+  required:
+    - id
