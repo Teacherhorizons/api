@@ -1,12 +1,14 @@
 Response_application-applicationDataIssues:
   oneOf:
     - $ref: "#/Response_application-applicationDataIssues_admin"
+    - $ref: "#/Response_application-applicationDataIssues_admin-v2"
   discriminator:
     propertyName: schema
     mapping:
       admin: "#/Response_application-applicationDataIssues_admin"
+      admin-v2: "#/Response_application-applicationDataIssues_admin-v2"
 
-# admin
+# admin (non-standard; TODO: add admin-v2, deprecate, delete, rename admin-v2 to admin)
 Response_application-applicationDataIssues_admin:
   type: object
   additionalProperties: false
@@ -29,6 +31,40 @@ Response_application-applicationDataIssues_admin:
             type: object
             additionalProperties: false
             properties:
+              name:
+                type: string
+            required:
+              - name
+        required:
+          - type
+          - id
+          - attributes
+  required:
+    - data
+
+# admin-v2
+Response_application-applicationDataIssues_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-v2
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+          id:
+            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
               date:
                 $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
             required:
@@ -37,13 +73,17 @@ Response_application-applicationDataIssues_admin:
             type: object
             additionalProperties: false
             properties:
-              application:
-                $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
+              # application:
+              #   $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
               guideline:
                 $ref: "../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
             required:
-              - application
+              # - application
               - guideline
+          included:
+            type: array
+            items:
+              $ref: "#/Response_application-applicationDataIssues_includedGuideline_admin-v2"
         required:
           - type
           - id
@@ -52,3 +92,24 @@ Response_application-applicationDataIssues_admin:
   required:
     - schema
     - data
+
+Response_application-applicationDataIssues_includedGuideline_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+    id:
+      $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        name:
+          $ref: "../../../components/models/library/application/guideline.yaml#/application-guideline_name"
+      required:
+        - name
+  required:
+    - type
+    - id
+    - attributes

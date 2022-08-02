@@ -57,7 +57,7 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `application-applicationDataIssues?filter[application.id]=10&schema=admin`,
+      getUrl: (data) => `application-applicationDataIssues?schema=admin&filter[application.id]=34`,
       // working for admin only
       tests: [
         {
@@ -66,10 +66,10 @@ var testsForGet = addTestGroups(
           expectedStatus: 401,
         },
         {
-          name: '?filter[application.id]=10&schema=admin',
+          name: '?schema=admin&filter[application.id]=34',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 2,
+          expectedDataLength: 5,
         },
         {
           name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
