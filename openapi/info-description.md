@@ -1,19 +1,11 @@
 # Introduction
 
-## Issues
-- 19 May 2022: We're severly affected by a bug with redocly - a false positive recursion: https://github.com/Redocly/redoc/issues/1154#issuecomment-913846111. Referencing the same definition twice can cause things to break, which significantly affects breaking things down in a sensible way.
-
-## Plan
-
-- Document current API here
-- For new APIs, start trying to use the JSON API format
-
 ## Process
 
-1. **Document a current API call** (old format)
+1. **Document an non-json-api API call** (old format)
    - Take a current API call which is not yet documented here and document it in the 'current' and/or 'deprecated' folders (as appropriate)
    - Keep this documentation relatively 'flat' (i.e. don't involve many files), since the current API calls are relatively dissimilar (i.e. they aren't consistent enough)
-2. **Document a related proposed API call** (JSON API format)
+2. **Document a json-api API call** (new format)
    - If the current API call is not in the JSON API format, and if there's not yet a proposed API call which would have the same behaviour, document a related proposed API call
    - Use lots of nested files, since a lot of reuse should be possible
 

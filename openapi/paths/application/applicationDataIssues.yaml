@@ -3,6 +3,16 @@ get:
   tags:
     - application
   summary: Get application data issues
+  description: |
+    - admin schema: DEPRECATED; non-standard, but exists and is in use
+    - admin-v2 schema: 'correct' version of admin schema
+    - Process:
+      1. [done] mark admin as deprecated
+      2. add admin-v2 to the backend (and add related tests)
+      3. change front-end to use admin-v2
+      4. change admin to be a copy of admin-v2
+      5. change front-end to use admin
+      6. delete admin-v2
   parameters:
     - in: query
       name: schema

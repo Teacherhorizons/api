@@ -1,13 +1,13 @@
 Application-eventTypeActionsResponse:
   oneOf:
-    - $ref: "#/Application-eventTypeActionsResponse_admin"
+    - $ref: "#/Response_application-eventTypeActions_admin"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Application-eventTypeActionsResponse_admin"
+      admin: "#/Response_application-eventTypeActions_admin"
 
 # admin
-Application-eventTypeActionsResponse_admin:
+Response_application-eventTypeActions_admin:
   type: object
   additionalProperties: false
   properties:
@@ -55,7 +55,8 @@ Application-eventTypeActionsResponse_admin:
     included:
       type: array
       items:
-        $ref: "#/Application-eventTypeActionsResponse_includedUser_admin"
+        anyOf:
+          - $ref: "#/Application-eventTypeActionsResponse_includedUser_admin"
   required:
     - schema
     - data

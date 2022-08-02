@@ -1,19 +1,19 @@
 Application-applicationEventsResponse:
   oneOf:
-    - $ref: "#/Application-applicationEventsResponse_admin-oneApplication"
+    - $ref: "#/Response_application-applicationEvents_admin-oneApplication"
     - $ref: "#/Application-applicationEventsResponse_admin-allApplications"
-    - $ref: "#/Application-applicationEventsResponse_school"
+    - $ref: "#/Response_application-applicationEvents_school"
     - $ref: "#/Application-applicationEventsResponse_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin-oneApplication: "#/Application-applicationEventsResponse_admin-oneApplication"
+      admin-oneApplication: "#/Response_application-applicationEvents_admin-oneApplication"
       admin-allApplications: "#/Application-applicationEventsResponse_admin-allApplications"
-      school: "#/Application-applicationEventsResponse_school"
+      school: "#/Response_application-applicationEvents_school"
       teacher: "#/Application-applicationEventsResponse_teacher"
 
 # admin-oneApplication
-Application-applicationEventsResponse_admin-oneApplication:
+Response_application-applicationEvents_admin-oneApplication:
   type: object
   additionalProperties: false
   properties:
@@ -69,7 +69,8 @@ Application-applicationEventsResponse_admin-oneApplication:
     included:
       type: array
       items:
-        $ref: "#/Application-applicationEventsResponse_includedUser_admin-oneApplication"
+        anyOf:
+          - $ref: "#/Application-applicationEventsResponse_includedUser_admin-oneApplication"
   required:
     - schema
     - data
@@ -316,7 +317,7 @@ Application-applicationEventsResponse_teacher:
     - data
 
 # school
-Application-applicationEventsResponse_school:
+Response_application-applicationEvents_school:
   type: object
   additionalProperties: false
   properties:

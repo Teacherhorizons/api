@@ -8,12 +8,14 @@ Response_application-applicationDataIssues:
       admin: "#/Response_application-applicationDataIssues_admin"
       admin-v2: "#/Response_application-applicationDataIssues_admin-v2"
 
-# admin (non-standard; TODO: add admin-v2, deprecate, delete, rename admin-v2 to admin)
+# admin (non-standard, deprecated)
 Response_application-applicationDataIssues_admin:
   type: object
   additionalProperties: false
   properties:
+    # property isn't returned by API call, but this is need here for openapi to work
     schema:
+      deprecated: true
       type: string
       enum:
         - admin
@@ -31,8 +33,10 @@ Response_application-applicationDataIssues_admin:
             type: object
             additionalProperties: false
             properties:
+              # errors due to this spec being non-standard
               name:
                 type: string
+                description: Name of the related guideline (non-standard json-api)
             required:
               - name
         required:
@@ -40,6 +44,7 @@ Response_application-applicationDataIssues_admin:
           - id
           - attributes
   required:
+    # errors due to this spec being non-standard
     - data
 
 # admin-v2
@@ -80,18 +85,20 @@ Response_application-applicationDataIssues_admin-v2:
             required:
               # - application
               - guideline
-          included:
-            type: array
-            items:
-              $ref: "#/Response_application-applicationDataIssues_includedGuideline_admin-v2"
         required:
           - type
           - id
           - attributes
           - relationships
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "#/Response_application-applicationDataIssues_includedGuideline_admin-v2"
   required:
     - schema
     - data
+    - included
 
 Response_application-applicationDataIssues_includedGuideline_admin-v2:
   type: object

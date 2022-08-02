@@ -9,7 +9,7 @@
         "^Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
+        "^Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)[-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
         "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_type$": {
@@ -27,7 +27,7 @@
         "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_meta$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Meta"
         },
-        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_included[a-zA-Z_]*$": {
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         }
       },
@@ -156,8 +156,12 @@
         },
         "required": {
           "type": "array",
+          "uniqueItems": true,
           "minItems": 2,
-          "maxItems": 2,
+          "maxItems": 4,
+          "items": {
+            "pattern": "^(schema|meta|data|included)$"
+          },
           "allOf": [
             {
               "contains": {
@@ -184,6 +188,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "deprecated": {
+          "const": true
+        },
         "type": {
           "const": "string"
         },
@@ -191,17 +198,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "oneOf": [
-              {
-                "const": "admin"
-              },
-              {
-                "const": "school"
-              },
-              {
-                "const": "teacher"
-              }
-            ]
+            "pattern": "^(admin|school|teacher)[-]*[a-zA-Z0-9]*$"
           },
           "minItems": 1,
           "maxItems": 1
