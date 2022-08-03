@@ -1,40 +1,45 @@
 JsonApiModel_teacher-thDiscoveryMethod:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_type"
     id:
       $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_attributes"
-    # relationships:
-    #   $ref: "#/JsonApiModel_teacher-thDiscoveryMethod_relationships"
-    #   attributes:
-    #     allOf:
-    #       $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        name:
+          $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_name"
+        precedence:
+          $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_precedence"
+        #relationship attributes:
+        thDiscoveryMethodCategory:
+          $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_thDiscoveryMethodCategory_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        thDiscoveryMethodCategory:
+          $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_thDiscoveryMethodCategory_relationship"
+
   required:
     - type
     - id
 
-JsonApiModel_teacher-thDiscoveryMethod_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    thDiscoveryMethodCategory:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-
 JsonApiModel_teacher-thDiscoveryMethod_type:
   type: string
   example: teacher-thDiscoveryMethod
-  description: teacher-thDiscoveryMethod
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-thDiscoveryMethod_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-thDiscoveryMethod (string)
+  description: Unique identifier of the entity (string)
 
 
 

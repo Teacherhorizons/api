@@ -1,32 +1,4 @@
-
-# attributes
-teacher-teacherSkill_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherSkill_properties_name"
-    - $ref: "#/teacher-teacherSkill_properties_skill"
-
-#properties
-teacher-teacherSkill_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherSkill_id"
-
-teacher-teacherSkill_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-teacherSkill_name"
-
-teacher-teacherSkill_properties_skill:
-  properties:
-    skill:
-      $ref: "#/teacher-teacherSkill_skill"
-
-
 #attributes
-teacher-teacherSkill_id:
-  type: integer
-  example: 1
-
 teacher-teacherSkill_name:
   type: string
   example: Computing Skills

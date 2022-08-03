@@ -1,13 +1,18 @@
 JsonApiModel_teacher-videoUrlCategory:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-videoUrlCategory_type"
     id:
       $ref: "#/JsonApiModel_teacher-videoUrlCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/videoUrlCategory.yaml#/teacher-videoUrlCategory_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        name:
+          $ref: "../../library/teacher/videoUrlCategory.yaml#/teacher-videoUrlCategory_name"
   required:
     - type
     - id
@@ -16,14 +21,14 @@ JsonApiModel_teacher-videoUrlCategory:
 JsonApiModel_teacher-videoUrlCategory_type:
   type: string
   example: teacher-videoUrlCategory
-  description: teacher-videoUrlCategory
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-videoUrlCategory_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-videoUrlCategory (string)
+  description: Unique identifier of the entity (string)
 
 
 

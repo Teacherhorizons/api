@@ -1,31 +1,4 @@
-
-#filter properties
-
-# attributes
-teacher-thDiscoveryMethodCategory_attributes:
-  allOf:
-    - $ref: "#/teacher-thDiscoveryMethodCategory_properties_name"
-    - $ref: "#/teacher-thDiscoveryMethodCategory_properties_precedence"
-
-#properties
-teacher-thDiscoveryMethodCategory_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-thDiscoveryMethodCategory_id"
-teacher-thDiscoveryMethodCategory_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-thDiscoveryMethodCategory_name"
-teacher-thDiscoveryMethodCategory_properties_precedence:
-  properties:
-    precedence:
-      $ref: "#/teacher-thDiscoveryMethodCategory_precedence"
-
 #attributes
-teacher-thDiscoveryMethodCategory_id:
-  type: integer
-  example: 1
-  description: Unique identifier of the entity
 teacher-thDiscoveryMethodCategory_name:
   type: string
   example: Friend / colleague

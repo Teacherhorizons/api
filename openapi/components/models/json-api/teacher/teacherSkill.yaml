@@ -1,14 +1,20 @@
 JsonApiModel_teacher-teacherSkill:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherSkill_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherSkill_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/teacherSkill.yaml#/teacher-teacherSkill_attributes"
-
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        name:
+          $ref: "../../library/teacher/teacherSkill.yaml#/teacher-teacherSkill_name"
+        skill:
+          $ref: "../../library/teacher/teacherSkill.yaml#/teacher-teacherSkill_skill"
   required:
     - type
     - id
@@ -16,11 +22,11 @@ JsonApiModel_teacher-teacherSkill:
 JsonApiModel_teacher-teacherSkill_type:
   type: string
   example: teacher-teacherSkill
-  description: teacher-teacherSkill
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherSkill_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherSkill (string)
+  description: Unique identifier of the entity (string)

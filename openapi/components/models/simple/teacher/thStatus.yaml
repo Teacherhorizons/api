@@ -1,28 +1,28 @@
 SimpleModel_teacher-thStatus:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-thStatus"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-thStatus_type"
-        - $ref: "#/SimpleModel_teacher-thStatus_id"
-        - $ref: "../../library/teacher/thStatus.yaml#/teacher-thStatus_attributes"
-
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_teacher-thStatus_id"
+    #simple attributes
+    description:
+      $ref: "../../library/teacher/thStatus.yaml#/teacher-thStatus_description"
+  required:
+    - id
 # shared
 
-SimpleModel_teacher-thStatus_type:
-  properties:
-    type:
-      type: string
-      example: teacher-thStatus
-      description: teacher-thStatus
-      readOnly: true
+# SimpleModel_teacher-thStatus_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-thStatus
+#       description: teacher-thStatus
+#       readOnly: true
 
 SimpleModel_teacher-thStatus_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

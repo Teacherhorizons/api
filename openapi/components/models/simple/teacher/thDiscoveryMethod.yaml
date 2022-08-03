@@ -1,28 +1,32 @@
 SimpleModel_teacher-thDiscoveryMethod:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-thDiscoveryMethod"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-thDiscoveryMethod_type"
-        - $ref: "#/SimpleModel_teacher-thDiscoveryMethod_id"
-        - $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_attributes"
-
-# shared
-
-SimpleModel_teacher-thDiscoveryMethod_type:
+  type: object
+  additionalProperties: false
   properties:
-    type:
-      type: string
-      example: teacher-thDiscoveryMethod
-      description: teacher-thDiscoveryMethod
-      readOnly: true
+    id: 
+      $ref: "#/SimpleModel_teacher-thDiscoveryMethod_id"
+    #simple attributes
+    name:
+      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_name"
+    precedence:
+      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_precedence"
+    #relationship attributes:
+    thDiscoveryMethodCategoryId:
+      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_thDiscoveryMethodCategoryId"
+  required:
+    - id
+# shared
+# SimpleModel_teacher-thDiscoveryMethod_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-thDiscoveryMethod
+#       description: teacher-thDiscoveryMethod
+#       readOnly: true
 
 SimpleModel_teacher-thDiscoveryMethod_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

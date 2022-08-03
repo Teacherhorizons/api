@@ -1,13 +1,20 @@
 JsonApiModel_teacher-thDiscoveryMethodCategory:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-thDiscoveryMethodCategory_type"
     id:
       $ref: "#/JsonApiModel_teacher-thDiscoveryMethodCategory_id"
     attributes:
-      allOf:
-        - $ref: "../../library/teacher/thDiscoveryMethodCategory.yaml#/teacher-thDiscoveryMethodCategory_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        name:
+          $ref: "../../library/teacher/thDiscoveryMethodCategory.yaml#/teacher-thDiscoveryMethodCategory_name"
+        precedence:
+          $ref: "../../library/teacher/thDiscoveryMethodCategory.yaml#/teacher-thDiscoveryMethodCategory_precedence"
   required:
     - type
     - id
@@ -15,14 +22,41 @@ JsonApiModel_teacher-thDiscoveryMethodCategory:
 JsonApiModel_teacher-thDiscoveryMethodCategory_type:
   type: string
   example: teacher-thDiscoveryMethodCategory
-  description: teacher-thDiscoveryMethodCategory
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-thDiscoveryMethodCategory_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-thDiscoveryMethodCategory (string)
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_thDiscoveryMethodCategory_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-thDiscoveryMethodCategory_id"
+  required:
+    - id
+
+JsonApiModel_thDiscoveryMethodCategory_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-thDiscoveryMethodCategory_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-thDiscoveryMethodCategory_id"
+      required:
+        - type
+        - id
+  required:
+    - data
 
 
 
