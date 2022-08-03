@@ -1,47 +1,43 @@
 JsonApiModel_teacher-teacherReferenceResponse:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        text:
+          $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"
+        # relationship attributes
+        request:
+          $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship_attribute"
+        question:
+          $ref: "../teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceResponse_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        request:
+          $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship"
+        question:
+          $ref: "../teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherReferenceResponse_attributes:
-  type: object
-  properties:
-    # simple attributes
-    text:
-      $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"
-    # relationship attributes
-    request:
-      $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship_attribute"
-    question:
-      $ref: "../teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion_relationship_attribute"
-
-JsonApiModel_teacher-teacherReferenceResponse_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    request:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    question:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-
 JsonApiModel_teacher-teacherReferenceResponse_type:
   type: string
   example: teacher-teacherReferenceResponse
-  description: teacher-teacherReferenceResponse
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherReferenceResponse_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherReferenceResponse (string)
+  description: Unique identifier of the entity (string)
