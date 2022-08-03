@@ -5,7 +5,12 @@ SimpleModel_teacher-teacherPreferredLocation:
     id: 
       $ref: "#/SimpleModel_teacher-teacherPreferredLocation_id"
     # simple attributes
-
+    name:
+      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_name"  
+    continent:
+      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_continent"
+  required:
+    - id
 # shared
 # SimpleModel_teacher-teacherPreferredLocation_type:
 #   properties:

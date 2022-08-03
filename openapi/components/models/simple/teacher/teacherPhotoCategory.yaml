@@ -4,8 +4,14 @@ SimpleModel_teacher-teacherPhotoCategory:
   properties:
     id: 
       $ref: "#/SimpleModel_teacher-teacherPhotoCategory_id"
-    # simple attributes
-
+    # relationship attributes
+    teacherPhotoId:
+      $ref: "../../library/teacher/teacherPhotoCategory.yaml#/teacher-teacherPhotoCategory_teacherPhotoId"
+    photoCategoryId:
+      $ref: "../../library/teacher/teacherPhotoCategory.yaml#/teacher-teacherPhotoCategory_photoCategoryId"
+  required:
+    - id
+    
 # shared
 # SimpleModel_teacher-teacherPhotoCategory_type:
 #   properties:

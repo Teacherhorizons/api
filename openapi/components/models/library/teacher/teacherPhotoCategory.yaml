@@ -1,46 +1,4 @@
-
-
-# relationshipIds
-teacher-teacherPhotoCategory_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherPhotoCategory_properties_teacherPhotoId"
-    - $ref: "#/teacher-teacherPhotoCategory_properties_photoCategoryId"
-
-# attribute relationships
-
-# relationships
-teacher-teacherPhotoCategory_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherPhotoCategory_properties_teacherPhoto"
-    - $ref: "#/teacher-teacherPhotoCategory_properties_photoCategory"
-
-
-#properties
-teacher-teacherPhotoCategory_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherPhotoCategory_id"
-teacher-teacherPhotoCategory_properties_teacherPhotoId:
-  properties:
-    teacherPhotoId:
-      $ref: "#/teacher-teacherPhotoCategory_teacherPhotoId"
-teacher-teacherPhotoCategory_properties_photoCategoryId:
-  properties:
-    photoCategoryId:
-      $ref: "#/teacher-teacherPhotoCategory_photoCategoryId"
-teacher-teacherPhotoCategory_properties_teacherPhoto:
-  properties:
-    teacherPhoto:
-      $ref: "#/teacher-teacherPhotoCategory_teacherPhoto"
-teacher-teacherPhotoCategory_properties_photoCategory:
-  properties:
-    photoCategory:
-      $ref: "#/teacher-teacherPhotoCategory_photoCategory"
-
-#attributes
-teacher-teacherPhotoCategory_id:
-  type: integer
-  example: 1
+#relationship attributes
 teacher-teacherPhotoCategory_teacherPhotoId:
   type: integer
   example: 1
@@ -49,17 +7,27 @@ teacher-teacherPhotoCategory_photoCategoryId:
   type: integer
   example: 1
   description: Relationship to teacher-photoCategory
+
+#relationships
 teacher-teacherPhotoCategory_teacherPhoto:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-teacherPhoto
+  required: 
+    - id
+  
 teacher-teacherPhotoCategory_photoCategory:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-photoCategory
+  required: 
+    - id
+  

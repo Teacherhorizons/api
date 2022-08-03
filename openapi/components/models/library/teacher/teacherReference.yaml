@@ -1,198 +1,195 @@
-teacher-teacherReference_metaProperties_shared:
-  properties:
-    teacher-teacherReference_precedence:
-      type: string
-      example: 
+# teacher-teacherReference_metaProperties_shared:
+#   properties:
+#     teacher-teacherReference_precedence:
+#       type: string
+#       example: 
 
-    teacher-teacherReference_slug:
-      type: string
-      example: guest-blogger
+#     teacher-teacherReference_slug:
+#       type: string
+#       example: guest-blogger
 
-    teacher-teacherReference_isAutomated:
-      type: boolean
-      example: 0
+#     teacher-teacherReference_isAutomated:
+#       type: boolean
+#       example: 0
 
-# attributes
-teacher-teacherReference_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherReference_properties_name"
-    - $ref: "#/teacher-teacherReference_properties_teacher"
-    - $ref: "#/teacher-teacherReference_properties_type"
-    - $ref: "#/teacher-teacherReference_properties_institution"
-    - $ref: "#/teacher-teacherReference_properties_position"
-    - $ref: "#/teacher-teacherReference_properties_email"
-    - $ref: "#/teacher-teacherReference_properties_phone"
-    - $ref: "#/teacher-teacherReference_properties_submission"
-    - $ref: "#/teacher-teacherReference_properties_refuri"
-    - $ref: "#/teacher-teacherReference_properties_status"
-    - $ref: "#/teacher-teacherReference_properties_submissionDate"
-    - $ref: "#/teacher-teacherReference_properties_completionDate"
-    - $ref: "#/teacher-teacherReference_properties_score"
-    - $ref: "#/teacher-teacherReference_properties_isArchived"
-    - $ref: "#/teacher-teacherReference_properties_latestUpdateDate"
+# # attributes
+# teacher-teacherReference_attributes:
+#   allOf:
+#     - $ref: "#/teacher-teacherReference_properties_name"
+#     - $ref: "#/teacher-teacherReference_properties_teacher"
+#     - $ref: "#/teacher-teacherReference_properties_type"
+#     - $ref: "#/teacher-teacherReference_properties_institution"
+#     - $ref: "#/teacher-teacherReference_properties_position"
+#     - $ref: "#/teacher-teacherReference_properties_email"
+#     - $ref: "#/teacher-teacherReference_properties_phone"
+#     - $ref: "#/teacher-teacherReference_properties_submission"
+#     - $ref: "#/teacher-teacherReference_properties_refuri"
+#     - $ref: "#/teacher-teacherReference_properties_status"
+#     - $ref: "#/teacher-teacherReference_properties_submissionDate"
+#     - $ref: "#/teacher-teacherReference_properties_completionDate"
+#     - $ref: "#/teacher-teacherReference_properties_score"
+#     - $ref: "#/teacher-teacherReference_properties_isArchived"
+#     - $ref: "#/teacher-teacherReference_properties_latestUpdateDate"
 
 
-# relationshipIds
-teacher-teacherReference_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherReference_properties_schoolId"
-    - $ref: "#/teacher-teacherReference_properties_countryId"
-    - $ref: "#/teacher-teacherReference_properties_creationUserId"
-    - $ref: "#/teacher-teacherReference_properties_latestUpdateUserId"
-    - $ref: "#/teacher-teacherReference_properties_phoneCodeCountryId"
+# # relationshipIds
+# teacher-teacherReference_relationshipIds:
+#   allOf:
+#     - $ref: "#/teacher-teacherReference_properties_schoolId"
+#     - $ref: "#/teacher-teacherReference_properties_countryId"
+#     - $ref: "#/teacher-teacherReference_properties_creationUserId"
+#     - $ref: "#/teacher-teacherReference_properties_latestUpdateUserId"
+#     - $ref: "#/teacher-teacherReference_properties_phoneCodeCountryId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-teacher-teacherReference_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherReference_properties_school"
-    - $ref: "#/teacher-teacherReference_properties_country"
-    - $ref: "#/teacher-teacherReference_properties_creationUser"
-    - $ref: "#/teacher-teacherReference_properties_latestUpdateUser"
-    - $ref: "#/teacher-teacherReference_properties_phoneCodeCountry"
+# # relationships
+# teacher-teacherReference_relationships:
+#   allOf:
+#     - $ref: "#/teacher-teacherReference_properties_school"
+#     - $ref: "#/teacher-teacherReference_properties_country"
+#     - $ref: "#/teacher-teacherReference_properties_creationUser"
+#     - $ref: "#/teacher-teacherReference_properties_latestUpdateUser"
+#     - $ref: "#/teacher-teacherReference_properties_phoneCodeCountry"
 
-#properties
-teacher-teacherReference_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherReference_id"
-teacher-teacherReference_properties_teacher:
-  properties:
-    teacher:
-      $ref: "#/teacher-teacherReference_teacher"
-teacher-teacherReference_properties_type:
-  properties:
-    type:
-      $ref: "#/teacher-teacherReference_type"
-teacher-teacherReference_properties_name:
-  properties:
-    name:
-      $ref: "#/teacher-teacherReference_name"
-teacher-teacherReference_properties_institution:
-  properties:
-    institution:
-      $ref: "#/teacher-teacherReference_institution"
-teacher-teacherReference_properties_position:
-  properties:
-    position:
-      $ref: "#/teacher-teacherReference_position"
-teacher-teacherReference_properties_email:
-  properties:
-    email:
-      $ref: "#/teacher-teacherReference_email"
-teacher-teacherReference_properties_phone:
-  properties:
-    phone:
-      $ref: "#/teacher-teacherReference_phone"
-teacher-teacherReference_properties_submission:
-  properties:
-    submission:
-      $ref: "#/teacher-teacherReference_submission"
-teacher-teacherReference_properties_refuri:
-  properties:
-    refuri:
-      $ref: "#/teacher-teacherReference_refuri"
-teacher-teacherReference_properties_status:
-  properties:
-    status:
-      $ref: "#/teacher-teacherReference_status"
-teacher-teacherReference_properties_submissionDate:
-  properties:
-    submissionDate:
-      $ref: "#/teacher-teacherReference_submissionDate"
-teacher-teacherReference_properties_completionDate:
-  properties:
-    completionDate:
-      $ref: "#/teacher-teacherReference_completionDate"
-teacher-teacherReference_properties_score:
-  properties:
-    score:
-      $ref: "#/teacher-teacherReference_score"
-teacher-teacherReference_properties_isArchived:
-  properties:
-    isArchived:
-      $ref: "#/teacher-teacherReference_isArchived"
-teacher-teacherReference_properties_latestUpdateDate:
-  properties:
-    latestUpdateDate:
-      $ref: "#/teacher-teacherReference_latestUpdateDate"
-teacher-teacherReference_properties_schoolId:
-  properties:
-    schoolId:
-      $ref: "#/teacher-teacherReference_schoolId"
-teacher-teacherReference_properties_countryId:
-  properties:
-    countryId:
-      $ref: "#/teacher-teacherReference_countryId"
-teacher-teacherReference_properties_creationUserId:
-  properties:
-    creationUserId:
-      $ref: "#/teacher-teacherReference_creationUserId"
-teacher-teacherReference_properties_latestUpdateUserId:
-  properties:
-    latestUpdateUserId:
-      $ref: "#/teacher-teacherReference_latestUpdateUserId"
-teacher-teacherReference_properties_phoneCodeCountryId:
-  properties:
-    phoneCodeCountryId:
-      $ref: "#/teacher-teacherReference_phoneCodeCountryId"
+# #properties
+# teacher-teacherReference_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/teacher-teacherReference_id"
+# teacher-teacherReference_properties_teacher:
+#   properties:
+#     teacher:
+#       $ref: "#/teacher-teacherReference_teacher"
+# teacher-teacherReference_properties_type:
+#   properties:
+#     type:
+#       $ref: "#/teacher-teacherReference_type"
+# teacher-teacherReference_properties_name:
+#   properties:
+#     name:
+#       $ref: "#/teacher-teacherReference_name"
+# teacher-teacherReference_properties_institution:
+#   properties:
+#     institution:
+#       $ref: "#/teacher-teacherReference_institution"
+# teacher-teacherReference_properties_position:
+#   properties:
+#     position:
+#       $ref: "#/teacher-teacherReference_position"
+# teacher-teacherReference_properties_email:
+#   properties:
+#     email:
+#       $ref: "#/teacher-teacherReference_email"
+# teacher-teacherReference_properties_phone:
+#   properties:
+#     phone:
+#       $ref: "#/teacher-teacherReference_phone"
+# teacher-teacherReference_properties_submission:
+#   properties:
+#     submission:
+#       $ref: "#/teacher-teacherReference_submission"
+# teacher-teacherReference_properties_refuri:
+#   properties:
+#     refuri:
+#       $ref: "#/teacher-teacherReference_refuri"
+# teacher-teacherReference_properties_status:
+#   properties:
+#     status:
+#       $ref: "#/teacher-teacherReference_status"
+# teacher-teacherReference_properties_submissionDate:
+#   properties:
+#     submissionDate:
+#       $ref: "#/teacher-teacherReference_submissionDate"
+# teacher-teacherReference_properties_completionDate:
+#   properties:
+#     completionDate:
+#       $ref: "#/teacher-teacherReference_completionDate"
+# teacher-teacherReference_properties_score:
+#   properties:
+#     score:
+#       $ref: "#/teacher-teacherReference_score"
+# teacher-teacherReference_properties_isArchived:
+#   properties:
+#     isArchived:
+#       $ref: "#/teacher-teacherReference_isArchived"
+# teacher-teacherReference_properties_latestUpdateDate:
+#   properties:
+#     latestUpdateDate:
+#       $ref: "#/teacher-teacherReference_latestUpdateDate"
+# teacher-teacherReference_properties_schoolId:
+#   properties:
+#     schoolId:
+#       $ref: "#/teacher-teacherReference_schoolId"
+# teacher-teacherReference_properties_countryId:
+#   properties:
+#     countryId:
+#       $ref: "#/teacher-teacherReference_countryId"
+# teacher-teacherReference_properties_creationUserId:
+#   properties:
+#     creationUserId:
+#       $ref: "#/teacher-teacherReference_creationUserId"
+# teacher-teacherReference_properties_latestUpdateUserId:
+#   properties:
+#     latestUpdateUserId:
+#       $ref: "#/teacher-teacherReference_latestUpdateUserId"
+# teacher-teacherReference_properties_phoneCodeCountryId:
+#   properties:
+#     phoneCodeCountryId:
+#       $ref: "#/teacher-teacherReference_phoneCodeCountryId"
 
-teacher-teacherReference_properties_school:
-  properties:
-    school:
-      $ref: "#/teacher-teacherReference_school"
-teacher-teacherReference_properties_country:
-  properties:
-    country:
-      $ref: "#/teacher-teacherReference_country"
-teacher-teacherReference_properties_creationUser:
-  properties:
-    creationUser:
-      $ref: "#/teacher-teacherReference_creationUser"
-teacher-teacherReference_properties_latestUpdateUser:
-  properties:
-    latestUpdateUser:
-      $ref: "#/teacher-teacherReference_latestUpdateUser"
-teacher-teacherReference_properties_phoneCodeCountry:
-  properties:
-    phoneCodeCountry:
-      $ref: "#/teacher-teacherReference_phoneCodeCountry"
+# teacher-teacherReference_properties_school:
+#   properties:
+#     school:
+#       $ref: "#/teacher-teacherReference_school"
+# teacher-teacherReference_properties_country:
+#   properties:
+#     country:
+#       $ref: "#/teacher-teacherReference_country"
+# teacher-teacherReference_properties_creationUser:
+#   properties:
+#     creationUser:
+#       $ref: "#/teacher-teacherReference_creationUser"
+# teacher-teacherReference_properties_latestUpdateUser:
+#   properties:
+#     latestUpdateUser:
+#       $ref: "#/teacher-teacherReference_latestUpdateUser"
+# teacher-teacherReference_properties_phoneCodeCountry:
+#   properties:
+#     phoneCodeCountry:
+#       $ref: "#/teacher-teacherReference_phoneCodeCountry"
 
 #attributes
-teacher-teacherReference_id:
-  type: integer
-  example: 
 teacher-teacherReference_teacher:
   type: integer
-  example: 
+  example: ""
 teacher-teacherReference_type:
   type: integer
-  example: 
+  example: ""
 teacher-teacherReference_name:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_institution:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_position:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_email:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_phone:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_submission:
   type: integer
-  example: 
+  example: ""
 teacher-teacherReference_refuri:
   type: string
-  example: 
+  example: ""
 teacher-teacherReference_status:
   type: integer
-  example: 
+  example: ""
 teacher-teacherReference_submissionDate:
   type: string
   format: date-time
@@ -203,70 +200,93 @@ teacher-teacherReference_completionDate:
   example: 2011-02-07T15:53:32Z
 teacher-teacherReference_score:
   type: integer
-  example: 
+  example: ""
 teacher-teacherReference_isArchived:
   type: boolean
-  example: 
+  example: ""
 teacher-teacherReference_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+
+#relationship attributes
 teacher-teacherReference_schoolId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to School
 teacher-teacherReference_countryId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to Country
 teacher-teacherReference_creationUserId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to User
 teacher-teacherReference_latestUpdateUserId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to User
 teacher-teacherReference_phoneCodeCountryId:
   type: integer
-  example: 
+  example: 1
   description: Relationship to Country
 
+ #relationships 
 teacher-teacherReference_school:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to School
+      description: Relationship to School
+  required: 
+    - id
+  
 teacher-teacherReference_country:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Country
+      description: Relationship to Country
+  required: 
+    - id
+  
 teacher-teacherReference_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to User
+      description: Relationship to User
+  required: 
+    - id
+  
 teacher-teacherReference_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to User
+      description: Relationship to User
+  required: 
+    - id
+  
 teacher-teacherReference_phoneCodeCountry:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-  description: Relationship to Country
+      description: Relationship to Country
+  required: 
+    - id
+  
 
 
 # id

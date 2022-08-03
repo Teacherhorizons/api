@@ -1,10 +1,19 @@
 JsonApiModel_teacher-teacherPhoto:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherPhoto_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherPhoto_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        noteComment:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
+          #this is dummy attribute, need to double check
   required:
     - type
     - id
@@ -12,28 +21,38 @@ JsonApiModel_teacher-teacherPhoto:
 JsonApiModel_teacher-teacherPhoto_type:
   type: string
   example: teacher-teacherPhoto
-  description: teacher-teacherPhoto
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherPhoto_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherPhoto (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_teacherPhoto_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-teacherPhoto_id"
+  required:
+    - id
 
 JsonApiModel_teacherPhoto_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_teacher-teacherPhoto_type"
         id:
           $ref: "#/JsonApiModel_teacher-teacherPhoto_id"
+      required:
+        - type
+        - id
+  required:
+     - data
