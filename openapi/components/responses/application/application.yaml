@@ -438,10 +438,13 @@ ApplicationResponse_includedJob_school:
           $ref: "../../../components/models/library/job/job.yaml#/job_startDate"
         status:
           $ref: "../../../components/models/library/job/job.yaml#/job_status"
+        subject:
+          $ref: "../../../components/models/library/job/job.yaml#/job_subject"
       required:
         - title
         - startDate
         - status
+        - subject
     relationships:
       type: object
       properties:
