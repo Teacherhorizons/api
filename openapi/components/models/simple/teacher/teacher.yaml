@@ -1,58 +1,223 @@
+# yaml-language-server: $schema=../../../../../meta/SimpleModel-MultipleSchemas.json
+
 SimpleModel_teacher:
-  type: object
-  properties:
-    schema:
-      type: string
-      example: admin
+  oneOf:
+    - $ref: "#/SimpleModel_teacher_admin"
+    - $ref: "#/SimpleModel_teacher_school"
+    - $ref: "#/SimpleModel_teacher_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_teacher_all"
       admin: "#/SimpleModel_teacher_admin"
-      adminOnly: "#/SimpleModel_teacher_adminOnly"
       school: "#/SimpleModel_teacher_school"
       teacher: "#/SimpleModel_teacher_teacher"
 
-SimpleModel_teacher_all:
-  allOf:
-    - $ref: "#/SimpleModel_teacher"
-    - type: object
-      allOf:
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_all"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
+# SimpleModel_teacher_all:
+#   allOf:
+#     - $ref: "#/SimpleModel_teacher"
+#     - type: object
+#       allOf:
+#         - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
+#         - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_all"
+#         - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
 
 SimpleModel_teacher_admin:
-  allOf:
-    - $ref: "#/SimpleModel_teacher"
-    - type: object
-      allOf:
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_adminOnly"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_teacher_id"
+    # simple attributes
+    user:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_user" 
+    teachingQualificationCountry:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountry"
+    qualificationType:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationType"
+    jobSeekingStatus:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatus"
+    userType:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
+    thDiscoveryMethod:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethod"
+    latestAdviserCommentUser:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
+    currentCountry:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountry"
+  required:
+    - schema
+    - id
 
-SimpleModel_teacher_adminOnly:
-  allOf:
-    - $ref: "#/SimpleModel_teacher"
-    - type: object
-      allOf:
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_adminOnly"
+# SimpleModel_teacher_adminOnly:
+#   allOf:
+#     - $ref: "#/SimpleModel_teacher"
+#     - type: object
+#       allOf:
+#         - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_adminOnly"
 
 SimpleModel_teacher_school:
-  allOf:
-    - $ref: "#/SimpleModel_teacher"
-    - type: object
-      allOf:
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_teacher_id"
+    # simple attributes
+    memberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
+    availableFromDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_availableFromDate"
+    statement:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_statement"
+    partnerMemberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_partnerMemberNumber"
+    numberOfYearsTeachingExperience:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfYearsTeachingExperience"
+    profileStrength:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_profileStrength"
+    birthYear:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_birthYear"
+    numberOfDependentChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren"
+    latestAdviserCommentDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate"
+    interestedInPrivateTuition:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition"
+    neverPotentialRiskToChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren"
+    neverBehaviouralConcernsTowardsChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverBehaviouralConcernsTowardsChildren"
+    thPlaceabilityRating:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
+    teacherDoesNotWantToBeContacted:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teacherDoesNotWantToBeContacted"
+    isAvailableForRemoteTeaching:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_isAvailableForRemoteTeaching"
+    twitterHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_twitterHandle"
+    instagramHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_instagramHandle"
+    linkedInProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_linkedInProfileUrl"
+    facebookProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl"
+    videoInterviewClipUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl"
+    #relationship attributes
+    userId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+    teachingQualificationCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountryId"
+    qualificationTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationTypeId"
+    jobSeekingStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatusId"
+    userTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userTypeId"
+    thDiscoveryMethodId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethodId"
+    latestAdviserCommentUserId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentUserId"
+    currentCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountryId"
+    maritalStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
+    internationalSchoolExperienceId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
+    photoFileId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoFileId"
+  required:
+    - schema
+    - id
 
 SimpleModel_teacher_teacher:
-  allOf:
-    - $ref: "#/SimpleModel_teacher"
-    - type: object
-      allOf:
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_id"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_shared"
-        - $ref: "../../library/teacher/teacher.yaml#/teacher_relationshipProperties_shared"
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_teacher_id"
+    # simple attributes
+    memberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
+    availableFromDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_availableFromDate"
+    statement:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_statement"
+    partnerMemberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_partnerMemberNumber"
+    numberOfYearsTeachingExperience:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfYearsTeachingExperience"
+    profileStrength:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_profileStrength"
+    birthYear:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_birthYear"
+    numberOfDependentChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren"
+    latestAdviserCommentDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate"
+    interestedInPrivateTuition:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition"
+    neverPotentialRiskToChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren"
+    neverBehaviouralConcernsTowardsChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverBehaviouralConcernsTowardsChildren"
+    thPlaceabilityRating:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
+    teacherDoesNotWantToBeContacted:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teacherDoesNotWantToBeContacted"
+    isAvailableForRemoteTeaching:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_isAvailableForRemoteTeaching"
+    twitterHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_twitterHandle"
+    instagramHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_instagramHandle"
+    linkedInProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_linkedInProfileUrl"
+    facebookProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl"
+    videoInterviewClipUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl"
+    #relationship attributes
+    userId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+    teachingQualificationCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountryId"
+    qualificationTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationTypeId"
+    jobSeekingStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatusId"
+    userTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userTypeId"
+    thDiscoveryMethodId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethodId"
+    latestAdviserCommentUserId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentUserId"
+    currentCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountryId"
+    maritalStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
+    internationalSchoolExperienceId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
+    photoFileId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoFileId"
+  required:
+    - schema
+    - id
+
+SimpleModel_teacher_id:
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

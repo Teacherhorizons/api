@@ -1,59 +1,75 @@
 JsonApiModel_teacher:
   type: object
+  additionalProperties: false
   properties:
-    $ref: "#/JsonApiModel_teacher_attributes"
+    type:
+      $ref: "#/JsonApiModel_teacher_type"
+    id:
+      $ref: "#/JsonApiModel_teacher_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_user" 
+        teachingQualificationCountry:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountry"
+        qualificationType:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationType"
+        jobSeekingStatus:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatus"
+        userType:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_user"
+        thDiscoveryMethod:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethod"
+        latestAdviserCommentUser:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_user"
+        currentCountry:
+          $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountry"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        teachingQualificationCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+        qualificationType:
+          $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship"
+        jobSeekingStatus:
+          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship"
+        userType:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        thDiscoveryMethod:
+          $ref: "../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship"
+        latestAdviserCommentUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        currentCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher_attributes:
-  type:
-    $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_type2"
-  id:
-    $ref: "../../../schemas/proposed/simple-models/helpers/properties.yaml#/Id"
-  attributes:
-    $ref: "../../library/teacher/teacher.yaml#/teacher_standardProperties_all"
-  relationships:
-    $ref: "#/JsonApiModel_teacher_relationships"
-
-JsonApiModel_teacher_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    user:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    teachingQualificationCountry:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    qualificationType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    jobSeekingStatus:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    userType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    thDiscoveryMethod:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    latestAdviserCommentUser:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    currentCountry:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-
 JsonApiModel_teacher_type:
   type: string
   example: teacher
-  description: teacher
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_teacher_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_teacher_id"
+  required:
+    - id
 
 JsonApiModel_teacher_relationship:
   type: object
@@ -67,3 +83,8 @@ JsonApiModel_teacher_relationship:
           $ref: "#/JsonApiModel_teacher_type"
         id:
           $ref: "#/JsonApiModel_teacher_id"
+      required:
+        - type
+        - id
+  required:
+    - data
