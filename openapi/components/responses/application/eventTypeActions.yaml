@@ -1,4 +1,4 @@
-Application-eventTypeActionsResponse:
+Response_application-eventTypeActions:
   oneOf:
     - $ref: "#/Response_application-eventTypeActions_admin"
   discriminator:
@@ -19,6 +19,7 @@ Response_application-eventTypeActions_admin:
       type: array
       items:
         type: object
+        additionalProperties: false
         properties:
           type:
             $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type"
@@ -26,43 +27,42 @@ Response_application-eventTypeActions_admin:
             $ref: "../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id"
           attributes:
             type: object
+            additionalProperties: false
             properties:
+              #simple attributes
               label:
                 $ref: "../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
               applicationEventType:
                 $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
-              # TODO AS: refactor the below
+              #relationship attribute
               autoEmail:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "1"
+                $ref: "../../../components/models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship_attribute"
             required:
               - label
           relationships:
             type: object
+            additionalProperties: false
             properties:
               manualEmailTemplate:
                 $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
             required:
               - manualEmailTemplate
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+        required:
+          - type
+          - id
+          - attributes
+          - relationships
     included:
       type: array
       items:
         anyOf:
-          - $ref: "#/Application-eventTypeActionsResponse_includedUser_admin"
+          - $ref: "#/Response_application-eventTypeActions_includedUser_admin"
   required:
     - schema
     - data
     - included
 
-Application-eventTypeActionsResponse_includedUser_admin:
+Response_application-eventTypeActions_includedUser_admin:
   type: object
   additionalProperties: false
   properties:

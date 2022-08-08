@@ -20,10 +20,43 @@ Response_general-manualEmailTemplates_admin:
       enum:
         - admin
     data:
-      $ref: "#/Response_general-manualEmailTemplates_data"
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_type"
+          id:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              to:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+              cc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+              bcc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+              subject:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+              body:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+            required:
+              - to
+              - cc
+              - bcc
+              - subject
+              - body
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data
+
 
 # school
 Response_general-manualEmailTemplates_school:
@@ -35,7 +68,39 @@ Response_general-manualEmailTemplates_school:
       enum:
         - school
     data:
-      $ref: "#/Response_general-manualEmailTemplates_data"
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_type"
+          id:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              to:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+              cc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+              bcc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+              subject:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+              body:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+            required:
+              - to
+              - cc
+              - bcc
+              - subject
+              - body
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data
@@ -50,42 +115,41 @@ Response_general-manualEmailTemplates_teacher:
       enum:
         - teacher
     data:
-      $ref: "#/Response_general-manualEmailTemplates_data"
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_type"
+          id:
+            $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              to:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
+              cc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
+              bcc:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
+              subject:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
+              body:
+                $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+            required:
+              - to
+              - cc
+              - bcc
+              - subject
+              - body
+        required:
+          - type
+          - id
+          - attributes
   required:
     - schema
     - data
 
-Response_general-manualEmailTemplates_data:
-  type: array
-  items:
-    type: object
-    additionalProperties: false
-    properties:
-      type:
-        $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_type"
-      id:
-        $ref: "../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
-      attributes:
-        type: object
-        additionalProperties: false
-        properties:
-          to:
-            $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_to"
-          cc:
-            $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_cc"
-          bcc:
-            $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_bcc"
-          subject:
-            $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
-          body:
-            $ref: "../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
-        required:
-          - to
-          - cc
-          - bcc
-          - subject
-          - body
-    required:
-      - type
-      - id
-      - attributes
+
