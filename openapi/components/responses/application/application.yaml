@@ -1,14 +1,14 @@
-ApplicationResponse:
+Response_application:
   oneOf:
     - $ref: "#/Response_application_admin"
-    - $ref: "#/ApplicationResponse_school"
-    - $ref: "#/ApplicationResponse_teacher"
+    - $ref: "#/Response_application_school"
+    - $ref: "#/Response_application_teacher"
   discriminator:
     propertyName: schema
     mapping:
       admin: "#/Response_application_admin"
-      school: "#/ApplicationResponse_school"
-      teacher: "#/ApplicationResponse_teacher"
+      school: "#/Response_application_school"
+      teacher: "#/Response_application_teacher"
 
 # admin
 Response_application_admin:
@@ -74,16 +74,17 @@ Response_application_admin:
       type: array
       items:
         anyOf:
-          - $ref: "#/ApplicationResponse_includedSchool_admin"
-          - $ref: "#/ApplicationResponse_includedJob_admin"
-          - $ref: "#/ApplicationResponse_includedTeacher_admin"
+          - $ref: "#/Response_application_includedSchool_admin"
+          - $ref: "#/Response_application_includedJob_admin"
+          - $ref: "#/Response_application_includedTeacher_admin"
   required:
     - schema
     - data
     - included
 
-ApplicationResponse_includedTeacher_admin:
+Response_application_includedTeacher_admin:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
@@ -91,6 +92,7 @@ ApplicationResponse_includedTeacher_admin:
       $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         memberNumber:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
@@ -101,8 +103,9 @@ ApplicationResponse_includedTeacher_admin:
     - id
     - attributes
 
-ApplicationResponse_includedJob_admin:
+Response_application_includedJob_admin:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
@@ -110,6 +113,7 @@ ApplicationResponse_includedJob_admin:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         title:
           $ref: "../../../components/models/library/job/job.yaml#/job_title"
@@ -131,6 +135,7 @@ ApplicationResponse_includedJob_admin:
         - role
     relationships:
       type: object
+      additionalProperties: false
       properties:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
@@ -142,8 +147,9 @@ ApplicationResponse_includedJob_admin:
     - attributes
     - relationships
 
-ApplicationResponse_includedSchool_admin:
+Response_application_includedSchool_admin:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
@@ -151,6 +157,7 @@ ApplicationResponse_includedSchool_admin:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
@@ -172,7 +179,7 @@ ApplicationResponse_includedSchool_admin:
     - attributes
 
 # teacher
-ApplicationResponse_teacher:
+Response_application_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -207,6 +214,7 @@ ApplicationResponse_teacher:
             - contactStage
         relationships:
           type: object
+          additionalProperties: false
           properties:
             job:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
@@ -221,16 +229,17 @@ ApplicationResponse_teacher:
       type: array
       items:
         anyOf:
-          - $ref: "#/ApplicationResponse_includedSchool_teacher"
-          - $ref: "#/ApplicationResponse_includedJob_teacher"
-          - $ref: "#/ApplicationResponse_includedUser_teacher"
+          - $ref: "#/Response_application_includedSchool_teacher"
+          - $ref: "#/Response_application_includedJob_teacher"
+          - $ref: "#/Response_application_includedUser_teacher"
   required:
     - schema
     - data
     - included
 
-ApplicationResponse_includedJob_teacher:
+Response_application_includedJob_teacher:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
@@ -238,6 +247,7 @@ ApplicationResponse_includedJob_teacher:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         title:
           $ref: "../../../components/models/library/job/job.yaml#/job_title"
@@ -257,13 +267,14 @@ ApplicationResponse_includedJob_teacher:
         - role
     relationships:
       type: object
+      additionalProperties: false
       properties:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
         thOwnerUser:
           allOf:
             - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-            - $ref: "#/ApplicationResponse_teacher_stage_2_description"
+            - $ref: "#/Response_application_teacher_stage_2_description"
       required:
         - school
   required:
@@ -272,8 +283,9 @@ ApplicationResponse_includedJob_teacher:
     - attributes
     - relationships
 
-ApplicationResponse_includedSchool_teacher:
+Response_application_includedSchool_teacher:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
@@ -281,6 +293,7 @@ ApplicationResponse_includedSchool_teacher:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
@@ -293,11 +306,11 @@ ApplicationResponse_includedSchool_teacher:
         leadRecruitmentContactName:
           allOf:
             - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
-            - $ref: "#/ApplicationResponse_teacher_stage_3_description"
+            - $ref: "#/Response_application_teacher_stage_3_description"
         leadRecruitmentContactEmail:
           allOf:
             - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactEmail"
-            - $ref: "#/ApplicationResponse_teacher_stage_3_description"
+            - $ref: "#/Response_application_teacher_stage_3_description"
       required:
         - name
         - slug
@@ -305,18 +318,19 @@ ApplicationResponse_includedSchool_teacher:
         - smallProfileImageUrl
     relationships:
       type: object
+      additionalProperties: false
       properties:
         lraUser:
           allOf:
             - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
-            - $ref: "#/ApplicationResponse_teacher_stage_2_description"
+            - $ref: "#/Response_application_teacher_stage_2_description"
   required:
     - type
     - id
     - attributes
 
 # descriptions
-ApplicationResponse_teacher_stage_2_description:
+Response_application_teacher_stage_2_description:
   description: |
     Included if application contains any of these events:
     - Info request from candidate
@@ -325,7 +339,7 @@ ApplicationResponse_teacher_stage_2_description:
     - Interview with adviser
     - Submission to school
 
-ApplicationResponse_teacher_stage_3_description:
+Response_application_teacher_stage_3_description:
   description: |
     Included if application contains any of these events:
     - Interview with School - invited
@@ -333,8 +347,9 @@ ApplicationResponse_teacher_stage_3_description:
     - Interview with School
 
 #
-ApplicationResponse_includedUser_teacher:
+Response_application_includedUser_teacher:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type"
@@ -342,6 +357,7 @@ ApplicationResponse_includedUser_teacher:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         firstName:
           $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
@@ -354,9 +370,13 @@ ApplicationResponse_includedUser_teacher:
         - firstName
         - lastName
         - email
+  required:
+    - type
+    - id
+    - attributes
 
 # school
-ApplicationResponse_school:
+Response_application_school:
   type: object
   additionalProperties: false
   properties:
@@ -396,6 +416,7 @@ ApplicationResponse_school:
             - status
         relationships:
           type: object
+          additionalProperties: false
           properties:
             job:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
@@ -413,17 +434,18 @@ ApplicationResponse_school:
       type: array
       items:
         anyOf:
-          - $ref: "#/ApplicationResponse_includedSchool_school"
-          - $ref: "#/ApplicationResponse_includedJob_school"
-          - $ref: "#/ApplicationResponse_includedTeacher_school"
-          - $ref: "#/ApplicationResponse_includedUser_school"
+          - $ref: "#/Response_application_includedSchool_school"
+          - $ref: "#/Response_application_includedJob_school"
+          - $ref: "#/Response_application_includedTeacher_school"
+          - $ref: "#/Response_application_includedUser_school"
   required:
     - schema
     - data
     - included
 
-ApplicationResponse_includedJob_school:
+Response_application_includedJob_school:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
@@ -431,6 +453,7 @@ ApplicationResponse_includedJob_school:
       $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         title:
           $ref: "../../../components/models/library/job/job.yaml#/job_title"
@@ -447,20 +470,21 @@ ApplicationResponse_includedJob_school:
         - subject
     relationships:
       type: object
+      additionalProperties: false
       properties:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
         thOwnerUser:
-          allOf:
-            - $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
     - attributes
     - relationships
 
-ApplicationResponse_includedSchool_school:
+Response_application_includedSchool_school:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
@@ -468,6 +492,7 @@ ApplicationResponse_includedSchool_school:
       $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
@@ -481,6 +506,7 @@ ApplicationResponse_includedSchool_school:
         - city
     relationships:
       type: object
+      additionalProperties: false
       properties:
         lraUser:
           allOf:
@@ -490,8 +516,9 @@ ApplicationResponse_includedSchool_school:
     - id
     - attributes
 
-ApplicationResponse_includedTeacher_school:
+Response_application_includedTeacher_school:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
@@ -499,6 +526,7 @@ ApplicationResponse_includedTeacher_school:
       $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         memberNumber:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
@@ -510,8 +538,9 @@ ApplicationResponse_includedTeacher_school:
     - attributes
 
 #
-ApplicationResponse_includedUser_school:
+Response_application_includedUser_school:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type"
@@ -519,6 +548,7 @@ ApplicationResponse_includedUser_school:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
     attributes:
       type: object
+      additionalProperties: false
       properties:
         firstName:
           $ref: "../../../components/models/library/user/user.yaml#/user_firstName"
@@ -531,3 +561,7 @@ ApplicationResponse_includedUser_school:
         - firstName
         - lastName
         - email
+  required:
+    - type
+    - id
+    - attributes

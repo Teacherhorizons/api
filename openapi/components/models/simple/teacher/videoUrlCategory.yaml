@@ -1,28 +1,28 @@
 SimpleModel_teacher-videoUrlCategory:
-  allOf:
-    # - $ref: "#/SimpleModel_teacher-videoUrlCategory"
-    - type: object
-      allOf:
-        - $ref: "#/SimpleModel_teacher-videoUrlCategory_type"
-        - $ref: "#/SimpleModel_teacher-videoUrlCategory_id"
-        - $ref: "../../library/teacher/videoUrlCategory.yaml#/teacher-videoUrlCategory_attributes"
+  type: object
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/SimpleModel_teacher-videoUrlCategory_id"
+    #simple attributes
+    name:
+      $ref: "../../library/teacher/videoUrlCategory.yaml#/teacher-videoUrlCategory_name"
+  required:
+    - id
 
 # shared
-
-SimpleModel_teacher-videoUrlCategory_type:
-  properties:
-    type:
-      type: string
-      example: teacher-videoUrlCategory
-      description: teacher-videoUrlCategory
-      readOnly: true
+# SimpleModel_teacher-videoUrlCategory_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-videoUrlCategory
+#       description: teacher-videoUrlCategory
+#       readOnly: true
 
 SimpleModel_teacher-videoUrlCategory_id:
-  properties:
-    id:
-      type: integer
-      format: int32
-      example: 1
-      readOnly: true
-      description: Unique identifier of the object
+  type: integer
+  format: int32
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

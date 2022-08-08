@@ -1,60 +1,9 @@
-
-#filter properties
-
-# attributes
-teacher-teacherReferenceResponse_attributes:
-  allOf:
-    - $ref: "#/teacher-teacherReferenceResponse_properties_text"
-
-
-# relationshipIds
-teacher-teacherReferenceResponse_relationshipIds:
-  allOf:
-    - $ref: "#/teacher-teacherReferenceResponse_properties_requestId"
-    - $ref: "#/teacher-teacherReferenceResponse_properties_questionId"
-
-# attribute relationships
-
-# relationships
-teacher-teacherReferenceResponse_relationships:
-  allOf:
-    - $ref: "#/teacher-teacherReferenceResponse_properties_request"
-    - $ref: "#/teacher-teacherReferenceResponse_properties_question"
-  
-
-#properties
-teacher-teacherReferenceResponse_properties_id:
-  properties:
-    id:
-      $ref: "#/teacher-teacherReferenceResponse_id"
-teacher-teacherReferenceResponse_properties_text:
-  properties:
-    text:
-      $ref: "#/teacher-teacherReferenceResponse_text"
-teacher-teacherReferenceResponse_properties_requestId:
-  properties:
-    requestId:
-      $ref: "#/teacher-teacherReferenceResponse_requestId"
-teacher-teacherReferenceResponse_properties_questionId:
-  properties:
-    questionId:
-      $ref: "#/teacher-teacherReferenceResponse_questionId"
-teacher-teacherReferenceResponse_properties_request:
-  properties:
-    request:
-      $ref: "#/teacher-teacherReferenceResponse_request"
-teacher-teacherReferenceResponse_properties_question:
-  properties:
-    question:
-      $ref: "#/teacher-teacherReferenceResponse_question"
-
 #attributes
-teacher-teacherReferenceResponse_id:
-  type: integer
-  example: 1
 teacher-teacherReferenceResponse_text:
   type: string
-  example: 
+  example: ""
+
+#relationship attributes
 teacher-teacherReferenceResponse_requestId:
   type: integer
   example: 1
@@ -63,20 +12,28 @@ teacher-teacherReferenceResponse_questionId:
   type: integer
   example: 1
   description: Relationship to teacher-teacherReferenceQuestion
+
+#relationships
 teacher-teacherReferenceResponse_request:
   type: object
+  additional Properties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-teacherReferenceRequest
+  required:
+   - id
 teacher-teacherReferenceResponse_question:
   type: object
+  additional Properties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-teacherReferenceQuestion
+  required:
+   - id
 
 
 

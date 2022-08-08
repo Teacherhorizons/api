@@ -2,54 +2,71 @@
 
 JsonApiModel_teacher-teacherReferenceQuestion:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        text:
+          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"
+        precedence:
+          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_precedence"
+        isRequired:
+          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_isRequired"
+        # relationship attributes
+        referenceType:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        referenceType:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherReferenceQuestion_attributes:
-  type: object
-  properties:
-    # simple attributes
-    text:
-      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"
-    precedence:
-      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_precedence"
-    isRequired:
-      $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_isRequired"
-    # relationship attributes
-    referenceType:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-
-JsonApiModel_teacher-teacherReferenceQuestion_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    referenceType:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-
 JsonApiModel_teacher-teacherReferenceQuestion_type:
   type: string
   example: teacher-teacherReferenceQuestion
-  description: teacher-teacherReferenceQuestion
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherReferenceQuestion_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherReferenceQuestion (string)
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-teacherReferenceQuestion_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+      required:
+        - type
+        - id
+  required:
+    - data
 
 JsonApiModel_teacher-teacherReferenceQuestion_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+  required:
+    - id

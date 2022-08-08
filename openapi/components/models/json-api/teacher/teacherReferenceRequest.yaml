@@ -2,98 +2,115 @@
 
 JsonApiModel_teacher-teacherReferenceRequest:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_type"
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_id"
     attributes:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        refereeFullName:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeFullName"
+        refereeRoleName:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeRoleName"
+        refereeRoleEmail:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeEmail"
+        refereeOrganisationName:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationName"
+        refereePhoneNumber:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereePhoneNumber"
+        fileUri:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_fileUri"
+        isArchived:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_isArchived"
+        creationDate:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_latestUpdateDate"
+        completionDate:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_completionDate"
+        score:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_score"
+        # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        type:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+        status:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+        refereePhoneCodeCountry:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+        school:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+        country:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
+        creationUser:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"     
+        latestUpdateUser:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        type:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
+        status:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
+        refereePhoneCodeCountry:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
+        school:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
+        country:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
+        creationUser:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"     
+        latestUpdateUser:
+          $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
   required:
     - type
     - id
 
-JsonApiModel_teacher-teacherReferenceRequest_attributes:
-  type: object
-  properties:
-    # simple attributes
-    refereeFullName:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeFullName"
-    refereeRoleName:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeRoleName"
-    refereeRoleEmail:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeEmail"
-    refereeOrganisationName:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationName"
-    refereePhoneNumber:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereePhoneNumber"
-    fileUri:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_fileUri"
-    isArchived:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_isArchived"
-    creationDate:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_latestUpdateDate"
-    completionDate:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_completionDate"
-    score:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_score"
-    # relationship attributes
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-    type:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-    status:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-    refereePhoneCodeCountry:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-    school:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-    country:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-    creationUser:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"     
-    latestUpdateUser:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-
-JsonApiModel_teacher-teacherReferenceRequest_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    teacher:
-      $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-    type:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-    status:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-    refereePhoneCodeCountry:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-    school:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-    country:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-    creationUser:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"     
-    latestUpdateUser:
-      $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-
 JsonApiModel_teacher-teacherReferenceRequest_type:
   type: string
   example: teacher-teacherReferenceRequest
-  description: teacher-teacherReferenceRequest
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_teacher-teacherReferenceRequest_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the teacher-teacherReferenceRequest (string)
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-teacherReferenceRequest_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_id"
+      required:
+        - type
+        - id
+  required:
+    - data
 
 JsonApiModel_teacher-teacherReferenceRequest_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-teacherReferenceRequest_id"
+  required:
+    - id
