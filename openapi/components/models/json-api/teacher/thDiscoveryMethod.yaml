@@ -16,15 +16,14 @@ JsonApiModel_teacher-thDiscoveryMethod:
         precedence:
           $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_precedence"
         #relationship attributes:
-        thDiscoveryMethodCategory:
-          $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory_relationship_attribute"
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        thDiscoveryMethodCategory:
-          $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory_relationship"
-
+    #     thDiscoveryMethodCategory:
+    #       $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory_relationship_attribute"
+    # relationships:
+    #   type: object
+    #   additionalProperties: false
+    #   properties:
+    #     thDiscoveryMethodCategory:
+    #       $ref: "../teacher/thDiscoveryMethodCategory.yaml#/JsonApiModel_teacher-thDiscoveryMethodCategory_relationship"
   required:
     - type
     - id
