@@ -35,13 +35,13 @@ JsonApiModel_regional-city_admin:
         alias:
           $ref: "../../library/regional/city.yaml#/regional-city_alias"
         keyAttractions:
-          $ref: "../../library/regional/city.yaml#/regional-city_name"
+          $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
         creationDate:
           $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
         latestUpdateDate:
           $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
         slug:
-          $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+          $ref: "../../library/regional/city.yaml#/regional-city_slug"
         locationLatitude:
           $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
         locationLongitude:
@@ -54,7 +54,7 @@ JsonApiModel_regional-city_admin:
       required:
         - name
         - alias
-        - keyAtrractions
+        - keyAttractions
         - creationDate
         - latestUpdateDate
         - slug
@@ -100,9 +100,9 @@ JsonApiModel_regional-city_school:
         alias:
           $ref: "../../library/regional/city.yaml#/regional-city_alias"
         keyAttractions:
-          $ref: "../../library/regional/city.yaml#/regional-city_name"
+          $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
         slug:
-          $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+          $ref: "../../library/regional/city.yaml#/regional-city_slug"
         locationLatitude:
           $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
         locationLongitude:
@@ -110,7 +110,7 @@ JsonApiModel_regional-city_school:
       required:
         - name
         - alias
-        - keyAtrractions
+        - keyAttractions
         - slug
         - locationLatitude
         - locationLongitude
@@ -144,9 +144,9 @@ JsonApiModel_regional-city_teacher:
         alias:
           $ref: "../../library/regional/city.yaml#/regional-city_alias"
         keyAttractions:
-          $ref: "../../library/regional/city.yaml#/regional-city_name"
+          $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
         slug:
-          $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+          $ref: "../../library/regional/city.yaml#/regional-city_slug"
         locationLatitude:
           $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
         locationLongitude:
@@ -154,7 +154,7 @@ JsonApiModel_regional-city_teacher:
       required:
         - name
         - alias
-        - keyAtrractions
+        - keyAttractions
         - slug
         - locationLatitude
         - locationLongitude

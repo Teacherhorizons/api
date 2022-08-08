@@ -29,13 +29,13 @@ SimpleModel_regional-city_admin:
     alias:
       $ref: "../../library/regional/city.yaml#/regional-city_alias"
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
     creationDate:
       $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
     latestUpdateDate:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+      $ref: "../../library/regional/city.yaml#/regional-city_slug"
     locationLatitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
     locationLongitude:
@@ -50,7 +50,7 @@ SimpleModel_regional-city_admin:
     - id
     - name
     - alias
-    - keyAtrractions
+    - keyAttractions
     - creationDate
     - latestUpdateDate
     - slug
@@ -75,9 +75,9 @@ SimpleModel_regional-city_school:
     alias:
       $ref: "../../library/regional/city.yaml#/regional-city_alias"
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+      $ref: "../../library/regional/city.yaml#/regional-city_slug"
     locationLatitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
     locationLongitude:
@@ -87,7 +87,7 @@ SimpleModel_regional-city_school:
     - id
     - name
     - alias
-    - keyAtrractions
+    - keyAttractions
     - slug
     - locationLatitude
     - locationLongitude
@@ -108,9 +108,9 @@ SimpleModel_regional-city_teacher:
     alias:
       $ref: "../../library/regional/city.yaml#/regional-city_alias"
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+      $ref: "../../library/regional/city.yaml#/regional-city_slug"
     locationLatitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
     locationLongitude:
@@ -120,7 +120,7 @@ SimpleModel_regional-city_teacher:
     - id
     - name
     - alias
-    - keyAtrractions
+    - keyAttractions
     - slug
     - locationLatitude
     - locationLongitude
