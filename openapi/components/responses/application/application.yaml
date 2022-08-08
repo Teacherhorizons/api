@@ -357,6 +357,7 @@ Response_application_includedUser_teacher:
       $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id"
     attributes:
       type: object
+      description: Note that a user is only included if the lraUser or thOwnerUser are included
       additionalProperties: false
       properties:
         firstName:
@@ -365,7 +366,6 @@ Response_application_includedUser_teacher:
           $ref: "../../../components/models/library/user/user.yaml#/user_lastName"
         email:
           $ref: "../../../components/models/library/user/user.yaml#/user_email"
-      description: Note that a user is only included if the lraUser or thOwnerUser are included
       required:
         - firstName
         - lastName
@@ -475,7 +475,7 @@ Response_application_includedJob_school:
         school:
           $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
         thOwnerUser:
-           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id

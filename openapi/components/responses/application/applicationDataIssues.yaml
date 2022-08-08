@@ -33,10 +33,9 @@ Response_application-applicationDataIssues_admin:
             type: object
             additionalProperties: false
             properties:
-              # errors due to this spec being non-standard
+              # Name of the related guideline (non-standard json-api)
               name:
-                type: string
-                description: Name of the related guideline (non-standard json-api)
+                $ref: "../../../components/models/library/application/guideline.yaml#/application-guideline_name"
             required:
               - name
         required:
@@ -44,8 +43,7 @@ Response_application-applicationDataIssues_admin:
           - id
           - attributes
   required:
-    # errors due to this spec being non-standard
-    - schema
+    # errors due to this spec being non-standard (actual api response doesn't have a schema)
     - data
 
 # admin-v2

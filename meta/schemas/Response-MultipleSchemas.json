@@ -29,6 +29,9 @@
         },
         "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
+        },
+        "^Response_(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z_0-9]*_description$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-Description"
         }
       },
       "required": [],
@@ -264,6 +267,9 @@
                   "type": "string",
                   "const": "object"
                 },
+                "description": {
+                  "type": "string"
+                },
                 "additionalProperties": {
                   "type": "boolean",
                   "const": false
@@ -273,16 +279,27 @@
                   "additionalProperties": false,
                   "patternProperties": {
                     "^[a-zA-Z]*$": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "$ref": {
-                          "type": "string",
-                          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school)[-a-zA-Z_]*relationship_attribute)$"
+                      "oneOf": [
+                        {
+                          "$ref": "#/definitions/Response-MultipleSchemas-AttributeReference"
+                        },
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "allOf": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "$ref": "#/definitions/Response-MultipleSchemas-AttributeReference"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "allOf"
+                          ]
                         }
-                      },
-                      "required": [
-                        "$ref"
                       ]
                     }
                   },
@@ -315,16 +332,27 @@
                   "additionalProperties": false,
                   "patternProperties": {
                     "^[a-zA-Z_]*(?<!(Id))$": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "$ref": {
-                          "type": "string",
-                          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)[-a-zA-Z_]*_relationship$"
+                      "oneOf": [
+                        {
+                          "$ref": "#/definitions/Response-MultipleSchemas-RelationshipReference"
+                        },
+                        {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "allOf": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "$ref": "#/definitions/Response-MultipleSchemas-RelationshipReference"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "allOf"
+                          ]
                         }
-                      },
-                      "required": [
-                        "$ref"
                       ]
                     }
                   },
@@ -532,10 +560,10 @@
                   "additionalProperties": false,
                   "properties": {
                     "type": {
-                      "$ref": "#/definitions/Response-MultipleSchemas-Ref"
+                      "$ref": "#/definitions/Response-MultipleSchemas-GeneralReference"
                     },
                     "id": {
-                      "$ref": "#/definitions/Response-MultipleSchemas-Ref"
+                      "$ref": "#/definitions/Response-MultipleSchemas-GeneralReference"
                     }
                   },
                   "required": [
@@ -594,7 +622,7 @@
       ],
       "title": "Response-MultipleSchemas-Relationship"
     },
-    "Response-MultipleSchemas-Ref": {
+    "Response-MultipleSchemas-GeneralReference": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -673,6 +701,44 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {}
+    },
+    "Response-MultipleSchemas-RelationshipReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)[-a-zA-Z_]*_relationship$"
+        }
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "Response-MultipleSchemas-AttributeReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school)[-a-zA-Z_]*relationship_attribute)$"
+        }
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "Response-MultipleSchemas-Description": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description"
+      ]
     }
   }
 }
