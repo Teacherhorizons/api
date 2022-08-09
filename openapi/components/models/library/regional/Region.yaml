@@ -85,6 +85,11 @@ regional-region_locationLongitude:
   type: number
   example: 17.46826171875
   description: Longitude
+regional-region_numberOfSchools:
+  type: integer
+  example: 123
+  description: Number of schools in region
+
 #relationship attribute
 regional-region_creationUserId:
   type: integer
@@ -94,21 +99,26 @@ regional-region_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-regional-region_numberOfSchools:
-  type: integer
-  example: 123
-  description: Number of schools in region
+
+#relationships
 regional-region_creationUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  
 regional-region_latestUpdateUser:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
