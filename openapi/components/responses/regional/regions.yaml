@@ -45,14 +45,14 @@ Response_regional-regions_admin:
               $ref: "../../models/library/regional/region.yaml#/regional-region_creationDate"
             latestUpdateDate:
               $ref: "../../models/library/regional/region.yaml#/regional-region_latestUpdateDate"
-        # relationships:
-        #   type: object
-        #   additionalProperties: false
-        #   properties:
-            # creationUser:
-            #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-            # latestUpdateUser:
-            #   $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        relationships:
+          type: object
+          additionalProperties: false
+          properties:
+            creationUser:
+              $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
+            latestUpdateUser:
+              $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship"
       required:
         - type
         - id

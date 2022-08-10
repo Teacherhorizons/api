@@ -9,8 +9,8 @@
         "get": {
           "$ref": "#/definitions/Path-Singular-get"
         },
-        "post": {
-          "$ref": "#/definitions/Path-Singular-post"
+        "patch": {
+          "$ref": "#/definitions/Path-Singular-patch"
         }
       },
       "title": "Path-Singular"
@@ -63,14 +63,7 @@
         "parameters": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/Path-Singular-parameter"
-              },
-              {
-                "$ref": "#/definitions/Path-Singular-deepParameter"
-              }
-            ]
+            "$ref": "#/definitions/Path-Singular-parameter"
           }
         },
         "responses": {
@@ -193,13 +186,13 @@
       ],
       "title": "Path-Singular-get"
     },
-    "Path-Singular-post": {
+    "Path-Singular-patch": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^post-(Application|General|Job|Meta|Regional|School|Teacher|User)([a-zA-Z]*)$"
+          "pattern": "^patch-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)$"
         },
         "tags": {
           "type": "array",
@@ -237,6 +230,12 @@
         },
         "description": {
           "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Path-Singular-parameter"
+          }
         },
         "requestBody": {
           "type": "object",
@@ -389,7 +388,7 @@
         "summary",
         "responses"
       ],
-      "title": "Path-Singular-post"
+      "title": "Path-Singular-patch"
     },
     "Path-Singular-parameter": {
       "type": "object",
@@ -429,105 +428,6 @@
             },
             "enum": {
               "type": "array"
-            }
-          },
-          "required": []
-        },
-        "description": {
-          "type": "string"
-        }
-      },
-      "title": "Path-Singular-parameter"
-    },
-    "Path-Singular-deepParameter": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "in": {
-          "type": "string",
-          "const": "query"
-        },
-        "name": {
-          "type": "string"
-        },
-        "style": {
-          "type": "string",
-          "const": "deepObject"
-        },
-        "allowReserved": {
-          "type": "boolean",
-          "const": true
-        },
-        "explode": {
-          "type": "boolean",
-          "const": true
-        },
-        "required": {
-          "type": "boolean",
-          "const": true
-        },
-        "schema": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "object"
-            },
-            "additionalProperties": {
-              "type": "boolean",
-              "const": false
-            },
-            "properties": {
-              "type": "object",
-              "additionalProperties": false,
-              "patternProperties": {
-                "^filter[[][a-zA-Z.]*]([[](contains|matches|lte|gte)])*$": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "oneOf": [
-                        {
-                          "const": "string"
-                        },
-                        {
-                          "const": "number"
-                        }
-                      ]
-                    },
-                    "description": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "type"
-                  ]
-                },
-                "^page[[](number|size)]$": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "number"
-                    }
-                  },
-                  "required": [
-                    "type"
-                  ]
-                }
-              }
-            },
-            "example": {
-              "type": "object"
-            },
-            "required": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
             }
           },
           "required": []
