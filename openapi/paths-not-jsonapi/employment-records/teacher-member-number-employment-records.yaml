@@ -1,0 +1,28 @@
+get:
+  operationId: getEmploymentRecords_current
+  tags:
+    - employment-records
+    - status-current
+  summary: Get employment record of a teacher (current)
+  parameters:
+    - in: path
+      name: memberNumber
+      required: true
+      # description:
+      example: 1234567
+      schema:
+        type: integer
+        format: int32
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/employment-records/teacher-member-number-employment-records.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []

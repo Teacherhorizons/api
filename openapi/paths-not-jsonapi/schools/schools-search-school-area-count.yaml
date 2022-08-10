@@ -1,0 +1,207 @@
+get:
+  operationId: getCount_schools_current
+  tags:
+    - schools
+    - status-current
+  summary: Get school count (current)
+  parameters:
+    - in: query
+      name: ids
+      description: Get Schools Ids
+      example: 12,15
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: search
+      description: Part of the job title
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma separated list of region ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: cities
+      description: Comma seperated list of cities ids
+      example: -10,1
+      schema:
+        type: string
+
+    - in: query
+      name: countries
+      description: Comma seperated list of countries ids
+      example: 1234,210607
+      schema:
+        type: string
+
+    - in: query
+      name: academic-systems
+      description: Comma separated list of academicSystems ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-percentage-complete
+      description: Minimum percentageComplete
+      example: 21
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: accreditations
+      description: Comma separated list of accreditations ids
+      example: 4,14
+      schema:
+        type: string
+
+    - in: query
+      name: educationLevels
+      description: Comma separated list of educationLevels ids
+      example: 6,3
+      schema:
+        type: string
+
+    - in: query
+      name: nationalityGroups
+      description: Comma separated list of nationalityGroups ids
+      example: 207,209
+      schema:
+        type: string
+
+    - in: query
+      name: approved-by-th
+      description: Approved by TH
+      example: 4
+      schema:
+        type: integer
+
+    - in: query
+      name: endorsed-by-th
+      description: Endorsed by TH
+      example: 6,4
+      schema:
+        type: integer
+
+    - in: query
+      name: visited-by-th
+      description: Visited by TH
+      example: 1
+      schema:
+        type: integer
+
+    - in: query
+      name: lras
+      description: Get Adviser Ids
+      example: 12,15
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: curriculums
+      description: Comma separated list of curriculums ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: my-list
+      description: List of favourites
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: lat-from
+      example: 21.2478652577589
+      schema:
+        type: string
+    - in: query
+      name: lat-to
+      example: 12.27559889056173117
+      schema:
+        type: string
+
+    - in: query
+      name: long-from
+      example: 114.32084663984377
+      schema:
+        type: string
+    - in: query
+      name: long-to
+      example: 105.27559889056173117
+      schema:
+        type: string
+
+    - in: query
+      name: match-teacher-id
+      description: Comma separated list of matching teacher ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: match-member-number
+      description: List of matching member ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: min-match-score
+      description: Show minimum match score
+      example: 25
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/schools/schools-search-school-area-count.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
+
+  # , @RequestParam(value="ids", required = false) Integer[] _schoolIds
+  # , @RequestParam(value="search", required=false) String textSearchTerm
+  # , @RequestParam(value="curriculums", required = false) Integer[] curriculums
+  # , @RequestParam(value="regions", required = false) Integer[] regions
+  # , @RequestParam(value="countries",required = false) Integer[] countries
+  # , @RequestParam(value="cities",required = false) Integer[] cities
+  # , @RequestParam(value="academic-systems",required = false) Integer[] academicSystems
+
+  #   , @RequestParam(value="minimum-percentage-complete",required = false) Integer minimumPercentageComplete
+
+  # , @RequestParam(value="accreditations",required = false) Integer[] accreditations
+  # , @RequestParam(value="education-levels",required = false) Integer[] educationLevels
+  # , @RequestParam(value="teacher-nationality-groups-accepted",required = false) Integer[] nationalityGroups
+  # , @RequestParam(value="approved-by-th",required = false) Integer _approvedByTh
+  # , @RequestParam(value="endorsed-by-th",required = false) Integer _endorsedByTh
+  # , @RequestParam(value="visited-by-th",required = false) Integer visitedByTh
+  #   , @RequestParam(value="my-list",required = false) String myListType // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+
+  #   , @RequestParam(value="lras",required = false) Integer[] thAdviserIds
+
+  # , @RequestParam(value="lat-from",required = false) Float latitudeFrom
+  # , @RequestParam(value="lat-to",required = false) Float latitudeTo
+  # , @RequestParam(value="long-from",required = false) Float longitudeFrom
+  # , @RequestParam(value="long-to",required = false) Float longitudeTo
+
+  # , @RequestParam(value="match-teacher-id",required=false) Integer matchTeacherId
+  # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
+  # , @RequestParam(value="min-match-score",required=false) Double minMatchScore

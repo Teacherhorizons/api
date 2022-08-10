@@ -1,0 +1,23 @@
+get:
+  operationId: getLists_current
+  tags:
+    - lists
+    - status-current
+  summary: Get lists matching the key (current)
+  parameters:
+    - name: key
+      in: query
+      description: Comma separated list of list keys (keywords)
+      example: subjects,countries
+      schema:
+        type: string
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/lists/lists.yaml"
+    # TODO: add correct current errors (rather than json-api ones)
+    "400":
+      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"

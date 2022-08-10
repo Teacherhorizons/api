@@ -1,0 +1,17 @@
+get:
+  operationId: getUsers_internal_current
+  tags:
+    - users
+    - status-current
+  summary: Get internal user (current)
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/users/internal.yaml"
+    "403":
+      description: Unauthorized
+  security:
+    - api_key: []

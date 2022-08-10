@@ -1,0 +1,371 @@
+get:
+  operationId: getRegions_teacherCounts_current
+  tags:
+    - teachers
+    - status-current
+  summary: Get list of teachers by region (current)
+  parameters:
+    - in: query
+      name: school-ids
+      description: Get comma seperated list of Schools Ids
+      example: 12,15
+      schema:
+        type: integer
+        format: int32
+
+    - in: query
+      name: subjects
+      description: Comma separated list of subject ids
+      example: 1,2
+      schema:
+        type: string
+
+    - in: query
+      name: search
+      description: Part of the job title
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: current-regions
+      description: Comma separated list of current region ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: current-countries
+      description: Comma seperated list of current countries ids
+      example: 1234,210607
+      schema:
+        type: string
+
+    - in: query
+      name: nationalities
+      description: Comma separated list of nationalities
+      example: 207,209
+      schema:
+        type: string
+
+    - in: query
+      name: my-list
+      description: List of favourites
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: limit
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: page-number
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
+
+    - in: query
+      name: looking-for-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: roles
+      description: List of roles
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: current-roles
+      description: List of current roles
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: excluding-looking-for-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: excluding-roles
+      description: ..
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: country-of-interest
+      description: Comma seperated list of country of interest ids
+      example: 21,22
+      schema:
+        type: string
+
+    - in: query
+      name: user-types
+      description: Comma separated list of user types ids
+      example: 6,7
+      schema:
+        type: string
+
+    - in: query
+      name: countries-of-qualification
+      description: Comma seperated list of countries of qualification ids
+      example: 8,9
+      schema:
+        type: string
+
+    - in: query
+      name: curriculum-experience
+      description: Comma separated list of curriculum experience ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-experience
+      description: Show minimum years of experience
+      example: 6
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-experience
+      description: Show maximum years of experience
+      example: 11
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-average-reference-score
+      description: Show minimum average reference score
+      example: 60
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-adviser-score
+      description: Show minimum adviser score
+      example: 25
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-th-placeability-rating
+      description: minimum th placeability rating
+      example: 70
+      schema:
+        type: string
+
+    - in: query
+      name: available-from-date
+      description: Available From Date
+      example: "2021-10-22"
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: maximum-available-from
+      description: Maximum available from Date
+      example: "2021-10-22"
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: international-or-ib-experience
+      description: Show international or ib experience
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: minimum-date-registered
+      description: minimum date registered
+      example: "2021-10-22"
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: minimum-year-of-birth
+      description: minimum year of birth
+      example: "1992"
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: marital-statuses
+      description: Marital Statuses
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-number-of-dependent-children
+      description: maximum number of dependent children
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: education-levels-completed
+      description: maximum number of dependent children
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma seperated list of region ids
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: regions-of-interest
+      description: Comma seperated list of preferred region ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: CV
+      description: CV
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: job-seeking-statuses
+      description: Comma seperated list of job seeking statuses ids
+      example: 10,13,14
+      schema:
+        type: string
+
+    - in: query
+      name: attributes
+      description: Attributes #not sure
+      example: 1
+      schema:
+        type: string
+
+    - in: query
+      name: user-is-active
+      description: Comma seperated list of active user ids
+      example: 7,8
+      schema:
+        type: string
+
+    - in: query
+      name: override-view-type
+      description: ..
+      example: 13,14
+      schema:
+        type: string
+
+    - in: query
+      name: lat-from
+      example: 21.2478652577589
+      schema:
+        type: string
+    - in: query
+      name: lat-to
+      example: 12.27559889056173117
+      schema:
+        type: string
+
+    - in: query
+      name: long-from
+      example: 114.32084663984377
+      schema:
+        type: string
+    - in: query
+      name: long-to
+      example: 105.27559889056173117
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/teachers/candidates-search-region-area-by-region-count.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
+# @RequestParam(value="search", required=false) String term,
+
+# @RequestParam(value="lat-from",required = false) Float latitudeFrom,
+# @RequestParam(value="lat-to",required = false) Float latitudeTo,
+# @RequestParam(value="long-from",required = false) Float longitudeFrom,
+# @RequestParam(value="long-to",required = false) Float longitudeTo,
+
+# @RequestParam(value="subjects", required=false) Integer[] subjects,
+
+# @RequestParam(value="looking-for-roles",required=false) Integer[] lookingForRoles,
+# @RequestParam(value="roles",required=false) Integer[] roles, // old alias for lookingForRoles
+
+# @RequestParam(value="current-roles",required=false) Integer[] currentRoles,
+
+# @RequestParam(value="excluding-looking-for-roles",required=false) Integer[] excludingLookingForRoles,
+# @RequestParam(value="excluding-roles",required=false) Integer[] excludingRoles, // old alias for excludingLookingForRoles
+
+# @RequestParam(value="country-of-interest",required=false) Integer interestedInCountry,
+# @RequestParam(value="user-types",required=false) Integer[] userTypes,
+# @RequestParam(value="countries-of-qualification",required=false) Integer[] countriesQualification,
+# @RequestParam(value="nationalities",required=false) Integer[] nationalities,
+# @RequestParam(value="curriculum-experience",required=false) Integer[] curriculumTypes,
+# @RequestParam(value="minimum-experience",required=false) Integer minimumYearsOfExperience,
+# @RequestParam(value="maximum-experience",required=false) Integer maximumYearsOfExperience,
+# @RequestParam(value="minimum-average-reference-score",required=false) Integer minimumAverageReferenceScore,
+# @RequestParam(value="minimum-adviser-score",required=false) Integer minimumAdviserScore,
+# @RequestParam(value="minimum-th-placeability-rating",required=false) Integer _minimumThPlaceabilityRating,
+# @RequestParam(value="available-from-date",required=false) @DateTimeFormat(pattern="yyyy-MM-dd") Date _availableFrom,
+# @RequestParam(value="maximum-available-from",required=false) @DateTimeFormat(pattern="yyyy-MM-dd") Date _maxAvailableFrom,
+# @RequestParam(value="international-or-ib-experience",required=false) Integer intOrIbExperience,
+# @RequestParam(value="minimum-date-registered",required=false)  @DateTimeFormat(pattern="yyyy-MM-dd") Date minimumDateRegistered,
+# @RequestParam(value="minimum-year-of-birth",required=false)  Integer minimumYearOfBirth,
+# @RequestParam(value="marital-statuses",required=false) Integer[] maritalStatuses,
+# @RequestParam(value="maximum-number-of-dependent-children",required=false) Integer maximumDependentChildren,
+# @RequestParam(value="education-levels-completed",required=false) Integer[] educationLevelsCompleted,
+# @RequestParam(value="regions",required=false) Integer[] preferredRegions,
+# @RequestParam(value="regions-of-interest",required=false) Integer[] preferredRegions2,
+# @RequestParam(value="cv",required=false) Boolean uploadedCV,
+# @RequestParam(value="job-seeking-statuses",required=false) Integer[] jobSeekingStatuses,
+# @RequestParam(value="limit",required=false) Integer pagesize,
+# @RequestParam(value="page-number",required=false) Integer pagenumber,
+# @RequestParam(value="sort",required=false) String[] sortfield,
+# @RequestParam(value="attributes",required=false) String[] attributefield,
+# @RequestParam(value="user-is-active", required=false) Boolean active,
+# @RequestParam(value="override-view-type", required=false) String overrideViewType,
+#   @RequestParam(value="my-list",required = false) String myListType, // my-list=favourites will return only favourites if the user is logged in; otherwise ignored
+#   @RequestParam(value="school-ids",required = false) Integer[] schoolIds,
+#   @RequestParam(value="current-regions",required=false) Integer[] currentRegions,
+#   @RequestParam(value="current-countries",required=false) Integer[] currentCountries,

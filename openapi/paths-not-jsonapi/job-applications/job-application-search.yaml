@@ -1,0 +1,21 @@
+get:
+  operationId: getJobApplications_current
+  tags:
+    - job-applications
+    - status-current
+  summary: Get job applications (current)
+
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/current/job-applications/job-application-search.yaml"
+    "400":
+      description: Invalid ID supplied
+    "404":
+      description: Pet not found
+  security:
+    - api_key: []
+#parameters - none
