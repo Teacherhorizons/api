@@ -2,7 +2,7 @@ SimpleModel_school-additionalVideoUrlCategory:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-additionalVideoUrlCategory_id"
     # simple attributes
     url:
@@ -26,7 +26,6 @@ SimpleModel_school-additionalVideoUrlCategory:
 # shared
 SimpleModel_school-additionalVideoUrlCategory_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

@@ -3,8 +3,9 @@ SimpleModel_meta-entityChangeSummarySubscription:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_meta-entityChangeSummarySubscription_id" 
-         # simple attributes
+      $ref:
+        "#/SimpleModel_meta-entityChangeSummarySubscription_id"
+        # simple attributes
     notes:
       $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes"
     # relationship attributes
@@ -15,12 +16,11 @@ SimpleModel_meta-entityChangeSummarySubscription:
     userId:
       $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_userId"
   required:
-  - id
+    - id
 
 # shared
 SimpleModel_meta-entityChangeSummarySubscription_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

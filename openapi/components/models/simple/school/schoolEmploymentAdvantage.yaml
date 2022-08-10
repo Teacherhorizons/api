@@ -2,14 +2,14 @@ SimpleModel_school-schoolEmploymentAdvantage:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-schoolEmploymentAdvantage_id"
     # simple attributes
     name:
       $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_name"
     #type
     creationDate:
-      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"  
+      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_latestUpdateDate"
     # relationship attributes
@@ -23,7 +23,6 @@ SimpleModel_school-schoolEmploymentAdvantage:
 # shared
 SimpleModel_school-schoolEmploymentAdvantage_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

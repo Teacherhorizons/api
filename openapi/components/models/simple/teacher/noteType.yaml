@@ -4,22 +4,22 @@ SimpleModel_teacher-noteType:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-noteType_id"
     # simple attributes
     name:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_name"  
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_name"
     precedence:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_precedence"  
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_precedence"
     creationDate:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationDate"  
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationUserId" 
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_latestUpdateUserId" 
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_latestUpdateUserId"
   required:
     - id
 
@@ -34,7 +34,6 @@ SimpleModel_teacher-noteType:
 
 SimpleModel_teacher-noteType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

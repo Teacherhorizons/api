@@ -2,7 +2,7 @@ SimpleModel_teacher-preferenceOption:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-preferenceOption_id"
     # simple attributes
     name:
@@ -23,8 +23,6 @@ SimpleModel_teacher-preferenceOption:
 
 SimpleModel_teacher-preferenceOption_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

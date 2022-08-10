@@ -2,7 +2,7 @@ SimpleModel_school-schoolCommunityResponse:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-schoolCommunityResponse_id"
     # simple attributes
     name:
@@ -10,7 +10,7 @@ SimpleModel_school-schoolCommunityResponse:
     responseText:
       $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_responseText"
     creationDate:
-      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_creationDate"  
+      $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_latestUpdateDate"
     # relationship attributes
@@ -23,7 +23,6 @@ SimpleModel_school-schoolCommunityResponse:
 # shared
 SimpleModel_school-schoolCommunityResponse_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

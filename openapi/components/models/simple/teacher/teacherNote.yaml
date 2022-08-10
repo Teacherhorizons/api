@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherNote:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherNote_id"
     # simple attributes
     noteComment:
@@ -24,7 +24,7 @@ SimpleModel_teacher-teacherNote:
       $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_latestUpdateUserId"
   required:
     - id
-    
+
 # shared
 # SimpleModel_teacher-teacherNote_type:
 #   properties:
@@ -36,8 +36,6 @@ SimpleModel_teacher-teacherNote:
 
 SimpleModel_teacher-teacherNote_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

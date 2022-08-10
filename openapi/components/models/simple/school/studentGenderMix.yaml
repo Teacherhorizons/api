@@ -2,13 +2,13 @@ SimpleModel_school-studentGenderMix:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-studentGenderMix_id"
     # simple attributes
     name:
       $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_name"
     creationDate:
-      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_creationDate"  
+      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_latestUpdateDate"
     # relationship attributes
@@ -22,7 +22,6 @@ SimpleModel_school-studentGenderMix:
 # shared
 SimpleModel_school-studentGenderMix_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

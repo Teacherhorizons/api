@@ -8,14 +8,14 @@ SimpleModel_general-religion:
     name:
       $ref: "../../library/general/religion.yaml#/general-religion_name"
     creationDate:
-      $ref: "../../library/general/religion.yaml#/general-religion_creationDate"  
+      $ref: "../../library/general/religion.yaml#/general-religion_creationDate"
     latestUpdateDate:
-      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateDate" 
+      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/general/religion.yaml#/general-religion_creationUserId" 
+      $ref: "../../library/general/religion.yaml#/general-religion_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateUserId" 
+      $ref: "../../library/general/religion.yaml#/general-religion_latestUpdateUserId"
   required:
     - id
     - name
@@ -27,7 +27,6 @@ SimpleModel_general-religion:
 # shared
 SimpleModel_general-religion_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

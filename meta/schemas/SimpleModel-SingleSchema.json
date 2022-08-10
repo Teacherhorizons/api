@@ -74,29 +74,24 @@
           "type": "string",
           "const": "integer"
         },
-        "format": {
-          "type": "string",
-          "const": "int32"
-        },
         "example": {
           "type": "number",
           "const": 1
         },
-        "description": {
-          "type": "string",
-          "const": "Unique identifier of the object"
-        },
         "readOnly": {
           "type": "boolean",
           "const": true
+        },
+        "description": {
+          "type": "string",
+          "const": "Unique identifier of the object"
         }
       },
       "required": [
         "type",
-        "format",
         "example",
-        "description",
-        "readOnly"
+        "readOnly",
+        "description"
       ],
       "title": "SimpleModel-SingleSchema-Id"
     }

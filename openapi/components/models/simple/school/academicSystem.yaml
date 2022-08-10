@@ -2,13 +2,13 @@ SimpleModel_school-academicSystem:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-academicSystem_id"
     # simple attributes
     name:
       $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_name"
     creationDate:
-      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_creationDate"  
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_latestUpdateDate"
     # relationship attributes
@@ -21,7 +21,6 @@ SimpleModel_school-academicSystem:
 # shared
 SimpleModel_school-academicSystem_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

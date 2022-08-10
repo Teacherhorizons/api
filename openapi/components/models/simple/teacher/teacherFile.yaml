@@ -2,24 +2,24 @@ SimpleModel_teacher-teacherFile:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherFile_id"
     # simple attributes
     name:
-      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_name"  
+      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_name"
     url:
       $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_url"
     creationDate:
-      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_creationDate"  
+      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_latestUpdateDate"
     # relationship attributes
     teacherId:
-      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_teacherId" 
+      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_teacherId"
     creationUserId:
-      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_creationUserId" 
+      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_latestUpdateUserId" 
+      $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_latestUpdateUserId"
   required:
     - id
 
@@ -34,9 +34,6 @@ SimpleModel_teacher-teacherFile:
 
 SimpleModel_teacher-teacherFile_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
-

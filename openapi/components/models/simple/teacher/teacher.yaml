@@ -33,7 +33,7 @@ SimpleModel_teacher_admin:
       $ref: "#/SimpleModel_teacher_id"
     # simple attributes
     user:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_user" 
+      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
     teachingQualificationCountry:
       $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountry"
     qualificationType:
@@ -217,7 +217,6 @@ SimpleModel_teacher_teacher:
 
 SimpleModel_teacher_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

@@ -11,14 +11,13 @@ SimpleModel_user-thUser:
       $ref: "../../library/user/thUser.yaml#/user-thUser_activeInTH"
     # relationship attributes
     userId:
-      $ref:  "../../library/user/thUser.yaml#/user-thUser_userId"
+      $ref: "../../library/user/thUser.yaml#/user-thUser_userId"
   required:
     - id
 
 # shared
 SimpleModel_user-thUser_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

@@ -6,7 +6,7 @@ SimpleModel_user-favouriteJob:
       $ref: "#/SimpleModel_user-favouriteJob_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_creationDate"  
+      $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_creationDate"
     # relationship attributes
     userId:
       $ref: "../../library/user/favouriteJob.yaml#/user-favouriteJob_userId"
@@ -24,8 +24,6 @@ SimpleModel_user-favouriteJob:
 
 SimpleModel_user-favouriteJob_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

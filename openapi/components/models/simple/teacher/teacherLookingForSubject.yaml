@@ -2,16 +2,16 @@ SimpleModel_teacher-teacherLookingForSubject:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherLookingForSubject_id"
     # simple attributes
     precedence:
-      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"  
+      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"
     # relationship attributes
     subjectId:
-      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_subjectId"  
+      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_subjectId"
     teacherId:
-      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_teacherId"  
+      $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_teacherId"
   required:
     - id
 # shared
@@ -24,8 +24,6 @@ SimpleModel_teacher-teacherLookingForSubject:
 
 SimpleModel_teacher-teacherLookingForSubject_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

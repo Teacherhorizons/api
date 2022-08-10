@@ -2,13 +2,14 @@ SimpleModel_school-relocationAllowanceType:
   type: object
   additionalProperties: false
   properties:
-    id: 
-      $ref: "#/SimpleModel_school-relocationAllowanceType_id"
+    id:
+      $ref:
+        "#/SimpleModel_school-relocationAllowanceType_id"
         # simple attributes
     name:
       $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_name"
     creationDate:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_creationDate"  
+      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_latestUpdateDate"
     # relationship attributes
@@ -18,11 +19,10 @@ SimpleModel_school-relocationAllowanceType:
       $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_latestUpdateUserId"
   required:
     - id
-    
+
 # shared
 SimpleModel_school-relocationAllowanceType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

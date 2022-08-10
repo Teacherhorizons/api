@@ -2,20 +2,20 @@ SimpleModel_teacher-teacherLookingForRole:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherLookingForRole_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationDate"  
+      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_latestUpdateDate"
     # relationship attributes
     teacherId:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_teacherId" 
+      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_teacherId"
     roleId:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_roleId" 
+      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_roleId"
     creationUserId:
-      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationUserId" 
+      $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/teacher/teacherLookingForRole.yaml#/teacher-teacherLookingForRole_latestUpdateUserId"
   required:
@@ -23,7 +23,6 @@ SimpleModel_teacher-teacherLookingForRole:
 # shared
 SimpleModel_teacher-teacherLookingForRole_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

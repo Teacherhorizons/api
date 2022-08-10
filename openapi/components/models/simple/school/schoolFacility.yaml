@@ -2,31 +2,30 @@ SimpleModel_school-schoolFacility:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-schoolFacility_id"
     # simple attributes
     name:
       $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_name"
     creationDate:
-      $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_creationDate"  
+      $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_latestUpdateDate"
     # relationship attributes
     schoolId:
       $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_schoolId"
     #examTitleId:
-      #$ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+    #$ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     creationUserId:
-     $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_creationUserId"
+      $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_creationUserId"
     latestUpdateUserId:
-     $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_latestUpdateUserId" 
+      $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_latestUpdateUserId"
   required:
     - id
 
 # shared
 SimpleModel_school-schoolFacility_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

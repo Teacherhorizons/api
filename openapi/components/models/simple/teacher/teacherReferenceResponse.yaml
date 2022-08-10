@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherReferenceResponse:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherReferenceResponse_id"
     # simple attributes
     text:
@@ -17,15 +17,14 @@ SimpleModel_teacher-teacherReferenceResponse:
 
 # shared
 # SimpleModel_teacher-teacherReferenceResponse_type:
-  # properties:
-  #   type:
-  #     type: string
-  #     example: teacher-teacherReferenceResponse
-  #     description: teacher-teacherReferenceResponse
-  #     readOnly: true
+# properties:
+#   type:
+#     type: string
+#     example: teacher-teacherReferenceResponse
+#     description: teacher-teacherReferenceResponse
+#     readOnly: true
 SimpleModel_teacher-teacherReferenceResponse_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

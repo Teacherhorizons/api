@@ -2,7 +2,7 @@ SimpleModel_school-documentCategory:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-documentCategory_id"
     # simple attributes
     name:
@@ -13,7 +13,6 @@ SimpleModel_school-documentCategory:
 # shared
 SimpleModel_school-documentCategory_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

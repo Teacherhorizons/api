@@ -2,24 +2,23 @@ SimpleModel_school-schoolAgeLevel:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-schoolAgeLevel_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationDate"  
+      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationUserId"  
+      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateUserId"  
+      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateUserId"
   required:
     - id
 # shared
 SimpleModel_school-schoolAgeLevel_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

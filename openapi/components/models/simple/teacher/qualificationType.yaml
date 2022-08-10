@@ -2,13 +2,13 @@ SimpleModel_teacher-qualificationType:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-qualificationType_id"
     # simple attributes
     name:
       $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_name"
     creationDate:
-      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_creationDate"  
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_latestUpdateDate"
     # relationship attributes
@@ -22,7 +22,6 @@ SimpleModel_teacher-qualificationType:
 # shared
 SimpleModel_teacher-qualificationType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

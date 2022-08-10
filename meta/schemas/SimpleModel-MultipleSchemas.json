@@ -152,26 +152,27 @@
       "additionalProperties": false,
       "properties": {
         "type": {
-          "type": "string"
+          "type": "string",
+          "const": "integer"
         },
         "example": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
-        },
-        "format": {
-          "type": "string"
+          "type": "number",
+          "const": 1
         },
         "readOnly": {
           "type": "boolean",
-          "default": false
+          "const": true
+        },
+        "description": {
+          "type": "string",
+          "const": "Unique identifier of the object"
         }
       },
       "required": [
-        "description",
+        "type",
         "example",
-        "type"
+        "readOnly",
+        "description"
       ],
       "title": "SimpleModel-MultipleSchemas-Id"
     }

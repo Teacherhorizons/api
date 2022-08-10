@@ -2,7 +2,7 @@ SimpleModel_teacher-numberOfDependentChildren:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-numberOfDependentChildren_id"
     # simple attributes
     name:
@@ -22,8 +22,6 @@ SimpleModel_teacher-numberOfDependentChildren:
 
 SimpleModel_teacher-numberOfDependentChildren_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

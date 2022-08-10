@@ -8,14 +8,14 @@ SimpleModel_general-pensionSchemeType:
     name:
       $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_name"
     creationDate:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_creationDate"  
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_creationDate"
     latestUpdateDate:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_latestUpdateDate" 
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_creationUserId" 
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_latestUpdateUserId" 
+      $ref: "../../library/general/pensionSchemeType.yaml#/general-pensionSchemeType_latestUpdateUserId"
   required:
     - id
     - name
@@ -27,7 +27,6 @@ SimpleModel_general-pensionSchemeType:
 # shared
 SimpleModel_general-pensionSchemeType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

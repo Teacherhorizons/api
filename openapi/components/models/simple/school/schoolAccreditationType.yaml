@@ -2,25 +2,24 @@ SimpleModel_school-schoolAccreditationType:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-schoolAccreditationType_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationDate"  
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationUserId"  
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateUserId"  
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateUserId"
   required:
     - id
 
 # shared
 SimpleModel_school-schoolAccreditationType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

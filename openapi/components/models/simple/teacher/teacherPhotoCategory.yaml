@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherPhotoCategory:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherPhotoCategory_id"
     # relationship attributes
     teacherPhotoId:
@@ -11,7 +11,7 @@ SimpleModel_teacher-teacherPhotoCategory:
       $ref: "../../library/teacher/teacherPhotoCategory.yaml#/teacher-teacherPhotoCategory_photoCategoryId"
   required:
     - id
-    
+
 # shared
 # SimpleModel_teacher-teacherPhotoCategory_type:
 #   properties:
@@ -23,8 +23,6 @@ SimpleModel_teacher-teacherPhotoCategory:
 
 SimpleModel_teacher-teacherPhotoCategory_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

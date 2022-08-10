@@ -2,7 +2,7 @@ SimpleModel_teacher-referenceType:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-referenceType_id"
     # simple attributes
     name:
@@ -20,8 +20,6 @@ SimpleModel_teacher-referenceType:
 
 SimpleModel_teacher-referenceType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherEducationLevel:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherEducationLevel_id"
     # simple attributes
     creationDate:
@@ -32,9 +32,6 @@ SimpleModel_teacher-teacherEducationLevel:
 
 SimpleModel_teacher-teacherEducationLevel_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
-

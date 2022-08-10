@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherReferenceRequest:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherReferenceRequest_id"
     # simple attributes
     refereeFullName:
@@ -41,7 +41,7 @@ SimpleModel_teacher-teacherReferenceRequest:
     countryId:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_countryId"
     creationUserId:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationUserId"     
+      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_latestUpdateUserId"
   required:
@@ -57,7 +57,6 @@ SimpleModel_teacher-teacherReferenceRequest:
 #       readOnly: true
 SimpleModel_teacher-teacherReferenceRequest_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

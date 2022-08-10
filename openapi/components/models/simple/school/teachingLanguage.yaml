@@ -2,11 +2,11 @@ SimpleModel_school-teachingLanguage:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_school-teachingLanguage_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_creationDate"  
+      $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_latestUpdateDate"
     # relationship attributes
@@ -22,7 +22,6 @@ SimpleModel_school-teachingLanguage:
 # shared
 SimpleModel_school-teachingLanguage_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

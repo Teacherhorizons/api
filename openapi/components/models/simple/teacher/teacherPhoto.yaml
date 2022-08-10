@@ -2,7 +2,7 @@ SimpleModel_teacher-teacherPhoto:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherPhoto_id"
     # simple attributes
   required:
@@ -19,8 +19,6 @@ SimpleModel_teacher-teacherPhoto:
 
 SimpleModel_teacher-teacherPhoto_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

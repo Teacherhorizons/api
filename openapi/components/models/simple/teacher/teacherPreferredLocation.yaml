@@ -2,11 +2,11 @@ SimpleModel_teacher-teacherPreferredLocation:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherPreferredLocation_id"
     # simple attributes
     name:
-      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_name"  
+      $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_name"
     continent:
       $ref: "../../library/teacher/teacherPreferredLocation.yaml#/teacher-teacherPreferredLocation_continent"
   required:
@@ -22,8 +22,6 @@ SimpleModel_teacher-teacherPreferredLocation:
 
 SimpleModel_teacher-teacherPreferredLocation_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-

@@ -8,9 +8,9 @@ SimpleModel_general-role:
     name:
       $ref: "../../library/general/role.yaml#/general-role_name"
     creationDate:
-      $ref: "../../library/general/role.yaml#/general-role_creationDate"  
+      $ref: "../../library/general/role.yaml#/general-role_creationDate"
     latestUpdateDate:
-      $ref: "../../library/general/role.yaml#/general-role_latestUpdateDate" 
+      $ref: "../../library/general/role.yaml#/general-role_latestUpdateDate"
     # relationship attributes
     roleTypeId:
       $ref: "../../library/general/role.yaml#/general-role_roleTypeId"
@@ -30,7 +30,6 @@ SimpleModel_general-role:
 # shared
 SimpleModel_general-role_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

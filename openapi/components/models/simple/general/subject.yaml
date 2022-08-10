@@ -13,7 +13,7 @@ SimpleModel_general-subject:
       $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
     # relationship attributes
     subjectGroupId:
-        $ref: "../../library/general/subject.yaml#/general-subject_subjectGroupId"
+      $ref: "../../library/general/subject.yaml#/general-subject_subjectGroupId"
     creationUserId:
       $ref: "../../library/general/subject.yaml#/general-subject_creationUserId"
     latestUpdateUserId:
@@ -25,7 +25,6 @@ SimpleModel_general-subject:
 # shared
 SimpleModel_general-subject_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

@@ -54,7 +54,7 @@ get:
       $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
 
 patch:
-  operationId: patchApplication
+  operationId: patch-application
   tags:
     - application
   summary: Update application
@@ -66,7 +66,6 @@ patch:
       example: 1
       schema:
         type: integer
-        format: int32
   requestBody:
     content:
       application/json:

@@ -2,11 +2,11 @@ SimpleModel_teacher-teacherNationalities:
   type: object
   additionalProperties: false
   properties:
-    id: 
+    id:
       $ref: "#/SimpleModel_teacher-teacherNationalities_id"
     # simple attributes
     creationDate:
-      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
+      $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
     # relationship attributes
@@ -24,7 +24,6 @@ SimpleModel_teacher-teacherNationalities:
 # shared
 SimpleModel_teacher-teacherNationalities_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object

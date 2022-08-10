@@ -3,8 +3,9 @@ SimpleModel_meta-entityType:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_meta-entityType_id" 
-         # simple attributes
+      $ref:
+        "#/SimpleModel_meta-entityType_id"
+        # simple attributes
     name:
       $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
   required:
@@ -19,8 +20,6 @@ SimpleModel_meta-entityType:
 
 SimpleModel_meta-entityType_id:
   type: integer
-  format: int32
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
