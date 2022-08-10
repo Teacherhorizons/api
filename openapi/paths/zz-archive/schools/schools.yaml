@@ -46,7 +46,6 @@ get:
         properties:
           gte:
             type: integer
-            format: int32
         example:
           gte: 21
 
@@ -67,24 +66,19 @@ get:
             type: string
           curriculum.id:
             type: integer
-            format: int32
           city.country.region.id:
             type: integer
-            format: int32
           city.country.id:
             type: integer
-            format: int32
           city.id:
             description: Typically used as [city.id][contains]=1,2
             type: integer
-            format: int32
           percentageComplete:
             description: Typically used as [percentageComplete][gte]
             type: object
             properties:
               gte:
                 type: integer
-                format: int32
         example:
           name: International
           id: 123
@@ -129,7 +123,6 @@ get:
     #   example: 21
     #   schema:
     #     type: integer
-    #     format: int32
 
     - in: query
       name: accreditations
