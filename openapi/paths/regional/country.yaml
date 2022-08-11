@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
 get:
   operationId: getCountry
   tags:
@@ -11,17 +13,6 @@ get:
       example: 1
       schema:
         type: integer
-    - in: query
-      name: fields
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties:
-          $ref: "../../components/schemas/proposed/simple-models/Country.yaml#/CountryAttributes"
-        example:
-          country: name,isoCode,locationLatLong
     - in: query
       name: include
       description: Which nested objects to include
@@ -39,5 +30,3 @@ get:
       description: Invalid ID supplied
     "404":
       description: Pet not found
-  security:
-    - api_key: []

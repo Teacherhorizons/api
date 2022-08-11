@@ -4,7 +4,7 @@ get:
   operationId: get-regional-region
   tags:
     - regional
-  summary: Get a region (City)
+  summary: Get a region (group of countries)
   parameters:
     - in: path
       name: regionId
@@ -21,18 +21,6 @@ get:
           - admin
           - school
           - teacher
-    - in: query
-      name: fields
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties:
-          $ref: "../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
-          # $ref: "../../components/schemas/proposed/simple-models/region.yaml#/RegionProperties_all"
-        example:
-          region: name,slug,locationLatLong
   responses:
     "200":
       description: successful operation

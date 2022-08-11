@@ -12,23 +12,6 @@ get:
       example: 1
       schema:
         type: integer
-    - in: query
-      name: filter
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        properties:
-          filter[id][contains]:
-            type: number
-            description: Required unless schema is 'admin-allApplications'
-          # filter[application.teacher.memberNumber]:
-          #   type: number
-          #   example: 123456
-          #   description: Required if schema is 'admin-allApplications'
-        example:
-          id][contains: 1
   responses:
     "200":
       description: OK (Request successful)
