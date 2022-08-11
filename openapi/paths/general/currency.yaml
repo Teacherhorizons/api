@@ -55,16 +55,16 @@ get:
           schema:
             $ref: "../../components/responses/general/currency.yaml#/Response_general-currency"
     "400":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "401":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
     "403":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
     "404":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
     "413":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
     "422":
-      $ref: "../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
   security:
     - api_key: []

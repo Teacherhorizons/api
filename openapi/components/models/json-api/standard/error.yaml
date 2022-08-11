@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../../../../../meta/schemas/None.json
+
 JsonApiModel_error_400:
   description: BAD_REQUEST
   content:
@@ -133,11 +135,11 @@ JsonApiModel_error_404:
               - status: "404"
                 code: "secondaryEntityNotFound"
                 title: "WIP"
-                detail: ""  
+                detail: ""
               - status: "404"
                 code: "callToExternalServiceFailed"
                 title: "WIP"
-                detail: ""  
+                detail: ""
 
 JsonApiModel_error_413:
   description: PAYLOAD_TOO_LARGE
@@ -189,23 +191,23 @@ JsonApiModel_error_422:
               - status: "422"
                 code: "updateFailed"
                 title: "WIP"
-                detail: "" 
+                detail: ""
               - status: "422"
                 code: "JSONfieldCannotBeNull"
                 title: "WIP"
-                detail: "" 
+                detail: ""
               - status: "422"
                 code: "integrityViolation"
                 title: "WIP"
-                detail: "" 
+                detail: ""
               - status: "422"
                 code: "entityAlreadyExists"
                 title: "WIP"
-                detail: "" 
+                detail: ""
               - status: "422"
                 code: "validationFailed"
                 title: "WIP"
-                detail: "" 
+                detail: ""
 
 # 400 - BAD_REQUEST
 # accessNotPermitted, missingMandatoryParameter, invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed

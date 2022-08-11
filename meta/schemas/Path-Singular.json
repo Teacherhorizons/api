@@ -120,7 +120,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400$"
                 }
               }
             },
@@ -130,7 +130,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401$"
                 }
               }
             },
@@ -140,7 +140,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403$"
                 }
               }
             },
@@ -150,7 +150,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404$"
                 }
               }
             },
@@ -160,7 +160,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413$"
                 }
               }
             },
@@ -170,7 +170,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422$"
                 }
               }
             }
@@ -275,49 +275,15 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "201": {
+            "204": {
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "description": {
+                "$ref": {
                   "type": "string",
-                  "const": "CREATED (Request successful)"
-                },
-                "content": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "application/json": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "schema": {
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "$ref": {
-                              "type": "string",
-                              "pattern": "^../../components/models/json-api/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_relationship$"
-                            }
-                          },
-                          "required": [
-                            "$ref"
-                          ]
-                        }
-                      },
-                      "required": [
-                        "schema"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "application/json"
-                  ]
+                  "pattern": "^../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204$"
                 }
-              },
-              "required": [
-                "description"
-              ]
+              }
             },
             "400": {
               "type": "object",
@@ -325,7 +291,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_400$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400$"
                 }
               }
             },
@@ -335,7 +301,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_401$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401$"
                 }
               }
             },
@@ -345,7 +311,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_403$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403$"
                 }
               }
             },
@@ -355,7 +321,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_404$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404$"
                 }
               }
             },
@@ -365,7 +331,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_413$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413$"
                 }
               }
             },
@@ -375,7 +341,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^../../components/models/json-api/error/Error.yaml#/JsonApiModel_error_422$"
+                  "pattern": "^../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422$"
                 }
               }
             }
