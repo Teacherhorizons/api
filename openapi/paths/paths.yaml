@@ -30,7 +30,7 @@
 
 # cities
 /v3/city/id/{cityId}/profile:
-  $ref: "./../paths/regional/city-id-profile.yaml"
+  $ref: "./../paths-not-jsonapi/regional/city-id-profile.yaml"
 
 # community-responses
 /v1/school-community/school-responses/school/id/{schoolId}:
@@ -138,8 +138,6 @@
   $ref: "./../paths/regional/region.yaml"
 /regional-regions:
   $ref: "./../paths/regional/regions.yaml"
-/schools-agg-regions:
-  $ref: "./../paths/regional/schools-agg-regions.yaml"
 
 /countries/{countryId}:
   $ref: "./../paths/regional/country.yaml"
