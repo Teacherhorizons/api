@@ -471,7 +471,27 @@
               "type": "object",
               "additionalProperties": false,
               "patternProperties": {
-                "^filter[[][a-zA-Z.]*]([[](contains|matches|lte|gte)])*$": {
+                "^fields[[](application|general|job|meta|regional|school|teacher|user)[-a-zA-Z]*]$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "string"
+                        }
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                },
+                "^filter[[][a-zA-Z.]*]([[](lte|gte)])*$": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -483,6 +503,54 @@
                         },
                         {
                           "const": "number"
+                        }
+                      ]
+                    },
+                    "format": {
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "date-time"
+                        }
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                },
+                "^filter[[][a-zA-Z.]*]([[](contains)])*$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "string"
+                        }
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
+                },
+                "^filter[[][a-zA-Z.]*]([[](matches)])*$": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "string"
                         }
                       ]
                     },
@@ -519,7 +587,12 @@
               }
             }
           },
-          "required": []
+          "required": [
+            "type",
+            "additionalProperties",
+            "properties",
+            "example"
+          ]
         },
         "description": {
           "type": "string"

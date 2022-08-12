@@ -23,14 +23,13 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
           filter[application.id]:
             type: number
-            example: 1
             description: Required unless schema is 'admin-allApplications'
           filter[application.teacher.memberNumber]:
             type: number
-            example: 123456
             description: Required if schema is 'admin-allApplications'
         example:
           application.id: 1

@@ -60,6 +60,7 @@ Response_application_admin:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
             teacher:
               $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+            # TODO: potential issue - latestEvent is a relationship, but not included
             latestEvent:
               $ref: "../../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
           required:
@@ -77,6 +78,7 @@ Response_application_admin:
           - $ref: "#/Response_application_includedSchool_admin"
           - $ref: "#/Response_application_includedJob_admin"
           - $ref: "#/Response_application_includedTeacher_admin"
+          # - $ref: "#/Response_application_includedApplicationEvent_admin" # TODO: consider if needed
   required:
     - schema
     - data

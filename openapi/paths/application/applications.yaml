@@ -24,11 +24,12 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
           filter[id][contains]:
-            type: number
+            type: string
           filter[status.id][contains]:
-            type: number
+            type: string
           filter[job.school.name][matches]:
             type: string
           filter[job.id][contains]:
@@ -49,12 +50,15 @@ get:
             type: number
           filter[latestEvent.date][lte]:
             type: string
+            format: date-time
           filter[event.type.id][contains]:
             type: number
           filter[minEvent.date][gte]:
             type: string
+            format: date-time
           filter[maxEvent.date][lte]:
             type: string
+            format: date-time
           filter[job.school.city.country.region.id][contains]:
             type: number
           filter[job.school.city.country.id][contains]:
@@ -62,25 +66,24 @@ get:
           filter[job.school.city.id][contains]:
             type: number
         example:
-          id][contains: 1
-          status.id][contains: 1
+          id][contains: 1,2
+          status.id][contains: 1,2
           job.school.name][matches: alic
-          job.id][contains: 1
+          job.id][contains: 1,2
           job.title][matches: math
-          teacher.memberNumber][contains: 1
+          teacher.memberNumber][contains: 1,2
           teacher.fullName][matches: smi
-          job.adviser.id][contains: 1
-          job.school.lra.id][contains: 1
-          job.subject.id][contains]: 1
-          latestEvent.type.id][contains: 1
-          latestEvent.date][lte: 44634
-          event.type.id][contains: 1
-          minEvent.date][gte: 44634
-          maxEvent.date][lte: 44634
-          job.school.city.country.region.id][contains: 1
-          job.school.city.country.id][contains: 1
-          job.school.city.id][contains: 1
-
+          job.adviser.id][contains: 1,2
+          job.school.lra.id][contains: 1,2
+          job.subject.id][contains]: 1,2
+          latestEvent.type.id][contains: 1,2
+          latestEvent.date][lte: 2022-08-11T00:00:00Z
+          event.type.id][contains: 1,2
+          minEvent.date][gte: 2022-08-11T00:00:00Z
+          maxEvent.date][lte: 2022-08-11T00:00:00Z
+          job.school.city.country.region.id][contains: 1,2
+          job.school.city.country.id][contains: 1,2
+          job.school.city.id][contains: 1,2
     - in: query
       name: page
       style: deepObject
@@ -88,6 +91,7 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
           page[number]:
             type: number

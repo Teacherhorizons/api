@@ -20,12 +20,12 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
-          # simple attributes
-          name:
-            $ref: "../../components/models/library/regional/region.yaml#/regional-region_alias"
+          fields[regional-region]:
+            type: string
         example:
-          region: name,slug,locationLatLong
+          regional-region: name,slug,locationLatLong
     - in: query
       name: filter
       style: deepObject
@@ -33,12 +33,12 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
-          # simple attributes
-          name:
-            $ref: "../../components/models/library/regional/region.yaml#/regional-region_alias"
+          filter[name][matches]:
+            type: string
         example:
-          name: foo
+          name][matches: afri
           slug: bar
   responses:
     "200":
@@ -51,4 +51,3 @@ get:
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-
