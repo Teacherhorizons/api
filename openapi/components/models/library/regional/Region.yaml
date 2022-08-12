@@ -1,64 +1,64 @@
-# standard properties
-regional-region_standardProperties_all:
-  allOf:
-    - $ref: "#/regional-region_standardProperties_shared"
-    - $ref: "#/regional-region_standardProperties_adminOnly"
+# # standard properties
+# regional-region_standardProperties_all:
+#   allOf:
+#     - $ref: "#/regional-region_standardProperties_shared"
+#     - $ref: "#/regional-region_standardProperties_adminOnly"
 
-regional-region_standardProperties_shared:
-  properties:
-    alias:
-      type: string
-      example: /Africa
-    name:
-      type: string
-      example: Africa
-    slug:
-      type: string
-      example: africa
-    locationLatLong:
-      type: object
-      properties:
-        lat:
-          type: number
-          example: 12.2755988905617
-          description: Latitude
-        long:
-          type: number
-          example: 17.46826171875
-          description: Longitude
+# regional-region_standardProperties_shared:
+#   properties:
+#     alias:
+#       type: string
+#       example: /Africa
+#     name:
+#       type: string
+#       example: Africa
+#     slug:
+#       type: string
+#       example: africa
+#     locationLatLong:
+#       type: object
+#       properties:
+#         lat:
+#           type: number
+#           example: 12.2755988905617
+#           description: Latitude
+#         long:
+#           type: number
+#           example: 17.46826171875
+#           description: Longitude
 
-regional-region_standardProperties_adminOnly:
-  properties:
-    creationDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
-    latestUpdateDate:
-      type: string
-      format: date-time
-      example: 2011-02-07T15:53:31Z
-      description: admin only
+# regional-region_standardProperties_adminOnly:
+#   properties:
+#     creationDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:31Z
+#       description: admin only
+#     latestUpdateDate:
+#       type: string
+#       format: date-time
+#       example: 2011-02-07T15:53:31Z
+#       description: admin only
 
-# relationship properties
+# # relationship properties
 
-regional-region_relationshipProperties_all:
-  allOf:
-    # - $ref: "#/regional-region_standardProperties_shared"
-    - $ref: "#/regional-region_standardProperties_adminOnly"
+# regional-region_relationshipProperties_all:
+#   allOf:
+#     # - $ref: "#/regional-region_standardProperties_shared"
+#     - $ref: "#/regional-region_standardProperties_adminOnly"
 
-# regional-region_relationshipProperties_shared:
+# # regional-region_relationshipProperties_shared:
 
-regional-region_relationshipProperties_adminOnly:
-  properties:
-    creationUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
-    latestUpdateUserId:
-      type: integer
-      example: 1
-      description: Relationship to User; admin only
+# regional-region_relationshipProperties_adminOnly:
+#   properties:
+#     creationUserId:
+#       type: integer
+#       example: 1
+#       description: Relationship to User; admin only
+#     latestUpdateUserId:
+#       type: integer
+#       example: 1
+#       description: Relationship to User; admin only
 #attributes
 regional-region_alias:
   type: string

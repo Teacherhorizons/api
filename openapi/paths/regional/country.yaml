@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: getCountry
+  operationId: get-regional-country
   tags:
     - regional
   summary: Get a country
@@ -21,12 +21,12 @@ get:
         type: string
   responses:
     "200":
-      description: successful operation
+      description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/country.yaml"
+            $ref: "../../components/responses/regional/country.yaml#/Response_regional-country"
     "400":
-      description: Invalid ID supplied
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":
-      description: Pet not found
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"

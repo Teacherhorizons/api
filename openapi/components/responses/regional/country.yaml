@@ -1,18 +1,22 @@
-type: object
-properties:
-  data:
-    type: array
-    items:
-      $ref: "../../schemas/proposed/simple-models/country.yaml#/Country"
-  included:
-    type: array
-    uniqueItems: true
-    items:
-      $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Resource"
-  links:
-    description: Link members related to primary data
-    allOf:
-      - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Links"
-      - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Pagination"
-  jsonapi:
-    $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/JsonApi"
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+Response_regional-country:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        $ref: "../../schemas/proposed/simple-models/country.yaml#/Country"
+    included:
+      type: array
+      uniqueItems: true
+      items:
+        $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Resource"
+    links:
+      description: Link members related to primary data
+      allOf:
+        - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Links"
+        - $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/Pagination"
+    jsonapi:
+      $ref: "../../schemas/proposed/simple-models/helpers/json-api.yaml#/JsonApi"

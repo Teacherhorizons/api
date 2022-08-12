@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
 get:
-  operationId: getCurrency
+  operationId: get-general-currency
   tags:
     - general
-    - status-proposed
   summary: Get currency (proposed)
   parameters:
     - in: path
@@ -20,36 +21,36 @@ get:
           - admin
           - school
           - teacher
-    - in: query
-      name: fields
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          code:
-            $ref: "../../components/models/library/general/currency.yaml#/general-currency_code"
-          symbol:
-            $ref: "../../components/models/library/general/currency.yaml#/general-currency_symbol"
-          name:
-            $ref: "../../components/models/library/general/currency.yaml#/general-currency_name"
-          creationDate:
-            $ref: "../../components/models/library/general/currency.yaml#/general-currency_creationDate"
-          latestUpdateDate:
-            $ref: "../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
-        required:
-          - code
-          - symbol
-          - name
-          - creationDate
-          - latestUpdateDate
-        example:
-          region: name,creationDate
+    # - in: query
+    #   name: fields
+    #   style: deepObject
+    #   allowReserved: true
+    #   explode: true
+    #   schema:
+    #     type: object
+    #     additionalProperties: false
+    #     properties:
+    #       code:
+    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_code"
+    #       symbol:
+    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_symbol"
+    #       name:
+    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_name"
+    #       creationDate:
+    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+    #       latestUpdateDate:
+    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+    #     required:
+    #       - code
+    #       - symbol
+    #       - name
+    #       - creationDate
+    #       - latestUpdateDate
+    #     example:
+    #       region: name,creationDate
   responses:
     "200":
-      description: successful operation
+      description: OK (Request successful)
       content:
         application/json:
           schema:
@@ -66,5 +67,4 @@ get:
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
-  security:
-    - api_key: []
+

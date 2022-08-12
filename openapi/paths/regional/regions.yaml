@@ -20,8 +20,10 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
+        properties:
+          # simple attributes
+          name:
+            $ref: "../../components/models/library/regional/region.yaml#/regional-region_alias"
         example:
           region: name,slug,locationLatLong
     - in: query
@@ -31,21 +33,22 @@ get:
       explode: true
       schema:
         type: object
-        additionalProperties:
-          $ref: "../../components/models/library/regional/region.yaml#/regional-region_standardProperties_all"
+        properties:
+          # simple attributes
+          name:
+            $ref: "../../components/models/library/regional/region.yaml#/regional-region_alias"
         example:
           name: foo
           slug: bar
   responses:
     "200":
-      description: successful operation
+      description: OK (Request successful)
       content:
         application/json:
           schema:
             $ref: "../../components/responses/regional/regions.yaml#/Response_regional-regions"
     "400":
-      description: Invalid ID supplied
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":
-      description: Pet not found
-  security:
-    - api_key: []
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
+

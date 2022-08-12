@@ -23,60 +23,14 @@ get:
           - teacher
   responses:
     "200":
-      description: successful operation
+      description: OK (Request successful)
       content:
         application/json:
           schema:
             $ref: "../../components/responses/regional/region.yaml#/Response_regional-region"
 
     # TODO: move these to a library
-
     "400":
-      description: Invalid id supplied
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              errors:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    code:
-                      type: string
-                      description: One of a list of possible values (previously 'frontEndErrorSlug')
-                      example: "missingMandatoryParameter"
-                    status:
-                      type: string
-                      example: "400"
-                    title:
-                      type: string
-                      example: "Invalid id supplied"
-                    detail:
-                      type: string
-                      example: "Id must be an integer"
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":
-      description: Region not found
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              errors:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    code:
-                      type: string
-                      description: One of a list of possible values (previously 'frontEndErrorSlug')
-                      example: "entityNotFoundForId"
-                    status:
-                      type: string
-                      example: "404"
-                    title:
-                      type: string
-                      example: "Related entity not found"
-  security:
-    - api_key: []
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"

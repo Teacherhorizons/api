@@ -10,6 +10,7 @@ JsonApiModel_teacher:
       type: object
       additionalProperties: false
       properties:
+        #relationship attributes
         user:
           $ref: "../../library/teacher/teacher.yaml#/teacher_user" 
         teachingQualificationCountry:
