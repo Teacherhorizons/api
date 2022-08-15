@@ -1,305 +1,305 @@
 JsonApiModel_school:
   type: object
+  additionalProperties: false
   properties:
     type:
       $ref: "#/JsonApiModel_school_type"
     id:
       $ref: "#/JsonApiModel_school_id"
     attributes:
-      $ref: "#/JsonApiModel_school_attributes"
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/school/school.yaml#/school_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/school/school.yaml#/school_latestUpdateDate"
+        name:
+          $ref: "../../library/school/school.yaml#/school_name"
+        slug:
+          $ref: "../../library/school/school.yaml#/school_slug"
+        isActive:
+          $ref: "../../library/school/school.yaml#/school_isActive"
+        thRating:
+          $ref: "../../library/school/school.yaml#/school_thRating"
+        alias:
+          $ref: "../../library/school/school.yaml#/school_alias"
+        address1:
+          $ref: "../../library/school/school.yaml#/school_address1"
+        address2:
+          $ref: "../../library/school/school.yaml#/school_address2"
+        address3:
+          $ref: "../../library/school/school.yaml#/school_address3"
+        websiteUrl:
+          $ref: "../../library/school/school.yaml#/school_websiteUrl"
+        phoneNumber:
+          $ref: "../../library/school/school.yaml#/school_phoneNumber"
+        isEndorsedBy:
+          $ref: "../../library/school/school.yaml#/school_isEndorsedByTh"
+        hasBeenVisitedByTh:
+          $ref: "../../library/school/school.yaml#/school_hasBeenVisitedByTh"
+        acronym:
+          $ref: "../../library/school/school.yaml#/school_acronym"
+        profileStrengthPercentage:
+          $ref: "../../library/school/school.yaml#/school_profileStrengthPercentage"
+        monthSchoolYearBegins:
+          $ref: "../../library/school/school.yaml#/school_monthSchoolYearBegins"
+        headTeacherName:
+          $ref: "../../library/school/school.yaml#/school_headTeacherName"
+        numberOfExtraCurricularHoursPerWeek:
+          $ref: "../../library/school/school.yaml#/school_numberOfExtraCurricularHoursPerWeek"
+        numberOfTeachingHoursPerWeek:
+          $ref: "../../library/school/school.yaml#/school_numberOfTeachingHoursPerWeek"
+        numberOfStudents:
+          $ref: "../../library/school/school.yaml#/school_numberOfStudents"
+        numberOfPreSchoolStudents:
+          $ref: "../../library/school/school.yaml#/school_numberOfPreSchoolStudents"
+        numberOfPrimaryStudents:
+          $ref: "../../library/school/school.yaml#/school_numberOfPrimaryStudents"
+        numberOfSecondaryStudents:
+          $ref: "../../library/school/school.yaml#/school_numberOfSecondaryStudents"
+        numberOfPost16Students:
+          $ref: "../../library/school/school.yaml#/school_numberOfPost16Students"
+        averagePreSchoolClassSize:
+          $ref: "../../library/school/school.yaml#/school_averagePreSchoolClassSize"
+        averagePrimaryClassSize:
+          $ref: "../../library/school/school.yaml#/school_averagePrimaryClassSize"
+        averageSecondaryClassSize:
+          $ref: "../../library/school/school.yaml#/school_averageSecondaryClassSize"
+        averagePost16ClassSize:
+          $ref: "../../library/school/school.yaml#/school_averagePost16ClassSize"
+        percentageOfInternationalStudents:
+          $ref: "../../library/school/school.yaml#/school_percentageOfInternationalStudents"
+        isAcademicallySelective:
+          $ref: "../../library/school/school.yaml#/school_isAcademicallySelective"
+        yearFounded:
+          $ref: "../../library/school/school.yaml#/school_yearFounded"
+        promoVideoUrl:
+          $ref: "../../library/school/school.yaml#/school_promoVideoUrl"
+        numberOfSchoolDaysPerYear:
+          $ref: "../../library/school/school.yaml#/school_numberOfSchoolDaysPerYear"
+        yearHeadTeacherStarted:
+          $ref: "../../library/school/school.yaml#/school_yearHeadTeacherStarted"
+        yearLastAccredited:
+          $ref: "../../library/school/school.yaml#/school_yearLastAccredited"
+        hasLocalAccreditation:
+          $ref: "../../library/school/school.yaml#/school_hasLocalAccreditation"
+        missionStatementText:
+          $ref: "../../library/school/school.yaml#/school_missionStatementText"
+        promoVideoCaption:
+          $ref: "../../library/school/school.yaml#/school_promoVideoCaption"
+        percentageOfOverseasTeachers:
+          $ref: "../../library/school/school.yaml#/school_percentageOfOverseasTeachers"
+        isOpenToTeflTeachers:
+          $ref: "../../library/school/school.yaml#/school_isOpenToTeflTeachers"
+        numberOfTeachingStaff:
+          $ref: "../../library/school/school.yaml#/school_numberOfTeachingStaff"
+        annualTeacherTurnoverPercentage:
+          $ref: "../../library/school/school.yaml#/school_annualTeacherTurnoverPercentage"
+        numberOfOverseasTeachersRecruitedPerYear:
+          $ref: "../../library/school/school.yaml#/school_numberOfOverseasTeachersRecruitedPerYear"
+        minimumYearsTeachingExperience:
+          $ref: "../../library/school/school.yaml#/school_minimumYearsTeachingExperience"
+        monthRecruitmentBegins:
+          $ref: "../../library/school/school.yaml#/school_monthRecruitmentBegins"
+        teacherUpperAgeLimit:
+          $ref: "../../library/school/school.yaml#/school_teacherUpperAgeLimit"
+        isOpenToNewlyQualifiedTeachers:
+          $ref: "../../library/school/school.yaml#/school_isOpenToNewlyQualifiedTeachers"
+        isOpenToUntrainedTeachers:
+          $ref: "../../library/school/school.yaml#/school_isOpenToUntrainedTeachers"
+        isOpenToPgcei:
+          $ref: "../../library/school/school.yaml#/school_isOpenToPgcei"
+        isOpenToTeachingCouples:
+          $ref: "../../library/school/school.yaml#/school_isOpenToTeachingCouples"
+        additionalVisaRequirementsText:
+          $ref: "../../library/school/school.yaml#/school_additionalVisaRequirementsText"
+        additionalRecruitmentRequirementsText:
+          $ref: "../../library/school/school.yaml#/school_additionalRecruitmentRequirementsText"
+        monthForNoticeOfIntentionToLeave:
+          $ref: "../../library/school/school.yaml#/school_monthForNoticeOfIntentionToLeave"
+        monthContractEnds:
+          $ref: "../../library/school/school.yaml#/school_monthContractEnds"
+        additionalContractText:
+          $ref: "../../library/school/school.yaml#/school_additionalContractText"
+        monthContractStarts:
+          $ref: "../../library/school/school.yaml#/school_monthContractStarts"
+        locationLatLong:
+          $ref: "../../library/school/school.yaml#/school_locationLatLong"
+        yearCampusLastRenovated:
+          $ref: "../../library/school/school.yaml#/school_yearCampusLastRenovated"
+        locationText:
+          $ref: "../../library/school/school.yaml#/school_locationText"
+        locationLatitude:
+          $ref: "../../library/school/school.yaml#/school_locationLatitude"
+        locationLongitude:
+          $ref: "../../library/school/school.yaml#/school_locationLongitude"
+        isPayScaleBasedOnExperience:
+          $ref: "../../library/school/school.yaml#/school_isPayScaleBasedOnExperience"
+        contractLengthInYears:
+          $ref: "../../library/school/school.yaml#/school_contractLengthInYears"
+        hasTeacherSavingScheme:
+          $ref: "../../library/school/school.yaml#/school_hasTeacherSavingScheme"
+        canSalarySupportFamilyOfFour:
+          $ref: "../../library/school/school.yaml#/school_canSalarySupportFamilyOfFour"
+        hasFreePrivateHealthcareScheme:
+          $ref: "../../library/school/school.yaml#/school_hasFreePrivateHealthcareScheme"
+        grossSalaryJuniorTeacher:
+          $ref: "../../library/school/school.yaml#/school_grossSalaryJuniorTeacher"
+        grossSalaryJuniorTeacherInUsd:
+          $ref: "../../library/school/school.yaml#/school_grossSalaryJuniorTeacherInUsd"
+        grossSalarySeniorTeacher:
+          $ref: "../../library/school/school.yaml#/school_grossSalarySeniorTeacher"
+        grossSalarySeniorTeacherInUsd:
+          $ref: "../../library/school/school.yaml#/school_grossSalarySeniorTeacherInUsd"
+        juniorTeacherTaxPercentage:
+          $ref: "../../library/school/school.yaml#/school_juniorTeacherTaxPercentage"
+        seniorTeacherTaxPercentage:
+          $ref: "../../library/school/school.yaml#/school_seniorTeacherTaxPercentage"
+        schoolPensionContributionPercentage:
+          $ref: "../../library/school/school.yaml#/school_schoolPensionContributionPercentage"
+        teacherPensionContributionPercentage:
+          $ref: "../../library/school/school.yaml#/school_teacherPensionContributionPercentage"
+        amountIndividualTeacherSavesYearly:
+          $ref: "../../library/school/school.yaml#/school_amountIndividualTeacherSavesYearly"
+        amountIndividualTeacherSavesYearlyInUsd:
+          $ref: "../../library/school/school.yaml#/school_amountIndividualTeacherSavesYearlyInUsd"
+        numberOfDependentsPerTeacher:
+          $ref: "../../library/school/school.yaml#/school_numberOfDependentsPerTeacher"
+        hasOpportunitiesAtSchoolForNonTeachingSpouses:
+          $ref: "../../library/school/school.yaml#/school_hasOpportunitiesAtSchoolForNonTeachingSpouses"
+        additionalTaxText:
+          $ref: "../../library/school/school.yaml#/school_additionalTaxText"
+        billsExpenditurePercentage:
+          $ref: "../../library/school/school.yaml#/school_billsExpenditurePercentage"
+        foodAndDrinkExpenditurePercentage:
+          $ref: "../../library/school/school.yaml#/school_foodAndDrinkExpenditurePercentage"
+        travelExpenditurePercentage:
+          $ref: "../../library/school/school.yaml#/school_travelExpenditurePercentage"
+        otherExpenditurePercentage:
+          $ref: "../../library/school/school.yaml#/school_otherExpenditurePercentage"
+        accommodationExpenditurePercentage:
+          $ref: "../../library/school/school.yaml#/school_accommodationExpenditurePercentage"
+        hasTeacherInductionProgramme:
+          $ref: "../../library/school/school.yaml#/school_hasTeacherInductionProgramme"
+        hasTeacherPersonalLeaveDays:
+          $ref: "../../library/school/school.yaml#/school_hasTeacherPersonalLeaveDays"
+        hasTeacherBereavementLeave:
+          $ref: "../../library/school/school.yaml#/school_hasTeacherBereavementLeave"
+        additionalAccommodationText:
+          $ref: "../../library/school/school.yaml#/school_additionalAccommodationText"
+        ambassadorMemberNumber:
+          $ref: "../../library/school/school.yaml#/school_ambassadorMemberNumber"
+        ambassadorTestimonial:
+          $ref: "../../library/school/school.yaml#/school_ambassadorTestimonial"
+        leadRecruitmentContactName:
+          $ref: "../../library/school/school.yaml#/school_leadRecruitmentContactName"
+        leadRecruitmentContactEmail:
+          $ref: "../../library/school/school.yaml#/school_leadRecruitmentContactEmail"
+        isInterestedInRecruitmentServices:
+          $ref: "../../library/school/school.yaml#/school_isInterestedInRecruitmentServices"
+        isSubscribedToCandidateSuggestionEmails:
+          $ref: "../../library/school/school.yaml#/school_isSubscribedToCandidateSuggestionEmails"
+        numberOfBasicActiveJobCredits:
+          $ref: "../../library/school/school.yaml#/school_numberOfBasicActiveJobCredits"
+        hasThSaferRecruitmentBadgeOnOwnWebsite:
+          $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
+        smallProfileImageUrl:
+          $ref: "../../library/school/school.yaml#/school_smallProfileImageUrl"
+        largeProfileImageUrl:
+          $ref: "../../library/school/school.yaml#/school_largeProfileImageUrl"
+        logoUrl:
+          $ref: "../../library/school/school.yaml#/school_logoUrl"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        phoneCodeCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        internationalWorkingCurrency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
+        fundingType:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        studentGenderMix:
+          $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship_attribute"
+        affiliatedReligion:
+          $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship_attribute"
+        pensionSchemeType:
+          $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship_attribute"
+        relocationAllowanceType:
+          $ref: "../school/relocationAllowanceType.yaml#/JsonApiModel_school-relocationAllowanceType_relationship_attribute"
+        flightAllowanceType:
+          $ref: "../school/flightAllowanceType.yaml#/JsonApiModel_school-flightAllowanceType_relationship_attribute"
+        managedByUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        lraUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
-      $ref: "#/JsonApiModel_school_relationships"
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+        phoneCodeCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        internationalWorkingCurrency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship"
+        fundingType:
+          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        studentGenderMix:
+          $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship"
+        affiliatedReligion:
+          $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship"
+        pensionSchemeType:
+          $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship"
+        relocationAllowanceType:
+          $ref: "../school/relocationAllowanceType.yaml#/JsonApiModel_school-relocationAllowanceType_relationship"
+        flightAllowanceType:
+          $ref: "../school/flightAllowanceType.yaml#/JsonApiModel_school-flightAllowanceType_relationship"
+        managedByUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        lraUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_school_attributes:
-  type: object
-  properties:
-    # simple attributes
-    creationDate:
-      $ref: "../../library/school/school.yaml#/school_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/school/school.yaml#/school_latestUpdateDate"
-    name:
-      $ref: "../../library/school/school.yaml#/school_name"
-    slug:
-      $ref: "../../library/school/school.yaml#/school_slug"
-    isActive:
-      $ref: "../../library/school/school.yaml#/school_isActive"
-    thRating:
-      $ref: "../../library/school/school.yaml#/school_thRating"
-    alias:
-      $ref: "../../library/school/school.yaml#/school_alias"
-    address1:
-      $ref: "../../library/school/school.yaml#/school_address1"
-    address2:
-      $ref: "../../library/school/school.yaml#/school_address2"
-    address3:
-      $ref: "../../library/school/school.yaml#/school_address3"
-    websiteUrl:
-      $ref: "../../library/school/school.yaml#/school_websiteUrl"
-    phoneNumber:
-      $ref: "../../library/school/school.yaml#/school_phoneNumber"
-    isEndorsedBy:
-      $ref: "../../library/school/school.yaml#/school_isEndorsedByTh"
-    hasBeenVisitedByTh:
-      $ref: "../../library/school/school.yaml#/school_hasBeenVisitedByTh"
-    acronym:
-      $ref: "../../library/school/school.yaml#/school_acronym"
-    profileStrengthPercentage:
-      $ref: "../../library/school/school.yaml#/school_profileStrengthPercentage"
-    monthSchoolYearBegins:
-      $ref: "../../library/school/school.yaml#/school_monthSchoolYearBegins"
-    headTeacherName:
-      $ref: "../../library/school/school.yaml#/school_headTeacherName"
-    numberOfExtraCurricularHoursPerWeek:
-      $ref: "../../library/school/school.yaml#/school_numberOfExtraCurricularHoursPerWeek"
-    numberOfTeachingHoursPerWeek:
-      $ref: "../../library/school/school.yaml#/school_numberOfTeachingHoursPerWeek"
-    numberOfStudents:
-      $ref: "../../library/school/school.yaml#/school_numberOfStudents"
-    numberOfPreSchoolStudents:
-      $ref: "../../library/school/school.yaml#/school_numberOfPreSchoolStudents"
-    numberOfPrimaryStudents:
-      $ref: "../../library/school/school.yaml#/school_numberOfPrimaryStudents"
-    numberOfSecondaryStudents:
-      $ref: "../../library/school/school.yaml#/school_numberOfSecondaryStudents"
-    numberOfPost16Students:
-      $ref: "../../library/school/school.yaml#/school_numberOfPost16Students"
-    averagePreSchoolClassSize:
-      $ref: "../../library/school/school.yaml#/school_averagePreSchoolClassSize"
-    averagePrimaryClassSize:
-      $ref: "../../library/school/school.yaml#/school_averagePrimaryClassSize"
-    averageSecondaryClassSize:
-      $ref: "../../library/school/school.yaml#/school_averageSecondaryClassSize"
-    averagePost16ClassSize:
-      $ref: "../../library/school/school.yaml#/school_averagePost16ClassSize"
-    percentageOfInternationalStudents:
-      $ref: "../../library/school/school.yaml#/school_percentageOfInternationalStudents"
-    isAcademicallySelective:
-      $ref: "../../library/school/school.yaml#/school_isAcademicallySelective"
-    yearFounded:
-      $ref: "../../library/school/school.yaml#/school_yearFounded"
-    promoVideoUrl:
-      $ref: "../../library/school/school.yaml#/school_promoVideoUrl"
-    numberOfSchoolDaysPerYear:
-      $ref: "../../library/school/school.yaml#/school_numberOfSchoolDaysPerYear"
-    yearHeadTeacherStarted:
-      $ref: "../../library/school/school.yaml#/school_yearHeadTeacherStarted"
-    yearLastAccredited:
-      $ref: "../../library/school/school.yaml#/school_yearLastAccredited"
-    hasLocalAccreditation:
-      $ref: "../../library/school/school.yaml#/school_hasLocalAccreditation"
-    missionStatementText:
-      $ref: "../../library/school/school.yaml#/school_missionStatementText"
-    promoVideoCaption:
-      $ref: "../../library/school/school.yaml#/school_promoVideoCaption"
-    percentageOfOverseasTeachers:
-      $ref: "../../library/school/school.yaml#/school_percentageOfOverseasTeachers"
-    isOpenToTeflTeachers:
-      $ref: "../../library/school/school.yaml#/school_isOpenToTeflTeachers"
-    numberOfTeachingStaff:
-      $ref: "../../library/school/school.yaml#/school_numberOfTeachingStaff"
-    annualTeacherTurnoverPercentage:
-      $ref: "../../library/school/school.yaml#/school_annualTeacherTurnoverPercentage"
-    numberOfOverseasTeachersRecruitedPerYear:
-      $ref: "../../library/school/school.yaml#/school_numberOfOverseasTeachersRecruitedPerYear"
-    minimumYearsTeachingExperience:
-      $ref: "../../library/school/school.yaml#/school_minimumYearsTeachingExperience"
-    monthRecruitmentBegins:
-      $ref: "../../library/school/school.yaml#/school_monthRecruitmentBegins"
-    teacherUpperAgeLimit:
-      $ref: "../../library/school/school.yaml#/school_teacherUpperAgeLimit"
-    isOpenToNewlyQualifiedTeachers:
-      $ref: "../../library/school/school.yaml#/school_isOpenToNewlyQualifiedTeachers"
-    isOpenToUntrainedTeachers:
-      $ref: "../../library/school/school.yaml#/school_isOpenToUntrainedTeachers"
-    isOpenToPgcei:
-      $ref: "../../library/school/school.yaml#/school_isOpenToPgcei"
-    isOpenToTeachingCouples:
-      $ref: "../../library/school/school.yaml#/school_isOpenToTeachingCouples"
-    additionalVisaRequirementsText:
-      $ref: "../../library/school/school.yaml#/school_additionalVisaRequirementsText"
-    additionalRecruitmentRequirementsText:
-      $ref: "../../library/school/school.yaml#/school_additionalRecruitmentRequirementsText"
-    monthForNoticeOfIntentionToLeave:
-      $ref: "../../library/school/school.yaml#/school_monthForNoticeOfIntentionToLeave"
-    monthContractEnds:
-      $ref: "../../library/school/school.yaml#/school_monthContractEnds"
-    additionalContractText:
-      $ref: "../../library/school/school.yaml#/school_additionalContractText"
-    monthContractStarts:
-      $ref: "../../library/school/school.yaml#/school_monthContractStarts"
-    locationLatLong:
-      $ref: "../../library/school/school.yaml#/school_locationLatLong"
-    yearCampusLastRenovated:
-      $ref: "../../library/school/school.yaml#/school_yearCampusLastRenovated"
-    locationText:
-      $ref: "../../library/school/school.yaml#/school_locationText"
-    locationLatitude:
-      $ref: "../../library/school/school.yaml#/school_locationLatitude"
-    locationLongitude:
-      $ref: "../../library/school/school.yaml#/school_locationLongitude"
-    isPayScaleBasedOnExperience:
-      $ref: "../../library/school/school.yaml#/school_isPayScaleBasedOnExperience"
-    contractLengthInYears:
-      $ref: "../../library/school/school.yaml#/school_contractLengthInYears"
-    hasTeacherSavingScheme:
-      $ref: "../../library/school/school.yaml#/school_hasTeacherSavingScheme"
-    canSalarySupportFamilyOfFour:
-      $ref: "../../library/school/school.yaml#/school_canSalarySupportFamilyOfFour"
-    hasFreePrivateHealthcareScheme:
-      $ref: "../../library/school/school.yaml#/school_hasFreePrivateHealthcareScheme"
-    grossSalaryJuniorTeacher:
-      $ref: "../../library/school/school.yaml#/school_grossSalaryJuniorTeacher"
-    grossSalaryJuniorTeacherInUsd:
-      $ref: "../../library/school/school.yaml#/school_grossSalaryJuniorTeacherInUsd"
-    grossSalarySeniorTeacher:
-      $ref: "../../library/school/school.yaml#/school_grossSalarySeniorTeacher"
-    grossSalarySeniorTeacherInUsd:
-      $ref: "../../library/school/school.yaml#/school_grossSalarySeniorTeacherInUsd"
-    juniorTeacherTaxPercentage:
-      $ref: "../../library/school/school.yaml#/school_juniorTeacherTaxPercentage"
-    seniorTeacherTaxPercentage:
-      $ref: "../../library/school/school.yaml#/school_seniorTeacherTaxPercentage"
-    schoolPensionContributionPercentage:
-      $ref: "../../library/school/school.yaml#/school_schoolPensionContributionPercentage"
-    teacherPensionContributionPercentage:
-      $ref: "../../library/school/school.yaml#/school_teacherPensionContributionPercentage"
-    amountIndividualTeacherSavesYearly:
-      $ref: "../../library/school/school.yaml#/school_amountIndividualTeacherSavesYearly"
-    amountIndividualTeacherSavesYearlyInUsd:
-      $ref: "../../library/school/school.yaml#/school_amountIndividualTeacherSavesYearlyInUsd"
-    numberOfDependentsPerTeacher:
-      $ref: "../../library/school/school.yaml#/school_numberOfDependentsPerTeacher"
-    hasOpportunitiesAtSchoolForNonTeachingSpouses:
-      $ref: "../../library/school/school.yaml#/school_hasOpportunitiesAtSchoolForNonTeachingSpouses"
-    additionalTaxText:
-      $ref: "../../library/school/school.yaml#/school_additionalTaxText"
-    billsExpenditurePercentage:
-      $ref: "../../library/school/school.yaml#/school_billsExpenditurePercentage"
-    foodAndDrinkExpenditurePercentage:
-      $ref: "../../library/school/school.yaml#/school_foodAndDrinkExpenditurePercentage"
-    travelExpenditurePercentage:
-      $ref: "../../library/school/school.yaml#/school_travelExpenditurePercentage"
-    otherExpenditurePercentage:
-      $ref: "../../library/school/school.yaml#/school_otherExpenditurePercentage"
-    accommodationExpenditurePercentage:
-      $ref: "../../library/school/school.yaml#/school_accommodationExpenditurePercentage"
-    hasTeacherInductionProgramme:
-      $ref: "../../library/school/school.yaml#/school_hasTeacherInductionProgramme"
-    hasTeacherPersonalLeaveDays:
-      $ref: "../../library/school/school.yaml#/school_hasTeacherPersonalLeaveDays"
-    hasTeacherBereavementLeave:
-      $ref: "../../library/school/school.yaml#/school_hasTeacherBereavementLeave"
-    additionalAccommodationText:
-      $ref: "../../library/school/school.yaml#/school_additionalAccommodationText"
-    ambassadorMemberNumber:
-      $ref: "../../library/school/school.yaml#/school_ambassadorMemberNumber"
-    ambassadorTestimonial:
-      $ref: "../../library/school/school.yaml#/school_ambassadorTestimonial"
-    leadRecruitmentContactName:
-      $ref: "../../library/school/school.yaml#/school_leadRecruitmentContactName"
-    leadRecruitmentContactEmail:
-      $ref: "../../library/school/school.yaml#/school_leadRecruitmentContactEmail"
-    isInterestedInRecruitmentServices:
-      $ref: "../../library/school/school.yaml#/school_isInterestedInRecruitmentServices"
-    isSubscribedToCandidateSuggestionEmails:
-      $ref: "../../library/school/school.yaml#/school_isSubscribedToCandidateSuggestionEmails"
-    numberOfBasicActiveJobCredits:
-      $ref: "../../library/school/school.yaml#/school_numberOfBasicActiveJobCredits"
-    hasThSaferRecruitmentBadgeOnOwnWebsite:
-      $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
-    smallProfileImageUrl:
-      $ref: "../../library/school/school.yaml#/school_smallProfileImageUrl"
-    largeProfileImageUrl:
-      $ref: "../../library/school/school.yaml#/school_largeProfileImageUrl"
-    logoUrl:
-      $ref: "../../library/school/school.yaml#/school_logoUrl"
-
-    # relationship attributes
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    city:
-      $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
-    phoneCodeCountry:
-      $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
-    internationalWorkingCurrency:
-      $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
-    fundingType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    studentGenderMix:
-      $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship_attribute"
-    affiliatedReligion:
-      $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship_attribute"
-    pensionSchemeType:
-      $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship_attribute"
-    relocationAllowanceType:
-      $ref: "../school/relocationAllowanceType.yaml#/JsonApiModel_school-relocationAllowanceType_relationship_attribute"
-    flightAllowanceType:
-      $ref: "../school/flightAllowanceType.yaml#/JsonApiModel_school-flightAllowanceType_relationship_attribute"
-    managedByUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    lraUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-
-JsonApiModel_school_relationships:
-  type: object
-  description: Related attributes
-  properties:
-    creationUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    latestUpdateUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    city:
-      $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
-    phoneCodeCountry:
-      $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
-    internationalWorkingCurrency:
-      $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship"
-    fundingType:
-      $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-    studentGenderMix:
-      $ref: "../school/studentGenderMix.yaml#/JsonApiModel_school-studentGenderMix_relationship"
-    affiliatedReligion:
-      $ref: "../general/religion.yaml#/JsonApiModel_general-religion_relationship"
-    pensionSchemeType:
-      $ref: "../general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType_relationship"
-    relocationAllowanceType:
-      $ref: "../school/relocationAllowanceType.yaml#/JsonApiModel_school-relocationAllowanceType_relationship"
-    flightAllowanceType:
-      $ref: "../school/flightAllowanceType.yaml#/JsonApiModel_school-flightAllowanceType_relationship"
-    managedByUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-    lraUser:
-      $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-
 JsonApiModel_school_type:
   type: string
   example: school
-  description: school
+  description: Unique identifier of the entity type
   readOnly: true
 
 JsonApiModel_school_id:
   type: string
   example: "1"
   readOnly: true
-  description: Unique identifier of the school (string)
+  description: Unique identifier of the entity (string)
 
 JsonApiModel_school_relationship_attribute:
   type: object
+  additionalProperties: false
   properties:
     id:
       $ref: "#/JsonApiModel_school_id"
+  required:
+    - id
 
 JsonApiModel_school_relationship:
   type: object
+  additionalProperties: false
   properties:
     data:
       type: object
+      additionalProperties: false
       properties:
         type:
           $ref: "#/JsonApiModel_school_type"
