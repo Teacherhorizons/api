@@ -33,26 +33,26 @@ get:
           filter[job.school.name][matches]:
             type: string
           filter[job.id][contains]:
-            type: number
+            type: string
           filter[job.title][matches]:
             type: string
           filter[teacher.memberNumber][contains]:
-            type: number
+            type: string
           filter[teacher.fullName][matches]:
             type: string
           filter[job.adviser.id][contains]:
             type: string
           filter[job.school.lra.id][contains]:
-            type: number
+            type: string
           filter[job.subject.id][contains]:
-            type: number
+            type: string
           filter[latestEvent.type.id][contains]:
-            type: number
+            type: string
           filter[latestEvent.date][lte]:
             type: string
             format: date-time
           filter[event.type.id][contains]:
-            type: number
+            type: string
           filter[minEvent.date][gte]:
             type: string
             format: date-time
@@ -60,11 +60,11 @@ get:
             type: string
             format: date-time
           filter[job.school.city.country.region.id][contains]:
-            type: number
+            type: string
           filter[job.school.city.country.id][contains]:
-            type: number
+            type: string
           filter[job.school.city.id][contains]:
-            type: number
+            type: string
         example:
           id][contains: 1,2
           status.id][contains: 1,2

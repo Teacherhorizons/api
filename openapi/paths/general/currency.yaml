@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
 
 get:
   operationId: get-general-currency
@@ -21,33 +21,31 @@ get:
           - admin
           - school
           - teacher
-    # - in: query
-    #   name: fields
-    #   style: deepObject
-    #   allowReserved: true
-    #   explode: true
-    #   schema:
-    #     type: object
-    #     additionalProperties: false
-    #     properties:
-    #       code:
-    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_code"
-    #       symbol:
-    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_symbol"
-    #       name:
-    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_name"
-    #       creationDate:
-    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_creationDate"
-    #       latestUpdateDate:
-    #         $ref: "../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
-    #     required:
-    #       - code
-    #       - symbol
-    #       - name
-    #       - creationDate
-    #       - latestUpdateDate
-    #     example:
-    #       region: name,creationDate
+    - in: query
+      name: fields
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[code][contains]:
+            type: string
+          filter[symbol][contains]:
+            type: string
+          filter[name][contains]:
+            type: string
+          filter[creationDate][contains]:
+            type: string
+          filter[latestUpdate.date][contains]:
+            type: string
+        example:
+          code][contains: 1,2
+          symbol][contains: 1,2
+          name][contains: alic
+          creationDate][contains: 1,2
+          latestUpdate.Date][contains: 1,2
   responses:
     "200":
       description: OK (Request successful)

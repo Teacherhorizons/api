@@ -24,6 +24,7 @@ get:
       explode: true
       schema:
         type: object
+        additionalProperties: false
         properties:
           filter[id][contains]:
             type: string
