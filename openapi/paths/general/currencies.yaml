@@ -1,17 +1,17 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
+# TODO: consider removing - was originally an example which is probably no longer needed
 
 get:
-  operationId: get-general-currency
+  operationId: get-general-currencies
   tags:
     - general
-  summary: Get currency (proposed)
+  summary: Get currencies (proposed)
   parameters:
-    - in: path
-      name: currencyId
-      required: true
-      example: 1
-      schema:
-        type: integer
+    # - in: path
+    #   name: currencyId
+    #   required: true
+    #   example: 1
+    #   schema:
+    #     type: integer
     - in: query
       name: schema
       required: true
@@ -65,4 +65,3 @@ get:
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
-
