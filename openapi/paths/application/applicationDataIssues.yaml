@@ -23,6 +23,7 @@ get:
           - admin
       description: |
         - admin: only admin can see data issues
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
       style: deepObject

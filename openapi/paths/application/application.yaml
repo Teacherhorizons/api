@@ -4,6 +4,7 @@ get:
   operationId: get-application
   tags:
     - application
+    - testing-status-1
   summary: Get an application
   parameters:
     - in: path
@@ -12,15 +13,9 @@ get:
       example: 1
       schema:
         type: integer
-    - in: query
-      name: schema
-      required: true
-      schema:
-        type: string
-        enum:
-          - admin
-          - school
-          - teacher
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+
     # - in: query
     #   name: fields
     #   style: deepObject

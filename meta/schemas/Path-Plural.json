@@ -395,6 +395,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "$ref": {
+          "type": "string",
+          "pattern": "^../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_(standardSchema|asUserId)$"
+        },
         "in": {
           "type": "string",
           "const": "query"

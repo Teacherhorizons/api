@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../../../../../meta/schemas/None.json
+
+# TODO: make use of in all API calls
+JsonApiModel_parameters_asUserId:
+  in: query
+  name: asUserId
+  schema:
+    type: integer
+    description: Allow an admin user to make the API call as though they are that user
+
+JsonApiModel_parameters_standardSchema:
+  in: query
+  name: schema
+  required: true
+  schema:
+    type: string
+    enum:
+      - admin
+      - school
+      - teacher
