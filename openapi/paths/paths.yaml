@@ -124,8 +124,8 @@
   $ref: "./../paths-not-jsonapi/other/site-statistics.yaml"
 
 #general
-/general/{currencyId}:
-  $ref: "./../paths/general/currency.yaml"
+/general-currencies:
+  $ref: "./../paths/general/currencies.yaml"
 
 /general-manualEmailTemplates/{manualEmailTemplateId}:
   $ref: "./../paths/general/manualEmailTemplate.yaml"
