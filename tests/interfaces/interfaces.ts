@@ -42,14 +42,25 @@ declare namespace Config {
     id?: number;
   }
 
+  export interface UserId {
+    id?: number;
+  }
+
+  export interface DataIssues {
+    id?: number;
+    expectedDataLength: number;
+  }
+
   export interface Data {
     test?: Test;
+    dataIssues?: DataIssues[];
     schools: School[];
     teachers: Teacher[];
     jobs: Job[];
     applications: Application[];
     applicationEvents: ApplicationEvent[];
     user?: User;
+    asUserId?: UserId[];
   }
 
   // export const data: Data = {

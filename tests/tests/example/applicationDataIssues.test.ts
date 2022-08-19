@@ -1,3 +1,6 @@
+// import { Config } from './../../interfaces/interfaces';
+import config from '../../config';
+
 import {
   addTestGroups,
   api,
@@ -57,27 +60,29 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `application-applicationDataIssues?schema=admin&filter[application.id]=34`,
+      getUrl: (data) =>
+        `application-applicationDataIssues?schema=admin&filter[application.id]=${data.dataIssues[0].id}`,
       // working for admin only
       tests: [
         {
-          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          name: '?schema=admin&filter[application.id]=${data.dataIssues[0].id}|accessNotPermitted',
           userEmail: 'signedOut',
           expectedStatus: 401,
         },
         {
-          name: '?schema=admin&filter[application.id]=34',
+          name: '?schema=admin&filter[application.id]=${data.dataIssues[0].id}',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 5,
+          expectedDataLength: config.local ? 2 : 5,
+          // expectedDataLength: parseInt(`${data.dataIssues[0].expectedDataLength}`),
         },
         {
-          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          name: '?schema=admin&filter[application.id]=${data.dataIssues[0].id}|accessNotPermitted',
           userEmail: 'school-1-school@th.test', //accessNotPermitted|user type must be correct
           expectedStatus: 401,
         },
         {
-          name: '?filter[application.id]=10&schema=admin|accessNotPermitted',
+          name: '?schema=admin&filter[application.id]=${data.dataIssues[0].id}|accessNotPermitted',
           userEmail: 'endorsed@th.test',
           expectedStatus: 401, //accessNotPermitted|user type must be correct
         },

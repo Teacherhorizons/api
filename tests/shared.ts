@@ -211,6 +211,8 @@ const meLocalData: Config.Data = {
     { id: 131493 },
     { id: 131494 },
   ],
+  dataIssues: [{ id: 10, expectedDataLength: 2 }],
+  asUserId: [{ id: 2 }, { id: 1031 }, { id: 23638 }, { id: 1070 }, { id: 1059 }],
   test: { id: 109 },
 };
 
@@ -232,5 +234,7 @@ const betaData: Config.Data = {
     { id: 2408114 },
     { id: 2408115 },
   ],
+  dataIssues: [{ id: 34, expectedDataLength: 5 }],
+  asUserId: [{ id: 2 }, { id: 1031 }, { id: 23666 }, { id: 1070 }],
   test: { id: 116 },
 };

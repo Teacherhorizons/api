@@ -53,10 +53,11 @@ declare namespace Test {
     userEmail: string;
     expectedStatus: number;
     expectedDataLength?: number;
+    count?: number;
   }
 
   export interface TestGroup {
     getUrl: (data: Config.Data) => string;
-    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'name'>[];
+    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'count' | 'name'>[];
   }
 }
