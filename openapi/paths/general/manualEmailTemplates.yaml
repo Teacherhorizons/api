@@ -8,15 +8,8 @@ get:
     - teacher schema: Responds with only templates where isVisibleToTeacher is true
     - school schema: Responds with only templates where isVisibleToSchool is true
   parameters:
-    - in: query
-      name: schema
-      required: true
-      schema:
-        type: string
-        enum:
-          - admin
-          - school
-          - teacher
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
       style: deepObject
