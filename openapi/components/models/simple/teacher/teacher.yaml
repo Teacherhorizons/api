@@ -31,23 +31,23 @@ SimpleModel_teacher_admin:
         - admin
     id:
       $ref: "#/SimpleModel_teacher_id"
-    # simple attributes
-    user:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
-    teachingQualificationCountry:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountry"
-    qualificationType:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationType"
-    jobSeekingStatus:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatus"
-    userType:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
-    thDiscoveryMethod:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethod"
-    latestAdviserCommentUser:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_user"
-    currentCountry:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountry"
+    # relationship attributes
+    userId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+    teachingQualificationCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountryId"
+    qualificationTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationTypeId"
+    jobSeekingStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatusId"
+    userTypeId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+    thDiscoveryMethodId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethodId"
+    latestAdviserCommentUserId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+    currentCountryId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountryId"
   required:
     - schema
     - id

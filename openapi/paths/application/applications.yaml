@@ -136,6 +136,7 @@ post:
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
   requestBody:
     content:
       application/json:

@@ -12,21 +12,21 @@ JsonApiModel_teacher:
       properties:
         #relationship attributes
         user:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_user" 
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         teachingQualificationCountry:
           $ref: "../../library/teacher/teacher.yaml#/teacher_teachingQualificationCountry"
         qualificationType:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_qualificationType"
+          $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship_attribute"
         jobSeekingStatus:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatus"
+          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship_attribute"
         userType:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_user"
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         thDiscoveryMethod:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethod"
+          $ref: "../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship_attribute"
         latestAdviserCommentUser:
           $ref: "../../library/teacher/teacher.yaml#/teacher_user"
         currentCountry:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountry"
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
