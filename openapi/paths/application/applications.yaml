@@ -1,9 +1,11 @@
 get:
   operationId: get-applications
+  summary: Get list of 20 applications
   tags:
     - application
-  summary: Get list of 20 applications
+    - testing-status-1
   description: |
+    <span class="testing-status-1"></span>
     - Admin: Can see all applications and all related events
     - Teacher: Can see only applications which relate to them, and all related events
     - School: Can see only applications which have been submitted to them, and only events from that point onwards
@@ -130,7 +132,9 @@ post:
   summary: Create application
   tags:
     - application
-  description: ""
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   requestBody:
     content:
       application/json:

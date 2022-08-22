@@ -1,8 +1,11 @@
 get:
   operationId: get-application-eventTypeActions
+  summary: Get event type actions
   tags:
     - application
-  summary: Get event type actions
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - in: query
       name: filter

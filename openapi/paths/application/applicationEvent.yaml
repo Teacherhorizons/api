@@ -2,10 +2,12 @@
 
 patch:
   operationId: patch-application-applicationEvent
+  summary: Update application event
   tags:
     - application
-  summary: Update application event
-  description: ""
+    - testing-status-5
+  description: |
+    <span class="testing-status-5"></span>
   parameters:
     - in: path
       name: applicationEventId

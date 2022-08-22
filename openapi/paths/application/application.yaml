@@ -2,10 +2,12 @@
 
 get:
   operationId: get-application
+  summary: Get an application
   tags:
     - application
-    - testing-status-1
-  summary: Get an application
+    - testing-status-4
+  description: |
+    <span class="testing-status-4"></span>
   parameters:
     - in: path
       name: applicationId
@@ -50,10 +52,12 @@ get:
 
 patch:
   operationId: patch-application
+  summary: Update application
   tags:
     - application
-  summary: Update application
-  description: ""
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - in: path
       name: applicationId

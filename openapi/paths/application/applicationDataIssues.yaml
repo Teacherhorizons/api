@@ -1,9 +1,11 @@
 get:
   operationId: get-application-applicationDataIssues
+  summary: Get application data issues
   tags:
     - application
-  summary: Get application data issues
+    - testing-status-1
   description: |
+    <span class="testing-status-1"></span>
     - admin schema: DEPRECATED; non-standard, but exists and is in use
     - admin-v2 schema: 'correct' version of admin schema
     - Process:

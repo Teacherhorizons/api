@@ -1,9 +1,11 @@
 get:
   operationId: get-application-eventTypes
+  summary: Get event types
   tags:
     - application
-  summary: Get event types
+    - testing-status-1
   description: |
+    <span class="testing-status-1"></span>
     - admin schema: Responds with all application event types
     - teacher schema: Responds with only application event types where isVisibleToTeacher is true
     - school schema: Responds with only application event types where isVisibleToSchool is true

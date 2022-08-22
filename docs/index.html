@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>API Reference | ReDoc</title>
     <!-- needed for adaptive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <!--
     ReDoc uses font options from the parent element
@@ -25,14 +25,14 @@
         /* future: keep an eye on the issue */
         width: -webkit-fill-available !important;
       }
-      li[data-item-id*="group/"] {
+      li[data-item-id*='group/'] {
         margin-top: 0;
       }
-      li[data-item-id*="group/"] > label {
+      li[data-item-id*='group/'] > label {
         cursor: pointer;
         padding-bottom: 10px;
       }
-      li[data-item-id*="group/"] > label:hover {
+      li[data-item-id*='group/'] > label:hover {
         background-color: rgb(225, 225, 225);
       }
       .expandAllButton {
@@ -42,6 +42,53 @@
       .locateButton {
         float: right;
         margin-right: 38px;
+      }
+
+      span[class^='testing-status-'],
+      span[class*=' testing-status-'] {
+        padding: 3px 6px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0;
+        border-radius: 5px;
+        font-size: 0.8em;
+      }
+
+      .testing-status-1 {
+        background-color: #ff0000;
+        color: white;
+      }
+      .testing-status-1::after {
+        content: 'testing-status-1';
+      }
+      .testing-status-2 {
+        background-color: #ff7f00;
+        color: white;
+      }
+      .testing-status-2::after {
+        content: 'testing-status-2';
+      }
+      .testing-status-3 {
+        background-color: #ffff00;
+      }
+      .testing-status-3::after {
+        content: 'testing-status-3';
+      }
+      .testing-status-4 {
+        background-color: #7fff00;
+      }
+      .testing-status-4::after {
+        content: 'testing-status-4';
+      }
+      .testing-status-5 {
+        background-color: #00ff00;
+      }
+      .testing-status-5::after {
+        content: 'testing-status-5';
+      }
+
+      .sc-kYPZxB.jzOqkP {
+        display: none;
       }
     </style>
     {{{redocHead}}}
@@ -69,9 +116,7 @@
       }
 
       function createExpandableMenuGroups() {
-        document
-        .querySelectorAll('li[data-item-id*="group/"]')
-        .forEach((el) => {
+        document.querySelectorAll('li[data-item-id*="group/"]').forEach((el) => {
           // set visibility as remembered and create behaviour
           const name = el.getAttribute('data-item-id');
           el.children[1].hidden = window.localStorage.getItem(name) == 'true';
@@ -79,7 +124,7 @@
           const label = el.children[0];
           label.style.cursor = 'pointer';
 
-          label.onclick = function() {
+          label.onclick = function () {
             // toggle visibility and save to local storage
             const children = this.parentElement.children[1];
             children.hidden = !children.hidden;
@@ -91,50 +136,54 @@
       }
 
       function wip() {
-        document
-        .querySelectorAll('a[href*="#tag/"]')
-        .forEach((el) => {
+        document.querySelectorAll('a[href*="#tag/"]').forEach((el) => {
           const button1 = document.createElement('button');
           button1.innerText = 'Expand all';
           // el.getele
           el.parentElement.appendChild(button1);
           // el.insertBefore(button, el.firstChild);
-          button1.classList.add('expandAllButton')
+          button1.classList.add('expandAllButton');
           console.log(101, el, button1);
 
-          button1.onclick = function() {
-            console.log(102, this, this.innerText, this.parentElement, this.parentElement.parentElement.parentElement.parentElement);
+          button1.onclick = function () {
+            console.log(
+              102,
+              this,
+              this.innerText,
+              this.parentElement,
+              this.parentElement.parentElement.parentElement.parentElement
+            );
             const foo = this.parentElement.parentElement.parentElement.parentElement;
             const action = this.innerText == 'Expand all' ? 'expand' : 'collapse';
             expandOrCollapseAllSchemas(foo, action);
             this.innerText = action == 'expand' ? 'Collapse all' : 'Expand all';
-          }
+          };
 
           const button2 = document.createElement('button');
           button2.innerText = 'Locate';
           el.parentElement.appendChild(button2);
-          button2.classList.add('locateButton')
+          button2.classList.add('locateButton');
 
-          button2.onclick = function() {
+          button2.onclick = function () {
             // TODO: consider doing this but on initial load (for # in url)
             document.querySelector('li[data-item-id="tag/applications/operation/getApplications"]').scrollIntoView();
             document.querySelector('div[data-section-id="operation/getApplications"]').scrollIntoView();
-          }
-
+          };
         });
-      };
+      }
 
       // related issue: schemas are not expanded (https://github.com/Redocly/redoc/issues/593)
       // workaround (hack): add a button which will expand all schemas
       // future: keep an eye on the issue; make less hacky
       function expandOrCollapseAllSchemaSectionsInCurrentDom(el, action) {
-        const q = action == 'expand'
-          ? 'tr:not(.expanded) > td > button[aria-label*=expand]'
-          : 'tr.expanded > td > button[aria-label*=expand]';
+        const q =
+          action == 'expand'
+            ? 'tr:not(.expanded) > td > button[aria-label*=expand]'
+            : 'tr.expanded > td > button[aria-label*=expand]';
         el.querySelectorAll(q).forEach((btn) => {
           btn.click();
         });
-      };
+      }
 
       function expandOrCollapseAllSchemas(el, expand) {
         const expandInterval = setInterval(() => expandOrCollapseAllSchemaSectionsInCurrentDom(el, expand), 150);
@@ -142,6 +191,11 @@
       }
     </script>
     <!-- <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="wip()">WIP</button> -->
-    <button style="position: fixed;left: 20px;top: 140px;font-size: 10px;" onclick="expandOrCollapseAllSchemas(document, 'expand')">Expand all (WIP)</button>
+    <button
+      style="position: fixed; left: 20px; top: 140px; font-size: 10px"
+      onclick="expandOrCollapseAllSchemas(document, 'expand')"
+    >
+      Expand all (WIP)
+    </button>
   </body>
 </html>

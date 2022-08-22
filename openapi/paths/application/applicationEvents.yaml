@@ -1,8 +1,11 @@
 get:
   operationId: get-application-applicationEvents
+  summary: Get application events
   tags:
     - application
-  summary: Get application events
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - in: query
       name: schema
@@ -59,7 +62,9 @@ post:
   summary: Create application event
   tags:
     - application
-  description: ""
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   requestBody:
     content:
       application/json:

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "definitions": {
+    "Path-tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "oneOf": [
+          {
+            "const": "application"
+          },
+          {
+            "const": "general"
+          },
+          {
+            "const": "job"
+          },
+          {
+            "const": "meta"
+          },
+          {
+            "const": "regional"
+          },
+          {
+            "const": "school"
+          },
+          {
+            "const": "teacher"
+          },
+          {
+            "const": "user"
+          },
+          {
+            "const": "testing-status-1"
+          },
+          {
+            "const": "testing-status-2"
+          },
+          {
+            "const": "testing-status-3"
+          },
+          {
+            "const": "testing-status-4"
+          },
+          {
+            "const": "testing-status-5"
+          }
+        ]
+      }
+    },
+    "Path-description": {
+      "type": "string",
+      "pattern": "^<span class=\"testing-status-[1-5]\"><\/span>[\\S\\s]*$"
+    }
+  }
+}
