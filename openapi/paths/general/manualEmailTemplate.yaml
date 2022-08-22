@@ -2,9 +2,12 @@
 
 get:
   operationId: get-general-manualEmailTemplate
+  summary: Get manual email template
   tags:
     - general
-  summary: Get manual email template
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - in: path
       name: manualEmailTemplateId

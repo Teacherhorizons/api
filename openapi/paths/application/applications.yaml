@@ -19,6 +19,7 @@ get:
           - admin
           - school
           - teacher
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
       style: deepObject

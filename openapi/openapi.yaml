@@ -18,8 +18,6 @@ info:
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   # tags - categories (alphabetical)
-  - name: admin-notes
-    description: Operations relating to admin-notes
   - name: application
     description: Operations in the application category
   - name: community-responses
@@ -56,16 +54,12 @@ tags:
   # tags - testing statuses
   - name: testing-status-1
     description: ...
-
   - name: testing-status-2
     description: ...
-
   - name: testing-status-3
     description: ...
-
   - name: testing-status-4
     description: ...
-
   - name: testing-status-5
     description: ...
 
@@ -1341,20 +1335,27 @@ x-tagGroups:
 
   - name: API (JsonApi)
     tags:
-      - admin-notes
       - application
-      - applications
-      - community-responses
-      - documents
-      - email-templates
-      - employment-records
       - general
+      - job
+      - meta
+      - regional
+      - school
+      - teacher
+      - user
+
+      # TODO: remove
+      - admin-notes
+      - applications
+      # - community-responses
+      # - documents
+      # - email-templates
+      # - employment-records
       - job-applications
       - jobs
       - lists
       - other
       - references
-      - regional
       - schools
       - sites
       - teachers
@@ -1363,6 +1364,10 @@ x-tagGroups:
 
   - name: API (not JsonApi)
     tags:
+      - admin-notes-not-jsonapi
+      - community-responses-not-jsonapi
+      - documents-not-jsonapi
+      - employment-records-not-jsonapi
       - school-not-jsonapi
       - teacher-not-jsonapi
 

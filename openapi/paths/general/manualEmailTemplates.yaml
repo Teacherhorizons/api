@@ -1,9 +1,11 @@
 get:
   operationId: get-general-manualEmailTemplates
+  summary: Get manual email templates
   tags:
     - general
-  summary: Get manual email templates
+    - testing-status-1
   description: |
+    <span class="testing-status-1"></span>
     - admin schema: Responds with only templates where isVisibleToAdmin is true
     - teacher schema: Responds with only templates where isVisibleToTeacher is true
     - school schema: Responds with only templates where isVisibleToSchool is true

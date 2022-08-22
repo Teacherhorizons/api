@@ -23,42 +23,14 @@
           "type": "string",
           "pattern": "^get-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)s$"
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "const": "application"
-              },
-              {
-                "const": "general"
-              },
-              {
-                "const": "job"
-              },
-              {
-                "const": "meta"
-              },
-              {
-                "const": "regional"
-              },
-              {
-                "const": "school"
-              },
-              {
-                "const": "teacher"
-              },
-              {
-                "const": "user"
-              }
-            ]
-          }
-        },
         "summary": {
           "type": "string"
         },
+        "tags": {
+          "$ref": "Shared.json#/definitions/Path-tags"
+        },
         "description": {
-          "type": "string"
+          "$ref": "Shared.json#/definitions/Path-description"
         },
         "parameters": {
           "type": "array",
@@ -186,8 +158,9 @@
       },
       "required": [
         "operationId",
-        "tags",
         "summary",
+        "tags",
+        "description",
         "parameters",
         "responses"
       ],
@@ -201,42 +174,14 @@
           "type": "string",
           "pattern": "^post-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)$"
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "const": "application"
-              },
-              {
-                "const": "general"
-              },
-              {
-                "const": "job"
-              },
-              {
-                "const": "meta"
-              },
-              {
-                "const": "regional"
-              },
-              {
-                "const": "school"
-              },
-              {
-                "const": "teacher"
-              },
-              {
-                "const": "user"
-              }
-            ]
-          }
-        },
         "summary": {
           "type": "string"
         },
+        "tags": {
+          "$ref": "Shared.json#/definitions/Path-tags"
+        },
         "description": {
-          "type": "string"
+          "$ref": "Shared.json#/definitions/Path-description"
         },
         "requestBody": {
           "type": "object",
@@ -385,8 +330,9 @@
       },
       "required": [
         "operationId",
-        "tags",
         "summary",
+        "tags",
+        "description",
         "responses"
       ],
       "title": "Path-Plural-post"
