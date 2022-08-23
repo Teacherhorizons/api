@@ -1345,22 +1345,8 @@ x-tagGroups:
       - user
 
       # TODO: remove
-      - admin-notes
-      - applications
-      # - community-responses
-      # - documents
-      # - email-templates
-      # - employment-records
-      - job-applications
-      - jobs
-      - lists
-      - other
-      - references
-      - schools
       - sites
-      - teachers
       - test
-      - users
 
   - name: API (not JsonApi)
     tags:
@@ -1368,8 +1354,16 @@ x-tagGroups:
       - community-responses-not-jsonapi
       - documents-not-jsonapi
       - employment-records-not-jsonapi
+      - job-applications-not-jsonapi
+      - jobs-not-jsonapi
+      - lists-not-jsonapi
       - school-not-jsonapi
       - teacher-not-jsonapi
+      - schools-not-jsonapi
+      - other-not-jsonapi
+      - references-not-jsonapi
+      - teachers-not-jsonapi
+      - users-not-jsonapi
 
   - name: Testing statuses
     tags:

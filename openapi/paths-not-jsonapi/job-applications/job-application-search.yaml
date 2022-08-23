@@ -1,10 +1,8 @@
 get:
   operationId: getJobApplications_current
   tags:
-    - job-applications
-    - status-current
+    - job-applications-not-jsonapi
   summary: Get job applications (current)
-
   responses:
     "200":
       description: successful operation
