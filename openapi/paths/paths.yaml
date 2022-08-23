@@ -2,10 +2,6 @@
 
 ## jsonapi
 
-# admin-notes
-/v1/teacher/member-number/{memberNumber}/admin-notes:
-  $ref: "./../paths-not-jsonapi/admin-notes/teacher-member-number-admin-notes.yaml"
-
 # application
 /applications:
   $ref: "./../paths/application/applications.yaml"
@@ -28,6 +24,38 @@
 /application-eventTypeActions:
   $ref: "./../paths/application/eventTypeActions.yaml"
 
+#general
+/general-currencies:
+  $ref: "./../paths/general/currencies.yaml"
+
+/general-manualEmailTemplates/{manualEmailTemplateId}:
+  $ref: "./../paths/general/manualEmailTemplate.yaml"
+
+/general-manualEmailTemplates:
+  $ref: "./../paths/general/manualEmailTemplates.yaml"
+
+# regional
+/regional-regions/{regionId}:
+  $ref: "./../paths/regional/region.yaml"
+/regional-regions:
+  $ref: "./../paths/regional/regions.yaml"
+
+/countries/{countryId}:
+  $ref: "./../paths/regional/country.yaml"
+
+# test
+/test-apiTests:
+  $ref: "./../paths/test/apiTests.yaml"
+/test-apiTests/{apiTestId}:
+  $ref: "./../paths/test/apiTest.yaml"
+
+## not-jsonapi
+# $ref should be of the form: "./../paths-not-jsonapi/{category}/{path-words-in-kebab-form}.yaml"
+
+# admin-notes
+/v1/teacher/member-number/{memberNumber}/admin-notes:
+  $ref: "./../paths-not-jsonapi/admin-notes/teacher-member-number-admin-notes.yaml"
+
 # cities
 /v3/city/id/{cityId}/profile:
   $ref: "./../paths-not-jsonapi/regional/city-id-profile.yaml"
@@ -43,15 +71,10 @@
 # employment records
 /v1/teacher/member-number/{memberNumber}/employment-records:
   $ref: "./../paths-not-jsonapi/employment-records/teacher-member-number-employment-records.yaml"
-# TODO AS: organise and finish this one
 /v1/teacher/member-number/{member-number}/employment-record/add:
   $ref: "./../paths-not-jsonapi/employment-records/member-number-employment-record-add.yaml"
 /v1/teacher/member-number/{memberNumber}/employment-record/id/16492/update:
   $ref: "./../paths-not-jsonapi/employment-records/teacher-member-number-employment-record-id-update.yaml"
-
-# job applications
-/v1/jobs/applications/search:
-  $ref: "./../paths-not-jsonapi/job-applications/job-application-search.yaml"
 
 # job
 /v1/jobs/search/city-area/by-city/count:
@@ -123,34 +146,6 @@
 /v1/site/statistics:
   $ref: "./../paths-not-jsonapi/other/site-statistics.yaml"
 
-#general
-/general-currencies:
-  $ref: "./../paths/general/currencies.yaml"
-
-/general-manualEmailTemplates/{manualEmailTemplateId}:
-  $ref: "./../paths/general/manualEmailTemplate.yaml"
-
-/general-manualEmailTemplates:
-  $ref: "./../paths/general/manualEmailTemplates.yaml"
-
-# regions
-/regional-regions/{regionId}:
-  $ref: "./../paths/regional/region.yaml"
-/regional-regions:
-  $ref: "./../paths/regional/regions.yaml"
-
-/countries/{countryId}:
-  $ref: "./../paths/regional/country.yaml"
-
-# test
-/test-apiTests:
-  $ref: "./../paths/test/apiTests.yaml"
-/test-apiTests/{apiTestId}:
-  $ref: "./../paths/test/apiTest.yaml"
-
-## not-jsonapi
-# $ref should be of the form: "./../paths-not-jsonapi/{category}/{path-words-in-kebab-form}.yaml"
-
 # school
 /v3/school/slug/{schoolSlug}/profile:
   $ref: "./../paths-not-jsonapi/school/school-slug-profile.yaml"
@@ -158,3 +153,10 @@
 # teacher
 /v3/teacher/member-number/{memberNumber}/core:
   $ref: "./../paths-not-jsonapi/teacher/teacher-member-number-core.yaml"
+
+## no-longer-in-use
+# $ref should be of the form: "./../paths-no-longer-in-use/{category}/{path-words-in-kebab-form}.yaml"
+
+# job applications
+/v1/jobs/applications/search:
+  $ref: "./../paths-no-longer-in-use/job-applications/job-application-search.yaml"

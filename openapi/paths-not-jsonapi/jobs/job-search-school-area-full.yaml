@@ -1,8 +1,8 @@
 get:
-  operationId: getJobs_current
+  operationId: getJobs
   tags:
     - jobs-not-jsonapi
-  summary: Get a job (current)
+  summary: Get jobs
   parameters:
     - in: query
       name: subjects

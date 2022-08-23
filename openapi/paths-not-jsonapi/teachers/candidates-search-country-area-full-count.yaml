@@ -1,8 +1,8 @@
 get:
-  operationId: getCount_teacherCountries_current
+  operationId: getCount_teacherCountries
   tags:
     - teachers-not-jsonapi
-  summary: Get full list of teachers count by country (current)
+  summary: Get full list of teachers count by country
   # parameters:
   responses:
     "200":
@@ -21,7 +21,7 @@ get:
 # @RequestParam(value="search", required=false) String term,
 
 # @RequestParam(value="lat-from",required = false) Float latitudeFrom,
-openapi/paths-not-jsonapi/teachers/candidates-search-country-area-full.yaml# @RequestParam(value="lat-to",required = false) Float latitudeTo,
+# @RequestParam(value="lat-to",required = false) Float latitudeTo,
 # @RequestParam(value="long-from",required = false) Float longitudeFrom,
 # @RequestParam(value="long-to",required = false) Float longitudeTo,
 

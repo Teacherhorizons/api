@@ -1,8 +1,8 @@
 get:
-  operationId: getEmploymentRecords_current
+  operationId: getEmploymentRecords
   tags:
     - employment-records-not-jsonapi
-  summary: Get employment record of a teacher (current)
+  summary: Get employment record of a teacher
   parameters:
     - in: path
       name: memberNumber

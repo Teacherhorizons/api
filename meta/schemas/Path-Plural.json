@@ -183,6 +183,12 @@
         "description": {
           "$ref": "Shared.json#/definitions/Path-description"
         },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Path-Plural-parameter"
+          }
+        },
         "requestBody": {
           "type": "object",
           "content": {

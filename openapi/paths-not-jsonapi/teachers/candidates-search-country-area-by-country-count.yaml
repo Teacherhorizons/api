@@ -1,8 +1,8 @@
 get:
-  operationId: getCountries_teacherCounts_current
+  operationId: getCountries_teacherCounts
   tags:
     - teachers-not-jsonapi
-  summary: Get list of teachers by country (current)
+  summary: Get list of teachers by country
   parameters:
     - in: query
       name: school-ids

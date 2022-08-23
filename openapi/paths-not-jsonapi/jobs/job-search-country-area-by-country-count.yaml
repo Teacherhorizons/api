@@ -1,8 +1,8 @@
 get:
-  operationId: getCountries_jobCounts_current
+  operationId: getCountries_jobCounts
   tags:
     - jobs-not-jsonapi
-  summary: Get job count by country (current)
+  summary: Get job count by country
   parameters:
     - in: query
       name: subjects

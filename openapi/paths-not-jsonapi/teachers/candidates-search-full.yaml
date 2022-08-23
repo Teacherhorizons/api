@@ -1,8 +1,8 @@
 get:
-  operationId: getTeachers_full_current
+  operationId: getTeachers_full
   tags:
     - teachers-not-jsonapi
-  summary: Get list of teachers (current)
+  summary: Get list of teachers
   parameters:
     - in: query
       name: school-ids

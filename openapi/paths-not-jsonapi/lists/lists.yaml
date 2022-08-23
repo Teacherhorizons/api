@@ -1,8 +1,8 @@
 get:
-  operationId: getLists_current
+  operationId: getLists
   tags:
     - lists-not-jsonapi
-  summary: Get lists matching the key (current)
+  summary: Get lists matching the key
   parameters:
     - name: key
       in: query

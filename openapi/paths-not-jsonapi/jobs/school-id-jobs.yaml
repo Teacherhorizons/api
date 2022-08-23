@@ -1,8 +1,8 @@
 get:
-  operationId: getJobs_school_current
+  operationId: getJobs_school
   tags:
     - jobs-not-jsonapi
-  summary: Get list of jobs for a school (current)
+  summary: Get list of jobs for a school
   parameters:
     - in: path
       name: schoolId

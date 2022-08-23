@@ -1,8 +1,8 @@
 get:
-  operationId: getRegions_jobCounts_current
+  operationId: getRegions_jobCounts
   tags:
-    - jobs-not-jsonapi    
-  summary: Get job count by region (current)
+    - jobs-not-jsonapi
+  summary: Get job count by region
   parameters:
     - in: query
       name: subjects
