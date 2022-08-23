@@ -53,7 +53,7 @@ JsonApiModel_application_admin:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute"
     relationships:
@@ -71,7 +71,7 @@ JsonApiModel_application_admin:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
@@ -118,7 +118,7 @@ JsonApiModel_application_school:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute"
     relationships:
@@ -136,7 +136,7 @@ JsonApiModel_application_school:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
         thMatchType:
           $ref: "../application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship"
   required:
@@ -181,7 +181,7 @@ JsonApiModel_application_teacher:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -197,7 +197,7 @@ JsonApiModel_application_teacher:
         status:
           $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
         latestEvent:
-          $ref: "../application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+          $ref: "../application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
   required:
     - schema
     - type

@@ -33,9 +33,9 @@ patch:
               additionalProperties: false
               properties:
                 date:
-                  $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
+                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
                 notes:
-                  $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
+                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
   responses:
     "204":
       $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"

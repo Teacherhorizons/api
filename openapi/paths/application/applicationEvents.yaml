@@ -85,9 +85,9 @@ post:
                   additionalProperties: false
                   properties:
                     date:
-                      $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_date"
+                      $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
                     notes:
-                      $ref: "../../components/models/library/application/ApplicationEvent.yaml#/application-applicationEvent_notes"
+                      $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
                   required:
                     - application
                     - eventType
@@ -98,7 +98,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: "../../components/models/json-api/application/ApplicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
+            $ref: "../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship"
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "401":
