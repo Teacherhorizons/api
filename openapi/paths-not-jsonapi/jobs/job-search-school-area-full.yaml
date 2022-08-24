@@ -175,6 +175,14 @@ get:
       example: applicationDate,-subject
       schema:
         type: string
+
+    - in: query
+      name: boosted  
+      description: Job is boosted
+      example: true
+      schema:
+        type: string
+        
   responses:
     "200":
       description: successful operation

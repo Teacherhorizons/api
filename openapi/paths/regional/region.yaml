@@ -7,14 +7,15 @@ get:
     - testing-status-1
   summary: Get a region (group of countries)
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: path
       name: regionId
       required: true
       example: 1
       schema:
         type: integer
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+
   responses:
     "200":
       description: OK (Request successful)

@@ -7,6 +7,7 @@ get:
   description: |
     <span class="testing-status-1"></span>
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
       style: deepObject
@@ -25,6 +26,7 @@ get:
         example:
           application.id: 1
           application.teacher.memberNumber: 1
+    
   responses:
     "200":
       description: OK (Request successful)

@@ -19,6 +19,8 @@ SimpleModel_job:
       $ref: "../../library/job/job.yaml#/job_creationDate"
     latestUpdateDate:
       $ref: "../../library/job/job.yaml#/job_latestUpdateDate"
+    isBoosted:
+      $ref: "../../library/job/job.yaml#/job_isBoosted"
     # relationship attributes
     subjectId:
       $ref: "../../library/job/job.yaml#/job_subjectId"
