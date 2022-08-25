@@ -9,6 +9,7 @@ get:
   description: |
     <span class="testing-status-1"></span>
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: path
       name: manualEmailTemplateId
       required: true

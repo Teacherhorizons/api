@@ -25,6 +25,8 @@ JsonApiModel_job:
           $ref: "../../library/job/job.yaml#/job_creationDate"
         latestUpdateDate:
           $ref: "../../library/job/job.yaml#/job_latestUpdateDate"
+        isBoosted:
+          $ref: "../../library/job/job.yaml#/job_isBoosted"
         # relationship attributes
         subject:
           $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"

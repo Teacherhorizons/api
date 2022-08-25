@@ -4,6 +4,7 @@ delete:
     - test
   summary: Delete an API test
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: path
       name: apiTestId
       required: true
