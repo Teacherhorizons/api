@@ -66,7 +66,7 @@ var testsForGet = addTestGroups(
           name: 'teacher (endorsed), has all attributes',
           userEmail: 'endorsed@th.test',
           expectedStatus: 200,
-          count: 300,
+          payloadId: 300,
         },
       ],
     },
@@ -82,7 +82,7 @@ var testsForGet = addTestGroups(
           name: 'school (school-1-school), has all attributes',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 200,
-          count: 200,
+          payloadId: 200,
         },
       ],
     },
@@ -93,7 +93,7 @@ var testsForGet = addTestGroups(
           name: 'admin, has all attributes',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          count: 100,
+          payloadId: 100,
         },
       ],
     },
@@ -117,7 +117,7 @@ describe('applications/{id}', () => {
       expect(response.status).toEqual(t.expectedStatus);
       expect(response.data.data.length).toEqual(t.expectedDataLength);
       expect(response).toSatisfyApiSpec();
-      if (t.count === 100) {
+      if (t.payloadId === 100) {
         // admin
         // data.data.attributes
         expect(response.data.data.attributes.recommendationText).toEqual('testingText');
@@ -133,7 +133,7 @@ describe('applications/{id}', () => {
         //data.included.job
         expect(response.data.included[1].attributes.thOwnerUser).toEqual({ id: '3' });
       }
-      if (t.count === 200) {
+      if (t.payloadId === 200) {
         // school
         // data.included
         // //data.included.school
@@ -142,7 +142,7 @@ describe('applications/{id}', () => {
         expect(response.data.included[1].relationships.school).toEqual({ data: { id: '3391', type: 'school' } });
         expect(response.data.included[1].relationships.thOwnerUser).toEqual({ data: { id: '3', type: 'user' } });
       }
-      if (t.count === 300) {
+      if (t.payloadId === 300) {
         // teacher
         // data.included
         // //data.included.school
