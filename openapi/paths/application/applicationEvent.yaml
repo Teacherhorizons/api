@@ -51,3 +51,26 @@ patch:
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
     "422":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+
+# TODO: add related meta-schema
+delete:
+  operationId: delete-application-applicationEvent
+  summary: Delete an application event
+  tags:
+    - application
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - in: path
+      name: applicationEventId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+  responses:
+    "204":
+      $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"

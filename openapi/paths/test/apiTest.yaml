@@ -12,6 +12,6 @@ delete:
         type: integer
   responses:
     "204":
-      description: NO_CONTENT (Request successful)
+      $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
