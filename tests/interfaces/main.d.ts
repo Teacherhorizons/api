@@ -15,6 +15,11 @@ declare namespace JsonApi {
     status: 200 | 400 | 401; // TODO
   }
 
+  // TODO - WIP
+  export interface HttpPayload<A> {
+    data?: A;
+  }
+
   export type Id = string;
   export type Date = string;
 
@@ -53,11 +58,12 @@ declare namespace Test {
     userEmail: string;
     expectedStatus: number;
     expectedDataLength?: number;
-    count?: number;
+    count?: number; // TODO: remove (once no longer used)
+    payloadId?: number;
   }
 
   export interface TestGroup {
     getUrl: (data: Config.Data) => string;
-    tests: Pick<Test, 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'count' | 'name'>[];
+    tests: Pick<Test, 'name' | 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'payloadId' | 'count'>[];
   }
 }

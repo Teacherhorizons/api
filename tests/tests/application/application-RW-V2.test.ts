@@ -13,6 +13,8 @@ import config from '../../config';
 
 type PostResponse = JsonApi.HttpResponse<JsonApi.ApplicationResponse>;
 
+// TODO: consider making 'addTestGroups' more of a 'test builder' function (e.g. merge payload data in at this point)
+// TODO: consider being able to modify the test data here to be able to run only 1 or a few tests
 var testsForPost = addTestGroups(
   [],
   [
@@ -276,110 +278,113 @@ describe('applicationsRW', () => {
     });
   });
 
+  function getPayloadById(payloadId: number): JsonApi.HttpPayload<Partial<JsonApi.Application>> | object {
+    if (payloadId === 101) {
+      return {
+        data: {
+          type: 'application',
+          id: `${data.applications[0].id}`,
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo101',
+          },
+        },
+      };
+    } else if (payloadId === 102) {
+      return {
+        data: {
+          type: 'application',
+          id: '9999999999',
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo102',
+          },
+        },
+      };
+    } else if (payloadId === 103) {
+      return {
+        data: {
+          type: 'application',
+          id: '9999999',
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo103',
+          },
+        },
+      };
+    } else if (payloadId === 104) {
+      return {
+        data: {
+          type: 'application',
+          // id: `${data.applications[0].id}`,
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo104',
+          },
+        },
+      };
+    } else if (payloadId === 105) {
+      return {
+        data: {
+          // type: 'application',
+          id: `${data.applications[0].id}`,
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo105',
+          },
+        },
+      };
+    } else if (payloadId === 106) {
+      return {
+        data: {
+          type: 'application',
+          id: `${data.applications[0].id}`,
+          attributes: {},
+        },
+      };
+    } else if (payloadId === 107) {
+      return {
+        data: {
+          type: 'application',
+          id: `${data.applications[0].id}`,
+          attributes: {
+            invalidAttributeName: { id: null },
+            recommendationText: 'foo107',
+          },
+        },
+      };
+    } else if (payloadId === 108) {
+      return {
+        data: {
+          type: 'application2',
+          id: `${data.applications[0].id}`,
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo108',
+          },
+        },
+      };
+    } else if (payloadId === 109) {
+      return {
+        data: {
+          type: 'application',
+          id: `${data.applications[0].id}`,
+          attributes: {
+            thMatchType: { id: null },
+            recommendationText: 'foo109',
+            creationUserId: 1,
+          },
+        },
+      };
+    } else {
+      return {};
+    }
+  }
+
   describe('PATCH', () => {
     test.each(testsForPatch)('$userEmail, $name, $expectedStatus', async (t: Test.Test) => {
       if (signedInAs != t.userEmail) await signIn(t.userEmail);
-      let payload = {};
-      if (t.count === 101) {
-        payload = {
-          data: {
-            type: 'application',
-            id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo101',
-            },
-          },
-        };
-      } else if (t.count === 102) {
-        payload = {
-          data: {
-            type: 'application',
-            id: '9999999999',
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo102',
-            },
-          },
-        };
-      } else if (t.count === 103) {
-        payload = {
-          data: {
-            type: 'application',
-            id: '9999999',
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo103',
-            },
-          },
-        };
-      } else if (t.count === 104) {
-        payload = {
-          data: {
-            type: 'application',
-            // id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo104',
-            },
-          },
-        };
-      } else if (t.count === 105) {
-        payload = {
-          data: {
-            // type: 'application',
-            id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo105',
-            },
-          },
-        };
-      } else if (t.count === 106) {
-        payload = {
-          data: {
-            type: 'application',
-            id: `${data.applications[0].id}`,
-            attributes: {},
-          },
-        };
-      } else if (t.count === 107) {
-        payload = {
-          data: {
-            type: 'application',
-            id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchTypes: { id: null },
-              recommendationText: 'foo107',
-            },
-          },
-        };
-      } else if (t.count === 108) {
-        payload = {
-          data: {
-            type: 'application2',
-            id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo108',
-            },
-          },
-        };
-      } else if (t.count === 109) {
-        payload = {
-          data: {
-            type: 'application',
-            id: `${data.applications[0].id}`,
-            attributes: {
-              thMatchType: { id: null },
-              recommendationText: 'foo109',
-              creationUserId: 1,
-            },
-          },
-        };
-      } else {
-        payload = {};
-      }
+      let payload = getPayloadById(t.count);
       const url = t.getUrl(data);
 
       if (t.expectedStatus === 204) {
