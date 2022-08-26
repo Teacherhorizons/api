@@ -20,4 +20,47 @@ properties:
         example: 45.070982 7.685676
  jobs: 
     type: array
+    items:
+     properties: 
+       StartDate: 
+        type: string
+        format: date
+        example: 1664323200000
+       advertExpiryDate: 
+        type: string
+        format: date
+        example: 1661731199000
+       school: 
+        type: string
+        example: "Bandung Alliance International School"
+       subject: 
+        type: string
+        example: English
+       Deadline: 
+        type: string
+        format: date-time
+        example: 1662854399000
+       currency: 
+        type: string
+        example: USD
+       id: 
+        type: integer
+        format: int64
+        example: 1879
+       position: 
+        type: integer
+        format: int64
+        example: Unspecified
+       title: 
+        type: string
+        example: English teacher
+       jobType: 
+        type: integer
+        format: int64
+        example: 1
+       furtherInfo: 
+        type: string
+        example: Bandung Alliance International School is advertising for a qualified English teacher to join their team.
+
+
 
