@@ -54,16 +54,18 @@ declare namespace Sort {
 declare namespace Test {
   export interface Test {
     getUrl: (data: Config.Data) => string;
+    getPayload?: (data: Config.Data) => object;
     name?: string;
     userEmail: string;
     expectedStatus: number;
     expectedDataLength?: number;
     count?: number; // TODO: remove (once no longer used)
-    payloadId?: number;
+    payloadId?: number; // TODO: remove (once no longer used)
   }
 
   export interface TestGroup {
     getUrl: (data: Config.Data) => string;
+    getPayload?: (data: Config.Data) => object;
     tests: Pick<Test, 'name' | 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'payloadId' | 'count'>[];
   }
 }

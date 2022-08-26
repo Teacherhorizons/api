@@ -177,12 +177,15 @@ get:
         type: string
 
     - in: query
-      name: boosted  
+      name: is-boosted
       description: Job is boosted
-      example: true
+      example: 1
       schema:
-        type: string
-        
+        type: integer
+        enum:
+          - 0
+          - 1
+
   responses:
     "200":
       description: successful operation

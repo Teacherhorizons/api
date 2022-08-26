@@ -183,7 +183,7 @@ export function compareFnGenerator<T extends object>(
 
 export const addTestGroup = (tests: Test.Test[], testGroup: Test.TestGroup) => {
   testGroup.tests.forEach((testGroupTest) => {
-    tests.push({ getUrl: testGroup.getUrl, ...testGroupTest });
+    tests.push({ getUrl: testGroup.getUrl, getPayload: testGroup.getPayload, ...testGroupTest });
   });
   return tests;
 };
