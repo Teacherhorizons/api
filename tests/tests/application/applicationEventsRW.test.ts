@@ -23,7 +23,7 @@ var testsForPost = addTestGroups(
           name: 'admin, as admin',
           userEmail: 'admin@th.test',
           expectedStatus: 201,
-          count: 1,
+          payloadId: 1,
         },
       ],
     },
@@ -34,7 +34,7 @@ var testsForPost = addTestGroups(
           name: 'admin, as school, eventTypeId equal 14',
           userEmail: 'admin@th.test',
           expectedStatus: 201,
-          count: 1,
+          payloadId: 1,
         },
       ],
     },
@@ -45,7 +45,7 @@ var testsForPost = addTestGroups(
           name: 'admin, as school, eventTypeId not 14 or 24',
           userEmail: 'admin@th.test',
           expectedStatus: 404, //entityNotFoundForId eventTypeId incorrect for school
-          count: 2,
+          payloadId: 2,
         },
       ],
     },
@@ -56,7 +56,7 @@ var testsForPost = addTestGroups(
           name: 'admin, (any non-admin/school) endorsed',
           userEmail: 'admin@th.test',
           expectedStatus: 401, //accessNotPermitted	unauthorised
-          count: 1,
+          payloadId: 1,
         },
       ],
     },
@@ -67,7 +67,7 @@ var testsForPost = addTestGroups(
           name: 'school (school-1), (any non-admin) school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-          count: 1,
+          payloadId: 1,
         },
       ],
     },
@@ -78,7 +78,7 @@ var testsForPost = addTestGroups(
           name: 'school, eventTypeId equal 14',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 201,
-          count: 1,
+          payloadId: 1,
         },
       ],
     },
@@ -95,7 +95,7 @@ var testsForPatch = addTestGroups(
           name: 'admin,',
           userEmail: 'admin@th.test',
           expectedStatus: 204,
-          count: 201,
+          payloadId: 201,
         },
       ],
     },
@@ -106,7 +106,7 @@ var testsForPatch = addTestGroups(
           name: 'admin, as admin',
           userEmail: 'admin@th.test',
           expectedStatus: 204,
-          count: 201,
+          payloadId: 201,
         },
       ],
     },
@@ -117,7 +117,7 @@ var testsForPatch = addTestGroups(
           name: 'admin, (any non-admin) school',
           userEmail: 'admin@th.test',
           expectedStatus: 401, //accessNotPermitted	unauthorised
-          count: 201,
+          payloadId: 201,
         },
       ],
     },
@@ -128,7 +128,7 @@ var testsForPatch = addTestGroups(
           name: 'school (school-1), (any non-admin) school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-          count: 201,
+          payloadId: 201,
         },
       ],
     },
@@ -139,7 +139,7 @@ var testsForPatch = addTestGroups(
           name: 'school, (any non-admin)',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401,
-          count: 201,
+          payloadId: 201,
         },
       ],
     },
@@ -245,51 +245,77 @@ describe('application-applicationEvents', () => {
     await setupBeforeAll();
   });
 
+  function getPayloadById(
+    payloadId: number
+  ): JsonApi.HttpPayload<Partial<JsonApi.Application_applicationEvent>> | object {
+    if (payloadId === 1) {
+      return {
+        data: {
+          type: 'application-applicationEvent',
+          attributes: {
+            application: { id: `${data.applications[0].id}` },
+            eventType: { id: '14' },
+            date: '2022-08-15T12:30:00.000Z',
+            notes: 'FooBasr',
+            autoEmail: { id: '42' },
+          },
+        },
+      };
+    } else if (payloadId === 2) {
+      return {
+        data: {
+          type: 'application-applicationEvent',
+          attributes: {
+            application: { id: `${data.applications[0].id}` },
+            eventType: { id: '1' },
+            date: '2022-08-15T12:30:00.000Z',
+            notes: 'FooBasr',
+            autoEmail: { id: '42' },
+          },
+        },
+      };
+    } else if (payloadId === 201) {
+      return {
+        data: {
+          type: 'application-applicationEvent',
+          id: `${testApplicationEventIds[0]}`,
+          attributes: {
+            eventType: { id: '14' },
+            date: '2022-04-30T15:53:38.702Z',
+            notes: 'Foosssssss',
+          },
+        },
+      };
+    } else if (payloadId === 202) {
+      return {
+        data: {
+          type: 'application-applicationEvent',
+          id: `${testApplicationEventIds[0]}`,
+          attributes: {
+            eventType: { id: '11' },
+            date: '2022-04-30T15:53:38.702Z',
+            notes: 'Foosssssss',
+          },
+        },
+      };
+    } else {
+      return {};
+    }
+  }
+
   describe('POST', () => {
     test.each(testsForPost)('$name => $expectedStatus', async (t: Test.Test) => {
       if (signedInAs != t.userEmail) await signIn(t.userEmail);
-      let payload = {};
-      if (t.count === 1) {
-        payload = {
-          data: {
-            type: 'application-applicationEvent',
-            attributes: {
-              application: { id: `${data.applications[0].id}` },
-              eventType: { id: '14' },
-              date: '2022-08-15T12:30:00.000Z',
-              notes: 'FooBasr',
-              autoEmail: { id: '42' },
-            },
-          },
-        };
-      } else if (t.count === 2) {
-        payload = {
-          data: {
-            type: 'application-applicationEvent',
-            attributes: {
-              application: { id: `${data.applications[0].id}` },
-              eventType: { id: '1' },
-              date: '2022-08-15T12:30:00.000Z',
-              notes: 'FooBasr',
-              autoEmail: { id: '42' },
-            },
-          },
-        };
-      } else {
-        payload = {};
-      }
+      let payload = getPayloadById(t.payloadId);
       const url = t.getUrl(data);
 
       if (t.expectedStatus === 201) {
         const response = await api.post(url, payload);
         expect(response.status).toEqual(t.expectedStatus);
         expect(response).toSatisfyApiSpec();
-        // console.log('hello123123:');
-        // console.log(response.data.data.id);
         if (response.data.data.id != null) {
           testApplicationEventIds.push(response.data.data.id);
         }
-        // console.log(testApplicationEventIds);
       } else {
         try {
           await api.post(url, payload);
@@ -305,34 +331,7 @@ describe('application-applicationEvents', () => {
   describe('PATCH', () => {
     test.each(testsForPatch)('$name => $expectedStatus', async (t: Test.Test) => {
       if (signedInAs != t.userEmail) await signIn(t.userEmail);
-      let payload = {};
-      if (t.count === 201) {
-        payload = {
-          data: {
-            type: 'application-applicationEvent',
-            id: `${testApplicationEventIds[0]}`,
-            attributes: {
-              eventType: { id: '14' },
-              date: '2022-04-30T15:53:38.702Z',
-              notes: 'Foosssssss',
-            },
-          },
-        };
-      } else if (t.count === 202) {
-        payload = {
-          data: {
-            type: 'application-applicationEvent',
-            id: `${testApplicationEventIds[0]}`,
-            attributes: {
-              eventType: { id: '11' },
-              date: '2022-04-30T15:53:38.702Z',
-              notes: 'Foosssssss',
-            },
-          },
-        };
-      } else {
-        payload = {};
-      }
+      let payload = getPayloadById(t.payloadId);
       const url = t.getUrl(data);
 
       if (t.expectedStatus === 204) {
