@@ -32,10 +32,19 @@ patch:
               type: object
               additionalProperties: false
               properties:
+                eventType:
+                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
                 date:
                   $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
                 notes:
                   $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+              required:
+                - eventType
+                - date
+          required:
+            - type
+            - id
+            - attributes
   responses:
     "204":
       $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
