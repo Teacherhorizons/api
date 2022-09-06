@@ -1,15 +1,6 @@
-import {
-  addTestGroups,
-  api,
-  setupAfterAll,
-  setupBeforeAll,
-  signIn,
-  data,
-  compareFnGenerator,
-  signedInAs,
-} from '../../shared';
+import * as shared from '../../shared';
 
-var testsForGet = addTestGroups(
+var testsForGet = shared.addTestGroups(
   [],
   [
     {
@@ -545,26 +536,26 @@ var testsForGet = addTestGroups(
   ]
 );
 
-testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
+testsForGet = testsForGet.sort(shared.compareFnGenerator(['userEmail']));
 jest.setTimeout(60 * 1000);
 
 describe('applicationEvents', () => {
   beforeAll(async () => {
-    await setupBeforeAll();
+    await shared.setupBeforeAll();
   });
 
   test.each(testsForGet)('$userEmail, $name, $expectedStatus', async (t: Test.Test) => {
-    if (signedInAs != t.userEmail) await signIn(t.userEmail);
-    const url = t.getUrl(data);
+    if (shared.signedInAs != t.userEmail) await shared.signIn(t.userEmail);
+    const url = t.getUrl(shared.data);
 
     if (t.expectedStatus === 200) {
-      const response = await api.get(url);
+      const response = await shared.api.get(url);
       expect(response.status).toEqual(t.expectedStatus);
       expect(response.data.data.length).toEqual(t.expectedDataLength);
       expect(response).toSatisfyApiSpec();
     } else {
       try {
-        await api.get(url);
+        await shared.api.get(url);
       } catch (error) {
         expect(error.response.status).toEqual(t.expectedStatus);
         expect(error.response).toSatisfyApiSpec();
@@ -574,6 +565,6 @@ describe('applicationEvents', () => {
 
   jest.setTimeout(60 * 1000);
   afterAll(async () => {
-    await setupAfterAll();
+    await shared.setupAfterAll();
   });
 });

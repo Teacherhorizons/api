@@ -8,25 +8,6 @@ get:
     <span class="testing-status-1"></span>
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
-    - in: query
-      name: filter
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          filter[application.id]:
-            type: number
-            description: Required unless schema is 'admin-allApplications'
-          filter[application.teacher.memberNumber]:
-            type: number
-            description: Required if schema is 'admin-allApplications'
-        example:
-          application.id: 1
-          application.teacher.memberNumber: 1
-    
   responses:
     "200":
       description: OK (Request successful)
