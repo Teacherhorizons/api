@@ -44,13 +44,15 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_phoneCode"
         slug:
           $ref: "../../library/regional/country.yaml#/regional-country_slug"
-        nationalAverageIncome:
-          $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
+        # nationalAverageIncome:
+        #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
         locationLatitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
         locationLongitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
         # relationship attributes
+        currency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -63,15 +65,18 @@ JsonApiModel_regional-country_admin:
         - isoCode
         - phoneCode
         - slug
-        - nationalAverageIncome
+        # - nationalAverageIncome
         - locationLatitude
         - locationLongitude
+        - currency
         - creationUser
         - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false
       properties:
+        currency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
@@ -111,8 +116,8 @@ JsonApiModel_regional-country_school:
           $ref: "../../library/regional/country.yaml#/regional-country_phoneCode"
         slug:
           $ref: "../../library/regional/country.yaml#/regional-country_slug"
-        nationalAverageIncome:
-          $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
+        # nationalAverageIncome:
+        #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
         locationLatitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
         locationLongitude:
@@ -123,7 +128,7 @@ JsonApiModel_regional-country_school:
         - isoCode
         - phoneCode
         - slug
-        - nationalAverageIncome
+        # - nationalAverageIncome
         - locationLatitude
         - locationLongitude
   required:
@@ -161,8 +166,8 @@ JsonApiModel_regional-country_teacher:
           $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
         slug:
           $ref: "../../library/regional/country.yaml#/regional-country_slug"
-        nationalAverageIncome:
-          $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
+        # nationalAverageIncome:
+        #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
         locationLatitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
         locationLongitude:
@@ -173,7 +178,7 @@ JsonApiModel_regional-country_teacher:
         - isoCode
         - phoneCode
         - slug
-        - nationalAverageIncome
+        # - nationalAverageIncome
         - locationLatitude
         - locationLongitude
   required:

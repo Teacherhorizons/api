@@ -38,13 +38,15 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
     slug:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
-    nationalAverageIncome:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    # nationalAverageIncome:
+    #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
     locationLatitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
     # relationship attributes
+    currencyId:
+      $ref: "../../library/regional/country.yaml#/regional-country_currencyId"
     creationUserId:
       $ref: "../../library/regional/country.yaml#/regional-country_creationUserId"
     latestUpdateUserId:
@@ -84,8 +86,8 @@ SimpleModel_regional-country_school:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
     slug:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
-    nationalAverageIncome:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    # nationalAverageIncome:
+    #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
     locationLatitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
     locationLongitude:
@@ -121,8 +123,8 @@ SimpleModel_regional-country_teacher:
       $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
     slug:
       $ref: "../../library/regional/country.yaml#/regional-country_name"
-    nationalAverageIncome:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+    # nationalAverageIncome:
+    #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
     locationLatitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
     locationLongitude:

@@ -11,6 +11,188 @@ get:
       schema:
         type: integer
         format: int32
+
+    - in: query
+      name: subjects
+      description: Comma separated list of subject ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: search
+      description: Part of the job title
+      example: 5
+      schema:
+        type: string
+
+    - in: query
+      name: roles
+      description: Comma separated list of role ids
+      example: 23,16
+      schema:
+        type: string
+
+    - in: query
+      name: locations
+      description: Comma separated list of location ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: regions
+      description: Comma separated list of region ids
+      example: 2,3
+      schema:
+        type: string
+
+    - in: query
+      name: country
+      description: Comma separated list of country ids
+      example: 2
+      schema:
+        type: string
+
+    - in: query
+      name: city
+      description: Comma separated list of city ids
+      example: 210
+      schema:
+        type: string
+
+    - in: query
+      name: systems
+      description: Comma separated list of system ids
+      example: 3,4
+      schema:
+        type: string
+
+    - in: query
+      name: limit
+      description: Number of records to return
+      example: 20
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: page-number
+      description: Page number to return
+      example: 3
+      schema:
+        type: integer
+        format: int64
+
+    - in: query
+      name: start
+      description: Job Start Date
+      example: "2021-10-22"
+      schema:
+        type: string
+        format: date
+
+    - in: query
+      name: cities
+      description: Comma seperated list of cities ids
+      example: -10,1
+      schema:
+        type: string
+
+    - in: query
+      name: countries
+      description: Comma seperated list of countries ids
+      example: 1234,210607
+      schema:
+        type: string
+
+    - in: query
+      name: job-type
+      description: Comma separated list of job type ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: job-types
+      description: List of job types
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: lat-from
+      example: 21.2478652577589
+      schema:
+        type: string
+    - in: query
+      name: lat-to
+      example: 12.27559889056173117
+      schema:
+        type: string
+
+    - in: query
+      name: long-from
+      example: 114.32084663984377
+      schema:
+        type: string
+    - in: query
+      name: long-to
+      example: 105.27559889056173117
+      schema:
+        type: string
+
+    - in: query
+      name: match-teacher-id
+      description: Comma separated list of matching teacher ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: match-member-number
+      description: List of matching member ids
+      example: 2,4
+      schema:
+        type: string
+
+    - in: query
+      name: min-match-score
+      description: Show minimum match score
+      example: 25
+      schema:
+        type: string
+
+    - in: query
+      name: my-list
+      description: List of favourites
+      example: 5,6
+      schema:
+        type: string
+
+    - in: query
+      name: maximum-further-info-length
+      description: .. #not sure about the descripion
+      example: 25
+      schema:
+        type: string
+
+    - in: query
+      name: sort
+      description: Order to sort the records
+      example: applicationDate,-subject
+      schema:
+        type: string
+
+    - in: query
+      name: is-boosted
+      description: Job is boosted
+      example: 1
+      schema:
+        type: integer
+        enum:
+          - 0
+          - 1 
   responses:
     "200":
       description: successful operation

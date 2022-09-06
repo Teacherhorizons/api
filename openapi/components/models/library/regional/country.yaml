@@ -24,10 +24,25 @@ regional-country_locationLongitude:
   type: number
   example: 13.2344444
   description: Longitude
+regional-country_isoCode:
+  type: string
+  example: al
+regional-country_phoneCode:
+  type: string
+  example: 355
+# regional-country_nationalAverageIncome:
+#   type: number
+#   example: 4032.6
+
+#relationship attributes  
 regional-country_countryId:
   type: integer
   example: 1
   description: Relationship to Country
+regional-country_currencyId:
+  type: integer
+  example: 1
+  description: Relationship to Currency
 regional-country_creationUserId:
   type: integer
   example: 1
@@ -36,19 +51,12 @@ regional-country_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-regional-country_isoCode:
-  type: string
-  example: al
-regional-country_phoneCode:
-  type: string
-  example: 355
-regional-country_nationalAverageIncome:
-  type: number
-  example: 4032.6
 regional-country_languageId:
   type: integer
   example: 1
   description: Relationship to Language
+
+#relationships
 regional-country_country:
   type: object
   additionalProperties: false
@@ -59,7 +67,16 @@ regional-country_country:
       description: Relationship to Country
   required:
     - id
-
+regional-currency:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Currency
+  required:
+    - id
 regional-country_creationUser:
   type: object
   additionalProperties: false
