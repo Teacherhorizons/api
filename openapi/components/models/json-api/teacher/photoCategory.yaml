@@ -1,0 +1,30 @@
+JsonApiModel_teacher-photoCategory:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-photoCategory_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-photoCategory_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/photoCategory.yaml#/teacher-photoCategory_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-photoCategory_type:
+  type: string
+  example: teacher-photoCategory
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-photoCategory_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
