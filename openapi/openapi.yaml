@@ -388,10 +388,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher" />
 
-  - name: simple-model-teacher-photoCategory
-    x-displayName: Simple model - teacher-photoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-photoCategory" />
+  # - name: simple-model-teacher-photoCategory
+  #   x-displayName: Simple model - teacher-photoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-photoCategory" />
 
   - name: simple-model-teacher-additionalPhotoCategory
     x-displayName: Simple model - teacher-additionalPhotoCategory
@@ -468,10 +468,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNationalities" />
 
-  - name: simple-model-teacher-teacherPhotoCategory
-    x-displayName: Simple model - teacher-teacherPhotoCategory
+  - name: simple-model-teacher-teacherAdditionalPhotoCategory
+    x-displayName: Simple model - teacher-teacherAdditionalPhotoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherPhotoCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherAdditionalPhotoCategory" />
 
   - name: simple-model-teacher-teacherPhoto
     x-displayName: Simple model - teacher-teacherPhoto
@@ -770,10 +770,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
-  - name: json-api-model-teacher-photoCategory
-    x-displayName: JSON:API model - teacher-photoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-photoCategory" />
+  # - name: json-api-model-teacher-photoCategory
+  #   x-displayName: JSON:API model - teacher-photoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-photoCategory" />
 
   - name: json-api-model-teacher-additionalPhotoCategory
     x-displayName: JSON:API model - teacher-additionalPhotoCategory
@@ -850,10 +850,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNationalities" />
 
-  - name: json-api-model-teacher-teacherPhotoCategory
-    x-displayName: JSON:API model - teacher-teacherPhotoCategory
+  - name: json-api-model-teacher-teacherAdditionalPhotoCategory
+    x-displayName: JSON:API model - teacher-teacherAdditionalPhotoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherPhotoCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherAdditionalPhotoCategory" />
 
   - name: json-api-model-teacher-teacherPhoto
     x-displayName: JSON:API model - teacher-teacherPhoto
@@ -1192,7 +1192,7 @@ x-tagGroups:
       - simple-model-school-schoolAccreditationType
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
-      - simple-model-teacher-photoCategory
+      # - simple-model-teacher-photoCategory
       - simple-model-teacher-badge
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
@@ -1207,7 +1207,7 @@ x-tagGroups:
       - simple-model-teacher-teacherBadge
       - simple-model-teacher-teacherLookingForRole
       - simple-model-teacher-teacherNationalities
-      - simple-model-teacher-teacherPhotoCategory
+      - simple-model-teacher-teacherAdditionalPhotoCategory
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
       - simple-model-teacher-internationalExperience
@@ -1296,7 +1296,7 @@ x-tagGroups:
       - json-api-model-school-schoolAgeLevel
       - json-api-model-school-schoolAccreditationType
       - json-api-model-api-model-teacher
-      - json-api-model-teacher-photoCategory
+      # - json-api-model-teacher-photoCategory
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
       - json-api-model-teacher-qualificationType
@@ -1312,7 +1312,7 @@ x-tagGroups:
       - json-api-model-teacher-teacherBadge
       - json-api-model-teacher-teacherLookingForRole
       - json-api-model-teacher-teacherNationalities
-      - json-api-model-teacher-teacherPhotoCategory
+      - json-api-model-teacher-teacherAdditionalPhotoCategory
       - json-api-model-teacher-teacherPhoto
       - json-api-model-teacher-teacherEducationLevel
       - json-api-model-teacher-internationalExperience
