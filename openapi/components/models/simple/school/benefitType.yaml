@@ -1,0 +1,31 @@
+SimpleModel_school-benefitType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-benefitType_id"
+    # simple attributes
+    benefit:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_benefit"
+    type:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_type"
+    ordering:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_ordering"
+    creationDate:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/benefitType.yaml#/school-benefitType_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-benefitType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -84,14 +84,25 @@ post:
                   type: object
                   additionalProperties: false
                   properties:
+                    application:
+                      $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_application"
+                    eventType:
+                      $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
                     date:
                       $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
                     notes:
                       $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+                    autoEmail:
+                      $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_email"
                   required:
                     - application
                     - eventType
                     - date
+              required:
+                - type
+                - attributes
+          required:
+            - data
   responses:
     "201":
       description: CREATED (Request successful)

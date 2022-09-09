@@ -1,0 +1,57 @@
+#attributes
+school-benefitType_benefit:
+  type: string
+  example: ""
+school-benefitType_ordering:
+  type: string
+  example: ""
+school-benefitType_type:
+  type: string
+  example: Outdoor Pitches
+school-benefitType_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-benefitType_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attributes
+school-benefitType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-benefitType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+#relationships
+school-benefitType_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+  
+school-benefitType_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+  
+
+
+
+
