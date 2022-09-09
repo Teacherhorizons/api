@@ -1,0 +1,51 @@
+JsonApiModel_school-benefitType:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-benefitType_type"
+    id:
+      $ref: "#/JsonApiModel_school-benefitType_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        benefit:
+          $ref: "../../library/school/benefitType.yaml#/school-benefitType_benefit"
+        type:
+          $ref: "../../library/school/benefitType.yaml#/school-benefitType_type"
+        ordering:
+          $ref: "../../library/school/benefitType.yaml#/school-benefitType_ordering"
+        creationDate:
+          $ref: "../../library/school/benefitType.yaml#/school-benefitType_creationDate"  
+        latestUpdateDate:
+          $ref: "../../library/school/benefitType.yaml#/school-benefitType_latestUpdateDate"
+        # relationship attributes
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-benefitType_type:
+  type: string
+  example: school-benefitType
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-benefitType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

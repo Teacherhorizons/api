@@ -382,6 +382,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolAccreditationType" />
 
+  - name: simple-model-school-benefitType
+    x-displayName: Simple model - school-benefitType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-benefitType" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -1067,6 +1072,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAccreditationType" />
 
+  - name: json-api-model-school-benefitType
+    x-displayName: JSON:API model - school-benefitType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-benefitType" />
+
   # tags - json-api-models - users
 
   - name: json-api-model-user
@@ -1190,6 +1200,7 @@ x-tagGroups:
       - simple-model-school-documentCategory
       - simple-model-school-schoolAgeLevel
       - simple-model-school-schoolAccreditationType
+      - simple-model-school-benefitType
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       # - simple-model-teacher-photoCategory
@@ -1295,6 +1306,7 @@ x-tagGroups:
       - json-api-model-school-documentCategory
       - json-api-model-school-schoolAgeLevel
       - json-api-model-school-schoolAccreditationType
+      - json-api-model-school-benefitType
       - json-api-model-api-model-teacher
       # - json-api-model-teacher-photoCategory
       - json-api-model-teacher-additionalPhotoCategory
