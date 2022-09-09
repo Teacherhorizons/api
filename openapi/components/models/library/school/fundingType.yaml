@@ -1,0 +1,53 @@
+#attributes
+school-fundingType_type:
+  type: string
+  example: Outdoor Pitches
+
+school-fundingType_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-fundingType_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attributes
+school-fundingType_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-fundingType_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+#relationships
+school-fundingType_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+  
+school-fundingType_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+  
+
+
+
+
