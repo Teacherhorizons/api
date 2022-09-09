@@ -1,0 +1,127 @@
+post:
+  operationId: post-job-update
+  summary: Update job
+  tags:
+    - jobs-not-jsonapi
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+
+    Note: POST rather than PATCH
+  parameters:
+    - in: path
+      name: jobId
+      required: true
+      example: 1234
+      schema:
+        type: integer
+        format: int32
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            title:
+              type: string
+              example: Early Years / Kindergarten teacher
+            roleId:
+              type: integer
+              format: int32
+              example: 12
+            subjectId:
+              type: integer
+              format: int32
+              example: 41
+            advertExpiryDate:
+              type: string
+              format: date
+              example: 2022-10-08
+            startDate:
+              type: string
+              format: date
+              example: 2023-04-12
+            deadlineDate:
+              type: string
+              format: date
+              example: 2023-02-23
+            jobTypeId:
+              type: integer
+              format: int32
+              example: 1
+            thOwnerUserId:
+              type: integer
+              format: int32
+              example: 23167
+            excludeFromJobSearch:
+              type: integer
+              format: int32
+              example: 1
+            furtherInfo:
+              type: string
+              example: "<div class=job-style-deprecated><div class=further-info>
+                <style>*.further-info *.icon
+                font-size: 1.4em;
+                vertical-align: -0.22em;
+                margin-right: 0.22em;
+                *.further-info *.icon-check
+                color: green;
+                *.further-info *.icon-cross
+                color: red;
+                </style>
+                <div style=margin: 0 0 1.0em 2.0em;>     <div>       <i
+                class=icon icon-check> </i> Job listing</div>     <div>       <i
+                class=icon icon-cross> </i> Adviser support</div>     <div>
+                <i class=icon icon-check> </i> Apply direct</div>     <div>
+                <i class=icon icon-cross> </i> Screened school</div>     <div>
+                <i class=icon icon-check> </i> Research required</div>
+                </div>    <p>Alice Smith School is advertising for a qualified
+                Early Years / Kindergarten teacher to join their team.</p>
+                <p>This is a     'basic' job listing and not a Teacherhorizons
+                'supported' position.     This means that our specialist Advisers
+                cannot recommend you for     this position or provide you with
+                specific details about this school     or role. You have to apply
+                directly yourself.</p>    <p>If you would     like to be recommended
+                to schools by one of our Advisers and get     your applications
+                fast-tracked you should apply for 'supported'     opportunities
+                (look for the green tick at the top of the   advert).</p>    <p>
+                <b>To apply please ensure you do the following:</b></p>    <ol>
+                <li>Inform the school you heard about this vacancy through
+                Teacherhorizons so the school can access your profile and
+                references on Teacherhorizons should they wish.     </li>
+                <li>Check the vacancy details on the school's website as these may
+                change at busy times of the year. Let us know if the vacancy is no
+                longer listed.     </li>     <li>Inform us if you secure a
+                position through Teacherhorizons -       this helps us keep track
+                and improve our services. Just email <a
+                href=mailto:info@teacherhorizons.com
+                target=_blank>info@teacherhorizons.com</a>.   </li></ol>
+                <p>To get the most out of Teacherhorizons make sure your profile is
+                complete with <a href=/advice/faq-for-teachers/#26
+                target=_blank>at least 2 references from professional email
+                addresses</a>. This will ensure we can move quickly should your
+                dream opportunity come up tomorrow.</p>    <p>You can find out more
+                about <a href=/advice/international-teaching-opportunities/
+                target=_blank>how Teacherhorizons works here</a> and <a
+                href=/me rel=nofollow target=_blank>update your profile
+                here</a>.</p>    <p>Best of luck!</p>    <p>The Teacherhorizons
+                team</p>    <p>     <i>Please note that Teacherhorizons is committed
+                to safeguarding and       promoting the welfare of children.
+                Applicants must be willing to       undergo child protection
+                screening including a criminal record       disclosure and other
+                standard pre‐employment safeguarding   checks.</i></p>    <p
+                style=text-align: center;>           <a class=btn btn-primary
+                href=mailto:fefew@fekj.ff target=_blank>Email school</a>
+                </p>  </div>
+                </div>"
+  responses:
+    "200":
+      description: UPDATED (Request successful)
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                example: "1"

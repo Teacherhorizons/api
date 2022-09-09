@@ -1,24 +1,24 @@
-JsonApiModel_teacher-teacherFile:
+JsonApiModel_teacher-teacherDocument:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-teacherFile_type"
+      $ref: "#/JsonApiModel_teacher-teacherDocument_type"
     id:
-      $ref: "#/JsonApiModel_teacher-teacherFile_id"
+      $ref: "#/JsonApiModel_teacher-teacherDocument_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_name"  
+          $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_name"
         url:
-          $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_url"
+          $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_url"
         creationDate:
-          $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_creationDate"  
+          $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_creationDate"
         latestUpdateDate:
-          $ref: "../../library/teacher/teacherFile.yaml#/teacher-teacherFile_latestUpdateDate"
+          $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_latestUpdateDate"
         # relationship attributes
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
@@ -40,13 +40,13 @@ JsonApiModel_teacher-teacherFile:
     - type
     - id
 
-JsonApiModel_teacher-teacherFile_type:
+JsonApiModel_teacher-teacherDocument_type:
   type: string
-  example: teacher-teacherFile
+  example: teacher-teacherDocument
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_teacher-teacherFile_id:
+JsonApiModel_teacher-teacherDocument_id:
   type: string
   example: "1"
   readOnly: true

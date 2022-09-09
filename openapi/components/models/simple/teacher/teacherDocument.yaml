@@ -1,0 +1,39 @@
+SimpleModel_teacher-teacherDocument:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherDocument_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_name"
+    url:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_url"
+    creationDate:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_teacherId"
+    creationUserId:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherDocument.yaml#/teacher-teacherDocument_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+# SimpleModel_teacher-teacherDocument_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-badge
+#       description: teacher-badge
+#       readOnly: true
+
+SimpleModel_teacher-teacherDocument_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -1,35 +1,39 @@
 #attributes
-teacher-teacherFile_url:
+teacher-teacherDocument_url:
   type: object
   example: ""
-teacher-teacherFile_name:
+teacher-teacherDocument_name:
   type: object
   example: ""
-teacher-teacherFile_creationDate:
+teacher-teacherDocument_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
-teacher-teacherFile_latestUpdateDate:
+teacher-teacherDocument_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributtes
-teacher-teacherFile_creationUserId:
+teacher-teacherDocument_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherFile_latestUpdateUserId:
+teacher-teacherDocument_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherFile_teacherId:
+teacher-teacherDocument_teacherId:
   type: integer
   example: 1
   description: Relationship to teacher
+teacher-teacherDocument_teacherDocumentCategoryId:
+  type: integer
+  example: 1
+  description: Relationship to teacher_documentCategory
 
 #relationships
-teacher-teacherFile_creationUser:
+teacher-teacherDocument_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -37,10 +41,10 @@ teacher-teacherFile_creationUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
-teacher-teacherFile_latestUpdateUser:
+
+teacher-teacherDocument_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
@@ -48,10 +52,10 @@ teacher-teacherFile_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
-teacher-teacherFile_teacher:
+
+teacher-teacherDocument_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -59,11 +63,5 @@ teacher-teacherFile_teacher:
       type: string
       example: "1"
       description: Relationship to teacher
-  required: 
+  required:
     - id
-  
-
-
-
-
-
