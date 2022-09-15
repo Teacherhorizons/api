@@ -1,0 +1,25 @@
+SimpleModel_teacher-documentCategory:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-documentCategory_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/documentCategory.yaml#/teacher-documentCategory_name"
+  required:
+    - id
+# shared
+# SimpleModel_teacher-documentCategory_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-documentCategory
+#       description: teacher-documentCategory
+#       readOnly: true
+
+SimpleModel_teacher-documentCategory_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

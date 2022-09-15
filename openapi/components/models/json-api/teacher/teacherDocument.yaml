@@ -26,6 +26,9 @@ JsonApiModel_teacher-teacherDocument:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        documentCategory:
+          $ref: "../teacher/documentCategory.yaml#/JsonApiModel_teacher-documentCategory_relationship_attribute"
+
     relationships:
       type: object
       additionalProperties: false
@@ -36,6 +39,8 @@ JsonApiModel_teacher-teacherDocument:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        documentCategory:
+          $ref: "../teacher/documentCategory.yaml#/JsonApiModel_teacher-documentCategory_relationship"
   required:
     - type
     - id
