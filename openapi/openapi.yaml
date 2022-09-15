@@ -332,10 +332,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalPhotoCategory" />
 
-  - name: simple-model-school-additionalUrlMediaCategory
-    x-displayName: Simple model - school-additionalUrlMediaCategory
+  - name: simple-model-school-videoCategory
+    x-displayName: Simple model - school-videoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalUrlMediaCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-videoCategory" />
 
   - name: simple-model-school-schoolAcademicSystem
     x-displayName: Simple model - school-schoolAcademicSystem
@@ -403,10 +403,10 @@ tags:
   #   description: |
   #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-photoCategory" />
 
-  - name: simple-model-teacher-additionalPhotoCategory
-    x-displayName: Simple model - teacher-additionalPhotoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-additionalPhotoCategory" />
+  # - name: simple-model-teacher-additionalPhotoCategory
+  #   x-displayName: Simple model - teacher-additionalPhotoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-additionalPhotoCategory" />
 
   - name: simple-model-teacher-badge
     x-displayName: Simple model - teacher-badge
@@ -453,10 +453,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-thStatus" />
 
-  - name: simple-model-teacher-videoUrlCategory
-    x-displayName: Simple model - teacher-videoUrlCategory
+  - name: simple-model-teacher-videoCategory
+    x-displayName: Simple model - teacher-videoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-videoUrlCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-videoCategory" />
 
   - name: simple-model-teacher-teacherLookingForSubject
     x-displayName: Simple model - teacher-teacherLookingForSubject
@@ -478,10 +478,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherNationalities" />
 
-  - name: simple-model-teacher-teacherAdditionalPhotoCategory
-    x-displayName: Simple model - teacher-teacherAdditionalPhotoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherAdditionalPhotoCategory" />
+  # - name: simple-model-teacher-teacherAdditionalPhotoCategory
+  #   x-displayName: Simple model - teacher-teacherAdditionalPhotoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherAdditionalPhotoCategory" />
 
   - name: simple-model-teacher-teacherPhoto
     x-displayName: Simple model - teacher-teacherPhoto
@@ -785,10 +785,10 @@ tags:
   #   description: |
   #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-photoCategory" />
 
-  - name: json-api-model-teacher-additionalPhotoCategory
-    x-displayName: JSON:API model - teacher-additionalPhotoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-additionalPhotoCategory" />
+  # - name: json-api-model-teacher-additionalPhotoCategory
+  #   x-displayName: JSON:API model - teacher-additionalPhotoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-additionalPhotoCategory" />
 
   - name: json-api-model-teacher-badge
     x-displayName: JSON:API model - teacher-badge
@@ -835,10 +835,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-thStatus" />
 
-  - name: json-api-model-teacher-videoUrlCategory
-    x-displayName: JSON:API model - teacher-videoUrlCategory
+  - name: json-api-model-teacher-videoCategory
+    x-displayName: JSON:API model - teacher-videoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-videoUrlCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-videoCategory" />
 
   - name: json-api-model-teacher-teacherLookingForSubject
     x-displayName: JSON:API model - teacher-teacherLookingForSubject
@@ -860,10 +860,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherNationalities" />
 
-  - name: json-api-model-teacher-teacherAdditionalPhotoCategory
-    x-displayName: JSON:API model - teacher-teacherAdditionalPhotoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherAdditionalPhotoCategory" />
+  # - name: json-api-model-teacher-teacherAdditionalPhotoCategory
+  #   x-displayName: JSON:API model - teacher-teacherAdditionalPhotoCategory
+  #   description: |
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherAdditionalPhotoCategory" />
 
   - name: json-api-model-teacher-teacherPhoto
     x-displayName: JSON:API model - teacher-teacherPhoto
@@ -1057,10 +1057,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
 
-  - name: json-api-model-school-additionalVideoUrlCategory
-    x-displayName: JSON:API model - school-additionalVideoUrlCategory
+  - name: json-api-model-school-videoCategory
+    x-displayName: JSON:API model - school-videoCategory
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalVideoUrlCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-videoCategory" />
 
   - name: json-api-model-school-documentCategory
     x-displayName: JSON:API model - school-documentCategory
@@ -1204,7 +1204,7 @@ x-tagGroups:
       - simple-model-school-schoolAcademicSystem
       - simple-model-school-thRating
       - simple-model-school-ageLevel
-      - simple-model-school-additionalVideoUrlCategory
+      - simple-model-school-videoCategory
       - simple-model-school-teachingLanguage
       - simple-model-school-acceptedTeacherQualification
       - simple-model-school-documentCategory
@@ -1224,7 +1224,7 @@ x-tagGroups:
       - simple-model-teacher-thDiscoveryMethod
       - simple-model-teacher-thDiscoveryMethodCategory
       - simple-model-teacher-thStatus
-      - simple-model-teacher-videoUrlCategory
+      - simple-model-teacher-videoCategory
       - simple-model-teacher-teacherLookingForSubject
       - simple-model-teacher-teacherBadge
       - simple-model-teacher-teacherLookingForRole
@@ -1313,7 +1313,7 @@ x-tagGroups:
       - json-api-model-school-ageLevel
       - json-api-model-school-teachingLanguage
       - json-api-model-school-acceptedTeacherQualification
-      - json-api-model-school-additionalVideoUrlCategory
+      - json-api-model-school-videoCategory
       - json-api-model-school-documentCategory
       - json-api-model-school-schoolAgeLevel
       - json-api-model-school-schoolAccreditationType
@@ -1332,7 +1332,7 @@ x-tagGroups:
       - json-api-model-teacher-thDiscoveryMethodCategory
       - json-api-model-teacher-thStatus
       - json-api-model-teacher-teacherLookingForSubject
-      - json-api-model-teacher-videoUrlCategory
+      - json-api-model-teacher-videoCategory
       - json-api-model-teacher-teacherBadge
       - json-api-model-teacher-teacherLookingForRole
       - json-api-model-teacher-teacherNationalities
