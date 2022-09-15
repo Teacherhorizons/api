@@ -1,29 +1,29 @@
 # TODO AS: review this against the spreadsheet - should be a simple 'list' entity
 
-JsonApiModel_school-additionalVideoUrlCategory:
+JsonApiModel_school-videoCategory:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_school-additionalVideoUrlCategory_type"
+      $ref: "#/JsonApiModel_school-videoCategory_type"
     id:
-      $ref: "#/JsonApiModel_school-additionalVideoUrlCategory_id"
+      $ref: "#/JsonApiModel_school-videoCategory_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         url:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_url"
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_url"
         caption:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_caption"
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_caption"
         creationDate:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_creationDate"
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationDate"
         latestUpdateDate:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_latestUpdateDate"
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateDate"
         # relationship attributes
         category:
-          $ref: "../../library/school/additionalVideoUrlCategory.yaml#/school-additionalVideoUrlCategory_category"
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_category"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -43,13 +43,13 @@ JsonApiModel_school-additionalVideoUrlCategory:
     - type
     - id
 
-JsonApiModel_school-additionalVideoUrlCategory_type:
+JsonApiModel_school-videoCategory_type:
   type: string
-  example: school-additionalVideoUrlCategory
+  example: school-videoCategory
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_school-additionalVideoUrlCategory_id:
+JsonApiModel_school-videoCategory_id:
   type: string
   example: "1"
   readOnly: true

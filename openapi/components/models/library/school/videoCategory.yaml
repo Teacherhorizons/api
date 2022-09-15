@@ -1,35 +1,35 @@
 #attributes
-school-additionalVideoUrlCategory_url:
+school-videoCategory_url:
   type: string
   example: ""
-school-additionalVideoUrlCategory_caption:
+school-videoCategory_caption:
   type: string
   example: ""
-school-additionalVideoUrlCategory_creationDate:
+school-videoCategory_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
-school-additionalVideoUrlCategory_latestUpdateDate:
+school-videoCategory_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attribites
-school-additionalVideoUrlCategory_categoryId:
+school-videoCategory_categoryId:
   type: integer
   example: 1
   description: Relationship to Category
-school-additionalVideoUrlCategory_creationUserId:
+school-videoCategory_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-school-additionalVideoUrlCategory_latestUpdateUserId:
+school-videoCategory_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 # relatoinships
-school-additionalVideoUrlCategory_category:
+school-videoCategory_category:
   type: object
   additionalProperties: false
   properties:
@@ -40,7 +40,7 @@ school-additionalVideoUrlCategory_category:
   required: 
     - id
   
-school-additionalVideoUrlCategory_creationUser:
+school-videoCategory_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -51,7 +51,7 @@ school-additionalVideoUrlCategory_creationUser:
   required: 
     - id
   
-school-additionalVideoUrlCategory_latestUpdateUser:
+school-videoCategory_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

@@ -1,0 +1,31 @@
+SimpleModel_school-videoCategory:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-videoCategory_id"
+    # simple attributes
+    url:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_url"
+    caption:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_caption"
+    creationDate:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateDate"
+    # relationship attributes
+    categoryId:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_categoryId"
+    creationUserId:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-videoCategory_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
