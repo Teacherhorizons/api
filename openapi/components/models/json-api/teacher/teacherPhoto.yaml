@@ -26,8 +26,8 @@ JsonApiModel_teacher-teacherPhoto:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        # photoCategory:
-        #   $ref: "../teacher/photoCategory.yaml#/JsonApiModel_teacher-photoCategory_relationship_attribute"
+        photoCategory:
+          $ref: "../teacher/photoCategory.yaml#/JsonApiModel_teacher-photoCategory_relationship_attribute"
 
     relationships:
       type: object
@@ -39,8 +39,8 @@ JsonApiModel_teacher-teacherPhoto:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-        # photoCategory:
-        #   $ref: "../teacher/photoCategory.yaml#/JsonApiModel_teacher-photoCategory_relationship"
+        photoCategory:
+          $ref: "../teacher/photoCategory.yaml#/JsonApiModel_teacher-photoCategory_relationship"
   required:
     - type
     - id

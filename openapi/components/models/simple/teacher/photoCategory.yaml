@@ -1,18 +1,18 @@
-SimpleModel_teacher-videoCategory:
+SimpleModel_teacher-photoCategory:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_teacher-videoCategory_id"
+      $ref: "#/SimpleModel_teacher-photoCategory_id"
     #simple attributes
     name:
-      $ref: "../../library/teacher/videoCategory.yaml#/teacher-videoCategory_name"
+      $ref: "../../library/teacher/photoCategory.yaml#/teacher-photoCategory_name"
   required:
     - id
 
 # shared
 
-SimpleModel_teacher-videoCategory_id:
+SimpleModel_teacher-photoCategory_id:
   type: integer
   example: 1
   readOnly: true

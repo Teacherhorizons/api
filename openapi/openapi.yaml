@@ -488,6 +488,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherPhoto" />
 
+  - name: simple-model-teacher-photoCategory
+    x-displayName: Simple model - teacher-photoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-photoCategory" />
+
   - name: simple-model-teacher-teacherEducationLevel
     x-displayName: Simple model - teacher-teacherEducationLevel
     description: |
@@ -785,10 +790,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher" />
 
-  # - name: json-api-model-teacher-photoCategory
-  #   x-displayName: JSON:API model - teacher-photoCategory
-  #   description: |
-  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-photoCategory" />
+  - name: json-api-model-teacher-photoCategory
+    x-displayName: JSON:API model - teacher-photoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-photoCategory" />
 
   # - name: json-api-model-teacher-additionalPhotoCategory
   #   x-displayName: JSON:API model - teacher-additionalPhotoCategory
@@ -1224,7 +1229,7 @@ x-tagGroups:
       - simple-model-school-fundingType
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
-      # - simple-model-teacher-photoCategory
+      - simple-model-teacher-photoCategory
       - simple-model-teacher-badge
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
@@ -1331,7 +1336,7 @@ x-tagGroups:
       - json-api-model-school-benefitType
       - json-api-model-school-fundingType
       - json-api-model-api-model-teacher
-      # - json-api-model-teacher-photoCategory
+      - json-api-model-teacher-photoCategory
       - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
       - json-api-model-teacher-qualificationType
