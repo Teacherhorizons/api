@@ -30,6 +30,33 @@ JsonApiModel_teacher-videoCategory_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_teacher-videoCategory_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-videoCategory_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-videoCategory_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+JsonApiModel_teacher-videoCategory_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-videoCategory_id"
+  required:
+    - id
+
 
 
 

@@ -1,39 +1,39 @@
 #attributes
-teacher-teacherPhoto_url:
+teacher-teacherVideo_url:
   type: object
   example: "https://www.youtube.com/watch?v=i1psneGB0AM&ab_channel=CutestAnimals"
-teacher-teacherPhoto_caption:
+teacher-teacherVideo_caption:
   type: object
   example: "foo"
-teacher-teacherPhoto_creationDate:
+teacher-teacherVideo_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
-teacher-teacherPhoto_latestUpdateDate:
+teacher-teacherVideo_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributtes
-teacher-teacherPhoto_creationUserId:
+teacher-teacherVideo_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherPhoto_latestUpdateUserId:
+teacher-teacherVideo_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherPhoto_teacherId:
+teacher-teacherVideo_teacherId:
   type: integer
   example: 1
   description: Relationship to teacher
-teacher-teacherPhoto_photoCategoryId:
+teacher-teacherVideo_videoCategoryId:
   type: integer
   example: 1
-  description: Relationship to photoCategory
+  description: Relationship to videoCategory
 
 #relationships
-teacher-teacherPhoto_creationUser:
+teacher-teacherVideo_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -44,7 +44,7 @@ teacher-teacherPhoto_creationUser:
   required:
     - id
 
-teacher-teacherPhoto_latestUpdateUser:
+teacher-teacherVideo_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
@@ -55,7 +55,7 @@ teacher-teacherPhoto_latestUpdateUser:
   required:
     - id
 
-teacher-teacherPhoto_teacher:
+teacher-teacherVideo_teacher:
   type: object
   additionalProperties: false
   properties:

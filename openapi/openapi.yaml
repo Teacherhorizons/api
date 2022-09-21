@@ -553,6 +553,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherDocument" />
 
+  - name: simple-model-teacher-teacherVideo
+    x-displayName: Simple model - teacher-teacherVideo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherVideo" />
+
   - name: simple-model-teacher-teacherSkill
     x-displayName: Simple model - teacher-teacherSkill
     description: |
@@ -935,6 +940,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherDocument" />
 
+  - name: json-api-model-teacher-teacherVideo
+    x-displayName: JSON:API model - teacher-teacherVideo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherVideo" />
+
   - name: json-api-model-teacher-teacherSkill
     x-displayName: JSON:API model - teacher-teacherSkill
     description: |
@@ -1244,6 +1254,7 @@ x-tagGroups:
       - simple-model-teacher-teacherReferenceQuestion
       - simple-model-teacher-documentCategory
       - simple-model-teacher-teacherDocument
+      - simple-model-teacher-teacherVideo
       - simple-model-teacher-teacherSkill
       - simple-model-user
       - simple-model-user-favouriteJob
@@ -1351,6 +1362,7 @@ x-tagGroups:
       - json-api-model-teacher-teacherReferenceQuestion
       - json-api-model-teacher-documentCategory
       - json-api-model-teacher-teacherDocument
+      - json-api-model-teacher-teacherVideo
       - json-api-model-teacher-teacherSkill
       - json-api-model-user
       - json-api-model-user-favouriteJob

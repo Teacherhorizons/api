@@ -5,17 +5,27 @@ SimpleModel_teacher-teacherPhoto:
     id:
       $ref: "#/SimpleModel_teacher-teacherPhoto_id"
     # simple attributes
+    caption:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_caption"
+    url:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_url"
+    creationDate:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_teacherId"
+    creationUserId:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateUserId"
+    photoCategoryId:
+      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_photoCategoryId"
   required:
     - id
 
 # shared
-# SimpleModel_teacher-teacherPhoto_type:
-#   properties:
-#     type:
-#       type: string
-#       example: teacher-teacherPhoto
-#       description: teacher-teacherPhoto
-#       readOnly: true
 
 SimpleModel_teacher-teacherPhoto_id:
   type: integer

@@ -1,0 +1,34 @@
+SimpleModel_teacher-teacherVideo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherVideo_id"
+    # simple attributes
+    caption:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_caption"
+    url:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_url"
+    creationDate:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_teacherId"
+    creationUserId:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_latestUpdateUserId"
+    videoCategoryId:
+      $ref: "../../library/teacher/teacherVideo.yaml#/teacher-teacherVideo_videoCategoryId"
+  required:
+    - id
+
+# shared
+
+SimpleModel_teacher-teacherVideo_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
