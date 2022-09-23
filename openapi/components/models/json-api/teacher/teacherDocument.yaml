@@ -26,7 +26,7 @@ JsonApiModel_teacher-teacherDocument:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        documentCategory:
+        category:
           $ref: "../teacher/documentCategory.yaml#/JsonApiModel_teacher-documentCategory_relationship_attribute"
 
     relationships:
@@ -39,7 +39,7 @@ JsonApiModel_teacher-teacherDocument:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-        documentCategory:
+        category:
           $ref: "../teacher/documentCategory.yaml#/JsonApiModel_teacher-documentCategory_relationship"
   required:
     - type

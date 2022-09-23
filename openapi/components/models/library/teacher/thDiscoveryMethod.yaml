@@ -7,13 +7,13 @@ teacher-thDiscoveryMethod_precedence:
   example: 1
 
 #relationship attribute
-teacher-thDiscoveryMethod_thDiscoveryMethodCategoryId:
+teacher-thDiscoveryMethod_categoryId:
   type: integer
   example: 1
   description: Relationship to ThDiscoveryMethodCategory
 
 #relationships
-teacher-thDiscoveryMethod_thDiscoveryMethodCategory:
+teacher-thDiscoveryMethod_category:
   type: object
   additionalProperties: false
   properties:
