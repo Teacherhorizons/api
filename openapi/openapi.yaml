@@ -362,10 +362,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalVideoUrlCategory" />
 
+  - name: simple-model-school-schoolDocument
+    x-displayName: Simple model - school-schoolDocument
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolDocument" />
+
   - name: simple-model-school-documentCategory
     x-displayName: Simple model - school-documentCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-documentCategory" />
+
+  - name: simple-model-school-schoolVideo
+    x-displayName: Simple model - school-schoolVideo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolVideo" />
 
   - name: simple-model-school-schoolAgeLevel
     x-displayName: Simple model - school-schoolAgeLevel
@@ -1067,10 +1077,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-videoCategory" />
 
+  - name: json-api-model-school-schoolDocument
+    x-displayName: JSON:API model - school-schoolDocument
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolDocument" />
+
   - name: json-api-model-school-documentCategory
     x-displayName: JSON:API model - school-documentCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-documentCategory" />
+
+  - name: json-api-model-school-schoolVideo
+    x-displayName: JSON:API model - school-schoolVideo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolVideo" />
 
   - name: json-api-model-school-schoolAgeLevel
     x-displayName: JSON:API model - school-schoolAgeLevel
@@ -1211,7 +1231,9 @@ x-tagGroups:
       - simple-model-school-videoCategory
       - simple-model-school-teachingLanguage
       - simple-model-school-acceptedTeacherQualification
+      - simple-model-school-schoolDocument
       - simple-model-school-documentCategory
+      - simple-model-school-schoolVideo
       - simple-model-school-schoolAgeLevel
       - simple-model-school-schoolAccreditationType
       - simple-model-school-benefitType
@@ -1318,6 +1340,8 @@ x-tagGroups:
       - json-api-model-school-teachingLanguage
       - json-api-model-school-acceptedTeacherQualification
       - json-api-model-school-videoCategory
+      - json-api-model-school-schoolDocument
+      - json-api-model-school-schoolVideo
       - json-api-model-school-documentCategory
       - json-api-model-school-schoolAgeLevel
       - json-api-model-school-schoolAccreditationType

@@ -1,0 +1,53 @@
+JsonApiModel_school-schoolVideo:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolVideo_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolVideo_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        url:
+          $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_url"
+        caption:
+          $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_caption"
+        creationDate:
+          $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_latestUpdateDate"
+        # relationship attributes
+        category:
+          $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_category"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        category:
+          $ref: "../school/documentCategory.yaml#/JsonApiModel_school-documentCategory_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolVideo_type:
+  type: string
+  example: school-schoolVideo
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-schoolVideo_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

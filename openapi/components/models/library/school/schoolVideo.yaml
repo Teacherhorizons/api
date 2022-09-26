@@ -1,0 +1,64 @@
+#attributes
+school-schoolVideo_url:
+  type: string
+  example: ""
+school-schoolVideo_caption:
+  type: string
+  example: ""
+school-schoolVideo_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolVideo_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attribites
+school-schoolVideo_categoryId:
+  type: integer
+  example: 1
+  description: Relationship to Category
+school-schoolVideo_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolVideo_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+# relatoinships
+school-schoolVideo_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Category
+  required: 
+    - id
+  
+school-schoolVideo_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  
+school-schoolVideo_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  

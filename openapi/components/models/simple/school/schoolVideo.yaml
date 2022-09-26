@@ -1,0 +1,31 @@
+SimpleModel_school-schoolVideo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolVideo_id"
+    # simple attributes
+    url:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_url"
+    caption:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_caption"
+    creationDate:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_latestUpdateDate"
+    # relationship attributes
+    categoryId:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_categoryId"
+    creationUserId:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/schoolVideo.yaml#/school-schoolVideo_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolVideo_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

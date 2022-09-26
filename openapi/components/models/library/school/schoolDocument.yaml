@@ -1,0 +1,64 @@
+#attributes
+school-schoolDocument_url:
+  type: string
+  example: ""
+school-schoolDocument_caption:
+  type: string
+  example: ""
+school-schoolDocument_creationDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+school-schoolDocument_latestUpdateDate:
+  type: integer
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attribites
+school-schoolDocument_categoryId:
+  type: integer
+  example: 1
+  description: Relationship to Category
+school-schoolDocument_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+school-schoolDocument_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+# relatoinships
+school-schoolDocument_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Category
+  required: 
+    - id
+  
+school-schoolDocument_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  
+school-schoolDocument_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  

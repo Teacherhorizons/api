@@ -1,0 +1,53 @@
+JsonApiModel_school-schoolDocument:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolDocument_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolDocument_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        url:
+          $ref: "../../library/school/schoolDocument.yaml#/school-schoolDocument_url"
+        caption:
+          $ref: "../../library/school/schoolDocument.yaml#/school-schoolDocument_caption"
+        creationDate:
+          $ref: "../../library/school/schoolDocument.yaml#/school-schoolDocument_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/school/schoolDocument.yaml#/school-schoolDocument_latestUpdateDate"
+        # relationship attributes
+        category:
+          $ref: "../../library/school/schoolDocument.yaml#/school-schoolDocument_category"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        category:
+          $ref: "../school/documentCategory.yaml#/JsonApiModel_school-documentCategory_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolDocument_type:
+  type: string
+  example: school-schoolDocument
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-schoolDocument_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
