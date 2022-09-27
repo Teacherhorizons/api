@@ -1,0 +1,31 @@
+SimpleModel_school-schoolPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolPhoto_id"
+    # simple attributes
+    url:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_url"
+    caption:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_caption"
+    creationDate:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateDate"
+    # relationship attributes
+    categoryId:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_categoryId"
+    creationUserId:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolPhoto_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

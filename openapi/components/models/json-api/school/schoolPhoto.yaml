@@ -1,0 +1,53 @@
+JsonApiModel_school-schoolPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolPhoto_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolPhoto_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        url:
+          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_url"
+        caption:
+          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_caption"
+        creationDate:
+          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateDate"
+        # relationship attributes
+        category:
+          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_category"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        category:
+          $ref: "../school/documentCategory.yaml#/JsonApiModel_school-documentCategory_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolPhoto_type:
+  type: string
+  example: school-schoolPhoto
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-schoolPhoto_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

@@ -322,10 +322,20 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-accreditationType" />
 
-  - name: simple-model-school-additionalPhotoCategory
-    x-displayName: Simple model - school-additionalPhotoCategory
+  - name: simple-model-school-schoolPhoto
+    x-displayName: Simple model - school-schoolPhoto
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalPhotoCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolPhoto" />
+
+  - name: simple-model-school-photoCategory
+    x-displayName: Simple model - school-photoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-photoCategory" />
+
+  - name: simple-model-school-schoolVideo
+    x-displayName: Simple model - school-schoolVideo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolVideo" />
 
   - name: simple-model-school-videoCategory
     x-displayName: Simple model - school-videoCategory
@@ -371,11 +381,6 @@ tags:
     x-displayName: Simple model - school-documentCategory
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-documentCategory" />
-
-  - name: simple-model-school-schoolVideo
-    x-displayName: Simple model - school-schoolVideo
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolVideo" />
 
   - name: simple-model-school-schoolAgeLevel
     x-displayName: Simple model - school-schoolAgeLevel
@@ -1037,11 +1042,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-accreditationType" />
 
-  - name: json-api-model-school-additionalPhotoCategory
-    x-displayName: JSON:API model - school-additionalPhotoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-additionalPhotoCategory" />
-
   - name: json-api-model-school-additionalUrlMediaCategory
     x-displayName: JSON:API model - school-additionalUrlMediaCategory
     description: |
@@ -1072,11 +1072,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
 
-  - name: json-api-model-school-videoCategory
-    x-displayName: JSON:API model - school-videoCategory
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-videoCategory" />
-
   - name: json-api-model-school-schoolDocument
     x-displayName: JSON:API model - school-schoolDocument
     description: |
@@ -1087,10 +1082,25 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-documentCategory" />
 
+  - name: json-api-model-school-schoolPhoto
+    x-displayName: JSON:API model - school-schoolPhoto
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolPhoto" />
+
+  - name: json-api-model-school-photoCategory
+    x-displayName: JSON:API model - school-photoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-photoCategory" />
+
   - name: json-api-model-school-schoolVideo
     x-displayName: JSON:API model - school-schoolVideo
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolVideo" />
+
+  - name: json-api-model-school-videoCategory
+    x-displayName: JSON:API model - school-videoCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-videoCategory" />
 
   - name: json-api-model-school-schoolAgeLevel
     x-displayName: JSON:API model - school-schoolAgeLevel
@@ -1223,7 +1233,7 @@ x-tagGroups:
       - simple-model-school-studentGenderMix
       - simple-model-school-teacherSchoolCommunityResponse
       - simple-model-school-accreditationType
-      - simple-model-school-additionalPhotoCategory
+      - simple-model-school-photoCategory
       - simple-model-school-additionalUrlMediaCategory
       - simple-model-school-schoolAcademicSystem
       - simple-model-school-thRating
@@ -1332,7 +1342,7 @@ x-tagGroups:
       - json-api-model-school-studentGenderMix
       - json-api-model-school-teacherSchoolCommunityResponse
       - json-api-model-school-accreditationType
-      - json-api-model-school-additionalPhotoCategory
+      - json-api-model-school-photoCategory
       - json-api-model-school-additionalUrlMediaCategory
       - json-api-model-school-schoolAcademicSystem
       - json-api-model-school-thRating
