@@ -12,6 +12,10 @@ SimpleModel_school-curriculumType:
     latestUpdateDate:
       $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_latestUpdateDate"
     # relationship attributes
+    schoolId:
+          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_schoolId"
+    curriculumTypeId:
+          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_curriculumTypeId"
     creationUserId:
       $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_creationUserId"
     latestUpdateUserId:
