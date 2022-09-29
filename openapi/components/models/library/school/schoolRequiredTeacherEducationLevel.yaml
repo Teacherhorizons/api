@@ -1,0 +1,32 @@
+#relationship attribites
+school-schoolRequiredTeacherEducationLevel_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to School
+school-schoolRequiredTeacherEducationLevel_educationLevelId:
+  type: integer
+  example: 1
+  description: Relationship to Teacher
+
+# relatoinships
+school-schoolRequiredTeacherEducationLevel_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+  
+school-schoolRequiredTeacherEducationLevel_educationLevel:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
+  required: 
+    - id

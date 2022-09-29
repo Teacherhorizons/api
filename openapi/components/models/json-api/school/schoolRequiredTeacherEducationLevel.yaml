@@ -1,0 +1,41 @@
+JsonApiModel_school-schoolRequiredTeacherEducationLevel:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolRequiredTeacherEducationLevel_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolRequiredTeacherEducationLevel_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        schoolId:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        educationLevelId:
+          $ref: "../general/educationLevel.yaml#/JsonApiModel_general-educationLevel_relationship"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        educationLevel:
+          $ref: "../general/educationLevel.yaml#/JsonApiModel_general-educationLevel_relationship"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolRequiredTeacherEducationLevel_type:
+  type: string
+  example: school-schoolRequiredTeacherEducationLevel
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-schoolRequiredTeacherEducationLevel_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

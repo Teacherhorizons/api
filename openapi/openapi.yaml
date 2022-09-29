@@ -402,6 +402,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-fundingType" />
 
+  - name: simple-model-school-schoolRequiredTeacherEducationLevel
+    x-displayName: Simple model - school-schoolRequiredTeacherEducationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolRequiredTeacherEducationLevel" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -1122,6 +1127,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-fundingType" />
 
+  - name: json-api-model-school-schoolRequiredTeacherEducationLevel
+    x-displayName: JSON:API model - school-schoolRequiredTeacherEducationLevel
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolRequiredTeacherEducationLevel" />
+
   # tags - json-api-models - users
 
   - name: json-api-model-user
@@ -1249,6 +1259,7 @@ x-tagGroups:
       - simple-model-school-schoolAccreditationType
       - simple-model-school-benefitType
       - simple-model-school-fundingType
+      - simple-model-school-schoolRequiredTeacherEducationLevel
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-photoCategory
@@ -1359,6 +1370,7 @@ x-tagGroups:
       - json-api-model-school-schoolAccreditationType
       - json-api-model-school-benefitType
       - json-api-model-school-fundingType
+      - json-api-model-school-schoolRequiredTeacherEducationLevel
       - json-api-model-api-model-teacher
       # - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge
