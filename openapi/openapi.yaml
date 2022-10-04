@@ -18,7 +18,7 @@ info:
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   # tags - categories (alphabetical)
-  - name: application
+  - name: application test
     description: Operations in the application category
   - name: community-responses
     description: Operations relating to community responses
@@ -189,6 +189,11 @@ tags:
     x-displayName: Simple model - general-nationality
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-nationality" />
+
+  - name: simple-model-general-nationalityGroup
+    x-displayName: Simple model - general-nationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-nationalityGroup" />
 
   - name: simple-model-general-month
     x-displayName: Simple model - general-month
@@ -762,6 +767,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationality" />
 
+  - name: json-api-model-general-nationalityGroup
+    x-displayName: JSON:API model - general-nationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-nationalityGroup" />
+
   - name: json-api-model-general-month
     x-displayName: JSON:API model - general-month
     description: |
@@ -1224,6 +1234,7 @@ x-tagGroups:
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
       - simple-model-general-nationality
+      - simple-model-general-nationalityGroup
       - simple-model-general-month
       - simple-model-regional-city
       - simple-model-regional-country
@@ -1335,6 +1346,7 @@ x-tagGroups:
       - json-api-model-general-worldLanguage
       - json-api-model-general-manualEmailTemplate
       - json-api-model-general-nationality
+      - json-api-model-general-nationalityGroup
       - json-api-model-general-month
       - json-api-model-regional-city
       - json-api-model-regional-country

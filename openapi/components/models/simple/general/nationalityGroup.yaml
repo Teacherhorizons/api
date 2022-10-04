@@ -1,0 +1,35 @@
+SimpleModel_general-nationalityGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-nationalityGroup_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_name"
+    flagName:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_flagName"
+    creationDate:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/nationalityGroup.yaml#/general-nationalityGroup_latestUpdateUserId"
+  required:
+    - id
+    - name
+    - flagName
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+
+# shared
+SimpleModel_general-nationalityGroup_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
