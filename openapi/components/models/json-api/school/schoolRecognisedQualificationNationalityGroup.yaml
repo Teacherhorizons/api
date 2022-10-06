@@ -1,0 +1,41 @@
+JsonApiModel_school-schoolRecognisedQualificationNationalityGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_school-schoolRecognisedQualificationNationalityGroup_type"
+    id:
+      $ref: "#/JsonApiModel_school-schoolRecognisedQualificationNationalityGroup_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        nationalityGroup:
+          $ref: "../general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties: 
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        nationalityGroup:
+          $ref: "../general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup_relationship"
+
+  required:
+    - type
+    - id
+
+JsonApiModel_school-schoolRecognisedQualificationNationalityGroup_type:
+  type: string
+  example: school-schoolRecognisedQualificationNationalityGroup
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-schoolRecognisedQualificationNationalityGroup_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

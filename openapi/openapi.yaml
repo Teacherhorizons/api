@@ -417,6 +417,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolRequiredTeacherEducationLevel" />
 
+  - name: simple-model-school-schoolMainTeacherNationalityGroup
+    x-displayName: Simple model - school-schoolMainTeacherNationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolMainTeacherNationalityGroup" />
+
+  - name: simple-model-school-schoolRecognisedQualificationNationalityGroup
+    x-displayName: Simple model - school-schoolRecognisedQualificationNationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolRecognisedQualificationNationalityGroup" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -1157,6 +1167,18 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolRequiredTeacherEducationLevel" />
 
+  - name: json-api-model-school-schoolMainTeacherNationalityGroup
+    x-displayName: JSON:API model - school-schoolMainTeacherNationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolMainTeacherNationalityGroup" />
+      
+  - name: json-api-model-school-schoolRecognisedQualificationNationalityGroup
+    x-displayName: JSON:API model - school-schoolRecognisedQualificationNationalityGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolRecognisedQualificationNationalityGroup" />
+
+      
+
   # tags - json-api-models - users
 
   - name: json-api-model-user
@@ -1292,6 +1314,8 @@ x-tagGroups:
       - simple-model-school-benefitType
       - simple-model-school-fundingType
       - simple-model-school-schoolRequiredTeacherEducationLevel
+      - simple-model-school-schoolMainTeacherNationalityGroup
+      - simple-model-school-schoolRecognisedQualificationNationalityGroup
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-photoCategory
@@ -1406,6 +1430,8 @@ x-tagGroups:
       - json-api-model-school-benefitType
       - json-api-model-school-fundingType
       - json-api-model-school-schoolRequiredTeacherEducationLevel
+      - json-api-model-school-schoolMainTeacherNationalityGroup
+      - json-api-model-school-schoolRecognisedQualificationNationalityGroup
       - json-api-model-api-model-teacher
       # - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge

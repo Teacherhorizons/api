@@ -1,0 +1,32 @@
+#relationship attribites
+school-schoolMainTeacherNationalityGroup_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to School
+school-schoolMainTeacherNationalityGroup_nationalityGroupId:
+  type: integer
+  example: 1
+  description: Relationship to Nationality group
+
+# relatoinships
+school-schoolMainTeacherNationalityGroup_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+  
+school-schoolMainTeacherNationalityGroup_nationalityGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Nationality group
+  required: 
+    - id

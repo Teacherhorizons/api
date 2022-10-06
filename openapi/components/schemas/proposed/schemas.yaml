@@ -92,6 +92,9 @@ SimpleModels:
     - $ref: "../../models/simple/school/benefitType.yaml#/SimpleModel_school-benefitType"
     - $ref: "../../models/simple/school/fundingType.yaml#/SimpleModel_school-fundingType"
     - $ref: "../../models/simple/school/schoolRequiredTeacherEducationLevel.yaml#/SimpleModel_school-schoolRequiredTeacherEducationLevel"
+    - $ref: "../../models/simple/school/schoolMainTeacherNationalityGroup.yaml#/SimpleModel_school-schoolMainTeacherNationalityGroup"
+    - $ref: "../../models/simple/school/schoolRecognisedQualificationNationalityGroup.yaml#/SimpleModel_school-schoolRecognisedQualificationNationalityGroup"
+
 
     # teacher
     - $ref: "../../models/simple/teacher/Teacher.yaml#/SimpleModel_teacher"
@@ -221,6 +224,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/school/benefitType.yaml#/JsonApiModel_school-benefitType"
     - $ref: "../../models/json-api/school/fundingType.yaml#/JsonApiModel_school-fundingType"
     - $ref: "../../models/json-api/school/schoolRequiredTeacherEducationLevel.yaml#/JsonApiModel_school-schoolRequiredTeacherEducationLevel"
+    - $ref: "../../models/json-api/school/schoolMainTeacherNationalityGroup.yaml#/JsonApiModel_school-schoolMainTeacherNationalityGroup"
+    - $ref: "../../models/json-api/school/schoolRecognisedQualificationNationalityGroup.yaml#/JsonApiModel_school-schoolRecognisedQualificationNationalityGroup"
 
     # teacher
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"

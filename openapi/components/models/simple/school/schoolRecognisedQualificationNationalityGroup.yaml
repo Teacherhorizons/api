@@ -1,0 +1,20 @@
+SimpleModel_school-schoolRecognisedQualificationNationalityGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolRecognisedQualificationNationalityGroup_id"
+    # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolRecognisedQualificationNationalityGroup.yaml#/school-schoolRecognisedQualificationNationalityGroup_schoolId"
+    nationalityGroupId:
+      $ref: "../../library/school/schoolRecognisedQualificationNationalityGroup.yaml#/school-schoolRecognisedQualificationNationalityGroup_nationalityGroupId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolRecognisedQualificationNationalityGroup_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
