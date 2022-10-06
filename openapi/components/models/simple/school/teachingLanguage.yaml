@@ -5,6 +5,8 @@ SimpleModel_school-teachingLanguage:
     id:
       $ref: "#/SimpleModel_school-teachingLanguage_id"
     # simple attributes
+    name:
+      $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_name"
     creationDate:
       $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_creationDate"
     latestUpdateDate:

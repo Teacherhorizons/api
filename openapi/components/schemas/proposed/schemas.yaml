@@ -46,6 +46,7 @@ SimpleModels:
     - $ref: "../../models/simple/general/nationality.yaml#/SimpleModel_general-nationality"
     - $ref: "../../models/simple/general/nationalityGroup.yaml#/SimpleModel_general-nationalityGroup"
     - $ref: "../../models/simple/general/month.yaml#/SimpleModel_general-month"
+    - $ref: "../../models/simple/general/siteSetting.yaml#/SimpleModel_general-siteSetting"
 
     # application
     - $ref: "../../models/simple/application/application.yaml#/SimpleModel_application"
@@ -138,6 +139,7 @@ SimpleModels:
     - $ref: "../../models/simple/user/message.yaml#/SimpleModel_user-message"
     - $ref: "../../models/simple/user/messageStatus.yaml#/SimpleModel_user-messageStatus"
     - $ref: "../../models/simple/user/thUser.yaml#/SimpleModel_user-thUser"
+    - $ref: "../../models/simple/user/setting.yaml#/SimpleModel_user-setting"
 
     # job
     - $ref: "../../models/simple/job/job.yaml#/SimpleModel_job"
@@ -184,6 +186,7 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/nationality.yaml#/JsonApiModel_general-nationality"
     - $ref: "../../models/json-api//general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup"
     - $ref: "../../models/json-api//general/month.yaml#/JsonApiModel_general-month"
+    - $ref: "../../models/json-api//general/siteSetting.yaml#/JsonApiModel_general-siteSetting"
 
     # school
     - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
@@ -264,6 +267,7 @@ JsonApiModels:
     - $ref: "../../models/json-api/user/message.yaml#/JsonApiModel_user-message"
     - $ref: "../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus"
     - $ref: "../../models/json-api/user/thUser.yaml#/JsonApiModel_user-thUser"
+    - $ref: "../../models/json-api/user/setting.yaml#/JsonApiModel_user-setting"
 
     # job
     - $ref: "../../models/json-api/job/job.yaml#/JsonApiModel_job"

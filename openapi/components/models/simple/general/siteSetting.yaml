@@ -1,0 +1,22 @@
+SimpleModel_general-siteSetting:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-siteSetting_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/siteSetting.yaml#/general-siteSetting_name"
+    value:
+      $ref: "../../library/general/siteSetting.yaml#/general-siteSetting_value"
+  required:
+    - id
+    - name
+    - value
+
+# shared
+SimpleModel_general-siteSetting_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

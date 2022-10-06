@@ -1,0 +1,23 @@
+SimpleModel_user-setting:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_user-setting_id"
+    # simple attributes
+    name:
+      $ref: "../../library/user/setting.yaml#/user-setting_name"
+    # relationship attributes
+    editableByUserCategoryId:
+      $ref: "../../library/user/setting.yaml#/user-setting_editableByUserCategoryId"
+    appliesToUserCategoryId:
+      $ref: "../../library/user/setting.yaml#/user-setting_appliesToUserCategoryId"
+  required:
+    - id
+
+# shared
+SimpleModel_user-setting_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

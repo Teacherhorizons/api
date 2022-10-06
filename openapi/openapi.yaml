@@ -200,6 +200,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-month" />
 
+  - name: simple-model-general-siteSetting
+    x-displayName: Simple model - general-siteSetting
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-siteSetting" />
+
   #   # - name: simple-model-lists
   #   #   x-displayName: Lists
   #   #   description: |
@@ -630,6 +635,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-thUser" />
 
+  - name: simple-model-user-setting
+    x-displayName: Simple model - user-setting
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-setting" />
+
   #   # tags - simple-models - meta
 
   - name: simple-model-meta-entityType
@@ -776,6 +786,11 @@ tags:
     x-displayName: JSON:API model - general-month
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-month" />
+
+  - name: json-api-model-general-siteSetting
+    x-displayName: JSON:API model - general-siteSetting
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-siteSetting" />
 
   # tags - JSON:API models - job
   - name: json-api-model-job
@@ -1184,6 +1199,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
 
+  - name: json-api-model-user-setting
+    x-displayName: JSON:API model - user-setting
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-setting" />
+
   # # tags - json-api-models - meta
 
   - name: json-api-model-meta-entityType
@@ -1236,6 +1256,7 @@ x-tagGroups:
       - simple-model-general-nationality
       - simple-model-general-nationalityGroup
       - simple-model-general-month
+      - simple-model-general-siteSetting
       - simple-model-regional-city
       - simple-model-regional-country
       - simple-model-regional-region
@@ -1313,6 +1334,7 @@ x-tagGroups:
       - simple-model-user-message
       - simple-model-user-messageStatus
       - simple-model-user-thUser
+      - simple-model-user-setting
       - simple-model-job
       - simple-model-job-factJob
       - simple-model-job-status
@@ -1348,6 +1370,7 @@ x-tagGroups:
       - json-api-model-general-nationality
       - json-api-model-general-nationalityGroup
       - json-api-model-general-month
+      - json-api-model-general-siteSetting
       - json-api-model-regional-city
       - json-api-model-regional-country
       - json-api-model-regional-region
@@ -1425,6 +1448,7 @@ x-tagGroups:
       - json-api-model-user-message
       - json-api-model-user-messageStatus
       - json-api-model-user-thUser
+      - json-api-model-user-setting
       - json-api-model-job
       - json-api-model-job-factJob
       - json-api-model-job-status
