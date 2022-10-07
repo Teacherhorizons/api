@@ -1,22 +1,24 @@
-JsonApiModel_user-thUser:
+JsonApiModel_staff-staffMember:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_user-thUser_type"
+      $ref: "#/JsonApiModel_staff-staffMember_type"
     id:
-      $ref: "#/JsonApiModel_user-thUser_id"
+      $ref: "#/JsonApiModel_staff-staffMember_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         initials:
-          $ref: "../../library/user/thUser.yaml#/user-thUser_initials"
+          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
         activeInTH:
-          $ref: "../../library/user/thUser.yaml#/user-thUser_activeInTH"
+          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
       # relationship attributes
         user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        salesforceUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
       type: object
@@ -24,17 +26,19 @@ JsonApiModel_user-thUser:
       properties:
         user:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        salesforceUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
 
-JsonApiModel_user-thUser_type:
+JsonApiModel_staff-staffMember_type:
   type: string
-  example: user-thUser
+  example: staff-staffMember
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_user-thUser_id:
+JsonApiModel_staff-staffMember_id:
   type: string
   example: "1"
   readOnly: true

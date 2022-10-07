@@ -1,29 +1,31 @@
-JsonApiModel_user-userCategory:
+JsonApiModel_user-type:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_user-userCategory_type"
+      $ref: "#/JsonApiModel_user-type_type"
     id:
-      $ref: "#/JsonApiModel_user-userCategory_id"
+      $ref: "#/JsonApiModel_user-type_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        profile:
-          $ref: "../../library/user/userCategory.yaml#/user-userCategory_profile"
+        name:
+          $ref: "../../library/user/type.yaml#/user-type_name"
+        slug:
+          $ref: "../../library/user/type.yaml#/user-type_slug"
   required:
     - type
     - id
 
-JsonApiModel_user-userCategory_type:
+JsonApiModel_user-type_type:
   type: string
-  example: user-userCategory
+  example: user-type
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_user-userCategory_id:
+JsonApiModel_user-type_id:
   type: string
   example: "1"
   readOnly: true

@@ -625,10 +625,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-favouriteTeacher" />
 
-  - name: simple-model-user-userCategory
-    x-displayName: Simple model - user-userCategory
+  - name: simple-model-user-type
+    x-displayName: Simple model - user-type
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-userCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-type" />
 
   - name: simple-model-user-message
     x-displayName: Simple model - user-message
@@ -640,10 +640,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-messageStatus" />
 
-  - name: simple-model-user-thUser
-    x-displayName: Simple model - user-thUser
+  - name: simple-model-staff-staffMember
+    x-displayName: Simple model - staff-staffMember
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-thUser" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_staff-staffMember" />
 
   - name: simple-model-user-setting
     x-displayName: Simple model - user-setting
@@ -1201,10 +1201,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-favouriteTeacher" />
 
-  - name: json-api-model-user-userCategory
-    x-displayName: JSON:API model - user-userCategory
+  - name: json-api-model-user-type
+    x-displayName: JSON:API model - user-type
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-userCategory" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-type" />
 
   - name: json-api-model-user-message
     x-displayName: JSON:API model - user-message
@@ -1216,10 +1216,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
 
-  - name: json-api-model-user-thUser
-    x-displayName: JSON:API model - user-thUser
+  - name: json-api-model-staff-staffMember
+    x-displayName: JSON:API model - staff-staffMember
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-thUser" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_staff-staffMember" />
 
   - name: json-api-model-user-setting
     x-displayName: JSON:API model - user-setting
@@ -1354,10 +1354,10 @@ x-tagGroups:
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
       - simple-model-user-favouriteTeacher
-      - simple-model-user-userCategory
+      - simple-model-user-type
       - simple-model-user-message
       - simple-model-user-messageStatus
-      - simple-model-user-thUser
+      - simple-model-staff-staffMember
       - simple-model-user-setting
       - simple-model-job
       - simple-model-job-factJob
@@ -1470,10 +1470,10 @@ x-tagGroups:
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
       - json-api-model-user-favouriteTeacher
-      - json-api-model-user-userCategory
+      - json-api-model-user-type
       - json-api-model-user-message
       - json-api-model-user-messageStatus
-      - json-api-model-user-thUser
+      - json-api-model-staff-staffMember
       - json-api-model-user-setting
       - json-api-model-job
       - json-api-model-job-factJob

@@ -1,0 +1,45 @@
+#attributes
+staff-staffMember_initials:
+  type: string
+  example: SW
+staff-staffMember_activeInTH:
+  type: integer
+  example: 1
+
+#relationship attribute
+staff-staffMember_userId:
+  type: integer
+  example: 1
+  description: ""
+
+staff-staffMember_salesforceUserId:
+  type: integer
+  example: 1
+  description: ""
+
+#relationship
+staff-staffMember_user:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: "" 
+  required: 
+    - id
+
+staff-staffMember_salesforceUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: "" 
+  required: 
+    - id
+
+
+    
+  
