@@ -427,6 +427,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolRecognisedQualificationNationalityGroup" />
 
+  - name: simple-model-school-schoolReview
+    x-displayName: Simple model - school-schoolReview
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolReview" />
+
   # tags - simple-models - teacher
   - name: simple-model-teacher
     x-displayName: Simple model - teacher
@@ -1177,7 +1182,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolRecognisedQualificationNationalityGroup" />
 
-      
+  - name: json-api-model-school-schoolReview
+    x-displayName: JSON:API model - school-schoolReview
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolReview" />
 
   # tags - json-api-models - users
 
@@ -1316,6 +1324,7 @@ x-tagGroups:
       - simple-model-school-schoolRequiredTeacherEducationLevel
       - simple-model-school-schoolMainTeacherNationalityGroup
       - simple-model-school-schoolRecognisedQualificationNationalityGroup
+      - simple-model-school-schoolReview
       - simple-model-teacher
       - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-photoCategory
@@ -1432,6 +1441,7 @@ x-tagGroups:
       - json-api-model-school-schoolRequiredTeacherEducationLevel
       - json-api-model-school-schoolMainTeacherNationalityGroup
       - json-api-model-school-schoolRecognisedQualificationNationalityGroup
+      - json-api-model-school-schoolReview
       - json-api-model-api-model-teacher
       # - json-api-model-teacher-additionalPhotoCategory
       - json-api-model-teacher-badge

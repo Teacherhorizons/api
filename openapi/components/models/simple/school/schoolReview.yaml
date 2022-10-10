@@ -1,0 +1,29 @@
+SimpleModel_school-schoolReview:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolReview_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_latestUpdateDate"
+    # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_schoolId"
+    categoryId:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_categoryId"
+    creationUserId:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolReview_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

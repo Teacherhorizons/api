@@ -1,0 +1,81 @@
+#attributes
+school-schoolReview_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+school-schoolReview_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attributes
+
+school-schoolReview_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-schoolReview_categoryId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-schoolReview_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+school-schoolReview_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to User
+
+#relationships
+school-schoolReview_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
+school-schoolReview_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+
+school-schoolReview_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+  
+school-schoolReview_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to User
+  required: 
+    - id
+
+
+
+
