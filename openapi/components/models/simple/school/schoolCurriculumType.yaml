@@ -5,13 +5,15 @@ SimpleModel_school-schoolCurriculumType:
     id:
       $ref: "#/SimpleModel_school-schoolCurriculumType_id"
     # simple attributes
-    name:
-      $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_name"
     creationDate:
       $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_latestUpdateDate"
     # relationship attributes
+    schoolId:
+          $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_schoolId"
+    curriculumTypeId:
+          $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_curriculumTypeId"
     creationUserId:
       $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_creationUserId"
     latestUpdateUserId:

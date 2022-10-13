@@ -15,16 +15,6 @@ school-curriculumType_latestUpdateDate:
 
 #relationship attributes
 
-school-curriculumType_schoolId:
-  type: integer
-  example: 1
-  description: Relationship to school
-
-school-curriculumType_curriculumTypeId:
-  type: integer
-  example: 1
-  description: Relationship to curriculum
-
 school-curriculumType_creationUserId:
   type: integer
   example: 1
@@ -36,27 +26,6 @@ school-curriculumType_latestUpdateUserId:
   description: Relationship to User
 
 #relationships
-school-curriculumType_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to school
-  required: 
-    - id
-
-school-curriculumType_curriculumType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to curriculum
-  required: 
-    - id
     
 school-curriculumType_creationUser:
   type: object

@@ -20,10 +20,18 @@ JsonApiModel_school-schoolAcademicSystem:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        academicSystem:
+          $ref: "../school/academicSystem.yaml#/JsonApiModel_school-academicSystem_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        academicSystem:
+          $ref: "../school/academicSystem.yaml#/JsonApiModel_school-academicSystem_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
@@ -43,3 +51,5 @@ JsonApiModel_school-schoolAcademicSystem_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
+
+

@@ -11,13 +11,15 @@ JsonApiModel_school-schoolCurriculumType:
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_name"
         creationDate:
           $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_creationDate"  
         latestUpdateDate:
           $ref: "../../library/school/schoolCurriculumType.yaml#/school-schoolCurriculumType_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        curriculumType:
+          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -26,6 +28,10 @@ JsonApiModel_school-schoolCurriculumType:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        curriculumType:
+          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

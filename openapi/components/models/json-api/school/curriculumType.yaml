@@ -18,10 +18,6 @@ JsonApiModel_school-curriculumType:
         latestUpdateDate:
           $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_latestUpdateDate"
         # relationship attributes
-        school:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
-        curriculumType:
-          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -30,10 +26,6 @@ JsonApiModel_school-curriculumType:
       type: object
       additionalProperties: false
       properties:
-        school:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
-        curriculumType:
-          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

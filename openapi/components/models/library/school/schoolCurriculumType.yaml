@@ -1,12 +1,4 @@
 #attributes
-school-schoolCurriculumType_name:
-  type: string
-  example: Secondary Subject Teacher
-
-school-schoolCurriculumType_scoreValue:
-  type: string
-  example: ""
-
 school-schoolCurriculumType_creationDate:
   type: string
   format: date-time
@@ -18,6 +10,16 @@ school-schoolCurriculumType_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
+school-schoolCurriculumType_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to school
+
+school-schoolCurriculumType_curriculumTypeId:
+  type: integer
+  example: 1
+  description: Relationship to curriculum
+
 school-schoolCurriculumType_creationUserId:
   type: integer
   example: 1
@@ -26,16 +28,29 @@ school-schoolCurriculumType_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to User
-school-schoolCurriculumType_schoolId:
-  type: integer
-  example: 1
-  description: Relationship to School
-school-schoolCurriculumType_examTitleId:
-      type: integer
-      example: 1
-      description: Relationship to examTitle
 
 #relationships
+school-schoolCurriculumType_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school
+  required: 
+    - id
+
+school-schoolCurriculumType_curriculumType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to curriculum
+  required: 
+    - id
 school-schoolCurriculumType_creationUser:
   type: object
   additionalProperties: false
@@ -58,24 +73,3 @@ school-schoolCurriculumType_latestUpdateUser:
   required: 
     - id
 
-school-schoolCurriculumType_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to School
-  required: 
-    - id
-
-school-schoolCurriculumType_examTitle:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to examTitle
-  required: 
-    - id
