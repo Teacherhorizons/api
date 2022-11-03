@@ -31,7 +31,48 @@ SimpleModel_teacher_admin:
         - admin
     id:
       $ref: "#/SimpleModel_teacher_id"
-    # relationship attributes
+    # simple attributes
+    memberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
+    availableFromDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_availableFromDate"
+    statement:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_statement"
+    partnerMemberNumber:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_partnerMemberNumber"
+    numberOfYearsTeachingExperience:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfYearsTeachingExperience"
+    profileStrength:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_profileStrength"
+    birthYear:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_birthYear"
+    numberOfDependentChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren"
+    latestAdviserCommentDate:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate"
+    interestedInPrivateTuition:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition"
+    neverPotentialRiskToChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren"
+    neverBehaviouralConcernsTowardsChildren:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_neverBehaviouralConcernsTowardsChildren"
+    thPlaceabilityRating:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
+    teacherDoesNotWantToBeContacted:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_teacherDoesNotWantToBeContacted"
+    isAvailableForRemoteTeaching:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_isAvailableForRemoteTeaching"
+    twitterHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_twitterHandle"
+    instagramHandle:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_instagramHandle"
+    linkedInProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_linkedInProfileUrl"
+    facebookProfileUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl"
+    videoInterviewClipUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl"
+    #relationship attributes
     userId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
     teachingQualificationCountryId:
@@ -41,13 +82,19 @@ SimpleModel_teacher_admin:
     jobSeekingStatusId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_jobSeekingStatusId"
     userTypeId:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userTypeId"
     thDiscoveryMethodId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_thDiscoveryMethodId"
     latestAdviserCommentUserId:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_userId"
+      $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentUserId"
     currentCountryId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_currentCountryId"
+    maritalStatusId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
+    internationalSchoolExperienceId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
+    photoUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
   required:
     - schema
     - id
@@ -131,8 +178,8 @@ SimpleModel_teacher_school:
       $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
     internationalSchoolExperienceId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
-    photoFileId:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_photoFileId"
+    photoUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
   required:
     - schema
     - id
@@ -209,8 +256,8 @@ SimpleModel_teacher_teacher:
       $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
     internationalSchoolExperienceId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
-    photoFileId:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_photoFileId"
+    photoUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
   required:
     - schema
     - id
