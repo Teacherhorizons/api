@@ -303,8 +303,8 @@ Response_application_includedSchool_teacher:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
-        smallProfileImageUrl:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallProfileImageUrl"
+        smallprofilePhotoUrl:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
         leadRecruitmentContactName:
           allOf:
             - $ref: "../../../components/models/library/school/school.yaml#/school_leadRecruitmentContactName"
@@ -317,7 +317,7 @@ Response_application_includedSchool_teacher:
         - name
         - slug
         - city
-        - smallProfileImageUrl
+        - smallprofilePhotoUrl
     relationships:
       type: object
       additionalProperties: false

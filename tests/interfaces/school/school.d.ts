@@ -10,7 +10,7 @@ declare namespace JsonApi {
       city: JsonApi.IdOnly;
       lraUser?: JsonApi.IdOnly;
       thRating?: number;
-      smallProfileImageUrl?: string;
+      smallprofilePhotoUrl?: string;
     };
   }
 }

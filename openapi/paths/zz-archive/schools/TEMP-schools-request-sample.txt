@@ -9,7 +9,7 @@
 var schoolRequestString = /schools?page[size]=20&filter[profileStrength][gte]=30&filter[countryId]=2,3
 &include=city,city.country,city.country.region,academicSystems,accreditations[,schoolUsers]
 &fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
-&fields[cities]=imageUrl,name
+&fields[cities]=photoUrl,name
 &fields[countries]=name
 &fields[regions]=name
 
@@ -58,7 +58,7 @@ var cityIds = schoolsService.getCityIds(schools); // 1,3,7
 
 var cityRequestString = /cities?filter[id]=1,3,7
 &include=country,country.region
-&fields[cities]=imageUrl,name
+&fields[cities]=photoUrl,name
 &fields[countries]=name
 &fields[regions]=name
 
@@ -111,7 +111,7 @@ limit 20;
 javascript
 
 -- derive city data (one to many; could be cached?)
-select imageUrl, name, countryId
+select photoUrl, name, countryId
 from cities
 where id in ({cityIds})
 
@@ -144,7 +144,7 @@ where schoolId in ({schoolIds})
 /schools?page[size]=20&filter[country]=1,164
 &include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
 &fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
-&fields[cities]=imageUrl,name,country
+&fields[cities]=photoUrl,name,country
 &fields[countries]=name,region
 &fields[regions]=name
 
@@ -155,7 +155,7 @@ where schoolId in ({schoolIds})
 /schools?page[size]=20&filter[name][matches]=nat
 &include=city,city.country,city.country.region,academicSystems,accreditations,schoolUsers
 &fields[schools]=isApprovedByTh,isEndorsedByTh,isVisitedByTh,profileStrength,slug,name,locationLatLong
-&fields[cities]=imageUrl,name,country
+&fields[cities]=photoUrl,name,country
 &fields[countries]=name,region
 &fields[regions]=name
 

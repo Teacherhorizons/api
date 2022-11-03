@@ -111,13 +111,13 @@ Response_applications_includedTeacher_admin:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
         fullName:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_fullName"
-        profileImageUrl:
-          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_profileImageUrl"
+        profilePhotoUrl:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl"
       required:
         - memberNumber
         - thDoNotContact
         - fullName
-        - profileImageUrl
+        - profilePhotoUrl
   required:
     - type
     - id
@@ -310,13 +310,13 @@ Response_applications_includedSchool_teacher:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
-        smallProfileImageUrl:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallProfileImageUrl"
+        smallprofilePhotoUrl:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
       required:
         - name
         - slug
         - city
-        - smallProfileImageUrl
+        - smallprofilePhotoUrl
   required:
     - type
     - id
@@ -421,8 +421,8 @@ Response_applications_includedTeacher_school:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
         fullName:
           $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_fullName"
-        profileImageUrl:
-          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_profileImageUrl"
+        profilePhotoUrl:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl"
   required:
     - type
     - id

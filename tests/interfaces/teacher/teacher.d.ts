@@ -4,7 +4,7 @@ declare namespace JsonApi {
   export interface Teacher extends JsonApi.ResourceObject {
     type: 'teacher';
     attributes: {
-      profileImageUrl?: string;
+      profilePhotoUrl?: string;
       fullName?: string;
       thPlaceabilityRating?: number;
       memberNumber?: number;
