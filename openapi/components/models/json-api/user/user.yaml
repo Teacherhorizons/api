@@ -11,6 +11,8 @@ JsonApiModel_user:
       additionalProperties: false
       properties:
         # simple attributes
+        fullName:
+          $ref: "../../library/user/user.yaml#/user_fullName"
         firstName:
           $ref: "../../library/user/user.yaml#/user_firstName"
         lastName:

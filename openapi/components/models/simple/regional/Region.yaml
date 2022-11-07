@@ -32,6 +32,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
     latestUpdateDate:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
+    ambassadorTestimonial:
+      $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
     # nationalAverageIncome:
     #   $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
     locationLatitude:
@@ -77,6 +79,8 @@ SimpleModel_regional-region_school:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+    ambassadorTestimonial:
+      $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
   required:
     - schema
     - id
@@ -106,6 +110,8 @@ SimpleModel_regional-region_teacher:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+    ambassadorTestimonial:
+      $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
   required:
     - schema
     - id

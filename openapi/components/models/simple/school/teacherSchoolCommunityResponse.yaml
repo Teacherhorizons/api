@@ -5,8 +5,8 @@ SimpleModel_school-teacherSchoolCommunityResponse:
     id:
       $ref: "#/SimpleModel_school-teacherSchoolCommunityResponse_id"
     # simple attributes
-    name:
-      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
+    text:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_text"
     creationDate:
       $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"
     latestUpdateDate:
@@ -14,6 +14,10 @@ SimpleModel_school-teacherSchoolCommunityResponse:
     # relationship attributes
     schoolId:
       $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_schoolId"
+    teacherId:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_teacherId"
+    questionId:
+      $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_questionId"
     creationUserId:
       $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationUserId"
     latestUpdateUserId:
