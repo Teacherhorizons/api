@@ -125,6 +125,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-actionType" />
 
+  - name: simple-model-general-article
+    x-displayName: Simple model - general-article
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-article" />
+
   - name: simple-model-general-autoEmail
     x-displayName: Simple model - general-autoEmail
     description: |
@@ -732,6 +737,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-actionType" />
 
+  - name: json-api-model-general-article
+    x-displayName: JSON:API model - general-article
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-article" />
+
   - name: json-api-model-general-autoEmail
     x-displayName: JSON:API model - general-autoEmail
     description: |
@@ -1272,6 +1282,7 @@ x-tagGroups:
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
       - simple-model-general-actionType
+      - simple-model-general-article
       - simple-model-general-autoEmail
       - simple-model-general-currency
       - simple-model-general-educationLevel
@@ -1389,6 +1400,7 @@ x-tagGroups:
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
       - json-api-model-general-actionType
+      - json-api-model-general-article
       - json-api-model-general-autoEmail
       - json-api-model-general-currency
       - json-api-model-general-educationLevel

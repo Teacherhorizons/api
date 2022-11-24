@@ -1,0 +1,38 @@
+SimpleModel_general-article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-article_id"
+    # simple attributes
+      title:
+        $ref: "../../library/general/article.yaml#/general-article_title"
+      snippet:
+        $ref: "../../library/general/article.yaml#/general-article_snippet"
+      url:
+        $ref: "../../library/general/article.yaml#/general-article_url"
+      creationDate:
+        $ref: "../../library/general/article.yaml#/general-article_creationDate"
+      latestUpdateDate:
+        $ref: "../../library/general/article.yaml#/general-article_latestUpdateDate"
+      # relationship attributes
+      creationUserId:
+        $ref: "../../library/general/nationality.yaml#/general-nationality_creationUserId"
+      latestUpdateUserId:
+        $ref: "../../library/general/nationality.yaml#/general-nationality_latestUpdateUserId"
+  required:
+    - id
+    - title
+    - snippet
+    - url
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+
+# shared
+SimpleModel_general-article_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
