@@ -34,6 +34,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_name"
         alias:
           $ref: "../../library/regional/region.yaml#/regional-region_alias"
+        slug:
+          $ref: "../../library/regional/region.yaml#/regional-region_name"
         creationDate:
           $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
         latestUpdateDate:
@@ -44,21 +46,97 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
         locationLongitude:
           $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+        numberOfCountries:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
+        teachingInRegionDescription:
+          $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
+        ambassadorTestimonial:
+          $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
+        photo1Url:
+          $ref: "../../library/regional/region.yaml#/regional-region_photo1Url"
+        qualityOfLifeDescription:
+          $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+        adviceForInternationalTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+        numberOfSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchools"
+        numberOfIBSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfIBSchools"
+        numberOfLiveJobs:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLiveJobs"
+        numberOfPrimaryIBCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
+        numberOfPrimaryUSCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUSCurriculumSchools"
+        numberOfPrimaryUKCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUKCurriculumSchools"
+        numberOfPrimaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryInternationalCurriculumSchools"
+        numberOfPrimaryOtherCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryOtherCurriculumSchools"
+        numberOfSecondaryIBCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryIBCurriculumSchools"
+        numberOfSecondaryUSCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUSCurriculumSchools"
+        numberOfSecondaryUKCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUKCurriculumSchools"
+        numberOfSecondaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools"
+        numberOfSecondaryOtherCurriculumSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
+        savingPercentage:
+          $ref: "../../library/regional/region.yaml#/regional-region_savingPercentage"
+        percentageOfSchoolsHaveFlightAllowance:
+          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
+        percentageOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+        percentageOfOverseasTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
+        percentageOfInternationalStudents:
+          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
       required:
         - name
         - alias
         - creationDate
         - latestUpdateDate
         - slug
+        - numberOfCountries
         - locationLatitude
         - locationLongitude
         - creationUser
         - latestUpdateUser
+        - teachingInRegionDescription
+        - ambassadorTeacherId
+        - ambassadorTestimonial
+        - photo1Url
+        - qualityOfLifeDescription
+        - adviceForInternationalTeachers
+        - numberOfSchools
+        - numberOfIBSchools
+        - numberOfLiveJobs
+        - numberOfPrimaryIBCurriculumSchools
+        - numberOfPrimaryUSCurriculumSchools
+        - numberOfPrimaryUKCurriculumSchools
+        - numberOfPrimaryInternationalCurriculumSchools
+        - numberOfPrimaryOtherCurriculumSchools
+        - numberOfSecondaryIBCurriculumSchools
+        - numberOfSecondaryUSCurriculumSchools
+        - numberOfSecondaryUKCurriculumSchools
+        - numberOfSecondaryInternationalCurriculumSchools
+        - numberOfSecondaryOtherCurriculumSchools
+        - savingPercentage
+        - percentageOfSchoolsHaveFlightAllowance
+        - percentageOfSchoolsHavePrivateHealthcareScheme
+        - percentageOfOverseasTeachers
+        - percentageOfInternationalStudents
     relationships:
       type: object
       additionalProperties: false
@@ -67,6 +145,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - schema
     - type

@@ -32,17 +32,66 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
     latestUpdateDate:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
-    # nationalAverageIncome:
-    #   $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
+    numberOfCountries:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
     locationLatitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+    teachingInRegionDescription:
+      $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
+    ambassadorTestimonial:
+      $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
+    photo1Url:
+      $ref: "../../library/regional/region.yaml#/regional-region_photo1Url"
+    qualityOfLifeDescription:
+      $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+    adviceForInternationalTeachers:
+      $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+    numberOfSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchools"
+    numberOfIBSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfIBSchools"
+    numberOfLiveJobs:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfLiveJobs"
+    numberOfPrimaryIBCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
+    numberOfPrimaryUSCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUSCurriculumSchools"
+    numberOfPrimaryUKCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUKCurriculumSchools"
+    numberOfPrimaryInternationalCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryInternationalCurriculumSchools"
+    numberOfPrimaryOtherCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryOtherCurriculumSchools"
+    numberOfSecondaryIBCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryIBCurriculumSchools"
+    numberOfSecondaryUSCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUSCurriculumSchools"
+    numberOfSecondaryUKCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUKCurriculumSchools"
+    numberOfSecondaryInternationalCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools"
+    numberOfSecondaryOtherCurriculumSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
+    savingPercentage:
+      $ref: "../../library/regional/region.yaml#/regional-region_savingPercentage"
+    percentageOfSchoolsHaveFlightAllowance:
+      $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
+    percentageOfSchoolsHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+    percentageOfOverseasTeachers:
+      $ref: "../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
+    percentageOfInternationalStudents:
+      $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+
     # relationship attributes
     creationUserId:
       $ref: "../../library/regional/region.yaml#/regional-region_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateUserId"
+    ambassadorTeacherId:
+      $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTeacherId"
   required:
     - schema
     - id
@@ -51,11 +100,35 @@ SimpleModel_regional-region_admin:
     - creationDate
     - latestUpdateDate
     - slug
+    - numberOfCountries
     - locationLatitude
     - locationLongitude
     - creationUser
     - latestUpdateUser
-
+    - teachingInRegionDescription
+    - ambassadorTeacherId
+    - ambassadorTestimonial
+    - photo1Url
+    - qualityOfLifeDescription
+    - adviceForInternationalTeachers
+    - numberOfSchools
+    - numberOfIBSchools
+    - numberOfLiveJobs
+    - numberOfPrimaryIBCurriculumSchools
+    - numberOfPrimaryUSCurriculumSchools
+    - numberOfPrimaryUKCurriculumSchools
+    - numberOfPrimaryInternationalCurriculumSchools
+    - numberOfPrimaryOtherCurriculumSchools
+    - numberOfSecondaryIBCurriculumSchools
+    - numberOfSecondaryUSCurriculumSchools
+    - numberOfSecondaryUKCurriculumSchools
+    - numberOfSecondaryInternationalCurriculumSchools
+    - numberOfSecondaryOtherCurriculumSchools
+    - savingPercentage
+    - percentageOfSchoolsHaveFlightAllowance
+    - percentageOfSchoolsHavePrivateHealthcareScheme
+    - percentageOfOverseasTeachers
+    - percentageOfInternationalStudents
 SimpleModel_regional-region_school:
   type: object
   additionalProperties: false

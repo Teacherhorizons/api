@@ -1,8 +1,8 @@
 # # standard properties
 # regional-region_standardProperties_all:
 #   allOf:
-#     - $ref: "#/regional-region_standardProperties_shared"
-#     - $ref: "#/regional-region_standardProperties_adminOnly"
+#     - $ref: #/regional-region_standardProperties_shared
+#     - $ref: #/regional-region_standardProperties_adminOnly
 
 # regional-region_standardProperties_shared:
 #   properties:
@@ -44,8 +44,8 @@
 
 # regional-region_relationshipProperties_all:
 #   allOf:
-#     # - $ref: "#/regional-region_standardProperties_shared"
-#     - $ref: "#/regional-region_standardProperties_adminOnly"
+#     # - $ref: #/regional-region_standardProperties_shared
+#     - $ref: #/regional-region_standardProperties_adminOnly
 
 # # regional-region_relationshipProperties_shared:
 
@@ -77,6 +77,10 @@ regional-region_latestUpdateDate:
 regional-region_slug:
   type: string
   example: africa
+regional-region_numberOfCountries:
+  type: number
+  example: 47
+  description: Derived
 regional-region_locationLatitude:
   type: number
   example: 12.2755988905617
@@ -85,10 +89,93 @@ regional-region_locationLongitude:
   type: number
   example: 17.46826171875
   description: Longitude
+regional-region_teachingInRegionDescription:
+  type: string
+  example: Foo bar baz
+regional-region_ambassadorTestimonial:
+  type: string
+  example: Foo bar baz
+regional-region_photo1Url:
+  type: string
+  example: /foo/bar/baz.jpeg
+regional-region_qualityOfLifeDescription:
+  type: string
+  example: Foo bar baz
+regional-region_adviceForInternationalTeachers:
+  type: string
+  example: Foo bar baz
 regional-region_numberOfSchools:
-  type: integer
+  type: number
+  example: 75
+  description: Derived
+regional-region_numberOfIBSchools:
+  type: number
+  example: 45
+  description: Derived
+regional-region_numberOfLiveJobs:
+  type: number
+  example: 75
+  description: Derived
+regional-region_numberOfPrimaryIBCurriculumSchools:
+  type: number
   example: 123
-  description: Number of schools in region
+  description: Derived
+regional-region_numberOfPrimaryUSCurriculumSchools:
+  type: number
+  example: 150
+  description: Derived
+regional-region_numberOfPrimaryUKCurriculumSchools:
+  type: number
+  example: 112
+  description: Derived
+regional-region_numberOfPrimaryInternationalCurriculumSchools:
+  type: number
+  example: 120
+  description: Derived
+regional-region_numberOfPrimaryOtherCurriculumSchools:
+  type: number
+  example: 103
+  description: Derived
+regional-region_numberOfSecondaryIBCurriculumSchools:
+  type: number
+  example: 125
+  description: Derived
+regional-region_numberOfSecondaryUSCurriculumSchools:
+  type: number
+  example: 142
+  description: Derived
+regional-region_numberOfSecondaryUKCurriculumSchools:
+  type: number
+  example: 140
+  description: Derived
+regional-region_numberOfSecondaryInternationalCurriculumSchools:
+  type: number
+  example: 110
+  description: Derived
+regional-region_numberOfSecondaryOtherCurriculumSchools:
+  type: number
+  example: 120
+  description: Derived
+regional-region_savingPercentage:
+  type: integer
+  example: 30
+  description: Derived
+regional-region_percentageOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 67
+  description: Derived
+regional-region_percentageOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 86
+  description: Derived
+regional-region_percentageOfOverseasTeachers:
+  type: integer
+  example: 35
+  description: Derived
+regional-region_percentageOfInternationalStudents:
+  type: integer
+  example: 40
+  description: Derived
 
 #relationship attribute
 regional-region_creationUserId:
@@ -99,6 +186,10 @@ regional-region_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
+regional-region_ambassadorTeacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
 
 #relationships
 regional-region_creationUser:
@@ -109,9 +200,9 @@ regional-region_creationUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 regional-region_latestUpdateUser:
   type: object
   additionalProperties: false
@@ -120,5 +211,5 @@ regional-region_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
