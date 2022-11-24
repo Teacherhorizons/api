@@ -1,11 +1,7 @@
 #attributes
-school-teacherSchoolCommunityResponse_name:
+school-teacherSchoolCommunityResponse_text:
   type: string
   example: Secondary Subject Teacher
-
-school-teacherSchoolCommunityResponse_responseText:
-  type: string
-  example: ""
 
 school-teacherSchoolCommunityResponse_creationDate:
   type: string
@@ -27,6 +23,11 @@ school-teacherSchoolCommunityResponse_questionId:
   type: integer
   example: 1
   description: Relationship to Question
+
+school-teacherSchoolCommunityResponse_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to Teacher
 
 school-teacherSchoolCommunityResponse_creationUserId:
   type: integer
@@ -58,6 +59,17 @@ school-teacherSchoolCommunityResponse_question:
       type: string
       example: "1"
       description: Relationship to Question
+  required: 
+    - id
+
+school-teacherSchoolCommunityResponse_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
   required: 
     - id
 

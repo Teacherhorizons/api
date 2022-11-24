@@ -11,8 +11,8 @@ JsonApiModel_school-teacherSchoolCommunityResponse:
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_name"
+        text:
+          $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_text"
         creationDate:
           $ref: "../../library/school/teacherSchoolCommunityResponse.yaml#/school-teacherSchoolCommunityResponse_creationDate"  
         latestUpdateDate:
@@ -24,6 +24,10 @@ JsonApiModel_school-teacherSchoolCommunityResponse:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        question:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -34,6 +38,10 @@ JsonApiModel_school-teacherSchoolCommunityResponse:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        question:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - type
     - id

@@ -5,6 +5,8 @@ SimpleModel_user:
     id:
       $ref: "#/SimpleModel_user-user_id"
     # simple attributes
+    fullName:
+      $ref: "../../library/user/user.yaml#/user_fullName"
     firstName:
       $ref: "../../library/user/user.yaml#/user_firstName"
     lastName:
