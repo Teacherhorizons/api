@@ -27,6 +27,123 @@ regional-city_locationLongitude:
   type: number
   example: 13.2344444
   description: Longitude
+regional-city_photo1Url:
+  type: string
+  example: /foo/bar/baz.jpeg
+regional-city_crimeIndex:
+  type: number
+  example: 25
+regional-city_ambassadorTestimonial:
+  type: string
+  example: Lorem ipsum
+regional-city_qualityOfLifeDescription:
+  type: string
+  example: Foo bar iss
+regional-city_walkingAloneInDaylightSafetyIndex:
+  type: integer
+  example: 85.62
+regional-city_walkingAloneInNightSafetyIndex:
+  type: integer
+  example: 67
+regional-city_numberOfSchools:
+  type: number
+  example: 75
+  description: Derived
+regional-city_numberOfIBSchools:
+  type: number
+  example: 45
+  description: Derived
+regional-city_numberOfLiveJobs:
+  type: number
+  example: 75
+  description: Derived
+regional-city_numberOfPrimaryIBCurriculumSchools:
+  type: number
+  example: 34
+  description: Derived
+regional-city_numberOfPrimaryUSCurriculumSchools:
+  type: number
+  example: 54
+  description: Derived
+regional-city_numberOfPrimaryUKCurriculumSchools:
+  type: number
+  example: 35
+  description: Derived
+regional-city_numberOfPrimaryInternationalCurriculumSchools:
+  type: number
+  example: 70
+  description: Derived
+regional-city_numberOfPrimaryOtherCurriculumSchools:
+  type: number
+  example: 30
+  description: Derived
+regional-city_numberOfSecondaryIBCurriculumSchools:
+  type: number
+  example: 34
+  description: Derived
+regional-city_numberOfSecondaryUSCurriculumSchools:
+  type: number
+  example: 54
+  description: Derived
+regional-city_numberOfSecondaryUKCurriculumSchools:
+  type: number
+  example: 35
+  description: Derived
+regional-city_numberOfSecondaryInternationalCurriculumSchools:
+  type: number
+  example: 70
+  description: Derived
+regional-city_numberOfSecondaryOtherCurriculumSchools:
+  type: number
+  example: 30
+  description: Derived
+regional-city_savingPercentage:
+  type: integer
+  example: 0.3
+  description: Derived
+regional-city_percentageOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 0.67
+  description: Derived
+regional-city_percentageOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 0.86
+  description: Derived
+regional-city_percentageOfOverseasTeachers:
+  type: integer
+  example: 0.35
+  description: Derived
+regional-city_percentageOfInternationalStudents:
+  type: integer
+  example: 0.4
+  description: Derived
+regional-city_costOfMidRange3CourseMealFor2:
+  type: integer
+  example: $45
+regional-city_costOfCappuccinoRegular:
+  type: integer
+  example: $1.89
+regional-city_costOf1WayTicketLocalTransport:
+  type: integer
+  example: $1.60
+regional-city_costOfTaxi1KilometerNormalTariff:
+  type: integer
+  example: $0.47
+regional-city_costOfGasoline1Litre:
+  type: integer
+  example: $2.04
+regional-city_costOfBasicUtilities:
+  type: integer
+  example: $120.40
+regional-city_costOfInternet:
+  type: integer
+  example: $31.65
+regional-city_costOf1BedroomApartmentInCityCentre:
+  type: integer
+  example: $1,026.8
+regional-city_costOf1BedroomApartmentOutsideCityCentre:
+  type: integer
+  example: $776.67
 
 # Relationship attributes
 regional-city_countryId:
@@ -90,3 +207,7 @@ regional-city_language:
       description: Relationship to Language
   required:
     - id
+
+
+
+

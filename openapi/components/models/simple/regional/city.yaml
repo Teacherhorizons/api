@@ -40,14 +40,82 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
+    photo1Url:
+      $ref: "../../library/regional/city.yaml#/regional-city_photo1Url"
+    crimeIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_crimeIndex"
+    ambassadorTestimonial:
+      $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTestimonial"
+    qualityOfLifeDescription:
+      $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
+    walkingAloneInDaylightSafetyIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
+    walkingAloneInNightSafetyIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+    numberOfSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchools"
+    numberOfIBSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfIBSchools"
+    numberOfLiveJobs:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLiveJobs"
+    numberOfPrimaryIBCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools"
+    numberOfPrimaryUSCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools"
+    numberOfPrimaryUKCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools"
+    numberOfPrimaryInternationalCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools"
+    numberOfPrimaryOtherCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools"
+    numberOfSecondaryIBCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools"
+    numberOfSecondaryUSCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools"
+    numberOfSecondaryUKCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools"
+    numberOfSecondaryInternationalCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools"
+    numberOfSecondaryOtherCurriculumSchools:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
+    savingPercentage:
+      $ref: "../../library/regional/city.yaml#/regional-city_savingPercentage"
+    percentageOfSchoolsHaveFlightAllowance:
+      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
+    percentageOfSchoolsHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme"
+    percentageOfOverseasTeachers:
+      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers"
+    percentageOfInternationalStudents:
+      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfInternationalStudents"
+    costOfMidRange3CourseMealFor2:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2"
+    costOfCappuccinoRegular:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfCappuccinoRegular"
+    costOf1WayTicketLocalTransport:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport"
+    costOfTaxi1KilometerNormalTariff:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
+    costOfGasoline1Litre:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
+    costOfBasicUtilities:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfBasicUtilities"
+    costOfInternet:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfInternet"
+    costOf1BedroomApartmentInCityCentre:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOf1BedroomApartmentInCityCentre"
+    costOf1BedroomApartmentOutsideCityCentre:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOf1BedroomApartmentOutsideCityCentre"
     # relationship attributes
+    countryId:
+      $ref: "../../library/regional/city.yaml#/regional-city_countryId"
     creationUserId:
       $ref: "../../library/regional/city.yaml#/regional-city_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
+    languageId:
+      $ref: "../../library/regional/city.yaml#/regional-city_languageId"
   required:
-    - schema
-    - id
     - name
     - alias
     - keyAttractions
@@ -58,6 +126,41 @@ SimpleModel_regional-city_admin:
     - locationLongitude
     - creationUser
     - latestUpdateUser
+    - countryId
+    - languageId
+    - photo1Url
+    - crimeIndex
+    - ambassadorTestimonial
+    - qualityOfLifeDescription
+    - walkingAloneInDaylightSafetyIndex
+    - walkingAloneInNightSafetyIndex
+    - numberOfSchools
+    - numberOfIBSchools
+    - numberOfLiveJobs
+    - numberOfPrimaryIBCurriculumSchools
+    - numberOfPrimaryUSCurriculumSchools
+    - numberOfPrimaryUKCurriculumSchools
+    - numberOfPrimaryInternationalCurriculumSchools
+    - numberOfPrimaryOtherCurriculumSchools
+    - numberOfSecondaryIBCurriculumSchools
+    - numberOfSecondaryUSCurriculumSchools
+    - numberOfSecondaryUKCurriculumSchools
+    - numberOfSecondaryInternationalCurriculumSchools
+    - numberOfSecondaryOtherCurriculumSchools
+    - savingPercentage
+    - percentageOfSchoolsHaveFlightAllowance
+    - percentageOfSchoolsHavePrivateHealthcareScheme
+    - percentageOfOverseasTeachers
+    - percentageOfInternationalStudents
+    - costOfMidRange3CourseMealFor2
+    - costOfCappuccinoRegular
+    - costOf1WayTicketLocalTransport
+    - costOfTaxi1KilometerNormalTariff
+    - costOfGasoline1Litre
+    - costOfBasicUtilities
+    - costOfInternet
+    - costOf1BedroomApartmentInCityCentre
+    - costOf1BedroomApartmentOutsideCityCentre
 
 SimpleModel_regional-city_school:
   type: object
