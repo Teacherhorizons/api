@@ -1,0 +1,65 @@
+#Attributes
+regional-cityAttraction_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+regional-cityAttraction_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+#Relationship attributes
+regional-cityAttraction_cityId:
+  type: integer
+  example: 12
+regional-cityAttraction_typeId:
+  type: integer
+  example: 13
+regional-cityAttraction_creationUserId:
+  type: integer
+  example: 14
+regional-cityAttraction_latestUpdateUserId:
+  type: integer
+  example: 15
+
+#Relationships
+regional-regional-cityAttraction_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "67"
+      description: Relationship to City
+  required:
+    - id
+
+regional-regional-cityAttraction_type:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "76"
+      description: Relationship to Attraction-Type
+  required:
+    - id
+regional-regional-cityAttraction_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "67"
+      description: Relationship to user
+  required:
+    - id
+
+regional-regional-cityAttraction_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "76"
+      description: Relationship to user
+  required:
+    - id

@@ -1,0 +1,70 @@
+# attributes
+regional-cityArticle_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+# Relationship attributes
+regional-cityArticle_creationUserId:
+  type: string
+  example: 11
+  description: Relationship to User
+regional-cityArticle_cityId:
+  type: integer
+  example: 12
+  description: Relationship to City
+regional-cityArticle_categoryId:
+  type: integer
+  example: 12
+  description: Relationship to Category
+regional-cityArticle_articleId:
+  type: integer
+  example: 12
+  description: Relationship to Article
+
+# Relationships
+regional-cityArticle_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "12"
+      description: Relationship to City
+  required:
+    - id
+
+regional-cityArticle_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "11"
+      description: Relationship to user
+  required:
+    - id
+
+regional-cityArticle_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Category
+  required:
+    - id
+
+regional-cityArticle_article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City?
+  required:
+    - id
+
+    
+

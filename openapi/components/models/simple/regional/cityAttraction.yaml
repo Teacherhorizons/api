@@ -1,0 +1,35 @@
+SimpleModel_regional-cityAttraction:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-cityAttraction_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_latestUpdateDate"
+    # relationship attributes
+    cityId:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_cityId"
+    typeId:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_typeId"
+    creationUserId:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_latestUpdateUserId"
+  required:
+    - id
+    - cityId
+    - typeId
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+
+# shared
+SimpleModel_regional-cityAttraction_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

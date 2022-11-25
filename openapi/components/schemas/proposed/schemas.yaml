@@ -28,6 +28,9 @@ SimpleModels:
     # regional
     - $ref: "../../models/simple/regional/Region.yaml#/SimpleModel_regional-region"
     - $ref: "../../models/simple/regional/city.yaml#/SimpleModel_regional-city"
+    - $ref: "../../models/simple/regional/cityArticle.yaml#/SimpleModel_regional-cityArticle"
+    - $ref: "../../models/simple/regional/cityAttraction.yaml#/SimpleModel_regional-cityAttraction"
+    - $ref: "../../models/simple/regional/cityAttractionType.yaml#/SimpleModel_regional-cityAttractionType"
     - $ref: "../../models/simple/regional/country.yaml#/SimpleModel_regional-country"
 
     # general
@@ -171,6 +174,9 @@ JsonApiModels:
 
     # regional
     - $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city"
+    - $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle"
+    - $ref: "../../models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction"
+    - $ref: "../../models/json-api/regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType"
     - $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
 

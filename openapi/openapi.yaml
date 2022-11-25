@@ -250,6 +250,21 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-city" />
 
+  - name: simple-model-regional-cityArticle
+    x-displayName: Simple model - regional-cityArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityArticle" />
+
+  - name: simple-model-regional-cityAttraction
+    x-displayName: Simple model - regional-cityAttraction
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityAttraction" />
+  
+  - name: simple-model-regional-cityAttractionType
+    x-displayName: Simple model - regional-cityAttractionType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityAttractionType" />
+
   - name: simple-model-regional-country
     x-displayName: Simple model - regional-country
     description: |
@@ -839,6 +854,21 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-city" />
 
+  - name: json-api-model-regional-cityArticle
+    x-displayName: JSON:API model - regional-cityArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityArticle" />
+
+  - name: json-api-model-regional-cityAttraction
+    x-displayName: JSON:API model - regional-cityAttraction
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityAttraction" />
+
+  - name: json-api-model-regional-cityAttractionType
+    x-displayName: JSON:API model - regional-cityAttractionType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityAttractionType" />
+
   - name: json-api-model-regional-country
     x-displayName: JSON:API model - regional-country
     description: |
@@ -1299,6 +1329,9 @@ x-tagGroups:
       - simple-model-general-month
       - simple-model-general-siteSetting
       - simple-model-regional-city
+      - simple-model-regional-cityArticle
+      - simple-model-regional-cityAttraction
+      - simple-model-regional-cityAttractionType
       - simple-model-regional-country
       - simple-model-regional-region
       - simple-model-school
@@ -1417,6 +1450,9 @@ x-tagGroups:
       - json-api-model-general-month
       - json-api-model-general-siteSetting
       - json-api-model-regional-city
+      - json-api-model-regional-cityArticle
+      - json-api-model-regional-cityAttraction
+      - json-api-model-regional-cityAttractionType
       - json-api-model-regional-country
       - json-api-model-regional-region
       - json-api-model-school
