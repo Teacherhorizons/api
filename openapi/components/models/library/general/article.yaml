@@ -1,6 +1,4 @@
-general-article_id:
-  type: integer
-  example: 2
+#Attributes
 general-article_title:
   type: string
   example: Culture & community
@@ -16,9 +14,34 @@ general-article_creationDate:
 general-article_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
+
+#Relationship attributes
 general-article_creationUserId:
   type: integer
   example: 21
 general-article_latestUpdateUserId:
   type: integer
   example: 24
+
+# relationships
+general-article_creationUser:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+general-article_latestUpdateUser:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id

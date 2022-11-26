@@ -1,0 +1,86 @@
+#Attributes
+general-photo_name:
+  type: string
+  example: Foo
+general-photo_url:
+  type: 
+  example: /foo/bar/baz.jpeg
+general-photo_caption:
+  type: string
+  example: abc ff
+general-photo_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+general-photo_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+general-photo_widthInPx:
+  type: 
+  example: 400
+general-photo_heightInPx:
+  type: 
+  example: 500
+general-photo_sourceUrl:
+  type: 
+  example: /foo/bar/baz.jpeg
+general-photo_authorName:
+  type: string
+  example: Archie
+general-photo_licenseDescription:
+  type: string
+  example: Lorem Ipsum
+general-photo_modificationDescription:
+  type: string
+  example: Lorem Ipsum
+general-photo_notes:
+  type: string
+  example: Lorem Ipsum
+
+#Relationship attributes
+general-photo_creationUserId:
+  type: integer
+  example: 12
+  description: Relationship to user
+general-photo_latestUpdateUserId:
+  type: integer
+  example: 14
+  description: Relationship to user
+general-photo_typeId:
+  type: integer
+  example: 10
+  description: Relationship to user
+
+#Relationship
+general-photo_creationUser:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+general-photo_latestUpdateUser:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+general-photo_type:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+

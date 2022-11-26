@@ -1,0 +1,82 @@
+JsonApiModel_regional-countryArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-countryArticle_type"
+    id:
+      $ref: "#/JsonApiModel_regional-countryArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
+        # relationship attributes
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        category:
+          $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+        article:
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    required:
+      - id
+      - countryId
+      - categoryId
+      - articleId
+      - creationDate
+      - creationUserId
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+        category:
+          $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
+        article:
+            $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+
+JsonApiModel_regional-countryArticle_type:
+  type: string
+  example: regional-countryArticle
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-countryArticle_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-countryArticle_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-countryArticle_id"
+  required:
+    - id
+
+JsonApiModel_regional-countryArticle_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-countryArticle_type"
+        id:
+          $ref: "#/JsonApiModel_regional-countryArticle_id"
+      required:
+        - type
+        - id
+  required:
+    - data

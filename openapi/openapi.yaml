@@ -140,6 +140,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-educationLevel" />
 
+  - name: simple-model-general-photo
+    x-displayName: Simple model - general-photo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-photo" />
+
   - name: simple-model-general-pensionSchemeType
     x-displayName: Simple model - general-pensionSchemeType
     description: |
@@ -250,6 +255,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-city" />
 
+  - name: simple-model-regional-articleCategory
+    x-displayName: Simple model - regional-articleCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-articleCategory" />
+
   - name: simple-model-regional-cityArticle
     x-displayName: Simple model - regional-cityArticle
     description: |
@@ -269,6 +279,11 @@ tags:
     x-displayName: Simple model - regional-country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-country" />
+
+  - name: simple-model-regional-countryArticle
+    x-displayName: Simple model - regional-countryArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-countryArticle" />
 
   - name: simple-model-regional-region
     x-displayName: Simple model - regional-region
@@ -772,6 +787,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-educationLevel" />
 
+  - name: json-api-model-general-photo
+    x-displayName: JSON:API model - general-photo
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-photo" />
+
   - name: json-api-model-general-pensionSchemeType
     x-displayName: JSON:API model - general-pensionSchemeType
     description: |
@@ -854,6 +874,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-city" />
 
+ - name: json-api-model-regional-articleCategory
+    x-displayName: JSON:API model - regional-articleCategory
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-articleCategory" />
+
   - name: json-api-model-regional-cityArticle
     x-displayName: JSON:API model - regional-cityArticle
     description: |
@@ -873,6 +898,11 @@ tags:
     x-displayName: JSON:API model - regional-country
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-country" />
+
+  - name: json-api-model-regional-countryArticle
+    x-displayName: JSON:API model - regional-countryArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-countryArticle" />
 
   - name: json-api-model-regional-region
     x-displayName: JSON:API model - regional-region
@@ -1316,6 +1346,7 @@ x-tagGroups:
       - simple-model-general-autoEmail
       - simple-model-general-currency
       - simple-model-general-educationLevel
+      - simple-model-general-photo
       - simple-model-general-pensionSchemeType
       - simple-model-general-religion
       - simple-model-general-role
@@ -1329,10 +1360,12 @@ x-tagGroups:
       - simple-model-general-month
       - simple-model-general-siteSetting
       - simple-model-regional-city
+      - simple-model-regional-articleCategory
       - simple-model-regional-cityArticle
       - simple-model-regional-cityAttraction
       - simple-model-regional-cityAttractionType
       - simple-model-regional-country
+      - simple-model-regional-countryArticle
       - simple-model-regional-region
       - simple-model-school
       - simple-model-school-academicSystem
@@ -1437,6 +1470,7 @@ x-tagGroups:
       - json-api-model-general-autoEmail
       - json-api-model-general-currency
       - json-api-model-general-educationLevel
+      - json-api-model-general-photo
       - json-api-model-general-pensionSchemeType
       - json-api-model-general-religion
       - json-api-model-general-role
@@ -1450,10 +1484,12 @@ x-tagGroups:
       - json-api-model-general-month
       - json-api-model-general-siteSetting
       - json-api-model-regional-city
+      - json-api-model-regional-articleCategory
       - json-api-model-regional-cityArticle
       - json-api-model-regional-cityAttraction
       - json-api-model-regional-cityAttractionType
       - json-api-model-regional-country
+      - json-api-model-regional-countryArticle
       - json-api-model-regional-region
       - json-api-model-school
       - json-api-model-school-academicSystem

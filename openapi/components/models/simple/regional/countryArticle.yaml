@@ -1,0 +1,32 @@
+SimpleModel_regional-countryArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-countryArticle_id"
+    # simple attributes
+    creationDate:
+        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
+    # relationship attributes
+    countryId:
+        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_countryId"
+    categoryId:
+        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_categoryId"
+    articleId:
+        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_articleId"
+    creationUserId:
+        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationUserId"
+  required:
+    - id
+    - countryId
+    - categoryId
+    - articleId
+    - creationDate
+    - creationUserId
+
+# shared
+SimpleModel_regional-countryArticle_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

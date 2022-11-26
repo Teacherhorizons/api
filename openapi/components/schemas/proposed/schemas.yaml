@@ -28,10 +28,12 @@ SimpleModels:
     # regional
     - $ref: "../../models/simple/regional/Region.yaml#/SimpleModel_regional-region"
     - $ref: "../../models/simple/regional/city.yaml#/SimpleModel_regional-city"
+    - $ref: "../../models/simple/regional/attractionCategory.yaml#/SimpleModel_regional-attractionCategory"
     - $ref: "../../models/simple/regional/cityArticle.yaml#/SimpleModel_regional-cityArticle"
     - $ref: "../../models/simple/regional/cityAttraction.yaml#/SimpleModel_regional-cityAttraction"
     - $ref: "../../models/simple/regional/cityAttractionType.yaml#/SimpleModel_regional-cityAttractionType"
     - $ref: "../../models/simple/regional/country.yaml#/SimpleModel_regional-country"
+    - $ref: "../../models/simple/regional/countryArticle.yaml#/SimpleModel_regional-countryArticle"
 
     # general
     - $ref: "../../models/simple/general/actionType.yaml#/SimpleModel_general-actionType"
@@ -39,6 +41,7 @@ SimpleModels:
     - $ref: "../../models/simple/general/autoEmail.yaml#/SimpleModel_general-autoEmail"
     - $ref: "../../models/simple/general/currency.yaml#/SimpleModel_general-currency"
     - $ref: "../../models/simple/general/educationLevel.yaml#/SimpleModel_general-educationLevel"
+    - $ref: "../../models/simple/general/photo.yaml#/SimpleModel_general-photo"
     - $ref: "../../models/simple/general/pensionSchemeType.yaml#/SimpleModel_general-pensionSchemeType"
     - $ref: "../../models/simple/general/religion.yaml#/SimpleModel_general-religion"
     - $ref: "../../models/simple/general/role.yaml#/SimpleModel_general-role"
@@ -174,10 +177,12 @@ JsonApiModels:
 
     # regional
     - $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city"
+    - $ref: "../../models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory"
     - $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle"
     - $ref: "../../models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction"
     - $ref: "../../models/json-api/regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType"
     - $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country"
+    - $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle"
     - $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region"
 
     # general
@@ -186,6 +191,7 @@ JsonApiModels:
     - $ref: "../../models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail"
     - $ref: "../../models/json-api/general/currency.yaml#/JsonApiModel_general-currency"
     - $ref: "../../models/json-api/general/educationLevel.yaml#/JsonApiModel_general-educationLevel"
+    - $ref: "../../models/json-api/general/photo.yaml#/JsonApiModel_general-photo"
     - $ref: "../../models/json-api/general/pensionSchemeType.yaml#/JsonApiModel_general-pensionSchemeType"
     - $ref: "../../models/json-api/general/religion.yaml#/JsonApiModel_general-religion"
     - $ref: "../../models/json-api/general/role.yaml#/JsonApiModel_general-role"

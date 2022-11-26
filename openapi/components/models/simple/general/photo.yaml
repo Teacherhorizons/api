@@ -1,0 +1,62 @@
+SimpleModel_general-photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-photo_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/photo.yaml#/general-photo_name"
+    url:
+      $ref: "../../library/general/photo.yaml#/general-photo_url"
+    creationDate:
+      $ref: "../../library/general/photo.yaml#/general-photo_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateDate"
+    caption:
+      $ref: "../../library/general/photo.yaml#/general-photo_caption"
+    widthInPx:
+      $ref: "../../library/general/photo.yaml#/general-photo_widthInPx"
+    heightInPx:
+      $ref: "../../library/general/photo.yaml#/general-photo_heightInPx"
+    sourceUrl:
+      $ref: "../../library/general/photo.yaml#/general-photo_sourceUrl"
+    authorName:
+      $ref: "../../library/general/photo.yaml#/general-photo_authorName"
+    licenseDescription:
+      $ref: "../../library/general/photo.yaml#/general-photo_licenseDescription"
+    modificationDescription:
+      $ref: ""../../library/general/photo.yaml#/general-photo_modificationDescription"
+    notes:
+      $ref: "../../library/general/photo.yaml#/general-photo_notes"
+    # relationship attributes 
+    creationUserId:
+      $ref: "../../library/general/photo.yaml#/general-photo_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateUserId"
+    typeId:
+      $ref: "../../library/general/photo.yaml#/general-photo_typeId"
+  required:
+    - id
+    - name
+    - url
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+    - caption
+    - typeId
+    - widthInPx
+    - heightInPx
+    - sourceUrl
+    - authorName
+    - licenseDescription
+    - modificationDescription
+    - notes
+
+# shared
+SimpleModel_general-photo_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
