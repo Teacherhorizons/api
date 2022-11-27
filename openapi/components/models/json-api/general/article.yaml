@@ -26,6 +26,15 @@ JsonApiModel_general-article:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        - id
+        - title
+        - snippet
+        - url
+        - creationDate
+        - latestUpdateDate
+        - creationUserId
+        - latestUpdateUserId
     relationships:
       type: object
       additionalProperties: false
@@ -35,14 +44,8 @@ JsonApiModel_general-article:
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
+    - type
     - id
-    - title
-    - snippet
-    - url
-    - creationDate
-    - latestUpdateDate
-    - creationUserId
-    - latestUpdateUserId
 
 JsonApiModel_general-article_type:
   type: string

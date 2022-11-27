@@ -22,13 +22,13 @@ JsonApiModel_regional-countryArticle:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    required:
-      - id
-      - countryId
-      - categoryId
-      - articleId
-      - creationDate
-      - creationUserId
+      required:
+        - id
+        - countryId
+        - categoryId
+        - articleId
+        - creationDate
+        - creationUserId
     relationships:
       type: object
       additionalProperties: false
@@ -40,7 +40,10 @@ JsonApiModel_regional-countryArticle:
         category:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
         article:
-            $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+  required:
+    - type
+    - id
 
 JsonApiModel_regional-countryArticle_type:
   type: string

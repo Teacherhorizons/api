@@ -23,12 +23,12 @@ JsonApiModel_regional-cityArticle:
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
-          - id
-          - cityId
-          - categoryId
-          - articleId
-          - creationDate
-          - creationUserId
+        - id
+        - cityId
+        - categoryId
+        - articleId
+        - creationDate
+        - creationUserId
     relationships:
       type: object
       additionalProperties: false
@@ -38,9 +38,12 @@ JsonApiModel_regional-cityArticle:
         city:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
         category:
-            $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
         article:
-            $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+  required:
+    - type
+    - id
 
 JsonApiModel_regional-cityArticle_type:
   type: string

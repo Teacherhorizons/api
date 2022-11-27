@@ -32,7 +32,7 @@ JsonApiModel_general-photo:
         licenseDescription:
           $ref: "../../library/general/photo.yaml#/general-photo_licenseDescription"
         modificationDescription:
-          $ref: ""../../library/general/photo.yaml#/general-photo_modificationDescription"
+          $ref: "../../library/general/photo.yaml#/general-photo_modificationDescription"
         notes:
           $ref: "../../library/general/photo.yaml#/general-photo_notes"
         # relationship attributes
@@ -43,6 +43,23 @@ JsonApiModel_general-photo:
         type:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
           #check "type" with RR
+      required:
+        - id
+        - name
+        - url
+        - creationDate
+        - latestUpdateDate
+        - creationUserId
+        - latestUpdateUserId
+        - caption
+        - typeId
+        - widthInPx
+        - heightInPx
+        - sourceUrl
+        - authorName
+        - licenseDescription
+        - modificationDescription
+        - notes
     relationships:
       type: object
       additionalProperties: false
@@ -54,22 +71,8 @@ JsonApiModel_general-photo:
         type:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
+    - type
     - id
-    - name
-    - url
-    - creationDate
-    - latestUpdateDate
-    - creationUserId
-    - latestUpdateUserId
-    - caption
-    - typeId
-    - widthInPx
-    - heightInPx
-    - sourceUrl
-    - authorName
-    - licenseDescription
-    - modificationDescription
-    - notes
 
 JsonApiModel_general-photo_type:
   type: string

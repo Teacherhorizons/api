@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(application|general|job|meta|regional|school|teacher|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
+        "^(application|general|job|meta|regional|school|staff|teacher|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
           "oneOf": [
             {
               "$ref": "#/definitions/LibraryModel-Attribute"
@@ -16,7 +16,7 @@
             }
           ]
         },
-        "^(application|general|job|meta|regional|school|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z]Id$": {
+        "^(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z]Id$": {
           "$ref": "#/definitions/LibraryModel-RelationshipAttribute"
         }
       },

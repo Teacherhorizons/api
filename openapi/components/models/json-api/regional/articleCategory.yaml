@@ -11,11 +11,14 @@ JsonApiModel_regional-articleCategory:
       additionalProperties: false
       properties:
         # simple attributes
-        creationDate:
-          $ref: "../../library/regional/articleCategory.yaml#/regional-articleCategory_creationDate"
+        name:
+          $ref: "../../library/regional/articleCategory.yaml#/regional-articleCategory_name"
       required:
-          - id
-          - name
+        - id
+        - name
+  required:
+    - type
+    - id
 
 JsonApiModel_regional-articleCategory_type:
   type: string

@@ -21,7 +21,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^get-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)s$"
+          "pattern": "^get-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)s$"
         },
         "summary": {
           "type": "string"
@@ -71,7 +71,7 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)$"
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
                             }
                           },
                           "required": [
@@ -172,7 +172,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^post-(application|general|job|meta|regional|school|teacher|user)([-a-zA-Z]*)$"
+          "pattern": "^post-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -205,7 +205,7 @@
                     "properties": {
                       "$ref": {
                         "type": "string",
-                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)$"
+                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
                       }
                     },
                     "required": [
@@ -249,7 +249,7 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/models/json-api/(application|general|job|meta|regional|school|teacher|user)/([a-zA-Z]*).yaml#/JsonApiModel_(application|general|job|meta|regional|school|teacher|user)([a-zA-Z-]*)_relationship$"
+                              "pattern": "^../../components/models/json-api/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_relationship$"
                             }
                           },
                           "required": [
@@ -427,7 +427,7 @@
               "type": "object",
               "additionalProperties": false,
               "patternProperties": {
-                "^fields[[](application|general|job|meta|regional|school|teacher|user)[-a-zA-Z]*]$": {
+                "^fields[[](application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z]*]$": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {

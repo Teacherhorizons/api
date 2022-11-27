@@ -16,25 +16,21 @@ teacher-teacherReferenceResponse_questionId:
 #relationships
 teacher-teacherReferenceResponse_request:
   type: object
-  additional Properties: false
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-teacherReferenceRequest
   required:
-   - id
+    - id
 teacher-teacherReferenceResponse_question:
   type: object
-  additional Properties: false
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to teacher-teacherReferenceQuestion
   required:
-   - id
-
-
-
-
+    - id

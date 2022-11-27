@@ -18,12 +18,11 @@ JsonApiModel_school-schoolMainTeacherNationalityGroup:
     relationships:
       type: object
       additionalProperties: false
-      properties: 
+      properties:
         school:
           $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
         nationalityGroup:
           $ref: "../general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup_relationship"
-
   required:
     - type
     - id

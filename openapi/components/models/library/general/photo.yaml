@@ -3,7 +3,7 @@ general-photo_name:
   type: string
   example: Foo
 general-photo_url:
-  type: 
+  type: string
   example: /foo/bar/baz.jpeg
 general-photo_caption:
   type: string
@@ -15,13 +15,13 @@ general-photo_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
 general-photo_widthInPx:
-  type: 
+  type: integer
   example: 400
 general-photo_heightInPx:
-  type: 
+  type: integer
   example: 500
 general-photo_sourceUrl:
-  type: 
+  type: string
   example: /foo/bar/baz.jpeg
 general-photo_authorName:
   type: string
@@ -83,4 +83,3 @@ general-photo_type:
       description: Relationship to user
   required:
     - id
-
