@@ -1,0 +1,88 @@
+JsonApiModel_regional-countryAttraction:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-countryAttraction_type"
+    id:
+      $ref: "#/JsonApiModel_regional-countryAttraction_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_latestUpdateDate"
+        # relationship attributes
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        type:
+          $ref: "../regional/countryAttractionType.yaml#/JsonApiModel_regional-countryAttractionType_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        - id
+        - countryId
+        - typeId
+        - creationDate
+        - latestUpdateDate
+        - creationUserId
+        - latestUpdateUserId
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+        type:
+          $ref: "../regional/countryAttractionType.yaml#/JsonApiModel_regional-countryAttractionType_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-countryAttraction_type:
+  type: string
+  example: regional-countryAttraction
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-countryAttraction_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-countryAttraction_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-countryAttraction_id"
+  required:
+    - id
+
+JsonApiModel_regional-countryAttraction_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-countryAttraction_type"
+        id:
+          $ref: "#/JsonApiModel_regional-countryAttraction_id"
+      required:
+        - type
+        - id
+  required:
+    - data

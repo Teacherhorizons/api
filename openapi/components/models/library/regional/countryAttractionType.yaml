@@ -1,0 +1,43 @@
+#Attributes
+regional-countryAttractionType_name:
+  type: string
+  example: Golf
+regional-countryAttractionType_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+regional-countryAttractionType_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+#Relationship attributes
+regional-countryAttractionType_creationUserId:
+  type: integer
+  example: 15
+  description: Relationship to user
+regional-countryAttractionType_latestUpdateUserId:
+  type: integer
+  example: 22
+  description: Relationship to user
+
+#Relationships
+regional-countryAttractionType_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "11"
+      description: Relationship to user
+  required:
+    - id
+
+regional-countryAttractionType_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id

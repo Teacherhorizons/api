@@ -1,0 +1,32 @@
+SimpleModel_regional-countryAttractionType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-countryAttractionType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name"
+    creationDate:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_latestUpdateDate"
+    #relationship attributes
+    creationUserId:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_latestUpdateUserId"
+  required:
+    - id
+    - name
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+
+# shared
+SimpleModel_regional-countryAttractionType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

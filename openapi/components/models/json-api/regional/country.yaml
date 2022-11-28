@@ -44,12 +44,80 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_phoneCode"
         slug:
           $ref: "../../library/regional/country.yaml#/regional-country_slug"
-        # nationalAverageIncome:
-        #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
         locationLatitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
         locationLongitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
+        photo1Url:
+          $ref: "../../library/regional/country.yaml#/regional-country_photo1Url"
+        population:
+          $ref: "../../library/regional/country.yaml#/regional-country_population"
+        ambassadorTestimonial:
+          $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTestimonial"
+        teachingInCountryDescription:
+          $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
+        numberOfCities:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfCities"
+        numberOfSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchools"
+        numberOfIBSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfIBSchools"
+        numberOfLiveJobs:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfLiveJobs"
+        numberOfPrimaryIBCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools"
+        numberOfPrimaryUSCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryUSCurriculumSchools"
+        numberOfPrimaryUKCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryUKCurriculumSchools"
+        numberOfPrimaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryInternationalCurriculumSchools"
+        numberOfPrimaryOtherCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryOtherCurriculumSchools"
+        numberOfSecondaryIBCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryIBCurriculumSchools"
+        numberOfSecondaryUSCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryUSCurriculumSchools"
+        numberOfSecondaryUKCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryUKCurriculumSchools"
+        numberOfSecondaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools"
+        numberOfSecondaryOtherCurriculumSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
+        savingPercentage:
+          $ref: "../../library/regional/country.yaml#/regional-country_savingPercentage"
+        percentageOfSchoolsHaveFlightAllowance:
+          $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
+        percentageOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHavePrivateHealthcareScheme"
+        percentageOfOverseasTeachers:
+          $ref: "../../library/regional/country.yaml#/regional-country_percentageOfOverseasTeachers"
+        percentageOfInternationalStudents:
+          $ref: "../../library/regional/country.yaml#/regional-country_percentageOfInternationalStudents"
+        costOfMidRange3CourseMealFor2:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfMidRange3CourseMealFor2"
+        costOfCappuccinoRegular:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfCappuccinoRegular"
+        costOf1WayTicketLocalTransport:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOf1WayTicketLocalTransport"
+        costOfTaxi1KilometerNormalTariff:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff"
+        costOfGasoline1Litre:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfGasoline1Litre"
+        costOfBasicUtilities:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfBasicUtilities"
+        costOfInternet:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOfInternet"
+        costOf1BedroomApartmentInCityCentre:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentInCityCentre"
+        costOf1BedroomApartmentOutsideCityCentre:
+          $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentOutsideCityCentre"
+        crimeIndex:
+          $ref: "../../library/regional/country.yaml#/regional-country_crimeIndex"
+        walkingAloneInDaylightSafetyIndex:
+          $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
+        walkingAloneInNightSafetyIndex:
+          $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
         # relationship attributes
         currency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -57,20 +125,66 @@ JsonApiModel_regional-country_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+        capitalCity:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        language:
+          $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
       required:
+        - id
+        - regionId
         - name
+        - slug
         - alias
+        - countryId
         - creationDate
         - latestUpdateDate
+        - creationUserId
+        - latestUpdateUserId
         - isoCode
-        - phoneCode
-        - slug
-        # - nationalAverageIncome
+        - photo1Url
+        - population
+        - currencyId
+        - capitalCityId
+        - languageId
         - locationLatitude
         - locationLongitude
-        - currency
-        - creationUser
-        - latestUpdateUser
+        - ambassadorTestimonial
+        - teachingInCountryDescription
+        - numberOfCities
+        - numberOfSchools
+        - numberOfIBSchools
+        - numberOfLiveJobs
+        - numberOfPrimaryIBCurriculumSchools
+        - numberOfPrimaryUSCurriculumSchools
+        - numberOfPrimaryUKCurriculumSchools
+        - numberOfPrimaryInternationalCurriculumSchools
+        - numberOfPrimaryOtherCurriculumSchools
+        - numberOfSecondaryIBCurriculumSchools
+        - numberOfSecondaryUSCurriculumSchools
+        - numberOfSecondaryUKCurriculumSchools
+        - numberOfSecondaryInternationalCurriculumSchools
+        - numberOfSecondaryOtherCurriculumSchools
+        - savingPercentage
+        - percentageOfSchoolsHaveFlightAllowance
+        - percentageOfSchoolsHavePrivateHealthcareScheme
+        - percentageOfOverseasTeachers
+        - percentageOfInternationalStudents
+        - costOfMidRange3CourseMealFor2
+        - costOfCappuccinoRegular
+        - costOf1WayTicketLocalTransport
+        - costOfTaxi1KilometerNormalTariff
+        - costOfGasoline1Litre
+        - costOfBasicUtilities
+        - costOfInternet
+        - costOf1BedroomApartmentInCityCentre
+        - costOf1BedroomApartmentOutsideCityCentre
+        - crimeIndex
+        - walkingAloneInDaylightSafetyIndex
+        - walkingAloneInNightSafetyIndex
     relationships:
       type: object
       additionalProperties: false

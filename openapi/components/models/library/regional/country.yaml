@@ -5,6 +5,12 @@ regional-country_name:
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
+regional-country_photo1Url:
+  type: string
+  example: /foo/bar/baz.jpeg
+regional-country_population:
+  type: number
+  example: 10494500
 regional-country_creationDate:
   type: string
   format: date-time
@@ -30,15 +36,131 @@ regional-country_isoCode:
 regional-country_phoneCode:
   type: string
   example: 355
-# regional-country_nationalAverageIncome:
-#   type: number
-#   example: 4032.6
+regional-country_ambassadorTestimonial:
+  type: string
+  example: Lorem ipsum
+regional-country_teachingInCountryDescription:
+  type: string
+  example: Fooo barrr abc
+regional-country_numberOfCities:
+  type: number
+  example: 15
+  description: Derived
+regional-country_numberOfSchools:
+  type: number
+  example: 75
+  description: Derived
+regional-country_numberOfIBSchools:
+  type: number
+  example: 45
+  description: Derived
+regional-country_numberOfLiveJobs:
+  type: number
+  example: 75
+  description: Derived
+regional-country_numberOfPrimaryIBCurriculumSchools:
+  type: number
+  example: 34
+  description: Derived
+regional-country_numberOfPrimaryUSCurriculumSchools:
+  type: number
+  example: 54
+  description: Derived
+regional-country_numberOfPrimaryUKCurriculumSchools:
+  type: number
+  example: 35
+  description: Derived
+regional-country_numberOfPrimaryInternationalCurriculumSchools:
+  type: number
+  example: 70
+  description: Derived
+regional-country_numberOfPrimaryOtherCurriculumSchools:
+  type: number
+  example: 30
+  description: Derived
+regional-country_numberOfSecondaryIBCurriculumSchools:
+  type: number
+  example: 34
+  description: Derived
+regional-country_numberOfSecondaryUSCurriculumSchools:
+  type: number
+  example: 54
+  description: Derived
+regional-country_numberOfSecondaryUKCurriculumSchools:
+  type: number
+  example: 35
+  description: Derived
+regional-country_numberOfSecondaryInternationalCurriculumSchools:
+  type: number
+  example: 70
+  description: Derived
+regional-country_numberOfSecondaryOtherCurriculumSchools:
+  type: number
+  example: 30
+  description: Derived
+regional-country_savingPercentage:
+  type: integer
+  example: 0.3
+  description: Derived
+regional-country_percentageOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 0.67
+  description: Derived
+regional-country_percentageOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 0.86
+  description: Derived
+regional-country_percentageOfOverseasTeachers:
+  type: integer
+  example: 0.35
+  description: Derived
+regional-country_percentageOfInternationalStudents:
+  type: integer
+  example: 0.4
+  description: Derived
+regional-country_costOfMidRange3CourseMealFor2:
+  type: integer
+  example: $45
+regional-country_costOfCappuccinoRegular:
+  type: integer
+  example: $1.89
+regional-country_costOf1WayTicketLocalTransport:
+  type: integer
+  example: $1.60
+regional-country_costOfTaxi1KilometerNormalTariff:
+  type: integer
+  example: $0.47
+regional-country_costOfGasoline1Litre:
+  type: integer
+  example: $2.04
+regional-country_costOfBasicUtilities:
+  type: integer
+  example: $120.40
+regional-country_costOfInternet:
+  type: integer
+  example: $31.65
+regional-country_costOf1BedroomApartmentInCityCentre:
+  type: integer
+  example: $1,026.8
+regional-country_costOf1BedroomApartmentOutsideCityCentre:
+  type: integer
+  example: $776.67
+regional-country_crimeIndex:
+  type: number
+  example: 25
+regional-country_walkingAloneInDaylightSafetyIndex:
+  type: integer
+  example: 85.62
+regional-country_walkingAloneInNightSafetyIndex:
+  type: integer
+  example: 67
 
 #relationship attributes  
 regional-country_countryId:
   type: integer
   example: 1
   description: Relationship to Country
+  #check "countryId" with RR
 regional-country_currencyId:
   type: integer
   example: 1
@@ -55,6 +177,15 @@ regional-country_languageId:
   type: integer
   example: 1
   description: Relationship to Language
+regional-country_regionId:
+  type: integer
+  example: 12
+  description: Relationship to regional-region
+regional-country_capitalCityId:
+  type: integer
+  example: 6
+  description: Relationship to regional-city
+
 
 #relationships
 regional-country_country:
@@ -67,6 +198,7 @@ regional-country_country:
       description: Relationship to Country
   required:
     - id
+
 regional-currency:
   type: object
   additionalProperties: false
@@ -107,5 +239,27 @@ regional-country_language:
       type: string
       example: "1"
       description: Relationship to Language
+  required:
+    - id
+
+regional-country_region:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Region
+  required:
+    - id
+
+regional-country_capitalCity:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City
   required:
     - id
