@@ -269,9 +269,6 @@ school_hasTeacherBereavementLeave:
 school_additionalAccommodationText:
   type: string
   example: ""
-school_ambassadorMemberNumber:
-  type: integer
-  example: ""
 school_ambassadorTestimonial:
   type: string
   example: ""
@@ -297,6 +294,10 @@ school_smallprofilePhotoUrl:
   type: string
   nullable: true
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
+school_photoUrl:
+  type: string
+  nullable: true
+  example: /foo/bar/baz.jpeg
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
@@ -350,6 +351,10 @@ school_managedByUserId:
   type: integer
   example: 1
   description: Relationship to user
+school_ambassadorTeacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
 school_lraUserId:
   type: integer
   example: 1
@@ -467,6 +472,18 @@ school_managedByUser:
       description: Relationship to user
   required: 
     - id
+
+school_ambassadorTeacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher
+  required: 
+    - id
+
 school_lraUser:
   type: object
   additionalProperties: false

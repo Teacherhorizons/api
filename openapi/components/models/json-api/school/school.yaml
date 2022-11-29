@@ -189,8 +189,6 @@ JsonApiModel_school:
           $ref: "../../library/school/school.yaml#/school_hasTeacherBereavementLeave"
         additionalAccommodationText:
           $ref: "../../library/school/school.yaml#/school_additionalAccommodationText"
-        ambassadorMemberNumber:
-          $ref: "../../library/school/school.yaml#/school_ambassadorMemberNumber"
         ambassadorTestimonial:
           $ref: "../../library/school/school.yaml#/school_ambassadorTestimonial"
         leadRecruitmentContactName:
@@ -207,6 +205,8 @@ JsonApiModel_school:
           $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
         smallprofilePhotoUrl:
           $ref: "../../library/school/school.yaml#/school_smallprofilePhotoUrl"
+        photoUrl:
+          $ref: "../../library/school/school.yaml#/school_photoUrl"
         largeprofilePhotoUrl:
           $ref: "../../library/school/school.yaml#/school_largeprofilePhotoUrl"
         logoUrl:
@@ -236,6 +236,8 @@ JsonApiModel_school:
           $ref: "../school/flightAllowanceType.yaml#/JsonApiModel_school-flightAllowanceType_relationship_attribute"
         managedByUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         lraUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
@@ -268,6 +270,8 @@ JsonApiModel_school:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         lraUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - type
     - id

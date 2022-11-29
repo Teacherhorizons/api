@@ -5,17 +5,31 @@ staff-staffMember_initials:
 staff-staffMember_activeInTH:
   type: integer
   example: 1
+staff-staffMember_photoUrl:
+  type: string
+  example: /foo/bar/baz.jpeg
+staff-staffMember_description:
+  type: integer
+  example: Lorem Ipsum
+staff-staffMember_roleTitle:
+  type: integer
+  example: Kindergarten Teacher
 
 #relationship attribute
 staff-staffMember_userId:
   type: integer
   example: 1
-  description: ""
+  description: Relationship to user
 
 staff-staffMember_salesforceUserId:
   type: integer
   example: 1
-  description: ""
+  description: Relationship to user
+
+staff-staffMember_currentCityId:
+  type: integer
+  example: 1
+  description: Relationship to City
 
 #relationship
 staff-staffMember_user:
@@ -25,7 +39,7 @@ staff-staffMember_user:
     id:
       type: string
       example: "1"
-      description: "" 
+      description: Relationship to user
   required: 
     - id
 
@@ -36,7 +50,18 @@ staff-staffMember_salesforceUser:
     id:
       type: string
       example: "1"
-      description: "" 
+      description: Relationship to user 
+  required: 
+    - id
+
+staff-staffMember_currentCity:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to city
   required: 
     - id
 

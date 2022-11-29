@@ -32,6 +32,10 @@ SimpleModel_teacher_admin:
     id:
       $ref: "#/SimpleModel_teacher_id"
     # simple attributes
+    photoUrl:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
+    userFullName:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_userFullName"
     memberNumber:
       $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
     availableFromDate:
@@ -93,8 +97,6 @@ SimpleModel_teacher_admin:
       $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
     internationalSchoolExperienceId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
-    photoUrl:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
   required:
     - schema
     - id

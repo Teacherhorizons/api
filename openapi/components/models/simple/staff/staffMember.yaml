@@ -9,13 +9,29 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
     activeInTH:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
+    photoUrl:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
+    description:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
+    roleTitle:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle"
     # relationship attributes
     userId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_userId"
+    currentCityId:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCityId"
     salesforceUserId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserId"
   required:
     - id
+    - userId
+    - currentCityId
+    - salesforceUserId
+    - initials
+    - activeInTH
+    - photoUrl
+    - description
+    - roleTitle
 
 # shared
 SimpleModel_staff-staffMember_id:
@@ -23,3 +39,5 @@ SimpleModel_staff-staffMember_id:
   example: 1
   readOnly: true
   description: Unique identifier of the object
+
+

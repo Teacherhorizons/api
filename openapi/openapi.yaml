@@ -300,6 +300,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-region" />
 
+  - name: simple-model-regional-regionArticle
+    x-displayName: Simple model - regional-regionArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionArticle" />
+
   # tags - simple-models - school
 
   - name: simple-model-school
@@ -929,6 +934,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-region" />
 
+  - name: json-api-model-regional-regionArticle
+    x-displayName: JSON:API model - regional-regionArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionArticle" />
+
   # tags - JSON:API models - teacher
   - name: json-api-model-teacher
     x-displayName: JSON:API model - teacher
@@ -1389,6 +1399,7 @@ x-tagGroups:
       - simple-model-regional-countryAttraction
       - simple-model-regional-countryAttractionType
       - simple-model-regional-region
+      - simple-model-regional-regionArticle
       - simple-model-school
       - simple-model-school-academicSystem
       - simple-model-school-communityQuestion
@@ -1515,6 +1526,7 @@ x-tagGroups:
       - json-api-model-regional-countryAttraction
       - json-api-model-regional-countryAttractionType
       - json-api-model-regional-region
+      - json-api-model-regional-regionArticle
       - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion

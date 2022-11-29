@@ -1,0 +1,104 @@
+
+JsonApiModel_regional-regionArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-regionArticle_type"
+    id:
+      $ref: "#/JsonApiModel_regional-regionArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_title"
+        snippet:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
+        url:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
+        photoUrl:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
+        photoDescription:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
+        creationDate:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
+        # relationship attributes
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+        category:
+          $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+        article:
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        - id
+        - title
+        - snippet
+        - url
+        - photoUrl
+        - photoDescription
+        - creationDate
+        - regionId
+        - categoryId
+        - articleId
+        - creationUserId
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"
+        category:
+          $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
+        article:
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-regionArticle_type:
+  type: string
+  example: regional-regionArticle
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-regionArticle_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-regionArticle_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-regionArticle_id"
+  required:
+    - id
+
+JsonApiModel_regional-regionArticle_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-regionArticle_type"
+        id:
+          $ref: "#/JsonApiModel_regional-regionArticle_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+
+

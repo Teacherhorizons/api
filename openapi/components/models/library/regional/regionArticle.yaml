@@ -1,0 +1,94 @@
+#Attribute
+regional-regionArticle_title:
+  type: string
+  example: From Abeokuta to Belgrade One Nigerian teacher’s story of breaking into the 
+
+regional-regionArticle_snippet:
+  type: string
+  example: Foo bar baz
+
+regional-regionArticle_url:
+  type: string
+  example: /foo/bar/baz.html
+
+regional-regionArticle_photoUrl:
+  type: string
+  example: /foo/bar/baz.jpeg
+
+regional-regionArticle_photoDescription:
+  type: string
+  example: Lorem Ipsum
+
+regional-regionArticle_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+#Relationship attributes
+regional-regionArticle_regionId:
+  type: integer
+  example: 14
+  description: Relationship to regional-region
+regional-regionArticle_categoryId:
+  type: integer
+  example: 11
+  description: Relationship to regional-articleCategory
+regional-regionArticle_articleId:
+  type: integer
+  example: 14
+  description: Relationship to regional-regionArticle
+regional-regionArticle_creationUserId:
+  type: integer
+  example: 16
+  description: Relationship to user
+
+#Relationships
+regional-regionArticle_region:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "12"
+      description: Relationship to Region
+  required:
+    - id
+
+regional-regionArticle_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Article Category
+  required:
+    - id
+
+regional-regionArticle_article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country Article
+  required:
+    - id
+
+regional-regionArticle_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "11"
+      description: Relationship to user
+  required:
+    - id
+
+
+
+
+
+
+

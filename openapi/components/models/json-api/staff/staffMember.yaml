@@ -15,11 +15,29 @@ JsonApiModel_staff-staffMember:
           $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
         activeInTH:
           $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
-      # relationship attributes
+        photoUrl:
+          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
+        description:
+          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
+        roleTitle:
+          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle"
+        # relationship attributes
         user:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         salesforceUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        currentCity:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+      required:
+        - id
+        - userId
+        - currentCityId
+        - salesforceUserId
+        - initials
+        - activeInTH
+        - photoUrl
+        - description
+        - roleTitle
     relationships:
       type: object
       additionalProperties: false
@@ -28,6 +46,8 @@ JsonApiModel_staff-staffMember:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         salesforceUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        currentCity:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
   required:
     - type
     - id

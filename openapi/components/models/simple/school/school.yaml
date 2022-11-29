@@ -184,8 +184,6 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_hasTeacherBereavementLeave"
     additionalAccommodationText:
       $ref: "../../library/school/school.yaml#/school_additionalAccommodationText"
-    ambassadorMemberNumber:
-      $ref: "../../library/school/school.yaml#/school_ambassadorMemberNumber"
     ambassadorTestimonial:
       $ref: "../../library/school/school.yaml#/school_ambassadorTestimonial"
     leadRecruitmentContactName:
@@ -200,10 +198,13 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_numberOfBasicActiveJobCredits"
     hasThSaferRecruitmentBadgeOnOwnWebsite:
       $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
+    photoUrl:
+      $ref: "../../library/school/school.yaml#/school_photoUrl"
     smallprofilePhotoUrl:
       $ref: "../../library/school/school.yaml#/school_smallprofilePhotoUrl"
     largeprofilePhotoUrl:
       $ref: "../../library/school/school.yaml#/school_largeprofilePhotoUrl"
+      #check with RR if we need "largeprofilePhotoUrl"
     logoUrl:
       $ref: "../../library/school/school.yaml#/school_logoUrl"
     # relationship attributes
@@ -231,6 +232,8 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_flightAllowanceTypeId"
     managedByUserId:
       $ref: "../../library/school/school.yaml#/school_managedByUserId"
+    ambassadorTeacherId:
+      $ref: "../../library/school/school.yaml#/school_ambassadorTeacherId"
     lraUserId:
       $ref: "../../library/school/school.yaml#/school_lraUserId"
   required:

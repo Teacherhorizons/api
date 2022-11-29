@@ -1,0 +1,62 @@
+SimpleModel_regional-regionArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-regionArticle_id"
+    # simple attributes
+    title:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_title"
+    snippet:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
+    url:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
+    photoUrl:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
+    photoDescription:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
+    creationDate:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
+    # relationship attributes
+    region:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_region"
+    category:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_category"
+    article:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_article"
+    creationUser:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationUser"
+  required:
+    - id
+    - title
+    - snippet
+    - url
+    - photoUrl
+    - photoDescription
+    - creationDate
+    - regionId
+    - categoryId
+    - articleId
+    - creationUserId
+
+# shared
+SimpleModel_regional-regionArticle_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
