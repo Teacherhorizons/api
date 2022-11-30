@@ -16,14 +16,31 @@ general-article_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 
 #Relationship attributes
+general-article_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
 general-article_creationUserId:
   type: integer
   example: 21
+  description: Relationship to user
 general-article_latestUpdateUserId:
   type: integer
   example: 24
+  description: Relationship to user
 
 # relationships
+general-article_photo:
+  additionalProperties: false
+  type: object
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to photo
+  required:
+    - id
+
 general-article_creationUser:
   additionalProperties: false
   type: object

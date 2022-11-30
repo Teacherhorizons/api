@@ -1,0 +1,23 @@
+SimpleModel_regional-cityDate:
+  type: object
+  additionalProperties: false
+  properties:
+    # simple attributes
+    minTemperatureInDegreesC:
+      $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_minTemperatureInDegreesC"
+    maxTemperatureInDegreesC:
+      $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_maxTemperatureInDegreesC"
+    # relationship attributes
+    cityId:
+      $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_cityId"
+    weatherTypeId:
+     $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_weatherTypeId"
+    # dateId:
+    #   $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_dateId"
+  required:
+    - city
+    - date
+    - minTemperatureInDegreesC
+    - maxTemperatureInDegreesC
+    - weatherType
+

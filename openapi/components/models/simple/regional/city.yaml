@@ -115,6 +115,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
     languageId:
       $ref: "../../library/regional/city.yaml#/regional-city_languageId"
+    ambassadorTeacherId:
+      $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTeacherId"
   required:
     - name
     - alias
@@ -128,6 +130,7 @@ SimpleModel_regional-city_admin:
     - latestUpdateUser
     - countryId
     - languageId
+    - ambassadorTeacherId
     - photo1Url
     - crimeIndex
     - ambassadorTestimonial

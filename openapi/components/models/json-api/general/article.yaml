@@ -22,6 +22,8 @@ JsonApiModel_general-article:
         latestUpdateDate:
           $ref: "../../library/general/article.yaml#/general-article_latestUpdateDate"
         # relationship attributes
+        photo: 
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -33,12 +35,15 @@ JsonApiModel_general-article:
         - url
         - creationDate
         - latestUpdateDate
+        - photoId
         - creationUserId
         - latestUpdateUserId
     relationships:
       type: object
       additionalProperties: false
       properties:
+        photo: 
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

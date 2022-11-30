@@ -215,6 +215,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-siteSetting" />
 
+  - name: simple-model-general-weatherType
+    x-displayName: Simple model - general-weatherType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-weatherType" />
+
   #   # - name: simple-model-lists
   #   #   x-displayName: Lists
   #   #   description: |
@@ -274,6 +279,16 @@ tags:
     x-displayName: Simple model - regional-cityAttractionType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityAttractionType" />
+
+  - name: simple-model-regional-cityDate
+    x-displayName: Simple model - regional-cityDate
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityDate" />
+
+  - name: simple-model-regional-cityMonthNumber
+    x-displayName: Simple model - regional-cityMonthNumber
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-cityMonthNumber" />
 
   - name: simple-model-regional-country
     x-displayName: Simple model - regional-country
@@ -867,6 +882,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-siteSetting" />
 
+ - name: json-api-model-general-weatherType
+    x-displayName: JSON:API model - general-weatherType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-weatherType" />
+
   # tags - JSON:API models - job
   - name: json-api-model-job
     x-displayName: JSON:API model - job
@@ -908,6 +928,16 @@ tags:
     x-displayName: JSON:API model - regional-cityAttractionType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityAttractionType" />
+
+  - name: json-api-model-regional-cityDate
+    x-displayName: JSON:API model - regional-cityDate
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityDate" />
+
+  - name: json-api-model-regional-cityMonthNumber
+    x-displayName: JSON:API model - regional-cityMonthNumber
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-cityMonthNumber" />
 
   - name: json-api-model-regional-country
     x-displayName: JSON:API model - regional-country
@@ -1389,11 +1419,14 @@ x-tagGroups:
       - simple-model-general-nationalityGroup
       - simple-model-general-month
       - simple-model-general-siteSetting
+      - simple-model-general-weatherType
       - simple-model-regional-city
       - simple-model-regional-articleCategory
       - simple-model-regional-cityArticle
       - simple-model-regional-cityAttraction
       - simple-model-regional-cityAttractionType
+      - simple-model-regional-cityDate
+      - simple-model-regional-cityMonthNumber
       - simple-model-regional-country
       - simple-model-regional-countryArticle
       - simple-model-regional-countryAttraction
@@ -1516,11 +1549,14 @@ x-tagGroups:
       - json-api-model-general-nationalityGroup
       - json-api-model-general-month
       - json-api-model-general-siteSetting
+      - json-api-model-general-weatherType
       - json-api-model-regional-city
       - json-api-model-regional-articleCategory
       - json-api-model-regional-cityArticle
       - json-api-model-regional-cityAttraction
       - json-api-model-regional-cityAttractionType
+      - json-api-model-regional-cityDate
+      - json-api-model-regional-cityMonthNumber
       - json-api-model-regional-country
       - json-api-model-regional-countryArticle
       - json-api-model-regional-countryAttraction

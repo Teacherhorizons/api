@@ -1,0 +1,34 @@
+#Attributes
+regional-cityMonthNumber_monthNumber:
+  type: integer
+  example: 3
+regional-cityMonthNumber_averageMinTemperatureInDegreesC:
+  type: number
+  example: 14.6
+regional-cityMonthNumber_averageMaxTemperatureInDegreesC:
+  type: number
+  example: 19.7
+regional-cityMonthNumber_averageRainfallInMM:
+  type: integer
+  example: 123
+regional-cityMonthNumber_notes:
+  type: string
+  example: Foo bar
+
+#Relationship attributes
+regional-cityMonthNumber_cityId:
+  type: integer
+  example: 1
+  description: Relationship to regional-city
+
+#Relationships
+regional-cityMonthNumber_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City
+  required:
+    - id

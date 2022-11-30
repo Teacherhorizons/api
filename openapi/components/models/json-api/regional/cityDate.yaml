@@ -1,0 +1,71 @@
+JsonApiModel_regional-cityDate:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-cityDate_type"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        minTemperatureInDegreesC:
+          $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_minTemperatureInDegreesC"
+        maxTemperatureInDegreesC:
+          $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_maxTemperatureInDegreesC"
+        # relationship attributes
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        weatherType:
+          $ref: "../general-weatherType/weatherType.yaml#/JsonApiModel_general-weatherType_relationship_attribute"
+        # date:
+        #   $ref: "../time-date/date.yaml#/JsonApiModel_time-date_relationship_attribute"
+      required:
+        - city
+        - date
+        - minTemperatureInDegreesC
+        - maxTemperatureInDegreesC
+        - weatherType
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+        weatherType:
+          $ref: "../general-weatherType/weatherType.yaml#/JsonApiModel_general-weatherType_relationship"
+        # date:
+        #   $ref: "../time-date/date.yaml#/JsonApiModel_time-date_relationship"
+
+JsonApiModel_regional-cityDate_type:
+  type: string
+  example: regional-cityDate
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-cityDate_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-cityDate_id"
+  required:
+    - id
+
+JsonApiModel_regional-cityDate_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-cityDate_type"
+        id:
+          $ref: "#/JsonApiModel_regional-cityDate_id"
+      required:
+        - type
+        - id
+  required:
+    - data

@@ -162,6 +162,10 @@ regional-city_languageId:
   type: integer
   example: 1
   description: Relationship to Language
+regional-city_ambassadorTeacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
 
 # Relationships
 regional-city_country:
@@ -205,6 +209,17 @@ regional-city_language:
       type: string
       example: "1"
       description: Relationship to Language
+  required:
+    - id
+
+regional-city_ambassadorTeacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
   required:
     - id
 

@@ -133,6 +133,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
         language:
           $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
       required:
         - id
         - regionId
@@ -142,13 +144,14 @@ JsonApiModel_regional-country_admin:
         - countryId
         - creationDate
         - latestUpdateDate
-        - creationUserId
-        - latestUpdateUserId
+        - creationUser
+        - latestUpdateUser
+        - ambassadorTeacher
         - isoCode
         - photo1Url
         - population
-        - currencyId
-        - capitalCityId
+        - currency
+        - capitalCity
         - languageId
         - locationLatitude
         - locationLongitude
@@ -195,6 +198,16 @@ JsonApiModel_regional-country_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+        capitalCity:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        language:
+          $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
+        ambassadorTeacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - schema
     - type

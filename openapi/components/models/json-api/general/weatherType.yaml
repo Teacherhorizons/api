@@ -1,0 +1,57 @@
+JsonApiModel_general-weatherType:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-weatherType_type"
+    id:
+      $ref: "#/JsonApiModel_general-weatherType_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/general/weatherType.yaml#/general-weatherType_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_general-weatherType_type:
+  type: string
+  example: general-weatherType
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_general-weatherType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_general-weatherType_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-weatherType_id"
+  required:
+    - id
+
+JsonApiModel_general-weatherType_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-weatherType_type"
+        id:
+          $ref: "#/JsonApiModel_general-weatherType_id"
+      required:
+        - type
+        - id
+  required:
+    - data

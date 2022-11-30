@@ -1,0 +1,55 @@
+#Attributes
+regional-cityDate_minTemperatureInDegreesC:
+  type: integer
+  example: 17
+regional-cityDate_maxTemperatureInDegreesC:
+  type: integer
+  example: 21
+
+#Relationship attributes
+regional-cityDate_cityId:
+  type: integer
+  example: 1
+  description: Relationship to regional-city
+regional-cityDate_dateId:
+  type: integer
+  example: 20221129
+  description: Relationship to time-date
+regional-cityDate_weatherTypeId:
+  type: integer
+  example: 1
+  description: Relationship to general-weatherType
+
+#Relationships
+regional-cityDate_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City
+  required:
+    - id
+
+regional-cityDate_date:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City
+  required:
+    - id
+
+regional-cityDate_weatherType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Weather type
+  required:
+    - id

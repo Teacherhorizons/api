@@ -19,8 +19,8 @@ JsonApiModel_general-photo:
           $ref: "../../library/general/photo.yaml#/general-photo_creationDate"
         latestUpdateDate:
           $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateDate"
-        caption:
-          $ref: "../../library/general/photo.yaml#/general-photo_caption"
+        description:
+          $ref: "../../library/general/photo.yaml#/general-photo_description"
         widthInPx:
           $ref: "../../library/general/photo.yaml#/general-photo_widthInPx"
         heightInPx:
@@ -51,7 +51,7 @@ JsonApiModel_general-photo:
         - latestUpdateDate
         - creationUserId
         - latestUpdateUserId
-        - caption
+        - description
         - typeId
         - widthInPx
         - heightInPx

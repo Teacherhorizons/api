@@ -185,7 +185,10 @@ regional-country_capitalCityId:
   type: integer
   example: 6
   description: Relationship to regional-city
-
+regional-country_ambassadorTeacherId:
+  type: integer
+  example: 6
+  description: Relationship to teacher
 
 #relationships
 regional-country_country:
@@ -261,5 +264,16 @@ regional-country_capitalCity:
       type: string
       example: "1"
       description: Relationship to City
+  required:
+    - id
+
+regional-country_ambassadorTeacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
   required:
     - id

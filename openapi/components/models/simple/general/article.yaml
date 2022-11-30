@@ -16,10 +16,12 @@ SimpleModel_general-article:
     latestUpdateDate:
       $ref: "../../library/general/article.yaml#/general-article_latestUpdateDate"
     # relationship attributes
+    photoId:
+      $ref: "../../library/general/article.yaml#/general-article_photoId"
     creationUserId:
-      $ref: "../../library/general/nationality.yaml#/general-nationality_creationUserId"
+      $ref: "../../library/general/article.yaml#/general-article_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/general/nationality.yaml#/general-nationality_latestUpdateUserId"
+      $ref: "../../library/general/article.yaml#/general-article_latestUpdateUserId"
   required:
     - id
     - title
@@ -27,6 +29,7 @@ SimpleModel_general-article:
     - url
     - creationDate
     - latestUpdateDate
+    - photoId
     - creationUserId
     - latestUpdateUserId
 

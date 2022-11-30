@@ -31,6 +31,8 @@ SimpleModels:
     - $ref: "../../models/simple/regional/cityArticle.yaml#/SimpleModel_regional-cityArticle"
     - $ref: "../../models/simple/regional/cityAttraction.yaml#/SimpleModel_regional-cityAttraction"
     - $ref: "../../models/simple/regional/cityAttractionType.yaml#/SimpleModel_regional-cityAttractionType"
+    - $ref: "../../models/simple/regional/cityDate.yaml#/SimpleModel_regional-cityDate"
+    - $ref: "../../models/simple/regional/cityMonthNumber.yaml#/SimpleModel_regional-cityMonthNumber"
     - $ref: "../../models/simple/regional/country.yaml#/SimpleModel_regional-country"
     - $ref: "../../models/simple/regional/countryArticle.yaml#/SimpleModel_regional-countryArticle"
     - $ref: "../../models/simple/regional/countryAttraction.yaml#/SimpleModel_regional-countryAttraction"
@@ -56,6 +58,7 @@ SimpleModels:
     - $ref: "../../models/simple/general/siteSetting.yaml#/SimpleModel_general-siteSetting"
     - $ref: "../../models/simple/general/subject.yaml#/SimpleModel_general-subject"
     - $ref: "../../models/simple/general/subjectGroup.yaml#/SimpleModel_general-subjectGroup"
+    - $ref: "../../models/simple/general/weatherType.yaml#/SimpleModel_general-weatherType"
     - $ref: "../../models/simple/general/worldLanguage.yaml#/SimpleModel_general-worldLanguage"
 
     # application
@@ -184,6 +187,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle"
     - $ref: "../../models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction"
     - $ref: "../../models/json-api/regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType"
+    - $ref: "../../models/json-api/regional/cityDate.yaml#/JsonApiModel_regional-cityDate"
+    - $ref: "../../models/json-api/regional/cityMonthNumber.yaml#/JsonApiModel_regional-cityMonthNumber"
     - $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country"
     - $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle"
     - $ref: "../../models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction"
@@ -210,6 +215,7 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup"
     - $ref: "../../models/json-api//general/month.yaml#/JsonApiModel_general-month"
     - $ref: "../../models/json-api//general/siteSetting.yaml#/JsonApiModel_general-siteSetting"
+    - $ref: "../../models/json-api//general/weatherType.yaml#/JsonApiModel_general-weatherType"
 
     # school
     - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"

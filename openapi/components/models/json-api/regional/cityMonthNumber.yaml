@@ -1,0 +1,70 @@
+JsonApiModel_regional-cityMonthNumber:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-cityMonthNumber_type"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        monthNumber:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
+        averageMinTemperatureInDegreesC:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMinTemperatureInDegreesC"
+        averageMaxTemperatureInDegreesC:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMaxTemperatureInDegreesC"
+        averageRainfallInMM:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM"
+        notes:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_notes"
+        # relationship attributes
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+      required:
+        - cityId
+        - monthNumber
+        - averageMinTemperatureInDegreesC
+        - averageMaxTemperatureInDegreesC
+        - averageRainfallInMM
+        - notes
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        city:
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+
+JsonApiModel_regional-cityMonthNumber_type:
+  type: string
+  example: regional-cityMonthNumber
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-cityMonthNumber_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+  required:
+    - id
+
+JsonApiModel_regional-cityMonthNumber_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-cityMonthNumber_type"
+        id:
+          $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+      required:
+        - type
+        - id
+  required:
+    - data
