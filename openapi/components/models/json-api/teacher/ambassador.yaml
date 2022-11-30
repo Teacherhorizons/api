@@ -12,43 +12,43 @@ JsonApiModel_teacher-ambassador:
       properties:
         # simple attributes
         levelName:
-            $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
+          $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
         testimonial:
-            $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
+          $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
         # relationship attributes
         teacher:
-            $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         school:
-            $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
         city:
-            $ref: "../regional-city/regional-city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
         country:
-            $ref: "../regional-country/regional-country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
         region:
-            $ref: "../regional-region/regional-region.yaml#/JsonApiModel_regional-region_relationship_attribute"
-    required:
-      - id
-      - levelName
-      - teacherId
-      - testimonial
-      - schoolId
-      - cityId
-      - countryId
-      - regionId
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+      required:
+        - id
+        - levelName
+        - teacherId
+        - testimonial
+        - schoolId
+        - cityId
+        - countryId
+        - regionId
     relationships:
       type: object
       additionalProperties: false
       properties:
         teacher:
-            $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
         school:
-            $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
         city:
-            $ref: "../regional-city/regional-city.yaml#/JsonApiModel_regional-city_relationship"
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
         country:
-            $ref: "../regional-country/regional-country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
         region:
-            $ref: "../regional-region/regional-region.yaml#/JsonApiModel_regional-region_relationship"
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"
   required:
     - type
     - id
