@@ -1,0 +1,39 @@
+SimpleModel_teacher-ambassador:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-ambassador_id"
+    # simple attributes
+    levelName:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
+    testimonial:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
+    # relationship attributes
+    teacherId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_teacherId"
+    schoolId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_schoolId"
+    cityId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_cityId"
+    countryId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_countryId"
+    regionId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_regionId"
+  required:
+    - id
+    - levelName
+    - teacherId
+    - testimonial
+    - schoolId
+    - cityId
+    - countryId
+    - regionId
+    
+# shared
+
+SimpleModel_teacher-ambassador_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

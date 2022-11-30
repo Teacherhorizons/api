@@ -111,6 +111,7 @@ SimpleModels:
 
     # teacher
     - $ref: "../../models/simple/teacher/teacher.yaml#/SimpleModel_teacher"
+    - $ref: "../../models/simple/teacher/ambassador.yaml#/SimpleModel_teacher-ambassador"
     # - $ref: "../../models/simple/teacher/additionalPhotoCategory.yaml#/SimpleModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/simple/teacher/photoCategory.yaml#/SimpleModel_teacher-photoCategory"
     - $ref: "../../models/simple/teacher/badge.yaml#/SimpleModel_teacher-badge"
@@ -256,6 +257,7 @@ JsonApiModels:
 
     # teacher
     - $ref: "../../models/json-api/teacher/Teacher.yaml#/JsonApiModel_teacher"
+    - $ref: "../../models/json-api/teacher/ambassador.yaml#/JsonApiModel_ambassador"
     # - $ref: "../../models/json-api/teacher/additionalPhotoCategory.yaml#/JsonApiModel_teacher-additionalPhotoCategory"
     - $ref: "../../models/json-api/teacher/photoCategory.yaml#/JsonApiModel_teacher-photoCategory"
     - $ref: "../../models/json-api/teacher/badge.yaml#/JsonApiModel_teacher-badge"

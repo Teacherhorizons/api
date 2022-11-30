@@ -1,0 +1,85 @@
+#Attributes
+teacher-ambassador_levelName:
+  type: string
+  example: intermediate
+teacher-ambassador_testimonial:
+  type: string
+  example: lorem ipsum
+
+#Relationship attributes
+teacher-ambassador_teacherId:
+  type: integer
+  example: 12
+  description: Relationship to teacher
+teacher-ambassador_schoolId:
+  type: integer
+  example: 3
+  description: Relationship to school
+teacher-ambassador_cityId:
+  type: integer
+  example: 4
+  description: Relationship to regional-city
+teacher-ambassador_countryId:
+  type: integer
+  example: 5
+  description: Relationship to regional-country
+teacher-ambassador_regionId:
+  type: integer
+  example: 6
+  description: Relationship to regional-region
+
+#Relationships
+teacher-ambassador_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Teacher
+  required: 
+    - id
+
+teacher-ambassador_school:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to School
+  required: 
+    - id
+  
+teacher-ambassador_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to City
+  required: 
+    - id
+
+teacher-ambassador_country:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country
+  required: 
+    - id
+
+teacher-ambassador_region:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Region
+  required: 
+    - id
