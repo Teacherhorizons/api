@@ -21,20 +21,20 @@ JsonApiModel_teacher-ambassador:
         school:
             $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
         city:
-            $ref: "../regional-city/regional-city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+            $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
         country:
-            $ref: "../regional-country/regional-country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+            $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
         region:
-            $ref: "../regional-region/regional-region.yaml#/JsonApiModel_regional-region_relationship_attribute"
-    required:
-      - id
-      - levelName
-      - teacherId
-      - testimonial
-      - schoolId
-      - cityId
-      - countryId
-      - regionId
+            $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+      required:
+        - id
+        - levelName
+        - teacherId
+        - testimonial
+        - schoolId
+        - cityId
+        - countryId
+        - regionId
     relationships:
       type: object
       additionalProperties: false
@@ -44,11 +44,11 @@ JsonApiModel_teacher-ambassador:
         school:
             $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
         city:
-            $ref: "../regional-city/regional-city.yaml#/JsonApiModel_regional-city_relationship"
+            $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
         country:
-            $ref: "../regional-country/regional-country.yaml#/JsonApiModel_regional-country_relationship"
+            $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
         region:
-            $ref: "../regional-region/regional-region.yaml#/JsonApiModel_regional-region_relationship"
+            $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"
   required:
     - type
     - id
