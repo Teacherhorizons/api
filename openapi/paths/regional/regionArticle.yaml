@@ -1,9 +1,9 @@
 get:
-  operationId: get-regional-regionArticles
+  operationId: get-regional-regionArticle
   tags:
     - regional
     - testing-status-1
-  summary: Get region articles
+  summary: Get region article
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
@@ -40,7 +40,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/regionArticles.yaml#/Response_regional-regionArticles"
+            $ref: "../../components/responses/regional/regionArticle.yaml#/Response_regional-regionArticle"
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":

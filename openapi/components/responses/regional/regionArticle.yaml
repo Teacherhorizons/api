@@ -1,16 +1,16 @@
-Response_regional-regionArticles:
+Response_regional-regionArticle:
   oneOf:
-    - $ref: "#/Response_regional-regionArticles_admin"
-    - $ref: "#/Response_regional-regionArticles_school"
-    - $ref: "#/Response_regional-regionArticles_teacher"
+    - $ref: "#/Response_regional-regionArticle_admin"
+    - $ref: "#/Response_regional-regionArticle_school"
+    - $ref: "#/Response_regional-regionArticle_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_regional-regionArticles_admin"
-      school: "#/Response_regional-regionArticles_school"
-      teacher: "#/Response_regional-regionArticles_teacher"
+      admin: "#/Response_regional-regionArticle_admin"
+      school: "#/Response_regional-regionArticle_school"
+      teacher: "#/Response_regional-regionArticle_teacher"
 
-Response_regional-regionArticles_admin:
+Response_regional-regionArticle_admin:
   type: object
   additionalProperties: false
   properties:
@@ -64,7 +64,7 @@ Response_regional-regionArticles_admin:
     - schema
     - data
 
-Response_regional-regionArticles_school:
+Response_regional-regionArticle_school:
   type: object
   additionalProperties: false
   properties:
@@ -104,7 +104,7 @@ Response_regional-regionArticles_school:
     - schema
     - data
 
-Response_regional-regionArticles_teacher:
+Response_regional-regionArticle_teacher:
   type: object
   additionalProperties: false
   properties:
