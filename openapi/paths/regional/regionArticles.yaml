@@ -1,0 +1,47 @@
+get:
+  operationId: get-regional-regionArticles
+  tags:
+    - regional
+    - testing-status-1
+  summary: Get region articles
+  parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: query
+      name: fields
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          fields[regional-region]:
+            type: string
+        example:
+          regional-region: name,slug,locationLatLong
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[name][matches]:
+            type: string
+        example:
+          name][matches: afri
+          slug: bar
+  responses:
+    "200":
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/regional/regionArticles.yaml#/Response_regional-regionArticles"
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
