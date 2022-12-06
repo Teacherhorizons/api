@@ -154,11 +154,48 @@ Response_regional-region_admin:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_regional-region_includedStaff_admin"
+          - $ref: "#/Response_regional-region_includedSchool_admin"
+          - $ref: "#/Response_regional-region_includedJob_admin"
+          - $ref: "#/Response_regional-region_includedCountry_admin"
           - $ref: "#/Response_regional-region_includedAmbassador_admin"
+          - $ref: "#/Response_regional-region_includedStaff_admin"
   required:
     - schema
     - data
+
+Response_regional-region_includedCountry_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_name"
+        slug:
+          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_slug"
+        numberOfSchools:
+          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools"
+        isoCode:
+          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_isoCode"
+        photo1Url:
+          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_photo1Url"
+      required:
+        - name
+        - slug
+        - numberOfSchools
+        - isoCode
+        - photo1Url
+  required:
+    - type
+    - id
+    - attributes
 
 Response_regional-region_includedAmbassador_admin:
   type: object
@@ -173,19 +210,22 @@ Response_regional-region_includedAmbassador_admin:
       additionalProperties: false
       properties:
         # simple attributes
-        # levelName:
-        #   $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
-        # photoUrl:
-        #   $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher_photoUrl"
+        levelName:
+          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
+        fullName:
+          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_fullName"
+        photoUrl:
+          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
         testimonial:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
-
         # relationship attributes
         region:
           $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
-        # - photoUrl
+        - fullName
+        - photoUrl
         - testimonial
+        - region
   required:
     - type
     - id
@@ -210,6 +250,67 @@ Response_regional-region_includedStaff_admin:
       required:
         - photoUrl
         - description
+  required:
+    - type
+    - id
+    - attributes
+
+Response_regional-region_includedJob_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type"
+    id:
+      $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: "../../../components/models/library/job/job.yaml#/job_title"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+      required:
+        - title
+        - school
+  required:
+    - type
+    - id
+    - attributes
+
+Response_regional-region_includedSchool_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type"
+    id:
+      $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        smallProfilePhotoUrl:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        city:
+          $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship"
+      required:
+        - name
+        - smallProfilePhotoUrl
+        - city
   required:
     - type
     - id
