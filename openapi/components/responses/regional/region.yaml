@@ -134,6 +134,14 @@ Response_regional-region_admin:
           properties:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship"
+            country:
+              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship"
+            job:
+              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+            school:
+              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+            ambassador:
+              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship"
       required:
         - type
         - id
@@ -144,9 +152,31 @@ Response_regional-region_admin:
       items:
         anyOf:
           - $ref: "#/Response_regional-region_includedStaff_admin"
+          - $ref: "#/Response_regional-region_includedTeacher_admin"
   required:
     - schema
     - data
+
+Response_regional-region_includedTeacher_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type"
+    id:
+      $ref: "../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        photoUrl:
+          $ref: "../../../components/models/library/teacher/teacher.yaml#/teacher_photoUrl"
+      required:
+        - photoUrl
+  required:
+    - type
+    - id
+    - attributes
 
 Response_regional-region_includedStaff_admin:
   type: object
