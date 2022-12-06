@@ -34,6 +34,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
     numberOfCountries:
       $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
+    numberOfCountriesWithSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
     locationLatitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
     locationLongitude:
@@ -101,6 +103,7 @@ SimpleModel_regional-region_admin:
     - latestUpdateDate
     - slug
     - numberOfCountries
+    - numberOfCountriesWithSchools
     - locationLatitude
     - locationLongitude
     - creationUser

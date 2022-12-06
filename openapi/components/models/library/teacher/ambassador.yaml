@@ -9,23 +9,23 @@ teacher-ambassador_testimonial:
 #Relationship attributes
 teacher-ambassador_teacherId:
   type: integer
-  example: 12
+  example: 1
   description: Relationship to teacher
 teacher-ambassador_schoolId:
   type: integer
-  example: 3
+  example: 1
   description: Relationship to school
 teacher-ambassador_cityId:
   type: integer
-  example: 4
+  example: 1
   description: Relationship to regional-city
 teacher-ambassador_countryId:
   type: integer
-  example: 5
+  example: 1
   description: Relationship to regional-country
 teacher-ambassador_regionId:
   type: integer
-  example: 6
+  example: 1
   description: Relationship to regional-region
 
 #Relationships
@@ -37,7 +37,7 @@ teacher-ambassador_teacher:
       type: string
       example: "1"
       description: Relationship to Teacher
-  required: 
+  required:
     - id
 
 teacher-ambassador_school:
@@ -48,9 +48,9 @@ teacher-ambassador_school:
       type: string
       example: "1"
       description: Relationship to School
-  required: 
+  required:
     - id
-  
+
 teacher-ambassador_city:
   type: object
   additionalProperties: false
@@ -59,7 +59,7 @@ teacher-ambassador_city:
       type: string
       example: "1"
       description: Relationship to City
-  required: 
+  required:
     - id
 
 teacher-ambassador_country:
@@ -70,7 +70,7 @@ teacher-ambassador_country:
       type: string
       example: "1"
       description: Relationship to Country
-  required: 
+  required:
     - id
 
 teacher-ambassador_region:
@@ -81,5 +81,5 @@ teacher-ambassador_region:
       type: string
       example: "1"
       description: Relationship to Region
-  required: 
+  required:
     - id

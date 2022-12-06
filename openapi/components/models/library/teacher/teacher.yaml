@@ -37,8 +37,6 @@
 #     - $ref: "#/teacher_standardProperties_shared"
 #     - $ref: "#/teacher_standardProperties_adminOnly"
 
-
-
 # teacher_relationshipProperties_shared:
 #   properties:
 #     userId:
@@ -197,7 +195,7 @@ teacher_user:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
 
 teacher_teachingQualificationCountry:
@@ -208,9 +206,9 @@ teacher_teachingQualificationCountry:
       type: string
       example: "1"
       description: Relationship to regional-country
-  required: 
+  required:
     - id
-  
+
 teacher_qualificationType:
   type: object
   additionalProperties: false
@@ -219,7 +217,7 @@ teacher_qualificationType:
       type: string
       example: "1"
       description: Relationship to QualificationType
-  required: 
+  required:
     - id
 
 teacher_jobSeekingStatus:
@@ -230,9 +228,9 @@ teacher_jobSeekingStatus:
       type: string
       example: "1"
       description: Relationship to Status
-  required: 
+  required:
     - id
-  
+
 teacher_photoFile:
   type: object
   additionalProperties: false
@@ -241,7 +239,7 @@ teacher_photoFile:
       type: string
       example: "1"
       description: ""
-  required: 
+  required:
     - id
 
 teacher_maritalStatus:
@@ -252,9 +250,9 @@ teacher_maritalStatus:
       type: string
       example: "1"
       description: ""
-  required: 
+  required:
     - id
-  
+
 teacher_internationalSchoolExperience:
   type: object
   additionalProperties: false
@@ -263,9 +261,9 @@ teacher_internationalSchoolExperience:
       type: string
       example: "1"
       description: ""
-  required: 
+  required:
     - id
-  
+
 teacher_userType:
   type: object
   additionalProperties: false
@@ -274,9 +272,9 @@ teacher_userType:
       type: string
       example: "1"
       description: Relationship to userType
-  required: 
+  required:
     - id
-  
+
 teacher_thDiscoveryMethod:
   type: object
   additionalProperties: false
@@ -285,9 +283,9 @@ teacher_thDiscoveryMethod:
       type: string
       example: "1"
       description: Relationship to teacher-thDiscoveryMethod
-  required: 
+  required:
     - id
-  
+
 teacher_latestAdviserCommentUser:
   type: object
   additionalProperties: false
@@ -296,9 +294,9 @@ teacher_latestAdviserCommentUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 teacher_currentCountry:
   type: object
   additionalProperties: false
@@ -307,7 +305,7 @@ teacher_currentCountry:
       type: string
       example: "1"
       description: Relationship to regional-country
-  required: 
+  required:
     - id
 
 teacher_numberOfDependentChildren:
@@ -318,9 +316,20 @@ teacher_numberOfDependentChildren:
       type: string
       example: "1"
       description: Relationship to teacher-numberOfDependentChildren
-  required: 
+  required:
     - id
-  
+
+# teacher_user:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     id:
+#       type: string
+#       example: "1"
+#       description: Relationship to teacher-numberOfDependentChildren
+#   required:
+#     - id
+
 # TODO: review these 3
 teacher_thDoNotContact:
   type: boolean

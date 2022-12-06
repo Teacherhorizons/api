@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../../meta/SimpleModel-MultipleSchemas.json
+# yaml-language-server: $schema=../../../../../meta/schemas/SimpleModel-MultipleSchemas.json
 
 SimpleModel_teacher:
   oneOf:
@@ -50,8 +50,6 @@ SimpleModel_teacher_admin:
       $ref: "../../library/teacher/teacher.yaml#/teacher_profileStrength"
     birthYear:
       $ref: "../../library/teacher/teacher.yaml#/teacher_birthYear"
-    numberOfDependentChildren:
-      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren"
     latestAdviserCommentDate:
       $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate"
     interestedInPrivateTuition:
@@ -97,6 +95,8 @@ SimpleModel_teacher_admin:
       $ref: "../../library/teacher/teacher.yaml#/teacher_maritalStatusId"
     internationalSchoolExperienceId:
       $ref: "../../library/teacher/teacher.yaml#/teacher_internationalSchoolExperienceId"
+    numberOfDependentChildrenId:
+      $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildrenId"
   required:
     - schema
     - id

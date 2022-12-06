@@ -89,6 +89,8 @@ JsonApiModel_user_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_user_id"
+    fullName:
+      $ref: "../../library/user/user.yaml#/user_fullName"
   required:
     - id
 

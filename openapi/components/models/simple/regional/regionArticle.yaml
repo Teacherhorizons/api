@@ -18,14 +18,14 @@ SimpleModel_regional-regionArticle:
     creationDate:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
     # relationship attributes
-    region:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_region"
-    category:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_category"
-    article:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_article"
-    creationUser:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationUser"
+    regionId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_regionId"
+    categoryId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_categoryId"
+    articleId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_articleId"
+    creationUserId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationUserId"
   required:
     - id
     - title
@@ -45,18 +45,3 @@ SimpleModel_regional-regionArticle_id:
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

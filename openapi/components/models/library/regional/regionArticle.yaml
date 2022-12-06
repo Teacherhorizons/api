@@ -26,19 +26,19 @@ regional-regionArticle_creationDate:
 #Relationship attributes
 regional-regionArticle_regionId:
   type: integer
-  example: 14
+  example: 1
   description: Relationship to regional-region
 regional-regionArticle_categoryId:
   type: integer
-  example: 11
+  example: 1
   description: Relationship to regional-articleCategory
 regional-regionArticle_articleId:
   type: integer
-  example: 14
+  example: 1
   description: Relationship to regional-regionArticle
 regional-regionArticle_creationUserId:
   type: integer
-  example: 16
+  example: 1
   description: Relationship to user
 
 #Relationships
@@ -48,7 +48,7 @@ regional-regionArticle_region:
   properties:
     id:
       type: string
-      example: "12"
+      example: "1"
       description: Relationship to Region
   required:
     - id
@@ -59,7 +59,7 @@ regional-regionArticle_category:
   properties:
     id:
       type: string
-      example: "4"
+      example: "1"
       description: Relationship to Article Category
   required:
     - id
@@ -81,14 +81,7 @@ regional-regionArticle_creationUser:
   properties:
     id:
       type: string
-      example: "11"
+      example: "1"
       description: Relationship to user
   required:
     - id
-
-
-
-
-
-
-

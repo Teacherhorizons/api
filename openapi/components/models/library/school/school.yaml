@@ -380,7 +380,7 @@ school_city:
       type: string
       example: "1"
       description: Relationship to regional-city
-  required: 
+  required:
     - id
 school_phoneCodeCountry:
   type: object
@@ -390,7 +390,7 @@ school_phoneCodeCountry:
       type: string
       example: "1"
       description: Relationship to Country
-  required: 
+  required:
     - id
 school_internationalWorkingCurrency:
   type: object
@@ -400,7 +400,7 @@ school_internationalWorkingCurrency:
       type: string
       example: "1"
       description: Relationship to Currency
-  required: 
+  required:
     - id
 school_fundingType:
   type: object
@@ -410,7 +410,7 @@ school_fundingType:
       type: string
       example: "1"
       description: Relationship to SchoolFundingTypes
-  required: 
+  required:
     - id
 school_studentGenderMix:
   type: object
@@ -420,7 +420,7 @@ school_studentGenderMix:
       type: string
       example: "1"
       description: Relationship to SchoolStudentGenderMix
-  required: 
+  required:
     - id
 school_affiliatedReligion:
   type: object
@@ -430,7 +430,7 @@ school_affiliatedReligion:
       type: string
       example: "1"
       description: Relationship to Religion
-  required: 
+  required:
     - id
 school_pensionSchemeType:
   type: object
@@ -440,7 +440,7 @@ school_pensionSchemeType:
       type: string
       example: "1"
       description: Relationship to PensionSchemeType
-  required: 
+  required:
     - id
 school_relocationAllowanceType:
   type: object
@@ -450,8 +450,9 @@ school_relocationAllowanceType:
       type: string
       example: "1"
       description: Relationship to SchoolRelocationAllowanceType
-  required: 
+  required:
     - id
+
 school_flightAllowanceType:
   type: object
   additionalProperties: false
@@ -460,7 +461,7 @@ school_flightAllowanceType:
       type: string
       example: "1"
       description: Relationship to SchoolFlightAllowanceType
-  required: 
+  required:
     - id
 school_managedByUser:
   type: object
@@ -470,7 +471,7 @@ school_managedByUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
 
 school_ambassadorTeacher:
@@ -481,7 +482,7 @@ school_ambassadorTeacher:
       type: string
       example: "1"
       description: Relationship to teacher
-  required: 
+  required:
     - id
 
 school_lraUser:
@@ -492,7 +493,7 @@ school_lraUser:
       type: string
       example: "1"
       description: Relationship to Adviser
-  required: 
+  required:
     - id
 school_creationUser:
   type: object
@@ -502,7 +503,7 @@ school_creationUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
 school_latestUpdateUser:
   type: object
@@ -512,5 +513,5 @@ school_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id

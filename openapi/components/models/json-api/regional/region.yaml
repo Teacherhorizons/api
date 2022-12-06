@@ -35,7 +35,7 @@ JsonApiModel_regional-region_admin:
         alias:
           $ref: "../../library/regional/region.yaml#/regional-region_alias"
         slug:
-          $ref: "../../library/regional/region.yaml#/regional-region_name"
+          $ref: "../../library/regional/region.yaml#/regional-region_slug"
         creationDate:
           $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
         latestUpdateDate:
@@ -48,6 +48,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
         numberOfCountries:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
+        numberOfCountriesWithSchools:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
         teachingInRegionDescription:
           $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
         ambassadorTestimonial:
@@ -109,6 +111,7 @@ JsonApiModel_regional-region_admin:
         - latestUpdateDate
         - slug
         - numberOfCountries
+        - numberOfCountriesWithSchools
         - locationLatitude
         - locationLongitude
         - creationUser
@@ -253,6 +256,10 @@ JsonApiModel_regional-region_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-region_id"
+    name:
+      $ref: "../../library/regional/region.yaml#/regional-region_name"
+    slug:
+      $ref: "../../library/regional/region.yaml#/regional-region_slug"
   required:
     - id
 
