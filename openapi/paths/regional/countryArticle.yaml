@@ -1,33 +1,36 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-regional-countryArticle
+  operationId: get-regional-countryArticles
   tags:
     - regional
     - testing-status-1
-  summary: Get a countryArticle
+  summary: Get country articles
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
-    - in: path
-      name: countryArticleId
-      required: true
-      # description:
-      example: 1
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
       schema:
         type: integer
-    - in: query
-      name: include
-      description: Which nested objects to include
-      example: region
-      schema:
-        type: string
+        additionalProperties: false
+        properties:
+          filter[country.id]:
+            type: integer
+        example:
+          country.id: 2
   responses:
     "200":
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/countryArticle.yaml#/Response_regional-countryArticle"
+            $ref: "../../components/responses/regional/countryArticle.yaml#/Response_regional-countryArticles"
+
+    # TODO: move these to a library
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":

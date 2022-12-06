@@ -1,16 +1,16 @@
-Response_regional-countryArticles:
+Response_regional-cityArticles:
   oneOf:
-    - $ref: "#/Response_regional-countryArticles_admin"
+    - $ref: "#/Response_regional-cityArticles_admin"
     # - $ref: "#/Response_regional-regionArticle_school"
     # - $ref: "#/Response_regional-regionArticle_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_regional-countryArticles_admin"
+      admin: "#/Response_regional-cityArticles_admin"
       # school: "#/Response_regional-regionArticle_school"
       # teacher: "#/Response_regional-regionArticle_teacher"
 
-Response_regional-countryArticles_admin:
+Response_regional-cityArticles_admin:
   type: object
   additionalProperties: false
   properties:
@@ -23,27 +23,27 @@ Response_regional-countryArticles_admin:
       additionalProperties: false
       properties:
         type:
-          $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_type"
+          $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_type"
         id:
-          $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_id"
+          $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_id"
         attributes:
           type: object
           additionalProperties: false
           properties:
             #simple attributes
             title:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_title"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title"
             snippet:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet"
             url:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_url"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url"
             photoUrl:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_photoUrl"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_photoUrl"
             photoDescription:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_photoDescription"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_photoDescription"
             #relationship attribute
             category:
-              $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_category"
+              $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_category"
       required:
         - type
         - id

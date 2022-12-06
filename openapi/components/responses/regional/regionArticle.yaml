@@ -1,16 +1,16 @@
-Response_regional-regionArticle:
+Response_regional-regionArticles:
   oneOf:
-    - $ref: "#/Response_regional-regionArticle_admin"
-    - $ref: "#/Response_regional-regionArticle_school"
-    - $ref: "#/Response_regional-regionArticle_teacher"
+    - $ref: "#/Response_regional-regionArticles_admin"
+    # - $ref: "#/Response_regional-regionArticle_school"
+    # - $ref: "#/Response_regional-regionArticle_teacher"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_regional-regionArticle_admin"
-      school: "#/Response_regional-regionArticle_school"
-      teacher: "#/Response_regional-regionArticle_teacher"
+      admin: "#/Response_regional-regionArticles_admin"
+      # school: "#/Response_regional-regionArticle_school"
+      # teacher: "#/Response_regional-regionArticle_teacher"
 
-Response_regional-regionArticle_admin:
+Response_regional-regionArticles_admin:
   type: object
   additionalProperties: false
   properties:
@@ -23,38 +23,27 @@ Response_regional-regionArticle_admin:
       additionalProperties: false
       properties:
         type:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-regionArticle_type"
+          $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_type"
         id:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-regionArticle_id"
+          $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_id"
         attributes:
           type: object
           additionalProperties: false
           properties:
             #simple attributes
             title:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_title"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_title"
             snippet:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
             url:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_url"
             photoUrl:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
             photoDescription:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
-            creationDate:
-              $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            creationUser:
-              $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-            region:
-              $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
+            #relationship attribute
             category:
-              $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
-            article:
-              $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_category"
       required:
         - type
         - id
@@ -64,82 +53,82 @@ Response_regional-regionArticle_admin:
     - schema
     - data
 
-Response_regional-regionArticle_school:
-  type: object
-  additionalProperties: false
-  properties:
-    schema:
-      type: string
-      enum:
-        - school
-    data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-regionArticle_type"
-        id:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-regionArticle_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            #simple attributes
-            alias:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_alias"
-            name:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            slug:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
-            locationLatitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
-  required:
-    - schema
-    - data
+# Response_regional-regionArticle_school:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     schema:
+#       type: string
+#       enum:
+#         - school
+#     data:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         type:
+#           $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_type"
+#         id:
+#           $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_id"
+#         attributes:
+#           type: object
+#           additionalProperties: false
+#           properties:
+#             #simple attributes
+#             alias:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_alias"
+#             name:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_name"
+#             slug:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_slug"
+#             locationLatitude:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_locationLatitude"
+#             locationLongitude:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_locationLongitude"
+#       required:
+#         - type
+#         - id
+#         - attributes
+#         - relationships
+#   required:
+#     - schema
+#     - data
 
-Response_regional-regionArticle_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    schema:
-      type: string
-      enum:
-        - teacher
-    data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
-        id:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            #simple attributes
-            alias:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_alias"
-            name:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            slug:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
-            locationLatitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
-  required:
-    - schema
-    - data
+# Response_regional-regionArticle_teacher:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     schema:
+#       type: string
+#       enum:
+#         - teacher
+#     data:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         type:
+#           $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_type"
+#         id:
+#           $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_id"
+#         attributes:
+#           type: object
+#           additionalProperties: false
+#           properties:
+#             #simple attributes
+#             alias:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_alias"
+#             name:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_name"
+#             slug:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_slug"
+#             locationLatitude:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_locationLatitude"
+#             locationLongitude:
+#               $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_locationLongitude"
+#       required:
+#         - type
+#         - id
+#         - attributes
+#         - relationships
+#   required:
+#     - schema
+#     - data

@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-regional-regionArticles
+  operationId: get-regional-cityArticles
   tags:
     - regional
     - testing-status-1
-  summary: Get region articles
+  summary: Get city articles
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
@@ -18,17 +18,17 @@ get:
         type: integer
         additionalProperties: false
         properties:
-          filter[region.id]:
+          filter[city.id]:
             type: integer
         example:
-          region.id: 2
+          city.id: 2
   responses:
     "200":
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/regionArticle.yaml#/Response_regional-regionArticles"
+            $ref: "../../components/responses/regional/cityArticle.yaml#/Response_regional-cityArticles"
 
     # TODO: move these to a library
     "400":

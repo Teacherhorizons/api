@@ -1,27 +1,47 @@
-# attributes
+#Attribute
+regional-cityArticle_title:
+  type: string
+  example: Teach English In Portugal - How To Get A Job
+
+regional-cityArticle_snippet:
+  type: string
+  example: If you’ve got a burning desire to teach English in Portugal, or just want a feel for what it’s like, here’s all you need to know about living and working in arguably the most exotic locale in Western Europe.
+
+regional-cityArticle_url:
+  type: string
+  example: https://teflhero.com/blog/teach-english-in-portugal/
+
+regional-cityArticle_photoUrl:
+  type: string
+  example: /static/media/articles/photoOfACat.jpeg
+
+regional-cityArticle_photoDescription:
+  type: string
+  example: My photo description
+
 regional-cityArticle_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
 
-# Relationship attributes
-regional-cityArticle_creationUserId:
-  type: string
-  example: 11
-  description: Relationship to User
+#Relationship attributes
 regional-cityArticle_cityId:
   type: integer
-  example: 12
-  description: Relationship to City
+  example: 14
+  description: Relationship to regional-city
 regional-cityArticle_categoryId:
   type: integer
-  example: 12
-  description: Relationship to Category
+  example: 11
+  description: Relationship to regional-articleCategory
 regional-cityArticle_articleId:
   type: integer
-  example: 12
-  description: Relationship to Article
+  example: 14
+  description: Relationship to regional-cityArticle
+regional-cityArticle_creationUserId:
+  type: integer
+  example: 16
+  description: Relationship to user
 
-# Relationships
+#Relationships
 regional-cityArticle_city:
   type: object
   additionalProperties: false
@@ -29,7 +49,29 @@ regional-cityArticle_city:
     id:
       type: string
       example: "12"
-      description: Relationship to City
+      description: Relationship to city
+  required:
+    - id
+
+regional-cityArticle_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "4"
+      description: Relationship to Article Category
+  required:
+    - id
+
+regional-cityArticle_article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country Article
   required:
     - id
 
@@ -44,27 +86,9 @@ regional-cityArticle_creationUser:
   required:
     - id
 
-regional-cityArticle_category:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to Article Category
-  required:
-    - id
 
-regional-cityArticle_article:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to City?
-  required:
-    - id
 
-    
+
+
+
 
