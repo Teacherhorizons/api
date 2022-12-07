@@ -7,7 +7,7 @@ get:
     - testing-status-1
   summary: Get region articles
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter

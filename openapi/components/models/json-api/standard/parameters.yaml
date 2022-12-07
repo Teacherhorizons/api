@@ -18,3 +18,12 @@ JsonApiModel_parameters_standardSchema:
       - admin
       - school
       - teacher
+
+JsonApiModel_parameters_notSignedInSchema:
+  in: query
+  name: schema
+  required: true
+  schema:
+    type: string
+    enum:
+      - not signed in
