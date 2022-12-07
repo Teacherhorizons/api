@@ -6,10 +6,10 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
+        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)[-]*[a-zA-Z0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
         "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_type$": {
@@ -66,7 +66,7 @@
             "mapping": {
               "type": "object",
               "patternProperties": {
-                "^(all|admin|school|teacher)$": {
+                "^(all|admin|school|teacher|notSignedIn)$": {
                   "type": "string"
                 }
               },
@@ -201,7 +201,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(admin|school|teacher)[-]*[a-zA-Z0-9]*$"
+            "pattern": "^(admin|school|teacher|not-signed-in)[-]*[a-zA-Z0-9]*$"
           },
           "minItems": 1,
           "maxItems": 1

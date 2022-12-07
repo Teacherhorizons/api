@@ -11,13 +11,21 @@
 #       teacher: "#/Response_regional-regionArticles_teacher"
 
 Response_regional-regionArticles:
+  oneOf:
+    - $ref: "#/Response_regional-regionArticles_notSignedIn"
+  discriminator:
+    propertyName: schema
+    mapping:
+      notSignedIn: "#/Response_regional-regionArticles_notSignedIn"
+
+Response_regional-regionArticles_notSignedIn:
   type: object
   additionalProperties: false
   properties:
     schema:
       type: string
       enum:
-        - not signed in 
+        - not-signed-in
     data:
       type: object
       additionalProperties: false
@@ -52,7 +60,6 @@ Response_regional-regionArticles:
   required:
     - schema
     - data
-
 # Response_regional-regionArticles_school:
 #   type: object
 #   additionalProperties: false
