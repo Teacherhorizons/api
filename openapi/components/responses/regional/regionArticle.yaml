@@ -27,36 +27,38 @@ Response_regional-regionArticles_notSignedIn:
       enum:
         - not-signed-in
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_type"
-        id:
-          $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            #simple attributes
-            title:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_title"
-            snippet:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
-            url:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_url"
-            photoUrl:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
-            photoDescription:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
-            #relationship attribute
-            category:
-              $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_category"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_type"
+          id:
+            $ref: "../../models/json-api/regional/regionArticle.yaml#/JsonApiModel_regional-regionArticle_id"
+          attributes:
+            type: object
+            additionalProperties: false
+            properties:
+              #simple attributes
+              title:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_title"
+              snippet:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
+              url:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_url"
+              photoUrl:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoUrl"
+              photoDescription:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_photoDescription"
+              #relationship attribute
+              category:
+                $ref: "../../models/library/regional/regionArticle.yaml#/regional-regionArticle_category"
+        required:
+          - type
+          - id
+          - attributes
+          - relationships
   required:
     - schema
     - data

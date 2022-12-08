@@ -1,13 +1,15 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
 
 get:
   operationId: get-regional-countryArticles
+  summary: Get country articles
   tags:
     - regional
     - testing-status-1
-  summary: Get country articles
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
@@ -15,13 +17,15 @@ get:
       allowReserved: true
       explode: true
       schema:
-        type: integer
+        type: object
         additionalProperties: false
         properties:
           filter[country.id]:
             type: integer
         example:
-          country.id: 2
+          country.id: 1
+        required:
+          - filter[country.id]
   responses:
     "200":
       description: OK (Request successful)

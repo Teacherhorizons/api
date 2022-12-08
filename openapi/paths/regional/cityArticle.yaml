@@ -1,13 +1,15 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
 
 get:
   operationId: get-regional-cityArticles
+  summary: Get city articles
   tags:
     - regional
     - testing-status-1
-  summary: Get city articles
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
@@ -15,13 +17,15 @@ get:
       allowReserved: true
       explode: true
       schema:
-        type: integer
+        type: object
         additionalProperties: false
         properties:
           filter[city.id]:
             type: integer
         example:
-          city.id: 2
+          city.id: 1
+        required:
+          - filter[city.id]
   responses:
     "200":
       description: OK (Request successful)

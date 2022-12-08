@@ -1,11 +1,13 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
 
 get:
   operationId: get-regional-regionArticles
+  summary: Get region articles
   tags:
     - regional
     - testing-status-1
-  summary: Get region articles
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
@@ -15,13 +17,15 @@ get:
       allowReserved: true
       explode: true
       schema:
-        type: integer
+        type: object
         additionalProperties: false
         properties:
           filter[region.id]:
             type: integer
         example:
-          region.id: 2
+          region.id: 1
+        required:
+          - filter[region.id]
   responses:
     "200":
       description: OK (Request successful)

@@ -2,10 +2,12 @@
 
 get:
   operationId: get-regional-region
+  summary: Get a region (group of countries)
   tags:
     - regional
     - testing-status-1
-  summary: Get a region (group of countries)
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"

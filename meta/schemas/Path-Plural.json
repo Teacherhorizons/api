@@ -349,7 +349,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_(standardSchema|asUserId)$"
+          "pattern": "^../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_(standardSchema|notSignedInSchema|asUserId)$"
         },
         "in": {
           "type": "string",
@@ -459,6 +459,9 @@
                         },
                         {
                           "const": "number"
+                        },
+                        {
+                          "const": "integer"
                         }
                       ]
                     },
