@@ -1,23 +1,19 @@
 Response_regional-region:
   oneOf:
-    - $ref: "#/Response_regional-region_admin"
-    - $ref: "#/Response_regional-region_school"
-    - $ref: "#/Response_regional-region_teacher"
+    - $ref: "#/Response_regional-region_notSignedIn"
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_regional-region_admin"
-      school: "#/Response_regional-region_school"
-      teacher: "#/Response_regional-region_teacher"
+      notSignedIn: "#/Response_regional-region_notSignedIn"
 
-Response_regional-region_admin:
+Response_regional-region_notSignedIn:
   type: object
   additionalProperties: false
   properties:
     schema:
       type: string
       enum:
-        - admin
+        - not-signed-in
     data:
       type: object
       additionalProperties: false
@@ -154,16 +150,17 @@ Response_regional-region_admin:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_regional-region_includedSchool_admin"
-          - $ref: "#/Response_regional-region_includedJob_admin"
-          - $ref: "#/Response_regional-region_includedCountry_admin"
-          - $ref: "#/Response_regional-region_includedAmbassador_admin"
-          - $ref: "#/Response_regional-region_includedStaff_admin"
+          - $ref: "#/Response_regional-region_includedSchool_notSignedIn"
+          - $ref: "#/Response_regional-region_includedJob_notSignedIn"
+          - $ref: "#/Response_regional-region_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-region_includedCity_notSignedIn"
+          - $ref: "#/Response_regional-region_includedAmbassador_notSignedIn"
+          - $ref: "#/Response_regional-region_includedStaff_notSignedIn"
   required:
     - schema
     - data
 
-Response_regional-region_includedCountry_admin:
+Response_regional-region_includedCountry_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -197,7 +194,7 @@ Response_regional-region_includedCountry_admin:
     - id
     - attributes
 
-Response_regional-region_includedAmbassador_admin:
+Response_regional-region_includedAmbassador_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -231,7 +228,7 @@ Response_regional-region_includedAmbassador_admin:
     - id
     - attributes
 
-Response_regional-region_includedStaff_admin:
+Response_regional-region_includedStaff_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -255,7 +252,7 @@ Response_regional-region_includedStaff_admin:
     - id
     - attributes
 
-Response_regional-region_includedJob_admin:
+Response_regional-region_includedJob_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -284,7 +281,7 @@ Response_regional-region_includedJob_admin:
     - id
     - attributes
 
-Response_regional-region_includedSchool_admin:
+Response_regional-region_includedSchool_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -316,83 +313,31 @@ Response_regional-region_includedSchool_admin:
     - id
     - attributes
 
-# school
-Response_regional-region_school:
+Response_regional-region_includedCity_notSignedIn:
   type: object
   additionalProperties: false
   properties:
-    schema:
-      type: string
-      enum:
-        - admin
-    data:
+    type:
+      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
+    attributes:
       type: object
       additionalProperties: false
       properties:
-        type:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
-        id:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            #simple attributes
-            alias:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_alias"
-            name:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            slug:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
-            locationLatitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
-  required:
-    - schema
-    - data
-
-Response_regional-region_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    schema:
-      type: string
-      enum:
-        - admin
-    data:
+        # simple attributes
+        name:
+          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_name"
+    relationships:
       type: object
       additionalProperties: false
       properties:
-        type:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
-        id:
-          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            #simple attributes
-            alias:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_alias"
-            name:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            slug:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
-            locationLatitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
+        country:
+          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship"
       required:
-        - type
-        - id
-        - attributes
-        - relationships
+        - name
+        - country
   required:
-    - schema
-    - data
+    - type
+    - id
+    - attributes
