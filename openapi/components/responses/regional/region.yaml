@@ -136,7 +136,7 @@ Response_regional-region_admin:
           additionalProperties: false
           properties:
             staff:
-              $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship"
+              $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
             country:
               $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship"
             job:

@@ -20,6 +20,9 @@
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Relationship"
+        },
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship_multiple$": {
+          "$ref": "#/definitions/JsonApiModel-SingleSchema-RelationshipMultiple"
         }
       },
       "required": [],
@@ -275,6 +278,57 @@
       ],
       "title": "JsonApiModel-SingleSchema-RelationshipAttribute"
     },
+    "JsonApiModel-SingleSchema-TypeAndId": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/JsonApiModel-SingleSchema-Ref"
+            },
+            "id": {
+              "$ref": "#/definitions/JsonApiModel-SingleSchema-Ref"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "allOf": [
+            {
+              "contains": {
+                "const": "type"
+              }
+            },
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ]
+    },
     "JsonApiModel-SingleSchema-Relationship": {
       "type": "object",
       "additionalProperties": false,
@@ -290,55 +344,7 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "const": "object"
-                },
-                "additionalProperties": {
-                  "const": false
-                },
-                "properties": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "type": {
-                      "$ref": "#/definitions/JsonApiModel-SingleSchema-Ref"
-                    },
-                    "id": {
-                      "$ref": "#/definitions/JsonApiModel-SingleSchema-Ref"
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "id"
-                  ]
-                },
-                "required": {
-                  "type": "array",
-                  "minItems": 2,
-                  "maxItems": 2,
-                  "allOf": [
-                    {
-                      "contains": {
-                        "const": "type"
-                      }
-                    },
-                    {
-                      "contains": {
-                        "const": "id"
-                      }
-                    }
-                  ]
-                }
-              },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties",
-                "required"
-              ]
+              "$ref": "#/definitions/JsonApiModel-SingleSchema-TypeAndId"
             }
           },
           "required": [
@@ -365,6 +371,58 @@
         "required"
       ],
       "title": "JsonApiModel-SingleSchema-Relationship"
+    },
+    "JsonApiModel-SingleSchema-RelationshipMultiple": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "const": "array"
+                },
+                "items": {
+                  "$ref": "#/definitions/JsonApiModel-SingleSchema-TypeAndId"
+                }
+              }
+            }
+          },
+          "required": [
+            "data"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "data"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "JsonApiModel-SingleSchema-RelationshipMultiple"
     },
     "JsonApiModel-SingleSchema-Ref": {
       "type": "object",
