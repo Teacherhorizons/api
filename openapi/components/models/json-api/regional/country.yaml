@@ -354,3 +354,25 @@ JsonApiModel_regional-country_relationship:
         - id
   required:
     - data
+
+JsonApiModel_regional-country_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_regional-country_type"
+          id:
+            $ref: "#/JsonApiModel_regional-country_id"
+        required:
+          - type
+          - id
+  required:
+    - data
+
+

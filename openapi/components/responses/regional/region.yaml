@@ -134,13 +134,13 @@ Response_regional-region_notSignedIn:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
             country:
-              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship"
+              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
             job:
-              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship"
+              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
             school:
-              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship"
+              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
             ambassador:
-              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship"
+              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
       required:
         - type
         - id

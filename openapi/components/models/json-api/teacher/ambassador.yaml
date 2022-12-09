@@ -92,3 +92,23 @@ JsonApiModel_teacher-ambassador_relationship_attribute:
       $ref: "#/JsonApiModel_teacher-ambassador_id"
   required:
     - id
+
+JsonApiModel_teacher-ambassador_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_teacher-ambassador_type"
+          id:
+            $ref: "#/JsonApiModel_teacher-ambassador_id"
+        required:
+          - type
+          - id
+  required:
+    - data
