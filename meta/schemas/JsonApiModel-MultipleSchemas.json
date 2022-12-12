@@ -116,7 +116,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general|job|regional|school)[a-zA-Z-]*_type$"
+                  "pattern": "^#/JsonApiModel_(application|general|job|regional|school|user)[a-zA-Z-]*_type$"
                 }
               }
             },
@@ -126,7 +126,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general|job|regional|school)[a-zA-Z-]*_id$"
+                  "pattern": "^#/JsonApiModel_(application|general|job|regional|school|user)[a-zA-Z-]*_id$"
                 }
               }
             },
@@ -151,7 +151,7 @@
                       "properties": {
                         "$ref": {
                           "type": "string",
-                          "pattern": "^([a-zA-Z./]*.yaml#/JsonApiModel_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school)[a-zA-Z-_1]*(?<!(Id)))$"
+                          "pattern": "^([a-zA-Z./]*.yaml#/JsonApiModel_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school|user)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school|user)[a-zA-Z-_1]*(?<!(Id)))$"
                         }
                       },
                       "required": [
@@ -314,6 +314,42 @@
           "additionalProperties": false,
           "properties": {
             "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$ref"
+              ]
+            },
+            "name": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$ref"
+              ]
+            },
+            "slug": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "$ref"
+              ]
+            },
+            "fullName": {
               "type": "object",
               "additionalProperties": false,
               "properties": {

@@ -107,7 +107,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/Response_(application|general|job|regional|school)[-a-zA-Z_]*_meta$"
+                  "pattern": "^#/Response_(application|general|job|regional|school|user)[-a-zA-Z_]*_meta$"
                 }
               }
             },
@@ -708,7 +708,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*_relationship$"
+          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*_relationship(_multiple)*$"
         }
       },
       "required": [
@@ -721,7 +721,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school)[-a-zA-Z_]*relationship_attribute)$"
+          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school|user)[-a-zA-Z_]*relationship_attribute)$"
         }
       },
       "required": [
