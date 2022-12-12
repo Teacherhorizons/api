@@ -334,6 +334,10 @@ JsonApiModel_regional-country_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-country_id"
+    name:
+      $ref: "../../library/regional/country.yaml#/regional-country_name"
+    slug:
+      $ref: "../../library/regional/country.yaml#/regional-country_slug"
   required:
     - id
 
@@ -374,5 +378,3 @@ JsonApiModel_regional-country_relationship_multiple:
           - id
   required:
     - data
-
-
