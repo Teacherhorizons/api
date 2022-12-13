@@ -122,7 +122,7 @@ JsonApiModel_regional-city_admin:
         language:
           $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
         ambassadorTeacher:
-            $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
       required:
         - name
         - alias
@@ -183,7 +183,7 @@ JsonApiModel_regional-city_admin:
         language:
           $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship"
         ambassadorTeacher:
-            $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:
     - schema
     - type
@@ -298,6 +298,10 @@ JsonApiModel_regional-city_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-city_id"
+    name:
+      $ref: "../../library/regional/city.yaml#/regional-city_name"
+    slug:
+      $ref: "../../library/regional/city.yaml#/regional-city_slug"
   required:
     - id
 

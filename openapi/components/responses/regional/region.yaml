@@ -4,7 +4,7 @@ Response_regional-region:
   discriminator:
     propertyName: schema
     mapping:
-      notSignedIn: "#/Response_regional-region_notSignedIn"
+      not-signed-in: "#/Response_regional-region_notSignedIn"
 
 Response_regional-region_notSignedIn:
   type: object
@@ -43,8 +43,8 @@ Response_regional-region_notSignedIn:
               $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
             locationLongitude:
               $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
-            numberOfCountries:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountries"
+            # numberOfCountries:
+            #   $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountries"
             numberOfCountriesWithSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
             teachingInRegionDescription:
@@ -99,7 +99,7 @@ Response_regional-region_notSignedIn:
             - creationDate
             - latestUpdateDate
             - slug
-            - numberOfCountries
+            # - numberOfCountries
             - numberOfCountriesWithSchools
             - locationLatitude
             - locationLongitude
@@ -209,13 +209,19 @@ Response_regional-region_includedAmbassador_notSignedIn:
         # simple attributes
         levelName:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
-        fullName:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_fullName"
         photoUrl:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
         testimonial:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
         # relationship attributes
+        user:
+          $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        city:
+          $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        country:
+          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
         region:
           $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
@@ -240,10 +246,14 @@ Response_regional-region_includedStaff_notSignedIn:
       type: object
       additionalProperties: false
       properties:
+        # simple attributes
         photoUrl:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
         description:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description"
+        # relationship attributes
+        user:
+          $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
         - photoUrl
         - description

@@ -294,6 +294,10 @@ JsonApiModel_school_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school_id"
+    name:
+      $ref: "../../library/school/school.yaml#/school_name"
+    slug:
+      $ref: "../../library/school/school.yaml#/school_slug"
   required:
     - id
 
