@@ -133,13 +133,13 @@ Response_regional-region_notSignedIn:
           properties:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            country:
+            countries:
               $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
-            job:
+            jobs:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
-            school:
+            schools:
               $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
-            ambassador:
+            ambassadors:
               $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
       required:
         - type

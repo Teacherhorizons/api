@@ -2,25 +2,22 @@
 
 get:
   operationId: get-regional-country
+  summary: Get a country (group of cities)
   tags:
     - regional
     - testing-status-1
-  summary: Get a country
+  description: |
+    <span class="testing-status-1"></span>
   parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: path
       name: countryId
       required: true
-      # description:
       example: 1
       schema:
         type: integer
-    - in: query
-      name: include
-      description: Which nested objects to include
-      example: region
-      schema:
-        type: string
+
   responses:
     "200":
       description: OK (Request successful)
@@ -28,6 +25,8 @@ get:
         application/json:
           schema:
             $ref: "../../components/responses/regional/country.yaml#/Response_regional-country"
+
+    # TODO: move these to a library
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "404":
