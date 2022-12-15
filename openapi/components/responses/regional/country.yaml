@@ -37,14 +37,6 @@ Response_regional-country_notSignedIn:
               $ref: "../../models/library/regional/country.yaml#/regional-country_photo1Url"
             slug:
               $ref: "../../models/library/regional/country.yaml#/regional-country_name"
-            creationDate:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_creationDate"
-            latestUpdateDate:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_latestUpdateDate"
-            locationLatitude:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_locationLongitude"
             numberOfCities:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCities"
             numberOfCitiesWithSchools:
@@ -94,15 +86,9 @@ Response_regional-country_notSignedIn:
           required:
             - name
             - population
-            - creationDate
-            - latestUpdateDate
             - slug
             - numberOfCities
             - numberOfCitiesWithSchools
-            - locationLatitude
-            - locationLongitude
-            - creationUser
-            - latestUpdateUser
             - teachingInCountryDescription
             - photo1Url
             - qualityOfLifeDescription
