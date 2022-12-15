@@ -31,86 +31,81 @@ Response_regional-country_notSignedIn:
             # simple Attributes
             name:
               $ref: "../../models/library/regional/country.yaml#/regional-country_name"
-            # alias:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_alias"
-            # slug:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_name"
-            # creationDate:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_creationDate"
-            # latestUpdateDate:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_latestUpdateDate"
-            # # nationalAverageIncome:
-            # #   $ref: "../../models/library/regional/region.yaml#/regional-country_creationDate"
-            # locationLatitude:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_locationLatitude"
-            # locationLongitude:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_locationLongitude"
-            # numberOfCountries:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfCountries"
-            # numberOfCountriesWithSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfCountriesWithSchools"
-            # teachingInRegionDescription:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_teachingInRegionDescription"
-            # ambassadorTestimonial:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_ambassadorTestimonial"
-            # photo1Url:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_photo1Url"
-            # qualityOfLifeDescription:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_qualityOfLifeDescription"
-            # adviceForInternationalTeachers:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_adviceForInternationalTeachers"
-            # numberOfSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSchools"
-            # numberOfIBSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfIBSchools"
-            # numberOfLiveJobs:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfLiveJobs"
-            # numberOfPrimaryIBCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools"
-            # numberOfPrimaryUSCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfPrimaryUSCurriculumSchools"
-            # numberOfPrimaryUKCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfPrimaryUKCurriculumSchools"
-            # numberOfPrimaryInternationalCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfPrimaryInternationalCurriculumSchools"
-            # numberOfPrimaryOtherCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfPrimaryOtherCurriculumSchools"
-            # numberOfSecondaryIBCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSecondaryIBCurriculumSchools"
-            # numberOfSecondaryUSCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSecondaryUSCurriculumSchools"
-            # numberOfSecondaryUKCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSecondaryUKCurriculumSchools"
-            # numberOfSecondaryInternationalCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools"
-            # numberOfSecondaryOtherCurriculumSchools:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
-            # savingPercentage:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_savingPercentage"
-            # percentageOfSchoolsHaveFlightAllowance:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
-            # percentageOfSchoolsHavePrivateHealthcareScheme:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_percentageOfSchoolsHavePrivateHealthcareScheme"
-            # percentageOfOverseasTeachers:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_percentageOfOverseasTeachers"
-            # percentageOfInternationalStudents:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-country_percentageOfInternationalStudents"
+            population:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_population"
+            photo1Url:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_photo1Url"
+            slug:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_name"
+            creationDate:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_creationDate"
+            latestUpdateDate:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_latestUpdateDate"
+            locationLatitude:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_locationLatitude"
+            locationLongitude:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_locationLongitude"
+            numberOfCities:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCities"
+            numberOfCitiesWithSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
+            qualityOfLifeDescription:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
+            numberOfSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSchools"
+            numberOfIBSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfIBSchools"
+            numberOfLiveJobs:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfLiveJobs"
+            ambassadorTestimonial:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_ambassadorTestimonial"
+            teachingInCountryDescription:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_teachingInCountryDescription"
+            numberOfPrimaryIBCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools"
+            numberOfPrimaryUSCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryUSCurriculumSchools"
+            numberOfPrimaryUKCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryUKCurriculumSchools"
+            numberOfPrimaryInternationalCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryInternationalCurriculumSchools"
+            numberOfPrimaryOtherCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryOtherCurriculumSchools"
+            numberOfSecondaryIBCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryIBCurriculumSchools"
+            numberOfSecondaryUSCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryUSCurriculumSchools"
+            numberOfSecondaryUKCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryUKCurriculumSchools"
+            numberOfSecondaryInternationalCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools"
+            numberOfSecondaryOtherCurriculumSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
+            savingPercentage:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_savingPercentage"
+            percentageOfSchoolsHaveFlightAllowance:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
+            percentageOfSchoolsHavePrivateHealthcareScheme:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfSchoolsHavePrivateHealthcareScheme"
+            percentageOfOverseasTeachers:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfOverseasTeachers"
+            percentageOfInternationalStudents:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfInternationalStudents"
           required:
             - name
-            - alias
+            - population
             - creationDate
             - latestUpdateDate
             - slug
-            - numberOfCountries
-            - numberOfCountriesWithSchools
+            - numberOfCities
+            - numberOfCitiesWithSchools
             - locationLatitude
             - locationLongitude
             - creationUser
             - latestUpdateUser
-            - teachingInRegionDescription
+            - teachingInCountryDescription
             - photo1Url
             - qualityOfLifeDescription
-            - adviceForInternationalTeachers
             - numberOfSchools
             - numberOfIBSchools
             - numberOfLiveJobs
@@ -152,12 +147,12 @@ Response_regional-country_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_regional-country_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-country_includedJob_notSignedIn"
-          - $ref: "#/Response_regional-country_includedCountry_notSignedIn"
           - $ref: "#/Response_regional-country_includedCity_notSignedIn"
-          - $ref: "#/Response_regional-country_includedAmbassador_notSignedIn"
           - $ref: "#/Response_regional-country_includedStaff_notSignedIn"
+          - $ref: "#/Response_regional-country_includedJob_notSignedIn"
+          - $ref: "#/Response_regional-country_includedSchool_notSignedIn"
+          - $ref: "#/Response_regional-country_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-country_includedAmbassador_notSignedIn"       
   required:
     - schema
     - data
