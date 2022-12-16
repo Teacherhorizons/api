@@ -118,6 +118,18 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
         walkingAloneInNightSafetyIndex:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
+        grossSalaryJuniorTeacherMin:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMin"
+        grossSalaryJuniorTeacherAverage:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherAverage"
+        grossSalaryJuniorTeacherMax:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMax"
+        grossSalarySeniorTeacherMin:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMin"
+        grossSalarySeniorTeacherAverage:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherAverage"
+        grossSalarySeniorTeacherMax:
+          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMax"
         # relationship attributes
         currency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -188,6 +200,12 @@ JsonApiModel_regional-country_admin:
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneInNightSafetyIndex
+        - grossSalaryJuniorTeacherMin
+        - grossSalaryJuniorTeacherAverage
+        - grossSalaryJuniorTeacherMax
+        - grossSalarySeniorTeacherMin
+        - grossSalarySeniorTeacherAverage
+        - grossSalarySeniorTeacherMax
     relationships:
       type: object
       additionalProperties: false
