@@ -29,40 +29,26 @@ Response_regional-region_notSignedIn:
             # simple Attributes
             name:
               $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            alias:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_alias"
             slug:
               $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            creationDate:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_creationDate"
-            latestUpdateDate:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_latestUpdateDate"
-            # nationalAverageIncome:
-            #   $ref: "../../models/library/regional/region.yaml#/regional-region_creationDate"
-            locationLatitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLatitude"
-            locationLongitude:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_locationLongitude"
+            photo1Url:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_photo1Url"
             # numberOfCountries:
             #   $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountries"
             numberOfCountriesWithSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
-            teachingInRegionDescription:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_teachingInRegionDescription"
-            ambassadorTestimonial:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_ambassadorTestimonial"
-            photo1Url:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_photo1Url"
-            qualityOfLifeDescription:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
-            adviceForInternationalTeachers:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
             numberOfSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSchools"
             numberOfIBSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfIBSchools"
             numberOfLiveJobs:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfLiveJobs"
+            teachingInRegionDescription:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_teachingInRegionDescription"
+            qualityOfLifeDescription:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+            ambassadorTestimonial:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_ambassadorTestimonial"
             numberOfPrimaryIBCurriculumSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
             numberOfPrimaryUSCurriculumSchools:
@@ -89,22 +75,17 @@ Response_regional-region_notSignedIn:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
             percentageOfSchoolsHavePrivateHealthcareScheme:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+            adviceForInternationalTeachers:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
             percentageOfOverseasTeachers:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
             percentageOfInternationalStudents:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
           required:
             - name
-            - alias
-            - creationDate
-            - latestUpdateDate
             - slug
             # - numberOfCountries
             - numberOfCountriesWithSchools
-            - locationLatitude
-            - locationLongitude
-            - creationUser
-            - latestUpdateUser
             - teachingInRegionDescription
             - photo1Url
             - qualityOfLifeDescription
@@ -133,13 +114,13 @@ Response_regional-region_notSignedIn:
           properties:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            country:
+            countries:
               $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
-            job:
+            jobs:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
-            school:
+            schools:
               $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
-            ambassador:
+            ambassadors:
               $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
       required:
         - type
