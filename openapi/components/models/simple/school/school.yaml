@@ -3,8 +3,7 @@ SimpleModel_school:
   additionalProperties: false
   properties:
     id:
-      $ref:
-        "#/SimpleModel_school-school_id"
+      $ref: "#/SimpleModel_school-school_id"
     # simple attributes
     creationDate:
       $ref: "../../library/school/school.yaml#/school_creationDate"
@@ -36,8 +35,8 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_hasBeenVisitedByTh"
     acronym:
       $ref: "../../library/school/school.yaml#/school_acronym"
-    profileStrengthPercentage:
-      $ref: "../../library/school/school.yaml#/school_profileStrengthPercentage"
+    profileStrength:
+      $ref: "../../library/school/school.yaml#/school_profileStrength"
     monthSchoolYearBegins:
       $ref: "../../library/school/school.yaml#/school_monthSchoolYearBegins"
     headTeacherName:
@@ -237,7 +236,7 @@ SimpleModel_school:
     lraUserId:
       $ref: "../../library/school/school.yaml#/school_lraUserId"
   required:
-  - id
+    - id
 
 # shared
 SimpleModel_school-school_id:
