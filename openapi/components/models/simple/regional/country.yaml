@@ -50,8 +50,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTestimonial"
     teachingInCountryDescription:
       $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
-    numberOfCities:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfCities"
+    numberOfCitiesWithSchools:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
     numberOfSchools:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchools"
     numberOfIBSchools:
@@ -80,6 +80,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
     savingPercentage:
       $ref: "../../library/regional/country.yaml#/regional-country_savingPercentage"
+    averageAnnualSaving:
+      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualSaving"
     percentageOfSchoolsHaveFlightAllowance:
       $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
     percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -98,14 +100,14 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff"
     costOfGasoline1Litre:
       $ref: "../../library/regional/country.yaml#/regional-country_costOfGasoline1Litre"
-    costOfBasicUtilities:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfBasicUtilities"
-    costOfInternet:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfInternet"
-    costOf1BedroomApartmentInCityCentre:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentInCityCentre"
-    costOf1BedroomApartmentOutsideCityCentre:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentOutsideCityCentre"
+    monthlyCostOfBasicUtilities:
+      $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfBasicUtilities"
+    monthlyCostOfInternet:
+      $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfInternet"
+    monthlyRent1BedroomApartmentInCityCentre:
+      $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre"
+    monthlyRent1BedroomApartmentOutsideCityCentre:
+      $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentOutsideCityCentre"
     crimeIndex:
       $ref: "../../library/regional/country.yaml#/regional-country_crimeIndex"
     walkingAloneInDaylightSafetyIndex:
@@ -127,8 +129,8 @@ SimpleModel_regional-country_admin:
     # relationship attributes
     countryId:
       $ref: "../../library/regional/country.yaml#/regional-country_countryId"
-    currencyId:
-      $ref: "../../library/regional/country.yaml#/regional-country_currencyId"
+    localCurrencyId:
+      $ref: "../../library/regional/country.yaml#/regional-country_localCurrencyId"
     creationUserId:
       $ref: "../../library/regional/country.yaml#/regional-country_creationUserId"
     latestUpdateUserId:
@@ -156,14 +158,14 @@ SimpleModel_regional-country_admin:
     - isoCode
     - photo1Url
     - population
-    - currencyId
+    - localCurrencyId
     - capitalCityId
     - languageId
     - locationLatitude
     - locationLongitude
     - ambassadorTestimonial
     - teachingInCountryDescription
-    - numberOfCities
+    - numberOfCitiesWithSchools
     - numberOfSchools
     - numberOfIBSchools
     - numberOfLiveJobs
@@ -187,10 +189,10 @@ SimpleModel_regional-country_admin:
     - costOf1WayTicketLocalTransport
     - costOfTaxi1KilometerNormalTariff
     - costOfGasoline1Litre
-    - costOfBasicUtilities
-    - costOfInternet
-    - costOf1BedroomApartmentInCityCentre
-    - costOf1BedroomApartmentOutsideCityCentre
+    - monthlyCostOfBasicUtilities
+    - monthlyCostOfInternet
+    - monthlyRent1BedroomApartmentInCityCentre
+    - monthlyRent1BedroomApartmentOutsideCityCentre
     - crimeIndex
     - walkingAloneInDaylightSafetyIndex
     - walkingAloneInNightSafetyIndex
