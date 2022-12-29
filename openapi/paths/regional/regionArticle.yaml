@@ -22,10 +22,11 @@ get:
         properties:
           filter[region.id]:
             type: integer
+          filter[region.slug]:
+            type: string
         example:
           region.id: 1
-        required:
-          - filter[region.id]
+          region.slug: europe
   responses:
     "200":
       description: OK (Request successful)

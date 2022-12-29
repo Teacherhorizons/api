@@ -22,10 +22,11 @@ get:
         properties:
           filter[city.id]:
             type: integer
+          filter[city.slug]:
+            type: string
         example:
           city.id: 1
-        required:
-          - filter[city.id]
+          city.slug: europe-portugal-lisbon
   responses:
     "200":
       description: OK (Request successful)
