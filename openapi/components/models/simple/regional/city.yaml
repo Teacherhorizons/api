@@ -98,14 +98,14 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
     costOfGasoline1Litre:
       $ref: "../../library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
-    costOfBasicUtilities:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfBasicUtilities"
-    costOfInternet:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfInternet"
-    costOf1BedroomApartmentInCityCentre:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOf1BedroomApartmentInCityCentre"
-    costOf1BedroomApartmentOutsideCityCentre:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOf1BedroomApartmentOutsideCityCentre"
+    monthlyCostOfBasicUtilities:
+      $ref: "../../library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities"
+    monthlyCostOfInternet:
+      $ref: "../../library/regional/city.yaml#/regional-city_monthlyCostOfInternet"
+    monthlyRent1BedroomApartmentInCityCentre:
+      $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
+    monthlyRent1BedroomApartmentOutsideCityCentre:
+      $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
     # relationship attributes
     countryId:
       $ref: "../../library/regional/city.yaml#/regional-city_countryId"

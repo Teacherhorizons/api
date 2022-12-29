@@ -31,14 +31,12 @@ Response_regional-country_notSignedIn:
             # simple Attributes
             name:
               $ref: "../../models/library/regional/country.yaml#/regional-country_name"
+            slug:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_slug"
             population:
               $ref: "../../models/library/regional/country.yaml#/regional-country_population"
             photo1Url:
               $ref: "../../models/library/regional/country.yaml#/regional-country_photo1Url"
-            slug:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_name"
-            numberOfCities:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCities"
             numberOfCitiesWithSchools:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
             qualityOfLifeDescription:
@@ -75,6 +73,20 @@ Response_regional-country_notSignedIn:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
             savingPercentage:
               $ref: "../../models/library/regional/country.yaml#/regional-country_savingPercentage"
+            averageAnnualSaving:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_averageAnnualSaving"
+            grossSalaryJuniorTeacherMin:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMin"
+            grossSalaryJuniorTeacherAverage:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherAverage"
+            grossSalaryJuniorTeacherMax:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMax"
+            grossSalarySeniorTeacherMin:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMin"
+            grossSalarySeniorTeacherAverage:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherAverage"
+            grossSalarySeniorTeacherMax:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMax"
             percentageOfSchoolsHaveFlightAllowance:
               $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
             percentageOfSchoolsHavePrivateHealthcareScheme:

@@ -56,8 +56,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTestimonial"
         teachingInCountryDescription:
           $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
-        numberOfCities:
-          $ref: "../../library/regional/country.yaml#/regional-country_numberOfCities"
+        numberOfCitiesWithSchools:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
         numberOfSchools:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchools"
         numberOfIBSchools:
@@ -86,6 +86,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
         savingPercentage:
           $ref: "../../library/regional/country.yaml#/regional-country_savingPercentage"
+        averageAnnualSaving:
+          $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualSaving"
         percentageOfSchoolsHaveFlightAllowance:
           $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
         percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -104,14 +106,14 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff"
         costOfGasoline1Litre:
           $ref: "../../library/regional/country.yaml#/regional-country_costOfGasoline1Litre"
-        costOfBasicUtilities:
-          $ref: "../../library/regional/country.yaml#/regional-country_costOfBasicUtilities"
-        costOfInternet:
-          $ref: "../../library/regional/country.yaml#/regional-country_costOfInternet"
-        costOf1BedroomApartmentInCityCentre:
-          $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentInCityCentre"
-        costOf1BedroomApartmentOutsideCityCentre:
-          $ref: "../../library/regional/country.yaml#/regional-country_costOf1BedroomApartmentOutsideCityCentre"
+        monthlyCostOfBasicUtilities:
+          $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfBasicUtilities"
+        monthlyCostOfInternet:
+          $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfInternet"
+        monthlyRent1BedroomApartmentInCityCentre:
+          $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre"
+        monthlyRent1BedroomApartmentOutsideCityCentre:
+          $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentOutsideCityCentre"
         crimeIndex:
           $ref: "../../library/regional/country.yaml#/regional-country_crimeIndex"
         walkingAloneInDaylightSafetyIndex:
@@ -131,7 +133,9 @@ JsonApiModel_regional-country_admin:
         grossSalarySeniorTeacherMax:
           $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMax"
         # relationship attributes
-        currency:
+        localCurrency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
+        internationalCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -162,7 +166,8 @@ JsonApiModel_regional-country_admin:
         - isoCode
         - photo1Url
         - population
-        - currency
+        - localCurrency
+        - internationalCurrency
         - capitalCity
         - languageId
         - locationLatitude
@@ -210,7 +215,9 @@ JsonApiModel_regional-country_admin:
       type: object
       additionalProperties: false
       properties:
-        currency:
+        localCurrency:
+          $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship"
+        internationalCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"

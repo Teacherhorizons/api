@@ -17,7 +17,13 @@ get:
       example: 1
       schema:
         type: integer
-
+    - in: query
+      name: include
+      required: true
+      example: staff,countries,jobs,schools,ambassadors
+      schema:
+        type: string
+    
   responses:
     "200":
       description: OK (Request successful)
