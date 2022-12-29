@@ -84,8 +84,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools"
         numberOfSecondaryOtherCurriculumSchools:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
-        savingPercentage:
-          $ref: "../../library/regional/country.yaml#/regional-country_savingPercentage"
+        averageSavingPercentage:
+          $ref: "../../library/regional/country.yaml#/regional-country_averageSavingPercentage"
         averageAnnualSaving:
           $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualSaving"
         percentageOfSchoolsHaveFlightAllowance:
@@ -120,18 +120,18 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
         walkingAloneInNightSafetyIndex:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
-        grossSalaryJuniorTeacherMin:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMin"
-        grossSalaryJuniorTeacherAverage:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherAverage"
-        grossSalaryJuniorTeacherMax:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalaryJuniorTeacherMax"
-        grossSalarySeniorTeacherMin:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMin"
-        grossSalarySeniorTeacherAverage:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherAverage"
-        grossSalarySeniorTeacherMax:
-          $ref: "../../library/regional/country.yaml#/regional-country_grossSalarySeniorTeacherMax"
+        minGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher"
+        averageGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher"
+        maxGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher"
+        minGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher"
+        averageGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher"
+        maxGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher"
         # relationship attributes
         localCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -175,6 +175,7 @@ JsonApiModel_regional-country_admin:
         - ambassadorTestimonial
         - teachingInCountryDescription
         - numberOfCities
+        - numberOfCitiesWithSchools
         - numberOfSchools
         - numberOfIBSchools
         - numberOfLiveJobs
@@ -188,7 +189,8 @@ JsonApiModel_regional-country_admin:
         - numberOfSecondaryUKCurriculumSchools
         - numberOfSecondaryInternationalCurriculumSchools
         - numberOfSecondaryOtherCurriculumSchools
-        - savingPercentage
+        - averageSavingPercentage
+        - averageAnnualSaving
         - percentageOfSchoolsHaveFlightAllowance
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers
@@ -198,19 +200,19 @@ JsonApiModel_regional-country_admin:
         - costOf1WayTicketLocalTransport
         - costOfTaxi1KilometerNormalTariff
         - costOfGasoline1Litre
-        - costOfBasicUtilities
-        - costOfInternet
-        - costOf1BedroomApartmentInCityCentre
-        - costOf1BedroomApartmentOutsideCityCentre
+        - monthlyCostOfBasicUtilities
+        - monthlyCostOfInternet
+        - monthlyRent1BedroomApartmentInCityCentre
+        - monthlyRent1BedroomApartmentOutsideCityCentre
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneInNightSafetyIndex
-        - grossSalaryJuniorTeacherMin
-        - grossSalaryJuniorTeacherAverage
-        - grossSalaryJuniorTeacherMax
-        - grossSalarySeniorTeacherMin
-        - grossSalarySeniorTeacherAverage
-        - grossSalarySeniorTeacherMax
+        - minGrossSalaryJuniorTeacher
+        - averageGrossSalaryJuniorTeacher
+        - maxGrossSalaryJuniorTeacher
+        - minGrossSalarySeniorTeacher
+        - averageGrossSalarySeniorTeacher
+        - maxGrossSalarySeniorTeacher
     relationships:
       type: object
       additionalProperties: false
