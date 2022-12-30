@@ -322,3 +322,23 @@ JsonApiModel_regional-city_relationship:
         - id
   required:
     - data
+
+JsonApiModel_regional-city_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-city_type"
+        id:
+          $ref: "#/JsonApiModel_regional-city_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+

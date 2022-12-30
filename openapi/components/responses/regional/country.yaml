@@ -39,18 +39,18 @@ Response_regional-country_notSignedIn:
               $ref: "../../models/library/regional/country.yaml#/regional-country_photo1Url"
             numberOfCitiesWithSchools:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
-            qualityOfLifeDescription:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
             numberOfSchools:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfSchools"
-            numberOfIBSchools:
-              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfIBSchools"
             numberOfLiveJobs:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfLiveJobs"
             ambassadorTestimonial:
               $ref: "../../models/library/regional/country.yaml#/regional-country_ambassadorTestimonial"
             teachingInCountryDescription:
               $ref: "../../models/library/regional/country.yaml#/regional-country_teachingInCountryDescription"
+            qualityOfLifeDescription:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
+            numberOfIBSchools:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfIBSchools"
             numberOfPrimaryIBCurriculumSchools:
               $ref: "../../models/library/regional/country.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools"
             numberOfPrimaryUSCurriculumSchools:
@@ -95,18 +95,42 @@ Response_regional-country_notSignedIn:
               $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfOverseasTeachers"
             percentageOfInternationalStudents:
               $ref: "../../models/library/regional/country.yaml#/regional-country_percentageOfInternationalStudents"
+            costOfMidRange3CourseMealFor2:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOfMidRange3CourseMealFor2"
+            costOfCappuccinoRegular:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOfCappuccinoRegular"
+            costOf1WayTicketLocalTransport:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOf1WayTicketLocalTransport"
+            costOfTaxi1KilometerNormalTariff:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff"
+            costOfGasoline1Litre:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOfGasoline1Litre"
+            monthlyCostOfBasicUtilities:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_monthlyCostOfBasicUtilities"
+            monthlyCostOfInternet:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_monthlyCostOfInternet"
+            monthlyRent1BedroomApartmentInCityCentre:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre"
+            monthlyRent1BedroomApartmentOutsideCityCentre:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentOutsideCityCentre"
+            crimeIndex:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_crimeIndex"
+            walkingAloneInDaylightSafetyIndex:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
+            walkingAloneInNightSafetyIndex:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
           required:
             - name
-            - population
             - slug
-            - numberOfCities
-            - numberOfCitiesWithSchools
-            - teachingInCountryDescription
+            - population
             - photo1Url
-            - qualityOfLifeDescription
+            - numberOfCitiesWithSchools
             - numberOfSchools
-            - numberOfIBSchools
             - numberOfLiveJobs
+            - ambassadorTestimonial
+            - teachingInCountryDescription
+            - qualityOfLifeDescription
+            - numberOfIBSchools
             - numberOfPrimaryIBCurriculumSchools
             - numberOfPrimaryUSCurriculumSchools
             - numberOfPrimaryUKCurriculumSchools
@@ -120,24 +144,46 @@ Response_regional-country_notSignedIn:
             - averageSavingPercentage
             - averageAnnualSaving
             - minGrossSalaryJuniorTeacher
+            - averageGrossSalaryJuniorTeacher
+            - maxGrossSalaryJuniorTeacher
+            - minGrossSalarySeniorTeacher
+            - averageGrossSalarySeniorTeacher
+            - maxGrossSalarySeniorTeacher
             - percentageOfSchoolsHaveFlightAllowance
             - percentageOfSchoolsHavePrivateHealthcareScheme
             - percentageOfOverseasTeachers
             - percentageOfInternationalStudents
+            - costOfMidRange3CourseMealFor2
+            - costOfCappuccinoRegular
+            - costOf1WayTicketLocalTransport
+            - costOfTaxi1KilometerNormalTariff
+            - costOfGasoline1Litre
+            - monthlyCostOfBasicUtilities
+            - monthlyCostOfInternet
+            - monthlyRent1BedroomApartmentCityCentre
+            - monthlyRent1BedroomApartmentOutsideCityCentre
+            - crimeIndex
+            - walkingAloneInDaylightSafetyIndex
+            - walkingAloneAtNightSafetyIndex
         relationships:
           type: object
           additionalProperties: false
           properties:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            countries:
-              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
+            cities:
+              $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_multiple"
             jobs:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
             schools:
               $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
             ambassadors:
               $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
+            photos:
+              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
+              #regional-countrtyPhoto: need to add to redoc
+            attractions:
+              $ref: "../../../components/models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_relationship_multiple"
       required:
         - type
         - id
@@ -151,75 +197,36 @@ Response_regional-country_notSignedIn:
           - $ref: "#/Response_regional-country_includedStaff_notSignedIn"
           - $ref: "#/Response_regional-country_includedJob_notSignedIn"
           - $ref: "#/Response_regional-country_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-country_includedCountry_notSignedIn"
-          - $ref: "#/Response_regional-country_includedAmbassador_notSignedIn"       
+          - $ref: "#/Response_regional-country_includedAmbassador_notSignedIn"  
+          - $ref: "#/Response_regional-country_includedPhoto_notSignedIn" 
+          - $ref: "#/Response_regional-country_includedAttraction_notSignedIn"      
   required:
     - schema
     - data
 
-Response_regional-country_includedCountry_notSignedIn:
+Response_regional-country_includedCity_notSignedIn:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type"
+      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
     id:
-      $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id"
+      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_name"
+          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_name"
         slug:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_slug"
+          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_slug"
         numberOfSchools:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools"
-        isoCode:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_isoCode"
-        photo1Url:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_photo1Url"
+          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_numberOfSchools"
       required:
         - name
         - slug
         - numberOfSchools
-        - isoCode
-        - photo1Url
-  required:
-    - type
-    - id
-    - attributes
-
-Response_regional-country_includedAmbassador_notSignedIn:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_type"
-    id:
-      $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_id"
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        levelName:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
-        fullName:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_fullName"
-        photoUrl:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
-        testimonial:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
-        # relationship attributes
-        region:
-          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
-      required:
-        - fullName
-        - photoUrl
-        - testimonial
-        - region
   required:
     - type
     - id
@@ -237,13 +244,18 @@ Response_regional-country_includedStaff_notSignedIn:
       type: object
       additionalProperties: false
       properties:
+        #simple attributes
         photoUrl:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
         description:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description"
+        # relationship attributes
+        user:
+          $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
         - photoUrl
         - description
+        - user
   required:
     - type
     - id
@@ -293,6 +305,8 @@ Response_regional-country_includedSchool_notSignedIn:
         # simple attributes
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         smallProfilePhotoUrl:
           $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
     relationships:
@@ -303,6 +317,7 @@ Response_regional-country_includedSchool_notSignedIn:
           $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship"
       required:
         - name
+        - slug
         - smallProfilePhotoUrl
         - city
   required:
@@ -310,32 +325,44 @@ Response_regional-country_includedSchool_notSignedIn:
     - id
     - attributes
 
-Response_regional-country_includedCity_notSignedIn:
+Response_regional-country_includedAmbassador_notSignedIn:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
+      $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_type"
     id:
-      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
+      $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_name"
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
+        levelName:
+          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
+        photoUrl:
+          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
+        # relationship attributes
+        user:
+          $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        city:
+          $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
         country:
-          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        region:
+          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
-        - name
+        - levelName
+        - photoUrl
+        - user
+        - city
         - country
+        - region
   required:
     - type
     - id
     - attributes
+
+
+
 

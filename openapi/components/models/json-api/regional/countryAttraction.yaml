@@ -86,3 +86,21 @@ JsonApiModel_regional-countryAttraction_relationship:
         - id
   required:
     - data
+
+JsonApiModel_regional-countryAttraction_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-countryAttraction_type"
+        id:
+          $ref: "#/JsonApiModel_regional-countryAttraction_id"
+      required:
+        - type
+        - id
+  required:
+    - data
