@@ -132,6 +132,14 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher"
         maxGrossSalarySeniorTeacher:
           $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher"
+        numberOfTeachers:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfTeachers"
+        numberOfOverseasTeachers:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfOverseasTeachers"
+        numberOfLocalTeachers:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalTeachers"
+        numberOfUnknownTeachers:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownTeachers"
         # relationship attributes
         localCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -213,6 +221,10 @@ JsonApiModel_regional-country_admin:
         - minGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        - numberOfTeachers
+        - numberOfOverseasTeachers
+        - numberOfLocalTeachers
+        - numberOfUnknownTeachers
     relationships:
       type: object
       additionalProperties: false

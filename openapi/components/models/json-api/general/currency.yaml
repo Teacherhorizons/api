@@ -40,6 +40,10 @@ JsonApiModel_general-currency_admin:
           $ref: "../../library/general/currency.yaml#/general-currency_creationDate"
         latestUpdateDate:
           $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateDate"
+        isInternational:
+          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
+        usdConversionRate:
+          $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -49,6 +53,8 @@ JsonApiModel_general-currency_admin:
         - code
         - symbol
         - name
+        - isInternational
+        - usdConversionRate
         - creationDate
         - latestUpdateDate
         - creationUser
@@ -93,10 +99,16 @@ JsonApiModel_general-currency_school:
           $ref: "../../library/general/currency.yaml#/general-currency_symbol"
         name:
           $ref: "../../library/general/currency.yaml#/general-currency_name"
+        isInternational:
+          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
+        usdConversionRate:
+          $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
       required:
         - code
         - symbol
         - name
+        - isInternational
+        - usdConversionRate
   required:
     - schema
     - type
@@ -128,10 +140,16 @@ JsonApiModel_general-currency_teacher:
           $ref: "../../library/general/currency.yaml#/general-currency_symbol"
         name:
           $ref: "../../library/general/currency.yaml#/general-currency_name"
+        isInternational:
+          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
+        usdConversionRate:
+          $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
       required:
         - code
         - symbol
         - name
+        - isInternational
+        - usdConversionRate
   required:
     - schema
     - type

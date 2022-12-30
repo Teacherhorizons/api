@@ -16,6 +16,14 @@ general-currency_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+general-currency_isInternational:
+  type: integer
+  example: 1
+  description: 1 for 5 currencies, otherwise 0
+general-currency_usdConversionRate:
+  type: number
+  example: 1.34567
+  description: derived
 
 # relationship attributes
 general-currency_creationUserId:
