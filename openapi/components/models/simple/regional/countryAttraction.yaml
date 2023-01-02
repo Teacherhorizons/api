@@ -5,19 +5,23 @@ SimpleModel_regional-countryAttraction:
     id:
       $ref: "#/SimpleModel_regional-countryAttraction_id"
     # simple attributes
+    name:
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_name"
+    iconName:
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_iconName"
     creationDate:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationDate"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationDate"
     latestUpdateDate:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_latestUpdateDate"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_latestUpdateDate"
     # relationship attributes
     countryId:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_countryId"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_countryId"
     typeId:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_typeId"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_typeId"
     creationUserId:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationUserId"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationUserId"
     latestUpdateUserId:
-        $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_latestUpdateUserId"
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_latestUpdateUserId"
   required:
     - id
     - countryId

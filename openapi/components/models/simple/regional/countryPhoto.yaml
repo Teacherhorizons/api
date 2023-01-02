@@ -1,0 +1,26 @@
+SimpleModel_regional-countryPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-countryPhoto_id"
+    # simple attributes
+    precedence:
+        $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_precedence"
+    # relationship attributes
+    countryId:
+        $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_countryId"
+    photoId:
+        $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_photoId"
+  required:
+    - id
+    - precedence
+    - countryId
+    - photoId
+
+# shared
+SimpleModel_regional-countryPhoto_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

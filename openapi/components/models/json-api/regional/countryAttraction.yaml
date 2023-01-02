@@ -11,6 +11,10 @@ JsonApiModel_regional-countryAttraction:
       additionalProperties: false
       properties:
         # simple attributes
+        name:
+          $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_name"
+        iconName:
+          $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_iconName"
         creationDate:
           $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_creationDate"
         latestUpdateDate:
@@ -28,6 +32,8 @@ JsonApiModel_regional-countryAttraction:
         - id
         - countryId
         - typeId
+        - name
+        - iconName
         - creationDate
         - latestUpdateDate
         - creationUserId
@@ -66,6 +72,10 @@ JsonApiModel_regional-countryAttraction_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-countryAttraction_id"
+    name:
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_name"
+    iconName:
+      $ref: "../../library/regional/countryAttraction.yaml#/regional-countryAttraction_iconName"
   required:
     - id
 

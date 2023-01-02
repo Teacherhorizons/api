@@ -1,0 +1,101 @@
+JsonApiModel_regional-countryPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-countryPhoto_type"
+    id:
+      $ref: "#/JsonApiModel_regional-countryPhoto_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        precedence:
+          $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_precedence"
+        # relationship attributes
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"        
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+      required:
+        - id
+        - precedence
+        - country
+        - photo
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        country:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"        
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-countryPhoto_type:
+  type: string
+  example: regional-countryPhoto
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-countryPhoto_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-countryPhoto_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-countryPhoto_id"
+    url:
+      $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_url" 
+    description:
+      $ref: "../../library/regional/countryPhoto.yaml#/regional-countryPhoto_description"
+  required:
+    - id
+    - url
+    - description
+
+JsonApiModel_regional-countryPhoto_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-countryPhoto_type"
+        id:
+          $ref: "#/JsonApiModel_regional-countryPhoto_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+JsonApiModel_regional-countryPhoto_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_regional-countryPhoto_type"
+          id:
+            $ref: "#/JsonApiModel_regional-countryPhoto_id"
+        required:
+          - type
+          - id
+  required:
+    - data

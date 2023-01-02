@@ -1,0 +1,37 @@
+#attributes
+regional-cityPhoto_precedence:
+  type: integer
+  example: 1
+
+#relationship attributes
+regional-cityPhoto_cityId:
+  type: integer
+  example: 1
+  description: Relationship to regional-city
+regional-cityPhoto_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
+
+#relationships
+regional-cityPhoto_city:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to regional-city
+  required:
+    - id
+  
+regional-cityPhoto_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
+  required:
+    - id

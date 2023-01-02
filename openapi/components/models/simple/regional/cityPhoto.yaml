@@ -1,0 +1,26 @@
+SimpleModel_regional-cityPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-cityPhoto_id"
+    # simple attributes
+    precedence:
+        $ref: "../../library/regional/cityPhoto.yaml#/regional-cityPhoto_precedence"
+    # relationship attributes
+    cityId:
+        $ref: "../../library/regional/cityPhoto.yaml#/regional-cityPhoto_cityId"
+    photoId:
+        $ref: "../../library/regional/cityPhoto.yaml#/regional-cityPhoto_photoId"
+  required:
+    - id
+    - precedence
+    - cityId
+    - photoId
+
+# shared
+SimpleModel_regional-cityPhoto_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -180,8 +180,7 @@ Response_regional-country_notSignedIn:
             ambassadors:
               $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
             photos:
-              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
-              #regional-countrtyPhoto: need to add to redoc
+              $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
             attractions:
               $ref: "../../../components/models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_relationship_multiple"
       required:
@@ -363,6 +362,52 @@ Response_regional-country_includedAmbassador_notSignedIn:
     - id
     - attributes
 
+Response_regional-country_includedPhoto_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        precedence:
+          $ref: "../../../components/models/library/regional/countryPhoto.yaml#/regional-countryPhoto_precedence"
+        # relationship attributes
+        photo:
+          $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_attribute"
+      required:
+        - precedence
+        - photo
+  required:
+    - type
+    - id
+    - attributes
 
+Response_regional-country_includedAttraction_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        type:
+          $ref: "../../../components/models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_relationship_attribute"
+      required:
+        - type
+  required:
+    - type
+    - id
+    - attributes
 
 
