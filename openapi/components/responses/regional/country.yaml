@@ -379,7 +379,8 @@ Response_regional-country_includedPhoto_notSignedIn:
           $ref: "../../../components/models/library/regional/countryPhoto.yaml#/regional-countryPhoto_precedence"
         # relationship attributes
         photo:
-          $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_attribute"
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          # $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_attribute"
       required:
         - precedence
         - photo

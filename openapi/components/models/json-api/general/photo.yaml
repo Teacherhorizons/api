@@ -92,6 +92,10 @@ JsonApiModel_general-photo_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-photo_id"
+    url:
+      $ref: "../../library/general/photo.yaml#/general-photo_url"
+    description:
+      $ref: "../../library/general/photo.yaml#/general-photo_description"
   required:
     - id
 
