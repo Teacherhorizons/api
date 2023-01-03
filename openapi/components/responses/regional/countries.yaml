@@ -1,0 +1,7 @@
+Response_regional-countries:
+  oneOf:
+    - $ref: "./country.yaml#/Response_regional-country_notSignedIn"
+  discriminator:
+    propertyName: schema
+    mapping:
+      notSignedIn: "./country.yaml#/Response_regional-country_notSignedIn"

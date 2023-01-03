@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-regional-countries
+  summary: Get countries (one or more)
+  tags:
+    - regional
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[slug]:
+            type: string
+          filter[region.id]:
+            type: integer
+          filter[region.slug]:
+            type: string
+        example:
+          slug: europe-lisbon
+          region.id: 4
+          region.slug: europe
+
+  responses:
+    "200":
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/regional/countries.yaml#/Response_regional-countries"
+
+    # TODO: move these to a library
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
