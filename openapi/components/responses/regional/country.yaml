@@ -344,6 +344,8 @@ Response_regional-country_includedAmbassador_notSignedIn:
         # relationship attributes
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        school:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute"
         city:
           $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
         country:
@@ -354,8 +356,6 @@ Response_regional-country_includedAmbassador_notSignedIn:
         - levelName
         - photoUrl
         - user
-        - city
-        - country
         - region
   required:
     - type
