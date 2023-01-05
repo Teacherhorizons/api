@@ -33,10 +33,16 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/cityArticle.yaml#/Response_regional-cityArticles"
-
-    # TODO: move these to a library
+            $ref: "../../components/responses/regional/regionArticle.yaml#/Response_regional-regionArticles"
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
+    "403":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
     "404":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
+    "413":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
+    "422":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
