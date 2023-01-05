@@ -26,13 +26,11 @@ Response_regional-region_notSignedIn:
           type: object
           additionalProperties: false
           properties:
-            # simple Attributes
+            # simple attributes
             name:
               $ref: "../../models/library/regional/region.yaml#/regional-region_name"
             slug:
               $ref: "../../models/library/regional/region.yaml#/regional-region_name"
-            photo1Url:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_photo1Url"
             # numberOfCountries:
             #   $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountries"
             numberOfCountriesWithSchools:
@@ -81,6 +79,9 @@ Response_regional-region_notSignedIn:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
             percentageOfInternationalStudents:
               $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+            # relationship attributes
+            photo1:
+              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
           required:
             - name
             - slug
