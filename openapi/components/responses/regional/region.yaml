@@ -47,8 +47,6 @@ Response_regional-region_notSignedIn:
               $ref: "../../models/library/regional/region.yaml#/regional-region_teachingInRegionDescription"
             qualityOfLifeDescription:
               $ref: "../../models/library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
-            ambassadorTestimonial:
-              $ref: "../../models/library/regional/region.yaml#/regional-region_ambassadorTestimonial"
             numberOfPrimaryIBCurriculumSchools:
               $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
             numberOfPrimaryUSCurriculumSchools:
@@ -84,15 +82,13 @@ Response_regional-region_notSignedIn:
           required:
             - name
             - slug
-            # - numberOfCountries
-            - numberOfCountriesWithSchools
-            - teachingInRegionDescription
             - photo1Url
-            - qualityOfLifeDescription
-            - adviceForInternationalTeachers
+            - photo1
+            - numberOfCountriesWithSchools
             - numberOfSchools
             - numberOfIBSchools
             - numberOfLiveJobs
+            - teachingInRegionDescription
             - numberOfPrimaryIBCurriculumSchools
             - numberOfPrimaryUSCurriculumSchools
             - numberOfPrimaryUKCurriculumSchools
@@ -103,9 +99,11 @@ Response_regional-region_notSignedIn:
             - numberOfSecondaryUKCurriculumSchools
             - numberOfSecondaryInternationalCurriculumSchools
             - numberOfSecondaryOtherCurriculumSchools
+            - qualityOfLifeDescription
             - savingPercentage
             - percentageOfSchoolsHaveFlightAllowance
             - percentageOfSchoolsHavePrivateHealthcareScheme
+            - adviceForInternationalTeachers
             - percentageOfOverseasTeachers
             - percentageOfInternationalStudents
         relationships:
@@ -162,14 +160,15 @@ Response_regional-region_includedCountry_notSignedIn:
           $ref: "../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools"
         isoCode:
           $ref: "../../../components/models/library/regional/country.yaml#/regional-country_isoCode"
-        photo1Url:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_photo1Url"
+        #relationship attributes
+        photo1:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - name
         - slug
         - numberOfSchools
         - isoCode
-        - photo1Url
+        - photo1
   required:
     - type
     - id
@@ -195,6 +194,8 @@ Response_regional-region_includedAmbassador_notSignedIn:
         testimonial:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
         # relationship attributes
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
         school:
@@ -228,15 +229,15 @@ Response_regional-region_includedStaff_notSignedIn:
       additionalProperties: false
       properties:
         # simple attributes
-        photoUrl:
-          $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
         description:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description"
         # relationship attributes
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
-        - photoUrl
+        - photo
         - description
   required:
     - type
@@ -287,8 +288,9 @@ Response_regional-region_includedSchool_notSignedIn:
         # simple attributes
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
-        smallProfilePhotoUrl:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
+        #relationship attributes
+        smallProfilePhoto:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -297,7 +299,7 @@ Response_regional-region_includedSchool_notSignedIn:
           $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship"
       required:
         - name
-        - smallProfilePhotoUrl
+        - smallProfilePhoto
         - city
   required:
     - type
