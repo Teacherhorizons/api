@@ -33,7 +33,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/regionArticle.yaml#/Response_regional-regionArticles"
+            $ref: "../../components/responses/regional/cityArticle.yaml#/Response_regional-cityArticles"
     "400":
       $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
     "401":
