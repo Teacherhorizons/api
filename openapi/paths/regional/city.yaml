@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-regional-city
+  summary: Get a city (group of cities)
+  tags:
+    - regional
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: path
+      name: cityId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: include
+      required: true
+      example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/regional/city.yaml#/Response_regional-city"
+
+    # TODO: move these to a library
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"

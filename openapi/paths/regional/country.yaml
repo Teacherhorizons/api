@@ -17,6 +17,12 @@ get:
       example: 1
       schema:
         type: integer
+    - in: query
+      name: include
+      required: true
+      example: staff,cities,photos,jobs,schools,ambassadors,attractions
+      schema:
+        type: string
 
   responses:
     "200":

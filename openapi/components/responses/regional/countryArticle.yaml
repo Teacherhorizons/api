@@ -35,11 +35,9 @@ Response_regional-countryArticles_notSignedIn:
                 $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
               url:
                 $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_url"
-              photoUrl:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_photoUrl"
-              photoDescription:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_photoDescription"
               #relationship attribute
+              photo:
+                $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
               category:
                 $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_category"
         required:
