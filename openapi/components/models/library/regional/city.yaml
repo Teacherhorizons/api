@@ -5,9 +5,9 @@ regional-city_name:
 regional-city_alias:
   type: string
   example: /Africa/Angola/Luanda
-regional-city_keyAttractions:
+regional-city_photo1Url:
   type: string
-  example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
+  example: /foo/bar/baz.jpeg
 regional-city_creationDate:
   type: string
   format: date-time
@@ -16,6 +16,9 @@ regional-city_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+regional-city_keyAttractions:
+  type: string
+  example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
 regional-city_slug:
   type: string
   example: africa-angola-luanda
@@ -27,24 +30,22 @@ regional-city_locationLongitude:
   type: number
   example: 13.2344444
   description: Longitude
-regional-city_photo1Url:
+regional-city_isoCode:
   type: string
-  example: /foo/bar/baz.jpeg
-regional-city_crimeIndex:
-  type: number
-  example: 25
+  example: al
+regional-city_phoneCode:
+  type: string
+  example: 355
 regional-city_ambassadorTestimonial:
   type: string
   example: Lorem ipsum
+regional-city_teachingIncityDescription:
+  type: string
+  example: Fooo barrr abc
 regional-city_qualityOfLifeDescription:
   type: string
-  example: Foo bar iss
-regional-city_walkingAloneInDaylightSafetyIndex:
-  type: integer
-  example: 85.62
-regional-city_walkingAloneInNightSafetyIndex:
-  type: integer
-  example: 67
+  example: Fooo barrr abc
+  description: Derived
 regional-city_numberOfSchools:
   type: number
   example: 75
@@ -97,9 +98,13 @@ regional-city_numberOfSecondaryOtherCurriculumSchools:
   type: number
   example: 30
   description: Derived
-regional-city_savingPercentage:
+regional-city_averageSavingPercentage:
   type: integer
-  example: 3
+  example: 0.3
+  description: Derived
+regional-city_averageAnnualSaving:
+  type: integer
+  example: 10,000
   description: Derived
 regional-city_percentageOfSchoolsHaveFlightAllowance:
   type: integer
@@ -111,11 +116,11 @@ regional-city_percentageOfSchoolsHavePrivateHealthcareScheme:
   description: Derived
 regional-city_percentageOfOverseasTeachers:
   type: integer
-  example: 35
+  example: 0.35
   description: Derived
 regional-city_percentageOfInternationalStudents:
   type: integer
-  example: 4
+  example: 0.4
   description: Derived
 regional-city_costOfMidRange3CourseMealFor2:
   type: integer
@@ -144,6 +149,33 @@ regional-city_monthlyRent1BedroomApartmentInCityCentre:
 regional-city_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: integer
   example: 776.67
+regional-city_crimeIndex:
+  type: number
+  example: 25
+regional-city_walkingAloneInDaylightSafetyIndex:
+  type: integer
+  example: 85.62
+regional-city_walkingAloneInNightSafetyIndex:
+  type: integer
+  example: 67
+regional-city_minGrossSalaryJuniorTeacher:
+  type: number
+  example: 12,000
+regional-city_averageGrossSalaryJuniorTeacher:
+  type: number
+  example: 28,000
+regional-city_maxGrossSalaryJuniorTeacher:
+  type: number
+  example: 55,000
+regional-city_minGrossSalarySeniorTeacher:
+  type: number
+  example: 15,000
+regional-city_averageGrossSalarySeniorTeacher:
+  type: number
+  example: 40,000
+regional-city_maxGrossSalarySeniorTeacher:
+  type: number
+  example: 85,000
 
 # Relationship attributes
 regional-city_countryId:
