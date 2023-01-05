@@ -11,19 +11,15 @@ regional-regionArticle_url:
   type: string
   example: https://teflhero.com/blog/teach-english-in-portugal/
 
-regional-regionArticle_photoUrl:
-  type: string
-  example: /static/media/articles/photoOfACat.jpeg
-
-regional-regionArticle_photoDescription:
-  type: string
-  example: My photo description
-
 regional-regionArticle_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
 
 #Relationship attributes
+regional-regionArticle_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
 regional-regionArticle_regionId:
   type: integer
   example: 1
@@ -35,7 +31,7 @@ regional-regionArticle_categoryId:
 regional-regionArticle_articleId:
   type: integer
   example: 1
-  description: Relationship to regional-regionArticle
+  description: Relationship to general-article
 regional-regionArticle_creationUserId:
   type: integer
   example: 1

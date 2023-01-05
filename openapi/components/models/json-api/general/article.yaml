@@ -29,15 +29,16 @@ JsonApiModel_general-article:
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
-        - id
+        # simple attributes
         - title
         - snippet
         - url
         - creationDate
         - latestUpdateDate
-        - photoId
-        - creationUserId
-        - latestUpdateUserId
+        # relationship attributes
+        - photo
+        - creationUser
+        - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false
