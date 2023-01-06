@@ -39,7 +39,7 @@ Response_regional-countryArticles_notSignedIn:
               photo:
                 $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
               category:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_category"
+                $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
         required:
           - type
           - id

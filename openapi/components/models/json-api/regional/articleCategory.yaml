@@ -42,6 +42,8 @@ JsonApiModel_regional-articleCategory_relationship_attribute:
       $ref: "../../library/regional/articleCategory.yaml#/regional-articleCategory_name"
   required:
     - id
+    - name
+  # TODO: update meta schema to allow the above
 
 JsonApiModel_regional-articleCategory_relationship:
   type: object

@@ -39,7 +39,13 @@ Response_regional-cityArticles_notSignedIn:
               photo:
                 $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
               category:
-                $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_category"
+                $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+            required:
+              - title
+              - snippet
+              - url
+              - photo
+              - category
         required:
           - type
           - id
