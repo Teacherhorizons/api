@@ -1,7 +1,34 @@
 Response_regional-countries:
   oneOf:
-    - $ref: "./country.yaml#/Response_regional-country_notSignedIn"
+    - $ref: "#/Response_regional-countries_notSignedIn"
   discriminator:
     propertyName: schema
     mapping:
-      notSignedIn: "./country.yaml#/Response_regional-country_notSignedIn"
+      notSignedIn: "#/Response_regional-countries_notSignedIn"
+
+Response_regional-countries_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      type: array
+      items:
+        $ref: "./country.yaml#/Response_regional-country_notSignedIn_item"
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "./country.yaml#/Response_regional-country_includedCity_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedStaff_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedJob_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedSchool_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedAmbassador_notSignedIn"  
+          - $ref: "./country.yaml#/Response_regional-country_includedPhoto_notSignedIn" 
+          - $ref: "./country.yaml#/Response_regional-country_includedAttraction_notSignedIn"      
+  required:
+    - schema
+    - data
