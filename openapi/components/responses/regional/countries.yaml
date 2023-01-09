@@ -1,10 +1,12 @@
 Response_regional-countries:
   oneOf:
     - $ref: "#/Response_regional-countries_notSignedIn"
+    - $ref: "#/Response_regional-countries_notSignedInMultiple"
   discriminator:
     propertyName: schema
     mapping:
       not-signed-in: "#/Response_regional-countries_notSignedIn"
+      not-signed-in-multiple: "#/Response_regional-countries_notSignedInMultiple"
 
 Response_regional-countries_notSignedIn:
   type: object
@@ -29,6 +31,22 @@ Response_regional-countries_notSignedIn:
           - $ref: "./country.yaml#/Response_regional-country_includedAmbassador_notSignedIn"  
           - $ref: "./country.yaml#/Response_regional-country_includedPhoto_notSignedIn" 
           - $ref: "./country.yaml#/Response_regional-country_includedAttraction_notSignedIn"      
+  required:
+    - schema
+    - data
+
+Response_regional-countries_notSignedInMultiple:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in-multiple
+    data:
+      type: array
+      items:
+        $ref: "./country.yaml#/Response_regional-country_notSignedInMultiple_item"
   required:
     - schema
     - data
