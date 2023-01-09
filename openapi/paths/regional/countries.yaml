@@ -8,12 +8,20 @@ get:
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
-    - TODO: improve this description
-    - Can be use to return one of:
-    - Simple list of countries - each with minimal data (if does not have filter[slug] parameter)
-    - List of one country with lot of data
+    - Can be use to return a list of one country with lot of data or a list of multiple countries, each with minimal data
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - not-signed-in
+          - not-signed-in-multiple
+      description: |
+        - not-signed-in - List of one country with lots of data
+        - not-signed-in-multiple - List of multiple countries, each with minimal data
+        - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: filter
@@ -26,10 +34,13 @@ get:
         properties:
           filter[slug]:
             type: string
+            description: For use with not-signed-in only
           filter[region.id]:
             type: integer
+            description: For use with not-signed-in-multiple only
           filter[region.slug]:
             type: string
+            description: For use with not-signed-in-multiple only
         example:
           slug: europe-lisbon
           region.id: 4
