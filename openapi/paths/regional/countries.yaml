@@ -8,6 +8,10 @@ get:
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
+    - TODO: improve this description
+    - Can be use to return one of:
+    - Simple list of countries - each with minimal data (if does not have filter[slug] parameter)
+    - List of one country with lot of data
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
