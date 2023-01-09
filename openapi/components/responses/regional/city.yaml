@@ -111,6 +111,11 @@ Response_regional-city_notSignedIn:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
             walkingAloneInNightSafetyIndex:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+            # relationship Attributes
+            country:
+              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+            region:
+              $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
           required:
             - name
             - slug
@@ -154,22 +159,26 @@ Response_regional-city_notSignedIn:
             - crimeIndex
             - walkingAloneInDaylightSafetyIndex
             - walkingAloneAtNightSafetyIndex
+            - country
+            - region
         relationships:
           type: object
           additionalProperties: false
           properties:
             staff:
               $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            # photos:
-            #   $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
+            photos:
+              $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
+            countryPhotos:
+              $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
             jobs:
               $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
             schools:
               $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
             ambassadors:
               $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
-            # attractions:
-            #   $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
+            attractions:
+              $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
       required:
         - type
         - id
@@ -179,44 +188,16 @@ Response_regional-city_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_regional-city_includedCity_notSignedIn"
           - $ref: "#/Response_regional-city_includedStaff_notSignedIn"
           - $ref: "#/Response_regional-city_includedJob_notSignedIn"
           - $ref: "#/Response_regional-city_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-city_includedAmbassador_notSignedIn"  
-          - $ref: "#/Response_regional-city_includedPhoto_notSignedIn" 
+          - $ref: "#/Response_regional-city_includedAmbassador_notSignedIn"   
+          - $ref: "#/Response_regional-city_includedCityPhoto_notSignedIn"
+          - $ref: "#/Response_regional-city_includedCountryPhoto_notSignedIn"
           - $ref: "#/Response_regional-city_includedAttraction_notSignedIn"      
   required:
     - schema
     - data
-
-Response_regional-city_includedCity_notSignedIn:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
-    id:
-      $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        name:
-          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_name"
-        slug:
-          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_slug"
-        numberOfSchools:
-          $ref: "../../../components/models/library/regional/city.yaml#/regional-city_numberOfSchools"
-      required:
-        - name
-        - slug
-        - numberOfSchools
-  required:
-    - type
-    - id
-    - attributes
 
 Response_regional-city_includedStaff_notSignedIn:
   type: object
@@ -231,15 +212,15 @@ Response_regional-city_includedStaff_notSignedIn:
       additionalProperties: false
       properties:
         #simple attributes
-        photoUrl:
-          $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         description:
           $ref: "../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description"
         # relationship attributes
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
-        - photoUrl
+        - photo
         - description
         - user
   required:
@@ -293,8 +274,8 @@ Response_regional-city_includedSchool_notSignedIn:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
         slug:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
-        smallProfilePhotoUrl:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
+        smallProfilePhoto:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -304,7 +285,7 @@ Response_regional-city_includedSchool_notSignedIn:
       required:
         - name
         - slug
-        - smallProfilePhotoUrl
+        - smallProfilePhoto
         - city
   required:
     - type
@@ -326,8 +307,8 @@ Response_regional-city_includedAmbassador_notSignedIn:
         # simple attributes
         levelName:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
-        photoUrl:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         # relationship attributes
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -341,7 +322,7 @@ Response_regional-city_includedAmbassador_notSignedIn:
           $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
         - levelName
-        - photoUrl
+        - photo
         - user
         - region
   required:
@@ -349,7 +330,7 @@ Response_regional-city_includedAmbassador_notSignedIn:
     - id
     - attributes
 
-Response_regional-city_includedPhoto_notSignedIn:
+Response_regional-city_includedCityPhoto_notSignedIn:
   type: object
   additionalProperties: false
   properties:
@@ -366,7 +347,34 @@ Response_regional-city_includedPhoto_notSignedIn:
           $ref: "../../../components/models/library/regional/cityPhoto.yaml#/regional-cityPhoto_precedence"
         # relationship attributes
         photo:
-          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_attribute"
+          # $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_attribute"
+      required:
+        - precedence
+        - photo
+  required:
+    - type
+    - id
+    - attributes
+
+Response_regional-city_includedCountryPhoto_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        precedence:
+          $ref: "../../../components/models/library/regional/countryPhoto.yaml#/regional-countryPhoto_precedence"
+        # relationship attributes
+        photo:
+          $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_attribute"
           # $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_attribute"
       required:
         - precedence
