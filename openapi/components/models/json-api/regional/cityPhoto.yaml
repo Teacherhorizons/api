@@ -53,6 +53,10 @@ JsonApiModel_regional-cityPhoto_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-cityPhoto_id"
+    url:
+      $ref: "../../library/regional/cityPhoto.yaml#/regional-cityPhoto_url"
+    description:
+      $ref: "../../library/regional/cityPhoto.yaml#/regional-cityPhoto_description"
   required:
     - id
 
@@ -71,5 +75,25 @@ JsonApiModel_regional-cityPhoto_relationship:
       required:
         - type
         - id
+  required:
+    - data
+
+JsonApiModel_regional-cityPhoto_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_regional-cityPhoto_type"
+          id:
+            $ref: "#/JsonApiModel_regional-cityPhoto_id"
+        required:
+          - type
+          - id
   required:
     - data

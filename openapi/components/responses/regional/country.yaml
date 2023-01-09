@@ -116,6 +116,12 @@ Response_regional-country_notSignedIn:
             walkingAloneInNightSafetyIndex:
               $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
             #relationship attribute
+            capitalCity:
+              $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+            region:
+              $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+            currency:
+              $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
             photo1:
               $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
           required:
