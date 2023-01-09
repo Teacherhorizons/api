@@ -1,0 +1,52 @@
+Response_regional-cities:
+  oneOf:
+    - $ref: "#/Response_regional-cities_notSignedIn"
+    - $ref: "#/Response_regional-cities_notSignedInMultiple"
+  discriminator:
+    propertyName: schema
+    mapping:
+      not-signed-in: "#/Response_regional-cities_notSignedIn"
+      not-signed-in-multiple: "#/Response_regional-cities_notSignedInMultiple"
+
+Response_regional-cities_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      type: array
+      items:
+        $ref: "./city.yaml#/Response_regional-city_notSignedIn_item"
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "./city.yaml#/Response_regional-city_includedStaff_notSignedIn"
+          - $ref: "./city.yaml#/Response_regional-city_includedJob_notSignedIn"
+          - $ref: "./city.yaml#/Response_regional-city_includedSchool_notSignedIn"
+          - $ref: "./city.yaml#/Response_regional-city_includedAmbassador_notSignedIn"   
+          - $ref: "./city.yaml#/Response_regional-city_includedCityPhoto_notSignedIn"
+          - $ref: "./city.yaml#/Response_regional-city_includedCountryPhoto_notSignedIn"
+          - $ref: "./city.yaml#/Response_regional-city_includedAttraction_notSignedIn"     
+  required:
+    - schema
+    - data
+
+Response_regional-cities_notSignedInMultiple:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in-multiple
+    data:
+      type: array
+      items:
+        $ref: "./city.yaml#/Response_regional-city_notSignedInMultiple_item"
+  required:
+    - schema
+    - data

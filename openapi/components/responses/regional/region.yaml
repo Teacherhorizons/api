@@ -126,19 +126,153 @@ Response_regional-region_notSignedIn:
         - id
         - attributes
         - relationships
-    included:
-      type: array
-      items:
-        anyOf:
-          - $ref: "#/Response_regional-region_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-region_includedJob_notSignedIn"
-          - $ref: "#/Response_regional-region_includedCountry_notSignedIn"
-          - $ref: "#/Response_regional-region_includedCity_notSignedIn"
-          - $ref: "#/Response_regional-region_includedAmbassador_notSignedIn"
-          - $ref: "#/Response_regional-region_includedStaff_notSignedIn"
+
+Response_regional-region_notSignedIn_item:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
+        id:
+          $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
+        attributes:
+          type: object
+          additionalProperties: false
+          properties:
+            # simple attributes
+            name:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
+            slug:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_name"
+            # numberOfCountries:
+            #   $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountries"
+            numberOfCountriesWithSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
+            numberOfSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSchools"
+            numberOfIBSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfIBSchools"
+            numberOfLiveJobs:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfLiveJobs"
+            teachingInRegionDescription:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_teachingInRegionDescription"
+            qualityOfLifeDescription:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+            numberOfPrimaryIBCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
+            numberOfPrimaryUSCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryUSCurriculumSchools"
+            numberOfPrimaryUKCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryUKCurriculumSchools"
+            numberOfPrimaryInternationalCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryInternationalCurriculumSchools"
+            numberOfPrimaryOtherCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryOtherCurriculumSchools"
+            numberOfSecondaryIBCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSecondaryIBCurriculumSchools"
+            numberOfSecondaryUSCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSecondaryUSCurriculumSchools"
+            numberOfSecondaryUKCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSecondaryUKCurriculumSchools"
+            numberOfSecondaryInternationalCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools"
+            numberOfSecondaryOtherCurriculumSchools:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
+            savingPercentage:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_savingPercentage"
+            percentageOfSchoolsHaveFlightAllowance:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
+            percentageOfSchoolsHavePrivateHealthcareScheme:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+            adviceForInternationalTeachers:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+            percentageOfOverseasTeachers:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
+            percentageOfInternationalStudents:
+              $ref: "../../models/library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+            # relationship attributes
+            photo1:
+              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          required:
+            - name
+            - slug
+            - photo1Url
+            - photo1
+            - numberOfCountriesWithSchools
+            - numberOfSchools
+            - numberOfIBSchools
+            - numberOfLiveJobs
+            - teachingInRegionDescription
+            - numberOfPrimaryIBCurriculumSchools
+            - numberOfPrimaryUSCurriculumSchools
+            - numberOfPrimaryUKCurriculumSchools
+            - numberOfPrimaryInternationalCurriculumSchools
+            - numberOfPrimaryOtherCurriculumSchools
+            - numberOfSecondaryIBCurriculumSchools
+            - numberOfSecondaryUSCurriculumSchools
+            - numberOfSecondaryUKCurriculumSchools
+            - numberOfSecondaryInternationalCurriculumSchools
+            - numberOfSecondaryOtherCurriculumSchools
+            - qualityOfLifeDescription
+            - savingPercentage
+            - percentageOfSchoolsHaveFlightAllowance
+            - percentageOfSchoolsHavePrivateHealthcareScheme
+            - adviceForInternationalTeachers
+            - percentageOfOverseasTeachers
+            - percentageOfInternationalStudents
+        relationships:
+          type: object
+          additionalProperties: false
+          properties:
+            staff:
+              $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+            countries:
+              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
+            jobs:
+              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
+            schools:
+              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
+            ambassadors:
+              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
+      required:
+        - type
+        - id
+        - attributes
+        - relationships
+
+Response_regional-region_notSignedInMultiple_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
+    id:
+      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: "../../models/library/regional/region.yaml#/regional-region_name"
+        slug:
+          $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
+      required:
+        - name
+        - slug
   required:
-    - schema
-    - data
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_regional-region_includedCountry_notSignedIn:
   type: object

@@ -16,10 +16,10 @@ Response_regional-regions_notSignedIn:
       type: string
       enum:
         - not-signed-in
-    # data:
-    #   type: array
-    #   items:
-    #     $ref: "./region.yaml#/Response_regional-region_notSignedIn_item"
+    data:
+      type: array
+      items:
+        $ref: "./region.yaml#/Response_regional-region_notSignedIn_item"
     included:
       type: array
       items:
@@ -31,7 +31,7 @@ Response_regional-regions_notSignedIn:
           - $ref: "./region.yaml#/Response_regional-region_includedAmbassador_notSignedIn"
   required:
     - schema
-    # - data
+    - data
 
 Response_regional-regions_notSignedInMultiple:
   type: object
@@ -41,10 +41,10 @@ Response_regional-regions_notSignedInMultiple:
       type: string
       enum:
         - not-signed-in-multiple
-    # data:
-    #   type: array
-    #   items:
-    #     $ref: "./region.yaml#/Response_regional-region_notSignedInMultiple_item"
+    data:
+      type: array
+      items:
+        $ref: "./region.yaml#/Response_regional-region_notSignedInMultiple_item"
   required:
     - schema
-    # - data
+    - data
