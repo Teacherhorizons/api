@@ -184,6 +184,21 @@ Response_regional-city_notSignedIn:
         - id
         - attributes
         - relationships
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "#/Response_regional-city_includedStaff_notSignedIn"
+          - $ref: "#/Response_regional-city_includedJob_notSignedIn"
+          - $ref: "#/Response_regional-city_includedSchool_notSignedIn"
+          - $ref: "#/Response_regional-city_includedAmbassador_notSignedIn"   
+          - $ref: "#/Response_regional-city_includedCityPhoto_notSignedIn"
+          - $ref: "#/Response_regional-city_includedCountryPhoto_notSignedIn"
+          - $ref: "#/Response_regional-city_includedAttraction_notSignedIn"     
+  required:
+    - schema
+    - data
+
 Response_regional-city_notSignedIn_item:
   type: object
   additionalProperties: false

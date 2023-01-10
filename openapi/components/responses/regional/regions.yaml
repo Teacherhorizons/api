@@ -24,11 +24,12 @@ Response_regional-regions_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: "./region.yaml#/Response_regional-region_includedCity_notSignedIn"
+          - $ref: "./region.yaml#/Response_regional-region_includedCountry_notSignedIn"
           - $ref: "./region.yaml#/Response_regional-region_includedStaff_notSignedIn"
           - $ref: "./region.yaml#/Response_regional-region_includedJob_notSignedIn"
           - $ref: "./region.yaml#/Response_regional-region_includedSchool_notSignedIn"
           - $ref: "./region.yaml#/Response_regional-region_includedAmbassador_notSignedIn"
+          - $ref: "./region.yaml#/Response_regional-region_includedCity_notSignedIn"
   required:
     - schema
     - data

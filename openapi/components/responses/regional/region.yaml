@@ -126,7 +126,20 @@ Response_regional-region_notSignedIn:
         - id
         - attributes
         - relationships
-
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "#/Response_regional-region_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-region_includedStaff_notSignedIn"
+          - $ref: "#/Response_regional-region_includedJob_notSignedIn"
+          - $ref: "#/Response_regional-region_includedSchool_notSignedIn"
+          - $ref: "#/Response_regional-region_includedAmbassador_notSignedIn"
+          - $ref: "#/Response_regional-region_includedCity_notSignedIn"
+  required:
+    - schema
+    - data
+    
 Response_regional-region_notSignedIn_item:
   type: object
   additionalProperties: false
@@ -324,8 +337,6 @@ Response_regional-region_includedAmbassador_notSignedIn:
         # simple attributes
         levelName:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName"
-        photoUrl:
-          $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_photoUrl"
         testimonial:
           $ref: "../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
         # relationship attributes
@@ -343,7 +354,7 @@ Response_regional-region_includedAmbassador_notSignedIn:
           $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
         - fullName
-        - photoUrl
+        - photo
         - testimonial
         - region
   required:
