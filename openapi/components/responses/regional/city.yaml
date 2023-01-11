@@ -31,8 +31,6 @@ Response_regional-city_notSignedIn:
               $ref: "../../models/library/regional/city.yaml#/regional-city_name"
             slug:
               $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
-            photo1Url:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_photo1Url"
             numberOfSchools:
               $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSchools"
             numberOfLiveJobs:
@@ -111,7 +109,25 @@ Response_regional-city_notSignedIn:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
             walkingAloneInNightSafetyIndex:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+            qualityOfLifeIndex:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+            costOfLivingIndex:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfLivingIndex"
+            expensePercentageTransportation:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+            expensePercentageClothingAndShoes:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+            expensePercentageSportsAndLeisure:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+            expensePercentageMarkets:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+            expensePercentageUtilities:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+            expensePercentageRent:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
             # relationship Attributes
+            photo1:
+              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
             country:
               $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
             region:
@@ -119,7 +135,7 @@ Response_regional-city_notSignedIn:
           required:
             - name
             - slug
-            - photo1Url
+            - photo1
             - numberOfSchools
             - numberOfLiveJobs
             - teachingIncityDescription
@@ -159,6 +175,14 @@ Response_regional-city_notSignedIn:
             - crimeIndex
             - walkingAloneInDaylightSafetyIndex
             - walkingAloneAtNightSafetyIndex
+            - qualityOfLifeIndex
+            - costOfLivingIndex
+            - expensePercentageTransportation
+            - expensePercentageClothingAndShoes
+            - expensePercentageSportsAndLeisure
+            - expensePercentageMarkets
+            - expensePercentageUtilities
+            - expensePercentageRent
             - country
             - region
         relationships:
@@ -224,8 +248,6 @@ Response_regional-city_notSignedIn_item:
               $ref: "../../models/library/regional/city.yaml#/regional-city_name"
             slug:
               $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
-            photo1Url:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_photo1Url"
             numberOfSchools:
               $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSchools"
             numberOfLiveJobs:
@@ -304,7 +326,25 @@ Response_regional-city_notSignedIn_item:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
             walkingAloneInNightSafetyIndex:
               $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+            qualityOfLifeIndex:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+            costOfLivingIndex:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfLivingIndex"
+            expensePercentageTransportation:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+            expensePercentageClothingAndShoes:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+            expensePercentageSportsAndLeisure:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+            expensePercentageMarkets:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+            expensePercentageUtilities:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+            expensePercentageRent:
+              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
             # relationship Attributes
+            photo1:
+              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
             country:
               $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
             region:
@@ -312,7 +352,7 @@ Response_regional-city_notSignedIn_item:
           required:
             - name
             - slug
-            - photo1Url
+            - photo1
             - numberOfSchools
             - numberOfLiveJobs
             - teachingIncityDescription
@@ -352,6 +392,14 @@ Response_regional-city_notSignedIn_item:
             - crimeIndex
             - walkingAloneInDaylightSafetyIndex
             - walkingAloneAtNightSafetyIndex
+            - qualityOfLifeIndex
+            - costOfLivingIndex
+            - expensePercentageTransportation
+            - expensePercentageClothingAndShoes
+            - expensePercentageSportsAndLeisure
+            - expensePercentageMarkets
+            - expensePercentageUtilities
+            - expensePercentageRent
             - country
             - region
         relationships:

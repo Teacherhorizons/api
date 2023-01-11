@@ -35,16 +35,16 @@ get:
           filter[slug]:
             type: string
             description: For use with not-signed-in only
-          filter[region.id]:
+          filter[country.id]:
             type: integer
             description: For use with not-signed-in-multiple only
-          filter[region.slug]:
+          filter[country.slug]:
             type: string
             description: For use with not-signed-in-multiple only
         example:
           slug: europe-lisbon
-          region.id: 4
-          region.slug: europe
+          country.id: 4
+          country.slug: europe
 
   responses:
     "200":

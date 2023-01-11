@@ -1,39 +1,28 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
 get:
   operationId: get-regional-regions
+  summary: Get regions
   tags:
     - regional
     - testing-status-1
-  summary: Get regions
+  description: |
+    <span class="testing-status-1"></span>
+    - Can be use to return a list of one region with lot of data or a list of multiple regions, each with minimal data
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_standardSchema"
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - not-signed-in
+          - not-signed-in-multiple
+      description: |
+        - not-signed-in - List of one region with lots of data
+        - not-signed-in-multiple - List of multiple regions, each with minimal data
+        - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
-    - in: query
-      name: fields
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          fields[regional-region]:
-            type: string
-        example:
-          regional-region: name,slug,locationLatLong
-    - in: query
-      name: filter
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          filter[name][matches]:
-            type: string
-        example:
-          name][matches: afri
-          slug: bar
   responses:
     "200":
       description: OK (Request successful)

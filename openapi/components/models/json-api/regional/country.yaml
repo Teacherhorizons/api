@@ -120,6 +120,22 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
         walkingAloneInNightSafetyIndex:
           $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
+        qualityOfLifeIndex:
+            $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeIndex"
+        costOfLivingIndex:
+            $ref: "../../library/regional/country.yaml#/regional-country_costOfLivingIndex"
+        expensePercentageTransportation:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageTransportation"
+        expensePercentageClothingAndShoes:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes"
+        expensePercentageSportsAndLeisure:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure"
+        expensePercentageMarkets:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageMarkets"
+        expensePercentageUtilities:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageUtilities"
+        expensePercentageRent:
+            $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRent"
         minGrossSalaryJuniorTeacher:
           $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher"
         averageGrossSalaryJuniorTeacher:
@@ -172,6 +188,7 @@ JsonApiModel_regional-country_admin:
         - latestUpdateUser
         - ambassadorTeacher
         - isoCode
+        - phoneCode
         - photo1Url
         - population
         - localCurrency
@@ -182,6 +199,14 @@ JsonApiModel_regional-country_admin:
         - locationLongitude
         - ambassadorTestimonial
         - teachingInCountryDescription
+        - qualityOfLifeIndex
+        - costOfLivingIndex
+        - expensePercentageTransportation
+        - expensePercentageClothingAndShoes
+        - expensePercentageSportsAndLeisure
+        - expensePercentageMarkets
+        - expensePercentageUtilities
+        - expensePercentageRent
         - numberOfCities
         - numberOfCitiesWithSchools
         - numberOfSchools

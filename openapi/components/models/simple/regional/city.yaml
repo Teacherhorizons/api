@@ -52,6 +52,22 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
     walkingAloneInNightSafetyIndex:
       $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+    qualityOfLifeIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+    costOfLivingIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_costOfLivingIndex"
+    expensePercentageTransportation:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+    expensePercentageClothingAndShoes:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+    expensePercentageSportsAndLeisure:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+    expensePercentageMarkets:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+    expensePercentageUtilities:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+    expensePercentageRent:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
     numberOfSchools:
       $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchools"
     numberOfIBSchools:
@@ -137,6 +153,14 @@ SimpleModel_regional-city_admin:
     - qualityOfLifeDescription
     - walkingAloneInDaylightSafetyIndex
     - walkingAloneInNightSafetyIndex
+    - qualityOfLifeIndex
+    - costOfLivingIndex
+    - expensePercentageTransportation
+    - expensePercentageClothingAndShoes
+    - expensePercentageSportsAndLeisure
+    - expensePercentageMarkets
+    - expensePercentageUtilities
+    - expensePercentageRent
     - numberOfSchools
     - numberOfIBSchools
     - numberOfLiveJobs

@@ -112,6 +112,22 @@ JsonApiModel_regional-city_admin:
           $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
         monthlyRent1BedroomApartmentOutsideCityCentre:
           $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
+        qualityOfLifeIndex:
+            $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+        costOfLivingIndex:
+            $ref: "../../library/regional/city.yaml#/regional-city_costOfLivingIndex"
+        expensePercentageTransportation:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+        expensePercentageClothingAndShoes:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+        expensePercentageSportsAndLeisure:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+        expensePercentageMarkets:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+        expensePercentageUtilities:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+        expensePercentageRent:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -170,6 +186,14 @@ JsonApiModel_regional-city_admin:
         - monthlyCostOfInternet
         - monthlyRent1BedroomApartmentCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
+        - qualityOfLifeIndex
+        - costOfLivingIndex
+        - expensePercentageTransportation
+        - expensePercentageClothingAndShoes
+        - expensePercentageSportsAndLeisure
+        - expensePercentageMarkets
+        - expensePercentageUtilities
+        - expensePercentageRent
     relationships:
       type: object
       additionalProperties: false

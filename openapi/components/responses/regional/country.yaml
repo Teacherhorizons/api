@@ -114,6 +114,22 @@ Response_regional-country_notSignedIn:
               $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
             walkingAloneInNightSafetyIndex:
               $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
+            qualityOfLifeIndex:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_qualityOfLifeIndex"
+            costOfLivingIndex:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_costOfLivingIndex"
+            expensePercentageTransportation:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageTransportation"
+            expensePercentageClothingAndShoes:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes"
+            expensePercentageSportsAndLeisure:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure"
+            expensePercentageMarkets:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageMarkets"
+            expensePercentageUtilities:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageUtilities"
+            expensePercentageRent:
+              $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRent"
             #relationship attribute
             capitalCity:
               $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
@@ -168,6 +184,14 @@ Response_regional-country_notSignedIn:
             - crimeIndex
             - walkingAloneInDaylightSafetyIndex
             - walkingAloneAtNightSafetyIndex
+            - qualityOfLifeIndex
+            - costOfLivingIndex
+            - expensePercentageTransportation
+            - expensePercentageClothingAndShoes
+            - expensePercentageSportsAndLeisure
+            - expensePercentageMarkets
+            - expensePercentageUtilities
+            - expensePercentageRent
         relationships:
           type: object
           additionalProperties: false
@@ -306,6 +330,22 @@ Response_regional-country_notSignedIn_item:
           $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
         walkingAloneInNightSafetyIndex:
           $ref: "../../models/library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
+        qualityOfLifeIndex:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_qualityOfLifeIndex"
+        costOfLivingIndex:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_costOfLivingIndex"
+        expensePercentageTransportation:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageTransportation"
+        expensePercentageClothingAndShoes:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes"
+        expensePercentageSportsAndLeisure:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure"
+        expensePercentageMarkets:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageMarkets"
+        expensePercentageUtilities:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageUtilities"
+        expensePercentageRent:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRent"
         #relationship attribute
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
@@ -354,6 +394,14 @@ Response_regional-country_notSignedIn_item:
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneAtNightSafetyIndex
+        - qualityOfLifeIndex
+        - costOfLivingIndex
+        - expensePercentageTransportation
+        - expensePercentageClothingAndShoes
+        - expensePercentageSportsAndLeisure
+        - expensePercentageMarkets
+        - expensePercentageUtilities
+        - expensePercentageRent
     relationships:
       type: object
       additionalProperties: false
