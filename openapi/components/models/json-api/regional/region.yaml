@@ -54,8 +54,6 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
         ambassadorTestimonial:
           $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
-        photo1Url:
-          $ref: "../../library/regional/region.yaml#/regional-region_photo1Url"
         qualityOfLifeDescription:
           $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
         adviceForInternationalTeachers:
@@ -98,6 +96,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
 
         # relationship attributes
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -105,6 +105,7 @@ JsonApiModel_regional-region_admin:
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
       required:
+        # simple attributes
         - name
         - alias
         - creationDate
@@ -114,8 +115,6 @@ JsonApiModel_regional-region_admin:
         - numberOfCountriesWithSchools
         - locationLatitude
         - locationLongitude
-        - creationUser
-        - latestUpdateUser
         - teachingInRegionDescription
         - photo1Url
         - qualityOfLifeDescription
@@ -138,10 +137,16 @@ JsonApiModel_regional-region_admin:
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers
         - percentageOfInternationalStudents
+        # relationship attributes
+        - photo1
+        - creationUser
+        - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false
       properties:
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

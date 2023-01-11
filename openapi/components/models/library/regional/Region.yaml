@@ -38,9 +38,6 @@ regional-region_teachingInRegionDescription:
 regional-region_ambassadorTestimonial:
   type: string
   example: Foo bar baz
-regional-region_photo1Url:
-  type: string
-  example: /foo/bar/baz.jpeg
 regional-region_qualityOfLifeDescription:
   type: string
   example: Foo bar baz
@@ -133,6 +130,10 @@ regional-region_ambassadorTeacherId:
   type: integer
   example: 1
   description: Relationship to teacher
+regional-region_photo1Id:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
 
 #relationships
 regional-region_creationUser:

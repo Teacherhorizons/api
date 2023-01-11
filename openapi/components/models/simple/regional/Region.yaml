@@ -44,8 +44,6 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
     ambassadorTestimonial:
       $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
-    photo1Url:
-      $ref: "../../library/regional/region.yaml#/regional-region_photo1Url"
     qualityOfLifeDescription:
       $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
     adviceForInternationalTeachers:
@@ -88,6 +86,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
 
     # relationship attributes
+    photo1Id:
+      $ref: "../../library/regional/region.yaml#/regional-region_photo1Id"
     creationUserId:
       $ref: "../../library/regional/region.yaml#/regional-region_creationUserId"
     latestUpdateUserId:
@@ -130,6 +130,7 @@ SimpleModel_regional-region_admin:
     - percentageOfSchoolsHavePrivateHealthcareScheme
     - percentageOfOverseasTeachers
     - percentageOfInternationalStudents
+
 SimpleModel_regional-region_school:
   type: object
   additionalProperties: false
