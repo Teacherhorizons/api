@@ -46,7 +46,33 @@ Response_regional-countries_notSignedInMultiple:
     data:
       type: array
       items:
-        $ref: "./country.yaml#/Response_regional-country_notSignedInMultiple_item"
+        $ref: "#/Response_regional-countries_notSignedInMultiple_item"
   required:
     - schema
     - data
+
+Response_regional-countries_notSignedInMultiple_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type"
+    id:
+      $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_name"
+        slug:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_slug"
+      required:
+        - name
+        - slug
+  required:
+    - type
+    - id
+    - attributes
+    - relationships

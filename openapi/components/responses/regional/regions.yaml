@@ -45,7 +45,34 @@ Response_regional-regions_notSignedInMultiple:
     data:
       type: array
       items:
-        $ref: "./region.yaml#/Response_regional-region_notSignedInMultiple_item"
+        $ref: "#/Response_regional-regions_notSignedInMultiple_item"
   required:
     - schema
     - data
+
+Response_regional-regions_notSignedInMultiple_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
+    id:
+      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: "../../models/library/regional/region.yaml#/regional-region_name"
+        slug:
+          $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
+      required:
+        - name
+        - slug
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
