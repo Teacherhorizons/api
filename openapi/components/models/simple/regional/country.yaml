@@ -42,8 +42,6 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
-    photo1Url:
-      $ref: "../../library/regional/country.yaml#/regional-country_photo1Url"
     population:
       $ref: "../../library/regional/country.yaml#/regional-country_population"
     ambassadorTestimonial:
@@ -167,6 +165,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_languageId"
     ambassadorTeacherId:
       $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTeacherId"
+    photo1Id:
+      $ref: "../../library/regional/country.yaml#/regional-country_photo1Id"
   required:
     - id
     - regionId
@@ -180,7 +180,7 @@ SimpleModel_regional-country_admin:
     - latestUpdateUserId
     - ambassadorTeacherId
     - isoCode
-    - photo1Url
+    - photo1Id
     - population
     - localCurrencyId
     - capitalCityId

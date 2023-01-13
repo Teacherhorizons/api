@@ -40,8 +40,6 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
-    photo1Url:
-      $ref: "../../library/regional/city.yaml#/regional-city_photo1Url"
     crimeIndex:
       $ref: "../../library/regional/city.yaml#/regional-city_crimeIndex"
     ambassadorTestimonial:
@@ -133,6 +131,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_languageId"
     ambassadorTeacherId:
       $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTeacherId"
+    photo1Id:
+      $ref: "../../library/regional/city.yaml#/regional-city_photo1Id"
   required:
     - name
     - alias
@@ -147,7 +147,7 @@ SimpleModel_regional-city_admin:
     - countryId
     - languageId
     - ambassadorTeacherId
-    - photo1Url
+    - photo1Id
     - crimeIndex
     - ambassadorTestimonial
     - qualityOfLifeDescription

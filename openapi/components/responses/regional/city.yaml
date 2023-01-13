@@ -14,200 +14,9 @@ Response_regional-city_notSignedIn:
       type: string
       enum:
         - not-signed-in
+    # TODO: add this structure to meta schemas
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
-        id:
-          $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple Attributes
-            name:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_name"
-            slug:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
-            numberOfSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSchools"
-            numberOfLiveJobs:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfLiveJobs"
-            teachingIncityDescription:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_teachingIncityDescription"
-            qualityOfLifeDescription:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
-            numberOfIBSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfIBSchools"
-            numberOfPrimaryIBCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools"
-            numberOfPrimaryUSCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools"
-            numberOfPrimaryUKCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools"
-            numberOfPrimaryInternationalCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools"
-            numberOfPrimaryOtherCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools"
-            numberOfSecondaryIBCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools"
-            numberOfSecondaryUSCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools"
-            numberOfSecondaryUKCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools"
-            numberOfSecondaryInternationalCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools"
-            numberOfSecondaryOtherCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
-            averageSavingPercentage:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageSavingPercentage"
-            averageAnnualSaving:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageAnnualSaving"
-            minGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher"
-            averageGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher"
-            maxGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher"
-            minGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher"
-            averageGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher"
-            maxGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher"
-            percentageOfSchoolsHaveFlightAllowance:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
-            percentageOfSchoolsHavePrivateHealthcareScheme:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme"
-            percentageOfOverseasTeachers:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers"
-            percentageOfInternationalStudents:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfInternationalStudents"
-            costOfMidRange3CourseMealFor2:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2"
-            costOfCappuccinoRegular:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfCappuccinoRegular"
-            costOf1WayTicketLocalTransport:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport"
-            costOfTaxi1KilometerNormalTariff:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
-            costOfGasoline1Litre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
-            monthlyCostOfBasicUtilities:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities"
-            monthlyCostOfInternet:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfInternet"
-            monthlyRent1BedroomApartmentInCityCentre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
-            monthlyRent1BedroomApartmentOutsideCityCentre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
-            crimeIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_crimeIndex"
-            walkingAloneInDaylightSafetyIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
-            walkingAloneInNightSafetyIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
-            qualityOfLifeIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
-            costOfLivingIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfLivingIndex"
-            expensePercentageTransportation:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageTransportation"
-            expensePercentageClothingAndShoes:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
-            expensePercentageSportsAndLeisure:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
-            expensePercentageMarkets:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageMarkets"
-            expensePercentageUtilities:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
-            expensePercentageRent:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
-            # relationship Attributes
-            photo1:
-              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
-            country:
-              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
-            region:
-              $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
-          required:
-            - name
-            - slug
-            - photo1
-            - numberOfSchools
-            - numberOfLiveJobs
-            - teachingIncityDescription
-            - qualityOfLifeDescription
-            - numberOfIBSchools
-            - numberOfPrimaryIBCurriculumSchools
-            - numberOfPrimaryUSCurriculumSchools
-            - numberOfPrimaryUKCurriculumSchools
-            - numberOfPrimaryInternationalCurriculumSchools
-            - numberOfPrimaryOtherCurriculumSchools
-            - numberOfSecondaryIBCurriculumSchools
-            - numberOfSecondaryUSCurriculumSchools
-            - numberOfSecondaryUKCurriculumSchools
-            - numberOfSecondaryInternationalCurriculumSchools
-            - numberOfSecondaryOtherCurriculumSchools
-            - averageSavingPercentage
-            - averageAnnualSaving
-            - minGrossSalaryJuniorTeacher
-            - averageGrossSalaryJuniorTeacher
-            - maxGrossSalaryJuniorTeacher
-            - minGrossSalarySeniorTeacher
-            - averageGrossSalarySeniorTeacher
-            - maxGrossSalarySeniorTeacher
-            - percentageOfSchoolsHaveFlightAllowance
-            - percentageOfSchoolsHavePrivateHealthcareScheme
-            - percentageOfOverseasTeachers
-            - percentageOfInternationalStudents
-            - costOfMidRange3CourseMealFor2
-            - costOfCappuccinoRegular
-            - costOf1WayTicketLocalTransport
-            - costOfTaxi1KilometerNormalTariff
-            - costOfGasoline1Litre
-            - monthlyCostOfBasicUtilities
-            - monthlyCostOfInternet
-            - monthlyRent1BedroomApartmentCityCentre
-            - monthlyRent1BedroomApartmentOutsideCityCentre
-            - crimeIndex
-            - walkingAloneInDaylightSafetyIndex
-            - walkingAloneAtNightSafetyIndex
-            - qualityOfLifeIndex
-            - costOfLivingIndex
-            - expensePercentageTransportation
-            - expensePercentageClothingAndShoes
-            - expensePercentageSportsAndLeisure
-            - expensePercentageMarkets
-            - expensePercentageUtilities
-            - expensePercentageRent
-            - country
-            - region
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            staff:
-              $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            photos:
-              $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
-            countryPhotos:
-              $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
-            jobs:
-              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
-            schools:
-              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
-            ambassadors:
-              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
-            attractions:
-              $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      $ref: "#/Response_regional-city_notSignedIn_item"
     included:
       type: array
       items:
@@ -215,218 +24,16 @@ Response_regional-city_notSignedIn:
           - $ref: "#/Response_regional-city_includedStaff_notSignedIn"
           - $ref: "#/Response_regional-city_includedJob_notSignedIn"
           - $ref: "#/Response_regional-city_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-city_includedAmbassador_notSignedIn"   
+          - $ref: "#/Response_regional-city_includedAmbassador_notSignedIn"
           - $ref: "#/Response_regional-city_includedCityPhoto_notSignedIn"
           - $ref: "#/Response_regional-city_includedCountryPhoto_notSignedIn"
-          - $ref: "#/Response_regional-city_includedAttraction_notSignedIn"     
+          - $ref: "#/Response_regional-city_includedAttraction_notSignedIn"
+          - $ref: "#/Response_regional-city_includedcityMonthNumber_notSignedIn"
   required:
     - schema
     - data
 
 Response_regional-city_notSignedIn_item:
-  type: object
-  additionalProperties: false
-  properties:
-    schema:
-      type: string
-      enum:
-        - not-signed-in
-    data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
-        id:
-          $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple Attributes
-            name:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_name"
-            slug:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
-            numberOfSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSchools"
-            numberOfLiveJobs:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfLiveJobs"
-            teachingIncityDescription:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_teachingIncityDescription"
-            qualityOfLifeDescription:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
-            numberOfIBSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfIBSchools"
-            numberOfPrimaryIBCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools"
-            numberOfPrimaryUSCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools"
-            numberOfPrimaryUKCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools"
-            numberOfPrimaryInternationalCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools"
-            numberOfPrimaryOtherCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools"
-            numberOfSecondaryIBCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools"
-            numberOfSecondaryUSCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools"
-            numberOfSecondaryUKCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools"
-            numberOfSecondaryInternationalCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools"
-            numberOfSecondaryOtherCurriculumSchools:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
-            averageSavingPercentage:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageSavingPercentage"
-            averageAnnualSaving:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageAnnualSaving"
-            minGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher"
-            averageGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher"
-            maxGrossSalaryJuniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher"
-            minGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher"
-            averageGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher"
-            maxGrossSalarySeniorTeacher:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher"
-            percentageOfSchoolsHaveFlightAllowance:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
-            percentageOfSchoolsHavePrivateHealthcareScheme:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme"
-            percentageOfOverseasTeachers:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers"
-            percentageOfInternationalStudents:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfInternationalStudents"
-            costOfMidRange3CourseMealFor2:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2"
-            costOfCappuccinoRegular:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfCappuccinoRegular"
-            costOf1WayTicketLocalTransport:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport"
-            costOfTaxi1KilometerNormalTariff:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
-            costOfGasoline1Litre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
-            monthlyCostOfBasicUtilities:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities"
-            monthlyCostOfInternet:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfInternet"
-            monthlyRent1BedroomApartmentInCityCentre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
-            monthlyRent1BedroomApartmentOutsideCityCentre:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
-            crimeIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_crimeIndex"
-            walkingAloneInDaylightSafetyIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
-            walkingAloneInNightSafetyIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
-            qualityOfLifeIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
-            costOfLivingIndex:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_costOfLivingIndex"
-            expensePercentageTransportation:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageTransportation"
-            expensePercentageClothingAndShoes:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
-            expensePercentageSportsAndLeisure:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
-            expensePercentageMarkets:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageMarkets"
-            expensePercentageUtilities:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
-            expensePercentageRent:
-              $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
-            # relationship Attributes
-            photo1:
-              $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
-            country:
-              $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
-            region:
-              $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
-          required:
-            - name
-            - slug
-            - photo1
-            - numberOfSchools
-            - numberOfLiveJobs
-            - teachingIncityDescription
-            - qualityOfLifeDescription
-            - numberOfIBSchools
-            - numberOfPrimaryIBCurriculumSchools
-            - numberOfPrimaryUSCurriculumSchools
-            - numberOfPrimaryUKCurriculumSchools
-            - numberOfPrimaryInternationalCurriculumSchools
-            - numberOfPrimaryOtherCurriculumSchools
-            - numberOfSecondaryIBCurriculumSchools
-            - numberOfSecondaryUSCurriculumSchools
-            - numberOfSecondaryUKCurriculumSchools
-            - numberOfSecondaryInternationalCurriculumSchools
-            - numberOfSecondaryOtherCurriculumSchools
-            - averageSavingPercentage
-            - averageAnnualSaving
-            - minGrossSalaryJuniorTeacher
-            - averageGrossSalaryJuniorTeacher
-            - maxGrossSalaryJuniorTeacher
-            - minGrossSalarySeniorTeacher
-            - averageGrossSalarySeniorTeacher
-            - maxGrossSalarySeniorTeacher
-            - percentageOfSchoolsHaveFlightAllowance
-            - percentageOfSchoolsHavePrivateHealthcareScheme
-            - percentageOfOverseasTeachers
-            - percentageOfInternationalStudents
-            - costOfMidRange3CourseMealFor2
-            - costOfCappuccinoRegular
-            - costOf1WayTicketLocalTransport
-            - costOfTaxi1KilometerNormalTariff
-            - costOfGasoline1Litre
-            - monthlyCostOfBasicUtilities
-            - monthlyCostOfInternet
-            - monthlyRent1BedroomApartmentCityCentre
-            - monthlyRent1BedroomApartmentOutsideCityCentre
-            - crimeIndex
-            - walkingAloneInDaylightSafetyIndex
-            - walkingAloneAtNightSafetyIndex
-            - qualityOfLifeIndex
-            - costOfLivingIndex
-            - expensePercentageTransportation
-            - expensePercentageClothingAndShoes
-            - expensePercentageSportsAndLeisure
-            - expensePercentageMarkets
-            - expensePercentageUtilities
-            - expensePercentageRent
-            - country
-            - region
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            staff:
-              $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-            photos:
-              $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
-            countryPhotos:
-              $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
-            jobs:
-              $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
-            schools:
-              $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
-            ambassadors:
-              $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
-            attractions:
-              $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
-
-Response_regional-city_notSignedInMultiple_item:
   type: object
   additionalProperties: false
   properties:
@@ -443,9 +50,180 @@ Response_regional-city_notSignedInMultiple_item:
           $ref: "../../models/library/regional/city.yaml#/regional-city_name"
         slug:
           $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
+        numberOfSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSchools"
+        numberOfLiveJobs:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfLiveJobs"
+        teachingIncityDescription:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_teachingIncityDescription"
+        qualityOfLifeDescription:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
+        numberOfIBSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfIBSchools"
+        numberOfPrimaryIBCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools"
+        numberOfPrimaryUSCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools"
+        numberOfPrimaryUKCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools"
+        numberOfPrimaryInternationalCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools"
+        numberOfPrimaryOtherCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools"
+        numberOfSecondaryIBCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools"
+        numberOfSecondaryUSCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools"
+        numberOfSecondaryUKCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools"
+        numberOfSecondaryInternationalCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools"
+        numberOfSecondaryOtherCurriculumSchools:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
+        averageSavingPercentage:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_averageSavingPercentage"
+        averageAnnualSaving:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_averageAnnualSaving"
+        minGrossSalaryJuniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher"
+        averageGrossSalaryJuniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher"
+        maxGrossSalaryJuniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher"
+        minGrossSalarySeniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher"
+        averageGrossSalarySeniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher"
+        maxGrossSalarySeniorTeacher:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher"
+        percentageOfSchoolsHaveFlightAllowance:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
+        percentageOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme"
+        percentageOfOverseasTeachers:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers"
+        percentageOfInternationalStudents:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_percentageOfInternationalStudents"
+        costOfMidRange3CourseMealFor2:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2"
+        costOfCappuccinoRegular:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOfCappuccinoRegular"
+        costOf1WayTicketLocalTransport:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport"
+        costOfTaxi1KilometerNormalTariff:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
+        costOfGasoline1Litre:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
+        monthlyCostOfBasicUtilities:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities"
+        monthlyCostOfInternet:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyCostOfInternet"
+        monthlyRent1BedroomApartmentInCityCentre:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
+        monthlyRent1BedroomApartmentOutsideCityCentre:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
+        crimeIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_crimeIndex"
+        walkingAloneInDaylightSafetyIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
+        walkingAloneInNightSafetyIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+        qualityOfLifeIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+        costOfLivingIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_costOfLivingIndex"
+        expensePercentageTransportation:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+        expensePercentageClothingAndShoes:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+        expensePercentageSportsAndLeisure:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+        expensePercentageMarkets:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+        expensePercentageUtilities:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+        expensePercentageRent:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
+        # relationship Attributes
+        photo1:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        country:
+          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+        region:
+          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
         - name
         - slug
+        - photo1
+        - numberOfSchools
+        - numberOfLiveJobs
+        - teachingIncityDescription
+        - qualityOfLifeDescription
+        - numberOfIBSchools
+        - numberOfPrimaryIBCurriculumSchools
+        - numberOfPrimaryUSCurriculumSchools
+        - numberOfPrimaryUKCurriculumSchools
+        - numberOfPrimaryInternationalCurriculumSchools
+        - numberOfPrimaryOtherCurriculumSchools
+        - numberOfSecondaryIBCurriculumSchools
+        - numberOfSecondaryUSCurriculumSchools
+        - numberOfSecondaryUKCurriculumSchools
+        - numberOfSecondaryInternationalCurriculumSchools
+        - numberOfSecondaryOtherCurriculumSchools
+        - averageSavingPercentage
+        - averageAnnualSaving
+        - minGrossSalaryJuniorTeacher
+        - averageGrossSalaryJuniorTeacher
+        - maxGrossSalaryJuniorTeacher
+        - minGrossSalarySeniorTeacher
+        - averageGrossSalarySeniorTeacher
+        - maxGrossSalarySeniorTeacher
+        - percentageOfSchoolsHaveFlightAllowance
+        - percentageOfSchoolsHavePrivateHealthcareScheme
+        - percentageOfOverseasTeachers
+        - percentageOfInternationalStudents
+        - costOfMidRange3CourseMealFor2
+        - costOfCappuccinoRegular
+        - costOf1WayTicketLocalTransport
+        - costOfTaxi1KilometerNormalTariff
+        - costOfGasoline1Litre
+        - monthlyCostOfBasicUtilities
+        - monthlyCostOfInternet
+        - monthlyRent1BedroomApartmentCityCentre
+        - monthlyRent1BedroomApartmentOutsideCityCentre
+        - crimeIndex
+        - walkingAloneInDaylightSafetyIndex
+        - walkingAloneAtNightSafetyIndex
+        - qualityOfLifeIndex
+        - costOfLivingIndex
+        - expensePercentageTransportation
+        - expensePercentageClothingAndShoes
+        - expensePercentageSportsAndLeisure
+        - expensePercentageMarkets
+        - expensePercentageUtilities
+        - expensePercentageRent
+        - country
+        - region
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        staff:
+          $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+        photos:
+          $ref: "../../../components/models/json-api/regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
+        countryPhotos:
+          $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
+        jobs:
+          $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
+        schools:
+          $ref: "../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple"
+        ambassadors:
+          $ref: "../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
+        attractions:
+          $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
+        climate:
+          $ref: "../../../components/models/json-api/regional/cityMonthNumber.yaml#/JsonApiModel_regional-cityMonthNumber_relationship_multiple"
   required:
     - type
     - id
@@ -654,6 +432,37 @@ Response_regional-city_includedAttraction_notSignedIn:
           $ref: "../../../components/models/json-api/regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_attribute"
       required:
         - type
+  required:
+    - type
+    - id
+    - attributes
+
+Response_regional-city_includedcityMonthNumber_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/cityMonthNumber.yaml#/JsonApiModel_regional-cityMonthNumber_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/cityMonthNumber.yaml#/JsonApiModel_regional-cityMonthNumber_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        monthNumber:
+          $ref: "../../../components/models/library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
+        averageMinTemperatureInDegreesC:
+          $ref: "../../../components/models/library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMinTemperatureInDegreesC"        
+        averageMaxTemperatureInDegreesC:
+          $ref: "../../../components/models/library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMaxTemperatureInDegreesC"
+        averageRainfallInMM:
+          $ref: "../../../components/models/library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM"
+      required:
+        - monthNumber
+        - averageMinTemperatureInDegreesC
+        - averageMaxTemperatureInDegreesC
+        - averageRainfallInMM
   required:
     - type
     - id

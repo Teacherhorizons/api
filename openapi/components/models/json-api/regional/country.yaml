@@ -48,8 +48,6 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
         locationLongitude:
           $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
-        photo1Url:
-          $ref: "../../library/regional/country.yaml#/regional-country_photo1Url"
         population:
           $ref: "../../library/regional/country.yaml#/regional-country_population"
         ambassadorTestimonial:
@@ -175,6 +173,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - id
         - regionId
@@ -189,7 +189,7 @@ JsonApiModel_regional-country_admin:
         - ambassadorTeacher
         - isoCode
         - phoneCode
-        - photo1Url
+        - photo1
         - population
         - localCurrency
         - internationalCurrency
@@ -272,6 +272,8 @@ JsonApiModel_regional-country_admin:
           $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - schema
     - type
