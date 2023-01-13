@@ -158,7 +158,7 @@ regional-country_crimeIndex:
 regional-country_walkingAloneInDaylightSafetyIndex:
   type: integer
   example: 85.62
-regional-country_walkingAloneInNightSafetyIndex:
+regional-country_walkingAloneAtNightSafetyIndex:
   type: integer
   example: 67
 regional-country_minGrossSalaryJuniorTeacher:
@@ -185,6 +185,7 @@ regional-country_qualityOfLifeIndex:
 regional-country_costOfLivingIndex:
   type: integer
   example: 45.3
+# numbeo - expense percentages
 regional-country_expensePercentageTransportation:
   type: integer
   example: 14.6
@@ -232,15 +233,15 @@ regional-country_languageId:
   description: Relationship to Language
 regional-country_regionId:
   type: integer
-  example: 12
+  example: 1
   description: Relationship to regional-region
 regional-country_capitalCityId:
   type: integer
-  example: 6
+  example: 1
   description: Relationship to regional-city
 regional-country_ambassadorTeacherId:
   type: integer
-  example: 6
+  example: 1
   description: Relationship to teacher
 regional-country_numberOfTeachers:
   type: integer

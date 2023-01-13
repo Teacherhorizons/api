@@ -110,8 +110,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_crimeIndex"
     walkingAloneInDaylightSafetyIndex:
       $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
-    walkingAloneInNightSafetyIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInNightSafetyIndex"
+    walkingAloneAtNightSafetyIndex:
+      $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneAtNightSafetyIndex"
     qualityOfLifeIndex:
       $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeIndex"
     costOfLivingIndex:
@@ -168,6 +168,7 @@ SimpleModel_regional-country_admin:
     photo1Id:
       $ref: "../../library/regional/country.yaml#/regional-country_photo1Id"
   required:
+    - schema
     - id
     - regionId
     - name
@@ -220,7 +221,7 @@ SimpleModel_regional-country_admin:
     - monthlyRent1BedroomApartmentOutsideCityCentre
     - crimeIndex
     - walkingAloneInDaylightSafetyIndex
-    - walkingAloneInNightSafetyIndex
+    - walkingAloneAtNightSafetyIndex
     - qualityOfLifeIndex
     - costOfLivingIndex
     - expensePercentageTransportation

@@ -28,7 +28,7 @@ Response_regional-city_notSignedIn:
           - $ref: "#/Response_regional-city_includedCityPhoto_notSignedIn"
           - $ref: "#/Response_regional-city_includedCountryPhoto_notSignedIn"
           - $ref: "#/Response_regional-city_includedAttraction_notSignedIn"
-          - $ref: "#/Response_regional-city_includedcityMonthNumber_notSignedIn"
+          - $ref: "#/Response_regional-city_includedCityMonthNumber_notSignedIn"
   required:
     - schema
     - data
@@ -126,8 +126,8 @@ Response_regional-city_notSignedIn_item:
           $ref: "../../models/library/regional/city.yaml#/regional-city_crimeIndex"
         walkingAloneInDaylightSafetyIndex:
           $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
-        walkingAloneInNightSafetyIndex:
-          $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneInNightSafetyIndex"
+        walkingAloneAtNightSafetyIndex:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_walkingAloneAtNightSafetyIndex"
         qualityOfLifeIndex:
           $ref: "../../models/library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
         costOfLivingIndex:
@@ -437,7 +437,7 @@ Response_regional-city_includedAttraction_notSignedIn:
     - id
     - attributes
 
-Response_regional-city_includedcityMonthNumber_notSignedIn:
+Response_regional-city_includedCityMonthNumber_notSignedIn:
   type: object
   additionalProperties: false
   properties:
