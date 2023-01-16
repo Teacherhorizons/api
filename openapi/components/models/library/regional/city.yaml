@@ -123,40 +123,40 @@ regional-city_percentageOfInternationalStudents:
   example: 0.4
   description: Derived
 regional-city_costOfMidRange3CourseMealFor2:
-  type: integer
+  type: number
   example: 45
 regional-city_costOfCappuccinoRegular:
-  type: integer
+  type: number
   example: 1.89
 regional-city_costOf1WayTicketLocalTransport:
-  type: integer
+  type: number
   example: 1.60
 regional-city_costOfTaxi1KilometerNormalTariff:
-  type: integer
+  type: number
   example: 0.47
 regional-city_costOfGasoline1Litre:
-  type: integer
+  type: number
   example: 2.04
 regional-city_monthlyCostOfBasicUtilities:
-  type: integer
+  type: number
   example: 120.40
 regional-city_monthlyCostOfInternet:
-  type: integer
+  type: number
   example: 31.65
 regional-city_monthlyRent1BedroomApartmentInCityCentre:
-  type: integer
+  type: number
   example: 1,026.8
 regional-city_monthlyRent1BedroomApartmentOutsideCityCentre:
-  type: integer
+  type: number
   example: 776.67
 regional-city_crimeIndex:
   type: number
   example: 25
 regional-city_walkingAloneInDaylightSafetyIndex:
-  type: integer
+  type: number
   example: 85.62
 regional-city_walkingAloneAtNightSafetyIndex:
-  type: integer
+  type: number
   example: 67
 regional-city_minGrossSalaryJuniorTeacher:
   type: number
@@ -177,29 +177,32 @@ regional-city_maxGrossSalarySeniorTeacher:
   type: number
   example: 85,000
 regional-city_qualityOfLifeIndex:
-  type: integer
+  type: number
   example: 163.8
 regional-city_costOfLivingIndex:
-  type: integer
+  type: number
   example: 45.3
 regional-city_expensePercentageTransportation:
-  type: integer
+  type: number
   example: 14.6
 regional-city_expensePercentageClothingAndShoes:
-  type: integer
+  type: number
   example: 3.4
 regional-city_expensePercentageSportsAndLeisure:
-  type: integer
+  type: number
   example: 5.4
 regional-city_expensePercentageMarkets:
-  type: integer
+  type: number
   example: 13
 regional-city_expensePercentageUtilities:
-  type: integer
+  type: number
   example: 18.3
 regional-city_expensePercentageRent:
-  type: integer
+  type: number
   example: 36.1
+regional-city_expensePercentageRestaurants:
+  type: number
+  example: 9.19999999999999
 
 # Relationship attributes
 regional-city_countryId:

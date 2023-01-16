@@ -126,40 +126,40 @@ regional-country_percentageOfInternationalStudents:
   example: 0.4
   description: Derived
 regional-country_costOfMidRange3CourseMealFor2:
-  type: integer
+  type: number
   example: 45
 regional-country_costOfCappuccinoRegular:
-  type: integer
+  type: number
   example: 1.89
 regional-country_costOf1WayTicketLocalTransport:
-  type: integer
+  type: number
   example: 1.60
 regional-country_costOfTaxi1KilometerNormalTariff:
-  type: integer
+  type: number
   example: 0.47
 regional-country_costOfGasoline1Litre:
-  type: integer
+  type: number
   example: 2.04
 regional-country_monthlyCostOfBasicUtilities:
-  type: integer
+  type: number
   example: 120.40
 regional-country_monthlyCostOfInternet:
-  type: integer
+  type: number
   example: 31.65
 regional-country_monthlyRent1BedroomApartmentInCityCentre:
-  type: integer
+  type: number
   example: 1,026.8
 regional-country_monthlyRent1BedroomApartmentOutsideCityCentre:
-  type: integer
+  type: number
   example: 776.67
 regional-country_crimeIndex:
   type: number
   example: 25
 regional-country_walkingAloneInDaylightSafetyIndex:
-  type: integer
+  type: number
   example: 85.62
 regional-country_walkingAloneAtNightSafetyIndex:
-  type: integer
+  type: number
   example: 67
 regional-country_minGrossSalaryJuniorTeacher:
   type: number
@@ -180,31 +180,33 @@ regional-country_maxGrossSalarySeniorTeacher:
   type: number
   example: 85,000
 regional-country_qualityOfLifeIndex:
-  type: integer
+  type: number
   example: 163.8
 regional-country_costOfLivingIndex:
-  type: integer
+  type: number
   example: 45.3
 # numbeo - expense percentages
 regional-country_expensePercentageTransportation:
-  type: integer
+  type: number
   example: 14.6
 regional-country_expensePercentageClothingAndShoes:
-  type: integer
+  type: number
   example: 3.4
 regional-country_expensePercentageSportsAndLeisure:
-  type: integer
+  type: number
   example: 5.4
 regional-country_expensePercentageMarkets:
-  type: integer
+  type: number
   example: 13
 regional-country_expensePercentageUtilities:
-  type: integer
+  type: number
   example: 18.3
 regional-country_expensePercentageRent:
-  type: integer
+  type: number
   example: 36.1
-
+regional-country_expensePercentageRestaurants:
+  type: number
+  example: 9.19999999999999
 #relationship attributes  
 regional-country_countryId:
   type: integer

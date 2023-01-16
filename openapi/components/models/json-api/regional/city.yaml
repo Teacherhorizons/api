@@ -126,6 +126,8 @@ JsonApiModel_regional-city_admin:
             $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
         expensePercentageRent:
             $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
+        expensePercentageRestaurants:
+            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -194,6 +196,7 @@ JsonApiModel_regional-city_admin:
         - expensePercentageMarkets
         - expensePercentageUtilities
         - expensePercentageRent
+        - expensePercentageRestaurants
     relationships:
       type: object
       additionalProperties: false

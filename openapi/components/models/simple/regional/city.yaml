@@ -66,6 +66,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
     expensePercentageRent:
       $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
+    expensePercentageRestaurants:
+      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants"
     numberOfSchools:
       $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchools"
     numberOfIBSchools:
@@ -161,6 +163,7 @@ SimpleModel_regional-city_admin:
     - expensePercentageMarkets
     - expensePercentageUtilities
     - expensePercentageRent
+    - expensePercentageRestaurants
     - numberOfSchools
     - numberOfIBSchools
     - numberOfLiveJobs

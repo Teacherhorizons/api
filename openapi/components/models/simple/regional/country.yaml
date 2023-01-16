@@ -128,6 +128,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageUtilities"
     expensePercentageRent:
       $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRent"
+    expensePercentageRestaurants:
+      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants"
     minGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher"
     averageGrossSalaryJuniorTeacher:
@@ -230,6 +232,7 @@ SimpleModel_regional-country_admin:
     - expensePercentageMarkets
     - expensePercentageUtilities
     - expensePercentageRent
+    - expensePercentageRestaurants
     - minGrossSalaryJuniorTeacher
     - averageGrossSalaryJuniorTeacher
     - maxGrossSalaryJuniorTeacher
