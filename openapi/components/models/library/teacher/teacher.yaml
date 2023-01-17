@@ -1,78 +1,4 @@
-# teacher_standardProperties_adminOnly:
-#   properties:
-#     thPlaceabilityRating:
-#       type: integer
-#       example: 1
-
-# teacher_standardProperties_typeAndId:
-#   allOf:
-#     - $ref: "#/teacher_standardProperties_type"
-#     - $ref: "#/teacher_standardProperties_id"
-
-# teacher_standardProperties_type:
-#   properties:
-#     type:
-#       type: string
-#       example: teacher
-#       description: Value representing the object type
-#       readOnly: true
-
-# teacher_standardProperties_type2:
-#   type: string
-#   example: teacher
-#   description: Value representing the object type
-#   readOnly: true
-
-# teacher_standardProperties_id:
-#   properties:
-#     id:
-#       type: integer
-#       format: int32
-#       example: 1
-#       readOnly: true
-#       description: Unique identifier of the object
-
-# teacher_standardProperties_all:
-#   allOf:
-#     - $ref: "#/teacher_standardProperties_shared"
-#     - $ref: "#/teacher_standardProperties_adminOnly"
-
-# teacher_relationshipProperties_shared:
-#   properties:
-#     userId:
-#       type: integer
-#       example: 1
-#       description: Relationship to User
-#     teachingQualificationCountryId:
-#       type: integer
-#       example: 1
-#       description: Relationship to Country
-#     qualificationTypeId:
-#       type: integer
-#       example: 1
-#       description: Relationship to QualificationType
-#     jobSeekingStatusId:
-#       type: integer
-#       example: 1
-#       description: Relationship to Status
-#     userTypeId:
-#       type: integer
-#       example: 1
-#       description: Relationship to UserType
-#     thDiscoveryMethodId:
-#       type: integer
-#       example: 1
-#       description: Relationship to ThDiscoveryMethod
-#     latestAdviserCommentUserId:
-#       type: integer
-#       example: 1
-#       description: Relationship to User
-#     currentCountryId:
-#       type: integer
-#       example: 1
-#       description: Relationship to Country
-
-# #
+#attributes
 teacher_memberNumber:
   type: integer
   example: 1
@@ -150,10 +76,10 @@ teacher_jobSeekingStatusId:
   type: integer
   example: 1
   description: Relationship to Status
-teacher_photoUrl:
+teacher_photoId:
   type: integer
   example: 1
-  description: Relationship to file
+  description: Relationship to general-photo
 teacher_maritalStatusId:
   type: integer
   example: 1
@@ -228,14 +154,14 @@ teacher_jobSeekingStatus:
   required:
     - id
 
-teacher_photoFile:
+teacher_photo:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: ""
+      description: Relationship to general-photo
   required:
     - id
 

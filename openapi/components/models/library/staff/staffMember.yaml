@@ -5,9 +5,6 @@ staff-staffMember_initials:
 staff-staffMember_activeInTH:
   type: integer
   example: 1
-staff-staffMember_photoUrl:
-  type: string
-  example: /foo/bar/baz.jpeg
 staff-staffMember_description:
   type: integer
   example: Lorem Ipsum
@@ -30,6 +27,11 @@ staff-staffMember_currentCityId:
   type: integer
   example: 1
   description: Relationship to City
+
+staff-staffMember_photoId:
+  type: string
+  example: 1
+  description: Relationship to general-photo
 
 #relationship
 staff-staffMember_user:
@@ -65,6 +67,15 @@ staff-staffMember_currentCity:
   required: 
     - id
 
-
+staff-staffMember_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
+  required: 
+    - id
     
   

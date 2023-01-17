@@ -11,8 +11,6 @@ JsonApiModel_teacher:
       additionalProperties: false
       properties:
         #simple attributes
-        photoUrl:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_photoUrl"
         memberNumber:
           $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
         availableFromDate:
@@ -74,6 +72,8 @@ JsonApiModel_teacher:
           $ref: "../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship_attribute"
         internationalSchoolExperience:
           $ref: "../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -98,6 +98,8 @@ JsonApiModel_teacher:
           $ref: "../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship"
         internationalSchoolExperience:
           $ref: "../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - type
     - id

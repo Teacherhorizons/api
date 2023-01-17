@@ -15,8 +15,6 @@ JsonApiModel_staff-staffMember:
           $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
         activeInTH:
           $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
-        photoUrl:
-          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
         description:
           $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
         roleTitle:
@@ -28,6 +26,8 @@ JsonApiModel_staff-staffMember:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         currentCity:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - id
         - userId
@@ -35,7 +35,7 @@ JsonApiModel_staff-staffMember:
         - salesforceUserId
         - initials
         - activeInTH
-        - photoUrl
+        - photo
         - description
         - roleTitle
     relationships:
@@ -48,6 +48,8 @@ JsonApiModel_staff-staffMember:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         currentCity:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - type
     - id

@@ -9,8 +9,6 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
     activeInTH:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
-    photoUrl:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoUrl"
     description:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
     roleTitle:
@@ -22,6 +20,8 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCityId"
     salesforceUserId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserId"
+    photoId:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoId"
   required:
     - id
     - userId
@@ -29,7 +29,7 @@ SimpleModel_staff-staffMember:
     - salesforceUserId
     - initials
     - activeInTH
-    - photoUrl
+    - photoId
     - description
     - roleTitle
 

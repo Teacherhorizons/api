@@ -290,14 +290,6 @@ school_numberOfBasicActiveJobCredits:
 school_hasThSaferRecruitmentBadgeOnOwnWebsite:
   type: boolean
   example: false
-school_smallprofilePhotoUrl:
-  type: string
-  nullable: true
-  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
-school_photoUrl:
-  type: string
-  nullable: true
-  example: /foo/bar/baz.jpeg
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
@@ -367,10 +359,14 @@ school_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-school_largeprofilePhotoUrl:
+school_smallprofilePhotoId:
   type: string
-  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/499271_main.jpg
-
+  example: 1
+  description: Relationship to general-photo
+school_largeprofilePhotoId:
+  type: string
+  example: 1
+  description: Relationship to general-photo
 #relationships
 school_city:
   type: object
@@ -513,5 +509,25 @@ school_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id
+school_smallprofilePhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
+  required:
+    - id
+school_largeprofilePhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
   required:
     - id

@@ -197,13 +197,6 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_numberOfBasicActiveJobCredits"
     hasThSaferRecruitmentBadgeOnOwnWebsite:
       $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
-    photoUrl:
-      $ref: "../../library/school/school.yaml#/school_photoUrl"
-    smallprofilePhotoUrl:
-      $ref: "../../library/school/school.yaml#/school_smallprofilePhotoUrl"
-    largeprofilePhotoUrl:
-      $ref: "../../library/school/school.yaml#/school_largeprofilePhotoUrl"
-      #check with RR if we need "largeprofilePhotoUrl"
     logoUrl:
       $ref: "../../library/school/school.yaml#/school_logoUrl"
     # relationship attributes
@@ -235,6 +228,10 @@ SimpleModel_school:
       $ref: "../../library/school/school.yaml#/school_ambassadorTeacherId"
     lraUserId:
       $ref: "../../library/school/school.yaml#/school_lraUserId"
+    smallprofilePhotoId:
+      $ref: "../../library/school/school.yaml#/school_smallprofilePhotoId"
+    largeprofilePhotoId:
+      $ref: "../../library/school/school.yaml#/school_largeprofilePhotoId"
   required:
     - id
 

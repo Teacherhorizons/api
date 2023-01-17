@@ -310,13 +310,14 @@ Response_applications_includedSchool_teacher:
           $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
-        smallprofilePhotoUrl:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhotoUrl"
+        #relationship attributes
+        smallprofilePhoto:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhoto"
       required:
         - name
         - slug
         - city
-        - smallprofilePhotoUrl
+        - smallprofilePhoto
   required:
     - type
     - id

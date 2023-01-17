@@ -203,12 +203,6 @@ JsonApiModel_school:
           $ref: "../../library/school/school.yaml#/school_numberOfBasicActiveJobCredits"
         hasThSaferRecruitmentBadgeOnOwnWebsite:
           $ref: "../../library/school/school.yaml#/school_hasThSaferRecruitmentBadgeOnOwnWebsite"
-        smallprofilePhotoUrl:
-          $ref: "../../library/school/school.yaml#/school_smallprofilePhotoUrl"
-        photoUrl:
-          $ref: "../../library/school/school.yaml#/school_photoUrl"
-        largeprofilePhotoUrl:
-          $ref: "../../library/school/school.yaml#/school_largeprofilePhotoUrl"
         logoUrl:
           $ref: "../../library/school/school.yaml#/school_logoUrl"
         # relationship attributes
@@ -240,6 +234,10 @@ JsonApiModel_school:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         lraUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        smallprofilePhoto:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        largeprofilePhoto:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -272,6 +270,10 @@ JsonApiModel_school:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        smallprofilePhoto:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+        largeprofilePhoto:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - type
     - id
