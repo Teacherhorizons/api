@@ -24,6 +24,12 @@ get:
         - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
+      name: include
+      required: true
+      example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions
+      schema:
+        type: string
+    - in: query
       name: filter
       style: deepObject
       allowReserved: true
@@ -42,9 +48,9 @@ get:
             type: string
             description: For use with not-signed-in-multiple only
         example:
-          slug: europe-lisbon
+          slug: europe-portugal-lisbon
           country.id: 4
-          country.slug: europe
+          country.slug: europe-portugal
 
   responses:
     "200":

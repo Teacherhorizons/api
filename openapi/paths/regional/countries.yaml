@@ -24,6 +24,12 @@ get:
         - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
+      name: include
+      required: true
+      example: staff,cities,photos,jobs,schools,ambassadors,attractions
+      schema:
+        type: string
+    - in: query
       name: filter
       style: deepObject
       allowReserved: true

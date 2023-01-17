@@ -23,6 +23,27 @@ get:
         - not-signed-in-multiple - List of multiple regions, each with minimal data
         - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: query
+      name: include
+      required: true
+      example: staff,countries,jobs,schools,ambassadors
+      schema:
+        type: string
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[slug]:
+            type: string
+            description: For use with not-signed-in only
+        example:
+          slug: europe
+
   responses:
     "200":
       description: OK (Request successful)
