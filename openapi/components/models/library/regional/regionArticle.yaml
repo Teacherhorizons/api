@@ -16,7 +16,7 @@ regional-regionArticle_creationDate:
   example: 2011-02-07T15:53:34Z
 
 #Relationship attributes
-regional-regionArticle_photoUrlId:
+regional-regionArticle_photoId:
   type: integer
   example: 1
   description: Relationship to general-photo
@@ -79,5 +79,16 @@ regional-regionArticle_creationUser:
       type: string
       example: "1"
       description: Relationship to user
+  required:
+    - id
+
+regional-regionArticle_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
   required:
     - id

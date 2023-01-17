@@ -28,14 +28,14 @@ JsonApiModel_regional-regionArticle:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        photoUrl:
+        photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - id
         - title
         - snippet
         - url
-        - photoUrl
+        - photo
         - photoDescription
         - creationDate
         - regionId
@@ -54,7 +54,7 @@ JsonApiModel_regional-regionArticle:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
         article:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
-        photoUrl:
+        photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - type

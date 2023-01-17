@@ -14,8 +14,8 @@ SimpleModel_regional-regionArticle:
     creationDate:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
     # relationship attributes
-    photoUrlId:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoUrlId"
+    photoId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoId"
     regionId:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_regionId"
     categoryId:
@@ -29,7 +29,7 @@ SimpleModel_regional-regionArticle:
     - title
     - snippet
     - url
-    - photoUrlId
+    - photoId
     - photoDescription
     - creationDate
     - regionId
