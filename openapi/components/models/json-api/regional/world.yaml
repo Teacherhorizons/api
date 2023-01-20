@@ -1,0 +1,160 @@
+JsonApiModel_regional-world:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-world_type"
+    id:
+      $ref: "#/JsonApiModel_regional-world_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        teachingInWorldDescription:
+          $ref: "../../library/regional/world.yaml#/regional-world_teachingInWorldDescription"
+        numberOfCountriesWithSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfCountriesWithSchools"
+        numberOfCitiesWithSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfCitiesWithSchools"
+        numberOfSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchools"
+        numberOfIBSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfIBSchools"
+        numberOfLiveJobs:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfLiveJobs"
+        numberOfPrimaryIBCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryIBCurriculumSchools"
+        numberOfPrimaryUSCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryUSCurriculumSchools"
+        numberOfPrimaryUKCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryUKCurriculumSchools"
+        numberOfPrimaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryInternationalCurriculumSchools"
+        numberOfPrimaryOtherCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryOtherCurriculumSchools"
+        numberOfSecondaryIBCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryIBCurriculumSchools"
+        numberOfSecondaryUSCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryUSCurriculumSchools"
+        numberOfSecondaryUKCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryUKCurriculumSchools"
+        numberOfSecondaryInternationalCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryInternationalCurriculumSchools"
+        numberOfSecondaryOtherCurriculumSchools:
+          $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryOtherCurriculumSchools"
+        qualityOfLifeDescription:
+          $ref: "../../library/regional/world.yaml#/regional-world_qualityOfLifeDescription"
+        averageSavingPercentage:
+          $ref: "../../library/regional/world.yaml#/regional-world_averageSavingPercentage"
+        percentageOfSchoolsHaveFlightAllowance:
+          $ref: "../../library/regional/world.yaml#/regional-world_percentageOfSchoolsHaveFlightAllowance"
+        percentageOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../library/regional/world.yaml#/regional-world_percentageOfSchoolsHavePrivateHealthcareScheme"
+        adviceForInternationalTeachers:
+          $ref: "../../library/regional/world.yaml#/regional-world_adviceForInternationalTeachers"
+        percentageOfOverseasTeachers:
+          $ref: "../../library/regional/world.yaml#/regional-world_percentageOfOverseasTeachers"
+        percentageOfInternationalStudents:
+          $ref: "../../library/regional/world.yaml#/regional-world_percentageOfInternationalStudents"
+        # relationship attributes      
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+      required:
+        - id
+        - photo1
+        - numberOfCountriesWithSchools
+        - numberOfCitiesWithSchools
+        - numberOfSchools
+        - numberOfLiveJobs
+        - teachingInWorldDescription
+        - numberOfIBSchools
+        - numberOfPrimaryIBCurriculumSchools
+        - numberOfPrimaryUSCurriculumSchools
+        - numberOfPrimaryUKCurriculumSchools
+        - numberOfPrimaryInternationalCurriculumSchools
+        - numberOfPrimaryOtherCurriculumSchools
+        - numberOfSecondaryIBCurriculumSchools
+        - numberOfSecondaryUSCurriculumSchools
+        - numberOfSecondaryUKCurriculumSchools
+        - numberOfSecondaryInternationalCurriculumSchools
+        - numberOfSecondaryOtherCurriculumSchools
+        - qualityOfLifeDescription
+        - averageSavingPercentage
+        - percentageOfSchoolsHaveFlightAllowance
+        - percentageOfSchoolsHavePrivateHealthcareScheme
+        - adviceForInternationalTeachers
+        - percentageOfOverseasTeachers
+        - percentageOfInternationalStudents
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:      
+        photo1:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-world_type:
+  type: string
+  example: regional-world
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-world_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-world_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-world_id"
+    # url:
+    #   $ref: "../../library/regional/world.yaml#/regional-world_url"
+    # description:
+    #   $ref: "../../library/regional/world.yaml#/regional-world_description"
+  required:
+    - id
+
+JsonApiModel_regional-world_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-world_type"
+        id:
+          $ref: "#/JsonApiModel_regional-world_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+JsonApiModel_regional-world_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_regional-world_type"
+          id:
+            $ref: "#/JsonApiModel_regional-world_id"
+        required:
+          - type
+          - id
+  required:
+    - data

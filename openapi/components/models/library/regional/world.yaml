@@ -1,0 +1,94 @@
+#attributes
+regional-world_photo1:
+  type: string
+  example: /foo/bar/baz.jpeg
+regional-world_teachingInWorldDescription:
+  type: string
+  example: foo bar baz qux
+regional-world_numberOfCountriesWithSchools:
+  type: number
+  example: 45
+  description: Derived
+regional-world_numberOfCitiesWithSchools:
+  type: number
+  example: 45
+  description: Derived
+regional-world_numberOfSchools:
+  type: number
+  example: 75
+  description: Derived
+regional-world_numberOfIBSchools:
+  type: number
+  example: 75
+  description: Derived
+regional-world_numberOfLiveJobs:
+  type: number
+  example: 75
+  description: Derived
+regional-world_numberOfPrimaryIBCurriculumSchools:
+  type: number
+  example: 342
+  description: Derived
+regional-world_numberOfPrimaryUSCurriculumSchools:
+  type: number
+  example: 910
+  description: Derived
+regional-world_numberOfPrimaryUKCurriculumSchools:
+  type: number
+  example: 229
+  description: Derived
+regional-world_numberOfPrimaryInternationalCurriculumSchools:
+  type: number
+  example: 396
+  description: Derived
+regional-world_numberOfPrimaryOtherCurriculumSchools:
+  type: number
+  example: 613
+  description: Derived
+regional-world_numberOfSecondaryIBCurriculumSchools:
+  type: number
+  example: 228
+  description: Derived
+regional-world_numberOfSecondaryUSCurriculumSchools:
+  type: number
+  example: 476
+  description: Derived
+regional-world_numberOfSecondaryUKCurriculumSchools:
+  type: number
+  example: 663
+  description: Derived
+regional-world_numberOfSecondaryInternationalCurriculumSchools:
+  type: number
+  example: 609
+  description: Derived
+regional-world_numberOfSecondaryOtherCurriculumSchools:
+  type: number
+  example: 536
+  description: Derived
+regional-world_qualityOfLifeDescription:
+  type: string
+  example: Foo bar qux
+regional-world_averageSavingPercentage:
+  type: number
+  example: 30
+regional-world_percentageOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 67
+regional-world_percentageOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 86
+regional-world_adviceForInternationalTeachers:
+  type: string
+  example: Foo bar baz
+regional-world_percentageOfOverseasTeachers:
+  type: integer
+  example: 70
+regional-world_percentageOfInternationalStudents:
+  type: integer
+  example: 40
+
+#relationship attribute
+regional-world_photo1Id:
+  type: integer
+  example: 1
+  description: Relationship to general-photo

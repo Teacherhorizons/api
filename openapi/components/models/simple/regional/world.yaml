@@ -1,0 +1,90 @@
+SimpleModel_regional-world:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-world_id"
+    # simple attributes
+    teachingInWorldDescription:
+        $ref: "../../library/regional/world.yaml#/regional-world_teachingInWorldDescription"
+    numberOfCountriesWithSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfCountriesWithSchools"
+    numberOfCitiesWithSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfCitiesWithSchools"
+    numberOfSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchools"
+    numberOfIBSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfIBSchools"
+    numberOfLiveJobs:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfLiveJobs"
+    numberOfPrimaryIBCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryIBCurriculumSchools"
+    numberOfPrimaryUSCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryUSCurriculumSchools"
+    numberOfPrimaryUKCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryUKCurriculumSchools"
+    numberOfPrimaryInternationalCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryInternationalCurriculumSchools"
+    numberOfPrimaryOtherCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfPrimaryOtherCurriculumSchools"
+    numberOfSecondaryIBCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryIBCurriculumSchools"
+    numberOfSecondaryUSCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryUSCurriculumSchools"
+    numberOfSecondaryUKCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryUKCurriculumSchools"
+    numberOfSecondaryInternationalCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryInternationalCurriculumSchools"
+    numberOfSecondaryOtherCurriculumSchools:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSecondaryOtherCurriculumSchools"
+    qualityOfLifeDescription:
+        $ref: "../../library/regional/world.yaml#/regional-world_qualityOfLifeDescription"
+    averageSavingPercentage:
+        $ref: "../../library/regional/world.yaml#/regional-world_averageSavingPercentage"
+    percentageOfSchoolsHaveFlightAllowance:
+        $ref: "../../library/regional/world.yaml#/regional-world_percentageOfSchoolsHaveFlightAllowance"
+    percentageOfSchoolsHavePrivateHealthcareScheme:
+        $ref: "../../library/regional/world.yaml#/regional-world_percentageOfSchoolsHavePrivateHealthcareScheme"
+    adviceForInternationalTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_adviceForInternationalTeachers"
+    percentageOfOverseasTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_percentageOfOverseasTeachers"
+    percentageOfInternationalStudents:
+        $ref: "../../library/regional/world.yaml#/regional-world_percentageOfInternationalStudents"
+    # relationship attributes
+    photo1Id:
+        $ref: "../../library/regional/world.yaml#/regional-world_photo1Id"
+  required:
+    - id
+    - photo1
+    - numberOfCountriesWithSchools
+    - numberOfCitiesWithSchools
+    - numberOfSchools
+    - numberOfLiveJobs
+    - teachingInWorldDescription
+    - numberOfIBSchools
+    - numberOfPrimaryIBCurriculumSchools
+    - numberOfPrimaryUSCurriculumSchools
+    - numberOfPrimaryUKCurriculumSchools
+    - numberOfPrimaryInternationalCurriculumSchools
+    - numberOfPrimaryOtherCurriculumSchools
+    - numberOfSecondaryIBCurriculumSchools
+    - numberOfSecondaryUSCurriculumSchools
+    - numberOfSecondaryUKCurriculumSchools
+    - numberOfSecondaryInternationalCurriculumSchools
+    - numberOfSecondaryOtherCurriculumSchools
+    - qualityOfLifeDescription
+    - averageSavingPercentage
+    - percentageOfSchoolsHaveFlightAllowance
+    - percentageOfSchoolsHavePrivateHealthcareScheme
+    - adviceForInternationalTeachers
+    - percentageOfOverseasTeachers
+    - percentageOfInternationalStudents
+    - photo1Id
+
+# shared
+SimpleModel_regional-world_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
