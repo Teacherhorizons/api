@@ -20,12 +20,13 @@ Response_regional-world_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_regional-world_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-world_includedRegion_notSignedIn"
           - $ref: "#/Response_regional-world_includedStaff_notSignedIn"
           - $ref: "#/Response_regional-world_includedJob_notSignedIn"
           - $ref: "#/Response_regional-world_includedSchool_notSignedIn"
-          - $ref: "#/Response_regional-world_includedAmbassador_notSignedIn"
           - $ref: "#/Response_regional-world_includedCity_notSignedIn"
+          - $ref: "#/Response_regional-world_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-world_includedAmbassador_notSignedIn"         
   required:
     - schema
     - data
@@ -55,8 +56,6 @@ Response_regional-world_notSignedIn_item:
           $ref: "../../models/library/regional/world.yaml#/regional-world_numberOfIBSchools"
         numberOfLiveJobs:
           $ref: "../../models/library/regional/world.yaml#/regional-world_numberOfLiveJobs"
-        teachingInRegionDescription:
-          $ref: "../../models/library/regional/world.yaml#/regional-world_teachingInRegionDescription"
         qualityOfLifeDescription:
           $ref: "../../models/library/regional/world.yaml#/regional-world_qualityOfLifeDescription"
         numberOfPrimaryIBCurriculumSchools:
@@ -95,8 +94,6 @@ Response_regional-world_notSignedIn_item:
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
-        - name
-        - slug
         - photo1
         - numberOfCitiesWithSchools
         - numberOfCountriesWithSchools
@@ -127,8 +124,8 @@ Response_regional-world_notSignedIn_item:
       properties:
         staff:
           $ref: "../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
-        countries:
-          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
+        regions:
+          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple"
         jobs:
           $ref: "../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple"
         schools:
@@ -140,6 +137,43 @@ Response_regional-world_notSignedIn_item:
     - id
     - attributes
     - relationships
+
+Response_regional-world_includedRegion_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
+    id:
+      $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_name"
+        slug:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_slug"
+        numberOfSchools:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_numberOfSchools"
+        averageSavingPercentage:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_averageSavingPercentage"
+        percentageOfSchoolsHaveFlightAllowance:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
+        percentageOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../../components/models/library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+      required:
+        - name
+        - slug
+        - numberOfSchools
+        - averageSavingPercentage
+        - percentageOfSchoolsHaveFlightAllowance
+        - percentageOfSchoolsHavePrivateHealthcareScheme
+  required:
+    - type
+    - id
+    - attributes
 
 Response_regional-world_includedCountry_notSignedIn:
   type: object
@@ -158,18 +192,12 @@ Response_regional-world_includedCountry_notSignedIn:
           $ref: "../../../components/models/library/regional/country.yaml#/regional-country_name"
         slug:
           $ref: "../../../components/models/library/regional/country.yaml#/regional-country_slug"
-        numberOfSchools:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools"
-        isoCode:
-          $ref: "../../../components/models/library/regional/country.yaml#/regional-country_isoCode"
         #relationship attributes
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - name
         - slug
-        - numberOfSchools
-        - isoCode
         - photo1
   required:
     - type
@@ -236,6 +264,8 @@ Response_regional-world_includedStaff_notSignedIn:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         user:
           $ref: "../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        country:
+          $ref: "../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
       required:
         - photo
         - description
@@ -288,6 +318,8 @@ Response_regional-world_includedSchool_notSignedIn:
         # simple attributes
         name:
           $ref: "../../../components/models/library/school/school.yaml#/school_name"
+        slug:
+          $ref: "../../../components/models/library/school/school.yaml#/school_slug"
         #relationship attributes
         smallProfilePhoto:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
@@ -299,6 +331,7 @@ Response_regional-world_includedSchool_notSignedIn:
           $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship"
       required:
         - name
+        - slug
         - smallProfilePhoto
         - city
   required:

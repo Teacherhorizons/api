@@ -35,6 +35,8 @@
   $ref: "./../paths/general/manualEmailTemplates.yaml"
 
 # regional
+/regional-world/{worldId}:
+  $ref: "./../paths/regional/world.yaml"
 /regional-regions/{regionId}:
   $ref: "./../paths/regional/region.yaml"
 /regional-regions:
@@ -53,7 +55,7 @@
   $ref: "./../paths/regional/city.yaml"
 /cities:
   $ref: "./../paths/regional/cities.yaml"
-  
+
 # test
 /test-apiTests:
   $ref: "./../paths/test/apiTests.yaml"

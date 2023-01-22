@@ -84,8 +84,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools"
         numberOfSecondaryOtherCurriculumSchools:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
-        savingPercentage:
-          $ref: "../../library/regional/region.yaml#/regional-region_savingPercentage"
+        averageSavingPercentage:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageSavingPercentage"
         percentageOfSchoolsHaveFlightAllowance:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
         percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -131,7 +131,7 @@ JsonApiModel_regional-region_admin:
         - numberOfSecondaryUKCurriculumSchools
         - numberOfSecondaryInternationalCurriculumSchools
         - numberOfSecondaryOtherCurriculumSchools
-        - savingPercentage
+        - averageSavingPercentage
         - percentageOfSchoolsHaveFlightAllowance
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers
@@ -268,6 +268,24 @@ JsonApiModel_regional-region_relationship_attribute:
     - id
 
 JsonApiModel_regional-region_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-region_type"
+        id:
+          $ref: "#/JsonApiModel_regional-region_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+JsonApiModel_regional-region_relationship_multiple:
   type: object
   additionalProperties: false
   properties:
