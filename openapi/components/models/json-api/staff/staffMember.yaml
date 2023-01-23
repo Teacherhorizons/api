@@ -29,15 +29,13 @@ JsonApiModel_staff-staffMember:
         photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
-        - id
-        - userId
-        - currentCityId
-        - salesforceUserId
+        # simple attributes
         - initials
         - activeInTH
-        - photo
         - description
         - roleTitle
+        # relationship attributes
+        - user
     relationships:
       type: object
       additionalProperties: false

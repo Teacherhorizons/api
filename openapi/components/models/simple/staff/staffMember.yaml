@@ -24,15 +24,13 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoId"
   required:
     - id
-    - userId
-    - currentCityId
-    - salesforceUserId
+    # simple attributes
     - initials
     - activeInTH
-    - photoId
     - description
     - roleTitle
-
+    # relationship attributes
+    - userId
 # shared
 SimpleModel_staff-staffMember_id:
   type: integer
