@@ -26,6 +26,8 @@ JsonApiModel_staff-staffMember:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         currentCity:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        currentCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
         photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
@@ -46,6 +48,8 @@ JsonApiModel_staff-staffMember:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         currentCity:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+        currentCountry:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
         photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:

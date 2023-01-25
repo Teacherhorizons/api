@@ -33,6 +33,11 @@ staff-staffMember_photoId:
   example: 1
   description: Relationship to general-photo
 
+staff-staffMember_currentCountryId:
+  type: integer
+  example: 12
+  description: Relationship to regional-country
+
 #relationship
 staff-staffMember_user:
   type: object
@@ -75,6 +80,17 @@ staff-staffMember_photo:
       type: string
       example: "1"
       description: Relationship to general-photo
+  required: 
+    - id
+
+staff-staffMember_currentCountry:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to country
   required: 
     - id
     

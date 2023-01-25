@@ -11,22 +11,6 @@ get:
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
-    - in: query
-      name: filter
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          filter[region.id]:
-            type: integer
-          filter[region.slug]:
-            type: string
-        example:
-          region.id: 1
-          region.slug: europe
   responses:
     "200":
       description: OK (Request successful)
