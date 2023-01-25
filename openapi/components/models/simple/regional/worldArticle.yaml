@@ -1,0 +1,29 @@
+SimpleModel_regional-worldArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-worldArticle_id"
+    # simple attributes
+    title:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
+    snippet:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
+    url:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
+    # relationship attributes
+    photoId:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_photoId"
+  required:
+    - id
+    - title
+    - snippet
+    - url
+    - photoId
+
+# shared
+SimpleModel_regional-worldArticle_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

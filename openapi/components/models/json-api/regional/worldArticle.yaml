@@ -1,0 +1,76 @@
+JsonApiModel_regional-worldArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-worldArticle_type"
+    id:
+      $ref: "#/JsonApiModel_regional-worldArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
+        snippet:
+          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
+        url:
+          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
+        # relationship attributes
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+      required:
+        - id
+        - title
+        - snippet
+        - url
+        - photo
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-worldArticle_type:
+  type: string
+  example: regional-worldArticle
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-worldArticle_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_regional-worldArticle_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_regional-worldArticle_id"
+  required:
+    - id
+
+JsonApiModel_regional-worldArticle_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_regional-worldArticle_type"
+        id:
+          $ref: "#/JsonApiModel_regional-worldArticle_id"
+      required:
+        - type
+        - id
+  required:
+    - data
