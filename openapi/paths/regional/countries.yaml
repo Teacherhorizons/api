@@ -25,7 +25,7 @@ get:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
     - in: query
       name: include
-      required: true
+      # required: true
       example: staff,cities,photos,jobs,schools,ambassadors,attractions
       schema:
         type: string

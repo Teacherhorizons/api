@@ -28,9 +28,9 @@ Response_regional-countries_notSignedIn:
           - $ref: "./country.yaml#/Response_regional-country_includedStaff_notSignedIn"
           - $ref: "./country.yaml#/Response_regional-country_includedJob_notSignedIn"
           - $ref: "./country.yaml#/Response_regional-country_includedSchool_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedAmbassador_notSignedIn"  
-          - $ref: "./country.yaml#/Response_regional-country_includedPhoto_notSignedIn" 
-          - $ref: "./country.yaml#/Response_regional-country_includedAttraction_notSignedIn"      
+          - $ref: "./country.yaml#/Response_regional-country_includedAmbassador_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedPhoto_notSignedIn"
+          - $ref: "./country.yaml#/Response_regional-country_includedAttraction_notSignedIn"
   required:
     - schema
     - data
@@ -75,4 +75,3 @@ Response_regional-countries_notSignedInMultiple_item:
     - type
     - id
     - attributes
-    - relationships

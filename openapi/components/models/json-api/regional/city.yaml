@@ -111,23 +111,23 @@ JsonApiModel_regional-city_admin:
         monthlyRent1BedroomApartmentOutsideCityCentre:
           $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
         qualityOfLifeIndex:
-            $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+          $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
         costOfLivingIndex:
-            $ref: "../../library/regional/city.yaml#/regional-city_costOfLivingIndex"
+          $ref: "../../library/regional/city.yaml#/regional-city_costOfLivingIndex"
         expensePercentageTransportation:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageTransportation"
         expensePercentageClothingAndShoes:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
         expensePercentageSportsAndLeisure:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
         expensePercentageMarkets:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageMarkets"
         expensePercentageUtilities:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
         expensePercentageRent:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
         expensePercentageRestaurants:
-            $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants"
+          $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -329,6 +329,8 @@ JsonApiModel_regional-city_relationship_attribute:
       $ref: "#/JsonApiModel_regional-city_id"
     name:
       $ref: "../../library/regional/city.yaml#/regional-city_name"
+    slug:
+      $ref: "../../library/regional/city.yaml#/regional-city_slug"
   required:
     - id
 
@@ -355,7 +357,7 @@ JsonApiModel_regional-city_relationship_multiple:
   additionalProperties: false
   properties:
     data:
-      type: object
+      type: array
       additionalProperties: false
       properties:
         type:
@@ -367,5 +369,3 @@ JsonApiModel_regional-city_relationship_multiple:
         - id
   required:
     - data
-
-

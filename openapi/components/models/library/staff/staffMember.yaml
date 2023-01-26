@@ -6,7 +6,7 @@ staff-staffMember_activeInTH:
   type: integer
   example: 1
 staff-staffMember_description:
-  type: integer
+  type: string
   example: Lorem Ipsum
 staff-staffMember_roleTitle:
   type: integer
@@ -47,7 +47,7 @@ staff-staffMember_user:
       type: string
       example: "1"
       description: Relationship to user
-  required: 
+  required:
     - id
 
 staff-staffMember_salesforceUser:
@@ -57,8 +57,8 @@ staff-staffMember_salesforceUser:
     id:
       type: string
       example: "1"
-      description: Relationship to user 
-  required: 
+      description: Relationship to user
+  required:
     - id
 
 staff-staffMember_currentCity:
@@ -69,7 +69,7 @@ staff-staffMember_currentCity:
       type: string
       example: "1"
       description: Relationship to city
-  required: 
+  required:
     - id
 
 staff-staffMember_photo:
@@ -80,7 +80,7 @@ staff-staffMember_photo:
       type: string
       example: "1"
       description: Relationship to general-photo
-  required: 
+  required:
     - id
 
 staff-staffMember_currentCountry:
@@ -91,7 +91,5 @@ staff-staffMember_currentCountry:
       type: string
       example: "1"
       description: Relationship to country
-  required: 
+  required:
     - id
-    
-  

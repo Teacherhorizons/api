@@ -148,14 +148,27 @@ Response_regional-country_notSignedIn_item:
           $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageUtilities"
         expensePercentageRent:
           $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRent"
+        expensePercentageRestaurants:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRestaurants"
         #relationship attribute
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        capitalCity:
+          $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          required:
+            - name
+        localCurrency:
+          $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
+        region:
+          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+          required:
+            - slug
+            - name
       required:
         - name
         - slug
         - population
-        - photo1
+        # - photo1
         - numberOfCitiesWithSchools
         - numberOfSchools
         - numberOfLiveJobs
@@ -191,7 +204,7 @@ Response_regional-country_notSignedIn_item:
         - costOfGasoline1Litre
         - monthlyCostOfBasicUtilities
         - monthlyCostOfInternet
-        - monthlyRent1BedroomApartmentCityCentre
+        - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
@@ -204,6 +217,9 @@ Response_regional-country_notSignedIn_item:
         - expensePercentageMarkets
         - expensePercentageUtilities
         - expensePercentageRent
+        - capitalCity
+        # - localCurrency
+        - region
     relationships:
       type: object
       additionalProperties: false
@@ -254,7 +270,7 @@ Response_regional-country_includedCity_notSignedIn:
         - name
         - slug
         - numberOfSchools
-        - photo1
+        # - photo1
   required:
     - type
     - id
@@ -338,6 +354,10 @@ Response_regional-country_includedSchool_notSignedIn:
         # relationship attributes
         smallProfilePhoto:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+      required:
+        - name
+        - slug
+        # - smallProfilePhoto
     relationships:
       type: object
       additionalProperties: false
@@ -345,14 +365,12 @@ Response_regional-country_includedSchool_notSignedIn:
         city:
           $ref: "../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship"
       required:
-        - name
-        - slug
-        - smallProfilePhoto
         - city
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_regional-country_includedAmbassador_notSignedIn:
   type: object
@@ -413,7 +431,7 @@ Response_regional-country_includedPhoto_notSignedIn:
           # $ref: "../../../components/models/json-api/regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_attribute"
       required:
         - precedence
-        - photo
+        # - photo
   required:
     - type
     - id
@@ -440,5 +458,3 @@ Response_regional-country_includedAttraction_notSignedIn:
     - type
     - id
     - attributes
-
-
