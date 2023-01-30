@@ -141,6 +141,8 @@ JsonApiModel_regional-city_admin:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         photo1:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        # nearestWeatherStationId:
+        #   $ref: "../../library/general/weather.yaml#/general-weather_relationship_attribute"
       required:
         - name
         - alias
@@ -197,6 +199,7 @@ JsonApiModel_regional-city_admin:
         - expensePercentageUtilities
         - expensePercentageRent
         - expensePercentageRestaurants
+        - nearestWeatherStation
     relationships:
       type: object
       additionalProperties: false
@@ -213,6 +216,8 @@ JsonApiModel_regional-city_admin:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
         photo1:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+        # nearestWeatherStationId:
+        #   $ref: "../../library/general/weather.yaml#/general-weather_relationship"
   required:
     - schema
     - type

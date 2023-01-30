@@ -1,0 +1,23 @@
+SimpleModel_regional-worldPhoto:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-worldPhoto_id"
+    # simple attributes
+    precedence:
+        $ref: "../../library/regional/worldPhoto.yaml#/regional-worldPhoto_precedence"
+    # relationship attributes
+    photoId:
+        $ref: "../../library/regional/worldPhoto.yaml#/regional-worldPhoto_photoId"
+  required:
+    - id
+    - precedence
+    - photoId
+
+# shared
+SimpleModel_regional-worldPhoto_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -203,6 +203,10 @@ regional-city_expensePercentageRent:
 regional-city_expensePercentageRestaurants:
   type: number
   example: 9.19999999999999
+regional-city_nearestWeatherStationId:
+  type: string
+  example: 01234
+  description: Not a relationship
 
 # Relationship attributes
 regional-city_countryId:
@@ -229,7 +233,7 @@ regional-city_photo1Id:
   type: integer
   example: 1
   description: Derived; Relationship to general-photo
-
+  
 # Relationships
 regional-city_country:
   type: object
