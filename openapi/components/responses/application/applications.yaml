@@ -311,13 +311,13 @@ Response_applications_includedSchool_teacher:
         city:
           $ref: "../../../components/models/library/school/school.yaml#/school_city"
         #relationship attributes
-        smallprofilePhoto:
-          $ref: "../../../components/models/library/school/school.yaml#/school_smallprofilePhoto"
+        smallProfilePhoto:
+          $ref: "../../../components/models/library/school/school.yaml#/school_smallProfilePhoto"
       required:
         - name
         - slug
         - city
-        - smallprofilePhoto
+        - smallProfilePhoto
   required:
     - type
     - id

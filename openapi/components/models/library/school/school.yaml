@@ -359,11 +359,11 @@ school_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-school_smallprofilePhotoId:
+school_smallProfilePhotoId:
   type: string
   example: 1
   description: Relationship to general-photo
-school_largeprofilePhotoId:
+school_largeProfilePhotoId:
   type: string
   example: 1
   description: Relationship to general-photo
@@ -511,7 +511,7 @@ school_latestUpdateUser:
       description: Relationship to user
   required:
     - id
-school_smallprofilePhoto:
+school_smallProfilePhoto:
   type: object
   additionalProperties: false
   properties:
@@ -521,7 +521,7 @@ school_smallprofilePhoto:
       description: Relationship to general-photo
   required:
     - id
-school_largeprofilePhoto:
+school_largeProfilePhoto:
   type: object
   additionalProperties: false
   properties:
