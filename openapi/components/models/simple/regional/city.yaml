@@ -135,6 +135,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTeacherId"
     photo1Id:
       $ref: "../../library/regional/city.yaml#/regional-city_photo1Id"
+    nearestWeatherStationId:
+      $ref: "../../library/regional/city.yaml#/regional-city_nearestWeatherStationId"
   required:
     - name
     - alias
@@ -191,6 +193,7 @@ SimpleModel_regional-city_admin:
     - monthlyCostOfInternet
     - monthlyRent1BedroomApartmentCityCentre
     - monthlyRent1BedroomApartmentOutsideCityCentre
+    - nearestWeatherStationId
 
 SimpleModel_regional-city_school:
   type: object
