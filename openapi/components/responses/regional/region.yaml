@@ -210,7 +210,8 @@ Response_regional-region_includedAmbassador_notSignedIn:
           $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
       required:
         - levelName
-        - testimonial
+        - user
+        # - testimonial
         - region
   required:
     - type
