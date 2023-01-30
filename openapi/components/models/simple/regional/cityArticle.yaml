@@ -5,8 +5,16 @@ SimpleModel_regional-cityArticle:
     id:
       $ref: "#/SimpleModel_regional-cityArticle_id"
     # simple attributes
+    title:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_title"
+    snippet:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_snippet"
+    url:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_url"
     creationDate:
         $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_latestUpdateDate"
     # relationship attributes
     cityId:
         $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_cityId"
@@ -14,15 +22,25 @@ SimpleModel_regional-cityArticle:
         $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_categoryId"
     articleId:
         $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_articleId"
+    photoId:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_photoId"
     creationUserId:
         $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_latestUpdateUserId"
   required:
     - id
+    - title
+    - snippet
+    - url
+    - creationDate
+    - latestUpdateDate
     - cityId
     - categoryId
     - articleId
-    - creationDate
+    - photoId
     - creationUserId
+    - latestUpdateUserId
 
 # shared
 SimpleModel_regional-cityArticle_id:

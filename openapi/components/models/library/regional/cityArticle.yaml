@@ -2,24 +2,23 @@
 regional-cityArticle_title:
   type: string
   example: Teach English In Portugal - How To Get A Job
+  description: Derived
 
 regional-cityArticle_snippet:
   type: string
   example: If you’ve got a burning desire to teach English in Portugal, or just want a feel for what it’s like, here’s all you need to know about living and working in arguably the most exotic locale in Western Europe.
+  description: Derived
 
 regional-cityArticle_url:
   type: string
   example: https://teflhero.com/blog/teach-english-in-portugal/
-
-regional-cityArticle_photoUrl:
-  type: string
-  example: /static/media/articles/photoOfACat.jpeg
-
-regional-cityArticle_photoDescription:
-  type: string
-  example: My photo description
+  description: Derived
 
 regional-cityArticle_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+regional-cityArticle_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
 
@@ -36,7 +35,15 @@ regional-cityArticle_articleId:
   type: integer
   example: 1
   description: Relationship to regional-cityArticle
+regional-cityArticle_photoId:
+  type: integer
+  example: 1
+  description: Derived, Relationship to general-photo
 regional-cityArticle_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-cityArticle_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
@@ -60,7 +67,7 @@ regional-cityArticle_category:
     id:
       type: string
       example: "1"
-      description: Relationship to Article Category
+      description: Relationship to regional-articleCategory
   required:
     - id
 
@@ -71,11 +78,33 @@ regional-cityArticle_article:
     id:
       type: string
       example: "1"
-      description: Relationship to Country Article
+      description: Relationship to general-article
+  required:
+    - id
+
+regional-cityArticle_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
   required:
     - id
 
 regional-cityArticle_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+regional-cityArticle_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
