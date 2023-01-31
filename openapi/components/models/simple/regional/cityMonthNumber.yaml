@@ -2,6 +2,8 @@ SimpleModel_regional-cityMonthNumber:
   type: object
   additionalProperties: false
   properties:
+    id:
+      $ref: "#/SimpleModel_regional-cityMonthNumber_id"
     # simple attributes
     monthNumber:
       $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
@@ -17,10 +19,18 @@ SimpleModel_regional-cityMonthNumber:
     cityId:
       $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_cityId"
   required:
+    - id
     - cityId
     - monthNumber
     - averageMinTemperatureInDegreesC
     - averageMaxTemperatureInDegreesC
     - averageRainfallInMM
     - notes
+
+# shared
+SimpleModel_regional-cityMonthNumber_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 

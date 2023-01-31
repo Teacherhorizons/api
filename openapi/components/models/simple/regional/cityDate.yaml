@@ -2,6 +2,8 @@ SimpleModel_regional-cityDate:
   type: object
   additionalProperties: false
   properties:
+    id:
+      $ref: "#/SimpleModel_regional-cityDate_id"
     # simple attributes
     minTemperatureInDegreesC:
       $ref: "../../library/regional/cityDate.yaml#/regional-cityDate_minTemperatureInDegreesC"
@@ -20,4 +22,11 @@ SimpleModel_regional-cityDate:
     - minTemperatureInDegreesC
     - maxTemperatureInDegreesC
     - weatherType
+
+# shared
+SimpleModel_regional-cityDate_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
 
