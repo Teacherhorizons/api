@@ -37,7 +37,10 @@ JsonApiModel_regional-cityArticle:
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
-        - id
+        - id    
+        - title
+        - snippet
+        - url
         - cityId
         - categoryId
         - articleId

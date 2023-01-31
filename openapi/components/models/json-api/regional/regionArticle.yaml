@@ -19,6 +19,8 @@ JsonApiModel_regional-regionArticle:
           $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
         creationDate:
           $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_latestUpdateDate"
         # relationship attributes
         region:
           $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
@@ -28,6 +30,8 @@ JsonApiModel_regional-regionArticle:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
@@ -36,12 +40,13 @@ JsonApiModel_regional-regionArticle:
         - snippet
         - url
         - photo
-        - photoDescription
         - creationDate
-        - regionId
-        - categoryId
-        - articleId
-        - creationUserId
+        - latestUpdateDate
+        - region
+        - category
+        - article
+        - creationUser
+        - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false

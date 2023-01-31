@@ -11,15 +11,33 @@ SimpleModel_regional-worldArticle:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
     url:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
+    creationDate:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_latestUpdateDate"
     # relationship attributes
     photoId:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_photoId"
+    categoryId:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_categoryId"
+    articleId:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_articleId"
+    creationUserId:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_latestUpdateUserId"
   required:
     - id
     - title
     - snippet
     - url
+    - creationDate
+    - latestUpdateDate
+    - categoryId
+    - articleId
     - photoId
+    - creationUserId
+    - latestUpdateUserId
 
 # shared
 SimpleModel_regional-worldArticle_id:

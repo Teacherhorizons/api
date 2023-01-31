@@ -3,12 +3,100 @@
 regional-worldArticle_title:
   type: string
   example: Foo bar baz
+  description: Derived
 regional-worldArticle_snippet:
   type: string
   example: Foo bar baz
+  description: Derived
 regional-worldArticle_url:
   type: string
   example: /foo/bar/baz.html
-regional-worldArticle_photo:
+  description: Derived
+regional-worldArticle_creationDate:
   type: string
-  example: /foo/bar/baz.jpeg
+  example: 2011-02-07T15:53:34Z
+regional-worldArticle_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+
+#Relationship attributes
+regional-worldArticle_categoryId:
+  type: integer
+  example: 1
+  description: Relationship to regional-articleCategory
+regional-worldArticle_articleId:
+  type: integer
+  example: 1
+  description: Relationship to regional-regionArticle
+regional-worldArticle_photoId:
+  type: integer
+  example: 1
+  description: Derived, Relationship to general-photo
+regional-worldArticle_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+regional-worldArticle_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+
+#Relationships
+
+regional-worldArticle_category:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Article Category
+  required:
+    - id
+
+regional-worldArticle_article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to Country Article
+  required:
+    - id
+
+regional-worldArticle_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
+  required:
+    - id
+
+regional-worldArticle_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+regional-worldArticle_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required:
+    - id
+
+

@@ -5,24 +5,44 @@ SimpleModel_regional-countryArticle:
     id:
       $ref: "#/SimpleModel_regional-countryArticle_id"
     # simple attributes
+    title:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_title"
+    snippet:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
+    url:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_url"
     creationDate:
-        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_latestUpdateDate"
     # relationship attributes
     countryId:
-        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_countryId"
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_countryId"
     categoryId:
-        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_categoryId"
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_categoryId"
     articleId:
-        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_articleId"
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_articleId"
+    photoId:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_photoId"
     creationUserId:
-        $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationUserId"
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_latestUpdateUserId"
   required:
     - id
+    - title
+    - snippet
+    - url
+    - creationDate
+    - latestUpdateDate
     - countryId
     - categoryId
     - articleId
-    - creationDate
+    - photoId
     - creationUserId
+    - latestUpdateUserId
+
+
 
 # shared
 SimpleModel_regional-countryArticle_id:

@@ -13,6 +13,8 @@ SimpleModel_regional-regionArticle:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
     creationDate:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_latestUpdateDate"
     # relationship attributes
     photoId:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_photoId"
@@ -24,18 +26,21 @@ SimpleModel_regional-regionArticle:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_articleId"
     creationUserId:
       $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_latestUpdateUserId"
   required:
     - id
     - title
     - snippet
     - url
     - photoId
-    - photoDescription
     - creationDate
+    - latestUpdateDate
     - regionId
     - categoryId
     - articleId
     - creationUserId
+    - latesttUpdateUserId
 
 # shared
 SimpleModel_regional-regionArticle_id:
