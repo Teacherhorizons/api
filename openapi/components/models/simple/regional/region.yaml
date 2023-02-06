@@ -84,6 +84,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
     percentageOfInternationalStudents:
       $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+    communityResponseQuestionIds:
+      $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
 
     # relationship attributes
     photo1Id:
@@ -130,6 +132,7 @@ SimpleModel_regional-region_admin:
     - percentageOfSchoolsHavePrivateHealthcareScheme
     - percentageOfOverseasTeachers
     - percentageOfInternationalStudents
+    - communityResponseQuestionIds
 
 SimpleModel_regional-region_school:
   type: object

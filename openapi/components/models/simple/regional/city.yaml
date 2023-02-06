@@ -138,6 +138,8 @@ SimpleModel_regional-city_admin:
     nearestWeatherStationId:
       $ref: "../../library/regional/city.yaml#/regional-city_nearestWeatherStationId"
   required:
+    - schema
+    - id
     - name
     - alias
     - keyAttractions
