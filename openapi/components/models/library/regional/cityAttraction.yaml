@@ -27,28 +27,29 @@ regional-cityAttraction_latestUpdateUserId:
   example: 15
 
 #Relationships
-regional-regional-cityAttraction_city:
+regional-cityAttraction_city:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "67"
+      example: "1"
       description: Relationship to City
   required:
     - id
 
-regional-regional-cityAttraction_type:
+regional-cityAttraction_type:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "76"
-      description: Relationship to Attraction-Type
+      description: Relationship to regional-cityAttractionType
   required:
     - id
-regional-regional-cityAttraction_creationUser:
+
+regional-cityAttraction_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -59,7 +60,7 @@ regional-regional-cityAttraction_creationUser:
   required:
     - id
 
-regional-regional-cityAttraction_latestUpdateUser:
+regional-cityAttraction_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

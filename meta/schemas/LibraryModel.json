@@ -16,6 +16,9 @@
             }
           ]
         },
+        "^(regional-city_nearestWeatherStationId)$": {
+          "$ref": "#/definitions/LibraryModel-Attribute"
+        },
         "^(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z1]Id$": {
           "$ref": "#/definitions/LibraryModel-RelationshipAttribute"
         }
@@ -111,7 +114,8 @@
                   "const": "1"
                 },
                 "description": {
-                  "type": "string"
+                  "type": "string",
+                  "pattern": "^Relationship to ([a-z])([a-zA-Z-]*)$"
                 }
               },
               "required": [
