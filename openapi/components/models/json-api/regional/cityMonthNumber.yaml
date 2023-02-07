@@ -37,11 +37,15 @@ JsonApiModel_regional-cityMonthNumber:
       properties:
         city:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+  required:
+    - type
+    - id
 
 JsonApiModel_regional-cityMonthNumber_type:
   type: string
   example: regional-cityMonthNumber
   description: Unique identifier of the entity type
+  readOnly: true
 
 JsonApiModel_regional-cityMonthNumber_id:
   type: string

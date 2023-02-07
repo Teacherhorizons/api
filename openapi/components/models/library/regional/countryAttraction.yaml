@@ -19,15 +19,15 @@ regional-countryAttraction_countryId:
   description: Relationship to regional-country
 regional-countryAttraction_typeId:
   type: integer
-  example: 12
+  example: 1
   description: Relationship to regional-countryAttractionType
 regional-countryAttraction_creationUserId:
   type: integer
-  example: 43
+  example: 1
   description: Relationship to user
 regional-countryAttraction_latestUpdateUserId:
   type: integer
-  example: 35
+  example: 1
   description: Relationship to user
 
 #Relationships
@@ -37,8 +37,8 @@ regional-countryAttraction_country:
   properties:
     id:
       type: string
-      example: "12"
-      description: Relationship to Country
+      example: "1"
+      description: Relationship to regional-country
   required:
     - id
 
@@ -49,7 +49,7 @@ regional-countryAttraction_type:
     id:
       type: string
       example: "1"
-      description: Relationship to Attraction type
+      description: Relationship to general-attractionType
   required:
     - id
 
@@ -59,7 +59,7 @@ regional-countryAttraction_creationUser:
   properties:
     id:
       type: string
-      example: "11"
+      example: "1"
       description: Relationship to user
   required:
     - id

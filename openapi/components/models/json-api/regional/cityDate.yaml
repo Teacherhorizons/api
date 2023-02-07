@@ -38,7 +38,10 @@ JsonApiModel_regional-cityDate:
           $ref: "../general/weatherType.yaml#/JsonApiModel_general-weatherType_relationship"
         # date:
         #   $ref: "../time-date/date.yaml#/JsonApiModel_time-date_relationship"
-
+  required:
+    - type
+    - id
+    
 JsonApiModel_regional-cityDate_type:
   type: string
   example: regional-cityDate

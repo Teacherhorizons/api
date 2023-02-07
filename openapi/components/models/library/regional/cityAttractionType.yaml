@@ -12,10 +12,12 @@ regional-cityAttractionType_latestUpdateDate:
 #Relationship attributes
 regional-cityAttractionType_creationUserId:
   type: integer
-  example: 67
+  example: 1
+  description: Relationship to user
 regional-cityAttractionType_latestUpdateUserId:
   type: integer
-  example: 76
+  example: 1
+  description: Relationship to user
 
 #Relationships
 regional-cityArticle_creationUser:
@@ -24,7 +26,7 @@ regional-cityArticle_creationUser:
   properties:
     id:
       type: string
-      example: "67"
+      example: "1"
       description: Relationship to user
   required:
     - id
@@ -35,7 +37,7 @@ regional-cityArticle_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "76"
+      example: "1"
       description: Relationship to user
   required:
     - id

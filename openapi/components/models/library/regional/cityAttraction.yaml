@@ -15,16 +15,21 @@ regional-cityAttraction_latestUpdateDate:
 #Relationship attributes
 regional-cityAttraction_cityId:
   type: integer
-  example: 12
+  example: 1
+  description: Relationship to regional-city
 regional-cityAttraction_typeId:
   type: integer
-  example: 13
+  example: 1
+  description: Relationship to regional-cityAttractionType
+  #need to check above relationship with RR
 regional-cityAttraction_creationUserId:
   type: integer
-  example: 14
+  example: 1
+  description: Relationship to user
 regional-cityAttraction_latestUpdateUserId:
   type: integer
-  example: 15
+  example: 1
+  description: Relationship to user
 
 #Relationships
 regional-cityAttraction_city:
@@ -44,7 +49,7 @@ regional-cityAttraction_type:
   properties:
     id:
       type: string
-      example: "76"
+      example: "1"
       description: Relationship to regional-cityAttractionType
   required:
     - id
@@ -55,7 +60,7 @@ regional-cityAttraction_creationUser:
   properties:
     id:
       type: string
-      example: "67"
+      example: "1"
       description: Relationship to user
   required:
     - id
@@ -66,7 +71,7 @@ regional-cityAttraction_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "76"
+      example: "1"
       description: Relationship to user
   required:
     - id

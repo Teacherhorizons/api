@@ -37,6 +37,9 @@ JsonApiModel_regional-cityAttractionType:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
 
 JsonApiModel_regional-cityAttractionType_type:
   type: string

@@ -56,7 +56,7 @@ regional-countryArticle_country:
     id:
       type: string
       example: "1"
-      description: Relationship to country
+      description: Relationship to regional-country
   required:
     - id
 
@@ -67,7 +67,7 @@ regional-countryArticle_category:
     id:
       type: string
       example: "1"
-      description: Relationship to Article Category
+      description: Relationship to regional-articleCategory
   required:
     - id
 
@@ -78,7 +78,7 @@ regional-countryArticle_article:
     id:
       type: string
       example: "1"
-      description: Relationship to General Article
+      description: Relationship to general-article
   required:
     - id
 
@@ -89,7 +89,7 @@ regional-countryArticle_photo:
     id:
       type: string
       example: "1"
-      description: Relationship to General Photo
+      description: Relationship to general-photo
   required:
     - id
 

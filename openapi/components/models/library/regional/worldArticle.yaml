@@ -1,5 +1,4 @@
 #attributes
-
 regional-worldArticle_title:
   type: string
   example: Foo bar baz
@@ -51,7 +50,7 @@ regional-worldArticle_category:
     id:
       type: string
       example: "1"
-      description: Relationship to Article Category
+      description: Relationship to regional-articleCategory
   required:
     - id
 
@@ -62,7 +61,7 @@ regional-worldArticle_article:
     id:
       type: string
       example: "1"
-      description: Relationship to Country Article
+      description: Relationship to general-article
   required:
     - id
 

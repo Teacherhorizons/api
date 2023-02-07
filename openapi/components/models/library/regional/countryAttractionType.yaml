@@ -12,11 +12,11 @@ regional-countryAttractionType_latestUpdateDate:
 #Relationship attributes
 regional-countryAttractionType_creationUserId:
   type: integer
-  example: 15
+  example: 1
   description: Relationship to user
 regional-countryAttractionType_latestUpdateUserId:
   type: integer
-  example: 22
+  example: 1
   description: Relationship to user
 
 #Relationships
@@ -26,7 +26,7 @@ regional-countryAttractionType_creationUser:
   properties:
     id:
       type: string
-      example: "11"
+      example: "1"
       description: Relationship to user
   required:
     - id

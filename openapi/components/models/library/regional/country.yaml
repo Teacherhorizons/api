@@ -211,16 +211,16 @@ regional-country_expensePercentageRestaurants:
 regional-country_countryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to regional-country
   #check "countryId" with RR
 regional-country_localCurrencyId:
   type: integer
   example: 1
-  description: Relationship to currency
+  description: Relationship to general-currency
 regional-country_internationalCurrencyId:
   type: integer
   example: 1
-  description: Relationship to currency
+  description: Relationship to general-currency
 regional-country_creationUserId:
   type: integer
   example: 1
@@ -232,7 +232,7 @@ regional-country_latestUpdateUserId:
 regional-country_languageId:
   type: integer
   example: 1
-  description: Relationship to Language
+  description: Relationship to geeneral-language
 regional-country_regionId:
   type: integer
   example: 1
@@ -274,7 +274,7 @@ regional-country_country:
     id:
       type: string
       example: "1"
-      description: Relationship to Country
+      description: Relationship to regional-country
   required:
     - id
 
@@ -285,7 +285,7 @@ regional-localCurrency:
     id:
       type: string
       example: "1"
-      description: Relationship to currency
+      description: Relationship to general-currency
   required:
     - id
 
@@ -296,7 +296,7 @@ regional-internationalCurrency:
     id:
       type: string
       example: "1"
-      description: Relationship to currency
+      description: Relationship to general-currency
   required:
     - id
 
@@ -329,7 +329,7 @@ regional-country_language:
     id:
       type: string
       example: "1"
-      description: Relationship to Language
+      description: Relationship to geeneral-language
   required:
     - id
 
@@ -340,7 +340,7 @@ regional-country_region:
     id:
       type: string
       example: "1"
-      description: Relationship to Region
+      description: Relationship to regional-region
   required:
     - id
 
@@ -351,7 +351,7 @@ regional-country_capitalCity:
     id:
       type: string
       example: "1"
-      description: Relationship to City
+      description: Relationship to regional-city
   required:
     - id
 
@@ -362,7 +362,7 @@ regional-country_ambassadorTeacher:
     id:
       type: string
       example: "1"
-      description: Relationship to Teacher
+      description: Relationship to teacher
   required:
     - id
 
