@@ -23,6 +23,9 @@
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Relationship"
+        },
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship_multiple$": {
+          "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipMultiple"
         }
       },
       "required": [],
@@ -145,13 +148,13 @@
                   "type": "object",
                   "additionalProperties": false,
                   "patternProperties": {
-                    "^[a-zA-Z_1]*$": {
+                    "^[a-zA-Z0-9_]*$": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
                         "$ref": {
                           "type": "string",
-                          "pattern": "^([a-zA-Z./]*.yaml#/JsonApiModel_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school|user)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school|user)[a-zA-Z-_1]*(?<!(Id)))$"
+                          "pattern": "^([a-zA-Z./]*.yaml#/JsonApiModel_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school|user)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school|user)[a-zA-Z0-9-_]*(?<!(Id)))$"
                         }
                       },
                       "required": [
@@ -186,7 +189,7 @@
                   "type": "object",
                   "additionalProperties": false,
                   "patternProperties": {
-                    "^[a-zA-Z_]*$": {
+                    "^[a-zA-Z_1]*$": {
                       "type": "object",
                       "additionalProperties": false,
                       "properties": {
@@ -369,7 +372,7 @@
         "required": {
           "type": "array",
           "minItems": 1,
-          "maxItems": 1,
+          "maxItems": 3,
           "allOf": [
             {
               "contains": {
@@ -387,7 +390,101 @@
       ],
       "title": "JsonApiModel-MultipleSchemas-RelationshipAttribute"
     },
+    "JsonApiModel-MultipleSchemas-TypeAndId": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Ref"
+            },
+            "id": {
+              "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Ref"
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "allOf": [
+            {
+              "contains": {
+                "const": "type"
+              }
+            },
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ]
+    },    
     "JsonApiModel-MultipleSchemas-Relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/JsonApiModel-MultipleSchemas-TypeAndId"
+            }
+          },
+          "required": [
+            "data"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "data"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "additionalProperties",
+        "properties",
+        "required"
+      ],
+      "title": "JsonApiModel-MultipleSchemas-Relationship"
+    },
+    "JsonApiModel-MultipleSchemas-RelationshipMultiple": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -406,51 +503,12 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "const": "object"
+                  "const": "array"
                 },
-                "additionalProperties": {
-                  "const": false
-                },
-                "properties": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "type": {
-                      "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Ref"
-                    },
-                    "id": {
-                      "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Ref"
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "id"
-                  ]
-                },
-                "required": {
-                  "type": "array",
-                  "minItems": 2,
-                  "maxItems": 2,
-                  "allOf": [
-                    {
-                      "contains": {
-                        "const": "type"
-                      }
-                    },
-                    {
-                      "contains": {
-                        "const": "id"
-                      }
-                    }
-                  ]
+                "items": {
+                  "$ref": "#/definitions/JsonApiModel-MultipleSchemas-TypeAndId"
                 }
-              },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties",
-                "required"
-              ]
+              }
             }
           },
           "required": [

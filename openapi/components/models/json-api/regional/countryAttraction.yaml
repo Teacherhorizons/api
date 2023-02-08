@@ -102,15 +102,17 @@ JsonApiModel_regional-countryAttraction_relationship_multiple:
   additionalProperties: false
   properties:
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "#/JsonApiModel_regional-countryAttraction_type"
-        id:
-          $ref: "#/JsonApiModel_regional-countryAttraction_id"
-      required:
-        - type
-        - id
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_regional-countryAttraction_type"
+          id:
+            $ref: "#/JsonApiModel_regional-countryAttraction_id"
+        required:
+          - type
+          - id
   required:
     - data
