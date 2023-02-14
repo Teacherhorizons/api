@@ -19,11 +19,11 @@ regional-region_slug:
 regional-region_numberOfCountries:
   type: number
   example: 47
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfCountriesWithSchools:
   type: number
   example: 36
-  description: Derived
+  description: Derived (dw)
 regional-region_locationLatitude:
   type: number
   example: 12.2755988905617
@@ -47,81 +47,81 @@ regional-region_adviceForInternationalTeachers:
 regional-region_numberOfSchools:
   type: number
   example: 75
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfIBSchools:
   type: number
   example: 45
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfLiveJobs:
   type: number
   example: 75
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfPrimaryIBCurriculumSchools:
   type: number
   example: 123
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfPrimaryUSCurriculumSchools:
   type: number
   example: 150
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfPrimaryUKCurriculumSchools:
   type: number
   example: 112
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfPrimaryInternationalCurriculumSchools:
   type: number
   example: 120
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfPrimaryOtherCurriculumSchools:
   type: number
   example: 103
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfSecondaryIBCurriculumSchools:
   type: number
   example: 125
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfSecondaryUSCurriculumSchools:
   type: number
   example: 142
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfSecondaryUKCurriculumSchools:
   type: number
   example: 140
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfSecondaryInternationalCurriculumSchools:
   type: number
   example: 110
-  description: Derived
+  description: Derived (dw)
 regional-region_numberOfSecondaryOtherCurriculumSchools:
   type: number
   example: 120
-  description: Derived
+  description: Derived (dw)
 regional-region_averageSavingPercentage:
   type: integer
   example: 30
-  description: Derived
+  description: Derived (dw)
 regional-region_percentageOfSchoolsHaveFlightAllowance:
   type: integer
   example: 67
-  description: Derived
+  description: Derived (dw)
 regional-region_percentageOfSchoolsHavePrivateHealthcareScheme:
   type: integer
   example: 86
-  description: Derived
+  description: Derived (dw)
 regional-region_percentageOfOverseasTeachers:
   type: integer
   example: 35
-  description: Derived
+  description: Derived (dw)
 regional-region_percentageOfInternationalStudents:
   type: integer
   example: 40
-  description: Derived
+  description: Derived (dw)
 regional-region_communityResponseQuestionIds:
   type: array
   items:
     type: integer
   example: [4,7,10,14]
-  description: Derived
+  description: Derived (dw)
 
 #relationship attribute
 regional-region_creationUserId:
@@ -139,7 +139,7 @@ regional-region_ambassadorTeacherId:
 regional-region_photo1Id:
   type: integer
   example: 1
-  description: Derived; Relationship to general-photo
+  description: Derived (dw); Relationship to general-photo
 
 #relationships
 regional-region_creationUser:
