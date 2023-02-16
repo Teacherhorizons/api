@@ -1,10 +1,16 @@
-#attributes
-regional-region_alias:
-  type: string
-  example: /Africa
+# Identifiers
 regional-region_name:
   type: string
   example: Africa
+  description: Identifier
+regional-region_slug:
+  type: string
+  example: africa
+  description: Identifier
+# Raw data
+regional-region_alias:
+  type: string
+  example: /Africa
 regional-region_creationDate:
   type: string
   format: date-time
@@ -13,17 +19,6 @@ regional-region_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:31Z
-regional-region_slug:
-  type: string
-  example: africa
-regional-region_numberOfCountries:
-  type: number
-  example: 47
-  description: Derived (dw)
-regional-region_numberOfCountriesWithSchools:
-  type: number
-  example: 36
-  description: Derived (dw)
 regional-region_locationLatitude:
   type: number
   example: 12.2755988905617
@@ -44,6 +39,15 @@ regional-region_qualityOfLifeDescription:
 regional-region_adviceForInternationalTeachers:
   type: string
   example: Foo bar baz
+# Derived (dw)
+regional-region_numberOfCountries:
+  type: number
+  example: 47
+  description: Derived (dw)
+regional-region_numberOfCountriesWithSchools:
+  type: number
+  example: 36
+  description: Derived (dw)
 regional-region_numberOfSchools:
   type: number
   example: 75
@@ -123,7 +127,7 @@ regional-region_communityResponseQuestionIds:
   example: [4,7,10,14]
   description: Derived (dw)
 
-#relationship attribute
+# relationship attribute
 regional-region_creationUserId:
   type: integer
   example: 1

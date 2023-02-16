@@ -21,33 +21,37 @@ SimpleModel_regional-region_admin:
       type: string
       enum:
         - admin
+    # Identifiers
     id:
       $ref: "#/SimpleModel_regional-region_id"
-    # simple Attributes
     name:
       $ref: "../../library/regional/region.yaml#/regional-region_name"
+    slug:
+      $ref: "../../library/regional/region.yaml#/regional-region_slug"
+    # Raw data
     alias:
       $ref: "../../library/regional/region.yaml#/regional-region_alias"
     creationDate:
       $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
     latestUpdateDate:
       $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
-    numberOfCountries:
-      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
-    numberOfCountriesWithSchools:
-      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
     locationLatitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
     locationLongitude:
       $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
-    teachingInRegionDescription:
-      $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
     ambassadorTestimonial:
       $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
     qualityOfLifeDescription:
       $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
     adviceForInternationalTeachers:
       $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+    # Derived (dw)
+    numberOfCountries:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
+    numberOfCountriesWithSchools:
+      $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
+    teachingInRegionDescription:
+      $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
     numberOfSchools:
       $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchools"
     numberOfIBSchools:
@@ -87,7 +91,7 @@ SimpleModel_regional-region_admin:
     communityResponseQuestionIds:
       $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
 
-    # relationship attributes
+    # relationship attributes (Derived website)
     photo1Id:
       $ref: "../../library/regional/region.yaml#/regional-region_photo1Id"
     creationUserId:
