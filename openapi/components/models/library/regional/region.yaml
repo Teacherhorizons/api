@@ -1,10 +1,12 @@
 # Identifiers
 regional-region_name:
   type: string
+  maxLength: 60
   example: Africa
   description: Identifier
 regional-region_slug:
   type: string
+  maxLength: 180
   example: africa
   description: Identifier
 regional-region_averageAnnualGrossIncome:
