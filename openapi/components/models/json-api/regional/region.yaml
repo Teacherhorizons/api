@@ -46,8 +46,6 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
         locationLongitude:
           $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
-        numberOfCountries:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountries"
         numberOfCountriesWithSchools:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
         teachingInRegionDescription:
@@ -86,6 +84,14 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
         averageSavingPercentage:
           $ref: "../../library/regional/region.yaml#/regional-region_averageSavingPercentage"
+        averageAnnualGrossIncome:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualGrossIncome"
+        averageAnnualNetIncome:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualNetIncome"
+        averageAnnualExpenditure:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualExpenditure"
+        averageAnnualSaving:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualSaving"
         percentageOfSchoolsHaveFlightAllowance:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
         percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -94,6 +100,42 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
         percentageOfInternationalStudents:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+        minGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher"
+        averageGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalaryJuniorTeacher"
+        maxGrossSalaryJuniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher"
+        minGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher"
+        averageGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalarySeniorTeacher"
+        maxGrossSalarySeniorTeacher:
+          $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalarySeniorTeacher"
+        numberOfSchoolsHaveFlightAllowance:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsHaveFlightAllowance"
+        numberOfSchoolsDoNotHaveFlightAllowance:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHaveFlightAllowance"
+        numberOfSchoolsHavePrivateHealthcareScheme:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsHavePrivateHealthcareScheme"
+        numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+        numberOfTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfTeachers"
+        numberOfOverseasTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfOverseasTeachers"
+        numberOfLocalTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLocalTeachers"
+        numberOfUnknownTeachers:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownTeachers"
+        numberOfStudents:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfStudents"
+        numberOfInternationalStudents:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfInternationalStudents"
+        numberOfLocalStudents:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLocalStudents"
+        numberOfUnknownStudents:
+          $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownStudents"
 
         # relationship attributes
         photo1:
@@ -132,6 +174,28 @@ JsonApiModel_regional-region_admin:
         - numberOfSecondaryInternationalCurriculumSchools
         - numberOfSecondaryOtherCurriculumSchools
         - averageSavingPercentage
+        - averageAnnualGrossIncome
+        - averageAnnualNetIncome
+        - averageAnnualExpenditure
+        - averageAnnualSaving
+        - minGrossSalaryJuniorTeacher
+        - averageGrossSalaryJuniorTeacher
+        - maxGrossSalaryJuniorTeacher
+        - minGrossSalarySeniorTeacher
+        - averageGrossSalarySeniorTeacher
+        - maxGrossSalarySeniorTeacher
+        - numberOfSchoolsHaveFlightAllowance
+        - numberOfSchoolsDoNotHaveFlightAllowance
+        - numberOfSchoolsHavePrivateHealthcareScheme
+        - numberOfSchoolsDoNotHavePrivateHealthcareScheme
+        - numberOfTeachers
+        - numberOfOverseasTeachers
+        - numberOfLocalTeachers
+        - numberOfUnknownTeachers
+        - numberOfStudents
+        - numberOfInternationalStudents
+        - numberOfLocalStudents
+        - numberOfUnknownStudents
         - percentageOfSchoolsHaveFlightAllowance
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers

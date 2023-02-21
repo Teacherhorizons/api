@@ -2,6 +2,7 @@
 regional-country_name:
   type: string
   example: Luanda
+  description: Identifier
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
@@ -22,6 +23,7 @@ regional-country_latestUpdateDate:
 regional-country_slug:
   type: string
   example: africa-angola-luanda
+  description: Identifier
 regional-country_locationLatitude:
   type: number
   example: -8.8383333
@@ -45,6 +47,7 @@ regional-country_teachingInCountryDescription:
 regional-country_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
+  description: Identifier
 regional-country_numberOfCitiesWithSchools:
   type: number
   example: 15
@@ -101,6 +104,22 @@ regional-country_numberOfSecondaryOtherCurriculumSchools:
   type: number
   example: 30
   description: Derived (dw)
+regional-country_numberOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 179
+  description: Identifier
+regional-country_numberOfSchoolsDoNotHaveFlightAllowance:
+  type: integer
+  example: 17
+  description: Identifier
+regional-country_numberOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 188
+  description: Identifier
+regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+  type: integer
+  example: 40
+  description: Identifier
 regional-country_averageSavingPercentage:
   type: integer
   example: 0.3
@@ -164,27 +183,45 @@ regional-country_walkingAloneAtNightSafetyIndex:
 regional-country_minGrossSalaryJuniorTeacher:
   type: number
   example: 12,000
+  description: Derived (dw)
 regional-country_averageGrossSalaryJuniorTeacher:
   type: number
   example: 28,000
+  description: Derived (dw)
 regional-country_maxGrossSalaryJuniorTeacher:
   type: number
   example: 55,000
+  description: Derived (dw)
 regional-country_minGrossSalarySeniorTeacher:
   type: number
   example: 15,000
+  description: Derived (dw)
 regional-country_averageGrossSalarySeniorTeacher:
   type: number
   example: 40,000
+  description: Derived (dw)
 regional-country_maxGrossSalarySeniorTeacher:
   type: number
   example: 85,000
+  description: Derived (dw)
 regional-country_qualityOfLifeIndex:
   type: number
   example: 163.8
 regional-country_costOfLivingIndex:
   type: number
   example: 45.3
+regional-country_averageAnnualGrossIncome:
+  type: integer
+  example: 31209
+  description: Identifier
+regional-country_averageAnnualNetIncome:
+  type: integer
+  example: 0.4
+  description: Identifier
+regional-country_averageAnnualExpenditure:
+  type: integer
+  example: 0.4
+  description: Identifier
 # numbeo - expense percentages
 regional-country_expensePercentageTransportation:
   type: number

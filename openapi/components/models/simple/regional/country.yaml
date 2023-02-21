@@ -48,6 +48,8 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTestimonial"
     teachingInCountryDescription:
       $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
+    qualityOfLifeDescription:
+      $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
     numberOfCitiesWithSchools:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
     numberOfSchools:
@@ -150,6 +152,20 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalTeachers"
     numberOfUnknownTeachers:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownTeachers"
+    averageAnnualGrossIncome:
+      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualGrossIncome"
+    averageAnnualNetIncome:
+      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualNetIncome"
+    averageAnnualExpenditure:
+      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualExpenditure"
+    numberOfSchoolsHaveFlightAllowance:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHaveFlightAllowance"
+    numberOfSchoolsDoNotHaveFlightAllowance:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHaveFlightAllowance"
+    numberOfSchoolsHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHavePrivateHealthcareScheme"
+    numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
     # relationship attributes
     countryId:
       $ref: "../../library/regional/country.yaml#/regional-country_countryId"
@@ -192,6 +208,7 @@ SimpleModel_regional-country_admin:
     - locationLongitude
     - ambassadorTestimonial
     - teachingInCountryDescription
+    - qualityOfLifeDescription
     - numberOfCitiesWithSchools
     - numberOfSchools
     - numberOfIBSchools
@@ -206,10 +223,14 @@ SimpleModel_regional-country_admin:
     - numberOfSecondaryUKCurriculumSchools
     - numberOfSecondaryInternationalCurriculumSchools
     - numberOfSecondaryOtherCurriculumSchools
+    - numberOfSchoolsHaveFlightAllowance
+    - numberOfSchoolsDoNotHaveFlightAllowance
     - averageSavingPercentage
     - averageAnnualSaving
     - percentageOfSchoolsHaveFlightAllowance
     - percentageOfSchoolsHavePrivateHealthcareScheme
+    - numberOfSchoolsHavePrivateHealthcareScheme
+    - numberOfSchoolsDoNotHavePrivateHealthcareScheme
     - percentageOfOverseasTeachers
     - percentageOfInternationalStudents
     - costOfMidRange3CourseMealFor2
@@ -243,6 +264,9 @@ SimpleModel_regional-country_admin:
     - numberOfOverseasTeachers
     - numberOfLocalTeachers
     - numberOfUnknownTeachers
+    - averageAnnualGrossIncome
+    - averageAnnualNetIncome
+    - averageAnnualExpenditure
 
 SimpleModel_regional-country_school:
   type: object
