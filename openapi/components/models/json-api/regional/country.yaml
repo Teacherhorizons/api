@@ -172,6 +172,18 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHavePrivateHealthcareScheme"
         numberOfSchoolsDoNotHavePrivateHealthcareScheme:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+        numberOfStudents:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfStudents"
+        numberOfInternationalStudents:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfInternationalStudents"
+        numberOfLocalStudents:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalStudents"
+        numberOfUnknownStudents:
+          $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownStudents"
+        importanceIndex:
+          $ref: "../../library/regional/country.yaml#/regional-country_importanceIndex"
+        importance:
+          $ref: "../../library/regional/country.yaml#/regional-country_importance"
         # relationship attributes
         localCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -181,14 +193,10 @@ JsonApiModel_regional-country_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        country:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
         region:
           $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
         capitalCity:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
-        language:
-          $ref: "../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute"
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         photo1:
@@ -199,7 +207,6 @@ JsonApiModel_regional-country_admin:
         - name
         - slug
         - alias
-        - countryId
         - creationDate
         - latestUpdateDate
         - creationUser
@@ -212,7 +219,6 @@ JsonApiModel_regional-country_admin:
         - localCurrency
         - internationalCurrency
         - capitalCity
-        - languageId
         - locationLatitude
         - locationLongitude
         - ambassadorTestimonial
@@ -277,6 +283,12 @@ JsonApiModel_regional-country_admin:
         - averageAnnualGrossIncome
         - averageAnnualNetIncome
         - averageAnnualExpenditure
+        - numberOfStudents
+        - numberOfInternationalStudents
+        - numberOfLocalStudents
+        - numberOfUnknownStudents
+        - importanceIndex
+        - importance
     relationships:
       type: object
       additionalProperties: false

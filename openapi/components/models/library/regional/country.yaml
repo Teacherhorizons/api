@@ -222,6 +222,31 @@ regional-country_averageAnnualExpenditure:
   type: integer
   example: 0.4
   description: Identifier
+regional-country_numberOfStudents:
+  type: integer
+  example: 234722
+  description: Identifier
+regional-country_numberOfInternationalStudents:
+  type: integer
+  example: 46770
+  description: Identifier
+regional-country_numberOfLocalStudents:
+  type: integer
+  example: 148605
+  description: Identifier
+regional-country_numberOfUnknownStudents:
+  type: integer
+  example: 39347
+  description: Identifier
+regional-country_importanceIndex:
+  type: integer
+  example: 6234
+  description: Identifier
+regional-country_importance:
+  type: string
+  example: H
+  description: Identifier
+  
 # numbeo - expense percentages
 regional-country_expensePercentageTransportation:
   type: number
@@ -245,11 +270,6 @@ regional-country_expensePercentageRestaurants:
   type: number
   example: 9.19999999999999
 #relationship attributes  
-regional-country_countryId:
-  type: integer
-  example: 1
-  description: Relationship to regional-country
-  #check "countryId" with RR
 regional-country_localCurrencyId:
   type: integer
   example: 1
@@ -266,10 +286,6 @@ regional-country_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-regional-country_languageId:
-  type: integer
-  example: 1
-  description: Relationship to geeneral-language
 regional-country_regionId:
   type: integer
   example: 1
@@ -304,16 +320,6 @@ regional-country_photo1Id:
   description: Derived (dw); Relationship to general-photo
 
 #relationships
-regional-country_country:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to regional-country
-  required:
-    - id
 
 regional-localCurrency:
   type: object
@@ -356,17 +362,6 @@ regional-country_latestUpdateUser:
       type: string
       example: "1"
       description: Relationship to user
-  required:
-    - id
-
-regional-country_language:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to geeneral-language
   required:
     - id
 

@@ -166,9 +166,19 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHavePrivateHealthcareScheme"
     numberOfSchoolsDoNotHavePrivateHealthcareScheme:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+    numberOfStudents:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfStudents"
+    numberOfInternationalStudents:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfInternationalStudents"
+    numberOfLocalStudents:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalStudents"
+    numberOfUnknownStudents:
+      $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownStudents"
+    importanceIndex:
+      $ref: "../../library/regional/country.yaml#/regional-country_importanceIndex"
+    importance:
+      $ref: "../../library/regional/country.yaml#/regional-country_importance"
     # relationship attributes
-    countryId:
-      $ref: "../../library/regional/country.yaml#/regional-country_countryId"
     localCurrencyId:
       $ref: "../../library/regional/country.yaml#/regional-country_localCurrencyId"
     creationUserId:
@@ -179,8 +189,6 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_regionId"
     capitalCityId:
       $ref: "../../library/regional/country.yaml#/regional-country_capitalCityId"
-    languageId:
-      $ref: "../../library/regional/country.yaml#/regional-country_languageId"
     ambassadorTeacherId:
       $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTeacherId"
     photo1Id:
@@ -192,7 +200,6 @@ SimpleModel_regional-country_admin:
     - name
     - slug
     - alias
-    - countryId
     - creationDate
     - latestUpdateDate
     - creationUserId
@@ -203,7 +210,6 @@ SimpleModel_regional-country_admin:
     - population
     - localCurrencyId
     - capitalCityId
-    - languageId
     - locationLatitude
     - locationLongitude
     - ambassadorTestimonial
@@ -267,6 +273,12 @@ SimpleModel_regional-country_admin:
     - averageAnnualGrossIncome
     - averageAnnualNetIncome
     - averageAnnualExpenditure
+    - numberOfStudents
+    - numberOfInternationalStudents
+    - numberOfLocalStudents
+    - numberOfUnknownStudents
+    - importanceIndex
+    - importance
 
 SimpleModel_regional-country_school:
   type: object
