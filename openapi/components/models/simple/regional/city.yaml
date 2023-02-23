@@ -44,6 +44,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_crimeIndex"
     ambassadorTestimonial:
       $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTestimonial"
+    teachingInCityDescription:
+      $ref: "../../library/regional/city.yaml#/regional-city_teachingInCityDescription"
     qualityOfLifeDescription:
       $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
     walkingAloneInDaylightSafetyIndex:
@@ -96,6 +98,14 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
     averageSavingPercentage:
       $ref: "../../library/regional/city.yaml#/regional-city_averageSavingPercentage"
+    averageAnnualSaving:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualSaving"
+    averageAnnualGrossIncome:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualGrossIncome"
+    averageAnnualNetIncome:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualNetIncome"
+    averageAnnualExpenditure:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualExpenditure"
     percentageOfSchoolsHaveFlightAllowance:
       $ref: "../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
     percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -122,6 +132,42 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
     monthlyRent1BedroomApartmentOutsideCityCentre:
       $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
+    minGrossSalaryJuniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher"
+    averageGrossSalaryJuniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher"
+    maxGrossSalaryJuniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher"
+    minGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher"
+    averageGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher"
+    maxGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher"
+    numberOfSchoolsHaveFlightAllowance:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance"
+    numberOfSchoolsDoNotHaveFlightAllowance:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHaveFlightAllowance"
+    numberOfSchoolsHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsHavePrivateHealthcareScheme"
+    numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+    numberOfTeachers:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfTeachers"
+    numberOfOverseasTeachers:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfOverseasTeachers"
+    numberOfLocalTeachers:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLocalTeachers"
+    numberOfUnknownTeachers:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfUnknownTeachers"
+    numberOfStudents:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfStudents"
+    numberOfInternationalStudents:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfInternationalStudents"
+    numberOfLocalStudents:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLocalStudents"
+    numberOfUnknownStudents:
+      $ref: "../../library/regional/city.yaml#/regional-city_numberOfUnknownStudents"
     # relationship attributes
     countryId:
       $ref: "../../library/regional/city.yaml#/regional-city_countryId"
@@ -156,6 +202,7 @@ SimpleModel_regional-city_admin:
     - photo1Id
     - crimeIndex
     - ambassadorTestimonial
+    - teachingInCityDescription
     - qualityOfLifeDescription
     - walkingAloneInDaylightSafetyIndex
     - walkingAloneAtNightSafetyIndex
@@ -182,6 +229,10 @@ SimpleModel_regional-city_admin:
     - numberOfSecondaryInternationalCurriculumSchools
     - numberOfSecondaryOtherCurriculumSchools
     - averageSavingPercentage
+    - averageAnnualGrossIncome
+    - averageAnnualNetIncome
+    - averageAnnualExpenditure
+    - averageAnnualSaving
     - percentageOfSchoolsHaveFlightAllowance
     - percentageOfSchoolsHavePrivateHealthcareScheme
     - percentageOfOverseasTeachers
@@ -196,6 +247,24 @@ SimpleModel_regional-city_admin:
     - monthlyRent1BedroomApartmentCityCentre
     - monthlyRent1BedroomApartmentOutsideCityCentre
     - nearestWeatherStationId
+    - minGrossSalaryJuniorTeacher
+    - averageGrossSalaryJuniorTeacher
+    - maxGrossSalaryJuniorTeacher
+    - minGrossSalarySeniorTeacher
+    - averageGrossSalarySeniorTeacher
+    - maxGrossSalarySeniorTeacher
+    - numberOfSchoolsHaveFlightAllowance
+    - numberOfSchoolsDoNotHaveFlightAllowance
+    - numberOfSchoolsHavePrivateHealthcareScheme
+    - numberOfSchoolsDoNotHavePrivateHealthcareScheme
+    - numberOfTeachers
+    - numberOfOverseasTeachers
+    - numberOfLocalTeachers
+    - numberOfUnknownTeachers
+    - numberOfStudents
+    - numberOfInternationalStudents
+    - numberOfLocalStudents
+    - numberOfUnknownStudents
 
 SimpleModel_regional-city_school:
   type: object
