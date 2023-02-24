@@ -3,9 +3,11 @@ regional-city_name:
   type: string
   example: Luanda
   description: Identifier
+  maxLength: 250
 regional-city_alias:
   type: string
   example: /Africa/Angola/Luanda
+  maxLength: 250
 regional-city_photo1Url:
   type: string
   example: /foo/bar/baz.jpeg
@@ -24,6 +26,7 @@ regional-city_slug:
   type: string
   example: africa-angola-luanda
   description: Identifier
+  maxLength: 180
 regional-city_locationLatitude:
   type: number
   example: -8.8383333
@@ -48,36 +51,37 @@ regional-city_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
   description: Derived (dw)
+  maxLength: 2000
 regional-city_numberOfSchools:
-  type: number
+  type: integer
   example: 75
   description: Derived (dw)
 regional-city_numberOfIBSchools:
-  type: number
+  type: integer
   example: 45
   description: Derived (dw)
 regional-city_numberOfLiveJobs:
-  type: number
+  type: integer
   example: 75
   description: Derived (dw)
 regional-city_numberOfPrimaryIBCurriculumSchools:
-  type: number
+  type: integer
   example: 34
   description: Derived (dw)
 regional-city_numberOfPrimaryUSCurriculumSchools:
-  type: number
+  type: integer
   example: 54
   description: Derived (dw)
 regional-city_numberOfPrimaryUKCurriculumSchools:
-  type: number
+  type: integer
   example: 35
   description: Derived (dw)
 regional-city_numberOfPrimaryInternationalCurriculumSchools:
-  type: number
+  type: integer
   example: 70
   description: Derived (dw)
 regional-city_numberOfPrimaryOtherCurriculumSchools:
-  type: number
+  type: integer
   example: 30
   description: Derived (dw)
 regional-city_numberOfSecondaryIBCurriculumSchools:
@@ -85,19 +89,19 @@ regional-city_numberOfSecondaryIBCurriculumSchools:
   example: 34
   description: Derived (dw)
 regional-city_numberOfSecondaryUSCurriculumSchools:
-  type: number
+  type: integer
   example: 54
   description: Derived (dw)
 regional-city_numberOfSecondaryUKCurriculumSchools:
-  type: number
+  type: integer
   example: 35
   description: Derived (dw)
 regional-city_numberOfSecondaryInternationalCurriculumSchools:
-  type: number
+  type: integer
   example: 70
   description: Derived (dw)
 regional-city_numberOfSecondaryOtherCurriculumSchools:
-  type: number
+  type: integer
   example: 30
   description: Derived (dw)
 regional-city_averageSavingPercentage:
@@ -268,6 +272,18 @@ regional-city_numberOfLocalStudents:
 regional-city_numberOfUnknownStudents:
   type: integer
   example: 39347
+  description: Derived (dw)
+regional-city_uniqueName:
+  type: string
+  example: Victoria (Seychelles)
+  description: Identifier
+regional-city_importanceIndex:
+  type: integer
+  example: 6234
+  description: Identifier
+regional-city_importance:
+  type: string
+  example: H
   description: Identifier
 
 # Relationship attributes

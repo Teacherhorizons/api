@@ -5,71 +5,73 @@ regional-world_photo1:
 regional-world_teachingInWorldDescription:
   type: string
   example: foo bar baz qux
+  maxLength: 1000
 regional-world_numberOfCountriesWithSchools:
-  type: number
+  type: integer
   example: 45
   description: Derived (dw)
 regional-world_numberOfCitiesWithSchools:
-  type: number
+  type: integer
   example: 45
   description: Derived (dw)
 regional-world_numberOfSchools:
-  type: number
+  type: integer
   example: 75
   description: Derived (dw)
 regional-world_numberOfIBSchools:
-  type: number
+  type: integer
   example: 75
   description: Derived (dw)
 regional-world_numberOfLiveJobs:
-  type: number
+  type: integer
   example: 75
   description: Derived (dw)
 regional-world_numberOfPrimaryIBCurriculumSchools:
-  type: number
+  type: integer
   example: 342
   description: Derived (dw)
 regional-world_numberOfPrimaryUSCurriculumSchools:
-  type: number
+  type: integer
   example: 910
   description: Derived (dw)
 regional-world_numberOfPrimaryUKCurriculumSchools:
-  type: number
+  type: integer
   example: 229
   description: Derived (dw)
 regional-world_numberOfPrimaryInternationalCurriculumSchools:
-  type: number
+  type: integer
   example: 396
   description: Derived (dw)
 regional-world_numberOfPrimaryOtherCurriculumSchools:
-  type: number
+  type: integer
   example: 613
   description: Derived (dw)
 regional-world_numberOfSecondaryIBCurriculumSchools:
-  type: number
+  type: integer
   example: 228
   description: Derived (dw)
 regional-world_numberOfSecondaryUSCurriculumSchools:
-  type: number
+  type: integer
   example: 476
   description: Derived (dw)
 regional-world_numberOfSecondaryUKCurriculumSchools:
-  type: number
+  type: integer
   example: 663
   description: Derived (dw)
 regional-world_numberOfSecondaryInternationalCurriculumSchools:
-  type: number
+  type: integer
   example: 609
   description: Derived (dw)
 regional-world_numberOfSecondaryOtherCurriculumSchools:
-  type: number
+  type: integer
   example: 536
   description: Derived (dw)
 regional-world_qualityOfLifeDescription:
   type: string
   example: Foo bar qux
+  maxLength: 2000
 regional-world_averageSavingPercentage:
-  type: number
+  type: integer
   example: 30
 regional-world_percentageOfSchoolsHaveFlightAllowance:
   type: integer
@@ -80,12 +82,78 @@ regional-world_percentageOfSchoolsHavePrivateHealthcareScheme:
 regional-world_adviceForInternationalTeachers:
   type: string
   example: Foo bar baz
+  maxLength: 2000
 regional-world_percentageOfOverseasTeachers:
   type: integer
   example: 70
 regional-world_percentageOfInternationalStudents:
   type: integer
   example: 40
+regional-world_numberOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 203
+  description: Identifier
+regional-world_numberOfSchoolsDoNotHaveFlightAllowance:
+  type: integer
+  example: 2
+  description: Identifier
+regional-world_numberOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 194
+  description: Identifier
+regional-world_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+  type: integer
+  example: 20
+  description: Identifier
+regional-world_averageAnnualSaving:
+  type: integer
+  example: 10,000
+  description: Derived (dw)
+regional-world_averageAnnualGrossIncome:
+  type: integer
+  example: 50247
+  description: Identifier
+regional-world_averageAnnualNetIncome:
+  type: integer
+  example: 40878
+  description: Identifier
+regional-world_averageAnnualExpenditure:
+  type: integer
+  example: 21203
+  description: Identifier
+regional-world_numberOfStudents:
+  type: integer
+  example: 234722
+  description: Identifier
+regional-world_numberOfInternationalStudents:
+  type: integer
+  example: 46770
+  description: Identifier
+regional-world_numberOfLocalStudents:
+  type: integer
+  example: 148605
+  description: Identifier
+regional-world_numberOfUnknownStudents:
+  type: integer
+  example: 39347
+  description: Identifier
+regional-world_numberOfTeachers:
+  type: integer
+  example: 1345
+  description: Derived (dw)
+regional-world_numberOfOverseasTeachers:
+  type: integer
+  example: 726
+  description: Derived (dw)
+regional-world_numberOfLocalTeachers:
+  type: integer
+  example: 566
+  description: Derived (dw)
+regional-world_numberOfUnknownTeachers:
+  type: integer
+  example: 53
+  description: Derived (dw)
+
 
 #relationship attribute
 regional-world_photo1Id:

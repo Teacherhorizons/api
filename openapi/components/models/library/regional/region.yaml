@@ -101,6 +101,7 @@ regional-region_numberOfUnknownStudents:
 regional-region_alias:
   type: string
   example: /Africa
+  maxLength: 60
 regional-region_creationDate:
   type: string
   format: date-time
@@ -120,15 +121,18 @@ regional-region_locationLongitude:
 regional-region_teachingInRegionDescription:
   type: string
   example: Foo bar baz
+  maxLength: 1000
 regional-region_ambassadorTestimonial:
   type: string
   example: Foo bar baz
 regional-region_qualityOfLifeDescription:
   type: string
   example: Foo bar baz
+  maxLength: 2000
 regional-region_adviceForInternationalTeachers:
   type: string
   example: Foo bar baz
+  maxLength: 2000
 # Derived (dw)
 regional-region_numberOfCountriesWithSchools:
   type: integer

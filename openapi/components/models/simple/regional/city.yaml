@@ -168,6 +168,12 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_numberOfLocalStudents"
     numberOfUnknownStudents:
       $ref: "../../library/regional/city.yaml#/regional-city_numberOfUnknownStudents"
+    uniqueName:
+      $ref: "../../library/regional/city.yaml#/regional-city_uniqueName"
+    importanceIndex:
+      $ref: "../../library/regional/city.yaml#/regional-city_importanceIndex"
+    importance:
+      $ref: "../../library/regional/city.yaml#/regional-city_importance"
     # relationship attributes
     countryId:
       $ref: "../../library/regional/city.yaml#/regional-city_countryId"
@@ -265,6 +271,9 @@ SimpleModel_regional-city_admin:
     - numberOfInternationalStudents
     - numberOfLocalStudents
     - numberOfUnknownStudents
+    - uniqueName
+    - importanceIndex
+    - importance
 
 SimpleModel_regional-city_school:
   type: object

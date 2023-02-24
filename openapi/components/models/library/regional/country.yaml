@@ -3,9 +3,11 @@ regional-country_name:
   type: string
   example: Luanda
   description: Identifier
+  maxLength: 250
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
+  maxLength: 250
 regional-country_photo1Url:
   type: string
   example: /foo/bar/baz.jpeg
@@ -24,6 +26,7 @@ regional-country_slug:
   type: string
   example: africa-angola-luanda
   description: Identifier
+  maxLength: 180
 regional-country_locationLatitude:
   type: number
   example: -8.8383333
@@ -35,15 +38,18 @@ regional-country_locationLongitude:
 regional-country_isoCode:
   type: string
   example: al
+  maxLength: 2
 regional-country_phoneCode:
   type: string
   example: 355
+  maxLength: 4
 regional-country_ambassadorTestimonial:
   type: string
   example: Lorem ipsum
 regional-country_teachingInCountryDescription:
   type: string
   example: Fooo barrr abc
+  maxLength: 1000
 regional-country_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
@@ -246,6 +252,22 @@ regional-country_importance:
   type: string
   example: H
   description: Identifier
+regional-country_numberOfTeachers:
+  type: integer
+  example: 1345
+  description: Derived (dw)
+regional-country_numberOfOverseasTeachers:
+  type: integer
+  example: 726
+  description: Derived (dw)
+regional-country_numberOfLocalTeachers:
+  type: integer
+  example: 566
+  description: Derived (dw)
+regional-country_numberOfUnknownTeachers:
+  type: integer
+  example: 53
+  description: Derived (dw)
 
 # numbeo - expense percentages
 regional-country_expensePercentageTransportation:
@@ -298,22 +320,6 @@ regional-country_ambassadorTeacherId:
   type: integer
   example: 1
   description: Relationship to teacher
-regional-country_numberOfTeachers:
-  type: integer
-  example: 1345
-  description: Derived (dw)
-regional-country_numberOfOverseasTeachers:
-  type: integer
-  example: 726
-  description: Derived (dw)
-regional-country_numberOfLocalTeachers:
-  type: integer
-  example: 566
-  description: Derived (dw)
-regional-country_numberOfUnknownTeachers:
-  type: integer
-  example: 53
-  description: Derived (dw)
 regional-country_photo1Id:
   type: integer
   example: 1

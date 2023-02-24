@@ -51,6 +51,38 @@ SimpleModel_regional-world:
         $ref: "../../library/regional/world.yaml#/regional-world_percentageOfOverseasTeachers"
     percentageOfInternationalStudents:
         $ref: "../../library/regional/world.yaml#/regional-world_percentageOfInternationalStudents"
+    numberOfTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfTeachers"
+    numberOfOverseasTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfOverseasTeachers"
+    numberOfLocalTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfLocalTeachers"
+    numberOfUnknownTeachers:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfUnknownTeachers"
+    averageAnnualSaving:
+        $ref: "../../library/regional/world.yaml#/regional-world_averageAnnualSaving"
+    averageAnnualGrossIncome:
+        $ref: "../../library/regional/world.yaml#/regional-world_averageAnnualGrossIncome"
+    averageAnnualNetIncome:
+        $ref: "../../library/regional/world.yaml#/regional-world_averageAnnualNetIncome"
+    averageAnnualExpenditure:
+        $ref: "../../library/regional/world.yaml#/regional-world_averageAnnualExpenditure"
+    numberOfSchoolsHavePrivateHealthcareScheme:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchoolsHavePrivateHealthcareScheme"
+    numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+    numberOfStudents:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfStudents"
+    numberOfInternationalStudents:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfInternationalStudents"
+    numberOfLocalStudents:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfLocalStudents"
+    numberOfUnknownStudents:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfUnknownStudents"
+    numberOfSchoolsHaveFlightAllowance:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchoolsHaveFlightAllowance"
+    numberOfSchoolsDoNotHaveFlightAllowance:
+        $ref: "../../library/regional/world.yaml#/regional-world_numberOfSchoolsDoNotHaveFlightAllowance"
     # relationship attributes
     photo1Id:
         $ref: "../../library/regional/world.yaml#/regional-world_photo1Id"
@@ -81,6 +113,22 @@ SimpleModel_regional-world:
     - percentageOfOverseasTeachers
     - percentageOfInternationalStudents
     - photo1Id
+    - numberOfSchoolsHaveFlightAllowance
+    - numberOfSchoolsDoNotHaveFlightAllowance
+    - numberOfSchoolsHavePrivateHealthcareScheme
+    - numberOfSchoolsDoNotHavePrivateHealthcareScheme
+    - numberOfTeachers
+    - numberOfOverseasTeachers
+    - numberOfLocalTeachers
+    - numberOfUnknownTeachers
+    - averageAnnualSaving
+    - averageAnnualGrossIncome
+    - averageAnnualNetIncome
+    - averageAnnualExpenditure
+    - numberOfStudents
+    - numberOfInternationalStudents
+    - numberOfLocalStudents
+    - numberOfUnknownStudents
 
 # shared
 SimpleModel_regional-world_id:
