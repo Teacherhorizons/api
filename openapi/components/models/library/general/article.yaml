@@ -2,18 +2,23 @@
 general-article_title:
   type: string
   example: Culture & community
+  maxLength: 100
 general-article_snippet:
   type: string
   example: Foo bar baz
+  maxLength: 255
 general-article_url:
   type: string
   example: /foo/bar/baz.jpeg
+  maxLength: 255
 general-article_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 general-article_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 
 #Relationship attributes
 general-article_photoId:
@@ -22,11 +27,11 @@ general-article_photoId:
   description: Relationship to general-photo
 general-article_creationUserId:
   type: integer
-  example: 21
+  example: 1
   description: Relationship to user
 general-article_latestUpdateUserId:
   type: integer
-  example: 24
+  example: 1
   description: Relationship to user
 
 # relationships

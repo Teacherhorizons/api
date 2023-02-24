@@ -8,9 +8,11 @@ regional-cityAttraction_iconName:
 regional-cityAttraction_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 regional-cityAttraction_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 
 #Relationship attributes
 regional-cityAttraction_cityId:
@@ -39,7 +41,7 @@ regional-cityAttraction_city:
     id:
       type: string
       example: "1"
-      description: Relationship to City
+      description: Relationship to regional-city
   required:
     - id
 

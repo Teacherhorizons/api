@@ -9,11 +9,12 @@ regional-cityMonthNumber_averageMaxTemperatureInDegreesC:
   type: number
   example: 19.7
 regional-cityMonthNumber_averageRainfallInMM:
-  type: integer
+  type: number
   example: 123
 regional-cityMonthNumber_notes:
   type: string
   example: Foo bar
+  maxLength: 255
 
 #Relationship attributes
 regional-cityMonthNumber_cityId:

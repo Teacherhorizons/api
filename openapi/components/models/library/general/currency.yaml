@@ -2,12 +2,15 @@
 general-currency_code:
   type: string
   example: GBP
+  maxLength: 3
 general-currency_symbol:
   type: string
   example: "£"
+  maxLength: 10
 general-currency_name:
   type: string
   example: Great Britain Pound
+  maxLength: 50
 general-currency_creationDate:
   type: string
   format: date-time

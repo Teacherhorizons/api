@@ -3,20 +3,25 @@ regional-worldArticle_title:
   type: string
   example: Foo bar baz
   description: Derived (dw)
+  maxLength: 100
 regional-worldArticle_snippet:
   type: string
   example: Foo bar baz
   description: Derived (dw)
+  maxLength: 255
 regional-worldArticle_url:
   type: string
   example: /foo/bar/baz.html
   description: Derived (dw)
+  maxLength: 255
 regional-worldArticle_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 regional-worldArticle_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  format: date-time
 
 #Relationship attributes
 regional-worldArticle_categoryId:

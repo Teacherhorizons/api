@@ -3,22 +3,27 @@ general-manualEmailTemplate_to:
   type: string
   nullable: true
   example: ${teacher.email}
+  maxLength: 100
 general-manualEmailTemplate_cc:
   type: string
   nullable: true
   example: ""
+  maxLength: 100
 general-manualEmailTemplate_bcc:
   type: string
   nullable: true
   example: ""
+  maxLength: 100
 general-manualEmailTemplate_subject:
   type: string
   nullable: true
   example: Your application to ${job.school.name} in ${job.school.city.country.name}
+  maxLength: 255
 general-manualEmailTemplate_body:
   type: string
   nullable: true
   example: ""
+  maxLength: 10000
 general-manualEmailTemplate_isVisibleToAdmin:
   type: boolean
   example: true
