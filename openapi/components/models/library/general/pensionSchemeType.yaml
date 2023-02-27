@@ -2,6 +2,7 @@
 general-pensionSchemeType_name:
   type: string
   example: Secondary Subject Teacher
+  maxLength: 250
 
 general-pensionSchemeType_creationDate:
   type: string
@@ -9,7 +10,7 @@ general-pensionSchemeType_creationDate:
   example: 2011-02-07T15:53:34Z
 
 general-pensionSchemeType_latestUpdateDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
@@ -17,12 +18,12 @@ general-pensionSchemeType_latestUpdateDate:
 general-pensionSchemeType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-pensionSchemeType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 general-pensionSchemeType_creationUser:
@@ -32,7 +33,7 @@ general-pensionSchemeType_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required:
     - id
 
@@ -43,7 +44,7 @@ general-pensionSchemeType_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required:
     - id
 

@@ -1,4 +1,8 @@
 # attributes
+job_title:
+  type: string
+  example: Foo bar
+  maxLength: 100
 job_startDate:
   type: string
   format: date
@@ -18,9 +22,6 @@ job_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-job_title:
-  type: string
-  example: foo
 job_advertExpiryDate:
   type: string
   format: date-time
@@ -60,11 +61,11 @@ job_latestUpdateUserId:
 job_thOwnerUserId:
   type: integer
   example: 1
-  description: Relationship to Adviser
+  description: Relationship to user
 job_statusId:
   type: integer
   example: 1
-  description: Relationship to JobStatus
+  description: Relationship to job-status
 
 # relationships
 job_subject:
@@ -85,7 +86,7 @@ job_type:
     id:
       type: string
       example: "1"
-      description: ..
+      description: Relationship to job-type
   required: 
     - id
 
@@ -140,7 +141,7 @@ job_thOwnerUser:
     id:
       type: string
       example: "1"
-      description: Relationship to Adviser
+      description: Relationship to user
   required: 
     - id
 
@@ -151,6 +152,6 @@ job_status:
     id:
       type: string
       example: "1"
-      description: Relationship to JobStatus
+      description: Relationship to job-status
   required: 
     - id
