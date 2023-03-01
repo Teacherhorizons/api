@@ -1,102 +1,14 @@
-# Identifiers
+# Main
 regional-region_name:
   type: string
   maxLength: 60
   example: Africa
-  description: Identifier
+  description: Main
 regional-region_slug:
   type: string
   maxLength: 180
   example: africa
-  description: Identifier
-regional-region_averageAnnualGrossIncome:
-  type: integer
-  example: 31209
-  description: Identifier
-regional-region_averageAnnualNetIncome:
-  type: integer
-  example: 26344
-  description: Identifier
-regional-region_averageAnnualExpenditure:
-  type: integer
-  example: 16054
-  description: Identifier
-regional-region_averageAnnualSaving:
-  type: integer
-  example: 11735
-  description: Identifier
-regional-region_minGrossSalaryJuniorTeacher:
-  type: integer
-  example: 10000
-  description: Identifier
-regional-region_averageGrossSalaryJuniorTeacher:
-  type: integer
-  example: 23427
-  description: Identifier
-regional-region_maxGrossSalaryJuniorTeacher:
-  type: integer
-  example: 55000
-  description: Identifier
-regional-region_minGrossSalarySeniorTeacher:
-  type: integer
-  example: 10000
-  description: Identifier
-regional-region_averageGrossSalarySeniorTeacher:
-  type: integer
-  example: 33462
-  description: Identifier
-regional-region_maxGrossSalarySeniorTeacher:
-  type: integer
-  example: 87734
-  description: Identifier
-regional-region_numberOfSchoolsHaveFlightAllowance:
-  type: integer
-  example: 179
-  description: Identifier
-regional-region_numberOfSchoolsDoNotHaveFlightAllowance:
-  type: integer
-  example: 17
-  description: Identifier
-regional-region_numberOfSchoolsHavePrivateHealthcareScheme:
-  type: integer
-  example: 188
-  description: Identifier
-regional-region_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
-  type: integer
-  example: 40
-  description: Identifier
-regional-region_numberOfTeachers:
-  type: integer
-  example: 25796
-  description: Identifier
-regional-region_numberOfOverseasTeachers:
-  type: integer
-  example: 6552
-  description: Identifier
-regional-region_numberOfLocalTeachers:
-  type: integer
-  example: 7074
-  description: Identifier
-regional-region_numberOfUnknownTeachers:
-  type: integer
-  example: 12170
-  description: Identifier
-regional-region_numberOfStudents:
-  type: integer
-  example: 234722
-  description: Identifier
-regional-region_numberOfInternationalStudents:
-  type: integer
-  example: 46770
-  description: Identifier
-regional-region_numberOfLocalStudents:
-  type: integer
-  example: 148605
-  description: Identifier
-regional-region_numberOfUnknownStudents:
-  type: integer
-  example: 39347
-  description: Identifier
+  description: Main
 # Raw data
 regional-region_alias:
   type: string
@@ -134,6 +46,94 @@ regional-region_adviceForInternationalTeachers:
   example: Foo bar baz
   maxLength: 2000
 # Derived (dw)
+regional-region_averageAnnualGrossIncome:
+  type: integer
+  example: 31209
+  description: Derived (dw)
+regional-region_averageAnnualNetIncome:
+  type: integer
+  example: 26344
+  description: Derived (dw)
+regional-region_averageAnnualExpenditure:
+  type: integer
+  example: 16054
+  description: Derived (dw)
+regional-region_averageAnnualSaving:
+  type: integer
+  example: 11735
+  description: Derived (dw)
+regional-region_minGrossSalaryJuniorTeacher:
+  type: integer
+  example: 10000
+  description: Derived (dw)
+regional-region_averageGrossSalaryJuniorTeacher:
+  type: integer
+  example: 23427
+  description: Derived (dw)
+regional-region_maxGrossSalaryJuniorTeacher:
+  type: integer
+  example: 55000
+  description: Derived (dw)
+regional-region_minGrossSalarySeniorTeacher:
+  type: integer
+  example: 10000
+  description: Derived (dw)
+regional-region_averageGrossSalarySeniorTeacher:
+  type: integer
+  example: 33462
+  description: Derived (dw)
+regional-region_maxGrossSalarySeniorTeacher:
+  type: integer
+  example: 87734
+  description: Derived (dw)
+regional-region_numberOfSchoolsHaveFlightAllowance:
+  type: integer
+  example: 179
+  description: Derived (dw)
+regional-region_numberOfSchoolsDoNotHaveFlightAllowance:
+  type: integer
+  example: 17
+  description: Derived (dw)
+regional-region_numberOfSchoolsHavePrivateHealthcareScheme:
+  type: integer
+  example: 188
+  description: Derived (dw)
+regional-region_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
+  type: integer
+  example: 40
+  description: Derived (dw)
+regional-region_numberOfTeachers:
+  type: integer
+  example: 25796
+  description: Derived (dw)
+regional-region_numberOfOverseasTeachers:
+  type: integer
+  example: 6552
+  description: Derived (dw)
+regional-region_numberOfLocalTeachers:
+  type: integer
+  example: 7074
+  description: Derived (dw)
+regional-region_numberOfUnknownTeachers:
+  type: integer
+  example: 12170
+  description: Derived (dw)
+regional-region_numberOfStudents:
+  type: integer
+  example: 234722
+  description: Derived (dw)
+regional-region_numberOfInternationalStudents:
+  type: integer
+  example: 46770
+  description: Derived (dw)
+regional-region_numberOfLocalStudents:
+  type: integer
+  example: 148605
+  description: Derived (dw)
+regional-region_numberOfUnknownStudents:
+  type: integer
+  example: 39347
+  description: Derived (dw)
 regional-region_numberOfCountriesWithSchools:
   type: integer
   example: 36
