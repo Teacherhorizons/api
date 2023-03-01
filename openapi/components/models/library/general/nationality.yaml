@@ -2,6 +2,7 @@
 general-nationality_name:
   type: string
   example: American
+  maxLength: 45
 general-nationality_parent:
   type: string
   example: test
@@ -9,11 +10,11 @@ general-nationality_flag:
   type: string
   example: us
 general-nationality_creationDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 general-nationality_latestUpdateDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
@@ -21,7 +22,7 @@ general-nationality_latestUpdateDate:
 general-nationality_nationalityGroupId:
   type: integer
   example: 1
-  description: Relationship to Nationality
+  description: Relationship to general-nationality
 general-nationality_creationUserId:
   type: integer
   example: 1
@@ -39,7 +40,9 @@ general-nationality_nationalityGroup:
     id:
       type: string
       example: "1"
-      description: Relationship to Nationality
+      description: Relationship to general-nationalityGroup
+  required: 
+    - id  
 general-nationality_creationUser:
   type: object
   additionalProperties: false

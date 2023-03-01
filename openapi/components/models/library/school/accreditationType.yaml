@@ -2,6 +2,7 @@
 school-accreditationType_name:
   type: string
   example: CIS
+  maxLength: 45
 school-accreditationType_creationDate:
   type: string
   format: date-time
@@ -13,6 +14,7 @@ school-accreditationType_latestUpdateDate:
 school-accreditationType_url:
   type: string
   example: https://www.cois.org/
+  maxLength: 250
 
 # relationship attributes
 school-accreditationType_creationUserId:

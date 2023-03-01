@@ -2,6 +2,7 @@
 school-communityQuestion_questionText:
   type: string
   example: What's a typical day like at {{school.acronym}}?
+  maxLength: 255
 
 school-communityQuestion_isActive:
   type: integer
@@ -10,8 +11,10 @@ school-communityQuestion_isActive:
 school-communityQuestion_shortText:
   type: string
   example: Typical day
+  maxLength: 50
 
 school-communityQuestion_iconName:
   type: string
   example: fas:clipboard-list
+  maxLength: 50
 

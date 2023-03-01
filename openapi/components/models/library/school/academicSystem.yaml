@@ -1,80 +1,8 @@
-# school-academicSystem_metaProperties_shared:
-#   properties:
-#     creationDate:
-#       type: string
-#       format: date-time
-#       example: 2011-02-07T15:53:34Z
-#     latestUpdateDate:
-#       type: string
-#       format: date-time
-#       example: 2011-02-07T15:53:34Z
-
-# # attributes
-# school-academicSystem_attributes:
-#   allOf:
-#     - $ref: "#/school-academicSystem_properties_name"
-#     - $ref: "#/school-academicSystem_properties_creationDate"
-#     - $ref: "#/school-academicSystem_properties_latestUpdateDate"
-
-# # relationshipIds
-# school-academicSystem_relationshipIds:
-#   allOf:
-#     - $ref: "#/school-academicSystem_properties_creationUserId"
-#     - $ref: "#/school-academicSystem_properties_latestUpdateUserId"
-
-# # attribute relationships
-
-# # relationships
-# school-academicSystem_relationships:
-#   allOf:
-#     - $ref: "#/school-academicSystem_properties_creationUser"
-#     - $ref: "#/school-academicSystem_properties_latestUpdateUser"
-
-# #properties
-# school-academicSystem_properties_id:
-#   properties:
-#     id:
-#       $ref: "#/school-academicSystem_id"
-
-# school-academicSystem_properties_name:
-#   properties:
-#     name:
-#       $ref: "#/school-academicSystem_name"
-
-# school-academicSystem_properties_creationDate:
-#   properties:
-#     creationDate:
-#       $ref: "#/school-academicSystem_creationDate"
-
-# school-academicSystem_properties_latestUpdateDate:
-#   properties:
-#     latestUpdateDate:
-#       $ref: "#/school-academicSystem_latestUpdateDate"
-
-# school-academicSystem_properties_creationUserId:
-#   properties:
-#     creationUserId:
-#       $ref: "#/school-academicSystem_creationUserId"
-
-# school-academicSystem_properties_latestUpdateUserId:
-#   properties:
-#     latestUpdateUserId:
-#       $ref: "#/school-academicSystem_latestUpdateUserId"
-
-# school-academicSystem_properties_creationUser:
-#   properties:
-#     creationUser:
-#       $ref: "#/school-academicSystem_creationUser"
-
-# school-academicSystem_properties_latestUpdateUser:
-#   properties:
-#     latestUpdateUser:
-#       $ref: "#/school-academicSystem_latestUpdateUser"
-
 #attributes
 school-academicSystem_name:
   type: string
   example: Secondary Subject Teacher
+  maxLength: 250
 
 school-academicSystem_creationDate:
   type: string
@@ -90,12 +18,12 @@ school-academicSystem_latestUpdateDate:
 school-academicSystem_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-academicSystem_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 # relationships
 school-academicSystem_creationUser:
@@ -105,7 +33,7 @@ school-academicSystem_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -116,7 +44,7 @@ school-academicSystem_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

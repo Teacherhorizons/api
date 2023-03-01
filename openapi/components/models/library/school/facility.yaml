@@ -2,6 +2,7 @@
 school-facility_name:
   type: string
   example: Outdoor Pitches
+  maxLength: 250
 
 school-facility_creationDate:
   type: string
@@ -9,7 +10,7 @@ school-facility_creationDate:
   example: 2011-02-07T15:53:34Z
 
 school-facility_latestUpdateDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
@@ -17,12 +18,12 @@ school-facility_latestUpdateDate:
 school-facility_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-facility_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-facility_creationUser:
@@ -32,7 +33,7 @@ school-facility_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -43,7 +44,7 @@ school-facility_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

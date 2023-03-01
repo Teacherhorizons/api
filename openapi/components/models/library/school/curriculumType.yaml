@@ -2,6 +2,7 @@
 school-curriculumType_name:
   type: string
   example: International Baccalaureate (DP)
+  maxLength: 250
 
 school-curriculumType_creationDate:
   type: string
@@ -9,7 +10,7 @@ school-curriculumType_creationDate:
   example: 2011-02-07T15:53:34Z
 
 school-curriculumType_latestUpdateDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
@@ -18,12 +19,12 @@ school-curriculumType_latestUpdateDate:
 school-curriculumType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-curriculumType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
     
@@ -34,7 +35,7 @@ school-curriculumType_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -45,7 +46,7 @@ school-curriculumType_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

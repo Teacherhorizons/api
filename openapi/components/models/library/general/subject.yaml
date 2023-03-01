@@ -2,6 +2,7 @@
 general-subject_name:
   type: string
   example: Secondary Subject Teacher
+  maxLength: 250
 
 general-subject_creationDate:
   type: string
@@ -17,17 +18,17 @@ general-subject_latestUpdateDate:
 general-subject_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-subject_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-subject_subjectGroupId:
   type: integer
   example: 1
-  description: Relationship to Group
+  description: Relationship to general-subjectGroup
 
 #relationships
 general-subject_creationUser:
@@ -37,7 +38,7 @@ general-subject_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -48,7 +49,7 @@ general-subject_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -59,7 +60,7 @@ general-subject_subjectGroup:
     id:
       type: string
       example: "1"
-      description: Relationship to Group
+      description: Relationship to general-subjectGroup
   required: 
     - id
   

@@ -2,6 +2,7 @@
 general-religion_name:
   type: string
   example: Secondary Subject Teacher
+  maxLength: 45
 
 general-religion_creationDate:
   type: string
@@ -9,7 +10,7 @@ general-religion_creationDate:
   example: 2011-02-07T15:53:34Z
 
 general-religion_latestUpdateDate:
-  type: integer
+  type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
@@ -32,7 +33,7 @@ general-religion_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required:
   - id
 
@@ -43,7 +44,7 @@ general-religion_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required:
   - id
 

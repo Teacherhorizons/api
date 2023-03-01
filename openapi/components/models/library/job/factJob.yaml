@@ -28,6 +28,7 @@ job-factJob_advertExpiryDate:
 job-factJob_excludeFromjob-factJobSearch:
   type: integer
   example: ""
+  #check with RR if the above attribute is correct?
 
 # relationship attributes
 job-factJob_subjectId:
@@ -134,7 +135,7 @@ job-factJob_thOwnerUser:
     id:
       type: string
       example: "1"
-      description: Relationship to Adviser
+      description: Relationship to user
   required: 
     - id
   

@@ -15,7 +15,7 @@ meta-entityChange_entityTypeId:
 meta-entityChange_entityId:
   type: integer
   example: 1
-  description: Relationship to the related entity
+  description: Relationship to meta-entityType
 meta-entityChange_userId:
   type: integer
   example: 1
@@ -39,7 +39,7 @@ meta-entityChange_entity:
     id:
       type: string
       example: "1"
-      description: Relationship to the related entity
+      description: Relationship to meta-entityType
   required: 
     - id
 meta-entityChange_user:

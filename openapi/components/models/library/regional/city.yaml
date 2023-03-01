@@ -290,7 +290,7 @@ regional-city_importance:
 regional-city_countryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to regional-country
 regional-city_creationUserId:
   type: integer
   example: 1
@@ -320,7 +320,7 @@ regional-city_country:
     id:
       type: string
       example: "1"
-      description: Relationship to Country
+      description: Relationship to regional-country
   required:
     - id
 
@@ -353,7 +353,7 @@ regional-city_language:
     id:
       type: string
       example: "1"
-      description: Relationship to Language
+      description: Relationship to geneeral-language
   required:
     - id
 
@@ -364,7 +364,7 @@ regional-city_ambassadorTeacher:
     id:
       type: string
       example: "1"
-      description: Relationship to Teacher
+      description: Relationship to teacher
   required:
     - id
 

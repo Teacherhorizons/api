@@ -1,67 +1,64 @@
 
-# attributes
-meta-entityChangeSummarySubscription_attributes:
-  allOf:
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_notes"
+# # attributes
+# meta-entityChangeSummarySubscription_attributes:
+#   allOf:
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_notes"
 
-# relationshipIds
-meta-entityChangeSummarySubscription_relationshipIds:
-  allOf:
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_entityTypeId"
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_entityId"
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_userId"
+# # relationshipIds
+# meta-entityChangeSummarySubscription_relationshipIds:
+#   allOf:
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_entityTypeId"
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_entityId"
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_userId"
 
-# attribute relationships
+# # attribute relationships
 
-# relationships
-meta-entityChangeSummarySubscription_relationships:
-  allOf:
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_entityType"
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_entity"
-    - $ref: "#/meta-entityChangeSummarySubscription_properties_user"
+# # relationships
+# meta-entityChangeSummarySubscription_relationships:
+#   allOf:
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_entityType"
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_entity"
+#     - $ref: "#/meta-entityChangeSummarySubscription_properties_user"
 
-#properties
-meta-entityChangeSummarySubscription_properties_id:
-  properties:
-    id:
-      $ref: "#/meta-entityChangeSummarySubscription_id"
-meta-entityChangeSummarySubscription_properties_notes:
-  properties:
-    notes:
-      $ref: "#/meta-entityChangeSummarySubscription_notes"
-meta-entityChangeSummarySubscription_properties_entityTypeId:
-  properties:
-    entityTypeId:
-      $ref: "#/meta-entityChangeSummarySubscription_entityTypeId"
-meta-entityChangeSummarySubscription_properties_entityId:
-  properties:
-    entityId:
-      $ref: "#/meta-entityChangeSummarySubscription_entityId"
-meta-entityChangeSummarySubscription_properties_userId:
-  properties:
-    userId:
-      $ref: "#/meta-entityChangeSummarySubscription_userId"
-meta-entityChangeSummarySubscription_properties_entityType:
-  properties:
-    entityType:
-      $ref: "#/meta-entityChangeSummarySubscription_entityType"
-meta-entityChangeSummarySubscription_properties_entity:
-  properties:
-    entity:
-      $ref: "#/meta-entityChangeSummarySubscription_entity"
-meta-entityChangeSummarySubscription_properties_user:
-  properties:
-    user:
-      $ref: "#/meta-entityChangeSummarySubscription_user"
+# #properties
+# meta-entityChangeSummarySubscription_properties_id:
+#   properties:
+#     id:
+#       $ref: "#/meta-entityChangeSummarySubscription_id"
+# meta-entityChangeSummarySubscription_properties_notes:
+#   properties:
+#     notes:
+#       $ref: "#/meta-entityChangeSummarySubscription_notes"
+# meta-entityChangeSummarySubscription_properties_entityTypeId:
+#   properties:
+#     entityTypeId:
+#       $ref: "#/meta-entityChangeSummarySubscription_entityTypeId"
+# meta-entityChangeSummarySubscription_properties_entityId:
+#   properties:
+#     entityId:
+#       $ref: "#/meta-entityChangeSummarySubscription_entityId"
+# meta-entityChangeSummarySubscription_properties_userId:
+#   properties:
+#     userId:
+#       $ref: "#/meta-entityChangeSummarySubscription_userId"
+# meta-entityChangeSummarySubscription_properties_entityType:
+#   properties:
+#     entityType:
+#       $ref: "#/meta-entityChangeSummarySubscription_entityType"
+# meta-entityChangeSummarySubscription_properties_entity:
+#   properties:
+#     entity:
+#       $ref: "#/meta-entityChangeSummarySubscription_entity"
+# meta-entityChangeSummarySubscription_properties_user:
+#   properties:
+#     user:
+#       $ref: "#/meta-entityChangeSummarySubscription_user"
 
 #attributes
-meta-entityChangeSummarySubscription_id:
-  type: integer
-  example: 1
-  description: auto
 meta-entityChangeSummarySubscription_notes:
   type: string
-  example: 
+  example: foo bar
+  maxLength: 100
 meta-entityChangeSummarySubscription_entityTypeId:
   type: integer
   example: 1
@@ -74,24 +71,38 @@ meta-entityChangeSummarySubscription_userId:
   type: integer
   example: 1
   description: Relationship to user
+
+
 meta-entityChangeSummarySubscription_entityType:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to meta-entityType
+  required: 
+    - id
+  
 meta-entityChangeSummarySubscription_entity:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: Relationship to the related entity
+      description: Relationship to meta-entityType
+  required: 
+    - id
+  
 meta-entityChangeSummarySubscription_user:
   type: object
+  additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
       description: Relationship to user
+  required: 
+    - id
+  

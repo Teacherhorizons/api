@@ -2,6 +2,7 @@
 general-role_name:
   type: string
   example: Secondary Subject Teacher
+  maxLength: 250
 
 general-role_creationDate:
   type: string
@@ -17,17 +18,17 @@ general-role_latestUpdateDate:
 general-role_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-role_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-role_roleTypeId:
   type: integer
   example: 1
-  description: Relationship to Type
+  description: Relationship to general-roleType
 
 #relationships
 general-role_creationUser:
@@ -37,7 +38,7 @@ general-role_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required:
   - id
 
@@ -48,7 +49,7 @@ general-role_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -59,7 +60,7 @@ general-role_roleType:
     id:
       type: string
       example: "1"
-      description: Relationship to Type
+      description: Relationship to general-roleType
   required: 
     - id
   

@@ -2,6 +2,7 @@
 general-subjectGroup_name:
   type: string
   example: Early Years
+  maxLength: 250
 
 general-subjectGroup_creationDate:
   type: string
@@ -17,12 +18,12 @@ general-subjectGroup_latestUpdateDate:
 general-subjectGroup_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 general-subjectGroup_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 general-subjectGroup_creationUser:
@@ -32,7 +33,7 @@ general-subjectGroup_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -43,7 +44,7 @@ general-subjectGroup_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
