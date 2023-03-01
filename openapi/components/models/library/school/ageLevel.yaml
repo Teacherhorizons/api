@@ -2,6 +2,7 @@
 school-ageLevel_type:
   type: string
   example: Outdoor Pitches
+  maxLength: 45
 
 school-ageLevel_creationDate:
   type: string
@@ -17,12 +18,12 @@ school-ageLevel_latestUpdateDate:
 school-ageLevel_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-ageLevel_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-ageLevel_creationUser:
@@ -32,7 +33,7 @@ school-ageLevel_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -43,7 +44,7 @@ school-ageLevel_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
