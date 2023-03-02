@@ -21,9 +21,17 @@ JsonApiModel_regional-cityMonthNumber:
           $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM"
         notes:
           $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_notes"
+        creationDate:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_latestUpdateDate"
         # relationship attributes
         city:
           $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
         - cityId
         - monthNumber
@@ -36,7 +44,11 @@ JsonApiModel_regional-cityMonthNumber:
       additionalProperties: false
       properties:
         city:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id
