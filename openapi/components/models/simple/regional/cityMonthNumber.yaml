@@ -15,9 +15,17 @@ SimpleModel_regional-cityMonthNumber:
       $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM"
     notes:
       $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_notes"
+    creationDate:
+      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_latestUpdateDate"
     # relationship attributes
     cityId:
       $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_cityId"
+    creationUserId:
+      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_latestUpdateUserId"
   required:
     - id
     - cityId

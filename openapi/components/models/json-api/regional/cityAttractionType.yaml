@@ -13,6 +13,8 @@ JsonApiModel_regional-cityAttractionType:
         # simple attributes
         name:
           $ref: "../../library/regional/cityAttractionType.yaml#/regional-cityAttractionType_name"
+        iconName:
+          $ref: "../../library/regional/cityAttractionType.yaml#/regional-cityAttractionType_iconName"
         creationDate:
           $ref: "../../library/regional/cityAttractionType.yaml#/regional-cityAttractionType_creationDate"
         latestUpdateDate:
@@ -25,6 +27,7 @@ JsonApiModel_regional-cityAttractionType:
       required:
         - id
         - name
+        - iconName
         - creationDate
         - latestUpdateDate
         - creationUserId

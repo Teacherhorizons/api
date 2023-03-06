@@ -15,12 +15,30 @@ regional-cityMonthNumber_notes:
   type: string
   example: Foo bar
   maxLength: 255
+regional-cityMonthNumber_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+  format: date-time
+regional-cityMonthNumber_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+  format: date-time
 
 #Relationship attributes
 regional-cityMonthNumber_cityId:
   type: integer
   example: 1
   description: Relationship to regional-city
+
+regional-cityMonthNumber_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+regional-cityMonthNumber_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
 
 #Relationships
 regional-cityMonthNumber_city:
