@@ -185,6 +185,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-currency" />
 
+  - name: simple-model-general-internationalWorkingCurrency
+    x-displayName: Simple model - general-internationalWorkingCurrency
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-internationalWorkingCurrency" />
+
   #   - name: simple-model-lists-academicSystem
   #     x-displayName: Simple model - lists-academicSystem
   #     description: |
@@ -1486,6 +1491,7 @@ x-tagGroups:
       - simple-model-general-autoEmail
       - simple-model-general-currency
       - simple-model-general-educationLevel
+      - simple-model-general-internationalWorkingCurrency
       - simple-model-general-photo
       - simple-model-general-photoType
       - simple-model-general-pensionSchemeType
