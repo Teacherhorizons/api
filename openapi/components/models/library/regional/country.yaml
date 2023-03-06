@@ -291,6 +291,13 @@ regional-country_expensePercentageRent:
 regional-country_expensePercentageRestaurants:
   type: number
   example: 9.19999999999999
+regional-country_communityResponseQuestionIds:
+  type: array
+  items:
+    type: integer
+  example: [4,7,10,14]
+  description: Derived (dw)
+
 #relationship attributes  
 regional-country_localCurrencyId:
   type: integer

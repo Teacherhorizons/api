@@ -144,6 +144,8 @@ Response_regional-city_notSignedIn_item:
           $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities"
         expensePercentageRent:
           $ref: "../../models/library/regional/city.yaml#/regional-city_expensePercentageRent"
+        communityResponseQuestionIds:
+          $ref: "../../models/library/regional/city.yaml#/regional-city_communityResponseQuestionIds"
         # relationship Attributes
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
@@ -202,6 +204,7 @@ Response_regional-city_notSignedIn_item:
         - expensePercentageMarkets
         - expensePercentageUtilities
         - expensePercentageRent
+        - communityResponseQuestionIds
         - country
         - region
     relationships:

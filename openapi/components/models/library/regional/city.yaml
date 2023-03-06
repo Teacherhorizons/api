@@ -285,6 +285,12 @@ regional-city_importance:
   type: string
   example: H
   description: Derived (dw)
+regional-city_communityResponseQuestionIds:
+  type: array
+  items:
+    type: integer
+  example: [4,7,10,14]
+  description: Derived (dw)
 
 # Relationship attributes
 regional-city_countryId:

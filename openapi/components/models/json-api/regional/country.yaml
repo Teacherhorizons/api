@@ -184,6 +184,9 @@ JsonApiModel_regional-country_admin:
           $ref: "../../library/regional/country.yaml#/regional-country_importanceIndex"
         importance:
           $ref: "../../library/regional/country.yaml#/regional-country_importance"
+        communityResponseQuestionIds:
+          $ref: "../../library/regional/country.yaml#/regional-country_communityResponseQuestionIds"
+
         # relationship attributes
         localCurrency:
           $ref: "../general/currency.yaml#/JsonApiModel_general-currency_relationship_attribute"
@@ -289,6 +292,7 @@ JsonApiModel_regional-country_admin:
         - numberOfUnknownStudents
         - importanceIndex
         - importance
+        - communityResponseQuestionIds
     relationships:
       type: object
       additionalProperties: false
