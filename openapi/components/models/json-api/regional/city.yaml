@@ -180,6 +180,9 @@ JsonApiModel_regional-city_admin:
           $ref: "../../library/regional/city.yaml#/regional-city_importanceIndex"
         importance:
           $ref: "../../library/regional/city.yaml#/regional-city_importance"
+        communityResponseQuestionIds:
+          $ref: "../../library/regional/city.yaml#/regional-city_communityResponseQuestionIds"
+
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -278,6 +281,7 @@ JsonApiModel_regional-city_admin:
         - uniqueName
         - importanceIndex
         - importance
+        - communityResponseQuestionIds
     relationships:
       type: object
       additionalProperties: false

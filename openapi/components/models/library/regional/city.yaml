@@ -2,7 +2,7 @@
 regional-city_name:
   type: string
   example: Luanda
-  description: Identifier
+  description: Main
   maxLength: 250
 regional-city_alias:
   type: string
@@ -25,7 +25,7 @@ regional-city_keyAttractions:
 regional-city_slug:
   type: string
   example: africa-angola-luanda
-  description: Identifier
+  description: Main
   maxLength: 180
 regional-city_locationLatitude:
   type: number
@@ -115,15 +115,15 @@ regional-city_averageAnnualSaving:
 regional-city_averageAnnualGrossIncome:
   type: integer
   example: 50247
-  description: Identifier
+  description: Derived (dw)
 regional-city_averageAnnualNetIncome:
   type: integer
   example: 40878
-  description: Identifier
+  description: Derived (dw)
 regional-city_averageAnnualExpenditure:
   type: integer
   example: 21203
-  description: Identifier
+  description: Derived (dw)
 regional-city_percentageOfSchoolsHaveFlightAllowance:
   type: integer
   example: 67
@@ -228,11 +228,11 @@ regional-city_nearestWeatherStationId:
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 203
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfSchoolsDoNotHaveFlightAllowance:
   type: integer
   example: 2
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfTeachers:
   type: integer
   example: 1345
@@ -252,23 +252,23 @@ regional-city_numberOfUnknownTeachers:
 regional-city_numberOfSchoolsHavePrivateHealthcareScheme:
   type: integer
   example: 194
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
   type: integer
   example: 20
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfStudents:
   type: integer
   example: 234722
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfInternationalStudents:
   type: integer
   example: 46770
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfLocalStudents:
   type: integer
   example: 148605
-  description: Identifier
+  description: Derived (dw)
 regional-city_numberOfUnknownStudents:
   type: integer
   example: 39347
@@ -276,15 +276,21 @@ regional-city_numberOfUnknownStudents:
 regional-city_uniqueName:
   type: string
   example: Victoria (Seychelles)
-  description: Identifier
+  description: Derived (dw)
 regional-city_importanceIndex:
   type: integer
   example: 6234
-  description: Identifier
+  description: Derived (dw)
 regional-city_importance:
   type: string
   example: H
-  description: Identifier
+  description: Derived (dw)
+regional-city_communityResponseQuestionIds:
+  type: array
+  items:
+    type: integer
+  example: [4,7,10,14]
+  description: Derived (dw)
 
 # Relationship attributes
 regional-city_countryId:

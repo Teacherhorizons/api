@@ -178,6 +178,9 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_importanceIndex"
     importance:
       $ref: "../../library/regional/country.yaml#/regional-country_importance"
+    communityResponseQuestionIds:
+      $ref: "../../library/regional/country.yaml#/regional-country_communityResponseQuestionIds"
+
     # relationship attributes
     localCurrencyId:
       $ref: "../../library/regional/country.yaml#/regional-country_localCurrencyId"
@@ -279,6 +282,7 @@ SimpleModel_regional-country_admin:
     - numberOfUnknownStudents
     - importanceIndex
     - importance
+    - communityResponseQuestionIds
 
 SimpleModel_regional-country_school:
   type: object

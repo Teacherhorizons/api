@@ -2,7 +2,7 @@
 regional-country_name:
   type: string
   example: Luanda
-  description: Identifier
+  description: Main
   maxLength: 250
 regional-country_alias:
   type: string
@@ -25,7 +25,7 @@ regional-country_latestUpdateDate:
 regional-country_slug:
   type: string
   example: africa-angola-luanda
-  description: Identifier
+  description: Main
   maxLength: 180
 regional-country_locationLatitude:
   type: number
@@ -53,7 +53,7 @@ regional-country_teachingInCountryDescription:
 regional-country_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfCitiesWithSchools:
   type: integer
   example: 15
@@ -113,19 +113,19 @@ regional-country_numberOfSecondaryOtherCurriculumSchools:
 regional-country_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 203
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfSchoolsDoNotHaveFlightAllowance:
   type: integer
   example: 2
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfSchoolsHavePrivateHealthcareScheme:
   type: integer
   example: 194
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
   type: integer
   example: 20
-  description: Identifier
+  description: Derived (dw)
 regional-country_averageSavingPercentage:
   type: integer
   example: 0.3
@@ -219,39 +219,39 @@ regional-country_costOfLivingIndex:
 regional-country_averageAnnualGrossIncome:
   type: integer
   example: 50247
-  description: Identifier
+  description: Derived (dw)
 regional-country_averageAnnualNetIncome:
   type: integer
   example: 40878
-  description: Identifier
+  description: Derived (dw)
 regional-country_averageAnnualExpenditure:
   type: integer
   example: 21203
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfStudents:
   type: integer
   example: 234722
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfInternationalStudents:
   type: integer
   example: 46770
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfLocalStudents:
   type: integer
   example: 148605
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfUnknownStudents:
   type: integer
   example: 39347
-  description: Identifier
+  description: Derived (dw)
 regional-country_importanceIndex:
   type: integer
   example: 6234
-  description: Identifier
+  description: Derived (dw)
 regional-country_importance:
   type: string
   example: H
-  description: Identifier
+  description: Derived (dw)
 regional-country_numberOfTeachers:
   type: integer
   example: 1345
@@ -291,6 +291,13 @@ regional-country_expensePercentageRent:
 regional-country_expensePercentageRestaurants:
   type: number
   example: 9.19999999999999
+regional-country_communityResponseQuestionIds:
+  type: array
+  items:
+    type: integer
+  example: [4,7,10,14]
+  description: Derived (dw)
+
 #relationship attributes  
 regional-country_localCurrencyId:
   type: integer

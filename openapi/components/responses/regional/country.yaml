@@ -150,6 +150,8 @@ Response_regional-country_notSignedIn_item:
           $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRent"
         expensePercentageRestaurants:
           $ref: "../../models/library/regional/country.yaml#/regional-country_expensePercentageRestaurants"
+        communityResponseQuestionIds:
+          $ref: "../../models/library/regional/country.yaml#/regional-country_communityResponseQuestionIds"
         #relationship attribute
         photo1:
           $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
@@ -217,6 +219,7 @@ Response_regional-country_notSignedIn_item:
         - expensePercentageMarkets
         - expensePercentageUtilities
         - expensePercentageRent
+        - communityResponseQuestionIds
         - capitalCity
         # - localCurrency
         - region

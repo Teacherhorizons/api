@@ -136,6 +136,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfLocalStudents"
         numberOfUnknownStudents:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownStudents"
+        communityResponseQuestionIds:
+          $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
 
         # relationship attributes
         photo1:
@@ -200,6 +202,7 @@ JsonApiModel_regional-region_admin:
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers
         - percentageOfInternationalStudents
+        - communityResponseQuestionIds
         # relationship attributes
         - photo1
         - creationUser

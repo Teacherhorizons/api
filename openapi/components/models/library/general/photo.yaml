@@ -1,18 +1,18 @@
 #Attributes
 general-photo_name:
   type: string
-  example: Foo
   maxLength: 250
+  example: Foo
 general-photo_url:
   type: string
-  example: /foo/bar/baz.jpeg
-  description: Identifier
   maxLength: 65535
+  example: /foo/bar/baz.jpeg
+  description: Main
 general-photo_description:
   type: string
-  example: abc ff
-  description: Identifier
   maxLength: 250
+  example: abc ff
+  description: Main
 general-photo_creationDate:
   type: string
   format: date-time
@@ -29,24 +29,24 @@ general-photo_heightInPx:
   example: 500
 general-photo_sourceUrl:
   type: string
-  example: /foo/bar/baz.jpeg
   maxLength: 255
+  example: /foo/bar/baz.jpeg
 general-photo_authorName:
   type: string
-  example: Archie
   maxLength: 100
+  example: Archie
 general-photo_licenseDescription:
   type: string
-  example: Lorem Ipsum
   maxLength: 100
+  example: Lorem Ipsum
 general-photo_modificationDescription:
   type: string
-  example: Lorem Ipsum
   maxLength: 100
+  example: Lorem Ipsum
 general-photo_notes:
   type: string
-  example: Lorem Ipsum
   maxLength: 100
+  example: Lorem Ipsum
 
 #Relationship attributes
 general-photo_creationUserId:

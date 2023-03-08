@@ -1,41 +1,41 @@
 #attributes
-general-currency_code:
+general-internationalWorkingCurrency_code:
   type: string
   example: GBP
   maxLength: 3
-general-currency_symbol:
+general-internationalWorkingCurrency_symbol:
   type: string
   example: "£"
   maxLength: 10
-general-currency_name:
+general-internationalWorkingCurrency_name:
   type: string
   example: Great Britain Pound
   maxLength: 50
-general-currency_creationDate:
+general-internationalWorkingCurrency_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-general-currency_latestUpdateDate:
+general-internationalWorkingCurrency_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-general-currency_usdConversionRate:
+general-internationalWorkingCurrency_usdConversionRate:
   type: number
   example: 1.34567
   description: Derived (dw)
 
 # relationship attributes
-general-currency_creationUserId:
+general-internationalWorkingCurrency_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-general-currency_latestUpdateUserId:
+general-internationalWorkingCurrency_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 # relationships
-general-currency_creationUser:
+general-internationalWorkingCurrency_creationUser:
   additionalProperties: false
   type: object
   properties:
@@ -46,7 +46,7 @@ general-currency_creationUser:
   required:
     - id
 
-general-currency_latestUpdateUser:
+general-internationalWorkingCurrency_latestUpdateUser:
   additionalProperties: false
   type: object
   properties:

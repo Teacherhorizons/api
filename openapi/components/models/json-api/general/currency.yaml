@@ -40,8 +40,6 @@ JsonApiModel_general-currency_admin:
           $ref: "../../library/general/currency.yaml#/general-currency_creationDate"
         latestUpdateDate:
           $ref: "../../library/general/currency.yaml#/general-currency_latestUpdateDate"
-        isInternational:
-          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
         usdConversionRate:
           $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
         # relationship attributes
@@ -53,7 +51,6 @@ JsonApiModel_general-currency_admin:
         - code
         - symbol
         - name
-        - isInternational
         - usdConversionRate
         - creationDate
         - latestUpdateDate
@@ -99,15 +96,12 @@ JsonApiModel_general-currency_school:
           $ref: "../../library/general/currency.yaml#/general-currency_symbol"
         name:
           $ref: "../../library/general/currency.yaml#/general-currency_name"
-        isInternational:
-          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
         usdConversionRate:
           $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
       required:
         - code
         - symbol
         - name
-        - isInternational
         - usdConversionRate
   required:
     - schema
@@ -140,15 +134,12 @@ JsonApiModel_general-currency_teacher:
           $ref: "../../library/general/currency.yaml#/general-currency_symbol"
         name:
           $ref: "../../library/general/currency.yaml#/general-currency_name"
-        isInternational:
-          $ref: "../../library/general/currency.yaml#/general-currency_isInternational"
         usdConversionRate:
           $ref: "../../library/general/currency.yaml#/general-currency_usdConversionRate"
       required:
         - code
         - symbol
         - name
-        - isInternational
         - usdConversionRate
   required:
     - schema

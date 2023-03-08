@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=../../../../../meta/schemas/SimpleModel-MultipleSchemas.json
+
+SimpleModel_general-internationalWorkingCurrency:
+  oneOf:
+    - $ref: "#/SimpleModel_general-internationalWorkingCurrency_admin"
+    - $ref: "#/SimpleModel_general-internationalWorkingCurrency_school"
+    - $ref: "#/SimpleModel_general-internationalWorkingCurrency_teacher"
+  discriminator:
+    propertyName: schema
+    mapping:
+      all: "#/SimpleModel_general-internationalWorkingCurrency_admin"
+      admin: "#/SimpleModel_general-internationalWorkingCurrency_admin"
+      school: "#/SimpleModel_general-internationalWorkingCurrency_school"
+      teacher: "#/SimpleModel_general-internationalWorkingCurrency_teacher"
+
+SimpleModel_general-internationalWorkingCurrency_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    id:
+      $ref: "#/SimpleModel_general-internationalWorkingCurrency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_code"
+    symbol:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_symbol"
+    name:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_name"
+    creationDate:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_latestUpdateDate"
+    usdConversionRate:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_usdConversionRate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_latestUpdateUserId"
+  required:
+    - schema
+    - id
+    - code
+    - symbol
+    - name
+    - usdConversionRate
+    - creationDate
+    - latestUpdateDate
+    - creationUserId
+    - latestUpdateUserId
+
+SimpleModel_general-internationalWorkingCurrency_school:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school
+    id:
+      $ref: "#/SimpleModel_general-internationalWorkingCurrency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_code"
+    symbol:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_symbol"
+    name:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_name"
+    usdConversionRate:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_usdConversionRate"
+  required:
+    - schema
+    - id
+    - code
+    - symbol
+    - name
+    - usdConversionRate
+
+SimpleModel_general-internationalWorkingCurrency_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher
+    id:
+      $ref: "#/SimpleModel_general-internationalWorkingCurrency_id"
+    # simple attributes
+    code:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_code"
+    symbol:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_symbol"
+    name:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_name"
+    usdConversionRate:
+      $ref: "../../library/general/internationalWorkingCurrency.yaml#/general-internationalWorkingCurrency_usdConversionRate"
+  required:
+    - schema
+    - id
+    - code
+    - symbol
+    - name
+    - usdConversionRate
+
+SimpleModel_general-internationalWorkingCurrency_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
