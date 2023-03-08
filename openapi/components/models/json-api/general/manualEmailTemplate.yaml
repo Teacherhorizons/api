@@ -21,6 +21,8 @@ JsonApiModel_general-manualEmailTemplate:
           $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
         body:
           $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body"
+        description:
+          $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_description"
   required:
     - type
     - id
