@@ -21,7 +21,8 @@ SimpleModel_general-manualEmailTemplate:
       $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_isVisibleToSchool"
     isVisibleToTeacher:
       $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_isVisibleToTeacher"
-
+    description:
+      $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_description"
   required:
     - id
     - name

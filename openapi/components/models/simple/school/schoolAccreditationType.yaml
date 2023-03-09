@@ -10,6 +10,10 @@ SimpleModel_school-schoolAccreditationType:
     latestUpdateDate:
       $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateDate"
     # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_schoolId"
+    accreditationTypeId:
+      $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_accreditationTypeId"
     creationUserId:
       $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_creationUserId"
     latestUpdateUserId:

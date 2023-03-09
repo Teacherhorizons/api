@@ -34,6 +34,37 @@ JsonApiModel_school-ageLevel:
     - type
     - id
 
+JsonApiModel_school-ageLevel_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-ageLevel_id"
+    name:
+      $ref: "../../library/school/school.yaml#/school_name"
+    slug:
+      $ref: "../../library/school/school.yaml#/school_slug"
+  required:
+    - id
+
+JsonApiModel_school-ageLevel_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-ageLevel_type"
+        id:
+          $ref: "#/JsonApiModel_school-ageLevel_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
 JsonApiModel_school-ageLevel_type:
   type: string
   example: school-ageLevel

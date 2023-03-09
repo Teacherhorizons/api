@@ -13,6 +13,8 @@ JsonApiModel_regional-countryAttractionType:
         # simple attributes
         name:
           $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name"
+        iconName:
+          $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_iconName"
         creationDate:
           $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_creationDate"
         latestUpdateDate:
@@ -25,6 +27,7 @@ JsonApiModel_regional-countryAttractionType:
       required:
         - id
         - name
+        - iconName
         - creationDate
         - latestUpdateDate
         - creationUser

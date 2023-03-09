@@ -23,6 +23,37 @@ JsonApiModel_school-communityQuestion:
     - type
     - id
 
+JsonApiModel_school-communityQuestion_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-communityQuestion_id"
+    name:
+      $ref: "../../library/school/school.yaml#/school_name"
+    slug:
+      $ref: "../../library/school/school.yaml#/school_slug"
+  required:
+    - id
+
+JsonApiModel_school-communityQuestion_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_school-communityQuestion_type"
+        id:
+          $ref: "#/JsonApiModel_school-communityQuestion_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
 JsonApiModel_school-communityQuestion_type:
   type: string
   example: school-communityQuestion
