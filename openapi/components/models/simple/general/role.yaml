@@ -12,8 +12,8 @@ SimpleModel_general-role:
     latestUpdateDate:
       $ref: "../../library/general/role.yaml#/general-role_latestUpdateDate"
     # relationship attributes
-    roleTypeId:
-      $ref: "../../library/general/role.yaml#/general-role_roleTypeId"
+    typeId:
+      $ref: "../../library/general/role.yaml#/general-role_typeId"
     creationUserId:
       $ref: "../../library/general/role.yaml#/general-role_creationUserId"
     latestUpdateUserId:
@@ -23,7 +23,7 @@ SimpleModel_general-role:
     - name
     - creationDate
     - latestUpdateDate
-    - roleTypeId
+    - typeId
     - creationUserId
     - latestUpdateUserId
 
