@@ -10,6 +10,10 @@ SimpleModel_school-schoolAgeLevel:
     latestUpdateDate:
       $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateDate"
     # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_schoolId"
+    ageLevelId:
+      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_ageLevelId"
     creationUserId:
       $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationUserId"
     latestUpdateUserId:

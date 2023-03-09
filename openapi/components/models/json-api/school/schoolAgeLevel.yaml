@@ -16,6 +16,10 @@ JsonApiModel_school-schoolAgeLevel:
         latestUpdateDate:
           $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        ageLevel:
+          $ref: "../school/ageLevel.yaml#/JsonApiModel_school-ageLevel_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -24,6 +28,10 @@ JsonApiModel_school-schoolAgeLevel:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        ageLevel:
+          $ref: "../school/ageLevel.yaml#/JsonApiModel_school-ageLevel_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

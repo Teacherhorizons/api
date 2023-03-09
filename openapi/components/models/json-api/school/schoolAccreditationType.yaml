@@ -16,6 +16,10 @@ JsonApiModel_school-schoolAccreditationType:
         latestUpdateDate:
           $ref: "../../library/school/schoolAccreditationType.yaml#/school-schoolAccreditationType_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        accreditationType:
+          $ref: "../school/accreditationType.yaml#/JsonApiModel_school-accreditationType_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -24,6 +28,10 @@ JsonApiModel_school-schoolAccreditationType:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        accreditationType:
+          $ref: "../school/accreditationType.yaml#/JsonApiModel_school-accreditationType_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

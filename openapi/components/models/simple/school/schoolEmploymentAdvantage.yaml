@@ -5,14 +5,18 @@ SimpleModel_school-schoolEmploymentAdvantage:
     id:
       $ref: "#/SimpleModel_school-schoolEmploymentAdvantage_id"
     # simple attributes
-    name:
-      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_name"
+    description:
+      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_description"
+    precedence:
+      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_precedence"
     #type
     creationDate:
       $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"
     latestUpdateDate:
       $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_latestUpdateDate"
     # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_schoolId"
     creationUserId:
       $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationUserId"
     latestUpdateUserId:

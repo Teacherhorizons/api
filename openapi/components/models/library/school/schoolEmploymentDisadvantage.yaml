@@ -1,10 +1,10 @@
 #attributes
-school-schoolEmploymentDisadvantage_name:
+school-schoolEmploymentDisadvantage_description:
   type: string
   example: Secondary Subject Teacher
 
-school-schoolEmploymentDisadvantage_sequenceNumber:
-  type: string
+school-schoolEmploymentDisadvantage_precedence:
+  type: number
   example: ""
 
 school-schoolEmploymentDisadvantage_creationDate:
@@ -52,7 +52,7 @@ school-schoolEmploymentDisadvantage_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
 
@@ -63,7 +63,7 @@ school-schoolEmploymentDisadvantage_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -74,7 +74,7 @@ school-schoolEmploymentDisadvantage_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

@@ -11,13 +11,17 @@ JsonApiModel_school-schoolEmploymentAdvantage:
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_name"
+        description:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_description"
+        precedence:
+          $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_precedence"
         creationDate:
           $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_creationDate"  
         latestUpdateDate:
           $ref: "../../library/school/schoolEmploymentAdvantage.yaml#/school-schoolEmploymentAdvantage_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -26,6 +30,8 @@ JsonApiModel_school-schoolEmploymentAdvantage:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

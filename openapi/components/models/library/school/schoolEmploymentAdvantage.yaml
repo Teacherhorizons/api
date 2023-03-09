@@ -1,10 +1,10 @@
 #attributes
-school-schoolEmploymentAdvantage_name:
+school-schoolEmploymentAdvantage_description:
   type: string
   example: Secondary Subject Teacher
 
-school-schoolEmploymentAdvantage_sequenceNumber:
-  type: string
+school-schoolEmploymentAdvantage_precedence:
+  type: number
   example: ""
 
 school-schoolEmploymentAdvantage_creationDate:
@@ -21,17 +21,17 @@ school-schoolEmploymentAdvantage_latestUpdateDate:
 school-schoolEmploymentAdvantage_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 
 school-schoolEmploymentAdvantage_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-schoolEmploymentAdvantage_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-schoolEmploymentAdvantage_reason:
@@ -52,7 +52,7 @@ school-schoolEmploymentAdvantage_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
 
@@ -63,7 +63,7 @@ school-schoolEmploymentAdvantage_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -74,6 +74,6 @@ school-schoolEmploymentAdvantage_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id

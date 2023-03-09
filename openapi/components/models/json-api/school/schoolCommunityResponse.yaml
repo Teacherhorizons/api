@@ -20,6 +20,10 @@ JsonApiModel_school-schoolCommunityResponse:
         latestUpdateDate:
           $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        question:
+          $ref: "../school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -28,6 +32,10 @@ JsonApiModel_school-schoolCommunityResponse:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        question:
+          $ref: "../school/communityQuestion.yaml#/JsonApiModel_school-communityQuestion_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
