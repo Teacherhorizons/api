@@ -1,6 +1,7 @@
 # attributes
 application-action_detail:
   type: string
+  description: Main
   example: already interviewed
 
 application-action_politeEmailMessage:
@@ -11,12 +12,12 @@ application-action_politeEmailMessage:
 application-action_endStateId:
   type: integer
   example: 1
-  description: Relationship to State
+  description: Relationship to State #check with RR
 
 application-action_emailId:
   type: integer
   example: 1
-  description: Relationship to Email
+  description: Relationship to general-autoEmail #check with RR
 
 # relationships
 application-action_endState:
@@ -26,7 +27,7 @@ application-action_endState:
     id:
       type: string
       example: "1"
-      description: Relationship to State
+      description: Relationship to State #check with RR
   required: 
     - id
   
@@ -37,7 +38,7 @@ application-action_email:
     id:
       type: string
       example: "1"
-      description: Relationship to Email
+      description: Relationship to general-autoEmail #check with RR
   required: 
     - id
   

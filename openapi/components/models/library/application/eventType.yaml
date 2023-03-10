@@ -1,6 +1,7 @@
 # attributes
 application-eventType_name:
   type: string
+  description: Main
   example: Info request from Candidate
 
 application-eventType_nameForSchool:
@@ -23,7 +24,7 @@ application-eventType_isVisibleToTeacher:
 application-eventType_applicationStatusId:
   type: integer
   example: 1
-  description: Relationship to application_status
+  description: Relationship to application-status
 
 # relationships
 application-eventType_applicationStatus:
@@ -33,6 +34,6 @@ application-eventType_applicationStatus:
     id:
       type: string
       example: "1"
-      description: Relationship to application_status
+      description: Relationship to application-status
   required:
     - id

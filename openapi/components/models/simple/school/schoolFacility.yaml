@@ -14,6 +14,8 @@ SimpleModel_school-schoolFacility:
     # relationship attributes
     schoolId:
       $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_schoolId"
+    facilityId:
+       $ref: "../../library/school/schoolFacility.yaml#/school-schoolFacility_facilityId"
     #examTitleId:
     #$ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
     creationUserId:

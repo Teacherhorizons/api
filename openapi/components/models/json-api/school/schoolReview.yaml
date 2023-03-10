@@ -11,6 +11,8 @@ JsonApiModel_school-schoolReview:
       additionalProperties: false
       properties:
         # simple attributes
+        score:
+          $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_score" 
         creationDate:
           $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_creationDate"  
         latestUpdateDate:

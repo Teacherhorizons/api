@@ -5,6 +5,8 @@ SimpleModel_school-schoolReview:
     id:
       $ref: "#/SimpleModel_school-schoolReview_id"
     # simple attributes
+    score:
+      $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_score"
     creationDate:
       $ref: "../../library/school/schoolReview.yaml#/school-schoolReview_creationDate"
     latestUpdateDate:

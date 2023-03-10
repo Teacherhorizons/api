@@ -7,6 +7,7 @@ application-applicationEvent_date:
 application-applicationEvent_notes:
   type: string
   nullable: true
+  description: Main
   example: Foo bar
 
 application-applicationEvent_creationDate:
@@ -28,12 +29,12 @@ application-applicationEvent_applicationId:
 application-applicationEvent_typeId:
   type: integer
   example: 1
-  description: Relationship to application_eventType
+  description: Relationship to application-eventType
 
 application-applicationEvent_emailId:
   type: integer
   example: 1
-  description: Relationship to general_email
+  description: Relationship to general-email
 
 application-applicationEvent_creationUserId:
   type: integer
@@ -64,7 +65,7 @@ application-applicationEvent_type:
     id:
       type: string
       example: "1"
-      description: Relationship to application_eventType
+      description: Relationship to application-eventType
   required:
     - id
 
@@ -75,7 +76,7 @@ application-applicationEvent_email:
     id:
       type: string
       example: "1"
-      description: Relationship to general_email
+      description: Relationship to general-email
   required:
     - id
 

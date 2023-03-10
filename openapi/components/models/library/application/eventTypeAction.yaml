@@ -1,6 +1,7 @@
 # attributes
 application-eventTypeAction_label:
   type: string
+  description: Main
   example: Email teacher
 
 # relationship attributes
@@ -39,7 +40,7 @@ application-eventTypeAction_actionType:
     id:
       type: string
       example: "1"
-      description: Relationship to ...
+      description: Relationship to general-actionType
   required: 
     - id
 application-eventTypeAction_manualEmailTemplate:
@@ -49,7 +50,7 @@ application-eventTypeAction_manualEmailTemplate:
     id:
       type: string
       example: "1"
-      description: Relationship to ...
+      description: Relationship to general-manualEmailTemplate
   required: 
     - id
 application-eventTypeAction_autoEmail:
@@ -59,6 +60,6 @@ application-eventTypeAction_autoEmail:
     id:
       type: string
       example: "1"
-      description: Relationship to ...
+      description: Relationship to general-autoEmail
   required: 
     - id
