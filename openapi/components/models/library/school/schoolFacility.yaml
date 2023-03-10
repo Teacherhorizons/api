@@ -17,17 +17,22 @@ school-schoolFacility_latestUpdateDate:
 school-schoolFacility_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
+
+school-schoolFacility_facilityId:
+  type: integer
+  example: 1
+  description: Relationship to school-facility
 
 school-schoolFacility_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-schoolFacility_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-schoolFacility_school:
@@ -37,7 +42,18 @@ school-schoolFacility_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
+  required: 
+    - id
+
+school-schoolFacility_facility:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to school-facility
   required: 
     - id
 
@@ -48,7 +64,7 @@ school-schoolFacility_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -59,7 +75,7 @@ school-schoolFacility_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

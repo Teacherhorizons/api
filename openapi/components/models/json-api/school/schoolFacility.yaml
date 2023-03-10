@@ -20,6 +20,8 @@ JsonApiModel_school-schoolFacility:
         # relationship attributes
         school:
           $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        facility:
+          $ref: "../school/facility.yaml#/JsonApiModel_school-facility_relationship_attribute"
         #examTitle:
           #$ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
         creationUser:
@@ -32,6 +34,8 @@ JsonApiModel_school-schoolFacility:
       properties:
         school:
           $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        facility:
+          $ref: "../school/facility.yaml#/JsonApiModel_school-facility_relationship"
         #examTitle:
           #$ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
         creationUser:

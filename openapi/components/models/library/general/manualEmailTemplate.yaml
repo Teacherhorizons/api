@@ -18,6 +18,7 @@ general-manualEmailTemplate_subject:
   type: string
   nullable: true
   example: Your application to ${job.school.name} in ${job.school.city.country.name}
+  description: Main
   maxLength: 255
 general-manualEmailTemplate_body:
   type: string

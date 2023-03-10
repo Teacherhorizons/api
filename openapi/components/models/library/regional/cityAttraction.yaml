@@ -1,6 +1,7 @@
 #Attributes
 regional-cityAttraction_name:
   type: string
+  description: Main
   example: Mountain range
 regional-cityAttraction_iconName:
   type: string
@@ -23,7 +24,6 @@ regional-cityAttraction_typeId:
   type: integer
   example: 1
   description: Relationship to regional-cityAttractionType
-  #need to check above relationship with RR
 regional-cityAttraction_creationUserId:
   type: integer
   example: 1
