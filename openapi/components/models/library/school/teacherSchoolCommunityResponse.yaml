@@ -17,27 +17,27 @@ school-teacherSchoolCommunityResponse_latestUpdateDate:
 school-teacherSchoolCommunityResponse_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 
 school-teacherSchoolCommunityResponse_questionId:
   type: integer
   example: 1
-  description: Relationship to Question
+  description: Relationship to school-communityQuestion
 
 school-teacherSchoolCommunityResponse_teacherId:
   type: integer
   example: 1
-  description: Relationship to Teacher
+  description: Relationship to teacher
 
 school-teacherSchoolCommunityResponse_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-teacherSchoolCommunityResponse_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-teacherSchoolCommunityResponse_school:
@@ -47,7 +47,7 @@ school-teacherSchoolCommunityResponse_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
 
@@ -58,7 +58,7 @@ school-teacherSchoolCommunityResponse_question:
     id:
       type: string
       example: "1"
-      description: Relationship to Question
+      description: Relationship to school-communityQuestion
   required: 
     - id
 
@@ -69,7 +69,7 @@ school-teacherSchoolCommunityResponse_teacher:
     id:
       type: string
       example: "1"
-      description: Relationship to Teacher
+      description: Relationship to teacher
   required: 
     - id
 
@@ -80,7 +80,7 @@ school-teacherSchoolCommunityResponse_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -91,7 +91,7 @@ school-teacherSchoolCommunityResponse_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

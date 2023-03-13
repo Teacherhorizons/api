@@ -19,7 +19,7 @@ user-message_fromUserId:
 user-message_messageStatusId:
   type: integer
   example: 1
-  description: Relationship to message_messageStatus
+  description: Relationship to message-messageStatus
 
 #relationships
 user-message_toUser:
@@ -49,6 +49,6 @@ user-message_messageStatus:
     id:
       type: string
       example: "1"
-      description: Relationship to message_messageStatus
+      description: Relationship to message-messageStatus
   required: 
     - id

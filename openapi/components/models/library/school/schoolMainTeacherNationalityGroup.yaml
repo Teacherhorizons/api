@@ -2,11 +2,11 @@
 school-schoolMainTeacherNationalityGroup_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 school-schoolMainTeacherNationalityGroup_nationalityGroupId:
   type: integer
   example: 1
-  description: Relationship to Nationality group
+  description: Relationship to general-nationalityGroup
 
 # relatoinships
 school-schoolMainTeacherNationalityGroup_school:
@@ -16,7 +16,7 @@ school-schoolMainTeacherNationalityGroup_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
   
@@ -27,6 +27,6 @@ school-schoolMainTeacherNationalityGroup_nationalityGroup:
     id:
       type: string
       example: "1"
-      description: Relationship to Nationality group
+      description: Relationship to general-nationalityGroup
   required: 
     - id

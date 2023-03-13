@@ -18,7 +18,7 @@ school-schoolVideo_latestUpdateDate:
 school-schoolVideo_categoryId:
   type: integer
   example: 1
-  description: Relationship to Category
+  description: Relationship to school-videoCategory
 school-schoolVideo_creationUserId:
   type: integer
   example: 1
@@ -36,7 +36,7 @@ school-schoolVideo_category:
     id:
       type: string
       example: "1"
-      description: Relationship to Category
+      description: Relationship to school-videoCategory
   required: 
     - id
   

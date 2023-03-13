@@ -18,7 +18,7 @@ school-schoolPhoto_latestUpdateDate:
 school-schoolPhoto_categoryId:
   type: integer
   example: 1
-  description: Relationship to Category
+  description: Relationship to school-photoCategory
 school-schoolPhoto_creationUserId:
   type: integer
   example: 1
@@ -36,7 +36,7 @@ school-schoolPhoto_category:
     id:
       type: string
       example: "1"
-      description: Relationship to Category
+      description: Relationship to school-photoCategory
   required: 
     - id
   
