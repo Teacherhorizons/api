@@ -225,6 +225,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-weatherType" />
 
+  - name: simple-model-general-document
+    x-displayName: Simple model - general-document
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-document" />
+
+  - name: simple-model-general-documentType
+    x-displayName: Simple model - general-documentType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-documentType" />
+
   #   # - name: simple-model-lists
   #   #   x-displayName: Lists
   #   #   description: |
@@ -253,6 +263,11 @@ tags:
     x-displayName: Simple model - job-status
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job-status" />
+
+  - name: simple-model-job-type
+    x-displayName: Simple model - job-type
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_job-type" />
 
   # tags - simple-models - regional
   - name: simple-model-regional-city
@@ -703,10 +718,15 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherVideo" />
 
-  - name: simple-model-teacher-teacherSkill
-    x-displayName: Simple model - teacher-teacherSkill
+  - name: simple-model-teacher-computingSkill
+    x-displayName: Simple model - teacher-computingSkill
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherSkill" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-computingSkill" />
+
+  - name: simple-model-teacher-teacherComputingSkill
+    x-displayName: Simple model - teacher-teacherComputingSkill
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherComputingSkill" />
 
   #   # tags - simple-models - users
 
@@ -922,6 +942,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-weatherType" />
 
+  - name: json-api-model-general-document
+    x-displayName: JSON:API model - general-document
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-document" />
+
+  - name: json-api-model-general-documentType
+    x-displayName: JSON:API model - general-documentType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-documentType" />
+
   # tags - JSON:API models - job
   - name: json-api-model-job
     x-displayName: JSON:API model - job
@@ -932,6 +962,11 @@ tags:
     x-displayName: JSON:API model - job-status
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job-status" />
+
+  - name: json-api-model-job-type
+    x-displayName: JSON:API model - job-type
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_job-type" />
 
   #   # tags - JSON:API models - regional
   - name: json-api-model-regional-city
@@ -1200,10 +1235,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherVideo" />
 
-  - name: json-api-model-teacher-teacherSkill
-    x-displayName: JSON:API model - teacher-teacherSkill
+  - name: json-api-model-teacher-computingSkill
+    x-displayName: JSON:API model - teacher-computingSkill
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherSkill" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-computingSkill" />
+
+  - name: json-api-model-teacher-teacherComputingSkill
+    x-displayName: JSON:API model - teacher-teacherComputingSkill
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherComputingSkill" />
+
 
   # tags - JSON:API models - school
 
@@ -1486,6 +1527,8 @@ x-tagGroups:
       - simple-model-general-nationalityGroup
       - simple-model-general-siteSetting
       - simple-model-general-weatherType
+      - simple-model-general-document
+      - simple-model-general-documentType
       - simple-model-regional-city
       - simple-model-regional-articleCategory
       - simple-model-regional-cityArticle
@@ -1574,7 +1617,8 @@ x-tagGroups:
       - simple-model-teacher-documentCategory
       - simple-model-teacher-teacherDocument
       - simple-model-teacher-teacherVideo
-      - simple-model-teacher-teacherSkill
+      - simple-model-teacher-computingSkill
+      - simple-model-teacher-teacherComputingSkill
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -1586,6 +1630,7 @@ x-tagGroups:
       - simple-model-user-setting
       - simple-model-job
       - simple-model-job-status
+      - simple-model-job-type
       - simple-model-meta-entityType
       - simple-model-meta-entityChange
       - simple-model-meta-entityChangeSummary
@@ -1622,6 +1667,8 @@ x-tagGroups:
       - json-api-model-general-nationalityGroup
       - json-api-model-general-siteSetting
       - json-api-model-general-weatherType
+      - json-api-model-general-document
+      - json-api-model-general-documentType
       - json-api-model-regional-city
       - json-api-model-regional-articleCategory
       - json-api-model-regional-cityArticle
@@ -1710,7 +1757,8 @@ x-tagGroups:
       - json-api-model-teacher-teacherDocument
       - json-api-model-teacher-teacherVideo
       - json-api-model-teacher-videoCategory
-      - json-api-model-teacher-teacherSkill
+      - json-api-model-teacher-computingSkill
+      - json-api-model-teacher-teacherComputingSkill
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
@@ -1722,6 +1770,7 @@ x-tagGroups:
       - json-api-model-user-setting
       - json-api-model-job
       - json-api-model-job-status
+      - json-api-model-job-type
       - json-api-model-meta-entityType
       - json-api-model-meta-entityChange
       - json-api-model-meta-entityChangeSummary

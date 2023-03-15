@@ -1,0 +1,42 @@
+SimpleModel_general-document:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_general-document_id"
+    # simple attributes
+    name:
+      $ref: "../../library/general/document.yaml#/general-document_name"
+    filePath:
+      $ref: "../../library/general/document.yaml#/general-document_filePath"
+    creationDate:
+      $ref: "../../library/general/document.yaml#/general-document_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/general/document.yaml#/general-document_latestUpdateDate"
+    caption:
+      $ref: "../../library/general/document.yaml#/general-document_caption"
+    # relationship attributes
+    typeId:
+      $ref: "../../library/general/document.yaml#/general-document_typeId"
+    creationUserId:
+      $ref: "../../library/general/document.yaml#/general-document_creationUserId"
+    latestUpdateUser:
+      $ref: "../../library/general/document.yaml#/general-document_latestUpdateUserId"
+  required:
+  # simple attributes
+  - name
+  - filePath
+  - creationDate
+  - latestUpdateDate
+  - caption
+  # relationship attributes
+  - creationUser
+  - latestUpdateUser
+  - type
+
+# shared
+SimpleModel_general-document_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

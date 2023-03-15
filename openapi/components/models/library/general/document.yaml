@@ -1,0 +1,32 @@
+#attributes
+general-document_name:
+  type: string
+  example: ''
+general-document_filePath:
+  type: string
+  example: ''
+  description: Main
+general-document_creationDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+general-document_latestUpdateDate:
+  type: string
+  example: 2011-02-07T15:53:34Z
+general-document_caption:
+  type: string
+  example: ''
+  description: Main
+
+#relationship attributes
+general-document_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+general-document_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+general-document_typeId:
+  type: integer
+  example: 1
+  description: Relationship to general-documentType

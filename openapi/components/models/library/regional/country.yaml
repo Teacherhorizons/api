@@ -37,7 +37,7 @@ regional-country_locationLongitude:
   description: Longitude
 regional-country_isoCode:
   type: string
-  example: al
+  example: pt
   maxLength: 2
 regional-country_phoneCode:
   type: string
@@ -173,10 +173,10 @@ regional-country_monthlyCostOfInternet:
   example: 31.65
 regional-country_monthlyRent1BedroomApartmentInCityCentre:
   type: number
-  example: 1,026.8
+  example: 1026.5
 regional-country_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
-  example: 776.67
+  example: 776.5
 regional-country_crimeIndex:
   type: number
   example: 25
@@ -185,7 +185,7 @@ regional-country_walkingAloneInDaylightSafetyIndex:
   example: 85.62
 regional-country_walkingAloneAtNightSafetyIndex:
   type: number
-  example: 67
+  example: 67.5
 regional-country_minGrossSalaryJuniorTeacher:
   type: integer
   example: 12,000
@@ -280,7 +280,7 @@ regional-country_expensePercentageSportsAndLeisure:
   type: number
   example: 5.4
 regional-country_expensePercentageMarkets:
-  type: number
+  type: integer
   example: 13
 regional-country_expensePercentageUtilities:
   type: number
