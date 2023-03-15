@@ -18,16 +18,16 @@ school-schoolCurriculumType_schoolId:
 school-schoolCurriculumType_curriculumTypeId:
   type: integer
   example: 1
-  description: Relationship to curriculum
+  description: Relationship to school-curriculumType
 
 school-schoolCurriculumType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 school-schoolCurriculumType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-schoolCurriculumType_school:
@@ -58,7 +58,7 @@ school-schoolCurriculumType_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -69,7 +69,7 @@ school-schoolCurriculumType_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 

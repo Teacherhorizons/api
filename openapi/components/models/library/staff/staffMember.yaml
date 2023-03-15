@@ -26,7 +26,7 @@ staff-staffMember_salesforceUserId:
 staff-staffMember_currentCityId:
   type: integer
   example: 1
-  description: Relationship to City
+  description: Relationship to regional-city
 
 staff-staffMember_photoId:
   type: integer
@@ -35,7 +35,7 @@ staff-staffMember_photoId:
 
 staff-staffMember_currentCountryId:
   type: integer
-  example: 12
+  example: 1
   description: Relationship to regional-country
 
 #relationship
@@ -68,7 +68,7 @@ staff-staffMember_currentCity:
     id:
       type: string
       example: "1"
-      description: Relationship to city
+      description: Relationship to regional-city
   required:
     - id
 
@@ -90,6 +90,6 @@ staff-staffMember_currentCountry:
     id:
       type: string
       example: "1"
-      description: Relationship to country
+      description: Relationship to regional-country
   required:
     - id

@@ -51,15 +51,15 @@ teacher-teacherReferenceRequest_statusId:
 teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to regional-country
 teacher-teacherReferenceRequest_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 teacher-teacherReferenceRequest_countryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to regional-country
 teacher-teacherReferenceRequest_creationUserId:
   type: integer
   example: 1
@@ -107,7 +107,7 @@ teacher-teacherReferenceRequest_refereePhoneCodeCountry:
     id:
       type: string
       example: "1"
-      description: Relationship to Country
+      description: Relationship to regional-country
   required:
     - id
 teacher-teacherReferenceRequest_school:
@@ -117,7 +117,7 @@ teacher-teacherReferenceRequest_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required:
     - id
 teacher-teacherReferenceRequest_country:
@@ -127,7 +127,7 @@ teacher-teacherReferenceRequest_country:
     id:
       type: string
       example: "1"
-      description: Relationship to Country
+      description: Relationship to regional-country
   required:
     - id
 teacher-teacherReferenceRequest_creationUser:

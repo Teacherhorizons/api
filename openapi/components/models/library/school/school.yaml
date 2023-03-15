@@ -306,39 +306,39 @@ school_latestUpdateDate:
 school_phoneCodeCountryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to regional-country
 school_internationalWorkingCurrencyId:
   type: integer
   example: 1
-  description: Relationship to Currency
+  description: Relationship to general-internationalWorkingCurrency
 school_cityId:
   type: integer
   example: 1
-  description: Relationship to City
+  description: Relationship to regional-city
 school_fundingTypeId:
   type: integer
   example: 1
-  description: Relationship to SchoolFundingTypes
+  description: Relationship to school-fundingType
 school_studentGenderMixId:
   type: integer
   example: 1
-  description: Relationship to SchoolStudentGenderMix
+  description: Relationship to school-studentGenderMix
 school_affiliatedReligionId:
   type: integer
   example: 1
-  description: Relationship to Religion
+  description: Relationship to general-religion
 school_pensionSchemeTypeId:
   type: integer
   example: 1
-  description: Relationship to PensionSchemeType
+  description: Relationship to general-pensionSchemeType
 school_relocationAllowanceTypeId:
   type: integer
   example: 1
-  description: Relationship to SchoolRelocationAllowanceType
+  description: Relationship to school-relocationAllowanceType
 school_flightAllowanceTypeId:
   type: integer
   example: 1
-  description: Relationship to SchoolFlightAllowanceType
+  description: Relationship to school-flightAllowanceType
 school_managedByUserId:
   type: integer
   example: 1
@@ -350,7 +350,7 @@ school_ambassadorTeacherId:
 school_lraUserId:
   type: integer
   example: 1
-  description: Relationship to Adviser
+  description: Relationship to user
 school_creationUserId:
   type: integer
   example: 1
@@ -385,7 +385,7 @@ school_phoneCodeCountry:
     id:
       type: string
       example: "1"
-      description: Relationship to Country
+      description: Relationship to regional-country
   required:
     - id
 school_internationalWorkingCurrency:
@@ -395,7 +395,7 @@ school_internationalWorkingCurrency:
     id:
       type: string
       example: "1"
-      description: Relationship to Currency
+      description: Relationship to general-internationalWorkingCurrency
   required:
     - id
 school_fundingType:
@@ -405,7 +405,7 @@ school_fundingType:
     id:
       type: string
       example: "1"
-      description: Relationship to SchoolFundingTypes
+      description: Relationship to school-fundingType
   required:
     - id
 school_studentGenderMix:
@@ -415,7 +415,7 @@ school_studentGenderMix:
     id:
       type: string
       example: "1"
-      description: Relationship to SchoolStudentGenderMix
+      description: Relationship to school-studentGenderMix
   required:
     - id
 school_affiliatedReligion:
@@ -425,7 +425,7 @@ school_affiliatedReligion:
     id:
       type: string
       example: "1"
-      description: Relationship to Religion
+      description: Relationship to general-religion
   required:
     - id
 school_pensionSchemeType:
@@ -435,7 +435,7 @@ school_pensionSchemeType:
     id:
       type: string
       example: "1"
-      description: Relationship to PensionSchemeType
+      description: Relationship to general-pensionSchemeType
   required:
     - id
 school_relocationAllowanceType:
@@ -445,7 +445,7 @@ school_relocationAllowanceType:
     id:
       type: string
       example: "1"
-      description: Relationship to SchoolRelocationAllowanceType
+      description: Relationship to school-relocationAllowanceType
   required:
     - id
 
@@ -456,7 +456,7 @@ school_flightAllowanceType:
     id:
       type: string
       example: "1"
-      description: Relationship to SchoolFlightAllowanceType
+      description: Relationship to school-flightAllowanceType
   required:
     - id
 school_managedByUser:
@@ -488,7 +488,7 @@ school_lraUser:
     id:
       type: string
       example: "1"
-      description: Relationship to Adviser
+      description: Relationship to user
   required:
     - id
 school_creationUser:

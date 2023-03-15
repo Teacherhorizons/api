@@ -67,15 +67,15 @@ teacher_userId:
 teacher_teachingQualificationCountryId:
   type: integer
   example: 1
-  description: Relationship to Country
+  description: Relationship to country
 teacher_qualificationTypeId:
   type: integer
   example: 1
-  description: Relationship to QualificationType
+  description: Relationship to teacher-qualificationType
 teacher_jobSeekingStatusId:
   type: integer
   example: 1
-  description: Relationship to Status
+  description: Relationship to teacher-referenceStatus
 teacher_photoId:
   type: integer
   example: 1
@@ -83,15 +83,15 @@ teacher_photoId:
 teacher_maritalStatusId:
   type: integer
   example: 1
-  description: Relationship to status
+  description: Relationship to teacher-maritalStatus
 teacher_internationalSchoolExperienceId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: Relationship to teacher-internationalExperience
 teacher_userTypeId:
   type: integer
   example: 1
-  description: Relationship to userType
+  description: Relationship to user
 teacher_thDiscoveryMethodId:
   type: integer
   example: 1
@@ -139,7 +139,7 @@ teacher_qualificationType:
     id:
       type: string
       example: "1"
-      description: Relationship to QualificationType
+      description: Relationship to teacher-qualificationType
   required:
     - id
 
@@ -150,7 +150,7 @@ teacher_jobSeekingStatus:
     id:
       type: string
       example: "1"
-      description: Relationship to Status
+      description: Relationship to teacher-referenceStatus
   required:
     - id
 
@@ -172,7 +172,7 @@ teacher_maritalStatus:
     id:
       type: string
       example: "1"
-      description: ""
+      description: Relationship to teacher-maritalStatus
   required:
     - id
 
@@ -183,7 +183,7 @@ teacher_internationalSchoolExperience:
     id:
       type: string
       example: "1"
-      description: ""
+      description: Relationship to teacher-internationalExperience
   required:
     - id
 
@@ -194,7 +194,7 @@ teacher_userType:
     id:
       type: string
       example: "1"
-      description: Relationship to userType
+      description: Relationship to user
   required:
     - id
 

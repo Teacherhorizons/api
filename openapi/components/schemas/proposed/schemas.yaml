@@ -67,6 +67,8 @@ SimpleModels:
     - $ref: "../../models/simple/general/subjectGroup.yaml#/SimpleModel_general-subjectGroup"
     - $ref: "../../models/simple/general/weatherType.yaml#/SimpleModel_general-weatherType"
     - $ref: "../../models/simple/general/worldLanguage.yaml#/SimpleModel_general-worldLanguage"
+    - $ref: "../../models/simple/general/document.yaml#/SimpleModel_general-document"
+    - $ref: "../../models/simple/general/documentType.yaml#/SimpleModel_general-documentType"
 
     # application
     - $ref: "../../models/simple/application/application.yaml#/SimpleModel_application"
@@ -152,7 +154,8 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/documentCategory.yaml#/SimpleModel_teacher-documentCategory"
     - $ref: "../../models/simple/teacher/teacherDocument.yaml#/SimpleModel_teacher-teacherDocument"
     - $ref: "../../models/simple/teacher/teacherVideo.yaml#/SimpleModel_teacher-teacherVideo"
-    - $ref: "../../models/simple/teacher/teacherSkill.yaml#/SimpleModel_teacher-teacherSkill"
+    - $ref: "../../models/simple/teacher/computingSkill.yaml#/SimpleModel_teacher-computingSkill"
+    - $ref: "../../models/simple/teacher/teacherComputingSkill.yaml#/SimpleModel_teacher-teacherComputingSkill"
 
     # user
     - $ref: "../../models/simple/user/user.yaml#/SimpleModel_user"
@@ -168,6 +171,7 @@ SimpleModels:
     # job
     - $ref: "../../models/simple/job/job.yaml#/SimpleModel_job"
     - $ref: "../../models/simple/job/status.yaml#/SimpleModel_job-status"
+    - $ref: "../../models/simple/job/type.yaml#/SimpleModel_job-type"
 
     # meta
     - $ref: "../../models/simple/meta/entityType.yaml#/SimpleModel_meta-entityType"
@@ -229,6 +233,8 @@ JsonApiModels:
     - $ref: "../../models/json-api//general/nationalityGroup.yaml#/JsonApiModel_general-nationalityGroup"
     - $ref: "../../models/json-api//general/siteSetting.yaml#/JsonApiModel_general-siteSetting"
     - $ref: "../../models/json-api//general/weatherType.yaml#/JsonApiModel_general-weatherType"
+    - $ref: "../../models/json-api//general/document.yaml#/JsonApiModel_general-document"
+    - $ref: "../../models/json-api//general/documentType.yaml#/JsonApiModel_general-documentType"
 
     # school
     - $ref: "../../models/json-api/school/school.yaml#/JsonApiModel_school"
@@ -301,8 +307,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion"
     - $ref: "../../models/json-api/teacher/documentCategory.yaml#/JsonApiModel_teacher-documentCategory"
     - $ref: "../../models/json-api/teacher/teacherDocument.yaml#/JsonApiModel_teacher-teacherDocument"
-    - $ref: "../../models/json-api/teacher/teacherVideo.yaml#/JsonApiModel_teacher-teacherVideo"
-    - $ref: "../../models/json-api/teacher/teacherSkill.yaml#/JsonApiModel_teacher-teacherSkill"
+    - $ref: "../../models/json-api/teacher/computingSkill.yaml#/JsonApiModel_teacher-computingSkill"
+    - $ref: "../../models/json-api/teacher/teacherComputingSkill.yaml#/JsonApiModel_teacher-teacherComputingSkill"
 
     # user
     - $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user"
@@ -318,6 +324,7 @@ JsonApiModels:
     # job
     - $ref: "../../models/json-api/job/job.yaml#/JsonApiModel_job"
     - $ref: "../../models/json-api/job/status.yaml#/JsonApiModel_job-status"
+    - $ref: "../../models/json-api/job/type.yaml#/JsonApiModel_job-type"
 
     # meta
     - $ref: "../../models/json-api/meta/entityType.yaml#/JsonApiModel_meta-entityType"

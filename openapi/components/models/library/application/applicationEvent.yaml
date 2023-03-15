@@ -34,7 +34,7 @@ application-applicationEvent_typeId:
 application-applicationEvent_emailId:
   type: integer
   example: 1
-  description: Relationship to general-email
+  description: Relationship to general-autoEmail #check with RR
 
 application-applicationEvent_creationUserId:
   type: integer
@@ -76,7 +76,7 @@ application-applicationEvent_email:
     id:
       type: string
       example: "1"
-      description: Relationship to general-email
+      description: Relationship to general-autoEmail
   required:
     - id
 

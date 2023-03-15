@@ -1,0 +1,93 @@
+JsonApiModel_general-document:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_general-document_type"
+    id:
+      $ref: "#/JsonApiModel_general-document_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/general/document.yaml#/general-document_name"
+        filePath:
+          $ref: "../../library/general/document.yaml#/general-document_filePath"
+        creationDate:
+          $ref: "../../library/general/document.yaml#/general-document_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/general/document.yaml#/general-document_latestUpdateDate"
+        caption:
+          $ref: "../../library/general/document.yaml#/general-document_caption"
+        # relationship attributes
+        type:
+          $ref: "../general/documentType.yaml#/JsonApiModel_general-documentType_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        # simple attributes
+        - name
+        - filePath
+        - creationDate
+        - latestUpdateDate
+        - caption
+        # relationship attributes
+        - creationUser
+        - latestUpdateUser
+        - type
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "../general/documentType.yaml#/JsonApiModel_general-documentType_relationship"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_general-document_type:
+  type: string
+  example: general-document
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_general-document_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_general-document_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_general-document_id"
+  required:
+    - id
+
+JsonApiModel_general-document_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-document_type"
+        id:
+          $ref: "#/JsonApiModel_general-document_id"
+      required:
+        - type
+        - id
+  required:
+    - data
