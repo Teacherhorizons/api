@@ -5,21 +5,8 @@ SimpleModel_school-videoCategory:
     id:
       $ref: "#/SimpleModel_school-videoCategory_id"
     # simple attributes
-    url:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_url"
-    caption:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_caption"
-    creationDate:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateDate"
-    # relationship attributes
-    categoryId:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_categoryId"
-    creationUserId:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationUserId"
-    latestUpdateUserId:
-      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateUserId"
+    name:
+      $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_name"
   required:
     - id
 

@@ -13,32 +13,8 @@ JsonApiModel_school-videoCategory:
       additionalProperties: false
       properties:
         # simple attributes
-        url:
-          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_url"
-        caption:
-          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_caption"
-        creationDate:
-          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_creationDate"
-        latestUpdateDate:
-          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_latestUpdateDate"
-        # relationship attributes
-        category:
-          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_category"
-        creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        category:
-          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
-          #check "category" with Ryan
-        creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-        latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        name:
+          $ref: "../../library/school/videoCategory.yaml#/school-videoCategory_name"
   required:
     - type
     - id

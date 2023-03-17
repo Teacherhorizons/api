@@ -16,7 +16,7 @@ teacher-teacherNationalities_teacherId:
 teacher-teacherNationalities_nationalityId:
   type: integer
   example: 1
-  description: Relationship to teacher-badge
+  description: Relationship to general-nationality
 teacher-teacherNationalities_creationUserId:
   type: integer
   example: 1
@@ -45,7 +45,7 @@ teacher-teacherNationalities_nationality:
     id:
       type: string
       example: "1"
-      description: Relationship to teacher-badge
+      description: Relationship to general-nationality
   required: 
     - id
   

@@ -2,11 +2,11 @@
 school-schoolRequiredTeacherEducationLevel_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 school-schoolRequiredTeacherEducationLevel_educationLevelId:
   type: integer
   example: 1
-  description: Relationship to Teacher
+  description: Relationship to general-educationLevel
 
 # relatoinships
 school-schoolRequiredTeacherEducationLevel_school:
@@ -16,7 +16,7 @@ school-schoolRequiredTeacherEducationLevel_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
   
@@ -27,6 +27,6 @@ school-schoolRequiredTeacherEducationLevel_educationLevel:
     id:
       type: string
       example: "1"
-      description: Relationship to Teacher
+      description: Relationship to general-educationLevel
   required: 
     - id
