@@ -46,9 +46,8 @@ JsonApiModel_user:
         latestMessageViewDate:
           $ref: "../../library/user/user.yaml#/user_latestMessageViewDate"
         # relationship attributes
-        profile:
-          $ref: "../../library/user/user.yaml#/user_profile"
-          #profile - check with RR
+        type:
+          $ref: "../user/type.yaml#/JsonApiModel_user-type_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -59,8 +58,8 @@ JsonApiModel_user:
       type: object
       additionalProperties: false
       properties:
-        profile:
-          $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        type:
+          $ref: "../user/type.yaml#/JsonApiModel_user-type_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

@@ -56,10 +56,10 @@ user_latestMessageViewDate:
   example: 2017-04-06T10:57:04Z
 
 #relationship attributes
-user_profileId:
+user_typeId:
   type: integer
   example: 1
-  description: Relationship to Profile #check with RR
+  description: Relationship to user-type
 user_creationUserId:
   type: integer
   example: 1
@@ -74,14 +74,14 @@ user_phoneCodeCountryId:
   description: Relationship to regional-country
 
 #relationships
-user_profile:
+user_type:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: Relationship to profile
+      description: Relationship to user-type
   required: 
     - id
  

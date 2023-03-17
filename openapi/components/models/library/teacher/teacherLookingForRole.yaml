@@ -16,7 +16,7 @@ teacher-teacherLookingForRole_teacherId:
 teacher-teacherLookingForRole_roleId:
   type: integer
   example: 1
-  description: Relationship to teacher-badge
+  description: Relationship to general-role
 teacher-teacherLookingForRole_creationUserId:
   type: integer
   example: 1
@@ -45,7 +45,7 @@ teacher-teacherLookingForRole_role:
     id:
       type: string
       example: "1"
-      description: Relationship to teacher-badge
+      description: Relationship to general-role
   required: 
     - id
   

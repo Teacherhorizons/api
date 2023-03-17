@@ -20,7 +20,7 @@ teacher-teacherNote_teacherId:
 teacher-teacherNote_typeId:
   type: integer
   example: 1
-  description: Relationship to type
+  description: Relationship to teacher-noteType
 
 teacher-teacherNote_creationUserId:
   type: integer
@@ -51,7 +51,7 @@ teacher-teacherNote_type:
     id:
       type: string
       example: "1"
-      description: Relationship to type
+      description: Relationship to teacher-noteType
   required:
     - id
 
