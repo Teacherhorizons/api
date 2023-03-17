@@ -199,10 +199,20 @@ Response_regional-world_includedCountry_notSignedIn:
         - name
         - slug
         - photo1
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        region:
+          $ref: "../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship"
+      required:
+        - name
+        - region
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_regional-world_includedAmbassador_notSignedIn:
   type: object
