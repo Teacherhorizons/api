@@ -17,12 +17,12 @@ school-flightAllowanceType_latestUpdateDate:
 school-flightAllowanceType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-flightAllowanceType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-flightAllowanceType_creationUser:
   type: object
@@ -31,7 +31,7 @@ school-flightAllowanceType_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -42,7 +42,7 @@ school-flightAllowanceType_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   

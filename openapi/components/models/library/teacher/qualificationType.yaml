@@ -17,12 +17,12 @@ teacher-qualificationType_latestUpdateDate:
 teacher-qualificationType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 teacher-qualificationType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 teacher-qualificationType_creationUser:
@@ -32,7 +32,7 @@ teacher-qualificationType_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
   
@@ -43,7 +43,7 @@ teacher-qualificationType_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 

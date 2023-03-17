@@ -18,17 +18,17 @@ school-teachingLanguage_latestUpdateDate:
 school-teachingLanguage_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: Relationship to school
 
 school-teachingLanguage_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 school-teachingLanguage_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: Relationship to user
 
 #relationships
 school-teachingLanguage_school:
@@ -38,7 +38,7 @@ school-teachingLanguage_school:
     id:
       type: string
       example: "1"
-      description: Relationship to School
+      description: Relationship to school
   required: 
     - id
 
@@ -49,7 +49,7 @@ school-teachingLanguage_creationUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
 
@@ -60,6 +60,6 @@ school-teachingLanguage_latestUpdateUser:
     id:
       type: string
       example: "1"
-      description: Relationship to User
+      description: Relationship to user
   required: 
     - id
