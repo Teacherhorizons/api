@@ -211,6 +211,7 @@ JsonApiModel_regional-region_admin:
       type: object
       additionalProperties: false
       properties:
+        # single
         photo1:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         creationUser:
@@ -219,6 +220,17 @@ JsonApiModel_regional-region_admin:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         ambassadorTeacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        # multiple
+        staff:
+          $ref: "../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+        countries:
+          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
+        jobs:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_multiple"
+        schools:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_multiple"
+        ambassadors:
+          $ref: "../teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
   required:
     - schema
     - type
