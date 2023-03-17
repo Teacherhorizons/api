@@ -293,6 +293,11 @@ school_hasThSaferRecruitmentBadgeOnOwnWebsite:
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
+school_accreditationRating:
+  type: integer
+  example: 3
+  minimum: 1
+  maximum: 5
 school_creationDate:
   type: string
   format: date-time
