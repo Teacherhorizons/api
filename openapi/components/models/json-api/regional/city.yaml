@@ -286,6 +286,7 @@ JsonApiModel_regional-city_admin:
       type: object
       additionalProperties: false
       properties:
+        #single
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
@@ -300,6 +301,23 @@ JsonApiModel_regional-city_admin:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         # nearestWeatherStationId:
         #   $ref: "../../library/general/weather.yaml#/general-weather_relationship"
+        # multiple
+        staff:
+          $ref: "../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+        photos:
+          $ref: "../regional/cityPhoto.yaml#/JsonApiModel_regional-cityPhoto_relationship_multiple"
+        countryPhotos:
+          $ref: "../regional/countryPhoto.yaml#/JsonApiModel_regional-countryPhoto_relationship_multiple"
+        jobs:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_multiple"
+        schools:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_multiple"
+        ambassadors:
+          $ref: "../teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
+        attractions:
+          $ref: "../regional/cityAttraction.yaml#/JsonApiModel_regional-cityAttraction_relationship_multiple"
+        climate:
+          $ref: "../regional/cityMonthNumber.yaml#/JsonApiModel_regional-cityMonthNumber_relationship_multiple"
   required:
     - schema
     - type
