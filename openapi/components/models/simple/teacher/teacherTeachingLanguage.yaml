@@ -1,0 +1,20 @@
+SimpleModel_teacher-teacherTeachingLanguage:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherTeachingLanguage_id"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherTeachingLanguage.yaml#/teacher-teacherTeachingLanguage_teacherId"
+    teachingLanguageId:
+      $ref: "../../library/teacher/teacherTeachingLanguage.yaml#/teacher-teacherTeachingLanguage_teachingLanguageId"
+  required:
+    - id
+
+# shared
+SimpleModel_teacher-teacherTeachingLanguage_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
