@@ -181,6 +181,7 @@ SimpleModels:
     - $ref: "../../models/simple/meta/entityChange.yaml#/SimpleModel_meta-entityChange"
     - $ref: "../../models/simple/meta/entityChangeSummary.yaml#/SimpleModel_meta-entityChangeSummary"
     - $ref: "../../models/simple/meta/entityChangeSummarySubscription.yaml#/SimpleModel_meta-entityChangeSummarySubscription"
+    - $ref: "../../models/simple/meta/cachedObject.yaml#/SimpleModel_meta-cachedObject"
 
 JsonApiModels:
   anyOf:
@@ -338,3 +339,4 @@ JsonApiModels:
     - $ref: "../../models/json-api/meta/entityChange.yaml#/JsonApiModel_meta-entityChange"
     - $ref: "../../models/json-api/meta/entityChangeSummary.yaml#/JsonApiModel_meta-entityChangeSummary"
     - $ref: "../../models/json-api/meta/entityChangeSummarySubscription.yaml#/JsonApiModel_meta-entityChangeSummarySubscription"
+    - $ref: "../../models/json-api/meta/cachedObject.yaml#/JsonApiModel_meta-cachedObject"

@@ -815,6 +815,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChangeSummarySubscription" />
 
+  - name: simple-model-meta-cachedObject
+    x-displayName: Simple model - meta-cachedObject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-cachedObject" /> 
+
   #   # JSON:API models
 
   # tags - JSON:API models - application
@@ -1525,6 +1530,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummarySubscription" />
 
+  - name: json-api-model-meta-cachedObject
+    x-displayName: JSON:API model - meta-cachedObject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-cachedObject" />
+
 x-tagGroups:
   - name: Simple models
     tags:
@@ -1672,6 +1682,7 @@ x-tagGroups:
       - simple-model-meta-entityChangeSummary
       - simple-model-meta-entityChangeSummarySubscription
       - simple-model-meta-manualEmailTemplate
+      - simple-model-meta-cachedObject
 
   - name: JSON:API models
     tags:
@@ -1815,6 +1826,7 @@ x-tagGroups:
       - json-api-model-meta-entityChangeSummary
       - json-api-model-meta-entityChangeSummarySubscription
       - json-api-model-meta-manualEmailTemplate
+      - json-api-model-meta-cachedObject
 
   - name: API (JsonApi)
     tags:
