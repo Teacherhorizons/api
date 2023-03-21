@@ -1,0 +1,58 @@
+JsonApiModel_teacher-teachingSkill:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teachingSkill_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teachingSkill_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/teachingSkill.yaml#/teacher-teachingSkill_name"
+  required:
+    - type
+    - id
+
+# type, id, relationship and relationship_attribute
+JsonApiModel_teacher-teachingSkill_type:
+  type: string
+  example: teacher-teachingSkill
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-teachingSkill_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-teachingSkill_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-teachingSkill_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-teachingSkill_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+
+JsonApiModel_teacher-teachingSkill_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-teachingSkill_id"
+  required:
+    - id

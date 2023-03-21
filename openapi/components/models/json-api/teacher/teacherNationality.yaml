@@ -1,20 +1,20 @@
-JsonApiModel_teacher-teacherNationalities:
+JsonApiModel_teacher-teacherNationality:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-teacherNationalities_type"
+      $ref: "#/JsonApiModel_teacher-teacherNationality_type"
     id:
-      $ref: "#/JsonApiModel_teacher-teacherNationalities_id"
+      $ref: "#/JsonApiModel_teacher-teacherNationality_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_creationDate"  
+          $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_creationDate"  
         latestUpdateDate:
-          $ref: "../../library/teacher/teacherNationalities.yaml#/teacher-teacherNationalities_latestUpdateDate"
+          $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_latestUpdateDate"
         # relationship attributes
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
@@ -40,13 +40,13 @@ JsonApiModel_teacher-teacherNationalities:
     - type
     - id
 
-JsonApiModel_teacher-teacherNationalities_type:
+JsonApiModel_teacher-teacherNationality_type:
   type: string
-  example: teacher-teacherNationalities
+  example: teacher-teacherNationality
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_teacher-teacherNationalities_id:
+JsonApiModel_teacher-teacherNationality_id:
   type: string
   example: "1"
   readOnly: true

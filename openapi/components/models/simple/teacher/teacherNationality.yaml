@@ -1,0 +1,29 @@
+SimpleModel_teacher-teacherNationality:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherNationality_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_latestUpdateDate"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_teacherId"
+    nationalityId:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_nationalityId"
+    creationUserId:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherNationality.yaml#/teacher-teacherNationality_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_teacher-teacherNationality_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

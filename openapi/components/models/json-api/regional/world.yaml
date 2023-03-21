@@ -137,9 +137,21 @@ JsonApiModel_regional-world:
     relationships:
       type: object
       additionalProperties: false
-      properties:      
+      properties:   
+        #single   
         photo1:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+        #multiple
+        staff:
+          $ref: "../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+        regions:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple"
+        jobs:
+          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_multiple"
+        schools:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_multiple"
+        ambassadors:
+          $ref: "../teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
   required:
     - type
     - id

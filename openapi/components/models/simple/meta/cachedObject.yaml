@@ -1,0 +1,14 @@
+SimpleModel_meta-cachedObject:
+  type: object
+  additionalProperties: false
+  properties:
+    # simple attributes
+    key:
+      $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_key"
+    object:
+      $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_object"
+    durationInSeconds:
+      $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_durationInSeconds"
+  required:
+    - key
+    - object

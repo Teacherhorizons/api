@@ -1,33 +1,33 @@
 #attributes
-teacher-teacherNationalities_creationDate:
+teacher-teacherNationality_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-teacher-teacherNationalities_latestUpdateDate:
+teacher-teacherNationality_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
-teacher-teacherNationalities_teacherId:
+teacher-teacherNationality_teacherId:
   type: integer
   example: 1
   description: Relationship to teacher
-teacher-teacherNationalities_nationalityId:
+teacher-teacherNationality_nationalityId:
   type: integer
   example: 1
   description: Relationship to general-nationality
-teacher-teacherNationalities_creationUserId:
+teacher-teacherNationality_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherNationalities_latestUpdateUserId:
+teacher-teacherNationality_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 #relationships
-teacher-teacherNationalities_teacher:
+teacher-teacherNationality_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -38,7 +38,7 @@ teacher-teacherNationalities_teacher:
   required: 
     - id
   
-teacher-teacherNationalities_nationality:
+teacher-teacherNationality_nationality:
   type: object
   additionalProperties: false
   properties:
@@ -49,7 +49,7 @@ teacher-teacherNationalities_nationality:
   required: 
     - id
   
-teacher-teacherNationalities_creationUser:
+teacher-teacherNationality_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -60,7 +60,7 @@ teacher-teacherNationalities_creationUser:
   required: 
     - id
   
-teacher-teacherNationalities_latestUpdateUser:
+teacher-teacherNationality_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

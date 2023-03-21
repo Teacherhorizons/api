@@ -136,7 +136,7 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/teacherLookingForSubject.yaml#/SimpleModel_teacher-teacherLookingForSubject"
     - $ref: "../../models/simple/teacher/teacherBadge.yaml#/SimpleModel_teacher-teacherBadge"
     - $ref: "../../models/simple/teacher/teacherLookingForRole.yaml#/SimpleModel_teacher-teacherLookingForRole"
-    - $ref: "../../models/simple/teacher/teacherNationalities.yaml#/SimpleModel_teacher-teacherNationalities"
+    - $ref: "../../models/simple/teacher/teacherNationality.yaml#/SimpleModel_teacher-teacherNationality"
     # - $ref: "../../models/simple/teacher/teacherAdditionalPhotoCategory.yaml#/SimpleModel_teacher-teacherAdditionalPhotoCategory"
     - $ref: "../../models/simple/teacher/teacherPhoto.yaml#/SimpleModel_teacher-teacherPhoto"
     - $ref: "../../models/simple/teacher/teacherEducationLevel.yaml#/SimpleModel_teacher-teacherEducationLevel"
@@ -156,6 +156,9 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/teacherVideo.yaml#/SimpleModel_teacher-teacherVideo"
     - $ref: "../../models/simple/teacher/computingSkill.yaml#/SimpleModel_teacher-computingSkill"
     - $ref: "../../models/simple/teacher/teacherComputingSkill.yaml#/SimpleModel_teacher-teacherComputingSkill"
+    - $ref: "../../models/simple/teacher/teacherTeachingSkill.yaml#/SimpleModel_teacher-teacherTeachingSkill"
+    - $ref: "../../models/simple/teacher/teachingSkill.yaml#/SimpleModel_teacher-teachingSkill"
+    - $ref: "../../models/simple/teacher/teacherTeachingLanguage.yaml#/SimpleModel_teacher-teacherTeachingLanguage"
 
     # user
     - $ref: "../../models/simple/user/user.yaml#/SimpleModel_user"
@@ -178,6 +181,7 @@ SimpleModels:
     - $ref: "../../models/simple/meta/entityChange.yaml#/SimpleModel_meta-entityChange"
     - $ref: "../../models/simple/meta/entityChangeSummary.yaml#/SimpleModel_meta-entityChangeSummary"
     - $ref: "../../models/simple/meta/entityChangeSummarySubscription.yaml#/SimpleModel_meta-entityChangeSummarySubscription"
+    - $ref: "../../models/simple/meta/cachedObject.yaml#/SimpleModel_meta-cachedObject"
 
 JsonApiModels:
   anyOf:
@@ -291,7 +295,7 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/teacherLookingForSubject.yaml#/JsonApiModel_teacher-teacherLookingForSubject"
     - $ref: "../../models/json-api/teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge"
     - $ref: "../../models/json-api/teacher/teacherLookingForRole.yaml#/JsonApiModel_teacher-teacherLookingForRole"
-    - $ref: "../../models/json-api/teacher/teacherNationalities.yaml#/JsonApiModel_teacher-teacherNationalities"
+    - $ref: "../../models/json-api/teacher/teacherNationality.yaml#/JsonApiModel_teacher-teacherNationality"
     # - $ref: "../../models/json-api/teacher/teacherAdditionalPhotoCategory.yaml#/JsonApiModel_teacher-teacherAdditionalPhotoCategory"
     - $ref: "../../models/json-api/teacher/teacherPhoto.yaml#/JsonApiModel_teacher-teacherPhoto"
     - $ref: "../../models/json-api/teacher/teacherEducationLevel.yaml#/JsonApiModel_teacher-teacherEducationLevel"
@@ -309,6 +313,9 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/teacherDocument.yaml#/JsonApiModel_teacher-teacherDocument"
     - $ref: "../../models/json-api/teacher/computingSkill.yaml#/JsonApiModel_teacher-computingSkill"
     - $ref: "../../models/json-api/teacher/teacherComputingSkill.yaml#/JsonApiModel_teacher-teacherComputingSkill"
+    - $ref: "../../models/json-api/teacher/teacherTeachingSkill.yaml#/JsonApiModel_teacher-teacherTeachingSkill"
+    - $ref: "../../models/json-api/teacher/teachingSkill.yaml#/JsonApiModel_teacher-teachingSkill"
+    - $ref: "../../models/json-api/teacher/teacherTeachingLanguage.yaml#/JsonApiModel_teacher-teacherTeachingLanguage"
 
     # user
     - $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user"
@@ -331,3 +338,4 @@ JsonApiModels:
     - $ref: "../../models/json-api/meta/entityChange.yaml#/JsonApiModel_meta-entityChange"
     - $ref: "../../models/json-api/meta/entityChangeSummary.yaml#/JsonApiModel_meta-entityChangeSummary"
     - $ref: "../../models/json-api/meta/entityChangeSummarySubscription.yaml#/JsonApiModel_meta-entityChangeSummarySubscription"
+    - $ref: "../../models/json-api/meta/cachedObject.yaml#/JsonApiModel_meta-cachedObject"

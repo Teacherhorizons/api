@@ -1,0 +1,18 @@
+SimpleModel_teacher-teachingSkill:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teachingSkill_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/teachingSkill.yaml#/teacher-teachingSkill_name"
+  required:
+    - id
+    
+# shared
+SimpleModel_teacher-teachingSkill_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
