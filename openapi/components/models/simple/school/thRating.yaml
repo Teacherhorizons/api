@@ -1,18 +1,11 @@
+# TODO: add non-restrictive schema
+
 SimpleModel_school-thRating:
   type: object
   additionalProperties: false
   properties:
-    id:
-      $ref: "#/SimpleModel_school-thRating_id"
     # simple attributes
-    name:
-      $ref: "../../library/school/thRating.yaml#/school-thRating_thRating"
+    value:
+      $ref: "../../library/school/thRating.yaml#/school-thRating_value"
   required:
     - id
-
-# shared
-SimpleModel_school-thRating_id:
-  type: integer
-  example: 1
-  readOnly: true
-  description: Unique identifier of the object

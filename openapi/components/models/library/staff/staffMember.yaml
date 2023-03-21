@@ -11,14 +11,13 @@ staff-staffMember_description:
 staff-staffMember_roleTitle:
   type: integer
   example: Kindergarten Teacher
+staff-staffMember_salesforceUserIdString:
+  type: string
+  example: a0DD000000Y4zYh
+  description: Value of id in Salesforce
 
 #relationship attribute
 staff-staffMember_userId:
-  type: integer
-  example: 1
-  description: Relationship to user
-
-staff-staffMember_salesforceUserId:
   type: integer
   example: 1
   description: Relationship to user

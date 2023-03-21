@@ -13,6 +13,8 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
     roleTitle:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle"
+    salesforceUserIdString:
+      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserIdString"
     # relationship attributes
     userId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_userId"
@@ -20,8 +22,6 @@ SimpleModel_staff-staffMember:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCityId"
     currentCountryId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCountryId"
-    salesforceUserId:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserId"
     photoId:
       $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoId"
   required:
