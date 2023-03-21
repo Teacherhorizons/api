@@ -24,6 +24,10 @@
 /application-eventTypeActions:
   $ref: "./../paths/application/eventTypeActions.yaml"
 
+#meta
+/meta-cachedObject/{cachedObjectId}:
+  $ref: "./../paths/meta/cachedObject.yaml"
+
 #general
 /general-currencies:
   $ref: "./../paths/general/currencies.yaml"

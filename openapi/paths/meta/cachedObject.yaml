@@ -1,0 +1,31 @@
+delete:
+  operationId: delete-meta-cachedObject
+  summary: Delete a cached object
+  tags:
+    - meta
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - in: path
+      name: cachedObjectId
+      required: true
+      example: 1
+      schema:
+        type: integer 
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+  responses:
+    "204":
+      $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
+    "403":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
+    "413":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
+    "422":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
