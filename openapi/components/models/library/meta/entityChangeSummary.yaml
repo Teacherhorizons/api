@@ -24,6 +24,14 @@ meta-entityChangeSummary_entityId:
   type: integer
   example: 1
   description: Relationship to the meta-entityType #check with RR
+meta-entityChangeSummary_typeId:
+  type: integer
+  example: 1
+  description: Relationship to meta-entityChangeType
+meta-entityChangeSummary_userId:
+  type: integer
+  example: 1
+  description: Relationship to user
 
 #relationship attributes
 meta-entityChangeSummary_entityType:

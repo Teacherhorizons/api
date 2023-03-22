@@ -26,6 +26,8 @@ JsonApiModel_school-schoolVideo:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -36,6 +38,8 @@ JsonApiModel_school-schoolVideo:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
   required:
     - type
     - id

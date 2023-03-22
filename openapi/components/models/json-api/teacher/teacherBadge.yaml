@@ -13,16 +13,12 @@ JsonApiModel_teacher-teacherBadge:
         # simple attributes
         creationDate:
           $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_creationDate"  
-        latestUpdateDate:
-          $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_latestUpdateDate"
         # relationship attributes
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         teacherBadge:
           $ref: "../teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge_relationship_attribute"
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
       type: object

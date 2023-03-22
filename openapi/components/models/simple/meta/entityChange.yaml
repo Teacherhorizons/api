@@ -17,6 +17,8 @@ SimpleModel_meta-entityChange:
       # TODO RR: think about how to do this better (this attribute is an exception)
     userId:
       $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_userId"
+    typeId:
+      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_typeId"
   required:
     - id
 

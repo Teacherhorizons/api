@@ -815,6 +815,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChangeSummarySubscription" />
 
+  - name: simple-model-meta-entityChangeType
+    x-displayName: Simple model - meta-entityChangeType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-entityChangeType" />
+
   - name: simple-model-meta-cachedObject
     x-displayName: Simple model - meta-cachedObject
     description: |
@@ -1525,6 +1530,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeSummarySubscription" />
 
+  - name: json-api-model-meta-entityChangeType
+    x-displayName: JSON:API model - meta-entityChangeType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-entityChangeType" />
+
   - name: json-api-model-meta-cachedObject
     x-displayName: JSON:API model - meta-cachedObject
     description: |
@@ -1676,6 +1686,7 @@ x-tagGroups:
       - simple-model-meta-entityChange
       - simple-model-meta-entityChangeSummary
       - simple-model-meta-entityChangeSummarySubscription
+      - simple-model-meta-entityChangeType
       - simple-model-meta-manualEmailTemplate
       - simple-model-meta-cachedObject
 
@@ -1820,6 +1831,7 @@ x-tagGroups:
       - json-api-model-meta-entityChange
       - json-api-model-meta-entityChangeSummary
       - json-api-model-meta-entityChangeSummarySubscription
+      - json-api-model-meta-entityChangeType
       - json-api-model-meta-manualEmailTemplate
       - json-api-model-meta-cachedObject
 

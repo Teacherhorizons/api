@@ -1,0 +1,57 @@
+JsonApiModel_meta-entityChangeType:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_meta-entityChangeType_type"
+    id:
+      $ref: "#/JsonApiModel_meta-entityChangeType_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/meta/entityChangeType.yaml#/meta-entityChangeType_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_meta-entityChangeType_type:
+  type: string
+  example: meta-entityChangeType
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_meta-entityChangeType_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_meta-entityChangeType_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_meta-entityChangeType_id"
+  required:
+    - id
+
+JsonApiModel_meta-entityChangeType_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_meta-entityChangeType_type"
+        id:
+          $ref: "#/JsonApiModel_meta-entityChangeType_id"
+      required:
+        - type
+        - id
+  required:
+    - data

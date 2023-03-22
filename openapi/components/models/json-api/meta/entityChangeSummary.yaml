@@ -25,6 +25,10 @@ JsonApiModel_meta-entityChangeSummary:
         entity:
           $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
           # TODO RR: think about how to do this better (this attribute is an exception)
+        type:
+          $ref: "../meta/entityChangeType.yaml#/JsonApiModel_meta-entityChangeType_relationship_attribute"
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -33,6 +37,10 @@ JsonApiModel_meta-entityChangeSummary:
           $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
         entity:
           $ref: "../../../schemas/proposed/simple-models/helpers/json-api.yaml#/RelToOne"
+        type:
+          $ref: "../meta/entityChangeType.yaml#/JsonApiModel_meta-entityChangeType_relationship"
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
   required:
     - type
     - id

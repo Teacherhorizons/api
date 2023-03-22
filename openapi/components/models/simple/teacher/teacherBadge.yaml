@@ -7,8 +7,6 @@ SimpleModel_teacher-teacherBadge:
     # simple attributes
     creationDate:
       $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_latestUpdateDate"
     # relationship attributes
     teacherId:
       $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_teacherId"
@@ -16,8 +14,6 @@ SimpleModel_teacher-teacherBadge:
       $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_teacherBadgeId"
     creationUserId:
       $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_creationUserId"
-    latestUpdateUserId:
-      $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_latestUpdateUserId"
   required:
     - id
 

@@ -1,0 +1,18 @@
+SimpleModel_meta-entityChangeType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_meta-entityChangeType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/meta/entityChangeType.yaml#/meta-entityChangeType_name"
+  required:
+    - id
+# shared
+
+SimpleModel_meta-entityChangeType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

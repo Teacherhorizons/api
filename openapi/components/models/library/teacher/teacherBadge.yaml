@@ -3,10 +3,6 @@ teacher-teacherBadge_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-teacher-teacherBadge_latestUpdateDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:34Z
 
 #relationship attributes 
 teacher-teacherBadge_teacherId:
@@ -18,10 +14,6 @@ teacher-teacherBadge_teacherBadgeId:
   example: 1
   description: Relationship to teacher-badge
 teacher-teacherBadge_creationUserId:
-  type: integer
-  example: 1
-  description: Relationship to user
-teacher-teacherBadge_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
@@ -48,16 +40,6 @@ teacher-teacherBadge_teacherBadge:
   required: 
     - id
 teacher-teacherBadge_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to user
-  required: 
-    - id
-teacher-teacherBadge_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
