@@ -659,11 +659,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-internationalExperience" />
 
-  - name: simple-model-teacher-teacherCurriculumType
-    x-displayName: Simple model - teacher-teacherCurriculumType
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherCurriculumType" />
-
   - name: simple-model-teacher-teacherPreferredLocation
     x-displayName: Simple model - teacher-teacherPreferredLocation
     description: |
@@ -744,7 +739,15 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherTeachingLanguage" />     
 
+  - name: simple-model-teacher-teacherExperienceCurriculum
+    x-displayName: Simple model - teacher-teacherExperienceCurriculum
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherExperienceCurriculum" />
 
+  - name: simple-model-teacher-teacherLookingForCurriculum
+    x-displayName: Simple model - teacher-teacherLookingForCurriculum
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForCurriculum" />
 
   #   # tags - simple-models - users
 
@@ -1203,11 +1206,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-internationalExperience" />
 
-  - name: json-api-model-teacher-teacherCurriculumType
-    x-displayName: JSON:API model - teacher-teacherCurriculumType
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherCurriculumType" />
-
   - name: json-api-model-teacher-teacherPreferredLocation
     x-displayName: JSON:API model - teacher-teacherPreferredLocation
     description: |
@@ -1288,6 +1286,15 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherTeachingLanguage" />  
 
+  - name: json-api-model-teacher-teacherExperienceCurriculum
+    x-displayName: JSON:API model - teacher-teacherExperienceCurriculum
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherExperienceCurriculum" />  
+      
+  - name: json-api-model-teacher-teacherLookingForCurriculum
+    x-displayName: JSON:API model - teacher-teacherLookingForCurriculum
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForCurriculum" /> 
 
   # tags - JSON:API models - school
 
@@ -1653,7 +1660,6 @@ x-tagGroups:
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
       - simple-model-teacher-internationalExperience
-      - simple-model-teacher-teacherCurriculumType
       - simple-model-teacher-teacherPreferredLocation
       - simple-model-teacher-numberOfDependentChildren
       - simple-model-teacher-maritalStatus
@@ -1670,6 +1676,8 @@ x-tagGroups:
       - simple-model-teacher-teacherTeachingSkill
       - simple-model-teacher-teachingSkill
       - simple-model-teacher-teacherTeachingLanguage
+      - simple-model-teacher-teacherExperienceCurriculum
+      - simple-model-teacher-teacherLookingForCurriculum
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -1797,7 +1805,6 @@ x-tagGroups:
       - json-api-model-teacher-photoCategory
       - json-api-model-teacher-teacherEducationLevel
       - json-api-model-teacher-internationalExperience
-      - json-api-model-teacher-teacherCurriculumType
       - json-api-model-teacher-teacherPreferredLocation
       - json-api-model-teacher-numberOfDependentChildren
       - json-api-model-teacher-maritalStatus
@@ -1815,6 +1822,8 @@ x-tagGroups:
       - json-api-model-teacher-teacherTeachingSkill
       - json-api-model-teacher-teachingSkill
       - json-api-model-teacher-teacherTeachingLanguage
+      - json-api-model-teacher-teacherExperienceCurriculum
+      - json-api-model-teacher-teacherLookingForCurriculum
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
