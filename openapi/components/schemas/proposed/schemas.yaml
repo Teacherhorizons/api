@@ -141,7 +141,6 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/teacherPhoto.yaml#/SimpleModel_teacher-teacherPhoto"
     - $ref: "../../models/simple/teacher/teacherEducationLevel.yaml#/SimpleModel_teacher-teacherEducationLevel"
     - $ref: "../../models/simple/teacher/internationalExperience.yaml#/SimpleModel_teacher-internationalExperience"
-    - $ref: "../../models/simple/teacher/teacherCurriculum.yaml#/SimpleModel_teacher-teacherCurriculum"
     - $ref: "../../models/simple/teacher/teacherPreferredLocation.yaml#/SimpleModel_teacher-teacherPreferredLocation"
     - $ref: "../../models/simple/teacher/numberOfDependentChildren.yaml#/SimpleModel_teacher-numberOfDependentChildren"
     - $ref: "../../models/simple/teacher/maritalStatus.yaml#/SimpleModel_teacher-maritalStatus"
@@ -159,6 +158,8 @@ SimpleModels:
     - $ref: "../../models/simple/teacher/teacherTeachingSkill.yaml#/SimpleModel_teacher-teacherTeachingSkill"
     - $ref: "../../models/simple/teacher/teachingSkill.yaml#/SimpleModel_teacher-teachingSkill"
     - $ref: "../../models/simple/teacher/teacherTeachingLanguage.yaml#/SimpleModel_teacher-teacherTeachingLanguage"
+    - $ref: "../../models/simple/teacher/teacherExperienceCurriculum.yaml#/SimpleModel_teacher-teacherExperienceCurriculum"
+    - $ref: "../../models/simple/teacher/teacherLookingForCurriculum.yaml#/SimpleModel_teacher-teacherLookingForCurriculum"
 
     # user
     - $ref: "../../models/simple/user/user.yaml#/SimpleModel_user"
@@ -301,7 +302,6 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/teacherPhoto.yaml#/JsonApiModel_teacher-teacherPhoto"
     - $ref: "../../models/json-api/teacher/teacherEducationLevel.yaml#/JsonApiModel_teacher-teacherEducationLevel"
     - $ref: "../../models/json-api/teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience"
-    - $ref: "../../models/json-api/teacher/teacherCurriculum.yaml#/JsonApiModel_teacher-teacherCurriculum"
     - $ref: "../../models/json-api/teacher/teacherPreferredLocation.yaml#/JsonApiModel_teacher-teacherPreferredLocation"
     - $ref: "../../models/json-api/teacher/numberOfDependentChildren.yaml#/JsonApiModel_teacher-numberOfDependentChildren"
     - $ref: "../../models/json-api/teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus"
@@ -317,6 +317,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/teacher/teacherTeachingSkill.yaml#/JsonApiModel_teacher-teacherTeachingSkill"
     - $ref: "../../models/json-api/teacher/teachingSkill.yaml#/JsonApiModel_teacher-teachingSkill"
     - $ref: "../../models/json-api/teacher/teacherTeachingLanguage.yaml#/JsonApiModel_teacher-teacherTeachingLanguage"
+    - $ref: "../../models/json-api/teacher/teacherExperienceCurriculum.yaml#/JsonApiModel_teacher-teacherExperienceCurriculum"
+    - $ref: "../../models/json-api/teacher/teacherLookingForCurriculum.yaml#/JsonApiModel_teacher-teacherLookingForCurriculum"
 
     # user
     - $ref: "../../models/json-api/user/user.yaml#/JsonApiModel_user"
