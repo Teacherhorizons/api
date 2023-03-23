@@ -383,10 +383,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-communityQuestion" />
 
-  - name: simple-model-school-curriculumType
-    x-displayName: Simple model - school-curriculumType
+  - name: simple-model-school-curriculum
+    x-displayName: Simple model - school-curriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-curriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-curriculum" />
 
   - name: simple-model-school-facility
     x-displayName: Simple model - school-facility
@@ -408,10 +408,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolCommunityResponse" />
 
-  - name: simple-model-school-schoolCurriculumType
-    x-displayName: Simple model - school-schoolCurriculumType
+  - name: simple-model-school-schoolCurriculum
+    x-displayName: Simple model - school-schoolCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolCurriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolCurriculum" />
 
   - name: simple-model-school-schoolEmploymentAdvantage
     x-displayName: Simple model - school-schoolEmploymentAdvantage
@@ -659,10 +659,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-internationalExperience" />
 
-  - name: simple-model-teacher-teacherCurriculumType
-    x-displayName: Simple model - teacher-teacherCurriculumType
+  - name: simple-model-teacher-teacherCurriculum
+    x-displayName: Simple model - teacher-teacherCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherCurriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherCurriculum" />
 
   - name: simple-model-teacher-teacherPreferredLocation
     x-displayName: Simple model - teacher-teacherPreferredLocation
@@ -1203,10 +1203,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-internationalExperience" />
 
-  - name: json-api-model-teacher-teacherCurriculumType
-    x-displayName: JSON:API model - teacher-teacherCurriculumType
+  - name: json-api-model-teacher-teacherCurriculum
+    x-displayName: JSON:API model - teacher-teacherCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherCurriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherCurriculum" />
 
   - name: json-api-model-teacher-teacherPreferredLocation
     x-displayName: JSON:API model - teacher-teacherPreferredLocation
@@ -1306,10 +1306,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-communityQuestion" />
 
-  - name: json-api-model-school-curriculumType
-    x-displayName: JSON:API model - school-curriculumType
+  - name: json-api-model-school-curriculum
+    x-displayName: JSON:API model - school-curriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-curriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-curriculum" />
 
   - name: json-api-model-school-facility
     x-displayName: JSON:API model - school-facility
@@ -1331,10 +1331,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCommunityResponse" />
 
-  - name: json-api-model-school-schoolCurriculumType
-    x-displayName: JSON:API model - school-schoolCurriculumType
+  - name: json-api-model-school-schoolCurriculum
+    x-displayName: JSON:API model - school-schoolCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCurriculumType" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolCurriculum" />
 
   - name: json-api-model-school-schoolEmploymentAdvantage
     x-displayName: JSON:API model - school-schoolEmploymentAdvantage
@@ -1599,12 +1599,12 @@ x-tagGroups:
       - simple-model-school
       - simple-model-school-academicSystem
       - simple-model-school-communityQuestion
-      - simple-model-school-curriculumType
+      - simple-model-school-curriculum
       - simple-model-school-facility
       - simple-model-school-flightAllowanceType
       - simple-model-school-relocationAllowanceType
       - simple-model-school-schoolCommunityResponse
-      - simple-model-school-schoolCurriculumType
+      - simple-model-school-schoolCurriculum
       - simple-model-school-schoolEmploymentAdvantage
       - simple-model-school-schoolEmploymentDisadvantage
       - simple-model-school-schoolFacility
@@ -1653,7 +1653,7 @@ x-tagGroups:
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
       - simple-model-teacher-internationalExperience
-      - simple-model-teacher-teacherCurriculumType
+      - simple-model-teacher-teacherCurriculum
       - simple-model-teacher-teacherPreferredLocation
       - simple-model-teacher-numberOfDependentChildren
       - simple-model-teacher-maritalStatus
@@ -1744,12 +1744,12 @@ x-tagGroups:
       - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion
-      - json-api-model-school-curriculumType
+      - json-api-model-school-curriculum
       - json-api-model-school-facility
       - json-api-model-school-flightAllowanceType
       - json-api-model-school-relocationAllowanceType
       - json-api-model-school-schoolCommunityResponse
-      - json-api-model-school-schoolCurriculumType
+      - json-api-model-school-schoolCurriculum
       - json-api-model-school-schoolEmploymentAdvantage
       - json-api-model-school-schoolEmploymentDisadvantage
       - json-api-model-school-schoolFacility
@@ -1797,7 +1797,7 @@ x-tagGroups:
       - json-api-model-teacher-photoCategory
       - json-api-model-teacher-teacherEducationLevel
       - json-api-model-teacher-internationalExperience
-      - json-api-model-teacher-teacherCurriculumType
+      - json-api-model-teacher-teacherCurriculum
       - json-api-model-teacher-teacherPreferredLocation
       - json-api-model-teacher-numberOfDependentChildren
       - json-api-model-teacher-maritalStatus

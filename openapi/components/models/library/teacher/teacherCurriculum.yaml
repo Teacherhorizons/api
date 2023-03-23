@@ -1,33 +1,33 @@
 #attributes
-teacher-teacherCurriculumType_creationDate:
+teacher-teacherCurriculum_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
-teacher-teacherCurriculumType_latestUpdateDate:
+teacher-teacherCurriculum_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes 
-teacher-teacherCurriculumType_teacherId:
+teacher-teacherCurriculum_teacherId:
   type: integer
   example: 1
   description: Relationship to teacher
-teacher-teacherCurriculumType_curriculumTypeId:
+teacher-teacherCurriculum_curriculumId:
   type: integer
   example: 1
-  description: Relationship to general-curriculumType
-teacher-teacherCurriculumType_creationUserId:
+  description: Relationship to general-curriculum
+teacher-teacherCurriculum_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherCurriculumType_latestUpdateUserId:
+teacher-teacherCurriculum_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 #relationships
-teacher-teacherCurriculumType_teacher:
+teacher-teacherCurriculum_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -37,17 +37,17 @@ teacher-teacherCurriculumType_teacher:
       description: Relationship to teacher
   required: 
     - id
-teacher-teacherCurriculumType_curriculumType:
+teacher-teacherCurriculum_curriculum:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: Relationship to general-curriculumType
+      description: Relationship to general-curriculum
   required: 
     - id
-teacher-teacherCurriculumType_creationUser:
+teacher-teacherCurriculum_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -57,7 +57,7 @@ teacher-teacherCurriculumType_creationUser:
       description: Relationship to user
   required: 
     - id
-teacher-teacherCurriculumType_latestUpdateUser:
+teacher-teacherCurriculum_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

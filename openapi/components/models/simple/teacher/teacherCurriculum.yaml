@@ -1,0 +1,34 @@
+# TODO RR: review the name of this entity
+
+SimpleModel_teacher-teacherCurriculum:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherCurriculum_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/teacher/teacherCurriculum.yaml#/teacher-teacherCurriculum_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/teacher/teacherCurriculum.yaml#/teacher-teacherCurriculum_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/teacher/teacherCurriculum.yaml#/teacher-teacherCurriculum_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/teacher/teacherCurriculum.yaml#/teacher-teacherCurriculum_latestUpdateUserId"
+  required:
+    - id
+# shared
+# SimpleModel_teacher-teacherCurriculum_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-badge
+#       description: teacher-badge
+#       readOnly: true
+
+SimpleModel_teacher-teacherCurriculum_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

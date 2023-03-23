@@ -1,21 +1,25 @@
-JsonApiModel_teacher-teacherCurriculumType:
+JsonApiModel_school-schoolCurriculum:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_type"
+      $ref: "#/JsonApiModel_school-schoolCurriculum_type"
     id:
-      $ref: "#/JsonApiModel_teacher-teacherCurriculumType_id"
+      $ref: "#/JsonApiModel_school-schoolCurriculum_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_creationDate"
+          $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_creationDate"  
         latestUpdateDate:
-          $ref: "../../library/teacher/teacherCurriculumType.yaml#/teacher-teacherCurriculumType_latestUpdateDate"
+          $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        curriculum:
+          $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -24,10 +28,10 @@ JsonApiModel_teacher-teacherCurriculumType:
       type: object
       additionalProperties: false
       properties:
-        teacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-        curriculumType:
-          $ref: "../school/curriculumType.yaml#/JsonApiModel_school-curriculumType_relationship"
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        curriculum:
+          $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
@@ -36,13 +40,13 @@ JsonApiModel_teacher-teacherCurriculumType:
     - type
     - id
 
-JsonApiModel_teacher-teacherCurriculumType_type:
+JsonApiModel_school-schoolCurriculum_type:
   type: string
-  example: teacher-teacherCurriculumType
+  example: school-schoolCurriculum
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_teacher-teacherCurriculumType_id:
+JsonApiModel_school-schoolCurriculum_id:
   type: string
   example: "1"
   readOnly: true

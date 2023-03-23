@@ -1,36 +1,36 @@
 #attributes
-school-schoolCurriculumType_creationDate:
+school-schoolCurriculum_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-schoolCurriculumType_latestUpdateDate:
+school-schoolCurriculum_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
-school-schoolCurriculumType_schoolId:
+school-schoolCurriculum_schoolId:
   type: integer
   example: 1
   description: Relationship to school
 
-school-schoolCurriculumType_curriculumTypeId:
+school-schoolCurriculum_curriculumId:
   type: integer
   example: 1
-  description: Relationship to school-curriculumType
+  description: Relationship to school-curriculum
 
-school-schoolCurriculumType_creationUserId:
+school-schoolCurriculum_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
-school-schoolCurriculumType_latestUpdateUserId:
+school-schoolCurriculum_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 #relationships
-school-schoolCurriculumType_school:
+school-schoolCurriculum_school:
   type: object
   additionalProperties: false
   properties:
@@ -41,17 +41,17 @@ school-schoolCurriculumType_school:
   required: 
     - id
 
-school-schoolCurriculumType_curriculumType:
+school-schoolCurriculum_curriculum:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: Relationship to school-curriculumType
+      description: Relationship to school-curriculum
   required: 
     - id
-school-schoolCurriculumType_creationUser:
+school-schoolCurriculum_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -62,7 +62,7 @@ school-schoolCurriculumType_creationUser:
   required: 
     - id
 
-school-schoolCurriculumType_latestUpdateUser:
+school-schoolCurriculum_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

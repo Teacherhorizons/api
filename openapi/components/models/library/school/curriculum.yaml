@@ -1,34 +1,34 @@
 # attributes
-school-curriculumType_name:
+school-curriculum_name:
   type: string
   example: International Baccalaureate (DP)
   maxLength: 250
 
-school-curriculumType_creationDate:
+school-curriculum_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-curriculumType_latestUpdateDate:
+school-curriculum_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
 
-school-curriculumType_creationUserId:
+school-curriculum_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-school-curriculumType_latestUpdateUserId:
+school-curriculum_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 #relationships
     
-school-curriculumType_creationUser:
+school-curriculum_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -39,7 +39,7 @@ school-curriculumType_creationUser:
   required: 
     - id
   
-school-curriculumType_latestUpdateUser:
+school-curriculum_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

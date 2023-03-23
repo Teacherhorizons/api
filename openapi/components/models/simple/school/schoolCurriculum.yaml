@@ -1,0 +1,29 @@
+SimpleModel_school-schoolCurriculum:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolCurriculum_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_latestUpdateDate"
+    # relationship attributes
+    schoolId:
+          $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_schoolId"
+    curriculumId:
+          $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_curriculumId"
+    creationUserId:
+      $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/schoolCurriculum.yaml#/school-schoolCurriculum_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolCurriculum_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

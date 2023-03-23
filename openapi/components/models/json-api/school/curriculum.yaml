@@ -1,22 +1,22 @@
-JsonApiModel_school-curriculumType:
+JsonApiModel_school-curriculum:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_school-curriculumType_type"
+      $ref: "#/JsonApiModel_school-curriculum_type"
     id:
-      $ref: "#/JsonApiModel_school-curriculumType_id"
+      $ref: "#/JsonApiModel_school-curriculum_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_name"
+          $ref: "../../library/school/curriculum.yaml#/school-curriculum_name"
         creationDate:
-          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_creationDate"
+          $ref: "../../library/school/curriculum.yaml#/school-curriculum_creationDate"
         latestUpdateDate:
-          $ref: "../../library/school/curriculumType.yaml#/school-curriculumType_latestUpdateDate"
+          $ref: "../../library/school/curriculum.yaml#/school-curriculum_latestUpdateDate"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -34,19 +34,19 @@ JsonApiModel_school-curriculumType:
     - type
     - id
 
-JsonApiModel_school-curriculumType_type:
+JsonApiModel_school-curriculum_type:
   type: string
-  example: school-curriculumType
+  example: school-curriculum
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_school-curriculumType_id:
+JsonApiModel_school-curriculum_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_school-curriculumType_relationship:
+JsonApiModel_school-curriculum_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -55,20 +55,20 @@ JsonApiModel_school-curriculumType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_school-curriculumType_type"
+          $ref: "#/JsonApiModel_school-curriculum_type"
         id:
-          $ref: "#/JsonApiModel_school-curriculumType_id"
+          $ref: "#/JsonApiModel_school-curriculum_id"
       required:
         - type
         - id
   required:
     - data
 
-JsonApiModel_school-curriculumType_relationship_attribute:
+JsonApiModel_school-curriculum_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_school-curriculumType_id"
+      $ref: "#/JsonApiModel_school-curriculum_id"
   required:
     - id
