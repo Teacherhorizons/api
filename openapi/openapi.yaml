@@ -739,6 +739,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherTeachingLanguage" />     
 
+  - name: simple-model-teacher-teacherEmploymentRecord
+    x-displayName: Simple model - teacher-teacherEmploymentRecord
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecord" />  
+
+  - name: simple-model-teacher-teacherEmploymentRecordSubject
+    x-displayName: Simple model - teacher-teacherEmploymentRecordSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecordSubject" /> 
+
   - name: simple-model-teacher-teacherExperienceCurriculum
     x-displayName: Simple model - teacher-teacherExperienceCurriculum
     description: |
@@ -1296,6 +1306,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForCurriculum" /> 
 
+  - name: json-api-model-teacher-teacherEmploymentRecord
+    x-displayName: JSON:API model - teacher-teacherEmploymentRecord
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecord" /> 
+
+  - name: json-api-model-teacher-teacherEmploymentRecordSubject
+    x-displayName: JSON:API model - teacher-teacherEmploymentRecordSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecordSubject" /> 
+
   # tags - JSON:API models - school
 
   - name: json-api-model-school
@@ -1678,6 +1698,8 @@ x-tagGroups:
       - simple-model-teacher-teacherTeachingLanguage
       - simple-model-teacher-teacherExperienceCurriculum
       - simple-model-teacher-teacherLookingForCurriculum
+      - simple-model-teacher-teacherEmploymentRecord
+      - simple-model-teacher-teacherEmploymentRecordSubject
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -1824,6 +1846,8 @@ x-tagGroups:
       - json-api-model-teacher-teacherTeachingLanguage
       - json-api-model-teacher-teacherExperienceCurriculum
       - json-api-model-teacher-teacherLookingForCurriculum
+      - json-api-model-teacher-teacherEmploymentRecord
+      - json-api-model-teacher-teacherEmploymentRecordSubject
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool

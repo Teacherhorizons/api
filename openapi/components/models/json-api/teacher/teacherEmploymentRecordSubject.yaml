@@ -1,0 +1,44 @@
+JsonApiModel_teacher-teacherEmploymentRecordSubject:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherEmploymentRecordSubject_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherEmploymentRecordSubject_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        precedence:
+          $ref: "../../library/teacher/teacherEmploymentRecordSubject.yaml#/teacher-teacherEmploymentRecordSubject_precedence"
+        # relationship attributes
+        employmentRecord:
+          $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship_attribute"
+        subject:
+          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        employmentRecord:
+          $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship"
+        subject:
+          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherEmploymentRecordSubject_type:
+  type: string
+  example: teacher-teacherEmploymentRecordSubject
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-teacherEmploymentRecordSubject_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+  

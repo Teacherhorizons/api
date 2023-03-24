@@ -1,0 +1,36 @@
+SimpleModel_teacher-teacherEmploymentRecord:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherEmploymentRecord_id"
+    # simple attributes
+    employerName:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_employerName"
+    startDate:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_startDate"
+    endDate:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_endDate"
+    isInternationalSchool:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_isInternationalSchool"
+    allowDisplay:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_allowDisplay"
+    # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_teacherId"
+    roleId:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_roleId"
+    schoolId:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_schoolId"
+    countryId:
+      $ref: "../../library/teacher/teacherEmploymentRecord.yaml#/teacher-teacherEmploymentRecord_countryId"
+  required:
+    - id
+
+# shared
+
+SimpleModel_teacher-teacherEmploymentRecord_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
