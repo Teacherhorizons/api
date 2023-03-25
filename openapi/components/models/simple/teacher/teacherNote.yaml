@@ -5,8 +5,8 @@ SimpleModel_teacher-teacherNote:
     id:
       $ref: "#/SimpleModel_teacher-teacherNote_id"
     # simple attributes
-    noteComment:
-      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
+    text:
+      $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_text"
     creationDate:
       $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"
     latestUpdateDate:

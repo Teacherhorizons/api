@@ -47,3 +47,30 @@ JsonApiModel_teacher-noteType_id:
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-noteType_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-noteType_id"
+  required:
+    - id
+
+JsonApiModel_teacher-noteType_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-noteType_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-noteType_id"
+      required:
+        - type
+        - id
+  required:
+    - data

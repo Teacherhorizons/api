@@ -13,16 +13,16 @@ JsonApiModel_teacher-teacherExperienceCurriculum:
         # relationship attributes
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-        # curriculum:
-        #   $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship_attribute"
+        curriculum:
+          $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
       properties:
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-        # curriculum:
-        #   $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship"
+        curriculum:
+          $ref: "../school/curriculum.yaml#/JsonApiModel_school-curriculum_relationship"
   required:
     - type
     - id

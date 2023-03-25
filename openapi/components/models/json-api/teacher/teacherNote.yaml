@@ -11,8 +11,8 @@ JsonApiModel_teacher-teacherNote:
       additionalProperties: false
       properties:
         # simple attributes
-        noteComment:
-          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_noteComment"
+        text:
+          $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_text"
         creationDate:
           $ref: "../../library/teacher/teacherNote.yaml#/teacher-teacherNote_creationDate"
         latestUpdateDate:
@@ -21,7 +21,7 @@ JsonApiModel_teacher-teacherNote:
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         type:
-          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship_attribute"
+          $ref: "../teacher/noteType.yaml#/JsonApiModel_teacher-noteType_relationship_attribute"
         #noteType : to be confirmed with RYAN
         # TODO AS: link to teacherNoteType.yaml
         creationUser:
@@ -35,7 +35,7 @@ JsonApiModel_teacher-teacherNote:
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
         type:
-          $ref: "../general/nationality.yaml#/JsonApiModel_general-nationality_relationship"
+          $ref: "../teacher/noteType.yaml#/JsonApiModel_teacher-noteType_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
