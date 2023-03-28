@@ -14,6 +14,8 @@ JsonApiModel_teacher-teacherEmploymentRecordSubject:
         precedence:
           $ref: "../../library/teacher/teacherEmploymentRecordSubject.yaml#/teacher-teacherEmploymentRecordSubject_precedence"
         # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         employmentRecord:
           $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship_attribute"
         subject:
@@ -22,6 +24,8 @@ JsonApiModel_teacher-teacherEmploymentRecordSubject:
       type: object
       additionalProperties: false
       properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
         employmentRecord:
           $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship"
         subject:

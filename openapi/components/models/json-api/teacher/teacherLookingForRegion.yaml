@@ -1,0 +1,40 @@
+JsonApiModel_teacher-teacherLookingForRegion:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForRegion_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherLookingForRegion_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherLookingForRegion_type:
+  type: string
+  example: teacher-teacherLookingForRegion
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-teacherLookingForRegion_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

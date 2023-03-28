@@ -8,6 +8,8 @@ SimpleModel_teacher-teacherEmploymentRecordSubject:
     precedence:
       $ref: "../../library/teacher/teacherEmploymentRecordSubject.yaml#/teacher-teacherEmploymentRecordSubject_precedence"
     # relationship attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherEmploymentRecordSubject.yaml#/teacher-teacherEmploymentRecordSubject_teacherId"
     employmentRecordId:
       $ref: "../../library/teacher/teacherEmploymentRecordSubject.yaml#/teacher-teacherEmploymentRecordSubject_employmentRecordId"
     subjectId:

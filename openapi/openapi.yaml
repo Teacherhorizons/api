@@ -659,10 +659,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-internationalExperience" />
 
-  - name: simple-model-teacher-teacherPreferredLocation
-    x-displayName: Simple model - teacher-teacherPreferredLocation
+  - name: simple-model-teacher-teacherLookingForRegion
+    x-displayName: Simple model - teacher-teacherLookingForRegion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherPreferredLocation" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForRegion" />
 
   - name: simple-model-teacher-numberOfDependentChildren
     x-displayName: Simple model - teacher-numberOfDependentChildren
@@ -1216,10 +1216,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-internationalExperience" />
 
-  - name: json-api-model-teacher-teacherPreferredLocation
-    x-displayName: JSON:API model - teacher-teacherPreferredLocation
+  - name: json-api-model-teacher-teacherLookingForRegion
+    x-displayName: JSON:API model - teacher-teacherLookingForRegion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherPreferredLocation" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForRegion" />
 
   - name: json-api-model-teacher-numberOfDependentChildren
     x-displayName: JSON:API model - teacher-numberOfDependentChildren
@@ -1680,7 +1680,7 @@ x-tagGroups:
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
       - simple-model-teacher-internationalExperience
-      - simple-model-teacher-teacherPreferredLocation
+      - simple-model-teacher-teacherLookingForRegion
       - simple-model-teacher-numberOfDependentChildren
       - simple-model-teacher-maritalStatus
       - simple-model-teacher-preferenceOption
@@ -1827,7 +1827,7 @@ x-tagGroups:
       - json-api-model-teacher-photoCategory
       - json-api-model-teacher-teacherEducationLevel
       - json-api-model-teacher-internationalExperience
-      - json-api-model-teacher-teacherPreferredLocation
+      - json-api-model-teacher-teacherLookingForRegion
       - json-api-model-teacher-numberOfDependentChildren
       - json-api-model-teacher-maritalStatus
       - json-api-model-teacher-preferenceOption

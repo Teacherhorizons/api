@@ -1,0 +1,20 @@
+SimpleModel_teacher-teacherLookingForRegion:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherLookingForRegion_id"
+    # simple attributes
+    teacherId:
+      $ref: "../../library/teacher/teacherLookingForRegion.yaml#/teacher-teacherLookingForRegion_teacherId"
+    regionId:
+      $ref: "../../library/teacher/teacherLookingForRegion.yaml#/teacher-teacherLookingForRegion_regionId"
+  required:
+    - id
+# shared
+
+SimpleModel_teacher-teacherLookingForRegion_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
