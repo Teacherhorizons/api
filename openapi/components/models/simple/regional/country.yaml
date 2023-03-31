@@ -134,14 +134,22 @@ SimpleModel_regional-country_admin:
       $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants"
     minGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher"
+    firstQuartileGrossSalaryJuniorTeacher:
+      $ref: "../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalaryJuniorTeacher"
     averageGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher"
+    thirdQuartileGrossSalaryJuniorTeacher:
+      $ref: "../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalaryJuniorTeacher"
     maxGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher"
     minGrossSalarySeniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher"
+    firstQuartileGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalarySeniorTeacher"
     averageGrossSalarySeniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher"
+    thirdQuartileGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalarySeniorTeacher"
     maxGrossSalarySeniorTeacher:
       $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher"
     numberOfTeachers:
@@ -264,10 +272,14 @@ SimpleModel_regional-country_admin:
     - expensePercentageRent
     - expensePercentageRestaurants
     - minGrossSalaryJuniorTeacher
+    - firstQuartileGrossSalaryJuniorTeacher
     - averageGrossSalaryJuniorTeacher
+    - thirdQuartileGrossSalaryJuniorTeacher
     - maxGrossSalaryJuniorTeacher
     - minGrossSalarySeniorTeacher
+    - firstQuartileGrossSalarySeniorTeacher
     - averageGrossSalarySeniorTeacher
+    - thirdQuartileGrossSalarySeniorTeacher
     - maxGrossSalarySeniorTeacher
     - numberOfTeachers
     - numberOfOverseasTeachers
