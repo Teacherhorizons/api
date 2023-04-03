@@ -1,0 +1,30 @@
+SimpleModel_regional-regionSubject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-regionSubject_id"
+    # simple attributes
+    numberOfLiveJobs:
+      $ref: "../../library/regional/regionSubject.yaml#/regional-regionSubject_numberOfLiveJobs"
+
+    # relationship attributes
+    regionId:
+        $ref: "../../library/regional/regionSubject.yaml#/regional-regionSubject_regionId"
+    subjectId:
+        $ref: "../../library/regional/regionSubject.yaml#/regional-regionSubject_subjectId"
+  required:
+    - id
+    - numberOfLiveJobs
+    - regionId
+    - subjectId
+
+# shared
+SimpleModel_regional-regionSubject_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+
+
+

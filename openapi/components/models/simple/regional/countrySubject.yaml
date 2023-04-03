@@ -1,0 +1,50 @@
+SimpleModel_regional-countrySubject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-countrySubject_id"
+    # simple attributes
+    slug:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_slug"
+    numberOfLiveJobs:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs"
+    numberOfTHTeachers:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfTHTeachers"
+    teachingSubjectInCountryDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_teachingSubjectInCountryDescription"
+    opportunitiesAndTypesOfSchoolDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_opportunitiesAndTypesOfSchoolDescription"
+    qualificationsAndExperienceDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualificationsAndExperienceDescription"
+    salariesAndBenefitsDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
+    qualityOfLifeDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+    # relationship attributes
+    countryId:
+        $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_countryId"
+    subjectId:
+        $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_subjectId"
+  required:
+    - id
+    - slug
+    - countryId
+    - subjectId
+    - numberOfLiveJobs
+    - numberOfTHTeachers
+    - teachingSubjectInCountryDescription
+    - opportunitiesAndTypesOfSchoolDescription
+    - qualificationsAndExperienceDescription
+    - salariesAndBenefitsDescription
+    - qualityOfLifeDescription
+
+# shared
+SimpleModel_regional-countrySubject_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+
+
+

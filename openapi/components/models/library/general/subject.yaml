@@ -5,6 +5,23 @@ general-subject_name:
   description: Main
   maxLength: 250
 
+general-subject_shortName:
+  type: string
+  example: English
+  description: Main
+  maxLength: 250
+
+general-subject_slug:
+  type: string
+  example: ""
+  description: english
+  maxLength: 250
+
+general-subject_numberOfLiveJobs:
+  type: integer
+  example: 308
+  description: Derived (dw)
+
 general-subject_creationDate:
   type: string
   format: date-time

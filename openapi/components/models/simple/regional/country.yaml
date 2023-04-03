@@ -49,7 +49,9 @@ SimpleModel_regional-country_admin:
     teachingInCountryDescription:
       $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
     qualityOfLifeDescription:
-      $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+      $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
+    travelAdviceUrl:
+      $ref: "../../library/regional/country.yaml#/regional-country_travelAdviceUrl"
     numberOfCitiesWithSchools:
       $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
     numberOfSchools:
@@ -226,6 +228,7 @@ SimpleModel_regional-country_admin:
     - ambassadorTestimonial
     - teachingInCountryDescription
     - qualityOfLifeDescription
+    - travelAdviceUrl
     - numberOfCitiesWithSchools
     - numberOfSchools
     - numberOfIBSchools

@@ -1,0 +1,14 @@
+regional-regionSubject_numberOfLiveJobs:
+  type: integer
+  example: 75
+  description: Derived (dw)
+
+# relationship attributes
+regional-regionSubject_regionId:
+  type: integer
+  example: 1
+  description: Relationship to regional-region
+regional-regionSubject_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to general-subject

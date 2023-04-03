@@ -13,10 +13,17 @@ JsonApiModel_general-subject:
         # simple attributes
         name:
           $ref: "../../library/general/subject.yaml#/general-subject_name"
+        shortName:
+          $ref: "../../library/general/subject.yaml#/general-subject_shortName"
+        slug:
+          $ref: "../../library/general/subject.yaml#/general-subject_slug"
+        numberOfLiveJobs:
+          $ref: "../../library/general/subject.yaml#/general-subject_numberOfLiveJobs"
         creationDate:
           $ref: "../../library/general/subject.yaml#/general-subject_creationDate"
         latestUpdateDate:
           $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
+
         # relationship attributes
         subjectGroup:
           $ref: "../general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup_relationship_attribute"

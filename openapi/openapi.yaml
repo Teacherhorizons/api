@@ -366,6 +366,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-worldPhoto" />
 
+  - name: simple-model-regional-countrySubject
+    x-displayName: Simple model - regional-countrySubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-countrySubject" />
+
+  - name: simple-model-regional-regionSubject
+    x-displayName: Simple model - regional-regionSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubject" />
+
   # tags - simple-models - school
 
   - name: simple-model-school
@@ -1105,6 +1115,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-worldPhoto" />
 
+  - name: json-api-model-regional-countrySubject
+    x-displayName: JSON:API model - regional-countrySubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-countrySubject" />
+
+  - name: json-api-model-regional-regionSubject
+    x-displayName: JSON:API model - regional-regionSubject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubject" />
+
   # tags - JSON:API models - teacher
   - name: json-api-model-teacher
     x-displayName: JSON:API model - teacher
@@ -1623,6 +1643,8 @@ x-tagGroups:
       - simple-model-regional-world
       - simple-model-regional-worldArticle
       - simple-model-regional-worldPhoto
+      - simple-model-regional-countrySubject
+      - simple-model-regional-regionSubject
       - simple-model-school
       - simple-model-school-academicSystem
       - simple-model-school-communityQuestion
@@ -1771,6 +1793,8 @@ x-tagGroups:
       - json-api-model-regional-world
       - json-api-model-regional-worldArticle
       - json-api-model-regional-worldPhoto
+      - json-api-model-regional-countrySubject
+      - json-api-model-regional-regionSubject
       - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion

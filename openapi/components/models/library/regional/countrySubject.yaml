@@ -1,0 +1,40 @@
+regional-countrySubject_slug:
+  type: string
+  example: asia-singapore-english
+regional-countrySubject_numberOfLiveJobs:
+  type: integer
+  example: 75
+  description: Derived (dw)
+regional-countrySubject_numberOfTHTeachers:
+  type: integer
+  example: 75
+  description: Derived (dw)
+regional-countrySubject_teachingSubjectInCountryDescription:
+  type: string
+  example: Fooo barrr abc
+  maxLength: 1000
+regional-countrySubject_opportunitiesAndTypesOfSchoolDescription:
+  type: string
+  example: Fooo barrr abc
+  maxLength: 1000
+regional-countrySubject_qualificationsAndExperienceDescription:
+  type: string
+  example: Fooo barrr abc
+  maxLength: 1000
+regional-countrySubject_salariesAndBenefitsDescription:
+  type: string
+  example: Fooo barrr abc
+  maxLength: 1000
+regional-countrySubject_qualityOfLifeDescription:
+  type: string
+  example: Fooo barrr abc
+  maxLength: 1000
+# relationship attributes
+regional-countrySubject_countryId:
+  type: integer
+  example: 1
+  description: Relationship to regional-country
+regional-countrySubject_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to general-subject

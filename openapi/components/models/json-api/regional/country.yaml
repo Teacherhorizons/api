@@ -55,7 +55,9 @@ JsonApiModel_regional-country_admin:
         teachingInCountryDescription:
           $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
         qualityOfLifeDescription:
-          $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+          $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
+        travelAdviceUrl:
+          $ref: "../../library/regional/country.yaml#/regional-country_travelAdviceUrl"
         numberOfCitiesWithSchools:
           $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
         numberOfSchools:
@@ -244,6 +246,7 @@ JsonApiModel_regional-country_admin:
         - expensePercentageUtilities
         - expensePercentageRent
         - expensePercentageRestaurants
+        - travelAdviceUrl
         - numberOfCities
         - numberOfCitiesWithSchools
         - numberOfSchools
