@@ -83,3 +83,23 @@ JsonApiModel_general-subject_relationship:
         - id
   required:
       - data
+
+JsonApiModel_general-subject_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_general-subject_type"
+          id:
+            $ref: "#/JsonApiModel_general-subject_id"
+        required:
+          - type
+          - id
+  required:
+    - data

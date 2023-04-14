@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-regional-countrySubject
+  summary: Get a country subject
+  tags:
+    - regional
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: path
+      name: countrySubjectId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: include
+      required: true
+      example: staff,cities,photos,jobs,schools,ambassadors,attractions
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/regional/countrySubject.yaml#/Response_regional-countrySubject"
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
+    "403":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
+    "413":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
+    "422":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
