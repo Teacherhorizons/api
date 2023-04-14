@@ -63,6 +63,10 @@ JsonApiModel_general-subject_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-subject_id"
+    name:
+      $ref: "../../library/general/subject.yaml#/general-subject_name"
+    slug:
+      $ref: "../../library/general/subject.yaml#/general-subject_slug"
   required:
     - id
 

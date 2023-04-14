@@ -20,7 +20,7 @@ get:
     - in: query
       name: include
       required: true
-      example: staff,cities,photos,jobs,schools,ambassadors,attractions
+      example: country,subject,jobs,country.subjects,country.attractions,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school
       schema:
         type: string
 

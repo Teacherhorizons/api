@@ -1,0 +1,81 @@
+Response_regional-countrySubjects:
+  oneOf:
+    - $ref: "#/Response_regional-countrySubjects_notSignedIn"
+    - $ref: "#/Response_regional-countrySubjects_notSignedInMultiple"
+  discriminator:
+    propertyName: schema
+    mapping:
+      not-signed-in: "#/Response_regional-countrySubjects_notSignedIn"
+      not-signed-in-multiple: "#/Response_regional-countrySubjects_notSignedInMultiple"
+
+Response_regional-countrySubjects_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      type: array
+      items:
+        $ref: "./countrySubject.yaml#/Response_regional-countrySubject_notSignedIn_item"
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountry_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedSubject_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedRegionSubject_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedJob_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedSchool_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCity_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountryAttraction_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountryPhoto_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountrySubject_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedStaff_notSignedIn"
+          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedAmbassador_notSignedIn"
+  required:
+    - schema
+    - data
+
+Response_regional-countrySubjects_notSignedInMultiple:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in-multiple
+    data:
+      type: array
+      items:
+        $ref: "#/Response_regional-countrySubjects_notSignedInMultiple_item"
+  required:
+    - schema
+    - data
+
+Response_regional-countrySubjects_notSignedInMultiple_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/countrySubject.yaml#/JsonApiModel_regional-countrySubject_type"
+    id:
+      $ref: "../../models/json-api/regional/countrySubject.yaml#/JsonApiModel_regional-countrySubject_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: "../../models/library/regional/countrySubject.yaml#/regional-countrySubject_name"
+        slug:
+          $ref: "../../models/library/regional/countrySubject.yaml#/regional-countrySubject_slug"
+      required:
+        - name
+        - slug
+  required:
+    - type
+    - id
+    - attributes

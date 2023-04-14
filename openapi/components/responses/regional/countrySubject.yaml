@@ -20,17 +20,17 @@ Response_regional-countrySubject_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountry_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedSubject_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedRegionSubject_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedJob_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedSchool_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCity_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountryAttraction_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountryPhoto_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedCountrySubject_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedStaff_notSignedIn"
-          - $ref: "./countrySubject.yaml#/Response_regional-countrySubject_includedAmbassador_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedCountry_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedSubject_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedRegionSubject_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedJob_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedSchool_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedCity_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedCountryAttraction_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedCountryPhoto_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedCountrySubject_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedStaff_notSignedIn"
+          - $ref: "#/Response_regional-countrySubject_includedAmbassador_notSignedIn"
   required:
     - schema
     - data
