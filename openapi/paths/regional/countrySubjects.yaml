@@ -1,5 +1,3 @@
-# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
-
 get:
   operationId: get-regional-countrySubjects
   summary: Get country subjects (one or more)
@@ -8,7 +6,8 @@ get:
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
-    - Can be use to return a list of one country subject with lot of data or a list of multiple country subjects, each with minimal data
+    - Can be use to return a list of one country subject with lots of data or a list of multiple country subjects, each with minimal data
+    - Note: not-signed-in-multiple will be added later as needed
   parameters:
     - in: query
       name: schema
@@ -16,13 +15,12 @@ get:
       schema:
         type: string
         enum:
-          - not-signed-in
+          - not-signed-in-single
           - not-signed-in-multiple
       description: |
-        - not-signed-in - List of one country subject with lots of data
-        - not-signed-in-multiple - List of multiple country subjects, each with minimal data
-        - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+        - not-signed-in-single - List of one country subject with lots of data
+        - [LATER] not-signed-in-multiple - List of multiple country subjects, each with minimal data
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - in: query
       name: include
       # required: true
@@ -40,11 +38,11 @@ get:
         properties:
           filter[slug]:
             type: string
-            description: For use with not-signed-in only
-          filter[countrySubject.id]:
+            description: For use with not-signed-in-single only
+          filter[country.id]:
             type: integer
             description: For use with not-signed-in-multiple only
-          filter[countrySubject.slug]:
+          filter[country.slug]:
             type: string
             description: For use with not-signed-in-multiple only
         example:
@@ -53,21 +51,21 @@ get:
           countrySubject.slug: singapore-english
 
   responses:
-    "200":
+    '200':
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/countrySubjects.yaml#/Response_regional-countrySubjects"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+            $ref: '../../components/responses/regional/countrySubjects.yaml#/Response_regional-countrySubjects'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
