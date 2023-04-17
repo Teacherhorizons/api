@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Plural.json
+
+get:
+  operationId: get-regional-cityArticles
+  summary: Get city articles
+  tags:
+    - regional
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[city.id]:
+            type: integer
+          filter[city.slug]:
+            type: string
+        example:
+          city.id: 1
+          city.slug: europe-portugal-lisbon
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/regional/cityArticles.yaml#/Response_regional-cityArticles'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

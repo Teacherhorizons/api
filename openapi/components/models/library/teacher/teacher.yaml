@@ -8,16 +8,16 @@ teacher_availableFromDate:
   example: 2011-02-07T15:53:32Z
 teacher_statement:
   type: string
-  example: ""
+  example: ''
 teacher_partnerMemberNumber:
   type: integer
-  example: ""
+  example: ''
 teacher_profileStrength:
   type: integer
-  example: ""
+  example: ''
 teacher_birthYear:
   type: integer
-  example: ""
+  example: ''
 teacher_latestAdviserCommentDate:
   type: string
   format: date-time
@@ -36,28 +36,28 @@ teacher_thPlaceabilityRating:
   example: 1
 teacher_teacherDoesNotWantToBeContacted:
   type: integer
-  example: ""
+  example: ''
 teacher_isAvailableForRemoteTeaching:
   type: boolean
-  example: ""
+  example: ''
 teacher_twitterHandle:
   type: string
-  example: ""
+  example: ''
 teacher_instagramHandle:
   type: string
-  example: ""
+  example: ''
 teacher_linkedInProfileUrl:
   type: string
-  example: ""
+  example: ''
 teacher_facebookProfileUrl:
   type: string
-  example: ""
+  example: ''
 teacher_videoInterviewClipUrl:
   type: string
-  example: ""
+  example: ''
 teacher_numberOfYearsTeachingExperience:
   type: integer
-  example: ""
+  example: ''
 
 #relationship attributes
 teacher_userId:
@@ -75,7 +75,7 @@ teacher_qualificationTypeId:
 teacher_jobSeekingStatusId:
   type: integer
   example: 1
-  description: Relationship to teacher-referenceStatus
+  description: Relationship to teacher-referenceStatus [TODO - looks wrong, review]
 teacher_photoId:
   type: integer
   example: 1
@@ -91,7 +91,7 @@ teacher_internationalSchoolExperienceId:
 teacher_userTypeId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: Relationship to user [TODO - looks wrong, review]
 teacher_thDiscoveryMethodId:
   type: integer
   example: 1
@@ -116,7 +116,7 @@ teacher_user:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -127,7 +127,7 @@ teacher_teachingQualificationCountry:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -138,7 +138,7 @@ teacher_qualificationType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-qualificationType
   required:
     - id
@@ -149,7 +149,7 @@ teacher_jobSeekingStatus:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-referenceStatus
   required:
     - id
@@ -160,7 +160,7 @@ teacher_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
@@ -171,7 +171,7 @@ teacher_maritalStatus:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-maritalStatus
   required:
     - id
@@ -182,7 +182,7 @@ teacher_internationalSchoolExperience:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-internationalExperience
   required:
     - id
@@ -193,7 +193,7 @@ teacher_userType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -204,7 +204,7 @@ teacher_thDiscoveryMethod:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-thDiscoveryMethod
   required:
     - id
@@ -215,7 +215,7 @@ teacher_latestAdviserCommentUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -226,7 +226,7 @@ teacher_currentCountry:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -237,7 +237,7 @@ teacher_numberOfDependentChildren:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-numberOfDependentChildren
   required:
     - id

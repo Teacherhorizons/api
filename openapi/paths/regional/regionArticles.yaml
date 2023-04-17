@@ -1,32 +1,14 @@
 get:
-  operationId: get-regional-countries
-  summary: Get countries (one or more)
+  operationId: get-regional-regionArticles
+  summary: Get region articles
   tags:
     - regional
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
-    - Can be use to return a list of one country with lot of data or a list of multiple countries, each with minimal data
   parameters:
-    - in: query
-      name: schema
-      required: true
-      schema:
-        type: string
-        enum:
-          - not-signed-in
-          - not-signed-in-multiple
-      description: |
-        - not-signed-in - List of one country with lots of data
-        - not-signed-in-multiple - List of multiple countries, each with minimal data
-        - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
-    - in: query
-      name: include
-      # required: true
-      example: staff,cities,photos,jobs,schools,ambassadors,attractions
-      schema:
-        type: string
     - in: query
       name: filter
       style: deepObject
@@ -36,27 +18,20 @@ get:
         type: object
         additionalProperties: false
         properties:
-          filter[slug]:
-            type: string
-            description: For use with not-signed-in only
           filter[region.id]:
             type: integer
-            description: For use with not-signed-in-multiple only
           filter[region.slug]:
             type: string
-            description: For use with not-signed-in-multiple only
         example:
-          slug: europe-lisbon
-          region.id: 4
+          region.id: 1
           region.slug: europe
-
   responses:
     '200':
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/regional/countries.yaml#/Response_regional-countries'
+            $ref: '../../components/responses/regional/regionArticles.yaml#/Response_regional-regionArticles'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':

@@ -1,32 +1,14 @@
 get:
-  operationId: get-regional-cities
-  summary: Get cities (one or more)
+  operationId: get-regional-countryArticles
+  summary: Get country articles
   tags:
     - regional
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
-    - Can be use to return a list of one country with lot of data or a list of multiple cities, each with minimal data
   parameters:
-    - in: query
-      name: schema
-      required: true
-      schema:
-        type: string
-        enum:
-          - not-signed-in
-          - not-signed-in-multiple
-      description: |
-        - not-signed-in - List of one city with lots of data
-        - not-signed-in-multiple - List of multiple cities, each with minimal data
-        - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
-    - in: query
-      name: include
-      required: true
-      example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions
-      schema:
-        type: string
     - in: query
       name: filter
       style: deepObject
@@ -36,27 +18,20 @@ get:
         type: object
         additionalProperties: false
         properties:
-          filter[slug]:
-            type: string
-            description: For use with not-signed-in only
           filter[country.id]:
             type: integer
-            description: For use with not-signed-in-multiple only
           filter[country.slug]:
             type: string
-            description: For use with not-signed-in-multiple only
         example:
-          slug: europe-portugal-lisbon
-          country.id: 4
+          country.id: 1
           country.slug: europe-portugal
-
   responses:
     '200':
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/regional/cities.yaml#/Response_regional-cities'
+            $ref: '../../components/responses/regional/countryArticles.yaml#/Response_regional-countryArticles'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':
