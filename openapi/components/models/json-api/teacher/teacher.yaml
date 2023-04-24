@@ -3,103 +3,103 @@ JsonApiModel_teacher:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher_type"
+      $ref: '#/JsonApiModel_teacher_type'
     id:
-      $ref: "#/JsonApiModel_teacher_id"
+      $ref: '#/JsonApiModel_teacher_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         #simple attributes
         memberNumber:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_memberNumber"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
         availableFromDate:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_availableFromDate"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_availableFromDate'
         statement:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_statement"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_statement'
         partnerMemberNumber:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_partnerMemberNumber"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_partnerMemberNumber'
         numberOfYearsTeachingExperience:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfYearsTeachingExperience"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfYearsTeachingExperience'
         profileStrength:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_profileStrength"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_profileStrength'
         birthYear:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_birthYear"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_birthYear'
         numberOfDependentChildren:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren'
         latestAdviserCommentDate:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate'
         interestedInPrivateTuition:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition'
         neverPotentialRiskToChildren:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren'
         neverBehaviouralConcernsTowardsChildren:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_neverBehaviouralConcernsTowardsChildren"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_neverBehaviouralConcernsTowardsChildren'
         thPlaceabilityRating:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_thPlaceabilityRating"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_thPlaceabilityRating'
         teacherDoesNotWantToBeContacted:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_teacherDoesNotWantToBeContacted"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_teacherDoesNotWantToBeContacted'
         isAvailableForRemoteTeaching:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_isAvailableForRemoteTeaching"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_isAvailableForRemoteTeaching'
         twitterHandle:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_twitterHandle"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_twitterHandle'
         instagramHandle:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_instagramHandle"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_instagramHandle'
         linkedInProfileUrl:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_linkedInProfileUrl"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_linkedInProfileUrl'
         facebookProfileUrl:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl'
         videoInterviewClipUrl:
-          $ref: "../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl"
+          $ref: '../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl'
         #relationship attributes
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         qualificationType:
-          $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship_attribute"
+          $ref: '../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship_attribute'
         jobSeekingStatus:
-          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship_attribute"
+          $ref: '../teacher/jobSeekingStatus.yaml#/JsonApiModel_teacher-jobSeekingStatus_relationship_attribute'
         userType:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         thDiscoveryMethod:
-          $ref: "../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship_attribute"
+          $ref: '../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship_attribute'
         latestAdviserCommentUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         currentCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         teachingQualificationCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         maritalStatus:
-          $ref: "../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship_attribute"
+          $ref: '../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship_attribute'
         internationalSchoolExperience:
-          $ref: "../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute"
+          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         teachingQualificationCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
         qualificationType:
-          $ref: "../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship"
+          $ref: '../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship'
         jobSeekingStatus:
-          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship"
+          $ref: '../job/status.yaml#/JsonApiModel_job-status_relationship'
         userType:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         thDiscoveryMethod:
-          $ref: "../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship"
+          $ref: '../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship'
         latestAdviserCommentUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         currentCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
         maritalStatus:
-          $ref: "../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship"
+          $ref: '../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship'
         internationalSchoolExperience:
-          $ref: "../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship"
+          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
   required:
     - type
     - id
@@ -112,7 +112,7 @@ JsonApiModel_teacher_type:
 
 JsonApiModel_teacher_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -121,7 +121,7 @@ JsonApiModel_teacher_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_teacher_id"
+      $ref: '#/JsonApiModel_teacher_id'
   required:
     - id
 
@@ -134,9 +134,9 @@ JsonApiModel_teacher_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_teacher_type"
+          $ref: '#/JsonApiModel_teacher_type'
         id:
-          $ref: "#/JsonApiModel_teacher_id"
+          $ref: '#/JsonApiModel_teacher_id'
       required:
         - type
         - id

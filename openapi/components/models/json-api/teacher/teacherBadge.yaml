@@ -3,35 +3,37 @@ JsonApiModel_teacher-teacherBadge:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-teacherBadge_type"
+      $ref: '#/JsonApiModel_teacher-teacherBadge_type'
     id:
-      $ref: "#/JsonApiModel_teacher-teacherBadge_id"
+      $ref: '#/JsonApiModel_teacher-teacherBadge_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_creationDate"  
+          $ref: '../../library/teacher/teacherBadge.yaml#/teacher-teacherBadge_creationDate'
         # relationship attributes
         teacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
-        teacherBadge:
-          $ref: "../teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge_relationship_attribute"
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute'
+        badge:
+          $ref: '../teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        latestUpdateUser:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         teacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-        teacherBadge:
-          $ref: "../teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge_relationship"
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        badge:
+          $ref: '../teacher/teacherBadge.yaml#/JsonApiModel_teacher-teacherBadge_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -44,7 +46,7 @@ JsonApiModel_teacher-teacherBadge_type:
 
 JsonApiModel_teacher-teacherBadge_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -53,7 +55,7 @@ JsonApiModel_teacher-teacherBadge_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_teacher-teacherBadge_id"
+      $ref: '#/JsonApiModel_teacher-teacherBadge_id'
   required:
     - id
 
@@ -66,9 +68,9 @@ JsonApiModel_teacher-teacherBadge_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_teacher-teacherBadge_type"
+          $ref: '#/JsonApiModel_teacher-teacherBadge_type'
         id:
-          $ref: "#/JsonApiModel_teacher-teacherBadge_id"
+          $ref: '#/JsonApiModel_teacher-teacherBadge_id'
       required:
         - type
         - id

@@ -3,16 +3,16 @@ JsonApiModel_general-worldLanguage:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-worldLanguage_type"
+      $ref: '#/JsonApiModel_general-worldLanguage_type'
     id:
-      $ref: "#/JsonApiModel_general-worldLanguage_id"
+      $ref: '#/JsonApiModel_general-worldLanguage_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/worldLanguage.yaml#/general-worldLanguage_name"
+          $ref: '../../library/general/worldLanguage.yaml#/general-worldLanguage_name'
   required:
     - type
     - id
@@ -25,7 +25,7 @@ JsonApiModel_general-worldLanguage_type:
 
 JsonApiModel_general-worldLanguage_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -33,10 +33,13 @@ JsonApiModel_general-worldLanguage_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
-      id: 
-        $ref: "#/JsonApiModel_general-worldLanguage_id"
+    id:
+      $ref: '#/JsonApiModel_general-worldLanguage_id'
+    name:
+      $ref: '../../library/general/worldLanguage.yaml#/general-worldLanguage_name'
   required:
-      - id
+    - id
+    - name
 
 JsonApiModel_general-worldLanguage_relationship:
   type: object
@@ -47,9 +50,9 @@ JsonApiModel_general-worldLanguage_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-worldLanguage_type"
+          $ref: '#/JsonApiModel_general-worldLanguage_type'
         id:
-          $ref: "#/JsonApiModel_general-worldLanguage_id"
+          $ref: '#/JsonApiModel_general-worldLanguage_id'
       required:
         - type
         - id
