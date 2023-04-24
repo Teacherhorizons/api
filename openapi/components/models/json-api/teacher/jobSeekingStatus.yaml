@@ -1,0 +1,57 @@
+JsonApiModel_teacher-jobSeekingStatus:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-jobSeekingStatus_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-jobSeekingStatus_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/teacher/jobSeekingStatus.yaml#/teacher-jobSeekingStatus_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-jobSeekingStatus_type:
+  type: string
+  example: teacher-jobSeekingStatus
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-jobSeekingStatus_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-jobSeekingStatus_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-jobSeekingStatus_id"
+  required:
+    - id
+
+JsonApiModel_teacher-jobSeekingStatus_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_teacher-jobSeekingStatus_type"
+        id:
+          $ref: "#/JsonApiModel_teacher-jobSeekingStatus_id"
+      required:
+        - type
+        - id
+  required:
+    - data

@@ -69,7 +69,7 @@ export const updateSchool = async (
     mainTeacherNationalityIds: [206, 207],
     annualTeacherTurnoverPercentage: 15,
     numberOfOverseasTeachersRecruitedPerYear: 7,
-    teachingLanguageIds: [1, 2, 3],
+    teachingworldLanguageIds: [1, 2, 3],
     isOpenToTeflTeachers: true,
     facilityIds: [1, 2, 3],
     locationLatLong: '-8.8383333, 13.2344444',
