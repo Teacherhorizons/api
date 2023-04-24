@@ -184,8 +184,8 @@ SimpleModel_regional-city_admin:
       $ref: "../../library/regional/city.yaml#/regional-city_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
-    languageId:
-      $ref: "../../library/regional/city.yaml#/regional-city_languageId"
+    worldLanguageId:
+      $ref: "../../library/regional/city.yaml#/regional-city_worldLanguageId"
     ambassadorTeacherId:
       $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTeacherId"
     photo1Id:
@@ -206,7 +206,7 @@ SimpleModel_regional-city_admin:
     - creationUser
     - latestUpdateUser
     - countryId
-    - languageId
+    - worldLanguageId
     - ambassadorTeacherId
     - photo1Id
     - crimeIndex

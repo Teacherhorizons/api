@@ -1,0 +1,19 @@
+SimpleModel_teacher-jobSeekingStatus:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-jobSeekingStatus_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/jobSeekingStatus.yaml#/teacher-jobSeekingStatus_name"
+  required:
+    - id
+    - name
+
+# shared
+SimpleModel_teacher-jobSeekingStatus_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

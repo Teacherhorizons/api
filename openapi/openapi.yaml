@@ -769,6 +769,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherLookingForCurriculum" />
 
+  - name: simple-model-teacher-jobSeekingStatus
+    x-displayName: Simple model - teacher-jobSeekingStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-jobSeekingStatus" />
+
   #   # tags - simple-models - users
 
   - name: simple-model-user
@@ -1336,6 +1341,11 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecordSubject" /> 
 
+  - name: json-api-model-teacher-jobSeekingStatus
+    x-displayName: JSON:API model - teacher-jobSeekingStatus
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-jobSeekingStatus" /> 
+
   # tags - JSON:API models - school
 
   - name: json-api-model-school
@@ -1722,6 +1732,7 @@ x-tagGroups:
       - simple-model-teacher-teacherLookingForCurriculum
       - simple-model-teacher-teacherEmploymentRecord
       - simple-model-teacher-teacherEmploymentRecordSubject
+      - simple-model-teacher-jobSeekingStatus
       - simple-model-user
       - simple-model-user-favouriteJob
       - simple-model-user-favouriteSchool
@@ -1872,6 +1883,7 @@ x-tagGroups:
       - json-api-model-teacher-teacherLookingForCurriculum
       - json-api-model-teacher-teacherEmploymentRecord
       - json-api-model-teacher-teacherEmploymentRecordSubject
+      - json-api-model-teacher-jobSeekingStatus
       - json-api-model-user
       - json-api-model-user-favouriteJob
       - json-api-model-user-favouriteSchool
