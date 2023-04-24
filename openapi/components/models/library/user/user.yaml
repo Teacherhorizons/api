@@ -13,13 +13,13 @@ user_email:
   example: otto@tbtech.co.uk
 user_skype:
   type: string
-  example: ""
+  example: ''
 user_password:
   type: string
-  example: ""
+  example: ''
 user_phone:
   type: string
-  example: ""
+  example: ''
 user_optin:
   type: integer
   example: 0
@@ -48,8 +48,8 @@ user_allowLogin:
   type: integer
   example: 0
 user_thDoNotContact:
-  type: integer
-  example: 0
+  type: boolean
+  example: true
 user_latestMessageViewDate:
   type: string
   format: date-time
@@ -80,41 +80,40 @@ user_type:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user-type
-  required: 
+  required:
     - id
- 
+
 user_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 user_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 user_phoneCodeCountry:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
-  required: 
+  required:
     - id
-  

@@ -1,228 +1,227 @@
 type: object
 properties:
-  thDoNotContact: 
-    type: integer
-    format: int32
-    example: 0
-  teacherId: 
+  thDoNotContact:
+    type: boolean
+    example: true
+  teacherId:
     type: integer
     format: int32
     example: 22136
-  dateApplied: 
+  dateApplied:
     type: integer
     format: int64
     example: 1610200165000
-  thPlaceabilityRating: 
+  thPlaceabilityRating:
     type: integer
     format: int32
     example: 0
-  userid: 
+  userid:
     type: integer
     format: int32
     example: 23428
-  averageReferenceScore: 
+  averageReferenceScore:
     type: integer
     format: int32
     example: 0
-  teachingQualificationCountryId: 
+  teachingQualificationCountryId:
     type: integer
     format: int32
     example: 62
-  userIsActive: 
+  userIsActive:
     type: integer
     format: int32
     example: 1
-  currentRoleId: 
+  currentRoleId:
     type: integer
     format: int32
     example: -1
-  badgeIds: 
+  badgeIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  percentageComplete: 
+  percentageComplete:
     type: integer
     format: int32
     example: 0
-  jobSeekingStatusId: 
+  jobSeekingStatusId:
     type: integer
     format: int32
     example: 1
-  currentSubjectIds: 
+  currentSubjectIds:
     type: array
-  lookingForSubjectIds: 
+  lookingForSubjectIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  curriculumExperienceIds: 
+  curriculumExperienceIds:
     type: array
-    items: 
-      type: integer
-      format: int32
-      example: 5 
-  completededucationLevelIds: 
-    type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  teachingSkillIds: 
+  completededucationLevelIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  computerSkillIds: 
-    type: array 
-    items: 
-      type: integer
-      format: int32
-      example: 5
-  lookingForRegionIds: 
-    type: array 
-    items: 
-      type: integer
-      format: int32
-      example: 5
-  fluentLanguageIds: 
+  teachingSkillIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  lookingForAgeLevelIds: 
+  computerSkillIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  lookingForCurriculumIds: 
+  lookingForRegionIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  experienceCurriculumIds: 
+  fluentLanguageIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  lookingForRoleIds: 
+  lookingForAgeLevelIds:
     type: array
-    items: 
+    items:
+      type: integer
+      format: int32
+      example: 5
+  lookingForCurriculumIds:
+    type: array
+    items:
+      type: integer
+      format: int32
+      example: 5
+  experienceCurriculumIds:
+    type: array
+    items:
+      type: integer
+      format: int32
+      example: 5
+  lookingForRoleIds:
+    type: array
+    items:
       type: integer
       format: int32
       example: 14
-  notLookingForCountryIds: 
+  notLookingForCountryIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
-      example: 5 
-  numberOfCompletedReferences: 
+      example: 5
+  numberOfCompletedReferences:
     type: integer
     format: int32
     example: 0
-  lastActiveDate: 
+  lastActiveDate:
     type: integer
     format: int64
     example: 1610200165000
-  cvUrl: 
+  cvUrl:
     type: string
     example: /th/api/teachers/2123428/download/20788
-  qualificationTypeId: 
+  qualificationTypeId:
     type: integer
     format: int32
     example: 3
-  internationalExperienceId: 
+  internationalExperienceId:
     type: integer
     format: int32
     example: 2
-  sharedFacebookProfile: 
+  sharedFacebookProfile:
     type: integer
     format: int32
     example: 0
-  thDiscoveryMethodId: 
+  thDiscoveryMethodId:
     type: integer
     format: int32
     example: 6
-  latestUpdateDate: 
+  latestUpdateDate:
     type: integer
     format: int64
     example: 1610200416000
-  teachingQualificationId: 
+  teachingQualificationId:
     type: integer
     format: int32
     example: 3
-  jobEmailsOptIn: 
+  jobEmailsOptIn:
     type: integer
     format: int32
     example: 1
-  internationalSchoolExperienceId: 
+  internationalSchoolExperienceId:
     type: integer
     format: int32
     example: 2
-  numberOfEmploymentRecords: 
+  numberOfEmploymentRecords:
     type: integer
     format: int32
     example: 0
-  photoUrl: 
+  photoUrl:
     type: string
     example: /static/images/member.png
-  email: 
+  email:
     type: string
     example: www@eee.com
-  firstName: 
+  firstName:
     type: string
     example: www
-  lastName: 
+  lastName:
     type: string
     example: eee
   schoolPreferences:
     type: object
     properties:
-      schoolPreferenceId: 
+      schoolPreferenceId:
         type: integer
         format: int32
         example: 6454
-      abilityToSavePreferenceId: 
+      abilityToSavePreferenceId:
         type: integer
         format: int32
         example: 3
-      discountOnSchoolFeesPreferenceId: 
+      discountOnSchoolFeesPreferenceId:
         type: integer
         format: int32
         example: 1
-      accommodationProvidedPreferenceId: 
+      accommodationProvidedPreferenceId:
         type: integer
         format: int32
         example: 4
-      healthInsuranceProvidedPreferenceId: 
+      healthInsuranceProvidedPreferenceId:
         type: integer
         format: int32
-        example: 3  
-  nationalityIds: 
+        example: 3
+  nationalityIds:
     type: array
-    items: 
+    items:
       type: integer
       format: int32
       example: 5
-  currentEmployer: 
+  currentEmployer:
     type: string
-  interestedInPrivateTuition: 
+  interestedInPrivateTuition:
     type: integer
     format: int32
     example: 0
-  memberNumber: 
+  memberNumber:
     type: integer
     format: int32
     example: 2123428
-  accountStatusId: 
+  accountStatusId:
     type: integer
     format: int32
     example: 4

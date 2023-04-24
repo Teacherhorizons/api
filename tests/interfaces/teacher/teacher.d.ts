@@ -8,7 +8,7 @@ declare namespace JsonApi {
       fullName?: string;
       thPlaceabilityRating?: number;
       memberNumber?: number;
-      thDoNotContact?: number; // TODO: switch to boolean
+      thDoNotContact?: boolean;
     };
   }
 }
