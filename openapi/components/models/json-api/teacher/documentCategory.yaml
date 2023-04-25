@@ -54,5 +54,8 @@ JsonApiModel_teacher-documentCategory_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-documentCategory_id"
+    name:
+      $ref: "../../library/teacher/documentCategory.yaml#/teacher-documentCategory_name"
   required:
     - id
+    - name

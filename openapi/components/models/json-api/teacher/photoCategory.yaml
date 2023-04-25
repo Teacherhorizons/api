@@ -54,8 +54,11 @@ JsonApiModel_teacher-photoCategory_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-photoCategory_id"
+    name:
+      $ref: "../../library/teacher/photoCategory.yaml#/teacher-photoCategory_name"
   required:
     - id
+    - name
 
 
 

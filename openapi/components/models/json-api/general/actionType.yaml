@@ -35,8 +35,11 @@ JsonApiModel_general-actionType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-actionType_id"
+    name:
+      $ref: "../../library/general/actionType.yaml#/general-actionType_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-actionType_relationship:
   type: object

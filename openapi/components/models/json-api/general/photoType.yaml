@@ -33,10 +33,13 @@ JsonApiModel_general-photoType_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
-        id: 
-          $ref: "#/JsonApiModel_general-photoType_id"
+    id: 
+      $ref: "#/JsonApiModel_general-photoType_id"
+    name:
+      $ref: "../../library/general/photoType.yaml#/general-photoType_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-photoType_relationship:
   type: object

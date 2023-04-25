@@ -35,8 +35,11 @@ JsonApiModel_general-weatherType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-weatherType_id"
+    name:
+      $ref: "../../library/general/weatherType.yaml#/general-weatherType_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-weatherType_relationship:
   type: object

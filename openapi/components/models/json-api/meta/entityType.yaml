@@ -35,8 +35,11 @@ JsonApiModel_meta-entityType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_meta-entityType_id"
+    name:
+      $ref: "../../library/meta/entityType.yaml#/meta-entityType_name"
   required:
     - id
+    - name
 
 JsonApiModel_meta-entityType_relationship:
   type: object

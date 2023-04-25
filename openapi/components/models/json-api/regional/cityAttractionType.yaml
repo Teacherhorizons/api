@@ -62,8 +62,11 @@ JsonApiModel_regional-cityAttractionType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-cityAttractionType_id"
+    name:
+      $ref: "../../library/regional/cityAttractionType.yaml#/regional-cityAttractionType_name"
   required:
     - id
+    - name
 
 JsonApiModel_regional-cityAttractionType_relationship:
   type: object

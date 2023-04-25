@@ -35,8 +35,11 @@ JsonApiModel_job-type_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_job-type_id"
+    name:
+      $ref: "../../library/job/type.yaml#/job-type_name"
   required:
     - id
+    - name
 
 JsonApiModel_job-type_relationship:
   type: object

@@ -36,8 +36,11 @@ JsonApiModel_application-thMatchType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-thMatchType_id"
+    name:
+      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
   required:
     - id
+    - name
 
 JsonApiModel_application-thMatchType_relationship:
   type: object

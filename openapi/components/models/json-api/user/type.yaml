@@ -37,8 +37,11 @@ JsonApiModel_user-type_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_user-type_id"
+    name:
+      $ref: "../../library/user/type.yaml#/user-type_name"
   required:
     - id
+    - name
 
 JsonApiModel_user-type_relationship:
   type: object

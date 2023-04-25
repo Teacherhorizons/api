@@ -54,5 +54,8 @@ JsonApiModel_teacher-computingSkill_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-computingSkill_id"
+    name:
+      $ref: "../../library/teacher/computingSkill.yaml#/teacher-computingSkill_name"
   required:
     - id
+    - name

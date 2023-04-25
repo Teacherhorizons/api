@@ -35,8 +35,11 @@ JsonApiModel_teacher-maritalStatus_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-maritalStatus_id"
+    name:
+      $ref: "../../library/teacher/maritalStatus.yaml#/teacher-maritalStatus_name"
   required:
     - id
+    - name
 
 JsonApiModel_teacher-maritalStatus_relationship:
   type: object

@@ -33,10 +33,13 @@ JsonApiModel_general-roleType_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
-        id: 
-          $ref: "#/JsonApiModel_general-roleType_id"
+    id: 
+      $ref: "#/JsonApiModel_general-roleType_id"
+    name:
+      $ref: "../../library/general/roleType.yaml#/general-roleType_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-roleType_relationship:
   type: object

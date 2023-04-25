@@ -63,8 +63,11 @@ JsonApiModel_regional-countryAttractionType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-countryAttractionType_id"
+    name:
+      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name"
   required:
     - id
+    - name
 
 JsonApiModel_regional-countryAttractionType_relationship:
   type: object

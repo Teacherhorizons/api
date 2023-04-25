@@ -35,8 +35,11 @@ JsonApiModel_teacher-referenceType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-referenceType_id"
+    name:
+      $ref: "../../library/teacher/referenceType.yaml#/teacher-referenceType_name"
   required:
     - id
+    - name
 
 JsonApiModel_teacher-referenceType_relationship:
   type: object

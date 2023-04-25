@@ -35,8 +35,11 @@ JsonApiModel_meta-entityChangeType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_meta-entityChangeType_id"
+    name:
+      $ref: "../../library/meta/entityChangeType.yaml#/meta-entityChangeType_name"
   required:
     - id
+    - name
 
 JsonApiModel_meta-entityChangeType_relationship:
   type: object

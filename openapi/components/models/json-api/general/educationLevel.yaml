@@ -35,8 +35,11 @@ JsonApiModel_general-educationLevel_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-educationLevel_id"
+    name:
+      $ref: "../../library/general/educationLevel.yaml#/general-educationLevel_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-educationLevel_relationship:
   type: object

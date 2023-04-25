@@ -38,8 +38,11 @@ JsonApiModel_general-documentType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-documentType_id"
+    name:
+      $ref: "../../library/general/documentType.yaml#/general-documentType_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-documentType_relationship:
   type: object

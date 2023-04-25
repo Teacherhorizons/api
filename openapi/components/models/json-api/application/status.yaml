@@ -39,8 +39,11 @@ JsonApiModel_application-status_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-status_id"
+    name:
+      $ref: "../../library/application/status.yaml#/application-status_name"
   required:
     - id
+    - name
 
 JsonApiModel_application-status_relationship:
   type: object

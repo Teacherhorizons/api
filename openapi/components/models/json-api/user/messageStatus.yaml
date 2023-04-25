@@ -35,8 +35,11 @@ JsonApiModel_user-messageStatus_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_user-messageStatus_id"
+    name:
+      $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_name"
   required:
     - id
+    - name
 
 JsonApiModel_user-messageStatus_relationship:
   type: object

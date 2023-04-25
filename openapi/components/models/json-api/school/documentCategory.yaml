@@ -53,5 +53,8 @@ JsonApiModel_school-documentCategory_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-documentCategory_id"
+    name:
+      $ref: "../../library/school/documentCategory.yaml#/school-documentCategory_name"
   required:
     - id
+    - name

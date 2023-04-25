@@ -54,5 +54,8 @@ JsonApiModel_teacher-teachingSkill_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-teachingSkill_id"
+    name:
+      $ref: "../../library/teacher/teachingSkill.yaml#/teacher-teachingSkill_name"
   required:
     - id
+    - name
