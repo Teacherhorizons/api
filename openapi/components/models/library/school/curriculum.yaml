@@ -27,30 +27,25 @@ school-curriculum_latestUpdateUserId:
   description: Relationship to user
 
 #relationships
-    
+
 school-curriculum_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 school-curriculum_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
-
-
-
-
