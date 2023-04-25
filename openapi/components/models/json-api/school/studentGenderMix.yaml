@@ -52,8 +52,11 @@ JsonApiModel_school-studentGenderMix_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-studentGenderMix_id"
+    name:
+      $ref: "../../library/school/studentGenderMix.yaml#/school-studentGenderMix_name"
   required:
     - id
+    - name
 
 JsonApiModel_school-studentGenderMix_relationship:
   type: object

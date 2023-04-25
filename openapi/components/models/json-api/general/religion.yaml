@@ -52,8 +52,11 @@ JsonApiModel_general-religion_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-religion_id"
+    name:
+      $ref: "../../library/general/religion.yaml#/general-religion_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-religion_relationship:
   type: object

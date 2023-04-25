@@ -52,8 +52,11 @@ JsonApiModel_school-relocationAllowanceType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-relocationAllowanceType_id"
+    name:
+      $ref: "../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_name"
   required:
     - id
+    - name
 
 JsonApiModel_school-relocationAllowanceType_relationship:
   type: object

@@ -52,8 +52,11 @@ JsonApiModel_school-flightAllowanceType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-flightAllowanceType_id"
+    name:
+      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_name"
   required:
     - id
+    - name
 
 JsonApiModel_school-flightAllowanceType_relationship:
   type: object
