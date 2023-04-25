@@ -54,8 +54,11 @@ JsonApiModel_application-actionType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-action_id"
+    detail:
+      $ref: "../../library/application/action.yaml#/application-action_detail"
   required:
     - id
+    - detail
 
 JsonApiModel_application-action_relationship:
   type: object
