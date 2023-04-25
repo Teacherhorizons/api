@@ -52,8 +52,11 @@ JsonApiModel_teacher-qualificationType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-qualificationType_id"
+    name:
+      $ref: "../../library/teacher/qualificationType.yaml#/teacher-qualificationType_name"
   required:
     - id
+    - name
 
 JsonApiModel_teacher-qualificationType_relationship:
   type: object

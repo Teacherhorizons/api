@@ -88,8 +88,11 @@ JsonApiModel_job_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_job_id"
+    title:
+      $ref: "../../library/job/job.yaml#/job_title"
   required:
     - id
+    - title
 
 JsonApiModel_job_relationship:
   type: object

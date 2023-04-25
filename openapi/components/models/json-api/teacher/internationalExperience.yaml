@@ -35,8 +35,11 @@ JsonApiModel_teacher-internationalExperience_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-internationalExperience_id"
+    name:
+      $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
   required:
     - id
+    - name
 
 JsonApiModel_teacher-internationalExperience_relationship:
   type: object
