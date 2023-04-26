@@ -6,8 +6,8 @@ school_slug:
   type: string
   example: africa-angola-luanda-english-school-community-of-luanda
 school_isActive:
-  type: integer
-  example: 1
+  type: boolean
+  example: false
 # school_discountForStaffChildrenPercentage
 #   type: number
 #   example: 4
@@ -40,8 +40,8 @@ school_isEndorsedByTh:
   type: boolean
   example: true
 school_hasBeenVisitedByTh:
-  type: integer
-  example: ''
+  type: boolean
+  example: true
 school_acronym:
   type: string
   example: ESCOLA
@@ -74,7 +74,7 @@ school_numberOfSecondaryStudents:
   example: 123
 school_numberOfPost16Students:
   type: integer
-  example: ''
+  example: 11
 #check with RR
 school_averagePreSchoolClassSize:
   type: integer
@@ -84,10 +84,10 @@ school_averagePrimaryClassSize:
   example: 20
 school_averageSecondaryClassSize:
   type: integer
-  example: ''
+  example: 22
 school_averagePost16ClassSize:
   type: integer
-  example: ''
+  example: 23
 school_percentageOfInternationalStudents:
   type: integer
   example: 50
@@ -99,25 +99,25 @@ school_yearFounded:
   example: 2003
 school_promoVideoUrl:
   type: string
-  example: ''
+  example: https://youtu.be/cEHAWhG6B3c
 school_numberOfSchoolDaysPerYear:
   type: integer
-  example: ''
+  example: 155
 school_yearHeadTeacherStarted:
   type: integer
   example: 2020
 school_yearLastAccredited:
   type: integer
-  example: ''
+  example: 2001
 school_hasLocalAccreditation:
   type: boolean
-  example: 1
+  example: true
 school_missionStatementText:
   type: string
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
 school_promoVideoCaption:
   type: string
-  example: ''
+  example: Lorem ipsum
 school_percentageOfOverseasTeachers:
   type: integer
   example: 80
@@ -135,13 +135,13 @@ school_numberOfOverseasTeachersRecruitedPerYear:
   example: 11
 school_minimumYearsTeachingExperience:
   type: integer
-  example: ''
+  example: 2
 school_monthRecruitmentBegins:
   type: integer
   example: 3
 school_teacherUpperAgeLimit:
   type: integer
-  example: ''
+  example: 55
 school_isOpenToNewlyQualifiedTeachers:
   type: boolean
   example: 1
@@ -150,7 +150,7 @@ school_isOpenToUntrainedTeachers:
   example: 1
 school_isOpenToPgcei:
   type: boolean
-  example: ''
+  example: true
 school_isOpenToTeachingCouples:
   type: boolean
   example: 1
@@ -162,22 +162,22 @@ school_additionalRecruitmentRequirementsText:
   example: Lorem ipsum
 school_monthForNoticeOfIntentionToLeave:
   type: integer
-  example: ''
+  example: 1
 school_monthContractEnds:
   type: integer
-  example: ''
+  example: 11
 school_additionalContractText:
   type: string
-  example: ''
+  example: Foo
 school_monthContractStarts:
   type: integer
-  example: ''
+  example: 4
 school_locationLatLong:
   type: string
   example: -8.91461649145998, 13.1904718044952
 school_yearCampusLastRenovated:
   type: integer
-  example: ''
+  example: 2000
 school_locationText:
   type: string
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
@@ -229,34 +229,34 @@ school_teacherPensionContributionPercentage:
   example: 3
 school_amountIndividualTeacherSavesYearly:
   type: number
-  example: ''
+  example: 12000
 school_amountIndividualTeacherSavesYearlyInUsd:
   type: number
-  example: ''
+  example: 13400
 school_numberOfDependentsPerTeacher:
   type: integer
-  example: ''
+  example: 2
 school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
   type: boolean
   example: 1
 school_additionalTaxText:
   type: string
-  example: ''
+  example: Foo bar
 school_billsExpenditurePercentage:
   type: integer
-  example: ''
+  example: 20
 school_foodAndDrinkExpenditurePercentage:
   type: integer
-  example: ''
+  example: 10
 school_travelExpenditurePercentage:
   type: integer
-  example: ''
+  example: 11
 school_otherExpenditurePercentage:
   type: integer
-  example: ''
+  example: 13
 school_accommodationExpenditurePercentage:
   type: integer
-  example: ''
+  example: 15
 school_hasTeacherInductionProgramme:
   type: boolean
   example: true
@@ -268,10 +268,10 @@ school_hasTeacherBereavementLeave:
   example: true
 school_additionalAccommodationText:
   type: string
-  example: ''
+  example: Lorem ipsum
 school_ambassadorTestimonial:
   type: string
-  example: ''
+  example: Foo bar
 school_leadRecruitmentContactName:
   type: string
   example: Mrs Sharon Morgan
