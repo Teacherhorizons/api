@@ -43,11 +43,13 @@ JsonApiModel_school-accreditationType_relationship_attribute:
     id:
       $ref: "#/JsonApiModel_school-accreditationType_id"
     name:
-      $ref: "../../library/school/school.yaml#/school_name"
-    slug:
-      $ref: "../../library/school/school.yaml#/school_slug"
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_name" 
+    url:
+      $ref: "../../library/school/accreditationType.yaml#/school-accreditationType_url" 
   required:
     - id
+    - name
+    - url
 
 JsonApiModel_school-accreditationType_relationship:
   type: object

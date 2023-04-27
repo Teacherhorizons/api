@@ -84,8 +84,14 @@ JsonApiModel_regional-countryArticle_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-countryArticle_id"
+    title:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_title"
+    url:
+      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_url"
   required:
     - id
+    - title
+    - url
 
 JsonApiModel_regional-countryArticle_relationship:
   type: object

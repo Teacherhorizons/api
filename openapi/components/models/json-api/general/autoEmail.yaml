@@ -43,8 +43,11 @@ JsonApiModel_general-autoEmail_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-autoEmail_id"
+    name:
+      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-autoEmail_relationship:
   type: object

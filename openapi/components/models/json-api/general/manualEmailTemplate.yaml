@@ -45,8 +45,11 @@ JsonApiModel_general-manualEmailTemplate_relationship_attribute:
   properties:
     id:
       $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_id"
+    subject:
+        $ref: "../../library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_subject"
   required:
     - id
+    - subject
 
 JsonApiModel_general-manualEmailTemplate_relationship:
   type: object

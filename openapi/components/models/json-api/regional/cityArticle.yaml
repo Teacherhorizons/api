@@ -87,8 +87,14 @@ JsonApiModel_regional-cityArticle_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-cityArticle_id"
+    title:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_title"
+    url:
+      $ref: "../../library/regional/cityArticle.yaml#/regional-cityArticle_url"
   required:
     - id
+    - title
+    - url
 
 JsonApiModel_regional-cityArticle_relationship:
   type: object

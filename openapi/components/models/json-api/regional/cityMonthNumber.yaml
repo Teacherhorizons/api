@@ -71,8 +71,11 @@ JsonApiModel_regional-cityMonthNumber_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+    monthNumber:
+      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
   required:
     - id
+    - monthNumber
 
 JsonApiModel_regional-cityMonthNumber_relationship:
   type: object
