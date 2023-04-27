@@ -11,17 +11,17 @@ JsonApiModel_school-schoolPhoto:
       additionalProperties: false
       properties:
         # simple attributes
-        url:
-          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_url"
-        caption:
-          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_caption"
         creationDate:
           $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationDate"
         latestUpdateDate:
           $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateDate"
         # relationship attributes
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         category:
-          $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_category"
+          $ref: "../school/photoCategory.yaml#/JsonApiModel_school-photoCategory_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -30,8 +30,12 @@ JsonApiModel_school-schoolPhoto:
       type: object
       additionalProperties: false
       properties:
+        school:
+          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         category:
-          $ref: "../school/documentCategory.yaml#/JsonApiModel_school-documentCategory_relationship"
+          $ref: "../school/photoCategory.yaml#/JsonApiModel_school-photoCategory_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:
