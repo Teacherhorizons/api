@@ -1,7 +1,6 @@
 #attributes
 regional-cityPhoto_precedence:
   type: integer
-  description: Main
   example: 1
 
 regional-cityPhoto_url:
@@ -29,18 +28,18 @@ regional-cityPhoto_city:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
-  
+
 regional-cityPhoto_photo:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id

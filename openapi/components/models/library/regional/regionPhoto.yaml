@@ -1,7 +1,6 @@
 #attributes
 regional-regionPhoto_precedence:
   type: integer
-  description: Main
   example: 1
 
 #relationship attributes
@@ -21,18 +20,18 @@ regional-regionPhoto_region:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-region
   required:
     - id
-  
+
 regional-regionPhoto_photo:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
