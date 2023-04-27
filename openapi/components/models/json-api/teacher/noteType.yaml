@@ -54,8 +54,11 @@ JsonApiModel_teacher-noteType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_teacher-noteType_id"
+    name:
+      $ref: "../../library/teacher/noteType.yaml#/teacher-noteType_name" 
   required:
     - id
+    - name
 
 JsonApiModel_teacher-noteType_relationship:
   type: object

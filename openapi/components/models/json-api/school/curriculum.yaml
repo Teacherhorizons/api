@@ -70,5 +70,8 @@ JsonApiModel_school-curriculum_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-curriculum_id"
+    name:
+      $ref: "../../library/school/curriculum.yaml#/school-curriculum_name"
   required:
     - id
+    - name
