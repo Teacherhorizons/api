@@ -3,23 +3,23 @@ SimpleModel_school-schoolPhoto:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_school-schoolPhoto_id"
+      $ref: '#/SimpleModel_school-schoolPhoto_id'
     # simple attributes
-    url:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_url"
-    caption:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_caption"
     creationDate:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationDate"
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationDate'
     latestUpdateDate:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateDate"
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateDate'
     # relationship attributes
+    schoolId:
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_schoolId'
+    photoId:
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_photoId'
     categoryId:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_categoryId"
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_categoryId'
     creationUserId:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationUserId"
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateUserId"
+      $ref: '../../library/school/schoolPhoto.yaml#/school-schoolPhoto_latestUpdateUserId'
   required:
     - id
 

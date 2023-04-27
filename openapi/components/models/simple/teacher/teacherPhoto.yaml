@@ -3,25 +3,23 @@ SimpleModel_teacher-teacherPhoto:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_teacher-teacherPhoto_id"
+      $ref: '#/SimpleModel_teacher-teacherPhoto_id'
     # simple attributes
-    caption:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_caption"
-    url:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_url"
     creationDate:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationDate"
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationDate'
     latestUpdateDate:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateDate"
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateDate'
     # relationship attributes
     teacherId:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_teacherId"
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_teacherId'
+    photoId:
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_photoId'
+    categoryId:
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_categoryId'
     creationUserId:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationUserId"
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateUserId"
-    photoCategoryId:
-      $ref: "../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_photoCategoryId"
+      $ref: '../../library/teacher/teacherPhoto.yaml#/teacher-teacherPhoto_latestUpdateUserId'
   required:
     - id
 

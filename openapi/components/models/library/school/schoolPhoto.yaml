@@ -15,6 +15,14 @@ school-schoolPhoto_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 
 #relationship attribites
+school-schoolPhoto_schoolId:
+  type: integer
+  example: 1
+  description: Relationship to school
+school-schoolPhoto_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
 school-schoolPhoto_categoryId:
   type: integer
   example: 1
@@ -35,30 +43,29 @@ school-schoolPhoto_category:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-photoCategory
-  required: 
+  required:
     - id
-  
+
 school-schoolPhoto_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 school-schoolPhoto_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  

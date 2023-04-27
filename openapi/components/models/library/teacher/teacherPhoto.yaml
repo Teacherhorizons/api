@@ -1,10 +1,10 @@
 #attributes
 teacher-teacherPhoto_url:
-  type: string 
-  example: "https://www.youtube.com/watch?v=i1psneGB0AM&ab_channel=CutestAnimals"
+  type: string
+  example: 'https://www.youtube.com/watch?v=i1psneGB0AM&ab_channel=CutestAnimals'
 teacher-teacherPhoto_caption:
   type: object
-  example: "foo"
+  example: 'foo'
 teacher-teacherPhoto_creationDate:
   type: integer
   format: date-time
@@ -15,6 +15,18 @@ teacher-teacherPhoto_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 
 #relationship attributtes
+teacher-teacherPhoto_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
+teacher-teacherPhoto_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
+teacher-teacherPhoto_categoryId:
+  type: integer
+  example: 1
+  description: Relationship to teacher-photoCategory
 teacher-teacherPhoto_creationUserId:
   type: integer
   example: 1
@@ -23,14 +35,6 @@ teacher-teacherPhoto_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
-teacher-teacherPhoto_teacherId:
-  type: integer
-  example: 1
-  description: Relationship to teacher
-teacher-teacherPhoto_photoCategoryId:
-  type: integer
-  example: 1
-  description: Relationship to teacher-photoCategory
 
 #relationships
 teacher-teacherPhoto_creationUser:
@@ -39,7 +43,7 @@ teacher-teacherPhoto_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -50,7 +54,7 @@ teacher-teacherPhoto_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -61,7 +65,7 @@ teacher-teacherPhoto_teacher:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher
   required:
     - id
