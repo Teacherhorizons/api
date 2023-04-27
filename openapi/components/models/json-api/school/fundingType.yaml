@@ -3,33 +3,33 @@ JsonApiModel_school-fundingType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_school-fundingType_type"
+      $ref: '#/JsonApiModel_school-fundingType_type'
     id:
-      $ref: "#/JsonApiModel_school-fundingType_id"
+      $ref: '#/JsonApiModel_school-fundingType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        type:
-          $ref: "../../library/school/fundingType.yaml#/school-fundingType_type"
+        name:
+          $ref: '../../library/school/fundingType.yaml#/school-fundingType_name'
         creationDate:
-          $ref: "../../library/school/fundingType.yaml#/school-fundingType_creationDate"  
+          $ref: '../../library/school/fundingType.yaml#/school-fundingType_creationDate'
         latestUpdateDate:
-          $ref: "../../library/school/fundingType.yaml#/school-fundingType_latestUpdateDate"
+          $ref: '../../library/school/fundingType.yaml#/school-fundingType_latestUpdateDate'
         # relationship attributes
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -42,6 +42,18 @@ JsonApiModel_school-fundingType_type:
 
 JsonApiModel_school-fundingType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
+
+JsonApiModel_school-fundingType_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_school-fundingType_id'
+    name:
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_name'
+  required:
+    - id
+    - name

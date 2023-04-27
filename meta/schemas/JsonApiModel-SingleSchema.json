@@ -85,9 +85,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "$ref"
-                      ]
+                      "required": ["$ref"]
                     }
                   },
                   "required": []
@@ -96,11 +94,7 @@
                   "type": "array"
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             },
             "relationships": {
               "type": "object",
@@ -125,26 +119,16 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "$ref"
-                      ]
+                      "required": ["$ref"]
                     }
                   },
                   "required": []
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             }
           },
-          "required": [
-            "type",
-            "id",
-            "attributes"
-          ]
+          "required": ["type", "id", "attributes"]
         },
         "required": {
           "type": "array",
@@ -162,12 +146,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-Schema"
     },
     "JsonApiModel-SingleSchema-Type": {
@@ -189,12 +168,7 @@
           "const": "Unique identifier of the entity type"
         }
       },
-      "required": [
-        "type",
-        "example",
-        "readOnly",
-        "description"
-      ],
+      "required": ["type", "example", "readOnly", "description"],
       "title": "JsonApiModel-SingleSchema-Type"
     },
     "JsonApiModel-SingleSchema-Id": {
@@ -219,11 +193,7 @@
           "const": true
         }
       },
-      "required": [
-        "description",
-        "example",
-        "type"
-      ],
+      "required": ["description", "example", "type"],
       "title": "JsonApiModel-SingleSchema-Id"
     },
     "JsonApiModel-SingleSchema-RelationshipAttribute": {
@@ -248,9 +218,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "name": {
               "type": "object",
@@ -260,9 +228,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "slug": {
               "type": "object",
@@ -272,9 +238,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "fullName": {
               "type": "object",
@@ -284,9 +248,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "url": {
               "type": "object",
@@ -296,9 +258,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "description": {
               "type": "object",
@@ -308,9 +268,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "iconName": {
               "type": "object",
@@ -320,14 +278,20 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
+            },
+            "memberNumber": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
             }
           },
-          "required": [
-            "id"
-          ]
+          "required": ["id"]
         },
         "required": {
           "type": "array",
@@ -342,12 +306,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-RelationshipAttribute"
     },
     "JsonApiModel-SingleSchema-TypeAndId": {
@@ -371,10 +330,7 @@
               "$ref": "#/definitions/JsonApiModel-SingleSchema-Ref"
             }
           },
-          "required": [
-            "type",
-            "id"
-          ]
+          "required": ["type", "id"]
         },
         "required": {
           "type": "array",
@@ -394,12 +350,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ]
+      "required": ["type", "additionalProperties", "properties", "required"]
     },
     "JsonApiModel-SingleSchema-Relationship": {
       "type": "object",
@@ -419,9 +370,7 @@
               "$ref": "#/definitions/JsonApiModel-SingleSchema-TypeAndId"
             }
           },
-          "required": [
-            "data"
-          ]
+          "required": ["data"]
         },
         "required": {
           "type": "array",
@@ -436,12 +385,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-Relationship"
     },
     "JsonApiModel-SingleSchema-RelationshipMultiple": {
@@ -471,9 +415,7 @@
               }
             }
           },
-          "required": [
-            "data"
-          ]
+          "required": ["data"]
         },
         "required": {
           "type": "array",
@@ -488,12 +430,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-RelationshipMultiple"
     },
     "JsonApiModel-SingleSchema-Ref": {
@@ -504,9 +441,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "$ref"
-      ]
+      "required": ["$ref"]
     }
   }
 }

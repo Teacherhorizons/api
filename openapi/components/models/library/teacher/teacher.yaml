@@ -2,6 +2,7 @@
 teacher_memberNumber:
   type: integer
   example: 1
+  description: Main
 teacher_availableFromDate:
   type: string
   format: date-time
@@ -42,7 +43,7 @@ teacher_isAvailableForRemoteTeaching:
   example: true
 teacher_twitterHandle:
   type: string
-  example: twitterName
+  example: '@teacherhorizons'
 teacher_instagramHandle:
   type: string
   example: instagramName

@@ -9,8 +9,9 @@ get:
   description: |
     <span class="testing-status-1"></span>
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: path
       name: worldId
       required: true
@@ -23,23 +24,23 @@ get:
       example: staff,regions,jobs,schools,ambassadors
       schema:
         type: string
-    
+
   responses:
-    "200":
+    '200':
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/regional/world.yaml#/Response_regional-world"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+            $ref: '../../components/responses/regional/world.yaml#/Response_regional-world'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

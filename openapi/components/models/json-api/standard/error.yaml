@@ -11,48 +11,48 @@ JsonApiModel_error_400:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_accessNotPermitted"
-                - $ref: "#/JsonApiModel_error_missingMandatoryParameter"
-                - $ref: "#/JsonApiModel_error_invalidJSONInput"
-                - $ref: "#/JsonApiModel_error_missingMandatoryJSONfield"
-                - $ref: "#/JsonApiModel_error_contactSupport"
-                - $ref: "#/JsonApiModel_error_fileTypeLimitReached"
-                - $ref: "#/JsonApiModel_error_cannotManipulateFile"
-                - $ref: "#/JsonApiModel_error_callFailed"
-            description: ""
+                - $ref: '#/JsonApiModel_error_accessNotPermitted'
+                - $ref: '#/JsonApiModel_error_missingMandatoryParameter'
+                - $ref: '#/JsonApiModel_error_invalidJSONInput'
+                - $ref: '#/JsonApiModel_error_missingMandatoryJSONfield'
+                - $ref: '#/JsonApiModel_error_contactSupport'
+                - $ref: '#/JsonApiModel_error_fileTypeLimitReached'
+                - $ref: '#/JsonApiModel_error_cannotManipulateFile'
+                - $ref: '#/JsonApiModel_error_callFailed'
+            description: ''
             example:
-              - status: "400"
-                code: "accessNotPermitted"
-                title: "Access not permitted"
-                detail: "A school user does not have access to this functionality"
-              - status: "400"
-                code: "missingMandatoryParameter"
-                title: "Missing mandatory parameter"
+              - status: '400'
+                code: 'accessNotPermitted'
+                title: 'Access not permitted'
+                detail: 'A school user does not have access to this functionality'
+              - status: '400'
+                code: 'missingMandatoryParameter'
+                title: 'Missing mandatory parameter'
                 detail: "Parameter 'foo' is missing"
-              - status: "400"
-                code: "invalidJSONInput"
-                title: "Invalid JSON input"
-                detail: ""
-              - status: "400"
-                code: "missingMandatoryJSONfield"
-                title: "Missing mandatory JSON field"
+              - status: '400'
+                code: 'invalidJSONInput'
+                title: 'Invalid JSON input'
+                detail: ''
+              - status: '400'
+                code: 'missingMandatoryJSONfield'
+                title: 'Missing mandatory JSON field'
                 detail: "JSON file 'foo' is missing"
-              - status: "400"
-                code: "contactSupport"
-                title: "Contact support"
-                detail: "Please contact support to resolve the issue"
-              - status: "400"
-                code: "fileTypeLimitReached"
-                title: "File type limit reached"
-                detail: "Provided file type cannot be used"
-              - status: "400"
-                code: "cannotManipulateFile"
-                title: "Cannot manipulate file"
+              - status: '400'
+                code: 'contactSupport'
+                title: 'Contact support'
+                detail: 'Please contact support to resolve the issue'
+              - status: '400'
+                code: 'fileTypeLimitReached'
+                title: 'File type limit reached'
+                detail: 'Provided file type cannot be used'
+              - status: '400'
+                code: 'cannotManipulateFile'
+                title: 'Cannot manipulate file'
                 detail: "File 'foo' cannot be updated"
-              - status: "400"
-                code: "callFailed"
-                title: "callFailed"
-                detail: ""
+              - status: '400'
+                code: 'callFailed'
+                title: 'callFailed'
+                detail: ''
 
 JsonApiModel_error_401:
   description: UNAUTHORIZED
@@ -65,23 +65,23 @@ JsonApiModel_error_401:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_invalidOrExpiredAuthorisationToken"
-                - $ref: "#/JsonApiModel_error_invalidOrExpiredUploadToken"
-                - $ref: "#/JsonApiModel_error_fileOnServerContactSupport"
-            description: ""
+                - $ref: '#/JsonApiModel_error_invalidOrExpiredAuthorisationToken'
+                - $ref: '#/JsonApiModel_error_invalidOrExpiredUploadToken'
+                - $ref: '#/JsonApiModel_error_fileOnServerContactSupport'
+            description: ''
             example:
-              - status: "401"
-                code: "invalidOrExpiredAuthorisationToken"
-                title: "Invalid or expired authorisation token"
-                detail: ""
-              - status: "401"
-                code: "invalidOrExpiredUploadToken"
-                title: "Invalid or expired upload token"
-                detail: ""
-              - status: "401"
-                code: "fileOnServerContactSupport"
-                title: "File on server contact support"
-                detail: ""
+              - status: '401'
+                code: 'invalidOrExpiredAuthorisationToken'
+                title: 'Invalid or expired authorisation token'
+                detail: ''
+              - status: '401'
+                code: 'invalidOrExpiredUploadToken'
+                title: 'Invalid or expired upload token'
+                detail: ''
+              - status: '401'
+                code: 'fileOnServerContactSupport'
+                title: 'File on server contact support'
+                detail: ''
 
 JsonApiModel_error_403:
   description: FORBIDDEN
@@ -94,13 +94,13 @@ JsonApiModel_error_403:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_insufficientPermissions"
-            description: ""
+                - $ref: '#/JsonApiModel_error_insufficientPermissions'
+            description: ''
             example:
-              - status: "403"
-                code: "insufficientPermissions"
-                title: "Insufficient permissions"
-                detail: ""
+              - status: '403'
+                code: 'insufficientPermissions'
+                title: 'Insufficient permissions'
+                detail: ''
 
 JsonApiModel_error_404:
   description: NOT_FOUND
@@ -113,33 +113,33 @@ JsonApiModel_error_404:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_entityNotFoundForId"
-                - $ref: "#/JsonApiModel_error_entityNotFoundForSlug"
-                - $ref: "#/JsonApiModel_error_entityNotFoundForAlias"
-                - $ref: "#/JsonApiModel_error_secondaryEntityNotFound"
-                - $ref: "#/JsonApiModel_error_callToExternalServiceFailed"
-            description: ""
+                - $ref: '#/JsonApiModel_error_entityNotFoundForId'
+                - $ref: '#/JsonApiModel_error_entityNotFoundForSlug'
+                - $ref: '#/JsonApiModel_error_entityNotFoundForAlias'
+                - $ref: '#/JsonApiModel_error_secondaryEntityNotFound'
+                - $ref: '#/JsonApiModel_error_callToExternalServiceFailed'
+            description: ''
             example:
-              - status: "404"
-                code: "entityNotFoundForId"
-                title: "WIP"
-                detail: ""
-              - status: "404"
-                code: "entityNotFoundForSlug"
-                title: "WIP"
-                detail: ""
-              - status: "404"
-                code: "entityNotFoundForAlias"
-                title: "WIP"
-                detail: ""
-              - status: "404"
-                code: "secondaryEntityNotFound"
-                title: "WIP"
-                detail: ""
-              - status: "404"
-                code: "callToExternalServiceFailed"
-                title: "WIP"
-                detail: ""
+              - status: '404'
+                code: 'entityNotFoundForId'
+                title: 'WIP'
+                detail: ''
+              - status: '404'
+                code: 'entityNotFoundForSlug'
+                title: 'WIP'
+                detail: ''
+              - status: '404'
+                code: 'entityNotFoundForAlias'
+                title: 'WIP'
+                detail: ''
+              - status: '404'
+                code: 'secondaryEntityNotFound'
+                title: 'WIP'
+                detail: ''
+              - status: '404'
+                code: 'callToExternalServiceFailed'
+                title: 'WIP'
+                detail: ''
 
 JsonApiModel_error_413:
   description: PAYLOAD_TOO_LARGE
@@ -152,13 +152,13 @@ JsonApiModel_error_413:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_fileTooLargeForUpload"
-            description: ""
+                - $ref: '#/JsonApiModel_error_fileTooLargeForUpload'
+            description: ''
             example:
-              - status: "413"
-                code: "fileTooLargeForUpload"
-                title: "WIP"
-                detail: ""
+              - status: '413'
+                code: 'fileTooLargeForUpload'
+                title: 'WIP'
+                detail: ''
 
 JsonApiModel_error_422:
   description: UNPROCESSABLE_ENTITY
@@ -171,43 +171,43 @@ JsonApiModel_error_422:
             type: array
             items:
               anyOf:
-                - $ref: "#/JsonApiModel_error_nonExistentParameterPassed"
-                - $ref: "#/JsonApiModel_error_wrongDataType"
-                - $ref: "#/JsonApiModel_error_updateFailed"
-                - $ref: "#/JsonApiModel_error_JSONfieldCannotBeNull"
-                - $ref: "#/JsonApiModel_error_integrityViolation"
-                - $ref: "#/JsonApiModel_error_entityAlreadyExists"
-                - $ref: "#/JsonApiModel_error_validationFailed"
-            description: ""
+                - $ref: '#/JsonApiModel_error_nonExistentParameterPassed'
+                - $ref: '#/JsonApiModel_error_wrongDataType'
+                - $ref: '#/JsonApiModel_error_updateFailed'
+                - $ref: '#/JsonApiModel_error_JSONfieldCannotBeNull'
+                - $ref: '#/JsonApiModel_error_integrityViolation'
+                - $ref: '#/JsonApiModel_error_entityAlreadyExists'
+                - $ref: '#/JsonApiModel_error_validationFailed'
+            description: ''
             example:
-              - status: "422"
-                code: "nonExistentParameterPassed"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "wrongDataType"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "updateFailed"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "JSONfieldCannotBeNull"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "integrityViolation"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "entityAlreadyExists"
-                title: "WIP"
-                detail: ""
-              - status: "422"
-                code: "validationFailed"
-                title: "WIP"
-                detail: ""
+              - status: '422'
+                code: 'nonExistentParameterPassed'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'wrongDataType'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'updateFailed'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'JSONfieldCannotBeNull'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'integrityViolation'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'entityAlreadyExists'
+                title: 'WIP'
+                detail: ''
+              - status: '422'
+                code: 'validationFailed'
+                title: 'WIP'
+                detail: ''
 
 # 400 - BAD_REQUEST
 # accessNotPermitted, missingMandatoryParameter, invalidJSONInput, missingMandatoryJSONfield, contactSupport, fileTypeLimitReached, cannotManipulateFile, callFailed
@@ -217,19 +217,19 @@ JsonApiModel_error_accessNotPermitted:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'accessNotPermitted'
-      example: "accessNotPermitted"
+      example: 'accessNotPermitted'
     title:
       type: string
       description: Always has value 'Access not permitted'
-      example: "Access not permitted"
+      example: 'Access not permitted'
     detail:
       type: string
       description: Description of the error
-      example: "A school user does not have access to this functionality"
+      example: 'A school user does not have access to this functionality'
   required:
     - status
     - code
@@ -241,15 +241,15 @@ JsonApiModel_error_missingMandatoryParameter:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'missingMandatoryParameter'
-      example: "missingMandatoryParameter"
+      example: 'missingMandatoryParameter'
     title:
       type: string
       description: Always has value 'Missing mandatory parameter'
-      example: "Missing mandatory parameter"
+      example: 'Missing mandatory parameter'
     detail:
       type: string
       description: Description of the error
@@ -265,19 +265,19 @@ JsonApiModel_error_invalidJSONInput:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'invalidJSONInput'
-      example: "invalidJSONInput"
+      example: 'invalidJSONInput'
     title:
       type: string
       description: Always has value 'invalidJSONInput'
-      example: "invalidJSONInput"
+      example: 'invalidJSONInput'
     detail:
       type: string
       description: Description of the error
-      example: "JSON input is invalid"
+      example: 'JSON input is invalid'
   required:
     - status
     - code
@@ -289,19 +289,19 @@ JsonApiModel_error_missingMandatoryJSONfield:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'missingMandatoryJSONfield'
-      example: "invalidJSONInput"
+      example: 'invalidJSONInput'
     title:
       type: string
       description: Always has value 'missingMandatoryJSONfield'
-      example: "missingMandatoryJSONfield"
+      example: 'missingMandatoryJSONfield'
     detail:
       type: string
       description: Description of the error
-      example: ""
+      example: 'Missing mandatory JSON field'
   required:
     - status
     - code
@@ -313,19 +313,19 @@ JsonApiModel_error_contactSupport:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'contactSupport'
-      example: "contactSupport"
+      example: 'contactSupport'
     title:
       type: string
       description: Always has value 'contactSupport'
-      example: "contactSupport"
+      example: 'contactSupport'
     detail:
       type: string
       description: Description of the error
-      example: "A school user does not have access to this functionality"
+      example: 'A school user does not have access to this functionality'
   required:
     - status
     - code
@@ -337,19 +337,19 @@ JsonApiModel_error_fileTypeLimitReached:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'fileTypeLimitReached'
-      example: "fileTypeLimitReached"
+      example: 'fileTypeLimitReached'
     title:
       type: string
       description: Always has value 'fileTypeLimitReached'
-      example: "fileTypeLimitReached"
+      example: 'fileTypeLimitReached'
     detail:
       type: string
       description: Description of the error
-      example: "fileTypeLimitReached"
+      example: 'fileTypeLimitReached'
   required:
     - status
     - code
@@ -361,19 +361,19 @@ JsonApiModel_error_cannotManipulateFile:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'cannotManipulateFile'
-      example: "cannotManipulateFile"
+      example: 'cannotManipulateFile'
     title:
       type: string
       description: Always has value 'cannotManipulateFile'
-      example: "cannotManipulateFile"
+      example: 'cannotManipulateFile'
     detail:
       type: string
       description: Description of the error
-      example: "cannotManipulateFile"
+      example: 'cannotManipulateFile'
   required:
     - status
     - code
@@ -385,19 +385,19 @@ JsonApiModel_error_callFailed:
     status:
       type: string
       description: Always has value '400'
-      example: "400"
+      example: '400'
     code:
       type: string
       description: Always has value 'callFailed'
-      example: "callFailed"
+      example: 'callFailed'
     title:
       type: string
       description: Always has value 'callFailed'
-      example: "callFailed"
+      example: 'callFailed'
     detail:
       type: string
       description: Description of the error
-      example: "callFailed"
+      example: 'callFailed'
   required:
     - status
     - code
@@ -411,15 +411,15 @@ JsonApiModel_error_invalidOrExpiredAuthorisationToken:
     status:
       type: string
       description: Always has value '401'
-      example: "401"
+      example: '401'
     code:
       type: string
       description: Always has value 'invalidOrExpiredAuthorisationToken'
-      example: "invalidOrExpiredAuthorisationToken"
+      example: 'invalidOrExpiredAuthorisationToken'
     title:
       type: string
       description: Always has value 'Invalid or expired authorisation token'
-      example: "Invalid or expired authorisation token"
+      example: 'Invalid or expired authorisation token'
     detail:
       type: string
       description: Description of the error
@@ -434,15 +434,15 @@ JsonApiModel_error_invalidOrExpiredUploadToken:
     status:
       type: string
       description: Always has value '401'
-      example: "401"
+      example: '401'
     code:
       type: string
       description: Always has value 'invalidOrExpiredUploadToken'
-      example: "invalidOrExpiredUploadToken"
+      example: 'invalidOrExpiredUploadToken'
     title:
       type: string
       description: Always has value 'invalid or expired upload token'
-      example: "invalidOrExpiredUploadToken"
+      example: 'invalidOrExpiredUploadToken'
     detail:
       type: string
       description: Description of the error
@@ -457,15 +457,15 @@ JsonApiModel_error_fileOnServerContactSupport:
     status:
       type: string
       description: Always has value '401'
-      example: "401"
+      example: '401'
     code:
       type: string
       description: Always has value 'fileOnServerContactSupport'
-      example: "fileOnServerContactSupport"
+      example: 'fileOnServerContactSupport'
     title:
       type: string
       description: Always has value 'fileOnServerContactSupport'
-      example: "fileOnServerContactSupport"
+      example: 'fileOnServerContactSupport'
     detail:
       type: string
       description: Description of the error
@@ -482,15 +482,15 @@ JsonApiModel_error_insufficientPermissions:
     status:
       type: string
       description: Always has value '403'
-      example: "403"
+      example: '403'
     code:
       type: string
       description: Always has value 'insufficientPermissions'
-      example: "insufficientPermissions"
+      example: 'insufficientPermissions'
     title:
       type: string
       description: Always has value 'insufficientPermissions'
-      example: "insufficientPermissions"
+      example: 'insufficientPermissions'
     detail:
       type: string
       description: Description of the error
@@ -507,19 +507,19 @@ JsonApiModel_error_entityNotFoundForId:
     status:
       type: string
       description: Always has value '404'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'entityNotFoundForId'
-      example: "entityNotFoundForId"
+      example: 'entityNotFoundForId'
     title:
       type: string
       description: Always has value 'Entity not found for id'
-      example: "Entity not found for id"
+      example: 'Entity not found for id'
     detail:
       type: string
       description: Description of the error
-      example: "Foo with id 123 not found"
+      example: 'Foo with id 123 not found'
   required:
     - status
     - code
@@ -531,19 +531,19 @@ JsonApiModel_error_entityNotFoundForSlug:
     status:
       type: string
       description: Always has value '404'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'entityNotFoundForSlug'
-      example: "entityNotFoundForSlug"
+      example: 'entityNotFoundForSlug'
     title:
       type: string
       description: Always has value 'Entity not found for slug'
-      example: "Entity not found for slug"
+      example: 'Entity not found for slug'
     detail:
       type: string
       description: Description of the error
-      example: "Foo with slug foo-slug not found"
+      example: 'Foo with slug foo-slug not found'
   required:
     - status
     - code
@@ -555,19 +555,19 @@ JsonApiModel_error_entityNotFoundForAlias:
     status:
       type: string
       description: Always has value '404'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'entityNotFoundForAlias'
-      example: "entityNotFoundForAlias"
+      example: 'entityNotFoundForAlias'
     title:
       type: string
       description: Always has value 'Entity not found for alias'
-      example: "Entity not found for alias"
+      example: 'Entity not found for alias'
     detail:
       type: string
       description: Description of the error
-      example: "Foo with alias Alias not found"
+      example: 'Foo with alias Alias not found'
   required:
     - status
     - code
@@ -579,19 +579,19 @@ JsonApiModel_error_secondaryEntityNotFound:
     status:
       type: string
       description: Always has value '404'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'secondaryEntityNotFound'
-      example: "secondaryEntityNotFound"
+      example: 'secondaryEntityNotFound'
     title:
       type: string
       description: Always has value 'Secondary entity not found'
-      example: "secondaryEntityNotFound"
+      example: 'secondaryEntityNotFound'
     detail:
       type: string
       description: Description of the error
-      example: "Secondary entity not found"
+      example: 'Secondary entity not found'
   required:
     - status
     - code
@@ -603,19 +603,19 @@ JsonApiModel_error_callToExternalServiceFailed:
     status:
       type: string
       description: Always has value '404'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'secondaryEntityNotFound'
-      example: "secondaryEntityNotFound"
+      example: 'secondaryEntityNotFound'
     title:
       type: string
       description: Always has value 'Secondary entity not found'
-      example: "secondaryEntityNotFound"
+      example: 'secondaryEntityNotFound'
     detail:
       type: string
       description: Description of the error
-      example: "Secondary entity not found"
+      example: 'Secondary entity not found'
   required:
     - status
     - code
@@ -630,19 +630,19 @@ JsonApiModel_error_fileTooLargeForUpload:
     status:
       type: string
       description: Always has value '413'
-      example: "413"
+      example: '413'
     code:
       type: string
       description: Always has value 'fileTooLargeForUpload'
-      example: "fileTooLargeForUpload"
+      example: 'fileTooLargeForUpload'
     title:
       type: string
       description: Always has value 'fileTooLargeForUpload'
-      example: "fileTooLargeForUpload"
+      example: 'fileTooLargeForUpload'
     detail:
       type: string
       description: Description of the error
-      example: "fileTooLargeForUpload"
+      example: 'fileTooLargeForUpload'
   required:
     - status
     - code
@@ -657,19 +657,19 @@ JsonApiModel_error_nonExistentParameterPassed:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'nonExistentParameterPassed'
-      example: "nonExistentParameterPassed"
+      example: 'nonExistentParameterPassed'
     title:
       type: string
       description: Always has value 'nonExistentParameterPassed'
-      example: "nonExistentParameterPassed"
+      example: 'nonExistentParameterPassed'
     detail:
       type: string
       description: Description of the error
-      example: "nonExistentParameterPassed"
+      example: 'nonExistentParameterPassed'
   required:
     - status
     - code
@@ -681,19 +681,19 @@ JsonApiModel_error_wrongDataType:
     status:
       type: string
       description: Always has value '422'
-      example: "404"
+      example: '404'
     code:
       type: string
       description: Always has value 'wrongDataType'
-      example: "wrongDataType"
+      example: 'wrongDataType'
     title:
       type: string
       description: Always has value 'wrongDataType'
-      example: "wrongDataType"
+      example: 'wrongDataType'
     detail:
       type: string
       description: Description of the error
-      example: "wrongDataType"
+      example: 'wrongDataType'
   required:
     - status
     - code
@@ -705,19 +705,19 @@ JsonApiModel_error_updateFailed:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'updateFailed'
-      example: "updateFailed"
+      example: 'updateFailed'
     title:
       type: string
       description: Always has value 'updateFailed'
-      example: "updateFailed"
+      example: 'updateFailed'
     detail:
       type: string
       description: Description of the error
-      example: "updateFailed"
+      example: 'updateFailed'
   required:
     - status
     - code
@@ -729,19 +729,19 @@ JsonApiModel_error_JSONfieldCannotBeNull:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'JSONfieldCannotBeNull'
-      example: "JSONfieldCannotBeNull"
+      example: 'JSONfieldCannotBeNull'
     title:
       type: string
       description: Always has value 'JSONfieldCannotBeNull'
-      example: "JSONfieldCannotBeNull"
+      example: 'JSONfieldCannotBeNull'
     detail:
       type: string
       description: Description of the error
-      example: "JSONfieldCannotBeNull"
+      example: 'JSONfieldCannotBeNull'
   required:
     - status
     - code
@@ -753,19 +753,19 @@ JsonApiModel_error_integrityViolation:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'integrityViolation'
-      example: "integrityViolation"
+      example: 'integrityViolation'
     title:
       type: string
       description: Always has value 'integrityViolation'
-      example: "integrityViolation"
+      example: 'integrityViolation'
     detail:
       type: string
       description: Description of the error
-      example: "integrityViolation"
+      example: 'integrityViolation'
   required:
     - status
     - code
@@ -777,19 +777,19 @@ JsonApiModel_error_entityAlreadyExists:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'entityAlreadyExists'
-      example: "entityAlreadyExists"
+      example: 'entityAlreadyExists'
     title:
       type: string
       description: Always has value 'entityAlreadyExists'
-      example: "entityAlreadyExists"
+      example: 'entityAlreadyExists'
     detail:
       type: string
       description: Description of the error
-      example: "entityAlreadyExists"
+      example: 'entityAlreadyExists'
   required:
     - status
     - code
@@ -801,19 +801,19 @@ JsonApiModel_error_validationFailed:
     status:
       type: string
       description: Always has value '422'
-      example: "422"
+      example: '422'
     code:
       type: string
       description: Always has value 'validationFailed'
-      example: "validationFailed"
+      example: 'validationFailed'
     title:
       type: string
       description: Always has value 'validationFailed'
-      example: "validationFailed"
+      example: 'validationFailed'
     detail:
       type: string
       description: Description of the error
-      example: "validationFailed"
+      example: 'validationFailed'
   required:
     - status
     - code

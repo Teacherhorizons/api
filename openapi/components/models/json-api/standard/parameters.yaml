@@ -27,3 +27,10 @@ JsonApiModel_parameters_notSignedInSchema:
     type: string
     enum:
       - not-signed-in
+
+JsonApiModel_parameters_useCache:
+  in: query
+  name: useCache
+  schema:
+    type: boolean
+    description: Admin only (TODO). If true, use cache, o/w don't use cache. Defaults to true.

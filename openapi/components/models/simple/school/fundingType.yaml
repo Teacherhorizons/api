@@ -3,19 +3,19 @@ SimpleModel_school-fundingType:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_school-fundingType_id"
+      $ref: '#/SimpleModel_school-fundingType_id'
     # simple attributes
-    type:
-      $ref: "../../library/school/fundingType.yaml#/school-fundingType_type"
+    name:
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_name'
     creationDate:
-      $ref: "../../library/school/fundingType.yaml#/school-fundingType_creationDate"
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_creationDate'
     latestUpdateDate:
-      $ref: "../../library/school/fundingType.yaml#/school-fundingType_latestUpdateDate"
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_latestUpdateDate'
     # relationship attributes
     creationUserId:
-      $ref: "../../library/school/fundingType.yaml#/school-fundingType_creationUserId"
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/school/fundingType.yaml#/school-fundingType_latestUpdateUserId"
+      $ref: '../../library/school/fundingType.yaml#/school-fundingType_latestUpdateUserId'
   required:
     - id
 
