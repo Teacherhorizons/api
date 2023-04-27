@@ -74,12 +74,11 @@ JsonApiModel_regional-countrySubject_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-countrySubject_id"
-    url:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_url"
-    description:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_description"
+    name:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_name"
   required:
     - id
+    - name
 
 JsonApiModel_regional-countrySubject_relationship:
   type: object

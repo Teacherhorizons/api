@@ -35,10 +35,13 @@ JsonApiModel_general-siteSetting_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
-        id: 
-          $ref: "#/JsonApiModel_general-siteSetting_id"
+    id: 
+      $ref: "#/JsonApiModel_general-siteSetting_id"
+    name:
+      $ref: "../../library/general/siteSetting.yaml#/general-siteSetting_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-siteSetting_relationship:
   type: object

@@ -60,8 +60,11 @@ JsonApiModel_general-nationality_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-nationality_id"
+    name:
+      $ref: "../../library/general/nationality.yaml#/general-nationality_name"
   required:
     - id
+    - name
 
 JsonApiModel_general-nationality_relationship:
   type: object

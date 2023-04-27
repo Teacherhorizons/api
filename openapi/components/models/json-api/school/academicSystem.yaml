@@ -70,5 +70,8 @@ JsonApiModel_school-academicSystem_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_school-academicSystem_id"
+    name:
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_name"
   required:
     - id
+    - name

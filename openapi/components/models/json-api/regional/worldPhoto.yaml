@@ -48,8 +48,11 @@ JsonApiModel_regional-worldPhoto_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-worldPhoto_id"
+    precedence:
+      $ref: "../../library/regional/worldPhoto.yaml#/regional-worldPhoto_precedence"
   required:
     - id
+    - precedence
 
 JsonApiModel_regional-worldPhoto_relationship:
   type: object

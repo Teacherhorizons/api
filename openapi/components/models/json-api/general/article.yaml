@@ -71,8 +71,14 @@ JsonApiModel_general-article_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-article_id"
+    title:
+      $ref: "../../library/general/article.yaml#/general-article_title"
+    url:
+      $ref: "../../library/general/article.yaml#/general-article_url"
   required:
     - id
+    - title
+    - url
 
 JsonApiModel_general-article_relationship:
   type: object

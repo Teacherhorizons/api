@@ -7,6 +7,8 @@ SimpleModel_application-applicationDataIssue:
     # simple attributes
     date:
       $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+    name:
+      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_name"
     #relationship attributes
     applicationId:
       $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_applicationId"
@@ -15,6 +17,7 @@ SimpleModel_application-applicationDataIssue:
   required:
     - id
     - date
+    - name
     - applicationId
     - guidelineId
 

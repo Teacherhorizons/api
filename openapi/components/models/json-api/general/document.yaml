@@ -71,8 +71,14 @@ JsonApiModel_general-document_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_general-document_id"
+    filePath:
+      $ref: "../../library/general/document.yaml#/general-document_filePath"
+    caption:
+      $ref: "../../library/general/document.yaml#/general-document_caption"
   required:
     - id
+    - filePath
+    - caption
 
 JsonApiModel_general-document_relationship:
   type: object

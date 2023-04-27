@@ -48,8 +48,11 @@ JsonApiModel_application-guideline_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-guideline_id"
+    name:
+      $ref: "../../library/application/guideline.yaml#/application-guideline_name"
   required:
     - id
+    - name
 
 JsonApiModel_application-guideline_relationship:
   type: object

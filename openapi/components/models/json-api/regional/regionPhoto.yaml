@@ -53,8 +53,11 @@ JsonApiModel_regional-regionPhoto_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-regionPhoto_id"
+    precedence:
+      $ref: "../../library/regional/regionPhoto.yaml#/regional-regionPhoto_precedence"
   required:
     - id
+    - precedence
 
 JsonApiModel_regional-regionPhoto_relationship:
   type: object

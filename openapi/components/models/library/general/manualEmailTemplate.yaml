@@ -7,12 +7,12 @@ general-manualEmailTemplate_to:
 general-manualEmailTemplate_cc:
   type: string
   nullable: true
-  example: ""
+  example: ${job.school.lraUser?.email}
   maxLength: 100
 general-manualEmailTemplate_bcc:
   type: string
   nullable: true
-  example: ""
+  example: info@teacherhorizons.com
   maxLength: 100
 general-manualEmailTemplate_subject:
   type: string

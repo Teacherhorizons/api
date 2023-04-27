@@ -80,8 +80,14 @@ JsonApiModel_regional-worldArticle_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-worldArticle_id"
+    title:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
+    url:
+      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
   required:
     - id
+    - title
+    - url
 
 JsonApiModel_regional-worldArticle_relationship:
   type: object

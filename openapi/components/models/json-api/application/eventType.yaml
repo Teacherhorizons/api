@@ -150,8 +150,11 @@ JsonApiModel_application-eventType_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_application-eventType_id"
+    name:
+      $ref: "../../library/application/eventType.yaml#/application-eventType_name" 
   required:
     - id
+    - name
 
 JsonApiModel_application-eventType_relationship:
   type: object
