@@ -17,7 +17,7 @@ JsonApiModel_teacher-teacherReferenceResponse:
         request:
           $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship_attribute"
         question:
-          $ref: "../teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion_relationship_attribute"
+          $ref: "../teacher/referenceQuestion.yaml#/JsonApiModel_teacher-referenceQuestion_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -25,7 +25,7 @@ JsonApiModel_teacher-teacherReferenceResponse:
         request:
           $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship"
         question:
-          $ref: "../teacher/teacherReferenceQuestion.yaml#/JsonApiModel_teacher-teacherReferenceQuestion_relationship"
+          $ref: "../teacher/referenceQuestion.yaml#/JsonApiModel_teacher-referenceQuestion_relationship"
   required:
     - type
     - id

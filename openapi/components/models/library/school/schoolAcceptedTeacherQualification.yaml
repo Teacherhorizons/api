@@ -1,37 +1,37 @@
 #attributes
-school-acceptedTeacherQualification_creationDate:
+school-schoolAcceptedTeacherQualification_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-school-acceptedTeacherQualification_latestUpdateDate:
+school-schoolAcceptedTeacherQualification_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 # relationship attributes
-school-acceptedTeacherQualification_schoolId:
+school-schoolAcceptedTeacherQualification_schoolId:
   type: integer
   example: 1
   description: Relationship to School
 
-school-acceptedTeacherQualification_creationUserId:
+school-schoolAcceptedTeacherQualification_creationUserId:
   type: integer
   example: 1
   description: Relationship to User
 
-school-acceptedTeacherQualification_latestUpdateUserId:
+school-schoolAcceptedTeacherQualification_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to User
 
-school-acceptedTeacherQualification_teacherQualificationTypeId:
+school-schoolAcceptedTeacherQualification_teacherQualificationTypeId:
   type: integer
   example: 1
   description: Relationship to teacher
 
 # relationships
-school-acceptedTeacherQualification_school:
+school-schoolAcceptedTeacherQualification_school:
   type: object
   additionalProperties: false
   properties:
@@ -42,7 +42,7 @@ school-acceptedTeacherQualification_school:
   required: 
     - id
 
-school-acceptedTeacherQualification_teacherQualificationType:
+school-schoolAcceptedTeacherQualification_teacherQualificationType:
   type: object
   additionalProperties: false
   properties:
@@ -53,7 +53,7 @@ school-acceptedTeacherQualification_teacherQualificationType:
   required: 
     - id
 
-school-acceptedTeacherQualification_creationUser:
+school-schoolAcceptedTeacherQualification_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -64,7 +64,7 @@ school-acceptedTeacherQualification_creationUser:
   required: 
     - id
 
-school-acceptedTeacherQualification_latestUpdateUser:
+school-schoolAcceptedTeacherQualification_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
