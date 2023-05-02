@@ -1,19 +1,18 @@
 #attributes
 user-setting_name:
   type: string
-  example: SW
+  example: can-see-candidate-filter
 
 #relationship attribute
 user-setting_editableByUserCategoryId:
   type: integer
   example: 1
-  description: ""
+  description: ''
 
 user-setting_appliesToUserCategoryId:
   type: integer
   example: 1
-  description: ""
-  
+  description: ''
 
 #relationship
 user-setting_editableByUserCategory:
@@ -22,18 +21,18 @@ user-setting_editableByUserCategory:
   properties:
     id:
       type: string
-      example: "1"
-      description: "" 
-  required: 
+      example: '1'
+      description: ''
+  required:
     - id
-  
+
 user-setting_appliesToUserCategory:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: "" 
-  required: 
+      example: '1'
+      description: ''
+  required:
     - id

@@ -24,10 +24,10 @@ teacher-teacherReferenceRequest_refereePhoneNumber:
   example: 1234567890
 teacher-teacherReferenceRequest_fileUri:
   type: string
-  example: ""
+  example: ''
 teacher-teacherReferenceRequest_isArchived:
   type: boolean
-  example: True
+  example: true
 teacher-teacherReferenceRequest_creationDate:
   type: string
   format: date-time
@@ -43,7 +43,7 @@ teacher-teacherReferenceRequest_completionDate:
 teacher-teacherReferenceRequest_score:
   type: integer
   example: 9
-#relationship attributes  
+#relationship attributes
 teacher-teacherReferenceRequest_statusId:
   type: integer
   example: 1
@@ -69,14 +69,14 @@ teacher-teacherReferenceRequest_latestUpdateUserId:
   example: 1
   description: Relationship to user
 
-#relationships  
+#relationships
 teacher-teacherReferenceRequest_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher
   required:
     - id
@@ -86,7 +86,7 @@ teacher-teacherReferenceRequest_type:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-referenceType
   required:
     - id
@@ -96,7 +96,7 @@ teacher-teacherReferenceRequest_status:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-referenceStatus
   required:
     - id
@@ -106,7 +106,7 @@ teacher-teacherReferenceRequest_refereePhoneCodeCountry:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -116,7 +116,7 @@ teacher-teacherReferenceRequest_school:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school
   required:
     - id
@@ -126,7 +126,7 @@ teacher-teacherReferenceRequest_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -136,7 +136,7 @@ teacher-teacherReferenceRequest_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -146,11 +146,7 @@ teacher-teacherReferenceRequest_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
-
-
-
-
