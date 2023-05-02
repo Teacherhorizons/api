@@ -1,12 +1,12 @@
 Response_regional-regions:
   oneOf:
-    - $ref: "#/Response_regional-regions_notSignedIn"
-    - $ref: "#/Response_regional-regions_notSignedInMultiple"
+    - $ref: '#/Response_regional-regions_notSignedIn'
+    - $ref: '#/Response_regional-regions_notSignedInMultiple'
   discriminator:
     propertyName: schema
     mapping:
-      not-signed-in: "#/Response_regional-regions_notSignedIn"
-      not-signed-in-multiple: "#/Response_regional-regions_notSignedInMultiple"
+      not-signed-in: '#/Response_regional-regions_notSignedIn'
+      not-signed-in-multiple: '#/Response_regional-regions_notSignedInMultiple'
 
 Response_regional-regions_notSignedIn:
   type: object
@@ -19,17 +19,17 @@ Response_regional-regions_notSignedIn:
     data:
       type: array
       items:
-        $ref: "./region.yaml#/Response_regional-region_notSignedIn_item"
+        $ref: './region.yaml#/Response_regional-region_notSignedIn_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: "./region.yaml#/Response_regional-region_includedCountry_notSignedIn"
-          - $ref: "./region.yaml#/Response_regional-region_includedStaff_notSignedIn"
-          - $ref: "./region.yaml#/Response_regional-region_includedJob_notSignedIn"
-          - $ref: "./region.yaml#/Response_regional-region_includedSchool_notSignedIn"
-          - $ref: "./region.yaml#/Response_regional-region_includedAmbassador_notSignedIn"
-          - $ref: "./region.yaml#/Response_regional-region_includedCity_notSignedIn"
+          - $ref: './region.yaml#/Response_regional-region_includedCountry_notSignedIn'
+          - $ref: './region.yaml#/Response_regional-region_includedStaff_notSignedIn'
+          - $ref: './region.yaml#/Response_regional-region_includedJob_notSignedIn'
+          - $ref: './region.yaml#/Response_regional-region_includedSchool_notSignedIn'
+          - $ref: './region.yaml#/Response_regional-region_includedAmbassador_notSignedIn'
+          - $ref: './region.yaml#/Response_regional-region_includedCity_notSignedIn'
   required:
     - schema
     - data
@@ -45,7 +45,7 @@ Response_regional-regions_notSignedInMultiple:
     data:
       type: array
       items:
-        $ref: "#/Response_regional-regions_notSignedInMultiple_item"
+        $ref: '#/Response_regional-regions_notSignedInMultiple_item'
   required:
     - schema
     - data
@@ -55,18 +55,18 @@ Response_regional-regions_notSignedInMultiple_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type"
+      $ref: '../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type'
     id:
-      $ref: "../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id"
+      $ref: '../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../models/library/regional/region.yaml#/regional-region_name"
+          $ref: '../../models/library/regional/region.yaml#/regional-region_name'
         slug:
-          $ref: "../../models/library/regional/region.yaml#/regional-region_slug"
+          $ref: '../../models/library/regional/region.yaml#/regional-region_slug'
       required:
         - name
         - slug

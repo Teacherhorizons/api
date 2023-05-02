@@ -212,7 +212,14 @@ const meLocalData: Config.Data = {
     { id: 131494 },
   ],
   dataIssues: [{ id: 10, expectedDataLength: 2 }],
-  asUserId: [{ id: 2 }, { id: 1031 }, { id: 23638 }, { id: 1070 }, { id: 1059 }],
+  users: [
+    { id: 2, userTypeSlug: 'admin' },
+    { id: 1031, userTypeSlug: 'school-1-school' },
+    { id: 1070, userTypeSlug: 'school-2-schools' },
+    { id: 1064, userTypeSlug: 'teacher-new' },
+    { id: 1059, userTypeSlug: 'teacher-endorsed' },
+  ],
+  // asUserId: [{ id: 2 }, { id: 1031 }, { id: 23638 }, { id: 1070 }, { id: 1059 }],
   test: { id: 109 },
 };
 
@@ -235,6 +242,12 @@ const betaData: Config.Data = {
     { id: 2408115 },
   ],
   dataIssues: [{ id: 34, expectedDataLength: 5 }],
-  asUserId: [{ id: 2 }, { id: 1031 }, { id: 23666 }, { id: 1070 }],
+  users: [
+    { id: 2, userTypeSlug: 'admin' },
+    { id: 1031, userTypeSlug: 'school-1-school' },
+    { id: 1070, userTypeSlug: 'school-2-schools' },
+    { id: 1064, userTypeSlug: 'teacher-new' },
+    { id: 1059, userTypeSlug: 'teacher-endorsed' },
+  ],
   test: { id: 116 },
 };

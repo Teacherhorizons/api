@@ -11,6 +11,7 @@ declare namespace Config {
 
   export interface User {
     // token?: string;
+    id: number;
     userTypeSlug?: string;
     // userId?: number;
   }
@@ -59,8 +60,8 @@ declare namespace Config {
     jobs: Job[];
     applications: Application[];
     applicationEvents: ApplicationEvent[];
-    user?: User;
-    asUserId?: UserId[];
+    users?: User[];
+    // asUserId?: UserId[];
   }
 
   // export const data: Data = {

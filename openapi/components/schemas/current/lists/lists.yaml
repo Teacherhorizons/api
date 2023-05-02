@@ -4,60 +4,60 @@ properties:
   academicSystems:
     type: array
     items:
-      $ref: "./AcademicSystem_current.yaml"
+      $ref: './AcademicSystem_current.yaml'
   acceptedTeacherQualifications:
     type: array
     items:
-      $ref: "./AcceptedTeacherQualification.yaml"
+      $ref: './AcceptedTeacherQualification.yaml'
   accountStatuses:
     type: array
     items:
-      $ref: "./AccountStatus.yaml"
+      $ref: './AccountStatus.yaml'
   adminNoteTypes:
     type: array
     items:
-      $ref: "./AdminNoteType.yaml"
+      $ref: './AdminNoteType.yaml'
   ageLevels:
     type: array
     items:
-      $ref: "./AgeLevel.yaml"
+      $ref: './AgeLevel.yaml'
   applicationStatuses:
     type: array
     items:
-      $ref: "./application-status.yaml"
+      $ref: './application-status.yaml'
     description: Ideally, list key would now be 'application-statuses'
   applicationEventAutoEmails:
     type: array
     items:
-      $ref: "./applicationEventAutoEmails.yaml"
+      $ref: './applicationEventAutoEmails.yaml'
   applicationEventTypes:
     type: array
     items:
-      $ref: "./applicationEventType.yaml"
+      $ref: './applicationEventType.yaml'
   applicationThMatchTypes:
     type: array
     items:
-      $ref: "./applicationThMatchTypes.yaml"
+      $ref: './applicationThMatchTypes.yaml'
   attractions:
     type: array
     items:
-      $ref: "./Attraction.yaml"
+      $ref: './Attraction.yaml'
   benefits:
     type: array
     items:
-      $ref: "./Benefit.yaml"
+      $ref: './Benefit.yaml'
   countries:
     type: array
     items:
-      $ref: "./Country_current.yaml"
+      $ref: './Country_current.yaml'
   subjects:
     type: array
     items:
-      $ref: "./Subject.yaml"
+      $ref: './Subject.yaml'
   jobStatuses:
     type: array
     items:
-      $ref: "./jobStatuses.yaml"
+      $ref: './jobStatuses.yaml'
 
   # (TODO: create separate files for each of these)
   # don't bother with this now - don't need so much structure with the 'current' documentation
@@ -274,17 +274,20 @@ properties:
       type: object
       additionalProperties: false
       properties:
-        name:
-          type: string
-          example: Durres
-        country:
-          type: integer
-          format: int32
-          example: 1
         id:
           type: integer
           format: int32
           example: 893
+        name:
+          type: string
+          example: Lisbon
+        slug:
+          type: string
+          example: europe-portugal-lisbon
+        country:
+          type: integer
+          format: int32
+          example: 1
         geolocation:
           type: object
           properties:
