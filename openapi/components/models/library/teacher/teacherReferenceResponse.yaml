@@ -11,7 +11,7 @@ teacher-teacherReferenceResponse_requestId:
 teacher-teacherReferenceResponse_questionId:
   type: integer
   example: 1
-  description: Relationship to teacher-teacherReferenceQuestion
+  description: Relationship to teacher-referenceQuestion
 
 #relationships
 teacher-teacherReferenceResponse_request:
@@ -31,6 +31,6 @@ teacher-teacherReferenceResponse_question:
     id:
       type: string
       example: "1"
-      description: Relationship to teacher-teacherReferenceQuestion
+      description: Relationship to teacher-referenceQuestion
   required:
     - id

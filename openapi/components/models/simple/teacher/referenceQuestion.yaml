@@ -1,0 +1,32 @@
+SimpleModel_teacher-referenceQuestion:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-referenceQuestion_id"
+    # simple attributes
+    name:
+      $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_name"
+    precedence:
+      $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_precedence"
+    isRequired:
+      $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_isRequired"
+    # relationship attributes
+    referenceTypeId:
+      $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_referenceTypeId"
+  required:
+    - id
+# shared
+
+# SimpleModel_teacher-referenceQuestion_type:
+#   properties:
+#     type:
+#       type: string
+#       example: teacher-referenceQuestion
+#       description: teacher-referenceQuestion
+#       readOnly: true
+SimpleModel_teacher-referenceQuestion_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -29,8 +29,10 @@ JsonApiModel_teacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren'
         latestAdviserCommentDate:
           $ref: '../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate'
-        interestedInPrivateTuition:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_interestedInPrivateTuition'
+        isInterestedInPrivateTuition:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_isInterestedInPrivateTuition'
+        isInterestedInCommunityFeatures:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_isInterestedInCommunityFeatures'
         neverPotentialRiskToChildren:
           $ref: '../../library/teacher/teacher.yaml#/teacher_neverPotentialRiskToChildren'
         neverBehaviouralConcernsTowardsChildren:

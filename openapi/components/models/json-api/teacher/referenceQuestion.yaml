@@ -1,24 +1,24 @@
 # TODO RR: consider renaming this to 'teacher-referenceQuestion'
 
-JsonApiModel_teacher-teacherReferenceQuestion:
+JsonApiModel_teacher-referenceQuestion:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_type"
+      $ref: "#/JsonApiModel_teacher-referenceQuestion_type"
     id:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+      $ref: "#/JsonApiModel_teacher-referenceQuestion_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        text:
-          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_text"
+        name:
+          $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_name"
         precedence:
-          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_precedence"
+          $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_precedence"
         isRequired:
-          $ref: "../../library/teacher/teacherReferenceQuestion.yaml#/teacher-teacherReferenceQuestion_isRequired"
+          $ref: "../../library/teacher/referenceQuestion.yaml#/teacher-referenceQuestion_isRequired"
         # relationship attributes
         referenceType:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
@@ -32,19 +32,19 @@ JsonApiModel_teacher-teacherReferenceQuestion:
     - type
     - id
 
-JsonApiModel_teacher-teacherReferenceQuestion_type:
+JsonApiModel_teacher-referenceQuestion_type:
   type: string
-  example: teacher-teacherReferenceQuestion
+  example: teacher-referenceQuestion
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_teacher-teacherReferenceQuestion_id:
+JsonApiModel_teacher-referenceQuestion_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_teacher-teacherReferenceQuestion_relationship:
+JsonApiModel_teacher-referenceQuestion_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -53,20 +53,20 @@ JsonApiModel_teacher-teacherReferenceQuestion_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_type"
+          $ref: "#/JsonApiModel_teacher-referenceQuestion_type"
         id:
-          $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+          $ref: "#/JsonApiModel_teacher-referenceQuestion_id"
       required:
         - type
         - id
   required:
     - data
 
-JsonApiModel_teacher-teacherReferenceQuestion_relationship_attribute:
+JsonApiModel_teacher-referenceQuestion_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_teacher-teacherReferenceQuestion_id"
+      $ref: "#/JsonApiModel_teacher-referenceQuestion_id"
   required:
     - id

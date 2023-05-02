@@ -493,10 +493,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-teachingLanguage" />
 
-  - name: simple-model-school-acceptedTeacherQualification
-    x-displayName: Simple model - school-acceptedTeacherQualification
+  - name: simple-model-school-schoolAcceptedTeacherQualification
+    x-displayName: Simple model - school-schoolAcceptedTeacherQualification
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-acceptedTeacherQualification" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-schoolAcceptedTeacherQualification" />
 
   - name: simple-model-school-additionalVideoUrlCategory
     x-displayName: Simple model - school-additionalVideoUrlCategory
@@ -704,10 +704,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponse" />
 
-  - name: simple-model-teacher-teacherReferenceQuestion
-    x-displayName: Simple model - teacher-teacherReferenceQuestion
+  - name: simple-model-teacher-referenceQuestion
+    x-displayName: Simple model - teacher-referenceQuestion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceQuestion" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-referenceQuestion" />
 
   - name: simple-model-teacher-documentCategory
     x-displayName: Simple model - teacher-documentCategory
@@ -1276,10 +1276,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponse" />
 
-  - name: json-api-model-teacher-teacherReferenceQuestion
-    x-displayName: JSON:API model - teacher-teacherReferenceQuestion
+  - name: json-api-model-teacher-referenceQuestion
+    x-displayName: JSON:API model - teacher-referenceQuestion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceQuestion" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-referenceQuestion" />
 
   - name: json-api-model-teacher-documentCategory
     x-displayName: JSON:API model - teacher-documentCategory
@@ -1443,10 +1443,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-teachingLanguage" />
 
-  - name: json-api-model-school-acceptedTeacherQualification
-    x-displayName: JSON:API model - school-acceptedTeacherQualification
+  - name: json-api-model-school-schoolAcceptedTeacherQualification
+    x-displayName: JSON:API model - school-schoolAcceptedTeacherQualification
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-acceptedTeacherQualification" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolAcceptedTeacherQualification" />
 
   - name: json-api-model-school-schoolDocument
     x-displayName: JSON:API model - school-schoolDocument
@@ -1677,7 +1677,7 @@ x-tagGroups:
       - simple-model-school-thRating
       - simple-model-school-ageLevel
       - simple-model-school-teachingLanguage
-      - simple-model-school-acceptedTeacherQualification
+      - simple-model-school-schoolAcceptedTeacherQualification
       - simple-model-school-schoolDocument
       - simple-model-school-documentCategory
       - simple-model-school-schoolVideo
@@ -1719,7 +1719,7 @@ x-tagGroups:
       - simple-model-teacher-referenceType
       - simple-model-teacher-referenceStatus
       - simple-model-teacher-teacherReferenceResponse
-      - simple-model-teacher-teacherReferenceQuestion
+      - simple-model-teacher-referenceQuestion
       - simple-model-teacher-documentCategory
       - simple-model-teacher-teacherDocument
       - simple-model-teacher-teacherVideo
@@ -1828,7 +1828,7 @@ x-tagGroups:
       - json-api-model-school-thRating
       - json-api-model-school-ageLevel
       - json-api-model-school-teachingLanguage
-      - json-api-model-school-acceptedTeacherQualification
+      - json-api-model-school-schoolAcceptedTeacherQualification
       - json-api-model-school-schoolVideo
       - json-api-model-school-videoCategory
       - json-api-model-school-schoolDocument
@@ -1869,7 +1869,7 @@ x-tagGroups:
       - json-api-model-teacher-referenceType
       - json-api-model-teacher-referenceStatus
       - json-api-model-teacher-teacherReferenceResponse
-      - json-api-model-teacher-teacherReferenceQuestion
+      - json-api-model-teacher-referenceQuestion
       - json-api-model-teacher-documentCategory
       - json-api-model-teacher-teacherDocument
       - json-api-model-teacher-teacherVideo

@@ -23,15 +23,18 @@ teacher_latestAdviserCommentDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
-teacher_interestedInPrivateTuition:
-  type: integer
-  example: 1
+teacher_isInterestedInPrivateTuition:
+  type: boolean
+  example: true
+teacher_isInterestedInCommunityFeatures:
+  type: boolean
+  example: true
 teacher_neverPotentialRiskToChildren:
-  type: integer
-  example: 1
+  type: boolean
+  example: true
 teacher_neverBehaviouralConcernsTowardsChildren:
-  type: integer
-  example: 1
+  type: boolean
+  example: true
 teacher_thPlaceabilityRating:
   type: integer
   example: 1

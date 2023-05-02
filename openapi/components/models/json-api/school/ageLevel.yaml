@@ -11,8 +11,8 @@ JsonApiModel_school-ageLevel:
       additionalProperties: false
       properties:
         # simple attributes
-        type:
-          $ref: "../../library/school/ageLevel.yaml#/school-ageLevel_type"
+        name:
+          $ref: "../../library/school/ageLevel.yaml#/school-ageLevel_name"
         creationDate:
           $ref: "../../library/school/ageLevel.yaml#/school-ageLevel_creationDate"  
         latestUpdateDate:

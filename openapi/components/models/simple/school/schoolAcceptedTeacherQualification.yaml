@@ -1,0 +1,29 @@
+SimpleModel_school-schoolAcceptedTeacherQualification:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_school-schoolAcceptedTeacherQualification_id"
+    # simple attributes
+    creationDate:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_latestUpdateDate"
+    # relationship attributes
+    schoolId:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_schoolId"
+    teacherQualificationTypeId:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_teacherQualificationTypeId"
+    creationUserId:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_latestUpdateUserId"
+  required:
+    - id
+
+# shared
+SimpleModel_school-schoolAcceptedTeacherQualification_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -1,20 +1,20 @@
-JsonApiModel_school-acceptedTeacherQualification:
+JsonApiModel_school-schoolAcceptedTeacherQualification:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_type"
+      $ref: "#/JsonApiModel_school-schoolAcceptedTeacherQualification_type"
     id:
-      $ref: "#/JsonApiModel_school-acceptedTeacherQualification_id"
+      $ref: "#/JsonApiModel_school-schoolAcceptedTeacherQualification_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_creationDate"  
+          $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_creationDate"  
         latestUpdateDate:
-          $ref: "../../library/school/acceptedTeacherQualification.yaml#/school-acceptedTeacherQualification_latestUpdateDate"
+          $ref: "../../library/school/schoolAcceptedTeacherQualification.yaml#/school-schoolAcceptedTeacherQualification_latestUpdateDate"
         # relationship attributes
         school:
           $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
@@ -40,13 +40,13 @@ JsonApiModel_school-acceptedTeacherQualification:
     - type
     - id
 
-JsonApiModel_school-acceptedTeacherQualification_type:
+JsonApiModel_school-schoolAcceptedTeacherQualification_type:
   type: string
-  example: school-acceptedTeacherQualification
+  example: school-schoolAcceptedTeacherQualification
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_school-acceptedTeacherQualification_id:
+JsonApiModel_school-schoolAcceptedTeacherQualification_id:
   type: string
   example: "1"
   readOnly: true

@@ -1,22 +1,23 @@
 #attributes
-teacher-teacherReferenceQuestion_text:
+teacher-referenceQuestion_name:
   type: string
   example: Foo bar
-teacher-teacherReferenceQuestion_precedence:
+  description: Main
+teacher-referenceQuestion_precedence:
   type: integer
   example: 1
-teacher-teacherReferenceQuestion_isRequired:
+teacher-referenceQuestion_isRequired:
   type: boolean
-  example: 1
+  example: true
 
 #relationship attribute  
-teacher-teacherReferenceQuestion_referenceTypeId:
+teacher-referenceQuestion_referenceTypeId:
   type: integer
   example: 1
   description: Relationship to teacher-referenceType
 
 #relationship 
-teacher-teacherReferenceQuestion_referenceType:
+teacher-referenceQuestion_referenceType:
   type: object
   additionalProperties: false
   properties:
