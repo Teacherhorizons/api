@@ -62,6 +62,8 @@ Response_regional-country_notSignedIn_item:
           $ref: '../../models/library/regional/country.yaml#/regional-country_teachingInCountryDescription'
         qualityOfLifeDescription:
           $ref: '../../models/library/regional/country.yaml#/regional-country_qualityOfLifeDescription'
+        pageMetaDescription:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_pageMetaDescription'
         numberOfIBSchools:
           $ref: '../../models/library/regional/country.yaml#/regional-country_numberOfIBSchools'
         numberOfPrimaryIBCurriculumSchools:
@@ -176,6 +178,7 @@ Response_regional-country_notSignedIn_item:
         - numberOfLiveJobs
         - teachingInCountryDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
         - numberOfIBSchools
         - numberOfPrimaryIBCurriculumSchools
         - numberOfPrimaryUSCurriculumSchools

@@ -56,6 +56,8 @@ JsonApiModel_regional-country_admin:
           $ref: '../../library/regional/country.yaml#/regional-country_teachingInCountryDescription'
         qualityOfLifeDescription:
           $ref: '../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription'
+        pageMetaDescription:
+          $ref: '../../library/regional/country.yaml#/regional-country_pageMetaDescription' 
         travelAdviceUrl:
           $ref: '../../library/regional/country.yaml#/regional-country_travelAdviceUrl'
         numberOfCitiesWithSchools:
@@ -237,6 +239,7 @@ JsonApiModel_regional-country_admin:
         - ambassadorTestimonial
         - teachingInCountryDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
         - qualityOfLifeIndex
         - costOfLivingIndex
         - expensePercentageTransportation

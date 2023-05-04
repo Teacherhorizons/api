@@ -64,6 +64,8 @@ Response_regional-countrySubject_notSignedIn_item:
           $ref: "../../models/library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
         qualityOfLifeDescription:
           $ref: "../../models/library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+        pageMetaDescription:
+          $ref: "../../models/library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription"
       required:
         - slug
         - numberOfLiveJobs
@@ -73,6 +75,7 @@ Response_regional-countrySubject_notSignedIn_item:
         - qualificationsAndExperienceDescription
         - salariesAndBenefitsDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
     relationships:
       type: object
       additionalProperties: false

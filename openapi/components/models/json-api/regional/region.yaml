@@ -54,6 +54,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
         qualityOfLifeDescription:
           $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+        pageMetaDescription:
+          $ref: "../../library/regional/region.yaml#/regional-region_pageMetaDescription"  
         adviceForInternationalTeachers:
           $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
         numberOfSchools:
@@ -161,6 +163,7 @@ JsonApiModel_regional-region_admin:
         - locationLongitude
         - teachingInRegionDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
         - adviceForInternationalTeachers
         - numberOfSchools
         - numberOfIBSchools

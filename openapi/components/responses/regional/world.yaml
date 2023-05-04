@@ -46,6 +46,8 @@ Response_regional-world_notSignedIn_item:
         # simple attributes
         teachingInWorldDescription:
           $ref: "../../models/library/regional/world.yaml#/regional-world_teachingInWorldDescription"
+        pageMetaDescription:
+          $ref: "../../models/library/regional/world.yaml#/regional-world_pageMetaDescription"
         numberOfCitiesWithSchools:
           $ref: "../../models/library/regional/world.yaml#/regional-world_numberOfCitiesWithSchools"
         numberOfCountriesWithSchools:
@@ -101,6 +103,7 @@ Response_regional-world_notSignedIn_item:
         - numberOfIBSchools
         - numberOfLiveJobs
         - teachingInWorldDescription
+        - pageMetaDescription
         - numberOfPrimaryIBCurriculumSchools
         - numberOfPrimaryUSCurriculumSchools
         - numberOfPrimaryUKCurriculumSchools

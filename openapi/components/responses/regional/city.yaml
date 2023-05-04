@@ -58,6 +58,8 @@ Response_regional-city_notSignedIn_item:
           $ref: '../../models/library/regional/city.yaml#/regional-city_teachingInCityDescription'
         qualityOfLifeDescription:
           $ref: '../../models/library/regional/city.yaml#/regional-city_qualityOfLifeDescription'
+        pageMetaDescription:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_pageMetaDescription'
         numberOfIBSchools:
           $ref: '../../models/library/regional/city.yaml#/regional-city_numberOfIBSchools'
         numberOfPrimaryIBCurriculumSchools:
@@ -161,6 +163,7 @@ Response_regional-city_notSignedIn_item:
         - numberOfLiveJobs
         - teachingInCityDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
         - numberOfIBSchools
         - numberOfPrimaryIBCurriculumSchools
         - numberOfPrimaryUSCurriculumSchools

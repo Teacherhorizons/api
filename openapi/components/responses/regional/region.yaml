@@ -61,6 +61,8 @@ Response_regional-region_notSignedIn_item:
           $ref: "../../models/library/regional/region.yaml#/regional-region_teachingInRegionDescription"
         qualityOfLifeDescription:
           $ref: "../../models/library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+        pageMetaDescription:
+          $ref: "../../models/library/regional/region.yaml#/regional-region_pageMetaDescription"
         numberOfPrimaryIBCurriculumSchools:
           $ref: "../../models/library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
         numberOfPrimaryUSCurriculumSchools:
@@ -108,6 +110,7 @@ Response_regional-region_notSignedIn_item:
         - numberOfIBSchools
         - numberOfLiveJobs
         - teachingInRegionDescription
+        - pageMetaDescription
         - numberOfPrimaryIBCurriculumSchools
         - numberOfPrimaryUSCurriculumSchools
         - numberOfPrimaryUKCurriculumSchools

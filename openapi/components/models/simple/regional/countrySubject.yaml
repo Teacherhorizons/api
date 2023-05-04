@@ -21,6 +21,8 @@ SimpleModel_regional-countrySubject:
       $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
     qualityOfLifeDescription:
       $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+    pageMetaDescription:
+      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription"
     # relationship attributes
     countryId:
         $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_countryId"
@@ -38,6 +40,7 @@ SimpleModel_regional-countrySubject:
     - qualificationsAndExperienceDescription
     - salariesAndBenefitsDescription
     - qualityOfLifeDescription
+    - pageMetaDescription
 
 # shared
 SimpleModel_regional-countrySubject_id:

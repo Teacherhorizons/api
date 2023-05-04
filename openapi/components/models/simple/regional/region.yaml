@@ -89,6 +89,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
     adviceForInternationalTeachers:
       $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+    pageMetaDescription:
+      $ref: "../../library/regional/region.yaml#/regional-region_pageMetaDescription"
 
     # Derived (dw)
     numberOfCountriesWithSchools:
@@ -160,6 +162,7 @@ SimpleModel_regional-region_admin:
     - teachingInRegionDescription
     - photo1Url
     - qualityOfLifeDescription
+    - pageMetaDescription
     - adviceForInternationalTeachers
     - numberOfSchools
     - numberOfIBSchools

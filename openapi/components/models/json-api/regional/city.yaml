@@ -54,6 +54,8 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_teachingInCityDescription'
         qualityOfLifeDescription:
           $ref: '../../library/regional/city.yaml#/regional-city_qualityOfLifeDescription'
+        pageMetaDescription:
+          $ref: '../../library/regional/city.yaml#/regional-city_pageMetaDescription'
         walkingAloneInDaylightSafetyIndex:
           $ref: '../../library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex'
         walkingAloneAtNightSafetyIndex:
@@ -217,6 +219,7 @@ JsonApiModel_regional-city_admin:
         - ambassadorTestimonial
         - teachingInCityDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneAtNightSafetyIndex
         - numberOfSchools

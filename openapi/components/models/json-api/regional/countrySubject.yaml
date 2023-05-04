@@ -27,6 +27,8 @@ JsonApiModel_regional-countrySubject:
           $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
         qualityOfLifeDescription:
           $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+        pageMetaDescription:
+          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription"
         # relationship attributes
         country:
           $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"        
@@ -44,6 +46,7 @@ JsonApiModel_regional-countrySubject:
         - qualificationsAndExperienceDescription
         - salariesAndBenefitsDescription
         - qualityOfLifeDescription
+        - pageMetaDescription
     relationships:
       type: object
       additionalProperties: false
