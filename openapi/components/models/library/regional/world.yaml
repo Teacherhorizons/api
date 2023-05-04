@@ -6,6 +6,10 @@ regional-world_teachingInWorldDescription:
   type: string
   example: foo bar baz qux
   maxLength: 1000
+regional-world_pageMetaDescription:
+  type: string
+  example: foo bar baz qux
+  maxLength: 255
 regional-world_numberOfCountriesWithSchools:
   type: integer
   example: 45
@@ -153,7 +157,6 @@ regional-world_numberOfUnknownTeachers:
   type: integer
   example: 53
   description: Derived (dw)
-
 
 #relationship attribute
 regional-world_photo1Id:
