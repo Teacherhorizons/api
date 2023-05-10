@@ -1,11 +1,4 @@
 #Attributes
-regional-cityAttraction_name:
-  type: string
-  description: Main
-  example: Mountain range
-regional-cityAttraction_iconName:
-  type: string
-  example: fas:mountain
 regional-cityAttraction_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
@@ -40,7 +33,7 @@ regional-cityAttraction_city:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
@@ -51,7 +44,7 @@ regional-cityAttraction_type:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-cityAttractionType
   required:
     - id
@@ -62,7 +55,7 @@ regional-cityAttraction_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -73,7 +66,7 @@ regional-cityAttraction_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id

@@ -3,27 +3,27 @@ JsonApiModel_regional-cityAttraction:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-cityAttraction_type"
+      $ref: '#/JsonApiModel_regional-cityAttraction_type'
     id:
-      $ref: "#/JsonApiModel_regional-cityAttraction_id"
+      $ref: '#/JsonApiModel_regional-cityAttraction_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         creationDate:
-          $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_creationDate"
+          $ref: '../../library/regional/cityAttraction.yaml#/regional-cityAttraction_creationDate'
         latestUpdateDate:
-          $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_latestUpdateDate"
+          $ref: '../../library/regional/cityAttraction.yaml#/regional-cityAttraction_latestUpdateDate'
         # relationship attributes
         city:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
         type:
-          $ref: "../regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType_relationship_attribute"
+          $ref: '../regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - id
         - cityId
@@ -37,13 +37,13 @@ JsonApiModel_regional-cityAttraction:
       additionalProperties: false
       properties:
         city:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship'
         type:
-          $ref: "../regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType_relationship"
+          $ref: '../regional/cityAttractionType.yaml#/JsonApiModel_regional-cityAttractionType_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -56,24 +56,9 @@ JsonApiModel_regional-cityAttraction_type:
 
 JsonApiModel_regional-cityAttraction_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
-
-JsonApiModel_regional-cityAttraction_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: "#/JsonApiModel_regional-cityAttraction_id"
-    name:
-      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_name"
-    iconName:
-      $ref: "../../library/regional/cityAttraction.yaml#/regional-cityAttraction_iconName"
-  required:
-    - id
-    - name
-    - iconName
 
 JsonApiModel_regional-cityAttraction_relationship:
   type: object
@@ -84,9 +69,9 @@ JsonApiModel_regional-cityAttraction_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-cityAttraction_type"
+          $ref: '#/JsonApiModel_regional-cityAttraction_type'
         id:
-          $ref: "#/JsonApiModel_regional-cityAttraction_id"
+          $ref: '#/JsonApiModel_regional-cityAttraction_id'
       required:
         - type
         - id
@@ -104,9 +89,9 @@ JsonApiModel_regional-cityAttraction_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_regional-cityAttraction_type"
+            $ref: '#/JsonApiModel_regional-cityAttraction_type'
           id:
-            $ref: "#/JsonApiModel_regional-cityAttraction_id"
+            $ref: '#/JsonApiModel_regional-cityAttraction_id'
         required:
           - type
           - id
