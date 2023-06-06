@@ -230,7 +230,7 @@ Response_regional-country_notSignedIn_item:
       type: object
       additionalProperties: false
       properties:
-        staff:
+        staff: # TODO: consider renaming to staffMembers
           $ref: '../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple'
         cities:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_multiple'

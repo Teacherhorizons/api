@@ -23,6 +23,8 @@ get:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - in: query
       name: include
+      description: |
+        - country.subjects - List of all related regional-countrySubjects except the queried regional-countrySubject where numberOfLiveJobs > 0
       # required: true
       example: country,subject,jobs,country.subjects,country.attractions,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school
       schema:

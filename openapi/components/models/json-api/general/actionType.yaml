@@ -3,16 +3,16 @@ JsonApiModel_general-actionType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-actionType_type"
+      $ref: '#/JsonApiModel_general-actionType_type'
     id:
-      $ref: "#/JsonApiModel_general-actionType_id"
+      $ref: '#/JsonApiModel_general-actionType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/actionType.yaml#/general-actionType_name"
+          $ref: '../../library/general/actionType.yaml#/general-actionType_name'
   required:
     - type
     - id
@@ -25,7 +25,7 @@ JsonApiModel_general-actionType_type:
 
 JsonApiModel_general-actionType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -34,9 +34,9 @@ JsonApiModel_general-actionType_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_general-actionType_id"
+      $ref: '#/JsonApiModel_general-actionType_id'
     name:
-      $ref: "../../library/general/actionType.yaml#/general-actionType_name"
+      $ref: '../../library/general/actionType.yaml#/general-actionType_name'
   required:
     - id
     - name
@@ -50,9 +50,9 @@ JsonApiModel_general-actionType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-actionType_type"
+          $ref: '#/JsonApiModel_general-actionType_type'
         id:
-          $ref: "#/JsonApiModel_general-actionType_id"
+          $ref: '#/JsonApiModel_general-actionType_id'
       required:
         - type
         - id

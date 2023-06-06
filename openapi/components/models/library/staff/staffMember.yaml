@@ -3,7 +3,7 @@ staff-staffMember_initials:
   type: string
   example: SW
   description: Main
-staff-staffMember_activeInTH:
+staff-staffMember_activeInTh:
   type: integer
   example: 1
 staff-staffMember_description:
@@ -45,7 +45,7 @@ staff-staffMember_user:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -56,7 +56,7 @@ staff-staffMember_salesforceUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -67,7 +67,7 @@ staff-staffMember_currentCity:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
@@ -78,7 +78,7 @@ staff-staffMember_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
@@ -89,7 +89,7 @@ staff-staffMember_currentCountry:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id

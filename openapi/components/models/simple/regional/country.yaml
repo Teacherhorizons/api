@@ -2,16 +2,16 @@
 
 SimpleModel_regional-country:
   oneOf:
-    - $ref: "#/SimpleModel_regional-country_admin"
-    - $ref: "#/SimpleModel_regional-country_school"
-    - $ref: "#/SimpleModel_regional-country_teacher"
+    - $ref: '#/SimpleModel_regional-country_admin'
+    - $ref: '#/SimpleModel_regional-country_school'
+    - $ref: '#/SimpleModel_regional-country_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-country_admin"
-      admin: "#/SimpleModel_regional-country_admin"
-      school: "#/SimpleModel_regional-country_school"
-      teacher: "#/SimpleModel_regional-country_teacher"
+      all: '#/SimpleModel_regional-country_admin'
+      admin: '#/SimpleModel_regional-country_admin'
+      school: '#/SimpleModel_regional-country_school'
+      teacher: '#/SimpleModel_regional-country_teacher'
 
 SimpleModel_regional-country_admin:
   type: object
@@ -22,192 +22,194 @@ SimpleModel_regional-country_admin:
       enum:
         - admin
     id:
-      $ref: "#/SimpleModel_regional-country_id"
+      $ref: '#/SimpleModel_regional-country_id'
     # simple Attributes
     name:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     alias:
-      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+      $ref: '../../library/regional/country.yaml#/regional-country_alias'
     creationDate:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+      $ref: '../../library/regional/country.yaml#/regional-country_creationDate'
     latestUpdateDate:
-      $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateDate"
+      $ref: '../../library/regional/country.yaml#/regional-country_latestUpdateDate'
     isoCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_isoCode"
+      $ref: '../../library/regional/country.yaml#/regional-country_isoCode'
     phoneCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_phoneCode"
+      $ref: '../../library/regional/country.yaml#/regional-country_phoneCode'
     slug:
-      $ref: "../../library/regional/country.yaml#/regional-country_slug"
+      $ref: '../../library/regional/country.yaml#/regional-country_slug'
     locationLatitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLongitude'
     population:
-      $ref: "../../library/regional/country.yaml#/regional-country_population"
+      $ref: '../../library/regional/country.yaml#/regional-country_population'
     ambassadorTestimonial:
-      $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTestimonial"
+      $ref: '../../library/regional/country.yaml#/regional-country_ambassadorTestimonial'
     teachingInCountryDescription:
-      $ref: "../../library/regional/country.yaml#/regional-country_teachingInCountryDescription"
+      $ref: '../../library/regional/country.yaml#/regional-country_teachingInCountryDescription'
     qualityOfLifeDescription:
-      $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription"
+      $ref: '../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription'
     pageMetaDescription:
-      $ref: '../../library/regional/country.yaml#/regional-country_pageMetaDescription' 
+      $ref: '../../library/regional/country.yaml#/regional-country_pageMetaDescription'
     travelAdviceUrl:
-      $ref: "../../library/regional/country.yaml#/regional-country_travelAdviceUrl"
+      $ref: '../../library/regional/country.yaml#/regional-country_travelAdviceUrl'
     numberOfCitiesWithSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfCitiesWithSchools'
     numberOfSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSchools'
     numberOfIBSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfIBSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfIBSchools'
     numberOfLiveJobs:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfLiveJobs"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfLiveJobs'
     numberOfPrimaryIBCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfPrimaryIBCurriculumSchools'
     numberOfPrimaryUSCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryUSCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfPrimaryUSCurriculumSchools'
     numberOfPrimaryUKCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryUKCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfPrimaryUKCurriculumSchools'
     numberOfPrimaryInternationalCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryInternationalCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfPrimaryInternationalCurriculumSchools'
     numberOfPrimaryOtherCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfPrimaryOtherCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfPrimaryOtherCurriculumSchools'
     numberOfSecondaryIBCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryIBCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSecondaryIBCurriculumSchools'
     numberOfSecondaryUSCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryUSCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSecondaryUSCurriculumSchools'
     numberOfSecondaryUKCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryUKCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSecondaryUKCurriculumSchools'
     numberOfSecondaryInternationalCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools'
     numberOfSecondaryOtherCurriculumSchools:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools'
     averageSavingPercentage:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageSavingPercentage"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageSavingPercentage'
     averageAnnualSaving:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualSaving"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageAnnualSaving'
     percentageOfSchoolsHaveFlightAllowance:
-      $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance"
+      $ref: '../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance'
     percentageOfSchoolsHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/country.yaml#/regional-country_percentageOfSchoolsHavePrivateHealthcareScheme'
     percentageOfOverseasTeachers:
-      $ref: "../../library/regional/country.yaml#/regional-country_percentageOfOverseasTeachers"
+      $ref: '../../library/regional/country.yaml#/regional-country_percentageOfOverseasTeachers'
     percentageOfInternationalStudents:
-      $ref: "../../library/regional/country.yaml#/regional-country_percentageOfInternationalStudents"
+      $ref: '../../library/regional/country.yaml#/regional-country_percentageOfInternationalStudents'
     costOfMidRange3CourseMealFor2:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfMidRange3CourseMealFor2"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOfMidRange3CourseMealFor2'
     costOfCappuccinoRegular:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfCappuccinoRegular"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOfCappuccinoRegular'
     costOf1WayTicketLocalTransport:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOf1WayTicketLocalTransport"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOf1WayTicketLocalTransport'
     costOfTaxi1KilometerNormalTariff:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff'
     costOfGasoline1Litre:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfGasoline1Litre"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOfGasoline1Litre'
     monthlyCostOfBasicUtilities:
-      $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfBasicUtilities"
+      $ref: '../../library/regional/country.yaml#/regional-country_monthlyCostOfBasicUtilities'
     monthlyCostOfInternet:
-      $ref: "../../library/regional/country.yaml#/regional-country_monthlyCostOfInternet"
+      $ref: '../../library/regional/country.yaml#/regional-country_monthlyCostOfInternet'
     monthlyRent1BedroomApartmentInCityCentre:
-      $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre"
+      $ref: '../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre'
     monthlyRent1BedroomApartmentOutsideCityCentre:
-      $ref: "../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentOutsideCityCentre"
+      $ref: '../../library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentOutsideCityCentre'
     crimeIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_crimeIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_crimeIndex'
     walkingAloneInDaylightSafetyIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_walkingAloneInDaylightSafetyIndex'
     walkingAloneAtNightSafetyIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_walkingAloneAtNightSafetyIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_walkingAloneAtNightSafetyIndex'
     qualityOfLifeIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_qualityOfLifeIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_qualityOfLifeIndex'
     costOfLivingIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_costOfLivingIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_costOfLivingIndex'
     expensePercentageTransportation:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageTransportation"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageTransportation'
     expensePercentageClothingAndShoes:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes'
     expensePercentageSportsAndLeisure:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure'
     expensePercentageMarkets:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageMarkets"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageMarkets'
     expensePercentageUtilities:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageUtilities"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageUtilities'
     expensePercentageRent:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRent"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageRent'
     expensePercentageRestaurants:
-      $ref: "../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants"
+      $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants'
     minGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
     firstQuartileGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalaryJuniorTeacher'
     averageGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher'
     thirdQuartileGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalaryJuniorTeacher'
     maxGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
     minGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
     firstQuartileGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalarySeniorTeacher'
     averageGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher'
     thirdQuartileGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalarySeniorTeacher'
     maxGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
     numberOfTeachers:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfTeachers"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfTeachers'
     numberOfOverseasTeachers:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfOverseasTeachers"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfOverseasTeachers'
     numberOfLocalTeachers:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalTeachers"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfLocalTeachers'
     numberOfUnknownTeachers:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownTeachers"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfUnknownTeachers'
     averageAnnualGrossIncome:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualGrossIncome"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageAnnualGrossIncome'
     averageAnnualNetIncome:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualNetIncome"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageAnnualNetIncome'
     averageAnnualExpenditure:
-      $ref: "../../library/regional/country.yaml#/regional-country_averageAnnualExpenditure"
+      $ref: '../../library/regional/country.yaml#/regional-country_averageAnnualExpenditure'
     numberOfSchoolsHaveFlightAllowance:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHaveFlightAllowance"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSchoolsHaveFlightAllowance'
     numberOfSchoolsDoNotHaveFlightAllowance:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHaveFlightAllowance"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHaveFlightAllowance'
     numberOfSchoolsHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSchoolsHavePrivateHealthcareScheme'
     numberOfSchoolsDoNotHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfSchoolsDoNotHavePrivateHealthcareScheme'
     numberOfStudents:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfStudents"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfStudents'
     numberOfInternationalStudents:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfInternationalStudents"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfInternationalStudents'
     numberOfLocalStudents:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfLocalStudents"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfLocalStudents'
     numberOfUnknownStudents:
-      $ref: "../../library/regional/country.yaml#/regional-country_numberOfUnknownStudents"
+      $ref: '../../library/regional/country.yaml#/regional-country_numberOfUnknownStudents'
     importanceIndex:
-      $ref: "../../library/regional/country.yaml#/regional-country_importanceIndex"
+      $ref: '../../library/regional/country.yaml#/regional-country_importanceIndex'
     importance:
-      $ref: "../../library/regional/country.yaml#/regional-country_importance"
+      $ref: '../../library/regional/country.yaml#/regional-country_importance'
     communityResponseQuestionIds:
-      $ref: "../../library/regional/country.yaml#/regional-country_communityResponseQuestionIds"
+      $ref: '../../library/regional/country.yaml#/regional-country_communityResponseQuestionIds'
 
     # relationship attributes
+    defaultInternationalWorkingCurrencyId:
+      $ref: '../../library/regional/country.yaml#/regional-country_localCurrencyId'
     localCurrencyId:
-      $ref: "../../library/regional/country.yaml#/regional-country_localCurrencyId"
+      $ref: '../../library/regional/country.yaml#/regional-country_localCurrencyId'
     creationUserId:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationUserId"
+      $ref: '../../library/regional/country.yaml#/regional-country_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/regional/country.yaml#/regional-country_latestUpdateUserId"
+      $ref: '../../library/regional/country.yaml#/regional-country_latestUpdateUserId'
     regionId:
-      $ref: "../../library/regional/country.yaml#/regional-country_regionId"
+      $ref: '../../library/regional/country.yaml#/regional-country_regionId'
     capitalCityId:
-      $ref: "../../library/regional/country.yaml#/regional-country_capitalCityId"
+      $ref: '../../library/regional/country.yaml#/regional-country_capitalCityId'
     ambassadorTeacherId:
-      $ref: "../../library/regional/country.yaml#/regional-country_ambassadorTeacherId"
+      $ref: '../../library/regional/country.yaml#/regional-country_ambassadorTeacherId'
     photo1Id:
-      $ref: "../../library/regional/country.yaml#/regional-country_photo1Id"
+      $ref: '../../library/regional/country.yaml#/regional-country_photo1Id'
   required:
     - schema
     - id
@@ -311,24 +313,24 @@ SimpleModel_regional-country_school:
       enum:
         - school
     id:
-      $ref: "#/SimpleModel_regional-country_id"
+      $ref: '#/SimpleModel_regional-country_id'
     # simple attributes
     name:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     alias:
-      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+      $ref: '../../library/regional/country.yaml#/regional-country_alias'
     isoCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     phoneCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+      $ref: '../../library/regional/country.yaml#/regional-country_creationDate'
     slug:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     # nationalAverageIncome:
     #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
     locationLatitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLongitude'
   required:
     - schema
     - id
@@ -348,24 +350,24 @@ SimpleModel_regional-country_teacher:
       enum:
         - teacher
     id:
-      $ref: "#/SimpleModel_regional-country_id"
+      $ref: '#/SimpleModel_regional-country_id'
     # simple attributes
     name:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     alias:
-      $ref: "../../library/regional/country.yaml#/regional-country_alias"
+      $ref: '../../library/regional/country.yaml#/regional-country_alias'
     isoCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     phoneCode:
-      $ref: "../../library/regional/country.yaml#/regional-country_creationDate"
+      $ref: '../../library/regional/country.yaml#/regional-country_creationDate'
     slug:
-      $ref: "../../library/regional/country.yaml#/regional-country_name"
+      $ref: '../../library/regional/country.yaml#/regional-country_name'
     # nationalAverageIncome:
     #   $ref: "../../library/regional/country.yaml#/regional-country_nationalAverageIncome"
     locationLatitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLatitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/country.yaml#/regional-country_locationLongitude"
+      $ref: '../../library/regional/country.yaml#/regional-country_locationLongitude'
   required:
     - schema
     - id

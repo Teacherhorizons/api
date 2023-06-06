@@ -3,44 +3,44 @@ JsonApiModel_regional-countrySubject:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-countrySubject_type"
+      $ref: '#/JsonApiModel_regional-countrySubject_type'
     id:
-      $ref: "#/JsonApiModel_regional-countrySubject_id"
+      $ref: '#/JsonApiModel_regional-countrySubject_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         slug:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_slug"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_slug'
         numberOfLiveJobs:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs"
-        numberOfTHTeachers:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfTHTeachers"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs'
+        numberOfThTeachers:
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfThTeachers'
         teachingSubjectInCountryDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_teachingSubjectInCountryDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_teachingSubjectInCountryDescription'
         opportunitiesAndTypesOfSchoolDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_opportunitiesAndTypesOfSchoolDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_opportunitiesAndTypesOfSchoolDescription'
         qualificationsAndExperienceDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualificationsAndExperienceDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_qualificationsAndExperienceDescription'
         salariesAndBenefitsDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription'
         qualityOfLifeDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription'
         pageMetaDescription:
-          $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription"
+          $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription'
         # relationship attributes
         country:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"        
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+          $ref: '../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute'
       required:
         - id
         - slug
         - countryId
         - subjectId
         - numberOfLiveJobs
-        - numberOfTHTeachers
+        - numberOfThTeachers
         - teachingSubjectInCountryDescription
         - opportunitiesAndTypesOfSchoolDescription
         - qualificationsAndExperienceDescription
@@ -52,9 +52,9 @@ JsonApiModel_regional-countrySubject:
       additionalProperties: false
       properties:
         country:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"        
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+          $ref: '../general/subject.yaml#/JsonApiModel_general-subject_relationship'
   required:
     - type
     - id
@@ -67,7 +67,7 @@ JsonApiModel_regional-countrySubject_type:
 
 JsonApiModel_regional-countrySubject_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -76,9 +76,9 @@ JsonApiModel_regional-countrySubject_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-countrySubject_id"
+      $ref: '#/JsonApiModel_regional-countrySubject_id'
     name:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_name"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_name'
   required:
     - id
     - name
@@ -92,9 +92,9 @@ JsonApiModel_regional-countrySubject_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-countrySubject_type"
+          $ref: '#/JsonApiModel_regional-countrySubject_type'
         id:
-          $ref: "#/JsonApiModel_regional-countrySubject_id"
+          $ref: '#/JsonApiModel_regional-countrySubject_id'
       required:
         - type
         - id
@@ -112,9 +112,9 @@ JsonApiModel_regional-countrySubject_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_regional-countrySubject_type"
+            $ref: '#/JsonApiModel_regional-countrySubject_type'
           id:
-            $ref: "#/JsonApiModel_regional-countrySubject_id"
+            $ref: '#/JsonApiModel_regional-countrySubject_id'
         required:
           - type
           - id

@@ -3,37 +3,37 @@ JsonApiModel_staff-staffMember:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_staff-staffMember_type"
+      $ref: '#/JsonApiModel_staff-staffMember_type'
     id:
-      $ref: "#/JsonApiModel_staff-staffMember_id"
+      $ref: '#/JsonApiModel_staff-staffMember_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         initials:
-          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
-        activeInTH:
-          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_initials'
+        activeInTh: # TODO: consider naming as 'isActiveInTh'
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_activeInTh'
         description:
-          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_description'
         roleTitle:
-          $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle"
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle'
         # relationship attributes
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         salesforceUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         currentCity:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
         currentCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         # simple attributes
         - initials
-        - activeInTH
+        - activeInTh
         - description
         - roleTitle
         # relationship attributes
@@ -43,15 +43,15 @@ JsonApiModel_staff-staffMember:
       additionalProperties: false
       properties:
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         salesforceUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         currentCity:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship'
         currentCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
   required:
     - type
     - id
@@ -64,7 +64,7 @@ JsonApiModel_staff-staffMember_type:
 
 JsonApiModel_staff-staffMember_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -73,7 +73,7 @@ JsonApiModel_staff-staffMember_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_staff-staffMember_id"
+      $ref: '#/JsonApiModel_staff-staffMember_id'
   required:
     - id
 
@@ -86,9 +86,9 @@ JsonApiModel_staff-staffMember_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_staff-staffMember_type"
+          $ref: '#/JsonApiModel_staff-staffMember_type'
         id:
-          $ref: "#/JsonApiModel_staff-staffMember_id"
+          $ref: '#/JsonApiModel_staff-staffMember_id'
       required:
         - type
         - id
@@ -106,9 +106,9 @@ JsonApiModel_staff-staffMember_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_staff-staffMember_type"
+            $ref: '#/JsonApiModel_staff-staffMember_type'
           id:
-            $ref: "#/JsonApiModel_staff-staffMember_id"
+            $ref: '#/JsonApiModel_staff-staffMember_id'
         required:
           - type
           - id

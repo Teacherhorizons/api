@@ -3,32 +3,32 @@ SimpleModel_staff-staffMember:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_staff-staffMember_id"
+      $ref: '#/SimpleModel_staff-staffMember_id'
     # simple attributes
     initials:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_initials"
-    activeInTH:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_activeInTH"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_initials'
+    activeInTh:
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_activeInTh'
     description:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_description"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_description'
     roleTitle:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_roleTitle'
     salesforceUserIdString:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserIdString"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_salesforceUserIdString'
     # relationship attributes
     userId:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_userId"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_userId'
     currentCityId:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCityId"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_currentCityId'
     currentCountryId:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_currentCountryId"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_currentCountryId'
     photoId:
-      $ref: "../../library/staff/staffMember.yaml#/staff-staffMember_photoId"
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_photoId'
   required:
     - id
     # simple attributes
     - initials
-    - activeInTH
+    - activeInTh
     - description
     - roleTitle
     # relationship attributes
@@ -39,5 +39,3 @@ SimpleModel_staff-staffMember_id:
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
-

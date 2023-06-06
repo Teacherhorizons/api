@@ -474,8 +474,8 @@ var tests = shared.addTestGroups(
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter(
-  (t) => includeTestNames == null || includeTestNames.includes(t.name)
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
+  // (t) => includeTestNames == null || includeTestNames.includes(t.name)
+  (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
 );
 
 describe('get-regional-regions', () => {

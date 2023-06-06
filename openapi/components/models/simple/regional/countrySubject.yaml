@@ -3,38 +3,38 @@ SimpleModel_regional-countrySubject:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_regional-countrySubject_id"
+      $ref: '#/SimpleModel_regional-countrySubject_id'
     # simple attributes
     slug:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_slug"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_slug'
     numberOfLiveJobs:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs"
-    numberOfTHTeachers:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfTHTeachers"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs'
+    numberOfThTeachers:
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_numberOfThTeachers'
     teachingSubjectInCountryDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_teachingSubjectInCountryDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_teachingSubjectInCountryDescription'
     opportunitiesAndTypesOfSchoolDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_opportunitiesAndTypesOfSchoolDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_opportunitiesAndTypesOfSchoolDescription'
     qualificationsAndExperienceDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualificationsAndExperienceDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_qualificationsAndExperienceDescription'
     salariesAndBenefitsDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_salariesAndBenefitsDescription'
     qualityOfLifeDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_qualityOfLifeDescription'
     pageMetaDescription:
-      $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_pageMetaDescription'
     # relationship attributes
     countryId:
-        $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_countryId"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_countryId'
     subjectId:
-        $ref: "../../library/regional/countrySubject.yaml#/regional-countrySubject_subjectId"
+      $ref: '../../library/regional/countrySubject.yaml#/regional-countrySubject_subjectId'
   required:
     - id
     - slug
     - countryId
     - subjectId
     - numberOfLiveJobs
-    - numberOfTHTeachers
+    - numberOfThTeachers
     - teachingSubjectInCountryDescription
     - opportunitiesAndTypesOfSchoolDescription
     - qualificationsAndExperienceDescription
@@ -48,6 +48,3 @@ SimpleModel_regional-countrySubject_id:
   example: 1
   readOnly: true
   description: Unique identifier of the object
-
-
-
