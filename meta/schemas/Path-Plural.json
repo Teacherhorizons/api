@@ -21,7 +21,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^get-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)s$"
+          "pattern": "^get-(application|general|job|meta|regional|school|staff|subject|teacher|user)([-a-zA-Z]*)s$"
         },
         "summary": {
           "type": "string"
@@ -71,27 +71,19 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)$"
                             }
                           },
-                          "required": [
-                            "$ref"
-                          ]
+                          "required": ["$ref"]
                         }
                       },
-                      "required": [
-                        "schema"
-                      ]
+                      "required": ["schema"]
                     }
                   },
-                  "required": [
-                    "application/json"
-                  ]
+                  "required": ["application/json"]
                 }
               },
-              "required": [
-                "description"
-              ]
+              "required": ["description"]
             },
             "400": {
               "type": "object",
@@ -156,14 +148,7 @@
           }
         }
       },
-      "required": [
-        "operationId",
-        "summary",
-        "tags",
-        "description",
-        "parameters",
-        "responses"
-      ],
+      "required": ["operationId", "summary", "tags", "description", "parameters", "responses"],
       "title": "Path-Plural-get"
     },
     "Path-Plural-post": {
@@ -172,7 +157,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^post-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)$"
+          "pattern": "^post-(application|general|job|meta|regional|school|staff|subject|teacher|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -205,22 +190,16 @@
                     "properties": {
                       "$ref": {
                         "type": "string",
-                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
+                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)$"
                       }
                     },
-                    "required": [
-                      "$ref"
-                    ]
+                    "required": ["$ref"]
                   }
                 },
-                "required": [
-                  "schema"
-                ]
+                "required": ["schema"]
               }
             },
-            "required": [
-              "application/json"
-            ]
+            "required": ["application/json"]
           }
         },
         "responses": {
@@ -249,27 +228,19 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/models/json-api/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_relationship$"
+                              "pattern": "^../../components/models/json-api/(application|general|job|meta|regional|school|staff|subject|teacher|user)/([a-zA-Z]*).yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_relationship$"
                             }
                           },
-                          "required": [
-                            "$ref"
-                          ]
+                          "required": ["$ref"]
                         }
                       },
-                      "required": [
-                        "schema"
-                      ]
+                      "required": ["schema"]
                     }
                   },
-                  "required": [
-                    "application/json"
-                  ]
+                  "required": ["application/json"]
                 }
               },
-              "required": [
-                "description"
-              ]
+              "required": ["description"]
             },
             "400": {
               "type": "object",
@@ -334,13 +305,7 @@
           }
         }
       },
-      "required": [
-        "operationId",
-        "summary",
-        "tags",
-        "description",
-        "responses"
-      ],
+      "required": ["operationId", "summary", "tags", "description", "responses"],
       "title": "Path-Plural-post"
     },
     "Path-Plural-parameter": {
@@ -427,7 +392,7 @@
               "type": "object",
               "additionalProperties": false,
               "patternProperties": {
-                "^fields[[](application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z]*]$": {
+                "^fields[[](application|general|job|meta|regional|school|staff|subject|teacher|user)[-a-zA-Z]*]$": {
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -443,9 +408,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "type"
-                  ]
+                  "required": ["type"]
                 },
                 "^filter[[][a-zA-Z.]*]([[](lte|gte)])*$": {
                   "type": "object",
@@ -477,9 +440,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "type"
-                  ]
+                  "required": ["type"]
                 },
                 "^filter[[][a-zA-Z.]*]([[](contains)])*$": {
                   "type": "object",
@@ -497,9 +458,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "type"
-                  ]
+                  "required": ["type"]
                 },
                 "^filter[[][a-zA-Z.]*]([[](matches)])*$": {
                   "type": "object",
@@ -517,9 +476,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "type"
-                  ]
+                  "required": ["type"]
                 },
                 "^page[[](number|size)]$": {
                   "type": "object",
@@ -530,9 +487,7 @@
                       "const": "number"
                     }
                   },
-                  "required": [
-                    "type"
-                  ]
+                  "required": ["type"]
                 }
               }
             },
@@ -546,12 +501,7 @@
               }
             }
           },
-          "required": [
-            "type",
-            "additionalProperties",
-            "properties",
-            "example"
-          ]
+          "required": ["type", "additionalProperties", "properties", "example"]
         },
         "description": {
           "type": "string"

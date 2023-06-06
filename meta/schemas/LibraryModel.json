@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(application|general|job|meta|regional|school|staff|teacher|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
+        "^(application|general|job|meta|regional|school|staff|subject|teacher|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
           "oneOf": [
             {
               "$ref": "#/definitions/LibraryModel-Attribute"
@@ -19,7 +19,7 @@
         "^(regional-city_nearestWeatherStationId)$": {
           "$ref": "#/definitions/LibraryModel-Attribute"
         },
-        "^(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z1]Id$": {
+        "^(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z1]Id$": {
           "$ref": "#/definitions/LibraryModel-RelationshipAttribute"
         }
       },
@@ -37,12 +37,7 @@
           "type": "object"
         },
         "example": {
-          "type": [
-            "array",
-            "number",
-            "string",
-            "boolean"
-          ]
+          "type": ["array", "number", "string", "boolean"]
         },
         "format": {
           "type": "string"
@@ -65,10 +60,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "example"
-      ],
+      "required": ["type", "example"],
       "title": "LibraryModel-Attribute"
     },
     "LibraryModel-RelationshipAttribute": {
@@ -92,11 +84,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "description",
-        "example",
-        "type"
-      ],
+      "required": ["description", "example", "type"],
       "title": "LibraryModel-RelationshipAttribute"
     },
     "LibraryModel-Relationship": {
@@ -128,29 +116,16 @@
                   "pattern": "^Relationship to ([a-z])([a-zA-Z-]*)$"
                 }
               },
-              "required": [
-                "description",
-                "example",
-                "type"
-              ]
+              "required": ["description", "example", "type"]
             }
           },
-          "required": [
-            "id"
-          ]
+          "required": ["id"]
         },
         "required": {
-          "const": [
-            "id"
-          ]
+          "const": ["id"]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "LibraryModel-Relationship"
     }
   }

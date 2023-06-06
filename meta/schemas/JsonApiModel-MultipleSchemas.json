@@ -6,25 +6,25 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-OneOfSchema"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Schema"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_type$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_type$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Type"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_id$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Id"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipAttribute"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Relationship"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship_multiple$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipMultiple"
         }
       },
@@ -45,9 +45,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "$ref"
-            ]
+            "required": ["$ref"]
           }
         },
         "discriminator": {
@@ -72,10 +70,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "oneOf",
-        "discriminator"
-      ],
+      "required": ["oneOf", "discriminator"],
       "title": "JsonApiModel-MultipleSchemas-OneOfSchema"
     },
     "JsonApiModel-MultipleSchemas-Schema": {
@@ -108,10 +103,7 @@
                   "maxItems": 1
                 }
               },
-              "required": [
-                "type",
-                "enum"
-              ]
+              "required": ["type", "enum"]
             },
             "type": {
               "type": "object",
@@ -157,9 +149,7 @@
                           "pattern": "^([a-zA-Z./]*.yaml#/JsonApiModel_[a-zA-Z-]*_relationship_attribute)|(../../library/(application|general|job|regional|school|user)/[a-zA-Z-]*.yaml#/(application|general|job|regional|school|user)[a-zA-Z0-9-_]*(?<!(Id)))$"
                         }
                       },
-                      "required": [
-                        "$ref"
-                      ]
+                      "required": ["$ref"]
                     }
                   },
                   "required": []
@@ -168,11 +158,7 @@
                   "type": "array"
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             },
             "relationships": {
               "type": "object",
@@ -197,9 +183,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "$ref"
-                      ]
+                      "required": ["$ref"]
                     }
                   },
                   "required": []
@@ -209,18 +193,10 @@
                   "const": "Related attributes"
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             }
           },
-          "required": [
-            "type",
-            "id",
-            "attributes"
-          ]
+          "required": ["type", "id", "attributes"]
         },
         "required": {
           "type": "array",
@@ -238,12 +214,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-MultipleSchemas-Schema"
     },
     "JsonApiModel-MultipleSchemas-Type": {
@@ -265,12 +236,7 @@
           "const": "Unique identifier of the entity type"
         }
       },
-      "required": [
-        "type",
-        "example",
-        "readOnly",
-        "description"
-      ],
+      "required": ["type", "example", "readOnly", "description"],
       "title": "JsonApiModel-MultipleSchemas-Type"
     },
     "JsonApiModel-MultipleSchemas-Id": {
@@ -295,11 +261,7 @@
           "const": true
         }
       },
-      "required": [
-        "description",
-        "example",
-        "type"
-      ],
+      "required": ["description", "example", "type"],
       "title": "JsonApiModel-MultipleSchemas-Id"
     },
     "JsonApiModel-MultipleSchemas-RelationshipAttribute": {
@@ -324,9 +286,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "name": {
               "type": "object",
@@ -336,9 +296,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "slug": {
               "type": "object",
@@ -348,9 +306,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             },
             "fullName": {
               "type": "object",
@@ -360,14 +316,10 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             }
           },
-          "required": [
-            "id"
-          ]
+          "required": ["id"]
         },
         "required": {
           "type": "array",
@@ -382,12 +334,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-MultipleSchemas-RelationshipAttribute"
     },
     "JsonApiModel-MultipleSchemas-TypeAndId": {
@@ -411,10 +358,7 @@
               "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Ref"
             }
           },
-          "required": [
-            "type",
-            "id"
-          ]
+          "required": ["type", "id"]
         },
         "required": {
           "type": "array",
@@ -434,13 +378,8 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ]
-    },    
+      "required": ["type", "additionalProperties", "properties", "required"]
+    },
     "JsonApiModel-MultipleSchemas-Relationship": {
       "type": "object",
       "additionalProperties": false,
@@ -459,9 +398,7 @@
               "$ref": "#/definitions/JsonApiModel-MultipleSchemas-TypeAndId"
             }
           },
-          "required": [
-            "data"
-          ]
+          "required": ["data"]
         },
         "required": {
           "type": "array",
@@ -476,12 +413,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-MultipleSchemas-Relationship"
     },
     "JsonApiModel-MultipleSchemas-RelationshipMultiple": {
@@ -511,9 +443,7 @@
               }
             }
           },
-          "required": [
-            "data"
-          ]
+          "required": ["data"]
         },
         "required": {
           "type": "array",
@@ -528,12 +458,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-MultipleSchemas-Relationship"
     },
     "JsonApiModel-MultipleSchemas-Ref": {
@@ -544,9 +469,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "$ref"
-      ]
+      "required": ["$ref"]
     }
   }
 }

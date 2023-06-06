@@ -6,13 +6,13 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)(?<!(_id|_all|_admin|_school|_teacher))$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)(?<!(_id|_all|_admin|_school|_teacher))$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-OneOfSchema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_(all|admin|school|teacher)$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_(all|admin|school|teacher)$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-Schema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|teacher|user)[a-zA-Z-]*_id$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[a-zA-Z-]*_id$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-Id"
         }
       },
@@ -33,9 +33,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "$ref"
-            ]
+            "required": ["$ref"]
           }
         },
         "discriminator": {
@@ -52,9 +50,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "all"
-              ]
+              "required": ["all"]
             }
           }
         },
@@ -62,10 +58,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "oneOf",
-        "discriminator"
-      ],
+      "required": ["oneOf", "discriminator"],
       "title": "SimpleModel-MultipleSchemas-OneOfSchema"
     },
     "SimpleModel-MultipleSchemas-Schema": {
@@ -98,10 +91,7 @@
                   "maxItems": 1
                 }
               },
-              "required": [
-                "type",
-                "enum"
-              ]
+              "required": ["type", "enum"]
             }
           },
           "patternProperties": {
@@ -113,15 +103,10 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             }
           },
-          "required": [
-            "schema",
-            "id"
-          ]
+          "required": ["schema", "id"]
         },
         "required": {
           "type": "array",
@@ -139,12 +124,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "SimpleModel-MultipleSchemas-Schema"
     },
     "SimpleModel-MultipleSchemas-Id": {
@@ -168,12 +148,7 @@
           "const": "Unique identifier of the object"
         }
       },
-      "required": [
-        "type",
-        "example",
-        "readOnly",
-        "description"
-      ],
+      "required": ["type", "example", "readOnly", "description"],
       "title": "SimpleModel-MultipleSchemas-Id"
     }
   }

@@ -21,7 +21,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^get-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)$"
+          "pattern": "^get-(application|general|job|meta|regional|school|staff|subject|teacher|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -64,27 +64,19 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)$"
                             }
                           },
-                          "required": [
-                            "$ref"
-                          ]
+                          "required": ["$ref"]
                         }
                       },
-                      "required": [
-                        "schema"
-                      ]
+                      "required": ["schema"]
                     }
                   },
-                  "required": [
-                    "application/json"
-                  ]
+                  "required": ["application/json"]
                 }
               },
-              "required": [
-                "description"
-              ]
+              "required": ["description"]
             },
             "400": {
               "type": "object",
@@ -149,14 +141,7 @@
           }
         }
       },
-      "required": [
-        "operationId",
-        "summary",
-        "tags",
-        "description",
-        "parameters",
-        "responses"
-      ],
+      "required": ["operationId", "summary", "tags", "description", "parameters", "responses"],
       "title": "Path-Singular-get"
     },
     "Path-Singular-patch": {
@@ -165,7 +150,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^patch-(application|general|job|meta|regional|school|staff|teacher|user)([-a-zA-Z]*)$"
+          "pattern": "^patch-(application|general|job|meta|regional|school|staff|subject|teacher|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -198,22 +183,16 @@
                     "properties": {
                       "$ref": {
                         "type": "string",
-                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)$"
+                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)$"
                       }
                     },
-                    "required": [
-                      "$ref"
-                    ]
+                    "required": ["$ref"]
                   }
                 },
-                "required": [
-                  "schema"
-                ]
+                "required": ["schema"]
               }
             },
-            "required": [
-              "application/json"
-            ]
+            "required": ["application/json"]
           }
         },
         "responses": {
@@ -293,12 +272,7 @@
           }
         }
       },
-      "required": [
-        "operationId",
-        "tags",
-        "summary",
-        "responses"
-      ],
+      "required": ["operationId", "tags", "summary", "responses"],
       "title": "Path-Singular-patch"
     },
     "Path-Singular-parameter": {
@@ -325,10 +299,7 @@
           "type": "string"
         },
         "example": {
-          "type": [
-            "integer",
-            "string"
-          ]
+          "type": ["integer", "string"]
         },
         "required": {
           "type": "boolean",

@@ -6,31 +6,31 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_type$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_type$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Type"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_id$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Id"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "#/definitions/Response-MultipleSchemas-RelationshipAttribute"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_relationship$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Relationship"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_meta$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_meta$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Meta"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z_0-9]*_description$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z_0-9]*_description$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Description"
         }
       },
@@ -51,9 +51,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "$ref"
-            ]
+            "required": ["$ref"]
           }
         },
         "discriminator": {
@@ -78,10 +76,7 @@
           "type": "array"
         }
       },
-      "required": [
-        "oneOf",
-        "discriminator"
-      ],
+      "required": ["oneOf", "discriminator"],
       "title": "Response-MultipleSchemas-OneOfMainSchema"
     },
     "Response-MultipleSchemas-MainSchema": {
@@ -142,9 +137,7 @@
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "$ref"
-                        ]
+                        "required": ["$ref"]
                       }
                     }
                   }
@@ -152,10 +145,7 @@
               }
             }
           },
-          "required": [
-            "schema",
-            "data"
-          ]
+          "required": ["schema", "data"]
         },
         "required": {
           "type": "array",
@@ -179,12 +169,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "Response-MultipleSchemas-MainSchema"
     },
     "Response-MultipleSchemas-SchemaEnum": {
@@ -207,10 +192,7 @@
           "maxItems": 1
         }
       },
-      "required": [
-        "type",
-        "enum"
-      ],
+      "required": ["type", "enum"],
       "title": "Response-MultipleSchemas-SchemaEnum"
     },
     "Response-MultipleSchemas-DataArray": {
@@ -245,7 +227,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[a-zA-Z-]*_type$"
+                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[a-zA-Z-]*_type$"
                 }
               }
             },
@@ -255,7 +237,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[a-zA-Z-]*_id$"
+                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[a-zA-Z-]*_id$"
                 }
               }
             },
@@ -296,9 +278,7 @@
                               ]
                             }
                           },
-                          "required": [
-                            "allOf"
-                          ]
+                          "required": ["allOf"]
                         }
                       ]
                     }
@@ -309,11 +289,7 @@
                   "type": "array"
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             },
             "relationships": {
               "type": "object",
@@ -349,9 +325,7 @@
                               ]
                             }
                           },
-                          "required": [
-                            "allOf"
-                          ]
+                          "required": ["allOf"]
                         }
                       ]
                     }
@@ -365,18 +339,10 @@
                   }
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties"
-              ]
+              "required": ["type", "additionalProperties", "properties"]
             }
           },
-          "required": [
-            "type",
-            "id",
-            "attributes"
-          ]
+          "required": ["type", "id", "attributes"]
         },
         "required": {
           "type": "array",
@@ -415,12 +381,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "Response-MultipleSchemas-Data"
     },
     "Response-MultipleSchemas-Type": {
@@ -442,12 +403,7 @@
           "const": "Unique identifier of the entity type"
         }
       },
-      "required": [
-        "type",
-        "example",
-        "readOnly",
-        "description"
-      ],
+      "required": ["type", "example", "readOnly", "description"],
       "title": "Response-MultipleSchemas-Type"
     },
     "Response-MultipleSchemas-Id": {
@@ -472,11 +428,7 @@
           "const": true
         }
       },
-      "required": [
-        "description",
-        "example",
-        "type"
-      ],
+      "required": ["description", "example", "type"],
       "title": "Response-MultipleSchemas-Id"
     },
     "Response-MultipleSchemas-RelationshipAttribute": {
@@ -501,14 +453,10 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             }
           },
-          "required": [
-            "id"
-          ]
+          "required": ["id"]
         },
         "required": {
           "type": "array",
@@ -523,12 +471,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "Response-MultipleSchemas-RelationshipAttribute"
     },
     "Response-MultipleSchemas-Relationship": {
@@ -566,10 +509,7 @@
                       "$ref": "#/definitions/Response-MultipleSchemas-GeneralReference"
                     }
                   },
-                  "required": [
-                    "type",
-                    "id"
-                  ]
+                  "required": ["type", "id"]
                 },
                 "required": {
                   "type": "array",
@@ -589,17 +529,10 @@
                   ]
                 }
               },
-              "required": [
-                "type",
-                "additionalProperties",
-                "properties",
-                "required"
-              ]
+              "required": ["type", "additionalProperties", "properties", "required"]
             }
           },
-          "required": [
-            "data"
-          ]
+          "required": ["data"]
         },
         "required": {
           "type": "array",
@@ -614,12 +547,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "Response-MultipleSchemas-Relationship"
     },
     "Response-MultipleSchemas-GeneralReference": {
@@ -630,9 +558,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "$ref"
-      ]
+      "required": ["$ref"]
     },
     "Response-MultipleSchemas-Meta": {
       "type": "object",
@@ -668,10 +594,7 @@
               }
             }
           },
-          "required": [
-            "count",
-            "pageCount"
-          ]
+          "required": ["count", "pageCount"]
         },
         "required": {
           "type": "array",
@@ -691,11 +614,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "properties",
-        "required"
-      ]
+      "required": ["type", "properties", "required"]
     },
     "Response-MultipleSchemas-Included": {
       "type": "object",
@@ -708,12 +627,10 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*_relationship(_multiple)*$"
+          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-a-zA-Z_]*_relationship(_multiple)*$"
         }
       },
-      "required": [
-        "$ref"
-      ]
+      "required": ["$ref"]
     },
     "Response-MultipleSchemas-AttributeReference": {
       "type": "object",
@@ -721,12 +638,10 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school|user)[-a-zA-Z_]*relationship_attribute)$"
+          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|subject|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school|user)[-a-zA-Z_]*relationship_attribute)$"
         }
       },
-      "required": [
-        "$ref"
-      ]
+      "required": ["$ref"]
     },
     "Response-MultipleSchemas-Description": {
       "type": "object",
@@ -736,9 +651,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "description"
-      ]
+      "required": ["description"]
     }
   }
 }

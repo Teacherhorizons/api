@@ -6,10 +6,10 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*(?<!_id)$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*(?<!_id)$": {
           "$ref": "#/definitions/SimpleModel-SingleSchema-Schema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|teacher|user)[-]*[a-zA-Z]*[a-z]_id$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*[a-z]_id$": {
           "$ref": "#/definitions/SimpleModel-SingleSchema-Id"
         }
       },
@@ -38,14 +38,10 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "$ref"
-              ]
+              "required": ["$ref"]
             }
           },
-          "required": [
-            "id"
-          ]
+          "required": ["id"]
         },
         "required": {
           "type": "array",
@@ -58,12 +54,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "additionalProperties",
-        "properties",
-        "required"
-      ],
+      "required": ["type", "additionalProperties", "properties", "required"],
       "title": "SimpleModel-SingleSchema-Schema"
     },
     "SimpleModel-SingleSchema-Id": {
@@ -87,12 +78,7 @@
           "const": "Unique identifier of the object"
         }
       },
-      "required": [
-        "type",
-        "example",
-        "readOnly",
-        "description"
-      ],
+      "required": ["type", "example", "readOnly", "description"],
       "title": "SimpleModel-SingleSchema-Id"
     }
   }
