@@ -1,35 +1,35 @@
-JsonApiModel_subject-linkType:
+JsonApiModel_time-date:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-linkType_type"
+      $ref: "#/JsonApiModel_time-date_type"
     id:
-      $ref: "#/JsonApiModel_subject-linkType_id"
+      $ref: "#/JsonApiModel_time-date_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../library/subject/linkType.yaml#/subject-linkType_name"
+        date:
+          $ref: "../../library/time/date.yaml#/time-date_date"
   required:
     - type
     - id
 
-JsonApiModel_subject-linkType_type:
+JsonApiModel_time-date_type:
   type: string
-  example: subject-linkType
+  example: time-date
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_subject-linkType_id:
+JsonApiModel_time-date_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_subject-linkType_relationship:
+JsonApiModel_time-date_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -38,20 +38,20 @@ JsonApiModel_subject-linkType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-linkType_type"
+          $ref: "#/JsonApiModel_time-date_type"
         id:
-          $ref: "#/JsonApiModel_subject-linkType_id"
+          $ref: "#/JsonApiModel_time-date_id"
       required:
         - type
         - id
   required:
     - data
 
-JsonApiModel_subject-linkType_relationship_attribute:
+JsonApiModel_time-date_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_subject-linkType_id"
+      $ref: "#/JsonApiModel_time-date_id"
   required:
     - id

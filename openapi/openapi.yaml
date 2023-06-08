@@ -280,10 +280,37 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectMonth" />
 
+  - name: simple-model-subject-subjectLink
+    x-displayName: Simple model - subject-subjectLink
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectLink" />
+
   - name: simple-model-subject-linkType
     x-displayName: Simple model - subject-linkType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkType" />
+
+ # tags - simple-models - time
+
+  - name: simple-model-time-date
+    x-displayName: Simple model - time-date
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_time-date" />
+
+  - name: simple-model-time-week
+    x-displayName: Simple model - time-week
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_time-week" />
+
+  - name: simple-model-time-month
+    x-displayName: Simple model - time-month
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_time-month" />
+
+  - name: simple-model-time-schoolYear
+    x-displayName: Simple model - time-schoolYear
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_time-schoolYear" />
 
   # tags - simple-models - job
   - name: simple-model-job
@@ -1075,10 +1102,37 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectMonth" />
 
+  - name: json-api-model-subject-subjectLink
+    x-displayName: JSON:API model - subject-subjectLink
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectLink" />
+
   - name: json-api-model-subject-linkType
     x-displayName: JSON:API model - subject-linkType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkType" />
+
+ # tags - JSON:API models - time
+
+  - name: json-api-model-time-date
+    x-displayName: JSON:API model - time-date
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_time-date" />
+
+  - name: json-api-model-time-week
+    x-displayName: JSON:API model - time-week
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_time-week" />
+
+  - name: json-api-model-time-month
+    x-displayName: JSON:API model - time-month
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_time-month" />
+
+  - name: json-api-model-time-schoolYear
+    x-displayName: JSON:API model - time-schoolYear
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_time-schoolYear" />
 
   # tags - JSON:API models - job
   - name: json-api-model-job
@@ -1722,7 +1776,12 @@ x-tagGroups:
       - simple-model-subject-communityQuestion
       - simple-model-subject-userSubjectCommunityResponse
       - simple-model-subject-subjectMonth
+      - simple-model-subject-subjectLink
       - simple-model-subject-linkType
+      - simple-model-time-date
+      - simple-model-time-week
+      - simple-model-time-month
+      - simple-model-time-schoolYear
       - simple-model-regional-city
       - simple-model-regional-articleCategory
       - simple-model-regional-cityArticle
@@ -1880,7 +1939,12 @@ x-tagGroups:
       - json-api-model-subject-communityQuestion
       - json-api-model-subject-userSubjectCommunityResponse
       - json-api-model-subject-subjectMonth
+      - json-api-model-subject-subjectLink
       - json-api-model-subject-linkType
+      - json-api-model-time-date
+      - json-api-model-time-week
+      - json-api-model-time-month
+      - json-api-model-time-schoolYear
       - json-api-model-subjectGroup
       - json-api-model-regional-city
       - json-api-model-regional-articleCategory

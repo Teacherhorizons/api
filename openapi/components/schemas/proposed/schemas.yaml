@@ -186,7 +186,15 @@ SimpleModels:
     - $ref: "../../models/simple/subject/communityQuestion.yaml#/SimpleModel_subject-communityQuestion"
     - $ref: "../../models/simple/subject/userSubjectCommunityResponse.yaml#/SimpleModel_subject-userSubjectCommunityResponse"
     - $ref: "../../models/simple/subject/subjectMonth.yaml#/SimpleModel_subject-subjectMonth"
+    - $ref: "../../models/simple/subject/subjectLink.yaml#/SimpleModel_subject-subjectLink"
     - $ref: "../../models/simple/subject/linkType.yaml#/SimpleModel_subject-linkType"
+
+    # time
+    - $ref: "../../models/simple/time/date.yaml#/SimpleModel_time-date"
+    - $ref: "../../models/simple/time/week.yaml#/SimpleModel_time-week"
+    - $ref: "../../models/simple/time/month.yaml#/SimpleModel_time-month"
+    - $ref: "../../models/simple/time/schoolYear.yaml#/SimpleModel_time-schoolYear"
+    
 
     # job
     - $ref: "../../models/simple/job/job.yaml#/SimpleModel_job"
@@ -360,7 +368,14 @@ JsonApiModels:
     - $ref: "../../models/json-api/subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion"
     - $ref: "../../models/json-api/subject/userSubjectCommunityResponse.yaml#/JsonApiModel_subject-userSubjectCommunityResponse"
     - $ref: "../../models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth"
+    - $ref: "../../models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink"
     - $ref: "../../models/json-api/subject/linkType.yaml#/JsonApiModel_subject-linkType"
+
+    # time
+    - $ref: "../../models/json-api/time/date.yaml#/JsonApiModel_time-date"
+    - $ref: "../../models/json-api/time/week.yaml#/JsonApiModel_time-week"
+    - $ref: "../../models/json-api/time/month.yaml#/JsonApiModel_time-month"
+    - $ref: "../../models/json-api/time/schoolYear.yaml#/JsonApiModel_time-schoolYear"
 
     # job
     - $ref: "../../models/json-api/job/job.yaml#/JsonApiModel_job"

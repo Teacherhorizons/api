@@ -1,0 +1,52 @@
+# attributes
+subject-subjectLink_name:
+  type: string
+  example: FutureLearn
+  description: Main
+  maxLength: 250
+
+subject-subjectLink_description:
+  type: string
+  example: Maths teaching courses exploring the fundamentals of the topic, and how to plan better lessons
+  description: Main
+  maxLength: 250
+
+subject-subjectLink_url:
+  type: string
+  example: https://www.futurelearn.com/subjects/teaching-courses/teaching-maths
+  maxLength: 250
+  
+#relationship attributes
+subject-subjectLink_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to subject
+
+subject-subjectLink_linkTypeId:
+  type: integer
+  example: 1
+  description: Relationship to subject-linkType
+
+#relationships
+
+subject-subjectLink_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject
+  required: 
+    - id
+
+subject-subjectLink_linkType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "202111"
+      description: Relationship to subject-linkType
+  required: 
+    - id

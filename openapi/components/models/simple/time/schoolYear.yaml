@@ -1,0 +1,16 @@
+SimpleModel_time-schoolYear:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_time-schoolYear_id"
+  required:
+    - id
+
+
+# shared
+SimpleModel_time-schoolYear_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

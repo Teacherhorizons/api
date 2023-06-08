@@ -1,0 +1,19 @@
+SimpleModel_time-date:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_time-date_id"
+    # simple attributes
+    date:
+      $ref: "../../library/time/date.yaml#/time-date_date"
+  required:
+    - id
+    - date
+
+# shared
+SimpleModel_time-date_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

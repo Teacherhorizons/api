@@ -1,0 +1,57 @@
+JsonApiModel_subject-subjectLink:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_subject-subjectLink_type"
+    id:
+      $ref: "#/JsonApiModel_subject-subjectLink_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_name"
+        url:
+          $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_url"
+        description:
+          $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_description"
+
+        # relationship attributes
+        linkType:
+          $ref: "../subject/linkType.yaml#/JsonApiModel_subject-linkType_relationship_attribute"
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+      required:
+        - id
+        - name
+        - url
+        - description
+        - linkType
+        - subject
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+          linkType:
+            $ref: "../subject/linkType.yaml#/JsonApiModel_subject-linkType_relationship"
+          subject:
+            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"   
+
+  required:
+    - type
+    - id
+
+JsonApiModel_subject-subjectLink_type:
+  type: string
+  example: subject-subjectLink
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_subject-subjectLink_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+

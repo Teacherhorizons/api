@@ -1,0 +1,15 @@
+SimpleModel_time-month:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_time-month_id"
+  required:
+    - id
+
+# shared
+SimpleModel_time-month_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
