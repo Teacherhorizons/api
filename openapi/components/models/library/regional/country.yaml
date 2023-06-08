@@ -197,23 +197,28 @@ regional-country_minGrossSalaryJuniorTeacher:
   type: integer
   example: 12,000
   description: Derived (dw)
-regional-country_firstQuartileGrossSalaryJuniorTeacher:
+regional-country_lowerQuartileGrossSalaryJuniorTeacher:
   type: integer
   example: 12,000
   description: Derived (dw)
-regional-country_firstQuartileGrossSalarySeniorTeacher:
+regional-country_lowerQuartileGrossSalarySeniorTeacher:
   type: integer
   example: 12,000
   description: Derived (dw)
 regional-country_averageGrossSalaryJuniorTeacher:
+  deprecated: true
   type: integer
   example: 28,000
-  description: Derived (dw)
-regional-country_thirdQuartileGrossSalaryJuniorTeacher:
+  description: Derived (dw); renamed to medianGrossSalaryJuniorTeacher
+regional-country_medianGrossSalaryJuniorTeacher:
+  type: integer
+  example: 28,000
+  description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
+regional-country_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
   example: 12,000
   description: Derived (dw)
-regional-country_thirdQuartileGrossSalarySeniorTeacher:
+regional-country_upperQuartileGrossSalarySeniorTeacher:
   type: integer
   example: 12,000
   description: Derived (dw)
@@ -371,10 +376,10 @@ regional-country_communityResponseQuestionIds:
   type: array
   items:
     type: integer
-  example: [4,7,10,14]
+  example: [4, 7, 10, 14]
   description: Derived (dw)
 
-#relationship attributes  
+#relationship attributes
 regional-country_localCurrencyId:
   type: integer
   example: 1
@@ -416,7 +421,7 @@ regional-localCurrency:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-currency
   required:
     - id
@@ -427,7 +432,7 @@ regional-internationalCurrency:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-currency
   required:
     - id
@@ -438,7 +443,7 @@ regional-country_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -449,7 +454,7 @@ regional-country_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -460,7 +465,7 @@ regional-country_region:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-region
   required:
     - id
@@ -471,7 +476,7 @@ regional-country_capitalCity:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
@@ -482,10 +487,7 @@ regional-country_ambassadorTeacher:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher
   required:
     - id
-
-
-

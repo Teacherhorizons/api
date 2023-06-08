@@ -57,7 +57,7 @@ JsonApiModel_regional-country_admin:
         qualityOfLifeDescription:
           $ref: '../../library/regional/country.yaml#/regional-country_qualityOfLifeDescription'
         pageMetaDescription:
-          $ref: '../../library/regional/country.yaml#/regional-country_pageMetaDescription' 
+          $ref: '../../library/regional/country.yaml#/regional-country_pageMetaDescription'
         travelAdviceUrl:
           $ref: '../../library/regional/country.yaml#/regional-country_travelAdviceUrl'
         numberOfCitiesWithSchools:
@@ -148,22 +148,24 @@ JsonApiModel_regional-country_admin:
           $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants'
         minGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
-        firstQuartileGrossSalaryJuniorTeacher:
-          $ref: '../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher'
-        thirdQuartileGrossSalaryJuniorTeacher:
-          $ref: '../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalaryJuniorTeacher'
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
         minGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
-        firstQuartileGrossSalarySeniorTeacher:
-          $ref: '../../library/regional/country.yaml#/regional-country_firstQuartileGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher'
-        thirdQuartileGrossSalarySeniorTeacher:
-          $ref: '../../library/regional/country.yaml#/regional-country_thirdQuartileGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
         numberOfTeachers:
@@ -288,14 +290,14 @@ JsonApiModel_regional-country_admin:
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneAtNightSafetyIndex
         - minGrossSalaryJuniorTeacher
-        - firstQuartileGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
-        - thirdQuartileGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
         - minGrossSalarySeniorTeacher
-        - firstQuartileGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
-        - thirdQuartileGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
         - numberOfTeachers
         - numberOfOverseasTeachers
