@@ -31,7 +31,7 @@ JsonApiModel_job:
           $ref: "../../library/job/job.yaml#/job_isBoosted"
         # relationship attributes
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
         type:
           $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship_attribute"
         role:
@@ -51,7 +51,7 @@ JsonApiModel_job:
       additionalProperties: false
       properties:
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
         type:
           $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship"
         role:

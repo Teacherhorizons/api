@@ -1,32 +1,38 @@
-JsonApiModel_general-subject:
+JsonApiModel_subject:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-subject_type"
+      $ref: "#/JsonApiModel_subject_type"
     id:
-      $ref: "#/JsonApiModel_general-subject_id"
+      $ref: "#/JsonApiModel_subject_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/subject.yaml#/general-subject_name"
+          $ref: "../../library/subject/subject.yaml#/subject_name"
         shortName:
-          $ref: "../../library/general/subject.yaml#/general-subject_shortName"
+          $ref: "../../library/subject/subject.yaml#/subject_shortName"
+        middleOfSentenceName:
+          $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceName"
+        middleOfSentenceShortName:
+          $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceShortName"
+        importance:
+          $ref: "../../library/subject/subject.yaml#/subject_importance"
         slug:
-          $ref: "../../library/general/subject.yaml#/general-subject_slug"
+          $ref: "../../library/subject/subject.yaml#/subject_slug"
         numberOfLiveJobs:
-          $ref: "../../library/general/subject.yaml#/general-subject_numberOfLiveJobs"
+          $ref: "../../library/subject/subject.yaml#/subject_numberOfLiveJobs"
         creationDate:
-          $ref: "../../library/general/subject.yaml#/general-subject_creationDate"
+          $ref: "../../library/subject/subject.yaml#/subject_creationDate"
         latestUpdateDate:
-          $ref: "../../library/general/subject.yaml#/general-subject_latestUpdateDate"
+          $ref: "../../library/subject/subject.yaml#/subject_latestUpdateDate"
 
         # relationship attributes
         subjectGroup:
-          $ref: "../general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup_relationship_attribute"
+          $ref: "../general/subjectGroup.yaml#/JsonApiModel_subjectGroup_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -36,7 +42,7 @@ JsonApiModel_general-subject:
         additionalProperties: false
         properties: 
           subjectGroup:
-            $ref: "../general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup_relationship"
+            $ref: "../general/subjectGroup.yaml#/JsonApiModel_subjectGroup_relationship"
           creationUser:
             $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
           latestUpdateUser:
@@ -45,34 +51,34 @@ JsonApiModel_general-subject:
     - type
     - id
 
-JsonApiModel_general-subject_type:
+JsonApiModel_subject_type:
   type: string
-  example: general-subject
+  example: subject
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_general-subject_id:
+JsonApiModel_subject_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_general-subject_relationship_attribute:
+JsonApiModel_subject_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_general-subject_id"
+      $ref: "#/JsonApiModel_subject_id"
     name:
-      $ref: "../../library/general/subject.yaml#/general-subject_name"
+      $ref: "../../library/subject/subject.yaml#/subject_name"
     slug:
-      $ref: "../../library/general/subject.yaml#/general-subject_slug"
+      $ref: "../../library/subject/subject.yaml#/subject_slug"
   required:
     - id
     - name
     - slug
 
-JsonApiModel_general-subject_relationship:
+JsonApiModel_subject_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -81,16 +87,16 @@ JsonApiModel_general-subject_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-subject_type"
+          $ref: "#/JsonApiModel_subject_type"
         id:
-          $ref: "#/JsonApiModel_general-subject_id"
+          $ref: "#/JsonApiModel_subject_id"
       required:
         - type
         - id
   required:
       - data
 
-JsonApiModel_general-subject_relationship_multiple:
+JsonApiModel_subject_relationship_multiple:
   type: object
   additionalProperties: false
   properties:
@@ -101,9 +107,9 @@ JsonApiModel_general-subject_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_general-subject_type"
+            $ref: "#/JsonApiModel_subject_type"
           id:
-            $ref: "#/JsonApiModel_general-subject_id"
+            $ref: "#/JsonApiModel_subject_id"
         required:
           - type
           - id

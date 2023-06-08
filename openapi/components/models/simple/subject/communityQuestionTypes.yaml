@@ -1,0 +1,19 @@
+SimpleModel_subject-communityQuestionTypes:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_subject-communityQuestionTypes_id"
+    # simple attributes
+    name:
+      $ref: "../../library/subject/communityQuestionTypes.yaml#/subject-communityQuestionTypes_name"
+  required:
+    - id
+    - name
+
+# shared
+SimpleModel_subject-communityQuestionTypes_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

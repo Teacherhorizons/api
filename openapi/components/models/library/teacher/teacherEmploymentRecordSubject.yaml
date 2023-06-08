@@ -15,7 +15,7 @@ teacher-teacherEmploymentRecordSubject_employmentRecordId:
 teacher-teacherEmploymentRecordSubject_subjectId:
   type: integer
   example: 1
-  description: Relationship to general-subject
+  description: Relationship to subject
 
 #Relationships
 teacher-teacherEmploymentRecordSubject_teacher:
@@ -45,6 +45,6 @@ teacher-teacherEmploymentRecordSubject_subject:
     id:
       type: string
       example: "1"
-      description: Relationship to general-subject
+      description: Relationship to subject
   required: 
     - id

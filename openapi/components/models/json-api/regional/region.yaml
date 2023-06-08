@@ -140,7 +140,8 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownStudents"
         communityResponseQuestionIds:
           $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
-
+        costOfLivingIndex:
+          $ref: "../../library/regional/region.yaml#/regional-region_costOfLivingIndex"
         # relationship attributes
         photo1:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
@@ -206,6 +207,7 @@ JsonApiModel_regional-region_admin:
         - percentageOfOverseasTeachers
         - percentageOfInternationalStudents
         - communityResponseQuestionIds
+        - costOfLivingIndex
         # relationship attributes
         - photo1
         - creationUser

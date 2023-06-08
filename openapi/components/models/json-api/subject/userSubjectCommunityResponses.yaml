@@ -1,0 +1,61 @@
+JsonApiModel_subject-userSubjectCommunityResponses:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_subject-userSubjectCommunityResponses_type"
+    id:
+      $ref: "#/JsonApiModel_subject-userSubjectCommunityResponses_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        text:
+          $ref: "../../library/subject/userSubjectCommunityResponses.yaml#/subject-userSubjectCommunityResponses_text"
+        creationDate:
+          $ref: "../../library/subject/userSubjectCommunityResponses.yaml#/subject-userSubjectCommunityResponses_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/subject/userSubjectCommunityResponses.yaml#/subject-userSubjectCommunityResponses_latestUpdateDate"
+
+        # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+        question:
+          $ref: "../subject/communityQuestions.yaml#/JsonApiModel_subject-communityQuestions_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+          user:
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          subject:
+            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
+          question:
+            $ref: "../subject/communityQuestions.yaml#/JsonApiModel_subject-communityQuestions_relationship"
+          creationUser:
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          latestUpdateUser:
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_subject-userSubjectCommunityResponses_type:
+  type: string
+  example: subject-userSubjectCommunityResponses
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_subject-userSubjectCommunityResponses_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+

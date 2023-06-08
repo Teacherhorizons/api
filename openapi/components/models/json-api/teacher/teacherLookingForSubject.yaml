@@ -15,7 +15,7 @@ JsonApiModel_teacher-teacherLookingForSubject:
           $ref: "../../library/teacher/teacherLookingForSubject.yaml#/teacher-teacherLookingForSubject_precedence"  
         # relationship attributes
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
     relationships:
@@ -23,7 +23,7 @@ JsonApiModel_teacher-teacherLookingForSubject:
       additionalProperties: false
       properties:
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
   required:

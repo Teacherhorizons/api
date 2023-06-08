@@ -1,0 +1,42 @@
+SimpleModel_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_subject_id"
+    # simple attributes
+    name:
+      $ref: "../../library/subject/subject.yaml#/subject_name"
+    shortName:
+      $ref: "../../library/subject/subject.yaml#/subject_shortName"
+    middleOfSentenceName:
+      $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceName"
+    middleOfSentenceShortName:
+      $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceShortName"
+    importance:
+      $ref: "../../library/subject/subject.yaml#/subject_importance"
+    slug:
+      $ref: "../../library/subject/subject.yaml#/subject_slug"
+    numberOfLiveJobs:
+      $ref: "../../library/subject/subject.yaml#/subject_numberOfLiveJobs"
+    creationDate:
+      $ref: "../../library/subject/subject.yaml#/subject_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/subject/subject.yaml#/subject_latestUpdateDate"
+    # relationship attributes
+    subjectGroupId:
+      $ref: "../../library/subject/subject.yaml#/subject_subjectGroupId"
+    creationUserId:
+      $ref: "../../library/subject/subject.yaml#/subject_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/subject/subject.yaml#/subject_latestUpdateUserId"
+  required:
+    - id
+    - name
+
+# shared
+SimpleModel_subject_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

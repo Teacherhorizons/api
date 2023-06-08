@@ -1,0 +1,117 @@
+JsonApiModel_subject-subjectArticle:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_subject-subjectArticle_type"
+    id:
+      $ref: "#/JsonApiModel_subject-subjectArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_title"
+        snippet:
+          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_snippet"
+        url:
+          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_url"
+        creationDate:
+          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_creationDate"
+        latestUpdateDate:
+          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_latestUpdateDate"
+
+        # relationship attributes
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+        article:
+          $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
+        creationUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        latestUpdateUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+          photo:
+            $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          subject:
+            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
+          article:
+            $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
+          creationUser:
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          latestUpdateUser:
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_subject-subjectArticle_type:
+  type: string
+  example: subject-subjectArticle
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_subject-subjectArticle_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+# JsonApiModel_subject-subjectArticle_relationship_attribute:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     id:
+#       $ref: "#/JsonApiModel_subject-subjectArticle_id"
+#     name:
+#       $ref: "../../library/subject-subjectArticle/subject-subjectArticle.yaml#/subject-subjectArticle_name"
+#     slug:
+#       $ref: "../../library/subject-subjectArticle/subject-subjectArticle.yaml#/subject-subjectArticle_slug"
+#   required:
+#     - id
+#     - name
+#     - slug
+
+# JsonApiModel_subject-subjectArticle_relationship:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     data:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         type:
+#           $ref: "#/JsonApiModel_subject-subjectArticle_type"
+#         id:
+#           $ref: "#/JsonApiModel_subject-subjectArticle_id"
+#       required:
+#         - type
+#         - id
+#   required:
+#       - data
+
+# JsonApiModel_subject-subjectArticle_relationship_multiple:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     data:
+#       type: array
+#       items:
+#         type: object
+#         additionalProperties: false
+#         properties:
+#           type:
+#             $ref: "#/JsonApiModel_subject-subjectArticle_type"
+#           id:
+#             $ref: "#/JsonApiModel_subject-subjectArticle_id"
+#         required:
+#           - type
+#           - id
+#   required:
+#     - data

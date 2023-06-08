@@ -135,6 +135,8 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
     communityResponseQuestionIds:
       $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
+    costOfLivingIndex:
+      $ref: "../../library/regional/region.yaml#/regional-region_costOfLivingIndex"
 
     # relationship attributes (Derived website)
     photo1Id:
@@ -205,6 +207,7 @@ SimpleModel_regional-region_admin:
     - percentageOfOverseasTeachers
     - percentageOfInternationalStudents
     - communityResponseQuestionIds
+    - costOfLivingIndex
 
 SimpleModel_regional-region_school:
   type: object

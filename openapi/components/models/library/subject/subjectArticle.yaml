@@ -1,0 +1,110 @@
+# attributes
+subject-subjectArticle_title:
+  type: string
+  example: Teach English In Portugal - How To Get A Job
+  #maxLength: 250
+
+subject-subjectArticle_snippet:
+  type: string
+  example: Foo bar baz
+  #maxLength: 250
+
+subject-subjectArticle_url:
+  type: string
+  example: https://teflhero.com/blog/teach-english-in-portugal/
+  #maxLength: 250
+
+subject-subjectArticle_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+subject-subjectArticle_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attributes
+subject-subjectArticle_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+subject-subjectArticle_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+subject-subjectArticle_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
+
+subject-subjectArticle_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to subject
+
+subject-subjectArticle_articleId:
+  type: integer
+  example: 1
+  description: Relationship to general-article
+
+#relationships
+subject-subjectArticle_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  
+subject-subjectArticle_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+
+subject-subjectArticle_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-photo
+  required: 
+    - id
+
+subject-subjectArticle_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject
+  required: 
+    - id
+
+subject-subjectArticle_article:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to general-article
+  required: 
+    - id
+  
+
+

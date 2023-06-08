@@ -47,6 +47,9 @@ SimpleModels:
     - $ref: "../../models/simple/regional/worldPhoto.yaml#/SimpleModel_regional-worldPhoto"
     - $ref: "../../models/simple/regional/countrySubject.yaml#/SimpleModel_regional-countrySubject"
     - $ref: "../../models/simple/regional/regionSubject.yaml#/SimpleModel_regional-regionSubject"
+    - $ref: "../../models/simple/regional/regionSubjects.yaml#/SimpleModel_regional-regionSubjects"
+    - $ref: "../../models/simple/regional/regionSubjectSchoolYears.yaml#/SimpleModel_regional-regionSubjectSchoolYears"
+
 
     # general
     - $ref: "../../models/simple/general/actionType.yaml#/SimpleModel_general-actionType"
@@ -65,8 +68,7 @@ SimpleModels:
     - $ref: "../../models/simple/general/role.yaml#/SimpleModel_general-role"
     - $ref: "../../models/simple/general/roleType.yaml#/SimpleModel_general-roleType"
     - $ref: "../../models/simple/general/siteSetting.yaml#/SimpleModel_general-siteSetting"
-    - $ref: "../../models/simple/general/subject.yaml#/SimpleModel_general-subject"
-    - $ref: "../../models/simple/general/subjectGroup.yaml#/SimpleModel_general-subjectGroup"
+    - $ref: "../../models/simple/general/subjectGroup.yaml#/SimpleModel_subjectGroup"
     - $ref: "../../models/simple/general/weatherType.yaml#/SimpleModel_general-weatherType"
     - $ref: "../../models/simple/general/worldLanguage.yaml#/SimpleModel_general-worldLanguage"
     - $ref: "../../models/simple/general/document.yaml#/SimpleModel_general-document"
@@ -177,6 +179,15 @@ SimpleModels:
     - $ref: "../../models/simple/staff/staffMember.yaml#/SimpleModel_staff-staffMember"
     - $ref: "../../models/simple/user/setting.yaml#/SimpleModel_user-setting"
 
+    # subject  
+    - $ref: "../../models/simple/subject/subject.yaml#/SimpleModel_subject"
+    - $ref: "../../models/simple/subject/subjectArticle.yaml#/SimpleModel_subject-subjectArticle"
+    - $ref: "../../models/simple/subject/communityQuestionTypes.yaml#/SimpleModel_subject-communityQuestionTypes"
+    - $ref: "../../models/simple/subject/communityQuestions.yaml#/SimpleModel_subject-communityQuestions"
+    - $ref: "../../models/simple/subject/userSubjectCommunityResponses.yaml#/SimpleModel_subject-userSubjectCommunityResponses"
+    - $ref: "../../models/simple/subject/subjectMonths.yaml#/SimpleModel_subject-subjectMonths"
+    - $ref: "../../models/simple/subject/linkTypes.yaml#/SimpleModel_subject-linkTypes"
+
     # job
     - $ref: "../../models/simple/job/job.yaml#/SimpleModel_job"
     - $ref: "../../models/simple/job/status.yaml#/SimpleModel_job-status"
@@ -225,6 +236,8 @@ JsonApiModels:
     - $ref: "../../models/json-api/regional/worldPhoto.yaml#/JsonApiModel_regional-worldPhoto"
     - $ref: "../../models/json-api/regional/countrySubject.yaml#/JsonApiModel_regional-countrySubject"
     - $ref: "../../models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject"
+    - $ref: "../../models/json-api/regional/regionSubjects.yaml#/JsonApiModel_regional-regionSubjects"
+    - $ref: "../../models/json-api/regional/regionSubjectSchoolYears.yaml#/JsonApiModel_regional-regionSubjectSchoolYears"
 
     # general
     - $ref: "../../models/json-api/general/actionType.yaml#/JsonApiModel_general-actionType"
@@ -238,8 +251,7 @@ JsonApiModels:
     - $ref: "../../models/json-api/general/religion.yaml#/JsonApiModel_general-religion"
     - $ref: "../../models/json-api/general/role.yaml#/JsonApiModel_general-role"
     - $ref: "../../models/json-api/general/roleType.yaml#/JsonApiModel_general-roleType"
-    - $ref: "../../models/json-api/general/subject.yaml#/JsonApiModel_general-subject"
-    - $ref: "../../models/json-api/general/subjectGroup.yaml#/JsonApiModel_general-subjectGroup"
+    - $ref: "../../models/json-api/general/subjectGroup.yaml#/JsonApiModel_subjectGroup"
     - $ref: "../../models/json-api//general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage"
     - $ref: "../../models/json-api//general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate"
     - $ref: "../../models/json-api//general/nationality.yaml#/JsonApiModel_general-nationality"
@@ -340,6 +352,15 @@ JsonApiModels:
     - $ref: "../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus"
     - $ref: "../../models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember"
     - $ref: "../../models/json-api/user/setting.yaml#/JsonApiModel_user-setting"
+
+    # subject
+    - $ref: "../../models/json-api/subject/subject.yaml#/JsonApiModel_subject"
+    - $ref: "../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle"
+    - $ref: "../../models/json-api/subject/communityQuestionTypes.yaml#/JsonApiModel_subject-communityQuestionTypes"
+    - $ref: "../../models/json-api/subject/communityQuestions.yaml#/JsonApiModel_subject-communityQuestions"
+    - $ref: "../../models/json-api/subject/userSubjectCommunityResponses.yaml#/JsonApiModel_subject-userSubjectCommunityResponses"
+    - $ref: "../../models/json-api/subject/subjectMonths.yaml#/JsonApiModel_subject-subjectMonths"
+    - $ref: "../../models/json-api/subject/linkTypes.yaml#/JsonApiModel_subject-linkTypes"
 
     # job
     - $ref: "../../models/json-api/job/job.yaml#/JsonApiModel_job"

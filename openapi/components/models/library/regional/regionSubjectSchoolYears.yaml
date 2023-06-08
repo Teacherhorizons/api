@@ -1,0 +1,64 @@
+#attributes
+regional-regionSubjectSchoolYears_numberOfLiveJobs:
+  type: integer
+  example: 84
+  description: Derived (dw)
+
+regional-regionSubjectSchoolYears_averageAnnualGrossIncome:
+  type: integer
+  example: 61920
+  description: Derived (dw)
+
+#relationship attributes
+regional-regionSubjectSchoolYears_regionId:
+  type: integer
+  example: 1
+  description: Relationship to regional-region
+
+regional-regionSubjectSchoolYears_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to subject
+
+regional-regionSubjectSchoolYears_schoolYearId:
+  type: integer
+  example: 202111
+  description: Relationship to ?
+
+#relationships
+
+regional-regionSubjectSchoolYears_region:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to regional-region
+  required: 
+    - id
+    
+regional-regionSubjectSchoolYears_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject
+  required: 
+    - id
+
+regional-regionSubjectSchoolYears_schoolYear:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "202111"
+      description: Relationship to ?
+  required: 
+    - id
+  
+
+

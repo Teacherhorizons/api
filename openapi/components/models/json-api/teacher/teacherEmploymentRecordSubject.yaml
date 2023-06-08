@@ -19,7 +19,7 @@ JsonApiModel_teacher-teacherEmploymentRecordSubject:
         employmentRecord:
           $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship_attribute"
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -29,7 +29,7 @@ JsonApiModel_teacher-teacherEmploymentRecordSubject:
         employmentRecord:
           $ref: "../teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord_relationship"
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
   required:
     - type
     - id

@@ -1,0 +1,57 @@
+JsonApiModel_subject-linkTypes:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_subject-linkTypes_type"
+    id:
+      $ref: "#/JsonApiModel_subject-linkTypes_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/subject/linkTypes.yaml#/subject-linkTypes_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_subject-linkTypes_type:
+  type: string
+  example: subject-linkTypes
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_subject-linkTypes_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+# JsonApiModel_subject-linkTypes_relationship:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     data:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         type:
+#           $ref: "#/JsonApiModel_subject-linkTypes_type"
+#         id:
+#           $ref: "#/JsonApiModel_subject-linkTypes_id"
+#       required:
+#         - type
+#         - id
+#   required:
+#     - data
+
+# JsonApiModel_subject-linkTypes_relationship_attribute:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     id:
+#       $ref: "#/JsonApiModel_subject-linkTypes_id"
+#   required:
+#     - id

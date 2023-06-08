@@ -1,0 +1,99 @@
+# attributes
+subject-userSubjectCommunityResponses_text:
+  type: string
+  example: fewlkjflewj ewfef 
+  #maxLength: 250
+
+subject-userSubjectCommunityResponses_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+subject-userSubjectCommunityResponses_latestUpdateDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+#relationship attributes
+subject-userSubjectCommunityResponses_creationUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+subject-userSubjectCommunityResponses_latestUpdateUserId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+subject-userSubjectCommunityResponses_userId:
+  type: integer
+  example: 1
+  description: Relationship to user
+
+subject-userSubjectCommunityResponses_questionId:
+  type: integer
+  example: 1
+  description: Relationship to subject-communityQuestions
+
+subject-userSubjectCommunityResponses_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to subject
+
+#relationships
+
+subject-userSubjectCommunityResponses_user:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+
+subject-userSubjectCommunityResponses_creationUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+  
+subject-userSubjectCommunityResponses_latestUpdateUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to user
+  required: 
+    - id
+
+subject-userSubjectCommunityResponses_question:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject-communityQuestions
+  required: 
+    - id
+
+subject-userSubjectCommunityResponses_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject
+  required: 
+    - id
+

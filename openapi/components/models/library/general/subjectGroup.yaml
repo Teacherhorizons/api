@@ -1,33 +1,33 @@
 # attributes
-general-subjectGroup_name:
+subjectGroup_name:
   type: string
   example: Early Years
   description: Main
   maxLength: 250
 
-general-subjectGroup_creationDate:
+subjectGroup_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-general-subjectGroup_latestUpdateDate:
+subjectGroup_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
-general-subjectGroup_creationUserId:
+subjectGroup_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-general-subjectGroup_latestUpdateUserId:
+subjectGroup_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
 #relationships
-general-subjectGroup_creationUser:
+subjectGroup_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -38,7 +38,7 @@ general-subjectGroup_creationUser:
   required: 
     - id
 
-general-subjectGroup_latestUpdateUser:
+subjectGroup_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:

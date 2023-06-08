@@ -1,55 +1,70 @@
 # attributes
-general-subject_name:
+subject_name:
   type: string
-  example: Secondary Subject Teacher
+  example: Mathematics
   description: Main
   maxLength: 250
 
-general-subject_shortName:
+subject_shortName:
   type: string
-  example: English
+  example: Maths
   description: Main
   maxLength: 250
 
-general-subject_slug:
+subject_middleOfSentenceName:
+  type: string
+  example: mathematics
+  maxLength: 250
+
+subject_middleOfSentenceShortName:
+  type: string
+  example: maths
+  maxLength: 250
+
+subject_importance:
+  type: string
+  example: H
+  #description: Derived (dw)(check with RR)
+
+subject_slug:
   type: string
   example: media-studies
   description: media
   maxLength: 250
 
-general-subject_numberOfLiveJobs:
+subject_numberOfLiveJobs:
   type: integer
   example: 308
   description: Derived (dw)
 
-general-subject_creationDate:
+subject_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-general-subject_latestUpdateDate:
+subject_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
-general-subject_creationUserId:
+subject_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-general-subject_latestUpdateUserId:
+subject_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-general-subject_subjectGroupId:
+subject_subjectGroupId:
   type: integer
   example: 1
-  description: Relationship to general-subjectGroup
+  description: Relationship to subjectGroup
 
 #relationships
-general-subject_creationUser:
+subject_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -60,7 +75,7 @@ general-subject_creationUser:
   required: 
     - id
   
-general-subject_latestUpdateUser:
+subject_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
@@ -71,14 +86,14 @@ general-subject_latestUpdateUser:
   required: 
     - id
 
-general-subject_subjectGroup:
+subject_subjectGroup:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "1"
-      description: Relationship to general-subjectGroup
+      description: Relationship to subjectGroup
   required: 
     - id
   

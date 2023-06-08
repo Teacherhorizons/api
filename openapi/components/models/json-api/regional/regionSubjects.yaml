@@ -1,0 +1,99 @@
+JsonApiModel_regional-regionSubjects:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_regional-regionSubjects_type"
+    id:
+      $ref: "#/JsonApiModel_regional-regionSubjects_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        averageAnnualGrossIncome:
+          $ref: "../../library/regional/regionSubjects.yaml#/regional-regionSubjects_averageAnnualGrossIncome"
+        # relationship attributes
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"        
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+      required:
+        - id
+        - averageAnnualGrossIncome
+        - region
+        - subject
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        region:
+          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"        
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_regional-regionSubjects_type:
+  type: string
+  example: regional-regionSubjects
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_regional-regionSubjects_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+# JsonApiModel_regional-regionSubjects_relationship_attribute:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     id:
+#       $ref: "#/JsonApiModel_regional-regionSubjects_id"
+#     # url:
+#     #   $ref: "../../library/regional/regionSubjects.yaml#/regional-regionSubjects_url"
+#     # description:
+#     #   $ref: "../../library/regional/regionSubjects.yaml#/regional-regionSubjects_description"
+#   required:
+#     - id
+
+# JsonApiModel_regional-regionSubjects_relationship:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     data:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         type:
+#           $ref: "#/JsonApiModel_regional-regionSubjects_type"
+#         id:
+#           $ref: "#/JsonApiModel_regional-regionSubjects_id"
+#       required:
+#         - type
+#         - id
+#   required:
+#     - data
+
+# JsonApiModel_regional-regionSubjects_relationship_multiple:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     data:
+#       type: array
+#       items:
+#         type: object
+#         additionalProperties: false
+#         properties:
+#           type:
+#             $ref: "#/JsonApiModel_regional-regionSubjects_type"
+#           id:
+#             $ref: "#/JsonApiModel_regional-regionSubjects_id"
+#         required:
+#           - type
+#           - id
+#   required:
+#     - data

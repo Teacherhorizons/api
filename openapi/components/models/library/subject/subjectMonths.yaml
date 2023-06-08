@@ -1,20 +1,23 @@
 #attributes
-teacher-teacherLookingForSubject_precedence:
+subject-subjectMonths_numberOfLiveJobs:
   type: integer
-  example: 1
+  example: 84
+  description: Derived (dw)
 
 #relationship attributes
-teacher-teacherLookingForSubject_subjectId:
+subject-subjectMonths_subjectId:
   type: integer
   example: 1
   description: Relationship to subject
-teacher-teacherLookingForSubject_teacherId:
-  type: integer
-  example: 1
-  description: Relationship to teacher
 
-#relarionships
-teacher-teacherLookingForSubject_subject:
+subject-subjectMonths_monthId:
+  type: integer
+  example: 202111
+  description: Relationship to ?
+
+#relationships
+
+subject-subjectMonths_subject:
   type: object
   additionalProperties: false
   properties:
@@ -24,15 +27,17 @@ teacher-teacherLookingForSubject_subject:
       description: Relationship to subject
   required: 
     - id
-  
-teacher-teacherLookingForSubject_teacher:
+
+subject-subjectMonths_month:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: "202111"
+      description: Relationship to ?
   required: 
     - id
   
+
+

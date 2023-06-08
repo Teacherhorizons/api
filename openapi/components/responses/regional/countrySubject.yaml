@@ -83,7 +83,7 @@ Response_regional-countrySubject_notSignedIn_item:
         country:
           $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship'
         subject:
-          $ref: '../../../components/models/json-api/general/subject.yaml#/JsonApiModel_general-subject_relationship'
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship'
         jobs:
           $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
   required:
@@ -251,22 +251,22 @@ Response_regional-countrySubject_includedSubject_notSignedIn:
   additionalProperties: false
   properties:
     type:
-      $ref: '../../../components/models/json-api/general/subject.yaml#/JsonApiModel_general-subject_type'
+      $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_type'
     id:
-      $ref: '../../../components/models/json-api/general/subject.yaml#/JsonApiModel_general-subject_id'
+      $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: '../../../components/models/library/general/subject.yaml#/general-subject_name'
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_name'
         shortName:
-          $ref: '../../../components/models/library/general/subject.yaml#/general-subject_shortName'
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_shortName'
         slug:
-          $ref: '../../../components/models/library/general/subject.yaml#/general-subject_slug'
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_slug'
         numberOfLiveJobs:
-          $ref: '../../../components/models/library/general/subject.yaml#/general-subject_numberOfLiveJobs'
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_numberOfLiveJobs'
       required:
         - name
         - shortName
@@ -460,7 +460,7 @@ Response_regional-countrySubject_includedCountrySubject_notSignedIn:
           $ref: '../../../components/models/library/regional/countrySubject.yaml#/regional-countrySubject_numberOfLiveJobs'
         # relationship attributes
         subject:
-          $ref: '../../../components/models/json-api/general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute'
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
       required:
         - slug
         - numberOfLiveJobs

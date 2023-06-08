@@ -1,22 +1,22 @@
-JsonApiModel_general-subjectGroup:
+JsonApiModel_subjectGroup:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-subjectGroup_type"
+      $ref: "#/JsonApiModel_subjectGroup_type"
     id:
-      $ref: "#/JsonApiModel_general-subjectGroup_id"
+      $ref: "#/JsonApiModel_subjectGroup_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_name"
+          $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_name"
         creationDate:
-          $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_creationDate"  
+          $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_creationDate"  
         latestUpdateDate:
-          $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_latestUpdateDate"
+          $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_latestUpdateDate"
         # relationship attributes
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
@@ -34,31 +34,31 @@ JsonApiModel_general-subjectGroup:
     - type
     - id
 
-JsonApiModel_general-subjectGroup_type:
+JsonApiModel_subjectGroup_type:
   type: string
-  example: general-subjectGroup
+  example: subjectGroup
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_general-subjectGroup_id:
+JsonApiModel_subjectGroup_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_general-subjectGroup_relationship_attribute:
+JsonApiModel_subjectGroup_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id: 
-      $ref: "#/JsonApiModel_general-subjectGroup_id"
+      $ref: "#/JsonApiModel_subjectGroup_id"
     name:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_name"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_name"
   required:
       - id
       - name
 
-JsonApiModel_general-subjectGroup_relationship:
+JsonApiModel_subjectGroup_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -67,9 +67,9 @@ JsonApiModel_general-subjectGroup_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-subjectGroup_type"
+          $ref: "#/JsonApiModel_subjectGroup_type"
         id:
-          $ref: "#/JsonApiModel_general-subjectGroup_id"
+          $ref: "#/JsonApiModel_subjectGroup_id"
       required:
         - type
         - id

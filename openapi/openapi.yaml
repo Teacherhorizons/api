@@ -171,15 +171,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-roleType" />
 
-  - name: simple-model-general-subjectGroup
-    x-displayName: Simple model - general-subjectGroup
+  - name: simple-model-subjectGroup
+    x-displayName: Simple model - subjectGroup
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subjectGroup" />
-
-  - name: simple-model-general-subject
-    x-displayName: Simple model - general-subject
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-subject" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subjectGroup" />
 
   - name: simple-model-general-currency
     x-displayName: Simple model - general-currency
@@ -254,7 +249,43 @@ tags:
   #   #   description: |
   #   #     <SchemaDefinition schemaRef="#/components/schemas/Pet" />
 
-  #   # tags - simple-models - job
+  # tags - simple-models - subject
+  - name: simple-model-subject
+    x-displayName: Simple model - subject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject" />
+
+  - name: simple-model-subject-subjectArticle
+    x-displayName: Simple model - subject-subjectArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectArticle" />
+
+  - name: simple-model-subject-communityQuestionTypes
+    x-displayName: Simple model - subject-communityQuestionTypes
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestionTypes" />
+
+  - name: simple-model-subject-communityQuestions
+    x-displayName: Simple model - subject-communityQuestions
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestions" />
+
+  - name: simple-model-subject-userSubjectCommunityResponses
+    x-displayName: Simple model - subject-userSubjectCommunityResponses
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-userSubjectCommunityResponses" />
+
+  - name: simple-model-subject-subjectMonths
+    x-displayName: Simple model - subject-subjectMonths
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectMonths" />
+
+  - name: simple-model-subject-linkTypes
+    x-displayName: Simple model - subject-linkTypes
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkTypes" />
+
+  # tags - simple-models - job
   - name: simple-model-job
     x-displayName: Simple model - job
     description: |
@@ -375,6 +406,16 @@ tags:
     x-displayName: Simple model - regional-regionSubject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubject" />
+
+  - name: simple-model-regional-regionSubjects
+    x-displayName: Simple model - regional-regionSubjects
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubjects" />
+
+  - name: simple-model-regional_regionSubjectSchoolYears
+    x-displayName: Simple model - regional_regionSubjectSchoolYears
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional_regionSubjectSchoolYears" />
 
   # tags - simple-models - school
 
@@ -958,15 +999,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-roleType" />
 
-  - name: json-api-model-general-subject
-    x-displayName: JSON:API model - general-subject
+  - name: json-api-model-subjectGroup
+    x-displayName: JSON:API model - subjectGroup
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subject" />
-
-  - name: json-api-model-general-subjectGroup
-    x-displayName: JSON:API model - general-subjectGroup
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-subjectGroup" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subjectGroup" />
 
   - name: json-api-model-general-worldLanguage
     x-displayName: JSON:API model - general-worldLanguage
@@ -1007,6 +1043,42 @@ tags:
     x-displayName: JSON:API model - general-documentType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-documentType" />
+
+# tags - JSON:API models - subject
+  - name: json-api-model-subject
+    x-displayName: JSON:API model - subject
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject" />
+
+  - name: json-api-model-subject-subjectArticle
+    x-displayName: JSON:API model - subject-subjectArticle
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectArticle" />  
+
+  - name: json-api-model-subject-communityQuestionTypes
+    x-displayName: JSON:API model - subject-communityQuestionTypes
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestionTypes" /> 
+
+  - name: json-api-model-subject-communityQuestions
+    x-displayName: JSON:API model - subject-communityQuestions
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestions" /> 
+
+  - name: json-api-model-subject-userSubjectCommunityResponses
+    x-displayName: JSON:API model - subject-userSubjectCommunityResponses
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponses" /> 
+
+  - name: json-api-model-subject-subjectMonths
+    x-displayName: JSON:API model - subject-subjectMonths
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectMonths" />
+
+  - name: json-api-model-subject-linkTypes
+    x-displayName: JSON:API model - subject-linkTypes
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkTypes" />
 
   # tags - JSON:API models - job
   - name: json-api-model-job
@@ -1129,6 +1201,17 @@ tags:
     x-displayName: JSON:API model - regional-regionSubject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubject" />
+
+  - name: json-api-model-regional-regionSubjects
+    x-displayName: JSON:API model - regional-regionSubjects
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjects" />
+
+  - name: json-api-model-regional-regionSubjectSchoolYears
+    x-displayName: JSON:API model - regional-regionSubjectSchoolYears
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjectSchoolYears" />
+
 
   # tags - JSON:API models - teacher
   - name: json-api-model-teacher
@@ -1624,8 +1707,14 @@ x-tagGroups:
       - simple-model-general-religion
       - simple-model-general-role
       - simple-model-general-roleType
-      - simple-model-general-subject
-      - simple-model-general-subjectGroup
+      - simple-model-subject
+      - simple-model-subject-subjectArticle
+      - simple-model-subject-communityQuestionTypes
+      - simple-model-subject-communityQuestions
+      - simple-model-subject-userSubjectCommunityResponses
+      - simple-model-subject-subjectMonths
+      - simple-model-subject-linkTypes
+      - simple-model-subjectGroup
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
       - simple-model-general-nationality
@@ -1655,6 +1744,8 @@ x-tagGroups:
       - simple-model-regional-worldPhoto
       - simple-model-regional-countrySubject
       - simple-model-regional-regionSubject
+      - simple-model-regional-regionSubjects
+      - simple-model-regional-regionSubjectSchoolYears
       - simple-model-school
       - simple-model-school-academicSystem
       - simple-model-school-communityQuestion
@@ -1775,8 +1866,14 @@ x-tagGroups:
       - json-api-model-general-religion
       - json-api-model-general-role
       - json-api-model-general-roleType
-      - json-api-model-general-subject
-      - json-api-model-general-subjectGroup
+      - json-api-model-subject
+      - json-api-model-subject-subjectArticle
+      - json-api-model-subject-communityQuestionTypes
+      - json-api-model-subject-communityQuestions
+      - json-api-model-subject-userSubjectCommunityResponses
+      - json-api-model-subject-subjectMonths
+      - json-api-model-subject-linkTypes
+      - json-api-model-subjectGroup
       - json-api-model-general-worldLanguage
       - json-api-model-general-manualEmailTemplate
       - json-api-model-general-nationality
@@ -1806,6 +1903,8 @@ x-tagGroups:
       - json-api-model-regional-worldPhoto
       - json-api-model-regional-countrySubject
       - json-api-model-regional-regionSubject
+      - json-api-model-regional-regionSubjects
+      - json-api-model-regional-regionSubjectSchoolYears
       - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion

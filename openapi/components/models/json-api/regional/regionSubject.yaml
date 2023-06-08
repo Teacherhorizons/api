@@ -17,7 +17,7 @@ JsonApiModel_regional-regionSubject:
         region:
           $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"        
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship_attribute"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
       required:
         - id
         - numberOfLiveJobs
@@ -30,7 +30,7 @@ JsonApiModel_regional-regionSubject:
         region:
           $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"        
         subject:
-          $ref: "../general/subject.yaml#/JsonApiModel_general-subject_relationship"
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
   required:
     - type
     - id

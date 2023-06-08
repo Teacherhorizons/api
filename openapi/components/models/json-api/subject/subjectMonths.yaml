@@ -1,0 +1,52 @@
+JsonApiModel_subject-subjectMonths:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_subject-subjectMonths_type"
+    id:
+      $ref: "#/JsonApiModel_subject-subjectMonths_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        numberOfLiveJobs:
+          $ref: "../../library/subject/subjectMonths.yaml#/subject-subjectMonths_numberOfLiveJobs"
+
+        # relationship attributes
+        month:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          #check with RR for above
+        subject:
+          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+      required:
+        - id
+        - numberOfLiveJobs
+        - month
+        - subject
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+          month:
+            $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          subject:
+            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
+
+  required:
+    - type
+    - id
+
+JsonApiModel_subject-subjectMonths_type:
+  type: string
+  example: subject-subjectMonths
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_subject-subjectMonths_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+

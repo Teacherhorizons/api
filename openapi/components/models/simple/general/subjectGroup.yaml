@@ -1,27 +1,27 @@
-SimpleModel_general-subjectGroup:
+SimpleModel_subjectGroup:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_general-subjectGroup_id"
+      $ref: "#/SimpleModel_subjectGroup_id"
     # simple attributes
     name:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_name"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_name"
     creationDate:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_creationDate"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_creationDate"
     latestUpdateDate:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_latestUpdateDate"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_latestUpdateDate"
     # relationship attributes
     creationUserId:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_creationUserId"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_creationUserId"
     latestUpdateUserId:
-      $ref: "../../library/general/subjectGroup.yaml#/general-subjectGroup_latestUpdateUserId"
+      $ref: "../../library/general/subjectGroup.yaml#/subjectGroup_latestUpdateUserId"
   required:
     - id
     - name
 
 # shared
-SimpleModel_general-subjectGroup_id:
+SimpleModel_subjectGroup_id:
   type: integer
   example: 1
   readOnly: true
