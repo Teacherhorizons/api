@@ -1,35 +1,35 @@
-JsonApiModel_subject-linkTypes:
+JsonApiModel_subject-linkType:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-linkTypes_type"
+      $ref: "#/JsonApiModel_subject-linkType_type"
     id:
-      $ref: "#/JsonApiModel_subject-linkTypes_id"
+      $ref: "#/JsonApiModel_subject-linkType_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/subject/linkTypes.yaml#/subject-linkTypes_name"
+          $ref: "../../library/subject/linkType.yaml#/subject-linkType_name"
   required:
     - type
     - id
 
-JsonApiModel_subject-linkTypes_type:
+JsonApiModel_subject-linkType_type:
   type: string
-  example: subject-linkTypes
+  example: subject-linkType
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_subject-linkTypes_id:
+JsonApiModel_subject-linkType_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-# JsonApiModel_subject-linkTypes_relationship:
+# JsonApiModel_subject-linkType_relationship:
 #   type: object
 #   additionalProperties: false
 #   properties:
@@ -38,20 +38,20 @@ JsonApiModel_subject-linkTypes_id:
 #       additionalProperties: false
 #       properties:
 #         type:
-#           $ref: "#/JsonApiModel_subject-linkTypes_type"
+#           $ref: "#/JsonApiModel_subject-linkType_type"
 #         id:
-#           $ref: "#/JsonApiModel_subject-linkTypes_id"
+#           $ref: "#/JsonApiModel_subject-linkType_id"
 #       required:
 #         - type
 #         - id
 #   required:
 #     - data
 
-# JsonApiModel_subject-linkTypes_relationship_attribute:
+# JsonApiModel_subject-linkType_relationship_attribute:
 #   type: object
 #   additionalProperties: false
 #   properties:
 #     id:
-#       $ref: "#/JsonApiModel_subject-linkTypes_id"
+#       $ref: "#/JsonApiModel_subject-linkType_id"
 #   required:
 #     - id

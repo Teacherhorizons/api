@@ -260,30 +260,30 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectArticle" />
 
-  - name: simple-model-subject-communityQuestionTypes
-    x-displayName: Simple model - subject-communityQuestionTypes
+  - name: simple-model-subject-communityQuestionType
+    x-displayName: Simple model - subject-communityQuestionType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestionTypes" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestionType" />
 
-  - name: simple-model-subject-communityQuestions
-    x-displayName: Simple model - subject-communityQuestions
+  - name: simple-model-subject-communityQuestion
+    x-displayName: Simple model - subject-communityQuestion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestions" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestion" />
 
-  - name: simple-model-subject-userSubjectCommunityResponses
-    x-displayName: Simple model - subject-userSubjectCommunityResponses
+  - name: simple-model-subject-userSubjectCommunityResponse
+    x-displayName: Simple model - subject-userSubjectCommunityResponse
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-userSubjectCommunityResponses" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-userSubjectCommunityResponse" />
 
-  - name: simple-model-subject-subjectMonths
-    x-displayName: Simple model - subject-subjectMonths
+  - name: simple-model-subject-subjectMonth
+    x-displayName: Simple model - subject-subjectMonth
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectMonths" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectMonth" />
 
-  - name: simple-model-subject-linkTypes
-    x-displayName: Simple model - subject-linkTypes
+  - name: simple-model-subject-linkType
+    x-displayName: Simple model - subject-linkType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkTypes" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkType" />
 
   # tags - simple-models - job
   - name: simple-model-job
@@ -1055,30 +1055,30 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectArticle" />  
 
-  - name: json-api-model-subject-communityQuestionTypes
-    x-displayName: JSON:API model - subject-communityQuestionTypes
+  - name: json-api-model-subject-communityQuestionType
+    x-displayName: JSON:API model - subject-communityQuestionType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestionTypes" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestionType" /> 
 
-  - name: json-api-model-subject-communityQuestions
-    x-displayName: JSON:API model - subject-communityQuestions
+  - name: json-api-model-subject-communityQuestion
+    x-displayName: JSON:API model - subject-communityQuestion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestions" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestion" /> 
 
-  - name: json-api-model-subject-userSubjectCommunityResponses
-    x-displayName: JSON:API model - subject-userSubjectCommunityResponses
+  - name: json-api-model-subject-userSubjectCommunityResponse
+    x-displayName: JSON:API model - subject-userSubjectCommunityResponse
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponses" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponse" /> 
 
-  - name: json-api-model-subject-subjectMonths
-    x-displayName: JSON:API model - subject-subjectMonths
+  - name: json-api-model-subject-subjectMonth
+    x-displayName: JSON:API model - subject-subjectMonth
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectMonths" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectMonth" />
 
-  - name: json-api-model-subject-linkTypes
-    x-displayName: JSON:API model - subject-linkTypes
+  - name: json-api-model-subject-linkType
+    x-displayName: JSON:API model - subject-linkType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkTypes" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkType" />
 
   # tags - JSON:API models - job
   - name: json-api-model-job
@@ -1707,13 +1707,6 @@ x-tagGroups:
       - simple-model-general-religion
       - simple-model-general-role
       - simple-model-general-roleType
-      - simple-model-subject
-      - simple-model-subject-subjectArticle
-      - simple-model-subject-communityQuestionTypes
-      - simple-model-subject-communityQuestions
-      - simple-model-subject-userSubjectCommunityResponses
-      - simple-model-subject-subjectMonths
-      - simple-model-subject-linkTypes
       - simple-model-subjectGroup
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
@@ -1723,6 +1716,13 @@ x-tagGroups:
       - simple-model-general-weatherType
       - simple-model-general-document
       - simple-model-general-documentType
+      - simple-model-subject
+      - simple-model-subject-subjectArticle
+      - simple-model-subject-communityQuestionType
+      - simple-model-subject-communityQuestion
+      - simple-model-subject-userSubjectCommunityResponse
+      - simple-model-subject-subjectMonth
+      - simple-model-subject-linkType
       - simple-model-regional-city
       - simple-model-regional-articleCategory
       - simple-model-regional-cityArticle
@@ -1866,14 +1866,6 @@ x-tagGroups:
       - json-api-model-general-religion
       - json-api-model-general-role
       - json-api-model-general-roleType
-      - json-api-model-subject
-      - json-api-model-subject-subjectArticle
-      - json-api-model-subject-communityQuestionTypes
-      - json-api-model-subject-communityQuestions
-      - json-api-model-subject-userSubjectCommunityResponses
-      - json-api-model-subject-subjectMonths
-      - json-api-model-subject-linkTypes
-      - json-api-model-subjectGroup
       - json-api-model-general-worldLanguage
       - json-api-model-general-manualEmailTemplate
       - json-api-model-general-nationality
@@ -1882,6 +1874,14 @@ x-tagGroups:
       - json-api-model-general-weatherType
       - json-api-model-general-document
       - json-api-model-general-documentType
+      - json-api-model-subject
+      - json-api-model-subject-subjectArticle
+      - json-api-model-subject-communityQuestionType
+      - json-api-model-subject-communityQuestion
+      - json-api-model-subject-userSubjectCommunityResponse
+      - json-api-model-subject-subjectMonth
+      - json-api-model-subject-linkType
+      - json-api-model-subjectGroup
       - json-api-model-regional-city
       - json-api-model-regional-articleCategory
       - json-api-model-regional-cityArticle

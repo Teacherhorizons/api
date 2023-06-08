@@ -1,23 +1,23 @@
 #attributes
-subject-subjectMonths_numberOfLiveJobs:
+subject-subjectMonth_numberOfLiveJobs:
   type: integer
   example: 84
   description: Derived (dw)
 
 #relationship attributes
-subject-subjectMonths_subjectId:
+subject-subjectMonth_subjectId:
   type: integer
   example: 1
   description: Relationship to subject
 
-subject-subjectMonths_monthId:
+subject-subjectMonth_monthId:
   type: integer
   example: 202111
   description: Relationship to ?
 
 #relationships
 
-subject-subjectMonths_subject:
+subject-subjectMonth_subject:
   type: object
   additionalProperties: false
   properties:
@@ -28,7 +28,7 @@ subject-subjectMonths_subject:
   required: 
     - id
 
-subject-subjectMonths_month:
+subject-subjectMonth_month:
   type: object
   additionalProperties: false
   properties:

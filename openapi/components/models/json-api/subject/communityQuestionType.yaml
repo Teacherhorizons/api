@@ -1,35 +1,35 @@
-JsonApiModel_subject-communityQuestionTypes:
+JsonApiModel_subject-communityQuestionType:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-communityQuestionTypes_type"
+      $ref: "#/JsonApiModel_subject-communityQuestionType_type"
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestionTypes_id"
+      $ref: "#/JsonApiModel_subject-communityQuestionType_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/subject/communityQuestionTypes.yaml#/subject-communityQuestionTypes_name"
+          $ref: "../../library/subject/communityQuestionType.yaml#/subject-communityQuestionType_name"
   required:
     - type
     - id
 
-JsonApiModel_subject-communityQuestionTypes_type:
+JsonApiModel_subject-communityQuestionType_type:
   type: string
-  example: subject-communityQuestionTypes
+  example: subject-communityQuestionType
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_subject-communityQuestionTypes_id:
+JsonApiModel_subject-communityQuestionType_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_subject-communityQuestionTypes_relationship:
+JsonApiModel_subject-communityQuestionType_relationship:
   type: object
   additionalProperties: false
   properties:
@@ -38,20 +38,20 @@ JsonApiModel_subject-communityQuestionTypes_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-communityQuestionTypes_type"
+          $ref: "#/JsonApiModel_subject-communityQuestionType_type"
         id:
-          $ref: "#/JsonApiModel_subject-communityQuestionTypes_id"
+          $ref: "#/JsonApiModel_subject-communityQuestionType_id"
       required:
         - type
         - id
   required:
     - data
 
-JsonApiModel_subject-communityQuestionTypes_relationship_attribute:
+JsonApiModel_subject-communityQuestionType_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestionTypes_id"
+      $ref: "#/JsonApiModel_subject-communityQuestionType_id"
   required:
     - id

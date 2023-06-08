@@ -1,18 +1,18 @@
-JsonApiModel_subject-subjectMonths:
+JsonApiModel_subject-subjectMonth:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-subjectMonths_type"
+      $ref: "#/JsonApiModel_subject-subjectMonth_type"
     id:
-      $ref: "#/JsonApiModel_subject-subjectMonths_id"
+      $ref: "#/JsonApiModel_subject-subjectMonth_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         numberOfLiveJobs:
-          $ref: "../../library/subject/subjectMonths.yaml#/subject-subjectMonths_numberOfLiveJobs"
+          $ref: "../../library/subject/subjectMonth.yaml#/subject-subjectMonth_numberOfLiveJobs"
 
         # relationship attributes
         month:
@@ -38,13 +38,13 @@ JsonApiModel_subject-subjectMonths:
     - type
     - id
 
-JsonApiModel_subject-subjectMonths_type:
+JsonApiModel_subject-subjectMonth_type:
   type: string
-  example: subject-subjectMonths
+  example: subject-subjectMonth
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_subject-subjectMonths_id:
+JsonApiModel_subject-subjectMonth_id:
   type: string
   example: "1"
   readOnly: true

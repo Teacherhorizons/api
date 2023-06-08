@@ -1,26 +1,26 @@
 # attributes
-subject-communityQuestions_questionText:
+subject-communityQuestion_questionText:
   type: string
   example: What do international schools look for in maths teacher applications and interviews?
   description: Main
   maxLength: 250
 
-subject-communityQuestions_isActive:
+subject-communityQuestion_isActive:
   type: boolean
   example: 1
 
-subject-communityQuestions_precedence:
+subject-communityQuestion_precedence:
   type: integer
   example: 1
 
 #relationship attributes
-subject-communityQuestions_typeId:
+subject-communityQuestion_typeId:
   type: integer
   example: 1
   description: Relationship to subject-communityQuestionTypes
 
 #relationships
-subject-communityQuestions_type:
+subject-communityQuestion_type:
   type: object
   additionalProperties: false
   properties:

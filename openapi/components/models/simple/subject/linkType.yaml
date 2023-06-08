@@ -1,18 +1,18 @@
-SimpleModel_subject-linkTypes:
+SimpleModel_subject-linkType:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_subject-linkTypes_id"
+      $ref: "#/SimpleModel_subject-linkType_id"
     # simple attributes
     name:
-      $ref: "../../library/subject/linkTypes.yaml#/subject-linkTypes_name"
+      $ref: "../../library/subject/linkType.yaml#/subject-linkType_name"
   required:
     - id
     - name
 
 # shared
-SimpleModel_subject-linkTypes_id:
+SimpleModel_subject-linkType_id:
   type: integer
   example: 1
   readOnly: true
