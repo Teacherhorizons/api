@@ -58,6 +58,10 @@
         },
         "description": {
           "type": "string"
+        },
+        "deprecated": {
+          "type": "boolean",
+          "const": true
         }
       },
       "required": ["type", "example"],
