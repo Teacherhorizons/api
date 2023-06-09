@@ -13,12 +13,12 @@ JsonApiModel_error_400:
               anyOf:
                 - $ref: '#/JsonApiModel_error_accessNotPermitted'
                 - $ref: '#/JsonApiModel_error_missingMandatoryParameter'
-                - $ref: '#/JsonApiModel_error_invalidJSONInput'
-                - $ref: '#/JsonApiModel_error_missingMandatoryJSONfield'
-                - $ref: '#/JsonApiModel_error_contactSupport'
-                - $ref: '#/JsonApiModel_error_fileTypeLimitReached'
-                - $ref: '#/JsonApiModel_error_cannotManipulateFile'
-                - $ref: '#/JsonApiModel_error_callFailed'
+                # - $ref: '#/JsonApiModel_error_invalidJSONInput'
+                # - $ref: '#/JsonApiModel_error_missingMandatoryJSONfield'
+                # - $ref: '#/JsonApiModel_error_contactSupport'
+                # - $ref: '#/JsonApiModel_error_fileTypeLimitReached'
+                # - $ref: '#/JsonApiModel_error_cannotManipulateFile'
+                # - $ref: '#/JsonApiModel_error_callFailed'
             description: ''
             example:
               - status: '400'
@@ -53,6 +53,8 @@ JsonApiModel_error_400:
                 code: 'callFailed'
                 title: 'callFailed'
                 detail: ''
+        required:
+          - errors
 
 JsonApiModel_error_401:
   description: UNAUTHORIZED
@@ -140,6 +142,8 @@ JsonApiModel_error_404:
                 code: 'callToExternalServiceFailed'
                 title: 'WIP'
                 detail: ''
+        required:
+          - errors
 
 JsonApiModel_error_413:
   description: PAYLOAD_TOO_LARGE
@@ -216,16 +220,16 @@ JsonApiModel_error_accessNotPermitted:
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: '400'
+      enum:
+        - '400'
     code:
       type: string
-      description: Always has value 'accessNotPermitted'
-      example: 'accessNotPermitted'
+      enum:
+        - 'accessNotPermitted'
     title:
       type: string
-      description: Always has value 'Access not permitted'
-      example: 'Access not permitted'
+      enum:
+        - 'Access not permitted'
     detail:
       type: string
       description: Description of the error
@@ -240,16 +244,16 @@ JsonApiModel_error_missingMandatoryParameter:
   properties:
     status:
       type: string
-      description: Always has value '400'
-      example: '400'
+      enum:
+        - '400'
     code:
       type: string
-      description: Always has value 'missingMandatoryParameter'
-      example: 'missingMandatoryParameter'
+      enum:
+        - 'missingMandatoryParameter'
     title:
       type: string
-      description: Always has value 'Missing mandatory parameter'
-      example: 'Missing mandatory parameter'
+      enum:
+        - 'Missing mandatory parameter'
     detail:
       type: string
       description: Description of the error

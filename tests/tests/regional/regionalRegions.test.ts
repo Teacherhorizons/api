@@ -1,8 +1,8 @@
 import * as shared from '../../shared';
 import * as base from '../../baseTests';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = ['admin, as admin'];
+// const includeTestNames: string[] = null;
+const includeTestNames = ['regional-regions - signedOut'];
 
 let baseUrl = `regional-regions`;
 
@@ -13,7 +13,7 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-regions`,
       tests: [
         {
-          name: 'regional-regions',
+          name: 'regional-regions - signedOut',
           userEmail: 'signedOut',
           expectedStatus: 400, //missingMandatoryParameter	schema must be passed
         },
@@ -474,9 +474,9 @@ var tests = shared.addTestGroups(
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter(
-  // (t) => includeTestNames == null || includeTestNames.includes(t.name)
+  (t) => includeTestNames == null || includeTestNames.includes(t.name)
   // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
-  (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff' && t.userEmail === 'signedOut'
+  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff' && t.userEmail === 'signedOut'
 );
 
 describe('get-regional-regions', () => {
