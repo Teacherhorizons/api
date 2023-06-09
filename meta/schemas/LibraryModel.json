@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^(application|general|job|meta|regional|school|staff|subject|teacher|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
+        "^(application|general|job|meta|regional|school|staff|subject|teacher|time|user)(-?)[a-zA-Z0-9_]*(?<!(Id|_id))$": {
           "oneOf": [
             {
               "$ref": "#/definitions/LibraryModel-Attribute"
@@ -19,7 +19,7 @@
         "^(regional-city_nearestWeatherStationId)$": {
           "$ref": "#/definitions/LibraryModel-Attribute"
         },
-        "^(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z1]Id$": {
+        "^(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_[a-zA-Z_]*[a-z1]Id$": {
           "$ref": "#/definitions/LibraryModel-RelationshipAttribute"
         }
       },

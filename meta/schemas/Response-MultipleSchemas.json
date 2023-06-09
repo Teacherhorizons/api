@@ -6,31 +6,31 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_type$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_type$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Type"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_id$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Id"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "#/definitions/Response-MultipleSchemas-RelationshipAttribute"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Relationship"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_meta$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_meta$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Meta"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z_0-9]*_description$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z_0-9]*_description$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Description"
         }
       },
@@ -227,7 +227,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[a-zA-Z-]*_type$"
+                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[a-zA-Z-]*_type$"
                 }
               }
             },
@@ -237,7 +237,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[a-zA-Z-]*_id$"
+                  "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[a-zA-Z-]*_id$"
                 }
               }
             },
@@ -627,7 +627,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-a-zA-Z_]*_relationship(_multiple)*$"
+          "pattern": "^[./a-zA-Z-]*.yaml#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-a-zA-Z_]*_relationship(_multiple)*$"
         }
       },
       "required": ["$ref"]
@@ -638,7 +638,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|subject|teacher|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school|user)[-a-zA-Z_]*relationship_attribute)$"
+          "pattern": "^([./a-zA-Z]*.yaml#/(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|general|job|regional|school|user)[-a-zA-Z_]*relationship_attribute)$"
         }
       },
       "required": ["$ref"]

@@ -6,25 +6,25 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher))$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-OneOfSchema"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)_(admin|school|teacher)$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Schema"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_type$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_type$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Type"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_id$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Id"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipAttribute"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Relationship"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|user)[-]*[a-zA-Z]*_relationship_multiple$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipMultiple"
         }
       },
