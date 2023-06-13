@@ -183,9 +183,30 @@ regional-city_walkingAloneAtNightSafetyIndex:
 regional-city_minGrossSalaryJuniorTeacher:
   type: number
   example: 12,000
+regional-city_lowerQuartileGrossSalaryJuniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
+regional-city_lowerQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
 regional-city_averageGrossSalaryJuniorTeacher:
+  deprecated: true
   type: number
   example: 28,000
+regional-city_medianGrossSalaryJuniorTeacher:
+  type: integer
+  example: 28,000
+  description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
+regional-city_upperQuartileGrossSalaryJuniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
+regional-city_upperQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
 regional-city_maxGrossSalaryJuniorTeacher:
   type: number
   example: 55,000

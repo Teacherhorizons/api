@@ -70,9 +70,34 @@ regional-region_minGrossSalaryJuniorTeacher:
   type: integer
   example: 10000
   description: Derived (dw)
+regional-region_lowerQuartileGrossSalaryJuniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
+regional-region_lowerQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
 regional-region_averageGrossSalaryJuniorTeacher:
+  deprecated: true
   type: integer
   example: 23427
+  description: Derived (dw)
+regional-region_medianGrossSalaryJuniorTeacher:
+  type: integer
+  example: 28,000
+  description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
+regional-region_medianGrossSalarySeniorTeacher:
+  type: integer
+  example: 28,000
+  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
+regional-region_upperQuartileGrossSalaryJuniorTeacher:
+  type: integer
+  example: 12,000
+  description: Derived (dw)
+regional-region_upperQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 12,000
   description: Derived (dw)
 regional-region_maxGrossSalaryJuniorTeacher:
   type: integer

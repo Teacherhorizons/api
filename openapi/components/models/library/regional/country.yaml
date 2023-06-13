@@ -214,6 +214,10 @@ regional-country_medianGrossSalaryJuniorTeacher:
   type: integer
   example: 28,000
   description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
+regional-country_medianGrossSalarySeniorTeacher:
+  type: integer
+  example: 28,000
+  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
 regional-country_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
   example: 12,000
@@ -231,6 +235,7 @@ regional-country_minGrossSalarySeniorTeacher:
   example: 15,000
   description: Derived (dw)
 regional-country_averageGrossSalarySeniorTeacher:
+  deprecated: true
   type: integer
   example: 40,000
   description: Derived (dw)

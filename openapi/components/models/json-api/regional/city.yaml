@@ -142,14 +142,24 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants'
         minGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher'
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher'
         minGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
         numberOfSchoolsHaveFlightAllowance:
@@ -264,10 +274,14 @@ JsonApiModel_regional-city_admin:
         - expensePercentageRestaurants
         - nearestWeatherStation
         - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
         - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
         - numberOfSchoolsHaveFlightAllowance
         - numberOfSchoolsDoNotHaveFlightAllowance

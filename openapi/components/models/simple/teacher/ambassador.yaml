@@ -10,6 +10,10 @@ SimpleModel_teacher-ambassador:
     testimonial:
         $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
     # relationship attributes
+    userId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_userId"
+    photoId:
+        $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_photoId"
     teacherId:
         $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_teacherId"
     schoolId:
@@ -23,8 +27,10 @@ SimpleModel_teacher-ambassador:
   required:
     - id
     - levelName
-    - teacherId
     - testimonial
+    - userId
+    - photoId
+    - teacherId
     - schoolId
     - cityId
     - countryId

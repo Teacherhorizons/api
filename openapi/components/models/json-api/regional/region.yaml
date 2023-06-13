@@ -104,14 +104,26 @@ JsonApiModel_regional-region_admin:
           $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
         minGrossSalaryJuniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher"
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalaryJuniorTeacher"
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalaryJuniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalarySeniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher"
         minGrossSalarySeniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher"
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalarySeniorTeacher"
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalarySeniorTeacher"
         numberOfSchoolsHaveFlightAllowance:
@@ -185,10 +197,14 @@ JsonApiModel_regional-region_admin:
         - averageAnnualExpenditure
         - averageAnnualSaving
         - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
         - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
         - numberOfSchoolsHaveFlightAllowance
         - numberOfSchoolsDoNotHaveFlightAllowance

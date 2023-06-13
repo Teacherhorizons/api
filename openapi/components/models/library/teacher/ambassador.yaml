@@ -15,6 +15,14 @@ teacher-ambassador_testimonial:
   nullable: true
 
 #Relationship attributes
+teacher-ambassador_userId:
+  type: integer
+  example: 1
+  description: Relationship to user
+teacher-ambassador_photoId:
+  type: integer
+  example: 1
+  description: Relationship to general-photo
 teacher-ambassador_teacherId:
   type: integer
   example: 1
@@ -37,6 +45,28 @@ teacher-ambassador_regionId:
   description: Relationship to regional-region
 
 #Relationships
+teacher-ambassador_user:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher
+  required:
+    - id
+
+teacher-ambassador_photo:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to teacher
+  required:
+    - id
+
 teacher-ambassador_teacher:
   type: object
   additionalProperties: false

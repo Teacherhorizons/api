@@ -181,6 +181,26 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools'
         numberOfSecondaryOtherCurriculumSchools:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools'
+        minGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_lowerQuartileGrossSalaryJuniorTeacher'
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalaryJuniorTeacher'
+        maxGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
+        minGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_lowerQuartileGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_medianGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
+        maxGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
         #relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
@@ -225,6 +245,16 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - numberOfSecondaryUKCurriculumSchools
         - numberOfSecondaryInternationalCurriculumSchools
         - numberOfSecondaryOtherCurriculumSchools
+        - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
+        - maxGrossSalaryJuniorTeacher
+        - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
+        - maxGrossSalarySeniorTeacher
         - photo1
         - region
 

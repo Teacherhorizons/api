@@ -16,6 +16,10 @@ JsonApiModel_teacher-ambassador:
         testimonial:
           $ref: "../../library/teacher/ambassador.yaml#/teacher-ambassador_testimonial"
         # relationship attributes
+        photo: 
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        user: 
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
         school:
@@ -29,16 +33,22 @@ JsonApiModel_teacher-ambassador:
       required:
         - id
         - levelName
-        - teacherId
         - testimonial
-        - schoolId
-        - cityId
-        - countryId
-        - regionId
+        - photo
+        - user
+        - teacher
+        - school
+        - city
+        - country
+        - region
     relationships:
       type: object
       additionalProperties: false
       properties:
+        photo: 
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+        user: 
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
         school:
