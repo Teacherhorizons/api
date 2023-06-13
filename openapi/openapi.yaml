@@ -4,15 +4,15 @@ info:
   title: Teacher Horizons API
   contact:
     email: dev@teacherhorizons.com
-    url: "http://127.0.0.1:8080/"
+    url: 'http://127.0.0.1:8080/'
   license:
     name: Apache 2.0
-    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: "https://www.teacherhorizons.com/assets/bird/logo.png"
+    url: 'https://www.teacherhorizons.com/assets/bird/logo.png'
   description:
     # TODO: figure out how to disable this warning (e.g. 'yamllint disable-line' doesn't work)
-    $ref: "./info-description.md"
+    $ref: './info-description.md'
 # externalDocs:
 #   description: Find out how to create a GitHub repo for your OpenAPI definition.
 #   url: 'https://github.com/Rebilly/generator-openapi-repo'
@@ -290,7 +290,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkType" />
 
- # tags - simple-models - time
+  # tags - simple-models - time
 
   - name: simple-model-time-date
     x-displayName: Simple model - time-date
@@ -630,6 +630,7 @@ tags:
   - name: simple-model-teacher-ambassador
     x-displayName: Simple model - teacher-ambassador
     description: |
+      Note: TODO RR - add description
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-ambassador" />
 
   # - name: simple-model-teacher-photoCategory
@@ -815,17 +816,17 @@ tags:
   - name: simple-model-teacher-teacherTeachingLanguage
     x-displayName: Simple model - teacher-teacherTeachingLanguage
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherTeachingLanguage" />     
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherTeachingLanguage" />
 
   - name: simple-model-teacher-teacherEmploymentRecord
     x-displayName: Simple model - teacher-teacherEmploymentRecord
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecord" />  
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecord" />
 
   - name: simple-model-teacher-teacherEmploymentRecordSubject
     x-displayName: Simple model - teacher-teacherEmploymentRecordSubject
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecordSubject" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherEmploymentRecordSubject" />
 
   - name: simple-model-teacher-teacherExperienceCurriculum
     x-displayName: Simple model - teacher-teacherExperienceCurriculum
@@ -919,7 +920,7 @@ tags:
   - name: simple-model-meta-cachedObject
     x-displayName: Simple model - meta-cachedObject
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-cachedObject" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-cachedObject" />
 
   #   # JSON:API models
 
@@ -1009,7 +1010,7 @@ tags:
   - name: json-api-model-general-photoType
     x-displayName: JSON:API model - general-photoType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-photoType" />    
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-photoType" />
 
   - name: json-api-model-general-religion
     x-displayName: JSON:API model - general-religion
@@ -1071,7 +1072,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-documentType" />
 
-# tags - JSON:API models - subject
+  # tags - JSON:API models - subject
   - name: json-api-model-subject
     x-displayName: JSON:API model - subject
     description: |
@@ -1080,22 +1081,22 @@ tags:
   - name: json-api-model-subject-subjectArticle
     x-displayName: JSON:API model - subject-subjectArticle
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectArticle" />  
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectArticle" />
 
   - name: json-api-model-subject-communityQuestionType
     x-displayName: JSON:API model - subject-communityQuestionType
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestionType" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestionType" />
 
   - name: json-api-model-subject-communityQuestion
     x-displayName: JSON:API model - subject-communityQuestion
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestion" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestion" />
 
   - name: json-api-model-subject-userSubjectCommunityResponse
     x-displayName: JSON:API model - subject-userSubjectCommunityResponse
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponse" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponse" />
 
   - name: json-api-model-subject-subjectMonth
     x-displayName: JSON:API model - subject-subjectMonth
@@ -1112,7 +1113,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkType" />
 
- # tags - JSON:API models - time
+  # tags - JSON:API models - time
 
   - name: json-api-model-time-date
     x-displayName: JSON:API model - time-date
@@ -1265,7 +1266,6 @@ tags:
     x-displayName: JSON:API model - regional-regionSubjectSchoolYears
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjectSchoolYears" />
-
 
   # tags - JSON:API models - teacher
   - name: json-api-model-teacher
@@ -1456,32 +1456,32 @@ tags:
   - name: json-api-model-teacher-teacherTeachingLanguage
     x-displayName: JSON:API model - teacher-teacherTeachingLanguage
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherTeachingLanguage" />  
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherTeachingLanguage" />
 
   - name: json-api-model-teacher-teacherExperienceCurriculum
     x-displayName: JSON:API model - teacher-teacherExperienceCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherExperienceCurriculum" />  
-      
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherExperienceCurriculum" />
+
   - name: json-api-model-teacher-teacherLookingForCurriculum
     x-displayName: JSON:API model - teacher-teacherLookingForCurriculum
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForCurriculum" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherLookingForCurriculum" />
 
   - name: json-api-model-teacher-teacherEmploymentRecord
     x-displayName: JSON:API model - teacher-teacherEmploymentRecord
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecord" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecord" />
 
   - name: json-api-model-teacher-teacherEmploymentRecordSubject
     x-displayName: JSON:API model - teacher-teacherEmploymentRecordSubject
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecordSubject" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEmploymentRecordSubject" />
 
   - name: json-api-model-teacher-jobSeekingStatus
     x-displayName: JSON:API model - teacher-jobSeekingStatus
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-jobSeekingStatus" /> 
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-jobSeekingStatus" />
 
   # tags - JSON:API models - school
 
@@ -2117,9 +2117,9 @@ x-tagGroups:
 #       - Example - User
 #       - Example - Tag
 servers:
-  - url: "https://beta.teacherhorizons.com/th/api"
+  - url: 'https://beta.teacherhorizons.com/th/api'
 paths:
-  $ref: "./paths/paths.yaml"
+  $ref: './paths/paths.yaml'
 
 components:
   securitySchemes:
@@ -2127,10 +2127,10 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: "http://example.com/api/oauth/dialog"
+          authorizationUrl: 'http://example.com/api/oauth/dialog'
           scopes:
-            "read:users": read users info
-            "write:users": modify or remove users
+            'read:users': read users info
+            'write:users': modify or remove users
     api_key:
       type: apiKey
       in: header
@@ -2139,4 +2139,4 @@ components:
       type: http
       scheme: basic
   schemas:
-    $ref: "./components/schemas/proposed/schemas.yaml"
+    $ref: './components/schemas/proposed/schemas.yaml'
