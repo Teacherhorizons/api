@@ -23,6 +23,12 @@ get:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - in: query
       name: include
+      description: |
+        - staff - All staff in the region
+        - countries - All countries in the region
+        - jobs - First 4 live jobs when sorted by added date, from as many distinct countries as possible
+        - schools - First 4 schools when sorted by 'is subscribed' (TODO), percentage complete, random
+        - ambassadors - A random 20 ambassadors (including region ambassador, country ambassadors, city ambassadors and school ambassadors)
       # required: true
       example: staff,countries,jobs,schools,ambassadors
       schema:
