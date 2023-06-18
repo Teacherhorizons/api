@@ -115,8 +115,6 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_amountIndividualTeacherSavesYearly'
         averageMonthlyNetSalaryAfterTax:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_averageMonthlyNetSalaryAfterTax'
-        clothingAndShoesExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_clothingAndShoesExpensePercentage'
         costOf1BedroomApartmentInCityCentre:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_costOf1BedroomApartmentInCityCentre'
         costOf1BedroomApartmentOutsideCityCentre:
@@ -139,22 +137,10 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_costOfTaxi1KilometerNormalTariff'
         crimeIndex:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_crimeIndex'
-        marketsExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_marketsExpensePercentage'
         numberOfIBSchools:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfIBSchools'
         numberOfSchools:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools'
-        rentExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_rentExpensePercentage'
-        restaurantsExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_restaurantsExpensePercentage'
-        sportsAndLeisureExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_sportsAndLeisureExpensePercentage'
-        transportationExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_transportationExpensePercentage'
-        utilitiesExpensePercentage:
-          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_utilitiesExpensePercentage'
         walkingAloneAtNightSafetyIndex:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_walkingAloneAtNightSafetyIndex'
         walkingAloneInDaylightSafetyIndex:
@@ -203,6 +189,21 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
+        # expense percentages
+        expensePercentageClothingAndShoes:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageClothingAndShoes'
+        expensePercentageMarkets:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageMarkets'
+        expensePercentageRent:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageRent'
+        expensePercentageRestaurants:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageRestaurants'
+        expensePercentageSportsAndLeisure:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageSportsAndLeisure'
+        expensePercentageTransportation:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageTransportation'
+        expensePercentageUtilities:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_expensePercentageUtilities'
         # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
@@ -214,7 +215,6 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - ambassadorTestimonial
         - amountIndividualTeacherSavesYearly
         - averageMonthlyNetSalaryAfterTax
-        - clothingAndShoesExpensePercentage
         - costOf1BedroomApartmentInCityCentre
         - costOf1BedroomApartmentOutsideCityCentre
         - costOf1WayetLocalTransport
@@ -226,14 +226,8 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - costOfMidRange3CourseMealFor2
         - costOfTaxi1KilometerNormalTariff
         - crimeIndex
-        - marketsExpensePercentage
         - numberOfIBSchools
         - numberOfSchools
-        - rentExpensePercentage
-        - restaurantsExpensePercentage
-        - sportsAndLeisureExpensePercentage
-        - transportationExpensePercentage
-        - utilitiesExpensePercentage
         - walkingAloneAtNightSafetyIndex
         - walkingAloneInDaylightSafetyIndex
         - travelAdviceUrl
@@ -259,6 +253,14 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - medianGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        # expense percentages
+        - expensePercentageClothingAndShoes
+        - expensePercentageMarkets
+        - expensePercentageRent
+        - expensePercentageRestaurants
+        - expensePercentageSportsAndLeisure
+        - expensePercentageTransportation
+        - expensePercentageUtilities
         # relationship attributes
         - photo1
         - region
