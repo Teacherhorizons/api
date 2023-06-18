@@ -29,7 +29,7 @@ JsonApiModel_regional-country_admin:
       type: object
       additionalProperties: false
       properties:
-        # simple Attributes
+        # simple attributes
         name:
           $ref: '../../library/regional/country.yaml#/regional-country_name'
         alias:
@@ -146,6 +146,7 @@ JsonApiModel_regional-country_admin:
           $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageRent'
         expensePercentageRestaurants:
           $ref: '../../library/regional/country.yaml#/regional-country_expensePercentageRestaurants'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
         lowerQuartileGrossSalaryJuniorTeacher:
@@ -158,16 +159,20 @@ JsonApiModel_regional-country_admin:
           $ref: '../../library/regional/country.yaml#/regional-country_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
         lowerQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/country.yaml#/regional-country_medianGrossSalarySeniorTeacher'
         upperQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
+        #
         numberOfTeachers:
           $ref: '../../library/regional/country.yaml#/regional-country_numberOfTeachers'
         numberOfOverseasTeachers:
@@ -289,16 +294,21 @@ JsonApiModel_regional-country_admin:
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
         - walkingAloneAtNightSafetyIndex
+        # junior teacher
         - minGrossSalaryJuniorTeacher
         - lowerQuartileGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
         - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
         - lowerQuartileGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        #
         - numberOfTeachers
         - numberOfOverseasTeachers
         - numberOfLocalTeachers

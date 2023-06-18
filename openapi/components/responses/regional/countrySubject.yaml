@@ -181,6 +181,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSecondaryInternationalCurriculumSchools'
         numberOfSecondaryOtherCurriculumSchools:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSecondaryOtherCurriculumSchools'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
         lowerQuartileGrossSalaryJuniorTeacher:
@@ -191,6 +192,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
         lowerQuartileGrossSalarySeniorTeacher:
@@ -201,7 +203,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
-        #relationship attributes
+        # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         region:
@@ -245,16 +247,19 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - numberOfSecondaryUKCurriculumSchools
         - numberOfSecondaryInternationalCurriculumSchools
         - numberOfSecondaryOtherCurriculumSchools
+        # junior teacher
         - minGrossSalaryJuniorTeacher
         - lowerQuartileGrossSalaryJuniorTeacher
         - medianGrossSalaryJuniorTeacher
         - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
         - lowerQuartileGrossSalarySeniorTeacher
         - medianGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        # relationship attributes
         - photo1
         - region
 

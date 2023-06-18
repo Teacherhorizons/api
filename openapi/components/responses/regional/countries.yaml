@@ -1,12 +1,12 @@
 Response_regional-countries:
   oneOf:
-    - $ref: "#/Response_regional-countries_notSignedIn"
-    - $ref: "#/Response_regional-countries_notSignedInMultiple"
+    - $ref: '#/Response_regional-countries_notSignedIn'
+    - $ref: '#/Response_regional-countries_notSignedInMultiple'
   discriminator:
     propertyName: schema
     mapping:
-      not-signed-in: "#/Response_regional-countries_notSignedIn"
-      not-signed-in-multiple: "#/Response_regional-countries_notSignedInMultiple"
+      not-signed-in: '#/Response_regional-countries_notSignedIn'
+      not-signed-in-multiple: '#/Response_regional-countries_notSignedInMultiple'
 
 Response_regional-countries_notSignedIn:
   type: object
@@ -19,18 +19,18 @@ Response_regional-countries_notSignedIn:
     data:
       type: array
       items:
-        $ref: "./country.yaml#/Response_regional-country_notSignedIn_item"
+        $ref: './country.yaml#/Response_regional-country_notSignedIn_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: "./country.yaml#/Response_regional-country_includedCity_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedStaff_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedJob_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedSchool_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedAmbassador_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedPhoto_notSignedIn"
-          - $ref: "./country.yaml#/Response_regional-country_includedAttraction_notSignedIn"
+          - $ref: './country.yaml#/Response_regional-country_includedCity_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedStaff_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedJob_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedSchool_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedAmbassador_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedPhoto_notSignedIn'
+          - $ref: './country.yaml#/Response_regional-country_includedAttraction_notSignedIn'
   required:
     - schema
     - data
@@ -46,7 +46,7 @@ Response_regional-countries_notSignedInMultiple:
     data:
       type: array
       items:
-        $ref: "#/Response_regional-countries_notSignedInMultiple_item"
+        $ref: '#/Response_regional-countries_notSignedInMultiple_item'
   required:
     - schema
     - data
@@ -56,18 +56,18 @@ Response_regional-countries_notSignedInMultiple_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type"
+      $ref: '../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type'
     id:
-      $ref: "../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id"
+      $ref: '../../models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../models/library/regional/country.yaml#/regional-country_name"
+          $ref: '../../models/library/regional/country.yaml#/regional-country_name'
         slug:
-          $ref: "../../models/library/regional/country.yaml#/regional-country_slug"
+          $ref: '../../models/library/regional/country.yaml#/regional-country_slug'
       required:
         - name
         - slug

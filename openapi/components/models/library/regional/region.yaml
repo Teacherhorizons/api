@@ -66,55 +66,59 @@ regional-region_averageAnnualSaving:
   type: integer
   example: 11735
   description: Derived (dw)
+# junior teacher
 regional-region_minGrossSalaryJuniorTeacher:
   type: integer
-  example: 10000
+  example: 12000
   description: Derived (dw)
 regional-region_lowerQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-region_lowerQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 19000
   description: Derived (dw)
 regional-region_averageGrossSalaryJuniorTeacher:
   deprecated: true
   type: integer
-  example: 23427
-  description: Derived (dw)
+  example: 28000
+  description: Derived (dw); renamed to medianGrossSalaryJuniorTeacher
 regional-region_medianGrossSalaryJuniorTeacher:
   type: integer
-  example: 28,000
+  example: 28000
   description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
-regional-region_medianGrossSalarySeniorTeacher:
-  type: integer
-  example: 28,000
-  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
 regional-region_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-region_upperQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 35000
   description: Derived (dw)
 regional-region_maxGrossSalaryJuniorTeacher:
   type: integer
   example: 55000
   description: Derived (dw)
+# senior teacher
 regional-region_minGrossSalarySeniorTeacher:
   type: integer
-  example: 10000
+  example: 21000
+  description: Derived (dw)
+regional-region_lowerQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 26000
   description: Derived (dw)
 regional-region_averageGrossSalarySeniorTeacher:
+  deprecated: true
   type: integer
-  example: 33462
+  example: 39000
+  description: Derived (dw); renamed to medianGrossSalaryJuniorTeacher
+regional-region_medianGrossSalarySeniorTeacher:
+  type: integer
+  example: 39000
+  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
+regional-region_upperQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 55000
   description: Derived (dw)
 regional-region_maxGrossSalarySeniorTeacher:
   type: integer
-  example: 87734
+  example: 85000
   description: Derived (dw)
+#
 regional-region_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 179

@@ -193,56 +193,59 @@ regional-country_walkingAloneInDaylightSafetyIndex:
 regional-country_walkingAloneAtNightSafetyIndex:
   type: number
   example: 67.5
+# junior teacher
 regional-country_minGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
+  example: 12000
   description: Derived (dw)
 regional-country_lowerQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-country_lowerQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 19000
   description: Derived (dw)
 regional-country_averageGrossSalaryJuniorTeacher:
   deprecated: true
   type: integer
-  example: 28,000
+  example: 28000
   description: Derived (dw); renamed to medianGrossSalaryJuniorTeacher
 regional-country_medianGrossSalaryJuniorTeacher:
   type: integer
-  example: 28,000
+  example: 28000
   description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
-regional-country_medianGrossSalarySeniorTeacher:
-  type: integer
-  example: 28,000
-  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
 regional-country_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-country_upperQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 35000
   description: Derived (dw)
 regional-country_maxGrossSalaryJuniorTeacher:
   type: integer
-  example: 55,000
+  example: 55000
   description: Derived (dw)
+# senior teacher
 regional-country_minGrossSalarySeniorTeacher:
   type: integer
-  example: 15,000
+  example: 21000
+  description: Derived (dw)
+regional-country_lowerQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 26000
   description: Derived (dw)
 regional-country_averageGrossSalarySeniorTeacher:
   deprecated: true
   type: integer
-  example: 40,000
+  example: 39000
+  description: Derived (dw); renamed to medianGrossSalarySeniorTeacher
+regional-country_medianGrossSalarySeniorTeacher:
+  type: integer
+  example: 39000
+  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
+regional-country_upperQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 55000
   description: Derived (dw)
 regional-country_maxGrossSalarySeniorTeacher:
   type: integer
-  example: 85,000
+  example: 85000
   description: Derived (dw)
+#
 regional-country_qualityOfLifeIndex:
   type: number
   example: 163.8

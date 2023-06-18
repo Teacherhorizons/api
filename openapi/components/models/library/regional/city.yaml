@@ -180,45 +180,58 @@ regional-city_walkingAloneInDaylightSafetyIndex:
 regional-city_walkingAloneAtNightSafetyIndex:
   type: number
   example: 67
+# junior teacher
 regional-city_minGrossSalaryJuniorTeacher:
-  type: number
-  example: 12,000
+  type: integer
+  example: 12000
+  description: Derived (dw)
 regional-city_lowerQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-city_lowerQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 19000
   description: Derived (dw)
 regional-city_averageGrossSalaryJuniorTeacher:
   deprecated: true
-  type: number
-  example: 28,000
+  type: integer
+  example: 28000
+  description: Derived (dw); renamed to medianGrossSalaryJuniorTeacher
 regional-city_medianGrossSalaryJuniorTeacher:
   type: integer
-  example: 28,000
+  example: 28000
   description: Derived (dw); new name for averageGrossSalaryJuniorTeacher
 regional-city_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
-  example: 12,000
-  description: Derived (dw)
-regional-city_upperQuartileGrossSalarySeniorTeacher:
-  type: integer
-  example: 12,000
+  example: 35000
   description: Derived (dw)
 regional-city_maxGrossSalaryJuniorTeacher:
-  type: number
-  example: 55,000
+  type: integer
+  example: 55000
+  description: Derived (dw)
+# senior teacher
 regional-city_minGrossSalarySeniorTeacher:
-  type: number
-  example: 15,000
+  type: integer
+  example: 21000
+  description: Derived (dw)
+regional-city_lowerQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 26000
+  description: Derived (dw)
 regional-city_averageGrossSalarySeniorTeacher:
-  type: number
-  example: 40,000
+  type: integer
+  example: 39000
+  description: Derived (dw); renamed to medianGrossSalarySeniorTeacher
+regional-city_medianGrossSalarySeniorTeacher:
+  type: integer
+  example: 39000
+  description: Derived (dw); new name for averageGrossSalarySeniorTeacher
+regional-city_upperQuartileGrossSalarySeniorTeacher:
+  type: integer
+  example: 55000
+  description: Derived (dw)
 regional-city_maxGrossSalarySeniorTeacher:
-  type: number
-  example: 85,000
+  type: integer
+  example: 85000
+  description: Derived (dw)
+#
 regional-city_qualityOfLifeIndex:
   type: number
   example: 163.8
@@ -248,7 +261,7 @@ regional-city_expensePercentageRestaurants:
   example: 9.199
 regional-city_nearestWeatherStationId:
   type: string
-  example: "01234"
+  example: '01234'
   description: Not a relationship
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
@@ -314,7 +327,7 @@ regional-city_communityResponseQuestionIds:
   type: array
   items:
     type: integer
-  example: [4,7,10,14]
+  example: [4, 7, 10, 14]
   description: Derived (dw)
 
 # Relationship attributes
@@ -342,7 +355,7 @@ regional-city_photo1Id:
   type: integer
   example: 1
   description: Derived (dw); Relationship to general-photo
-  
+
 # Relationships
 regional-city_country:
   type: object
@@ -350,7 +363,7 @@ regional-city_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -361,7 +374,7 @@ regional-city_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -372,7 +385,7 @@ regional-city_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -383,7 +396,7 @@ regional-city_language:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to geneeral-language
   required:
     - id
@@ -394,11 +407,7 @@ regional-city_ambassadorTeacher:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher
   required:
     - id
-
-
-
-
