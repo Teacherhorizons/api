@@ -2,16 +2,16 @@
 
 SimpleModel_regional-city:
   oneOf:
-    - $ref: "#/SimpleModel_regional-city_admin"
-    - $ref: "#/SimpleModel_regional-city_school"
-    - $ref: "#/SimpleModel_regional-city_teacher"
+    - $ref: '#/SimpleModel_regional-city_admin'
+    - $ref: '#/SimpleModel_regional-city_school'
+    - $ref: '#/SimpleModel_regional-city_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      all: "#/SimpleModel_regional-city_admin"
-      admin: "#/SimpleModel_regional-city_admin"
-      school: "#/SimpleModel_regional-city_school"
-      teacher: "#/SimpleModel_regional-city_teacher"
+      all: '#/SimpleModel_regional-city_admin'
+      admin: '#/SimpleModel_regional-city_admin'
+      school: '#/SimpleModel_regional-city_school'
+      teacher: '#/SimpleModel_regional-city_teacher'
 
 SimpleModel_regional-city_admin:
   type: object
@@ -22,178 +22,178 @@ SimpleModel_regional-city_admin:
       enum:
         - admin
     id:
-      $ref: "#/SimpleModel_regional-city_id"
+      $ref: '#/SimpleModel_regional-city_id'
     # simple Attributes
     name:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: '../../library/regional/city.yaml#/regional-city_name'
     alias:
-      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+      $ref: '../../library/regional/city.yaml#/regional-city_alias'
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
+      $ref: '../../library/regional/city.yaml#/regional-city_keyAttractions'
     creationDate:
-      $ref: "../../library/regional/city.yaml#/regional-city_creationDate"
+      $ref: '../../library/regional/city.yaml#/regional-city_creationDate'
     latestUpdateDate:
-      $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateDate"
+      $ref: '../../library/regional/city.yaml#/regional-city_latestUpdateDate'
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_slug"
+      $ref: '../../library/regional/city.yaml#/regional-city_slug'
     locationLatitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLongitude'
     crimeIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_crimeIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_crimeIndex'
     ambassadorTestimonial:
-      $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTestimonial"
+      $ref: '../../library/regional/city.yaml#/regional-city_ambassadorTestimonial'
     teachingInCityDescription:
-      $ref: "../../library/regional/city.yaml#/regional-city_teachingInCityDescription"
+      $ref: '../../library/regional/city.yaml#/regional-city_teachingInCityDescription'
     qualityOfLifeDescription:
-      $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeDescription"
+      $ref: '../../library/regional/city.yaml#/regional-city_qualityOfLifeDescription'
     pageMetaDescription:
       $ref: '../../library/regional/city.yaml#/regional-city_pageMetaDescription'
     walkingAloneInDaylightSafetyIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_walkingAloneInDaylightSafetyIndex'
     walkingAloneAtNightSafetyIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_walkingAloneAtNightSafetyIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_walkingAloneAtNightSafetyIndex'
     qualityOfLifeIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_qualityOfLifeIndex'
     costOfLivingIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfLivingIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOfLivingIndex'
     expensePercentageTransportation:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageTransportation"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageTransportation'
     expensePercentageClothingAndShoes:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageClothingAndShoes'
     expensePercentageSportsAndLeisure:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageSportsAndLeisure'
     expensePercentageMarkets:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageMarkets"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageMarkets'
     expensePercentageUtilities:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageUtilities"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageUtilities'
     expensePercentageRent:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRent"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageRent'
     expensePercentageRestaurants:
-      $ref: "../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants"
+      $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants'
     numberOfSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchools'
     numberOfIBSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfIBSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfIBSchools'
     numberOfLiveJobs:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLiveJobs"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfLiveJobs'
     numberOfPrimaryIBCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfPrimaryIBCurriculumSchools'
     numberOfPrimaryUSCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfPrimaryUSCurriculumSchools'
     numberOfPrimaryUKCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfPrimaryUKCurriculumSchools'
     numberOfPrimaryInternationalCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfPrimaryInternationalCurriculumSchools'
     numberOfPrimaryOtherCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfPrimaryOtherCurriculumSchools'
     numberOfSecondaryIBCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSecondaryIBCurriculumSchools'
     numberOfSecondaryUSCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSecondaryUSCurriculumSchools'
     numberOfSecondaryUKCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSecondaryUKCurriculumSchools'
     numberOfSecondaryInternationalCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSecondaryInternationalCurriculumSchools'
     numberOfSecondaryOtherCurriculumSchools:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSecondaryOtherCurriculumSchools'
     averageSavingPercentage:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageSavingPercentage"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageSavingPercentage'
     averageAnnualSaving:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualSaving"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageAnnualSaving'
     averageAnnualGrossIncome:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualGrossIncome"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageAnnualGrossIncome'
     averageAnnualNetIncome:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualNetIncome"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageAnnualNetIncome'
     averageAnnualExpenditure:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageAnnualExpenditure"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageAnnualExpenditure'
     percentageOfSchoolsHaveFlightAllowance:
-      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance"
+      $ref: '../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance'
     percentageOfSchoolsHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/city.yaml#/regional-city_percentageOfSchoolsHavePrivateHealthcareScheme'
     percentageOfOverseasTeachers:
-      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers"
+      $ref: '../../library/regional/city.yaml#/regional-city_percentageOfOverseasTeachers'
     percentageOfInternationalStudents:
-      $ref: "../../library/regional/city.yaml#/regional-city_percentageOfInternationalStudents"
+      $ref: '../../library/regional/city.yaml#/regional-city_percentageOfInternationalStudents'
     costOfMidRange3CourseMealFor2:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOfMidRange3CourseMealFor2'
     costOfCappuccinoRegular:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfCappuccinoRegular"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOfCappuccinoRegular'
     costOf1WayTicketLocalTransport:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOf1WayTicketLocalTransport'
     costOfTaxi1KilometerNormalTariff:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOfTaxi1KilometerNormalTariff'
     costOfGasoline1Litre:
-      $ref: "../../library/regional/city.yaml#/regional-city_costOfGasoline1Litre"
+      $ref: '../../library/regional/city.yaml#/regional-city_costOfGasoline1Litre'
     monthlyCostOfBasicUtilities:
-      $ref: "../../library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities"
+      $ref: '../../library/regional/city.yaml#/regional-city_monthlyCostOfBasicUtilities'
     monthlyCostOfInternet:
-      $ref: "../../library/regional/city.yaml#/regional-city_monthlyCostOfInternet"
+      $ref: '../../library/regional/city.yaml#/regional-city_monthlyCostOfInternet'
     monthlyRent1BedroomApartmentInCityCentre:
-      $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre"
+      $ref: '../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentInCityCentre'
     monthlyRent1BedroomApartmentOutsideCityCentre:
-      $ref: "../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre"
+      $ref: '../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre'
     minGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher'
     averageGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher'
     maxGrossSalaryJuniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher'
     minGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher'
     averageGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher'
     maxGrossSalarySeniorTeacher:
-      $ref: "../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher"
+      $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
     numberOfSchoolsHaveFlightAllowance:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance'
     numberOfSchoolsDoNotHaveFlightAllowance:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHaveFlightAllowance"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHaveFlightAllowance'
     numberOfSchoolsHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsHavePrivateHealthcareScheme'
     numberOfSchoolsDoNotHavePrivateHealthcareScheme:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsDoNotHavePrivateHealthcareScheme'
     numberOfTeachers:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfTeachers"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfTeachers'
     numberOfOverseasTeachers:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfOverseasTeachers"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfOverseasTeachers'
     numberOfLocalTeachers:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLocalTeachers"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfLocalTeachers'
     numberOfUnknownTeachers:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfUnknownTeachers"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfUnknownTeachers'
     numberOfStudents:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfStudents"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfStudents'
     numberOfInternationalStudents:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfInternationalStudents"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfInternationalStudents'
     numberOfLocalStudents:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfLocalStudents"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfLocalStudents'
     numberOfUnknownStudents:
-      $ref: "../../library/regional/city.yaml#/regional-city_numberOfUnknownStudents"
+      $ref: '../../library/regional/city.yaml#/regional-city_numberOfUnknownStudents'
     uniqueName:
-      $ref: "../../library/regional/city.yaml#/regional-city_uniqueName"
+      $ref: '../../library/regional/city.yaml#/regional-city_uniqueName'
     importanceIndex:
-      $ref: "../../library/regional/city.yaml#/regional-city_importanceIndex"
+      $ref: '../../library/regional/city.yaml#/regional-city_importanceIndex'
     importance:
-      $ref: "../../library/regional/city.yaml#/regional-city_importance"
+      $ref: '../../library/regional/city.yaml#/regional-city_importance'
     communityResponseQuestionIds:
-      $ref: "../../library/regional/city.yaml#/regional-city_communityResponseQuestionIds"
+      $ref: '../../library/regional/city.yaml#/regional-city_communityResponseQuestionIds'
 
     # relationship attributes
     countryId:
-      $ref: "../../library/regional/city.yaml#/regional-city_countryId"
+      $ref: '../../library/regional/city.yaml#/regional-city_countryId'
     creationUserId:
-      $ref: "../../library/regional/city.yaml#/regional-city_creationUserId"
+      $ref: '../../library/regional/city.yaml#/regional-city_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/regional/city.yaml#/regional-city_latestUpdateUserId"
+      $ref: '../../library/regional/city.yaml#/regional-city_latestUpdateUserId'
     worldLanguageId:
-      $ref: "../../library/regional/city.yaml#/regional-city_worldLanguageId"
+      $ref: '../../library/regional/city.yaml#/regional-city_worldLanguageId'
     ambassadorTeacherId:
-      $ref: "../../library/regional/city.yaml#/regional-city_ambassadorTeacherId"
+      $ref: '../../library/regional/city.yaml#/regional-city_ambassadorTeacherId'
     photo1Id:
-      $ref: "../../library/regional/city.yaml#/regional-city_photo1Id"
+      $ref: '../../library/regional/city.yaml#/regional-city_photo1Id'
     nearestWeatherStationId:
-      $ref: "../../library/regional/city.yaml#/regional-city_nearestWeatherStationId"
+      $ref: '../../library/regional/city.yaml#/regional-city_nearestWeatherStationId'
   required:
     - schema
     - id
@@ -256,7 +256,7 @@ SimpleModel_regional-city_admin:
     - costOfGasoline1Litre
     - monthlyCostOfBasicUtilities
     - monthlyCostOfInternet
-    - monthlyRent1BedroomApartmentCityCentre
+    - monthlyRent1BedroomApartmentInCityCentre
     - monthlyRent1BedroomApartmentOutsideCityCentre
     - nearestWeatherStationId
     - minGrossSalaryJuniorTeacher
@@ -291,20 +291,20 @@ SimpleModel_regional-city_school:
       enum:
         - school
     id:
-      $ref: "#/SimpleModel_regional-city_id"
+      $ref: '#/SimpleModel_regional-city_id'
     # simple attributes
     name:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: '../../library/regional/city.yaml#/regional-city_name'
     alias:
-      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+      $ref: '../../library/regional/city.yaml#/regional-city_alias'
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
+      $ref: '../../library/regional/city.yaml#/regional-city_keyAttractions'
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_slug"
+      $ref: '../../library/regional/city.yaml#/regional-city_slug'
     locationLatitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLongitude'
   required:
     - schema
     - id
@@ -324,20 +324,20 @@ SimpleModel_regional-city_teacher:
       enum:
         - teacher
     id:
-      $ref: "#/SimpleModel_regional-city_id"
+      $ref: '#/SimpleModel_regional-city_id'
     # simple attributes
     name:
-      $ref: "../../library/regional/city.yaml#/regional-city_name"
+      $ref: '../../library/regional/city.yaml#/regional-city_name'
     alias:
-      $ref: "../../library/regional/city.yaml#/regional-city_alias"
+      $ref: '../../library/regional/city.yaml#/regional-city_alias'
     keyAttractions:
-      $ref: "../../library/regional/city.yaml#/regional-city_keyAttractions"
+      $ref: '../../library/regional/city.yaml#/regional-city_keyAttractions'
     slug:
-      $ref: "../../library/regional/city.yaml#/regional-city_slug"
+      $ref: '../../library/regional/city.yaml#/regional-city_slug'
     locationLatitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLatitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLatitude'
     locationLongitude:
-      $ref: "../../library/regional/city.yaml#/regional-city_locationLongitude"
+      $ref: '../../library/regional/city.yaml#/regional-city_locationLongitude'
   required:
     - schema
     - id
