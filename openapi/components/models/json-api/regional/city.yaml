@@ -140,6 +140,7 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageRent'
         expensePercentageRestaurants:
           $ref: '../../library/regional/city.yaml#/regional-city_expensePercentageRestaurants'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher'
         lowerQuartileGrossSalaryJuniorTeacher:
@@ -152,16 +153,20 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher'
         lowerQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_medianGrossSalarySeniorTeacher'
         upperQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
+        #
         numberOfSchoolsHaveFlightAllowance:
           $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance'
         numberOfSchoolsDoNotHaveFlightAllowance:
@@ -273,16 +278,21 @@ JsonApiModel_regional-city_admin:
         - expensePercentageRent
         - expensePercentageRestaurants
         - nearestWeatherStation
+        # junior teacher
         - minGrossSalaryJuniorTeacher
         - lowerQuartileGrossSalaryJuniorTeacher
-        - averageGrossSalaryJuniorTeacher
+        - averageGrossSalaryJuniorTeacher # TODO: remove once no longer used
+        - medianGrossSalaryJuniorTeacher
         - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
         - lowerQuartileGrossSalarySeniorTeacher
-        - averageGrossSalarySeniorTeacher
+        - averageGrossSalarySeniorTeacher # TODO: remove once no longer used
+        - medianGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        #
         - numberOfSchoolsHaveFlightAllowance
         - numberOfSchoolsDoNotHaveFlightAllowance
         - numberOfSchoolsHavePrivateHealthcareScheme

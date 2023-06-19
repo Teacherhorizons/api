@@ -2,15 +2,15 @@
 
 JsonApiModel_regional-region:
   oneOf:
-    - $ref: "#/JsonApiModel_regional-region_admin"
-    - $ref: "#/JsonApiModel_regional-region_school"
-    - $ref: "#/JsonApiModel_regional-region_teacher"
+    - $ref: '#/JsonApiModel_regional-region_admin'
+    - $ref: '#/JsonApiModel_regional-region_school'
+    - $ref: '#/JsonApiModel_regional-region_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_regional-region_admin"
-      school: "#/JsonApiModel_regional-region_school"
-      teacher: "#/JsonApiModel_regional-region_teacher"
+      admin: '#/JsonApiModel_regional-region_admin'
+      school: '#/JsonApiModel_regional-region_school'
+      teacher: '#/JsonApiModel_regional-region_teacher'
 
 # admin
 JsonApiModel_regional-region_admin:
@@ -22,147 +22,150 @@ JsonApiModel_regional-region_admin:
       enum:
         - admin
     type:
-      $ref: "#/JsonApiModel_regional-region_type"
+      $ref: '#/JsonApiModel_regional-region_type'
     id:
-      $ref: "#/JsonApiModel_regional-region_id"
+      $ref: '#/JsonApiModel_regional-region_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../library/regional/region.yaml#/regional-region_name"
+          $ref: '../../library/regional/region.yaml#/regional-region_name'
         alias:
-          $ref: "../../library/regional/region.yaml#/regional-region_alias"
+          $ref: '../../library/regional/region.yaml#/regional-region_alias'
         slug:
-          $ref: "../../library/regional/region.yaml#/regional-region_slug"
+          $ref: '../../library/regional/region.yaml#/regional-region_slug'
         creationDate:
-          $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
+          $ref: '../../library/regional/region.yaml#/regional-region_creationDate'
         latestUpdateDate:
-          $ref: "../../library/regional/region.yaml#/regional-region_latestUpdateDate"
+          $ref: '../../library/regional/region.yaml#/regional-region_latestUpdateDate'
         # nationalAverageIncome:
         #   $ref: "../../library/regional/region.yaml#/regional-region_creationDate"
         locationLatitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLatitude'
         locationLongitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLongitude'
         numberOfCountriesWithSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfCountriesWithSchools'
         teachingInRegionDescription:
-          $ref: "../../library/regional/region.yaml#/regional-region_teachingInRegionDescription"
+          $ref: '../../library/regional/region.yaml#/regional-region_teachingInRegionDescription'
         ambassadorTestimonial:
-          $ref: "../../library/regional/region.yaml#/regional-region_ambassadorTestimonial"
+          $ref: '../../library/regional/region.yaml#/regional-region_ambassadorTestimonial'
         qualityOfLifeDescription:
-          $ref: "../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription"
+          $ref: '../../library/regional/region.yaml#/regional-region_qualityOfLifeDescription'
         pageMetaDescription:
-          $ref: "../../library/regional/region.yaml#/regional-region_pageMetaDescription"  
+          $ref: '../../library/regional/region.yaml#/regional-region_pageMetaDescription'
         adviceForInternationalTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_adviceForInternationalTeachers'
         numberOfSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSchools'
         numberOfIBSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfIBSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfIBSchools'
         numberOfLiveJobs:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLiveJobs"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfLiveJobs'
         numberOfPrimaryIBCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfPrimaryIBCurriculumSchools'
         numberOfPrimaryUSCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUSCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfPrimaryUSCurriculumSchools'
         numberOfPrimaryUKCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryUKCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfPrimaryUKCurriculumSchools'
         numberOfPrimaryInternationalCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryInternationalCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfPrimaryInternationalCurriculumSchools'
         numberOfPrimaryOtherCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfPrimaryOtherCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfPrimaryOtherCurriculumSchools'
         numberOfSecondaryIBCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryIBCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSecondaryIBCurriculumSchools'
         numberOfSecondaryUSCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUSCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSecondaryUSCurriculumSchools'
         numberOfSecondaryUKCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryUKCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSecondaryUKCurriculumSchools'
         numberOfSecondaryInternationalCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSecondaryInternationalCurriculumSchools'
         numberOfSecondaryOtherCurriculumSchools:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSecondaryOtherCurriculumSchools'
         averageSavingPercentage:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageSavingPercentage"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageSavingPercentage'
         averageAnnualGrossIncome:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualGrossIncome"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageAnnualGrossIncome'
         averageAnnualNetIncome:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualNetIncome"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageAnnualNetIncome'
         averageAnnualExpenditure:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualExpenditure"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageAnnualExpenditure'
         averageAnnualSaving:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualSaving"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageAnnualSaving'
         percentageOfSchoolsHaveFlightAllowance:
-          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance"
+          $ref: '../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHaveFlightAllowance'
         percentageOfSchoolsHavePrivateHealthcareScheme:
-          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme"
+          $ref: '../../library/regional/region.yaml#/regional-region_percentageOfSchoolsHavePrivateHealthcareScheme'
         percentageOfOverseasTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_percentageOfOverseasTeachers'
         percentageOfInternationalStudents:
-          $ref: "../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents"
+          $ref: '../../library/regional/region.yaml#/regional-region_percentageOfInternationalStudents'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher'
         lowerQuartileGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/region.yaml#/regional-region_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalaryJuniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageGrossSalaryJuniorTeacher'
         medianGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalaryJuniorTeacher'
-        medianGrossSalarySeniorTeacher:
-          $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalarySeniorTeacher'
         upperQuartileGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/region.yaml#/regional-region_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher'
         lowerQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/region.yaml#/regional-region_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalarySeniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_averageGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalarySeniorTeacher'
         upperQuartileGrossSalarySeniorTeacher:
           $ref: '../../library/regional/region.yaml#/regional-region_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
-          $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalarySeniorTeacher"
+          $ref: '../../library/regional/region.yaml#/regional-region_maxGrossSalarySeniorTeacher'
+        #
         numberOfSchoolsHaveFlightAllowance:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsHaveFlightAllowance"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSchoolsHaveFlightAllowance'
         numberOfSchoolsDoNotHaveFlightAllowance:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHaveFlightAllowance"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHaveFlightAllowance'
         numberOfSchoolsHavePrivateHealthcareScheme:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsHavePrivateHealthcareScheme"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSchoolsHavePrivateHealthcareScheme'
         numberOfSchoolsDoNotHavePrivateHealthcareScheme:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHavePrivateHealthcareScheme"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfSchoolsDoNotHavePrivateHealthcareScheme'
         numberOfTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfTeachers'
         numberOfOverseasTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfOverseasTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfOverseasTeachers'
         numberOfLocalTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLocalTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfLocalTeachers'
         numberOfUnknownTeachers:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownTeachers"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfUnknownTeachers'
         numberOfStudents:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfStudents"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfStudents'
         numberOfInternationalStudents:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfInternationalStudents"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfInternationalStudents'
         numberOfLocalStudents:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfLocalStudents"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfLocalStudents'
         numberOfUnknownStudents:
-          $ref: "../../library/regional/region.yaml#/regional-region_numberOfUnknownStudents"
+          $ref: '../../library/regional/region.yaml#/regional-region_numberOfUnknownStudents'
         communityResponseQuestionIds:
-          $ref: "../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds"
+          $ref: '../../library/regional/region.yaml#/regional-region_communityResponseQuestionIds'
         costOfLivingIndex:
-          $ref: "../../library/regional/region.yaml#/regional-region_costOfLivingIndex"
+          $ref: '../../library/regional/region.yaml#/regional-region_costOfLivingIndex'
         # relationship attributes
         photo1:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         ambassadorTeacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute'
       required:
         # simple attributes
         - name
@@ -196,16 +199,21 @@ JsonApiModel_regional-region_admin:
         - averageAnnualNetIncome
         - averageAnnualExpenditure
         - averageAnnualSaving
+        # junior teacher
         - minGrossSalaryJuniorTeacher
         - lowerQuartileGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
         - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
         - lowerQuartileGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        #
         - numberOfSchoolsHaveFlightAllowance
         - numberOfSchoolsDoNotHaveFlightAllowance
         - numberOfSchoolsHavePrivateHealthcareScheme
@@ -234,24 +242,24 @@ JsonApiModel_regional-region_admin:
       properties:
         # single
         photo1:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         ambassadorTeacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         # multiple
         staff:
-          $ref: "../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple"
+          $ref: '../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple'
         countries:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_multiple'
         jobs:
-          $ref: "../job/job.yaml#/JsonApiModel_job_relationship_multiple"
+          $ref: '../job/job.yaml#/JsonApiModel_job_relationship_multiple'
         schools:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_multiple"
+          $ref: '../school/school.yaml#/JsonApiModel_school_relationship_multiple'
         ambassadors:
-          $ref: "../teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple"
+          $ref: '../teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple'
   required:
     - schema
     - type
@@ -269,24 +277,24 @@ JsonApiModel_regional-region_school:
       enum:
         - school
     type:
-      $ref: "#/JsonApiModel_regional-region_type"
+      $ref: '#/JsonApiModel_regional-region_type'
     id:
-      $ref: "#/JsonApiModel_regional-region_id"
+      $ref: '#/JsonApiModel_regional-region_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../library/regional/region.yaml#/regional-region_name"
+          $ref: '../../library/regional/region.yaml#/regional-region_name'
         alias:
-          $ref: "../../library/regional/region.yaml#/regional-region_alias"
+          $ref: '../../library/regional/region.yaml#/regional-region_alias'
         slug:
-          $ref: "../../library/regional/region.yaml#/regional-region_slug"
+          $ref: '../../library/regional/region.yaml#/regional-region_slug'
         locationLatitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLatitude'
         locationLongitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLongitude'
       required:
         - name
         - alias
@@ -310,24 +318,24 @@ JsonApiModel_regional-region_teacher:
       enum:
         - teacher
     type:
-      $ref: "#/JsonApiModel_regional-region_type"
+      $ref: '#/JsonApiModel_regional-region_type'
     id:
-      $ref: "#/JsonApiModel_regional-region_id"
+      $ref: '#/JsonApiModel_regional-region_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../library/regional/region.yaml#/regional-region_name"
+          $ref: '../../library/regional/region.yaml#/regional-region_name'
         alias:
-          $ref: "../../library/regional/region.yaml#/regional-region_alias"
+          $ref: '../../library/regional/region.yaml#/regional-region_alias'
         slug:
-          $ref: "../../library/regional/region.yaml#/regional-region_slug"
+          $ref: '../../library/regional/region.yaml#/regional-region_slug'
         locationLatitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLatitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLatitude'
         locationLongitude:
-          $ref: "../../library/regional/region.yaml#/regional-region_locationLongitude"
+          $ref: '../../library/regional/region.yaml#/regional-region_locationLongitude'
       required:
         - name
         - alias
@@ -350,7 +358,7 @@ JsonApiModel_regional-region_type:
 
 JsonApiModel_regional-region_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -359,11 +367,11 @@ JsonApiModel_regional-region_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-region_id"
+      $ref: '#/JsonApiModel_regional-region_id'
     name:
-      $ref: "../../library/regional/region.yaml#/regional-region_name"
+      $ref: '../../library/regional/region.yaml#/regional-region_name'
     slug:
-      $ref: "../../library/regional/region.yaml#/regional-region_slug"
+      $ref: '../../library/regional/region.yaml#/regional-region_slug'
   required:
     - id
 
@@ -376,9 +384,9 @@ JsonApiModel_regional-region_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-region_type"
+          $ref: '#/JsonApiModel_regional-region_type'
         id:
-          $ref: "#/JsonApiModel_regional-region_id"
+          $ref: '#/JsonApiModel_regional-region_id'
       required:
         - type
         - id
@@ -396,9 +404,9 @@ JsonApiModel_regional-region_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_regional-region_type"
+            $ref: '#/JsonApiModel_regional-region_type'
           id:
-            $ref: "#/JsonApiModel_regional-region_id"
+            $ref: '#/JsonApiModel_regional-region_id'
         required:
           - type
           - id

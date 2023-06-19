@@ -86,18 +86,33 @@ Response_regional-city_notSignedIn_item:
           $ref: '../../models/library/regional/city.yaml#/regional-city_averageSavingPercentage'
         averageAnnualSaving:
           $ref: '../../models/library/regional/city.yaml#/regional-city_averageAnnualSaving'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher'
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_minGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_medianGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_upperQuartileGrossSalarySeniorTeacher'
+        #
         percentageOfSchoolsHaveFlightAllowance:
           $ref: '../../models/library/regional/city.yaml#/regional-city_percentageOfSchoolsHaveFlightAllowance'
         percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -178,12 +193,21 @@ Response_regional-city_notSignedIn_item:
         - numberOfSecondaryOtherCurriculumSchools
         - averageSavingPercentage
         - averageAnnualSaving
+        # junior teacher
         - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        #
         - percentageOfSchoolsHaveFlightAllowance
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers

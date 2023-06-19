@@ -24,7 +24,16 @@ get:
     - in: query
       name: include
       description: |
-        - country.subjects - List of all related regional-countrySubjects except the queried regional-countrySubject where numberOfLiveJobs > 0
+        - country - Related country
+        - subject - Related subject
+        - jobs - First 4 related live jobs when sorted by added date
+        - country.subjects - All subjects for related country except the queried subject where numberOfLiveJobs > 0
+        - country.attractions - All attractions in the related country
+        - country.photos - All photos for the related country
+        - country.ambassador - Ambassador for related country
+        - subject.regions - All regions for related subject
+        - subject.advisers - All advisers for related subject
+        - jobs.school- School for each related job
       # required: true
       example: country,subject,jobs,country.subjects,country.attractions,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school
       schema:

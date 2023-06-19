@@ -1,0 +1,409 @@
+Response_subject:
+  oneOf:
+    - $ref: '#/Response_subject_notSignedIn'
+  discriminator:
+    propertyName: schema
+    mapping:
+      not-signed-in: '#/Response_subject_notSignedIn'
+
+Response_subject_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      $ref: '#/Response_subject_notSignedIn_item'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: '#/Response_subject_includedWorld_notSignedIn' 
+          - $ref: '#/Response_subject_includedRegion_notSignedIn' 
+          - $ref: '#/Response_subject_includedRegionSubject_notSignedIn' 
+          - $ref: '#/Response_subject_includedAmbassador_notSignedIn' 
+          - $ref: '#/Response_subject_includedJob_notSignedIn' 
+          - $ref: '#/Response_subject_includedSchool_notSignedIn' 
+          - $ref: '#/Response_subject_includedCity_notSignedIn' 
+          - $ref: '#/Response_subject_includedCountry_notSignedIn' 
+          - $ref: '#/Response_subject_includedSubject_notSignedIn' 
+  required:
+    - schema
+    - data
+
+Response_subject_notSignedIn_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../models/json-api/subject.yaml#/JsonApiModel_subject_type'
+    id:
+      $ref: '../../models/json-api/subject.yaml#/JsonApiModel_subject_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: '../../models/library/subject.yaml#/subject_name'
+        slug:
+          $ref: '../../models/library/subject.yaml#/subject_slug'
+        middleOfSentenceShortName:
+          $ref: '../../models/library/subject.yaml#/subject_middleOfSentenceShortName'
+        numberOfLiveJobs:
+          $ref: '../../models/library/subject.yaml#/subject_numberOfLiveJobs'
+        numberOfThTeachers:
+          $ref: '../../models/library/subject.yaml#/subject_numberOfThTeachers'
+        numberOfLiveHeadOfDepartmentJobs:
+          $ref: '../../models/library/subject.yaml#/subject_numberOfLiveHeadOfDepartmentJobs'
+        jobsDescription:
+          $ref: '../../models/library/subject.yaml#/subject_jobsDescription'
+      required:
+        - name
+        - slug
+        - shortName
+        - middleOfSentenceShortName
+        - numberOfThTeachers
+        - numberOfLiveJobs
+        - numberOfLiveHeadOfDepartmentJobs
+        - jobsDescription
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        world: 
+          $ref: '../../../components/models/json-api/regional/world.yaml#/JsonApiModel_regional-world_relationship'
+        region:
+          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
+        ambassador:
+          $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship'
+        jobs:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
+        subject:
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_multiple'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+
+Response_subject_includedWorld_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/world.yaml#/JsonApiModel_regional-world_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/world.yaml#/JsonApiModel_regional-world_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attribute
+        photo1:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - photo1
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        photo1:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedRegion_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_name'
+        slug:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_slug'
+        costOfLivingIndex:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_costOfLivingIndex'
+        minGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_lowerQuartileGrossSalaryJuniorTeacher'
+        medianGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_upperQuartileGrossSalaryJuniorTeacher'
+        maxGrossSalaryJuniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher'
+        minGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_lowerQuartileGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_medianGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_upperQuartileGrossSalarySeniorTeacher'
+        maxGrossSalarySeniorTeacher:
+          $ref: '../../../components/models/library/regional/region.yaml#/regional-region_maxGrossSalarySeniorTeacher'
+      required:
+        - name
+        - slug
+        - costOfLivingIndex
+        - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
+        - maxGrossSalaryJuniorTeacher
+        - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
+        - maxGrossSalarySeniorTeacher
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        subject:
+          $ref: '../../../components/models/json-api/subject.yaml#/JsonApiModel_subject_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedRegionSubject_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        numberOfLiveJobs:
+          $ref: '../../../components/models/library/regional/regionSubject.yaml#/regional-regionSubject_numberOfLiveJobs'
+      required:
+        - numberOfLiveJobs
+  required:
+    - type
+    - id
+    - attributes
+
+Response_subject_includedAmbassador_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_type'
+    id:
+      $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+      required:
+        - photo
+        - user
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedJob_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type'
+    id:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: '../../../components/models/library/job/job.yaml#/job_title'
+        # relationship attributes
+        school:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
+      required:
+        - title
+        - school
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationship
+
+Response_subject_includedSchool_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type'
+    id:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name: 
+          $ref: '../../../components/models/library/school/school.yaml#/school_name'
+        slug:
+          $ref: '../../../components/models/library/school/school.yaml#/school_slug'
+        smallProfilePhoto:
+          $ref: '../../../components/models/library/school/school.yaml#/school_smallProfilePhoto'
+        # relationship attribute
+        city:
+          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+      required:
+        - name
+        - slug
+        - smallProfilePhoto
+        - city
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        city:
+          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedCity_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/regional/city.yaml#/regional-city_name'
+      required:
+        - name
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        country:
+          $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedCountry_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/regional/country.yaml#/regional-country_name'
+        # relationship attributes
+        region:
+          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+      required:
+        - name
+        # relationship attributes
+        - region
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        region:
+          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedSubject_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_type'
+    id:
+      $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_name'
+        shortName:
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_shortName'
+        slug:
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_slug'
+      required:
+        - name
+        - shortName
+        - slug
+
+  required:
+    - type
+    - id
+    - attributes
+
