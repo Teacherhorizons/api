@@ -1,8 +1,9 @@
 import * as shared from '../../shared';
 import * as base from '../../baseTests';
 
-// const includeTestNames: string[] = null;
-const includeTestNames = ['regional-regions - signedOut'];
+const includeTestNames: string[] = null;
+// const includeTestNames = ['regional-regions - signedOut'];
+// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe'];
 
 let baseUrl = `regional-regions`;
 

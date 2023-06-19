@@ -26,14 +26,12 @@ JsonApiModel_regional-countryAttraction:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - id
-        - countryId
-        - typeId
-        - name
-        - iconName
+        - country
+        - type
         - creationDate
         - latestUpdateDate
-        - creationUserId
-        - latestUpdateUserId
+        - creationUser
+        - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false

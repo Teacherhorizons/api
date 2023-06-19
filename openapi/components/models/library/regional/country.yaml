@@ -14,6 +14,7 @@ regional-country_photo1Url:
 regional-country_population:
   type: integer
   example: 10494500
+  nullable: true
 regional-country_creationDate:
   type: string
   format: date-time
@@ -366,8 +367,8 @@ regional-country_expensePercentageSportsAndLeisure:
   type: number
   example: 5.4
 regional-country_expensePercentageMarkets:
-  type: integer
-  example: 13
+  type: number
+  example: 13.1
 regional-country_expensePercentageUtilities:
   type: number
   example: 18.3
@@ -383,6 +384,7 @@ regional-country_communityResponseQuestionIds:
     type: integer
   example: [4, 7, 10, 14]
   description: Derived (dw)
+  nullable: true
 
 #relationship attributes
 regional-country_localCurrencyId:

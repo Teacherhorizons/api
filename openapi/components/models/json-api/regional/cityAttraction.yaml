@@ -26,12 +26,12 @@ JsonApiModel_regional-cityAttraction:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - id
-        - cityId
-        - typeId
+        - city
+        - type
         - creationDate
         - latestUpdateDate
-        - creationUserId
-        - latestUpdateUserId
+        - creationUser
+        - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false

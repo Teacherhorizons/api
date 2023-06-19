@@ -248,7 +248,7 @@ regional-city_expensePercentageRestaurants:
   example: 9.199
 regional-city_nearestWeatherStationId:
   type: string
-  example: "01234"
+  example: '01234'
   description: Not a relationship
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
@@ -314,7 +314,7 @@ regional-city_communityResponseQuestionIds:
   type: array
   items:
     type: integer
-  example: [4,7,10,14]
+  example: [4, 7, 10, 14]
   description: Derived (dw)
 
 # Relationship attributes
@@ -342,7 +342,7 @@ regional-city_photo1Id:
   type: integer
   example: 1
   description: Derived (dw); Relationship to general-photo
-  
+
 # Relationships
 regional-city_country:
   type: object
@@ -350,7 +350,7 @@ regional-city_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -361,7 +361,7 @@ regional-city_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -372,7 +372,7 @@ regional-city_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
   required:
     - id
@@ -383,7 +383,7 @@ regional-city_language:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to geneeral-language
   required:
     - id
@@ -394,11 +394,7 @@ regional-city_ambassadorTeacher:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher
   required:
     - id
-
-
-
-

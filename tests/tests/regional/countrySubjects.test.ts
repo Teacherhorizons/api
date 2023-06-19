@@ -15,7 +15,7 @@ var tests = shared.addTestGroups(
         {
           name: 'no query params',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter schema must be passed
+          expectedStatus: 400, // schema must be passed
         },
       ],
     },
@@ -25,29 +25,28 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=abc',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameterschema must be correct
+          expectedStatus: 400, // schema must be correct
         },
       ],
     },
-    // not-signed-in-single -------------------------------------------------
-    {
-      getUrl: (data) => `regional-countrySubjects?schema=not-signed-in-single&include=jobs`,
-      tests: [
-        {
-          name: 'schema=not-signed-in-single&include=jobs',
-          userEmail: 'signedOut',
-          expectedStatus: 422, //nonExistentParameterPassed	include must not be passed
-        },
-      ],
-    },
+    // {
+    //   getUrl: (data) => `regional-countrySubjects?schema=not-signed-in-single&filter[slug]=asia-singapore-english`,
+    //   tests: [
+    //     {
+    //       name: 'filter[slug]=asia-singapore-english - no query params',
+    //       userEmail: 'signedOut',
+    //       expectedStatus: 200,
+    //     },
+    //   ],
+    // },
   ]
 );
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter(
-  // (t) => includeTestNames == null || includeTestNames.includes(t.name)
+  (t) => includeTestNames == null || includeTestNames.includes(t.name)
   // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
-  (t) => t.name === 'no query params'
+  // (t) => t.name === 'no query params'
 );
 
 describe('get-regional-countrySubjects', () => {

@@ -1,12 +1,12 @@
 Response_regional-cities:
   oneOf:
-    - $ref: "#/Response_regional-cities_notSignedIn"
-    - $ref: "#/Response_regional-cities_notSignedInMultiple"
+    - $ref: '#/Response_regional-cities_notSignedIn'
+    - $ref: '#/Response_regional-cities_notSignedInMultiple'
   discriminator:
     propertyName: schema
     mapping:
-      not-signed-in: "#/Response_regional-cities_notSignedIn"
-      not-signed-in-multiple: "#/Response_regional-cities_notSignedInMultiple"
+      not-signed-in: '#/Response_regional-cities_notSignedIn'
+      not-signed-in-multiple: '#/Response_regional-cities_notSignedInMultiple'
 
 Response_regional-cities_notSignedIn:
   type: object
@@ -19,19 +19,19 @@ Response_regional-cities_notSignedIn:
     data:
       type: array
       items:
-        $ref: "./city.yaml#/Response_regional-city_notSignedIn_item"
+        $ref: './city.yaml#/Response_regional-city_notSignedIn_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: "./city.yaml#/Response_regional-city_includedStaff_notSignedIn"
-          - $ref: "./city.yaml#/Response_regional-city_includedJob_notSignedIn"
-          - $ref: "./city.yaml#/Response_regional-city_includedSchool_notSignedIn"
-          - $ref: "./city.yaml#/Response_regional-city_includedAmbassador_notSignedIn"   
-          - $ref: "./city.yaml#/Response_regional-city_includedCityPhoto_notSignedIn"
-          - $ref: "./city.yaml#/Response_regional-city_includedCountryPhoto_notSignedIn"
-          - $ref: "./city.yaml#/Response_regional-city_includedAttraction_notSignedIn"  
-          - $ref: "./city.yaml#/Response_regional-city_includedCityMonthNumber_notSignedIn"   
+          - $ref: './city.yaml#/Response_regional-city_includedStaff_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedJob_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedSchool_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedAmbassador_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedCityPhoto_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedCountryPhoto_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedAttraction_notSignedIn'
+          - $ref: './city.yaml#/Response_regional-city_includedCityMonthNumber_notSignedIn'
   required:
     - schema
     - data
@@ -47,7 +47,7 @@ Response_regional-cities_notSignedInMultiple:
     data:
       type: array
       items:
-        $ref: "#/Response_regional-cities_notSignedInMultiple_item"
+        $ref: '#/Response_regional-cities_notSignedInMultiple_item'
   required:
     - schema
     - data
@@ -57,18 +57,18 @@ Response_regional-cities_notSignedInMultiple_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type"
+      $ref: '../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_type'
     id:
-      $ref: "../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id"
+      $ref: '../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: "../../models/library/regional/city.yaml#/regional-city_name"
+          $ref: '../../models/library/regional/city.yaml#/regional-city_name'
         slug:
-          $ref: "../../models/library/regional/city.yaml#/regional-city_slug"
+          $ref: '../../models/library/regional/city.yaml#/regional-city_slug'
       required:
         - name
         - slug

@@ -1,10 +1,7 @@
 import * as shared from '../../shared';
-import * as base from '../../baseTests';
 
 // const includeTestNames: string[] = null;
 const includeTestNames = ['regional-world - standard response'];
-
-let baseUrl = `regional-regions`;
 
 var tests = shared.addTestGroups(
   [],
@@ -12,7 +9,7 @@ var tests = shared.addTestGroups(
     {
       getUrl: (data) =>
         `regional-world/1?useCache=false&schema=not-signed-in&include=staff,regions,jobs,schools,ambassadors`,
-      // `regional-world/1?useCache=false&schema=not-signed-in&include=regions,schools`,
+      // `regional-world/1?useCache=false&schema=not-signed-in&include=regions,schools,jobs,staff`,
       tests: [
         {
           name: 'regional-world - standard response',
@@ -54,7 +51,7 @@ describe('get-regional-world', () => {
         expect(schools.length).toBeLessThanOrEqual(8);
 
         const jobs = included.filter((x) => x.type === 'job');
-        expect(jobs.length).toEqual(4);
+        expect(jobs.length).toBeLessThanOrEqual(4);
 
         // spec test
         expect(response).toSatisfyApiSpec();

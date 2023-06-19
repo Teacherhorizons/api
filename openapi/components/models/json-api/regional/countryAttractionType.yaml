@@ -3,27 +3,27 @@ JsonApiModel_regional-countryAttractionType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-countryAttractionType_type"
+      $ref: '#/JsonApiModel_regional-countryAttractionType_type'
     id:
-      $ref: "#/JsonApiModel_regional-countryAttractionType_id"
+      $ref: '#/JsonApiModel_regional-countryAttractionType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name"
+          $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name'
         iconName:
-          $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_iconName"
+          $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_iconName'
         creationDate:
-          $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_creationDate"
+          $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_creationDate'
         latestUpdateDate:
-          $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_latestUpdateDate"
+          $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_latestUpdateDate'
         # relationship attributes
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"        
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - id
         - name
@@ -37,9 +37,9 @@ JsonApiModel_regional-countryAttractionType:
       additionalProperties: false
       properties:
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
 
   required:
     - type
@@ -53,7 +53,7 @@ JsonApiModel_regional-countryAttractionType_type:
 
 JsonApiModel_regional-countryAttractionType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -62,9 +62,11 @@ JsonApiModel_regional-countryAttractionType_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-countryAttractionType_id"
+      $ref: '#/JsonApiModel_regional-countryAttractionType_id'
     name:
-      $ref: "../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name"
+      $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_name'
+    iconName:
+      $ref: '../../library/regional/countryAttractionType.yaml#/regional-countryAttractionType_iconName'
   required:
     - id
     - name
@@ -78,9 +80,9 @@ JsonApiModel_regional-countryAttractionType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-countryAttractionType_type"
+          $ref: '#/JsonApiModel_regional-countryAttractionType_type'
         id:
-          $ref: "#/JsonApiModel_regional-countryAttractionType_id"
+          $ref: '#/JsonApiModel_regional-countryAttractionType_id'
       required:
         - type
         - id

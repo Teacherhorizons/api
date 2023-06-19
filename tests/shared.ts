@@ -16,7 +16,8 @@ export var data: Config.Data;
 const mockGetData = async (): Promise<Config.Data> => {
   // if (config.createTestData) return;
   // await new Promise((resolve) => setTimeout(resolve, 1000));
-  return config.local ? meLocalData : betaData;
+  return betaData;
+  // return config.local ? meLocalData : betaData;
 };
 
 export const setupBeforeAll = async () => {

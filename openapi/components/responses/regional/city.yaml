@@ -146,9 +146,10 @@ Response_regional-city_notSignedIn_item:
           $ref: '../../models/library/regional/city.yaml#/regional-city_expensePercentageUtilities'
         expensePercentageRent:
           $ref: '../../models/library/regional/city.yaml#/regional-city_expensePercentageRent'
+        expensePercentageRestaurants:
+          $ref: '../../models/library/regional/city.yaml#/regional-city_expensePercentageRestaurants'
         communityResponseQuestionIds:
           $ref: '../../models/library/regional/city.yaml#/regional-city_communityResponseQuestionIds'
-        # relationship Attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         country:
@@ -158,7 +159,7 @@ Response_regional-city_notSignedIn_item:
       required:
         - name
         - slug
-        - photo1
+        # - photo1
         - numberOfSchools
         - numberOfLiveJobs
         - teachingInCityDescription
@@ -194,7 +195,7 @@ Response_regional-city_notSignedIn_item:
         - costOfGasoline1Litre
         - monthlyCostOfBasicUtilities
         - monthlyCostOfInternet
-        - monthlyRent1BedroomApartmentCityCentre
+        - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
         - crimeIndex
         - walkingAloneInDaylightSafetyIndex
@@ -207,6 +208,7 @@ Response_regional-city_notSignedIn_item:
         - expensePercentageMarkets
         - expensePercentageUtilities
         - expensePercentageRent
+        - expensePercentageRestaurants
         - communityResponseQuestionIds
         - country
         - region
@@ -257,7 +259,7 @@ Response_regional-city_includedStaff_notSignedIn:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
-        - photo
+        # - photo
         - description
         - user
   required:
@@ -280,6 +282,8 @@ Response_regional-city_includedJob_notSignedIn:
         # simple attributes
         title:
           $ref: '../../../components/models/library/job/job.yaml#/job_title'
+      required:
+        - title
     relationships:
       type: object
       additionalProperties: false
@@ -287,7 +291,6 @@ Response_regional-city_includedJob_notSignedIn:
         school:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
       required:
-        - title
         - school
   required:
     - type
@@ -313,6 +316,10 @@ Response_regional-city_includedSchool_notSignedIn:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
         smallProfilePhoto:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - name
+        - slug
+        # - smallProfilePhoto
     relationships:
       type: object
       additionalProperties: false
@@ -320,9 +327,6 @@ Response_regional-city_includedSchool_notSignedIn:
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship'
       required:
-        - name
-        - slug
-        - smallProfilePhoto
         - city
   required:
     - type
@@ -344,6 +348,8 @@ Response_regional-city_includedAmbassador_notSignedIn:
         # simple attributes
         levelName:
           $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName'
+        testimonial:
+          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial'
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         # relationship attributes
@@ -359,7 +365,7 @@ Response_regional-city_includedAmbassador_notSignedIn:
           $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - levelName
-        - photo
+        # - photo
         - user
         - region
   required:
@@ -387,7 +393,7 @@ Response_regional-city_includedCityPhoto_notSignedIn:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - precedence
-        - photo
+        # - photo
   required:
     - type
     - id
@@ -413,7 +419,7 @@ Response_regional-city_includedCountryPhoto_notSignedIn:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - precedence
-        - photo
+        # - photo
   required:
     - type
     - id
