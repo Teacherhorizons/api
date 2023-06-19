@@ -90,20 +90,33 @@ Response_regional-country_notSignedIn_item:
           $ref: '../../models/library/regional/country.yaml#/regional-country_averageSavingPercentage'
         averageAnnualSaving:
           $ref: '../../models/library/regional/country.yaml#/regional-country_averageAnnualSaving'
+        # junior teacher
         minGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_minGrossSalaryJuniorTeacher'
+        lowerQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_lowerQuartileGrossSalaryJuniorTeacher'
         averageGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_averageGrossSalaryJuniorTeacher'
         medianGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_medianGrossSalaryJuniorTeacher'
+        upperQuartileGrossSalaryJuniorTeacher:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_maxGrossSalaryJuniorTeacher'
+        # senior teacher
         minGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_minGrossSalarySeniorTeacher'
+        lowerQuartileGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_lowerQuartileGrossSalarySeniorTeacher'
         averageGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_averageGrossSalarySeniorTeacher'
+        medianGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_medianGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../models/library/regional/country.yaml#/regional-country_maxGrossSalarySeniorTeacher'
+        upperQuartileGrossSalarySeniorTeacher:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_upperQuartileGrossSalarySeniorTeacher'
+        #
         percentageOfSchoolsHaveFlightAllowance:
           $ref: '../../models/library/regional/country.yaml#/regional-country_percentageOfSchoolsHaveFlightAllowance'
         percentageOfSchoolsHavePrivateHealthcareScheme:
@@ -194,12 +207,21 @@ Response_regional-country_notSignedIn_item:
         - numberOfSecondaryOtherCurriculumSchools
         - averageSavingPercentage
         - averageAnnualSaving
+        # junior teacher
         - minGrossSalaryJuniorTeacher
+        - lowerQuartileGrossSalaryJuniorTeacher
+        - medianGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher
+        - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
+        # senior teacher
         - minGrossSalarySeniorTeacher
+        - lowerQuartileGrossSalarySeniorTeacher
+        - medianGrossSalarySeniorTeacher
         - averageGrossSalarySeniorTeacher
+        - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        #
         - percentageOfSchoolsHaveFlightAllowance
         - percentageOfSchoolsHavePrivateHealthcareScheme
         - percentageOfOverseasTeachers
