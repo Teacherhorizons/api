@@ -290,6 +290,12 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkType" />
 
+  - name: simple-model-subject-subjectTeacher
+    x-displayName: Simple model - subject-subjectTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectTeacher" />
+      
+
   # tags - simple-models - time
 
   - name: simple-model-time-date
@@ -1113,6 +1119,12 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkType" />
 
+  - name: json-api-model-subject-subjectTeacher
+    x-displayName: JSON:API model - subject-subjectTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectTeacher" />
+      
+
   # tags - JSON:API models - time
 
   - name: json-api-model-time-date
@@ -1778,6 +1790,7 @@ x-tagGroups:
       - simple-model-subject-subjectMonth
       - simple-model-subject-subjectLink
       - simple-model-subject-linkType
+      - simple-model-subject-subjectTeacher
       - simple-model-time-date
       - simple-model-time-week
       - simple-model-time-month
@@ -1941,6 +1954,7 @@ x-tagGroups:
       - json-api-model-subject-subjectMonth
       - json-api-model-subject-subjectLink
       - json-api-model-subject-linkType
+      - json-api-model-subject-subjectTeacher
       - json-api-model-time-date
       - json-api-model-time-week
       - json-api-model-time-month
@@ -2074,6 +2088,7 @@ x-tagGroups:
       - job
       - meta
       - regional
+      - subject
       - school
       - teacher
       - user

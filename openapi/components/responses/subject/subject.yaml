@@ -29,6 +29,8 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedCity_notSignedIn' 
           - $ref: '#/Response_subject_includedCountry_notSignedIn' 
           - $ref: '#/Response_subject_includedSubject_notSignedIn' 
+          - $ref: '#/Response_subject_includedSubjectTeacher_notSignedIn' 
+          - $ref: '#/Response_subject_includedTeacher_notSignedIn'
   required:
     - schema
     - data
@@ -38,32 +40,37 @@ Response_subject_notSignedIn_item:
   additionalProperties: false
   properties:
     type:
-      $ref: '../../models/json-api/subject.yaml#/JsonApiModel_subject_type'
+      $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject_type'
     id:
-      $ref: '../../models/json-api/subject.yaml#/JsonApiModel_subject_id'
+      $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         name:
-          $ref: '../../models/library/subject.yaml#/subject_name'
+          $ref: '../../models/library/subject/subject.yaml#/subject_name'
         slug:
-          $ref: '../../models/library/subject.yaml#/subject_slug'
+          $ref: '../../models/library/subject/subject.yaml#/subject_slug'
+        shortName:
+          $ref: '../../models/library/subject/subject.yaml#/subject_shortName'
+        middleOfSentenceName:
+          $ref: '../../models/library/subject/subject.yaml#/subject_middleOfSentenceName'
         middleOfSentenceShortName:
-          $ref: '../../models/library/subject.yaml#/subject_middleOfSentenceShortName'
+          $ref: '../../models/library/subject/subject.yaml#/subject_middleOfSentenceShortName'
         numberOfLiveJobs:
-          $ref: '../../models/library/subject.yaml#/subject_numberOfLiveJobs'
+          $ref: '../../models/library/subject/subject.yaml#/subject_numberOfLiveJobs'
         numberOfThTeachers:
-          $ref: '../../models/library/subject.yaml#/subject_numberOfThTeachers'
+          $ref: '../../models/library/subject/subject.yaml#/subject_numberOfThTeachers'
         numberOfLiveHeadOfDepartmentJobs:
-          $ref: '../../models/library/subject.yaml#/subject_numberOfLiveHeadOfDepartmentJobs'
+          $ref: '../../models/library/subject/subject.yaml#/subject_numberOfLiveHeadOfDepartmentJobs'
         jobsDescription:
-          $ref: '../../models/library/subject.yaml#/subject_jobsDescription'
+          $ref: '../../models/library/subject/subject.yaml#/subject_jobsDescription'
       required:
         - name
         - slug
         - shortName
+        - middleOfSentenceName
         - middleOfSentenceShortName
         - numberOfThTeachers
         - numberOfLiveJobs
@@ -75,14 +82,16 @@ Response_subject_notSignedIn_item:
       properties:
         world: 
           $ref: '../../../components/models/json-api/regional/world.yaml#/JsonApiModel_regional-world_relationship'
-        region:
+        regions:
           $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
         ambassador:
           $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship'
         jobs:
           $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
-        subject:
+        subjects:
           $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_multiple'
+        teachers:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship_multiple'
   required:
     - type
     - id
@@ -108,17 +117,17 @@ Response_subject_includedWorld_notSignedIn:
       required:
         - photo1
 
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        photo1:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
+    # relationships:
+    #   type: object
+    #   additionalProperties: false
+    #   properties:
+    #     photo1:
+    #       $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
   required:
     - type
     - id
     - attributes
-    - relationships
+    # - relationships
 
 Response_subject_includedRegion_notSignedIn:
   type: object
@@ -178,7 +187,7 @@ Response_subject_includedRegion_notSignedIn:
       additionalProperties: false
       properties:
         subject:
-          $ref: '../../../components/models/json-api/subject.yaml#/JsonApiModel_subject_relationship'
+          $ref: '../../../components/models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_relationship'
   required:
     - type
     - id
@@ -222,17 +231,16 @@ Response_subject_includedAmbassador_notSignedIn:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        # user:
+        #   $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - photo
-        - user
     relationships:
       type: object
       additionalProperties: false
       properties:
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
+        # photo:
+        #   $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
   required:
@@ -256,12 +264,12 @@ Response_subject_includedJob_notSignedIn:
         # simple attributes
         title:
           $ref: '../../../components/models/library/job/job.yaml#/job_title'
-        # relationship attributes
-        school:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
+        # # relationship attributes
+        # school:
+        #   $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
       required:
         - title
-        - school
+        # - school
     relationships:
       type: object
       additionalProperties: false
@@ -294,13 +302,13 @@ Response_subject_includedSchool_notSignedIn:
         smallProfilePhoto:
           $ref: '../../../components/models/library/school/school.yaml#/school_smallProfilePhoto'
         # relationship attribute
-        city:
-          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+        # city:
+        #   $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
       required:
         - name
         - slug
         - smallProfilePhoto
-        - city
+        # - city
 
     relationships:
       type: object
@@ -359,12 +367,12 @@ Response_subject_includedCountry_notSignedIn:
         name:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_name'
         # relationship attributes
-        region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+        # region:
+        #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
         # relationship attributes
-        - region
+        # - region
 
     relationships:
       type: object
@@ -395,15 +403,83 @@ Response_subject_includedSubject_notSignedIn:
           $ref: '../../../components/models/library/subject/subject.yaml#/subject_name'
         shortName:
           $ref: '../../../components/models/library/subject/subject.yaml#/subject_shortName'
+        middleOfSentenceName:
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_middleOfSentenceName'
+        middleOfSentenceShortName:
+          $ref: '../../../components/models/library/subject/subject.yaml#/subject_middleOfSentenceShortName'
         slug:
           $ref: '../../../components/models/library/subject/subject.yaml#/subject_slug'
       required:
         - name
         - shortName
+        - middleOfSentenceName
+        - middleOfSentenceShortName
         - slug
 
   required:
     - type
     - id
     - attributes
+
+Response_subject_includedSubjectTeacher_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/subject/subjectTeacher.yaml#/JsonApiModel_subject-subjectTeacher_type'
+    id:
+      $ref: '../../../components/models/json-api/subject/subjectTeacher.yaml#/JsonApiModel_subject-subjectTeacher_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        testimonial:
+          $ref: '../../../components/models/library/subject/subjectTeacher.yaml#/subject-subjectTeacher_testimonial'
+      required:
+        - testimonial
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+
+Response_subject_includedTeacher_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type'
+    id:
+      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - photo
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
 

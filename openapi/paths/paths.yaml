@@ -65,6 +65,11 @@
   $ref: './../paths/regional/countrySubject.yaml'
 /regional-countrySubjects:
   $ref: './../paths/regional/countrySubjects.yaml'
+
+# subject
+/subject/{subjectId}:
+  $ref: './../paths/subject/subject.yaml'
+  
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'

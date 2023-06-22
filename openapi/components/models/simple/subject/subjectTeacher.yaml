@@ -1,0 +1,27 @@
+SimpleModel_subject-subjectTeacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_subject-subjectTeacher_id"
+    # simple attributes
+    testimonial:
+      $ref: "../../library/subject/subjectTeacher.yaml#/subject-subjectTeacher_testimonial"
+
+    # relationship attributes
+    subjectId:
+      $ref: "../../library/subject/subjectTeacher.yaml#/subject-subjectTeacher_subjectId" 
+    teacherId:
+      $ref: "../../library/subject/subjectTeacher.yaml#/subject-subjectTeacher_teacherId"   
+  required:
+    - id
+    - testimonial
+    - subjectId
+    - teacherId
+
+# shared
+SimpleModel_subject-subjectTeacher_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

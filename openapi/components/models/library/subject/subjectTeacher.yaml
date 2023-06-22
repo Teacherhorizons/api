@@ -1,0 +1,42 @@
+#attributes
+subject-subjectTeacher_testimonial:
+  type: string
+  example: Foo bar
+
+#relationship attributes
+subject-subjectTeacher_subjectId:
+  type: integer
+  example: 1
+  description: Relationship to subject
+
+subject-subjectTeacher_teacherId:
+  type: integer
+  example: 1
+  description: Relationship to teacher
+
+#relationships
+
+subject-subjectTeacher_subject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "1"
+      description: Relationship to subject
+  required: 
+    - id
+
+subject-subjectTeacher_teacher:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: "202111"
+      description: Relationship to teacher
+  required: 
+    - id
+  
+
+
