@@ -1,0 +1,83 @@
+Response_subjects:
+  oneOf:
+    - $ref: '#/Response_subjects_notSignedInSingle'
+    - $ref: '#/Response_subjects_notSignedInMultiple'
+  discriminator:
+    propertyName: schema
+    mapping:
+      not-signed-in-single: '#/Response_subjects_notSignedInSingle'
+      not-signed-in-multiple: '#/Response_subjects_notSignedInMultiple'
+
+Response_subjects_notSignedInSingle:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in
+    data:
+      type: array
+      items:
+        $ref: './subject.yaml#/Response_subject_notSignedIn_item'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: './subject.yaml#/Response_subject_includedWorld_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedRegion_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedRegionSubject_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedAmbassador_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedJob_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedSchool_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedCity_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedCountry_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedSubject_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedSubjectTeacher_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedTeacher_notSignedIn'
+
+  required:
+    - schema
+    - data
+
+Response_subjects_notSignedInMultiple:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - not-signed-in-multiple
+    data:
+      type: array
+      items:
+        $ref: '#/Response_subjects_notSignedInMultiple_item'
+  required:
+    - schema
+    - data
+
+Response_subjects_notSignedInMultiple_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject_type'
+    id:
+      $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple Attributes
+        name:
+          $ref: '../../models/library/subject/subject.yaml#/subject_name'
+        slug:
+          $ref: '../../models/library/subject/subject.yaml#/subject_slug'
+      required:
+        - name
+        - slug
+  required:
+    - type
+    - id
+    - attributes
+

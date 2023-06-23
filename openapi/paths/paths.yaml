@@ -67,7 +67,10 @@
   $ref: './../paths/regional/countrySubjects.yaml'
 
 # subject
-/subject/{subjectId}:
+/subjects:
+  $ref: './../paths/subject/subjects.yaml'
+
+/subjects/{subjectId}:
   $ref: './../paths/subject/subject.yaml'
   
 # test
