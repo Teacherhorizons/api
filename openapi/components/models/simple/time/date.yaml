@@ -5,11 +5,11 @@ SimpleModel_time-date:
     id:
       $ref: "#/SimpleModel_time-date_id"
     # simple attributes
-    date:
-      $ref: "../../library/time/date.yaml#/time-date_date"
+    dateId:
+      $ref: "../../library/time/date.yaml#/time-date_dateId"
   required:
     - id
-    - date
+    - dateId
 
 # shared
 SimpleModel_time-date_id:

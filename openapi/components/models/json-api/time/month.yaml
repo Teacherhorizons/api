@@ -6,9 +6,20 @@ JsonApiModel_time-month:
       $ref: "#/JsonApiModel_time-month_type"
     id:
       $ref: "#/JsonApiModel_time-month_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        dateId:
+          $ref: "../../library/time/month.yaml#/time-month_dateId"
+        monthNumber:
+          $ref: "../../library/time/month.yaml#/time-month_monthNumber"
   required:
     - type
     - id
+    - dateId
+    - monthNumber
 
 JsonApiModel_time-month_type:
   type: string

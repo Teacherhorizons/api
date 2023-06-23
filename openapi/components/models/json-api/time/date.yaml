@@ -11,11 +11,12 @@ JsonApiModel_time-date:
       additionalProperties: false
       properties:
         # simple attributes
-        date:
-          $ref: "../../library/time/date.yaml#/time-date_date"
+        dateId:
+          $ref: "../../library/time/date.yaml#/time-date_dateId"
   required:
     - type
     - id
+    - dateId
 
 JsonApiModel_time-date_type:
   type: string

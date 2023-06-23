@@ -4,8 +4,12 @@ SimpleModel_time-week:
   properties:
     id:
       $ref: "#/SimpleModel_time-week_id"
+    # simple attributes
+    dateId:
+      $ref: "../../library/time/week.yaml#/time-week_dateId"
   required:
     - id
+    - dateId
 
 # shared
 SimpleModel_time-week_id:
