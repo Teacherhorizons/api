@@ -1,0 +1,79 @@
+get:
+  operationId: get-subjects
+  summary: Get subjects (one or more)
+  tags:
+    - subject
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+    - Can be use to return a list of one subject with lots of data or a list of multiple subjects, each with minimal data
+    - Note: not-signed-in-multiple will be added later as needed
+  parameters:
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - not-signed-in-single
+          - not-signed-in-multiple
+      description: |
+        - not-signed-in-single - List of one subject with lots of data
+        - [LATER] not-signed-in-multiple - List of multiple subjects, each with minimal data
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - in: query
+      name: include
+      description: |
+        - world -	A photo of world
+        - region.subject- All regions for related subject
+        - regions - All regions 
+        - ambassador - Ambassador for related country
+        - jobs - All jobs for related subject
+        - subjects - All subjects except the queried subject 
+        - teachers - All teachers for related subject
+      # required: true
+      example: world, region.subject, regions, ambassador, jobs, subjects, teachers
+      schema:
+        type: string
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[slug]:
+            type: string
+            description: For use with not-signed-in-single only
+          # filter[subject.id]:
+          #   type: integer
+          #   description: For use with not-signed-in-multiple only
+          # filter[subject.slug]:
+          #   type: string
+          #   description: For use with not-signed-in-multiple only
+        example:
+          slug: maths
+          # subject.id: 4
+          # subject.slug: maths
+
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/subject/subjects.yaml#/Response_subjects'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

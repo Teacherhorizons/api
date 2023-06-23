@@ -4,8 +4,15 @@ SimpleModel_time-month:
   properties:
     id:
       $ref: "#/SimpleModel_time-month_id"
+    # simple attributes
+    dateId:
+      $ref: "../../library/time/month.yaml#/time-month_dateId"
+    monthNumber:
+      $ref: "../../library/time/month.yaml#/time-month_monthNumber"
   required:
     - id
+    - dateId
+    - monthNumber
 
 # shared
 SimpleModel_time-month_id:

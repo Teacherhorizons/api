@@ -4,8 +4,12 @@ SimpleModel_time-schoolYear:
   properties:
     id:
       $ref: "#/SimpleModel_time-schoolYear_id"
+    # simple attributes
+    dateId:
+      $ref: "../../library/time/schoolYear.yaml#/time-schoolYear_dateId"
   required:
     - id
+    - dateId
 
 
 # shared

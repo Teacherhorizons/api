@@ -1,20 +1,20 @@
-JsonApiModel_regional-regionSubjectSchoolYears:
+JsonApiModel_regional-regionSubjectSchoolYear:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_type"
+      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_type"
     id:
-      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_id"
+      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         numberOfLiveJobs:
-          $ref: "../../library/regional/regionSubjectSchoolYears.yaml#/regional-regionSubjectSchoolYears_numberOfLiveJobs"
+          $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs"
         averageAnnualGrossIncome:
-          $ref: "../../library/regional/regionSubjectSchoolYears.yaml#/regional-regionSubjectSchoolYears_averageAnnualGrossIncome"
+          $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_averageAnnualGrossIncome"
         # relationship attributes
         region:
           $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"        
@@ -43,32 +43,32 @@ JsonApiModel_regional-regionSubjectSchoolYears:
     - type
     - id
 
-JsonApiModel_regional-regionSubjectSchoolYears_type:
+JsonApiModel_regional-regionSubjectSchoolYear_type:
   type: string
-  example: regional-regionSubjectSchoolYears
+  example: regional-regionSubjectSchoolYear
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_regional-regionSubjectSchoolYears_id:
+JsonApiModel_regional-regionSubjectSchoolYear_id:
   type: string
   example: "1"
   readOnly: true
   description: Unique identifier of the entity (string)
 
-# JsonApiModel_regional-regionSubjectSchoolYears_relationship_attribute:
+# JsonApiModel_regional-regionSubjectSchoolYear_relationship_attribute:
 #   type: object
 #   additionalProperties: false
 #   properties:
 #     id:
-#       $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_id"
+#       $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
 #     # url:
-#     #   $ref: "../../library/regional/regionSubjectSchoolYears.yaml#/regional-regionSubjectSchoolYears_url"
+#     #   $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_url"
 #     # description:
-#     #   $ref: "../../library/regional/regionSubjectSchoolYears.yaml#/regional-regionSubjectSchoolYears_description"
+#     #   $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_description"
 #   required:
 #     - id
 
-# JsonApiModel_regional-regionSubjectSchoolYears_relationship:
+# JsonApiModel_regional-regionSubjectSchoolYear_relationship:
 #   type: object
 #   additionalProperties: false
 #   properties:
@@ -77,16 +77,16 @@ JsonApiModel_regional-regionSubjectSchoolYears_id:
 #       additionalProperties: false
 #       properties:
 #         type:
-#           $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_type"
+#           $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_type"
 #         id:
-#           $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_id"
+#           $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
 #       required:
 #         - type
 #         - id
 #   required:
 #     - data
 
-# JsonApiModel_regional-regionSubjectSchoolYears_relationship_multiple:
+# JsonApiModel_regional-regionSubjectSchoolYear_relationship_multiple:
 #   type: object
 #   additionalProperties: false
 #   properties:
@@ -97,9 +97,9 @@ JsonApiModel_regional-regionSubjectSchoolYears_id:
 #         additionalProperties: false
 #         properties:
 #           type:
-#             $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_type"
+#             $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_type"
 #           id:
-#             $ref: "#/JsonApiModel_regional-regionSubjectSchoolYears_id"
+#             $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
 #         required:
 #           - type
 #           - id

@@ -6,9 +6,17 @@ JsonApiModel_time-week:
       $ref: "#/JsonApiModel_time-week_type"
     id:
       $ref: "#/JsonApiModel_time-week_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        dateId:
+          $ref: "../../library/time/week.yaml#/time-week_dateId"
   required:
     - type
     - id
+    - dateId
 
 JsonApiModel_time-week_type:
   type: string
