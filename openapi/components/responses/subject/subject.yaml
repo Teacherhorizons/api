@@ -20,16 +20,16 @@ Response_subject_notSignedIn:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_subject_includedWorld_notSignedIn' 
-          - $ref: '#/Response_subject_includedRegion_notSignedIn' 
-          - $ref: '#/Response_subject_includedRegionSubject_notSignedIn' 
-          - $ref: '#/Response_subject_includedAmbassador_notSignedIn' 
-          - $ref: '#/Response_subject_includedJob_notSignedIn' 
-          - $ref: '#/Response_subject_includedSchool_notSignedIn' 
-          - $ref: '#/Response_subject_includedCity_notSignedIn' 
-          - $ref: '#/Response_subject_includedCountry_notSignedIn' 
-          - $ref: '#/Response_subject_includedSubject_notSignedIn' 
-          - $ref: '#/Response_subject_includedSubjectTeacher_notSignedIn' 
+          - $ref: '#/Response_subject_includedWorld_notSignedIn'
+          - $ref: '#/Response_subject_includedRegion_notSignedIn'
+          - $ref: '#/Response_subject_includedRegionSubject_notSignedIn'
+          - $ref: '#/Response_subject_includedAmbassador_notSignedIn'
+          - $ref: '#/Response_subject_includedJob_notSignedIn'
+          - $ref: '#/Response_subject_includedSchool_notSignedIn'
+          - $ref: '#/Response_subject_includedCity_notSignedIn'
+          - $ref: '#/Response_subject_includedCountry_notSignedIn'
+          - $ref: '#/Response_subject_includedSubject_notSignedIn'
+          - $ref: '#/Response_subject_includedSubjectTeacher_notSignedIn'
           - $ref: '#/Response_subject_includedTeacher_notSignedIn'
   required:
     - schema
@@ -80,7 +80,7 @@ Response_subject_notSignedIn_item:
       type: object
       additionalProperties: false
       properties:
-        world: 
+        world:
           $ref: '../../../components/models/json-api/regional/world.yaml#/JsonApiModel_regional-world_relationship'
         regions:
           $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
@@ -97,7 +97,6 @@ Response_subject_notSignedIn_item:
     - id
     - attributes
     - relationships
-
 
 Response_subject_includedWorld_notSignedIn:
   type: object
@@ -295,13 +294,14 @@ Response_subject_includedSchool_notSignedIn:
       additionalProperties: false
       properties:
         # simple attributes
-        name: 
+        name:
           $ref: '../../../components/models/library/school/school.yaml#/school_name'
         slug:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
-        smallProfilePhoto:
-          $ref: '../../../components/models/library/school/school.yaml#/school_smallProfilePhoto'
         # relationship attribute
+        smallProfilePhoto:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+          # $ref: '../../../components/models/library/school/school.yaml#/school_smallProfilePhoto'
         # city:
         #   $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
       required:
@@ -451,7 +451,6 @@ Response_subject_includedSubjectTeacher_notSignedIn:
     - attributes
     - relationships
 
-
 Response_subject_includedTeacher_notSignedIn:
   type: object
   additionalProperties: false
@@ -481,5 +480,3 @@ Response_subject_includedTeacher_notSignedIn:
     - id
     - attributes
     - relationships
-
-
