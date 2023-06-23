@@ -55,3 +55,23 @@ JsonApiModel_subject-subjectLink_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_subject-subjectLink_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: '#/JsonApiModel_subject-subjectLink_type'
+          id:
+            $ref: '#/JsonApiModel_subject-subjectLink_id'
+        required:
+          - type
+          - id
+  required:
+    - data
+

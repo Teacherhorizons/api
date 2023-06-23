@@ -19,8 +19,16 @@ get:
         type: integer
     - in: query
       name: include
-      required: true
-      example: world,region.subject,regions,ambassador,jobs,subjects,teachers
+      description: |
+        - world -	A photo of world
+        - region.subject- All regions for related subject
+        - regions - All regions 
+        - ambassador - Ambassador for related country
+        - jobs - All jobs for related subject
+        - subjects - All subjects except the queried subject 
+        - teachers - All teachers for related subject
+      # required: true
+      example: world, region.subject, regions, ambassador, jobs, subjects, teachers
       schema:
         type: string
     - in: query

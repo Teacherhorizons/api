@@ -31,6 +31,11 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedSubject_notSignedIn' 
           - $ref: '#/Response_subject_includedSubjectTeacher_notSignedIn' 
           - $ref: '#/Response_subject_includedTeacher_notSignedIn'
+          - $ref: '#/Response_subject_includedStaffMember_notSignedIn'
+          - $ref: '#/Response_subject_includedSubjectLink_notSignedIn'
+          - $ref: '#/Response_subject_includedSubjectMonth_notSignedIn'
+          - $ref: '#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
+          
   required:
     - schema
     - data
@@ -92,6 +97,14 @@ Response_subject_notSignedIn_item:
           $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_multiple'
         teachers:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship_multiple'
+        advisers:
+          $ref: '../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple'
+        trainingProviders:
+          $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_relationship_multiple'
+        resources:
+          $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_relationship_multiple'
+        months:
+          $ref: '../../../components/models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth_relationship_multiple'
   required:
     - type
     - id
@@ -481,5 +494,119 @@ Response_subject_includedTeacher_notSignedIn:
     - id
     - attributes
     - relationships
+
+Response_subject_includedStaffMember_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_type'
+    id:
+      $ref: '../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+        description:
+          $ref: '../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description'
+      required:
+        - photo
+        - description
+
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_subject_includedSubjectLink_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_type'
+    id:
+      $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/subject/subjectLink.yaml#/subject-subjectLink_name'
+        description:
+          $ref: '../../../components/models/library/subject/subjectLink.yaml#/subject-subjectLink_description'
+        url:
+          $ref: '../../../components/models/library/subject/subjectLink.yaml#/subject-subjectLink_url'
+      required:
+        - name
+        - description
+        - url
+
+  required:
+    - type
+    - id
+    - attributes
+
+Response_subject_includedSubjectMonth_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth_type'
+    id:
+      $ref: '../../../components/models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        monthId:
+          $ref: '../../../components/models/library/subject/subjectMonth.yaml#/subject-subjectMonth_monthId'
+        monthNumber:
+          $ref: '../../../components/models/library/subject/subjectMonth.yaml#/subject-subjectMonth_monthNumber'
+        numberOfLiveJobs:
+          $ref: '../../../components/models/library/subject/subjectMonth.yaml#/subject-subjectMonth_numberOfLiveJobs'
+      required:
+        - monthId
+        - monthNumber
+        - numberOfLiveJobs
+
+  required:
+    - type
+    - id
+    - attributes
+
+Response_subject_includedRegionSubjectSchoolYear_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear_type'
+    id:
+      $ref: '../../../components/models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        numberOfLiveJobs:
+          $ref: '../../../components/models/library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs'
+      required:
+        - numberOfLiveJobs
+
+  required:
+    - type
+    - id
+    - attributes
 
 
