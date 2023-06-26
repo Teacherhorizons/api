@@ -6,13 +6,13 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_all|_admin|_school|_teacher))$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_all|_admin|_school|_teacher))$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-OneOfSchema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)_(all|admin|school|teacher)$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)_(all|admin|school|teacher)$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-Schema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)[a-zA-Z-]*_id$": {
+        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z-]*_id$": {
           "$ref": "#/definitions/SimpleModel-MultipleSchemas-Id"
         }
       },
