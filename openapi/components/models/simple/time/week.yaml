@@ -3,17 +3,17 @@ SimpleModel_time-week:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_time-week_id"
+      $ref: '#/SimpleModel_time-week_id'
     # simple attributes
-    dateId:
-      $ref: "../../library/time/week.yaml#/time-week_dateId"
+    name:
+      $ref: '../../library/time/week.yaml#/time-week_name'
   required:
     - id
-    - dateId
+    - name
 
 # shared
 SimpleModel_time-week_id:
   type: integer
-  example: 1
+  example: 20220905
   readOnly: true
   description: Unique identifier of the object

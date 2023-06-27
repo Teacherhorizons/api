@@ -3,20 +3,22 @@ JsonApiModel_time-week:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_time-week_type"
+      $ref: '#/JsonApiModel_time-week_type'
     id:
-      $ref: "#/JsonApiModel_time-week_id"
+      $ref: '#/JsonApiModel_time-week_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        dateId:
-          $ref: "../../library/time/week.yaml#/time-week_dateId"
+        name:
+          $ref: '../../library/time/week.yaml#/time-week_name'
+      required:
+        - name
   required:
     - type
     - id
-    - dateId
+    - attributes
 
 JsonApiModel_time-week_type:
   type: string
@@ -26,7 +28,7 @@ JsonApiModel_time-week_type:
 
 JsonApiModel_time-week_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -39,9 +41,9 @@ JsonApiModel_time-week_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_time-week_type"
+          $ref: '#/JsonApiModel_time-week_type'
         id:
-          $ref: "#/JsonApiModel_time-week_id"
+          $ref: '#/JsonApiModel_time-week_id'
       required:
         - type
         - id
@@ -53,6 +55,6 @@ JsonApiModel_time-week_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_time-week_id"
+      $ref: '#/JsonApiModel_time-week_id'
   required:
     - id
