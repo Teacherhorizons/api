@@ -5,8 +5,8 @@ SimpleModel_subject-communityQuestion:
     id:
       $ref: "#/SimpleModel_subject-communityQuestion_id"
     # simple attributes
-    questionText:
-      $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_questionText"
+    text:
+      $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text"
     isActive:
       $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_isActive"
     precedence:
@@ -16,7 +16,7 @@ SimpleModel_subject-communityQuestion:
       $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_typeId"
   required:
     - id
-    - name
+    - text
 
 # shared
 SimpleModel_subject-communityQuestion_id:

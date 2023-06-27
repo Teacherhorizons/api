@@ -20,17 +20,21 @@ get:
     - in: query
       name: include
       description: |
-        - world -	A photo of world
-        - region.subject- All regions for related subject
+        - world -	The world
         - regions - All regions 
-        - ambassador - Ambassador for related country
-        - jobs - All jobs for related subject
-        - subjects - All subjects except the queried subject 
-        - teachers - All teachers for related subject
-        - articles - All articles for related subject
-        - pages - TBC
+        - ambassador - Ambassador for subject
+        - jobs - First 4 related live jobs when sorted by added date, from as many distinct countries as possible
+        - subjects - All subjects which have a subject page except for the queried subject
+        - teachers - 3 random teachers who have a subject testimonial
+        - articles - All articles for subject
+        - pages - All pages for subject
+        - jobFaqs - All job FAQ responses for subject
+        - advisers - All advisers for subject
+        - trainingProviders - All training providers for subject
+        - resources - All resources for subject
+        - months - All months
       # required: true
-      example: world, region.subject, regions, ambassador, jobs, subjects, teachers, articles, pages
+      example: world, region.subject, regions, ambassador, jobs, subjects, teachers, articles, pages, jobFaqs, advisers, trainingProviders, resources, months
       schema:
         type: string
     - in: query

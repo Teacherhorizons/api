@@ -37,6 +37,7 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
           - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
           - $ref: '#/Response_subject_includedArticle_notSignedIn'
+          - $ref: '#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
           
   required:
     - schema
@@ -111,6 +112,8 @@ Response_subject_notSignedIn_item:
           $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
         articles:
           $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_relationship_multiple'
+        jobFaqs:
+          $ref: '../../../components/models/json-api/subject/subjectUserCommunityQuestionResponse.yaml#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship_multiple'
   required:
     - type
     - id
@@ -705,3 +708,27 @@ Response_subject_includedArticle_notSignedIn:
     - id
     - attributes
 
+Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/subject/subjectUserCommunityQuestionResponse.yaml#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
+    id:
+      $ref: '../../../components/models/json-api/subject/subjectUserCommunityQuestionResponse.yaml#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        text:
+          $ref: '../../../components/models/library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_text' 
+        question:
+          $ref: '../../../components/models/json-api/subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship_attribute'
+      required:
+        - text
+        - question
+  required:
+    - type
+    - id
+    - attributes
