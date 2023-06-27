@@ -31,8 +31,10 @@ get:
         - jobs - All jobs for related subject
         - subjects - All subjects except the queried subject 
         - teachers - All teachers for related subject
+        - articles - All articles for related subject
+        - pages - TBC
       # required: true
-      example: world, region.subject, regions, ambassador, jobs, subjects, teachers
+      example: world, region.subject, regions, ambassador, jobs, subjects, teachers, articles, pages
       schema:
         type: string
     - in: query
