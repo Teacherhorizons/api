@@ -1,0 +1,103 @@
+JsonApiModel_system-page:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_system-page_type"
+    id:
+      $ref: "#/JsonApiModel_system-page_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: "../../library/system/page.yaml#/system-page_title"
+        metaDescription:
+          $ref: "../../library/system/page.yaml#/system-page_metaDescription"
+
+        # relationship attributes
+        pageType:
+          $ref: "../system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute"
+        entity:  #check with RR about the relationship attribute
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+      required:
+        - title
+        - metaDescription
+        - pageType
+        - entity
+        
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+          pageType:
+            $ref: "../system/pageType.yaml#/JsonApiModel_system-pageType_relationship"
+          entity:  #check with RR about the relationship attribute
+            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_system-page_type:
+  type: string
+  example: system-page
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-page_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_system-page_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_system-page_id"
+    # name:
+    #   $ref: "../../library/system/page.yaml#/system-page_name"
+    # slug:
+    #   $ref: "../../library/system/page.yaml#/system-page_slug"
+  required:
+    - id
+
+JsonApiModel_system-page_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_system-page_type"
+        id:
+          $ref: "#/JsonApiModel_system-page_id"
+      required:
+        - type
+        - id
+  required:
+      - data
+
+JsonApiModel_system-page_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: "#/JsonApiModel_system-page_type"
+          id:
+            $ref: "#/JsonApiModel_system-page_id"
+        required:
+          - type
+          - id
+  required:
+    - data

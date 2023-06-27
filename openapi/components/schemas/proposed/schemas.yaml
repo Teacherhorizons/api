@@ -50,6 +50,9 @@ SimpleModels:
     - $ref: "../../models/simple/regional/regionSubjects.yaml#/SimpleModel_regional-regionSubjects"
     - $ref: "../../models/simple/regional/regionSubjectSchoolYear.yaml#/SimpleModel_regional-regionSubjectSchoolYear"
 
+    # system
+    - $ref: "../../models/simple/system/page.yaml#/SimpleModel_system-page"
+    - $ref: "../../models/simple/system/pageType.yaml#/SimpleModel_system-pageType"
 
     # general
     - $ref: "../../models/simple/general/actionType.yaml#/SimpleModel_general-actionType"
@@ -247,6 +250,10 @@ JsonApiModels:
     - $ref: "../../models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject"
     - $ref: "../../models/json-api/regional/regionSubjects.yaml#/JsonApiModel_regional-regionSubjects"
     - $ref: "../../models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear"
+
+    # system
+    - $ref: "../../models/json-api/system/page.yaml#/JsonApiModel_system-page"
+    - $ref: "../../models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType"
 
     # general
     - $ref: "../../models/json-api/general/actionType.yaml#/JsonApiModel_general-actionType"

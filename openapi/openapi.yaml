@@ -114,6 +114,18 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
 
+  # tags - simple-models - system
+
+  - name: simple-model-system-page
+    x-displayName: Simple model - system-page
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-page" />
+
+  - name: simple-model-system-pageType
+    x-displayName: Simple model - system-pageType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-pageType" />
+
   # tags - simple-models - general
 
   - name: simple-model-general-applicationType
@@ -976,6 +988,18 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
+  # tags - JSON:API models - system
+
+  - name: json-api-model-system-page
+    x-displayName: JSON:API model - system-page
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-page" />
+
+  - name: json-api-model-system-pageType
+    x-displayName: JSON:API model - system-pageType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-pageType" />
+
   # tags - JSON:API models - general
 
   - name: json-api-model-general-actionType
@@ -1761,6 +1785,8 @@ x-tagGroups:
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
+      - simple-model-system-page
+      - simple-model-system-pageType
       - simple-model-general-actionType
       - simple-model-general-article
       - simple-model-general-autoEmail
@@ -1927,6 +1953,8 @@ x-tagGroups:
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
+      - json-api-model-system-page
+      - json-api-model-system-pageType
       - json-api-model-general-actionType
       - json-api-model-general-article
       - json-api-model-general-autoEmail

@@ -35,6 +35,8 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedSubjectLink_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectMonth_notSignedIn'
           - $ref: '#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
+          - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
+          - $ref: '#/Response_subject_includedArticle_notSignedIn'
           
   required:
     - schema
@@ -105,6 +107,10 @@ Response_subject_notSignedIn_item:
           $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_relationship_multiple'
         months:
           $ref: '../../../components/models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth_relationship_multiple'
+        pages:
+          $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
+        articles:
+          $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_relationship_multiple'
   required:
     - type
     - id
@@ -124,6 +130,27 @@ Response_subject_includedWorld_notSignedIn:
       type: object
       additionalProperties: false
       properties:
+        # simple attributes
+        numberOfPrimaryIBCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfPrimaryIBCurriculumSchools'
+        numberOfPrimaryUSCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfPrimaryUSCurriculumSchools'
+        numberOfPrimaryUKCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfPrimaryUKCurriculumSchools'
+        numberOfPrimaryInternationalCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfPrimaryInternationalCurriculumSchools'
+        numberOfPrimaryOtherCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfPrimaryOtherCurriculumSchools'
+        numberOfSecondaryIBCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryIBCurriculumSchools'
+        numberOfSecondaryUSCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryUSCurriculumSchools'
+        numberOfSecondaryUKCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryUKCurriculumSchools'
+        numberOfSecondaryInternationalCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryInternationalCurriculumSchools'
+        numberOfSecondaryOtherCurriculumSchools:
+          $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryOtherCurriculumSchools'
         # relationship attribute
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
@@ -201,6 +228,8 @@ Response_subject_includedRegion_notSignedIn:
       properties:
         subject:
           $ref: '../../../components/models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_relationship'
+        mostRecentCompleteSchoolYear:
+          $ref: '../../../components/models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear_relationship'
   required:
     - type
     - id
@@ -379,11 +408,14 @@ Response_subject_includedCountry_notSignedIn:
         # simple attributes
         name:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_name'
-        # relationship attributes
+        photo1:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+        #relationship attributes
         # region:
         #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
+        - photo
         # relationship attributes
         # - region
 
@@ -609,4 +641,67 @@ Response_subject_includedRegionSubjectSchoolYear_notSignedIn:
     - id
     - attributes
 
+Response_subject_includedSystemPage_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_type'
+    id:
+      $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: '../../../components/models/library/system/page.yaml#/system-page_title'
+        metaDescription:
+          $ref: '../../../components/models/library/system/page.yaml#/system-page_metaDescription'
+        pageType:
+          $ref: '../../../components/models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
+      required:
+        - title
+        - metaDescription
+        - pageType
+
+  required:
+    - type
+    - id
+    - attributes
+
+Response_subject_includedArticle_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_type'
+    id:
+      $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        snippet:
+          $ref: '../../../components/models/library/general/article.yaml#/general-article_snippet' 
+        title:
+          $ref: '../../../components/models/library/general/article.yaml#/general-article_title'
+        url:
+          $ref: '../../../components/models/library/general/article.yaml#/general-article_url'
+        category:
+          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - snippet
+        - title
+        - url
+        - category
+        - photo
+
+  required:
+    - type
+    - id
+    - attributes
 

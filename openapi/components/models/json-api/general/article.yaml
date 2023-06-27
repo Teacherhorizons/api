@@ -97,3 +97,21 @@ JsonApiModel_general-article_relationship:
         - id
   required:
     - data
+
+JsonApiModel_general-article_relationship_multiple:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_general-article_type"
+        id:
+          $ref: "#/JsonApiModel_general-article_id"
+      required:
+        - type
+        - id
+  required:
+    - data

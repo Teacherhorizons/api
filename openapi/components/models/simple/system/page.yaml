@@ -1,0 +1,30 @@
+SimpleModel_system-page:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-page_id"
+    # simple attributes
+    title:
+      $ref: "../../library/system/page.yaml#/system-page_title"
+    metaDescription:
+      $ref: "../../library/system/page.yaml#/system-page_metaDescription"
+
+    # relationship attributes
+    pageTypeId:
+      $ref: "../../library/system/page.yaml#/system-page_pageTypeId"
+    entityId:
+      $ref: "../../library/system/page.yaml#/system-page_entityId"    
+  required:
+    - id
+    - title
+    - metaDescription
+    - pageTypeId
+    - entityId
+
+# shared
+SimpleModel_system-page_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
