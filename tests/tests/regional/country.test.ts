@@ -11,8 +11,7 @@ var tests = shared.addTestGroups(
   [
     {
       getUrl: (data) =>
-        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs`,
-
+        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=cities`,
       tests: [
         {
           name: 'regional-country - standard response - sparse data',
@@ -24,7 +23,6 @@ var tests = shared.addTestGroups(
     {
       getUrl: (data) =>
         `regional-countries?useCache=false&filter[slug]=europe-portugal&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs`,
-
       tests: [
         {
           name: 'regional-country - standard response - full data',

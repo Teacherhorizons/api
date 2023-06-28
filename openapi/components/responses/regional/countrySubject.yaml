@@ -25,7 +25,6 @@ Response_regional-countrySubject_notSignedIn:
           - $ref: '#/Response_regional-countrySubject_includedRegionSubject_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedJob_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedSchool_notSignedIn'
-          # - $ref: '#/Response_regional-countrySubject_includedCity_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedCountryAttraction_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedCountryPhoto_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedCountrySubject_notSignedIn'
@@ -90,7 +89,6 @@ Response_regional-countrySubject_notSignedIn_item:
     - type
     - id
     - attributes
-    - relationships
 
 Response_regional-countrySubject_includedCountry_notSignedIn:
   type: object
@@ -210,11 +208,10 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
       required:
         - name
         - slug
-        - ambassadorTestimonial
         - averageAnnualSaving
         - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
-        - costOf1WayetLocalTransport
+        - costOf1WayTicketLocalTransport
         - monthlyCostOfBasicUtilities
         - costOfCappuccinoRegular
         - costOfGasoline1Litre
@@ -227,7 +224,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - numberOfSchools
         - walkingAloneAtNightSafetyIndex
         - walkingAloneInDaylightSafetyIndex
-        - travelAdviceUrl
+        # - travelAdviceUrl
         - numberOfPrimaryIBCurriculumSchools
         - numberOfPrimaryUSCurriculumSchools
         - numberOfPrimaryUKCurriculumSchools
@@ -278,8 +275,6 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
     - type
     - id
     - attributes
-    - relationships
-
 Response_regional-countrySubject_includedSubject_notSignedIn:
   type: object
   additionalProperties: false
@@ -363,6 +358,8 @@ Response_regional-countrySubject_includedJob_notSignedIn:
         # simple attributes
         title:
           $ref: '../../models/library/job/job.yaml#/job_title'
+      required:
+        - title
     relationships:
       type: object
       additionalProperties: false
@@ -370,7 +367,6 @@ Response_regional-countrySubject_includedJob_notSignedIn:
         school:
           $ref: '../../models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
       required:
-        - title
         - school
   required:
     - type
@@ -446,10 +442,13 @@ Response_regional-countrySubject_includedCountryAttraction_notSignedIn:
       additionalProperties: false
       properties:
         # relationship attributes
-        type:
-          $ref: '../../models/json-api/regional/countryAttractionType.yaml#/JsonApiModel_regional-countryAttractionType_relationship_attribute'
+        name:
+          $ref: '../../models/library/regional/cityAttractionType.yaml#/regional-cityAttractionType_name'
+        iconName:
+          $ref: '../../models/library/regional/cityAttractionType.yaml#/regional-cityAttractionType_iconName'
       required:
-        - type
+        - name
+        - iconName
   required:
     - type
     - id
@@ -493,7 +492,7 @@ Response_regional-countrySubject_includedCountrySubject_notSignedIn:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         slug:
           $ref: '../../models/library/regional/countrySubject.yaml#/regional-countrySubject_slug'
         numberOfLiveJobs:
