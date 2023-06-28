@@ -442,13 +442,10 @@ Response_regional-countrySubject_includedCountryAttraction_notSignedIn:
       additionalProperties: false
       properties:
         # relationship attributes
-        name:
-          $ref: '../../models/library/regional/cityAttractionType.yaml#/regional-cityAttractionType_name'
-        iconName:
-          $ref: '../../models/library/regional/cityAttractionType.yaml#/regional-cityAttractionType_iconName'
+        type:
+          $ref: '../../../components/models/json-api/regional/countryAttractionType.yaml#/JsonApiModel_regional-countryAttractionType_relationship_attribute'
       required:
-        - name
-        - iconName
+        - type
   required:
     - type
     - id
