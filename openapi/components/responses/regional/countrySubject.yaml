@@ -111,10 +111,8 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../models/library/regional/country.yaml#/regional-country_slug'
         ambassadorTestimonial:
           $ref: '../../models/library/regional/country.yaml#/regional-country_ambassadorTestimonial'
-        amountIndividualTeacherSavesYearly:
-          $ref: '../../models/library/regional/country.yaml#/regional-country_amountIndividualTeacherSavesYearly'
-        averageMonthlyNetSalaryAfterTax:
-          $ref: '../../models/library/regional/country.yaml#/regional-country_averageMonthlyNetSalaryAfterTax'
+        averageAnnualSaving:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_averageAnnualSaving'
         monthlyRent1BedroomApartmentInCityCentre:
           $ref: '../../models/library/regional/country.yaml#/regional-country_monthlyRent1BedroomApartmentInCityCentre'
         monthlyRent1BedroomApartmentOutsideCityCentre:
@@ -213,8 +211,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
         - name
         - slug
         - ambassadorTestimonial
-        - amountIndividualTeacherSavesYearly
-        - averageMonthlyNetSalaryAfterTax
+        - averageAnnualSaving
         - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
         - costOf1WayetLocalTransport
