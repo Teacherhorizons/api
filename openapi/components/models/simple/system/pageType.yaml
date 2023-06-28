@@ -1,0 +1,30 @@
+SimpleModel_system-pageType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-pageType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/system/pageType.yaml#/system-pageType_name"
+    titleTemplate:
+      $ref: "../../library/system/pageType.yaml#/system-pageType_titleTemplate"
+    metaDescriptionTemplate:
+      $ref: "../../library/system/pageType.yaml#/system-pageType_metaDescriptionTemplate"
+
+    # relationship attributes
+    entityTypeId:
+      $ref: "../../library/system/pageType.yaml#/system-pageType_entityTypeId"  
+  required:
+    - id
+    - name
+    - titleTemplate
+    - metaDescription
+    - entityTypeId
+
+# shared
+SimpleModel_system-pageType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

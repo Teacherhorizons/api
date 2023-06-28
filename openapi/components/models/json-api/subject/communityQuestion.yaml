@@ -11,8 +11,8 @@ JsonApiModel_subject-communityQuestion:
       additionalProperties: false
       properties:
         # simple attributes
-        questionText:
-          $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_questionText"
+        text:
+          $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text"
         isActive:
           $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_isActive"
         precedence:
@@ -66,8 +66,8 @@ JsonApiModel_subject-communityQuestion_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_subject-communityQuestion_id"
-    questionText:
-      $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_questionText"
+    text:
+      $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text"
   required:
     - id
-    - questionText
+    - text

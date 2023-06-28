@@ -114,6 +114,18 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
 
+  # tags - simple-models - system
+
+  - name: simple-model-system-page
+    x-displayName: Simple model - system-page
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-page" />
+
+  - name: simple-model-system-pageType
+    x-displayName: Simple model - system-pageType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-pageType" />
+
   # tags - simple-models - general
 
   - name: simple-model-general-applicationType
@@ -270,10 +282,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-communityQuestion" />
 
-  - name: simple-model-subject-userSubjectCommunityResponse
-    x-displayName: Simple model - subject-userSubjectCommunityResponse
+  - name: simple-model-subject-subjectUserCommunityQuestionResponse
+    x-displayName: Simple model - subject-subjectUserCommunityQuestionResponse
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-userSubjectCommunityResponse" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectUserCommunityQuestionResponse" />
 
   - name: simple-model-subject-subjectMonth
     x-displayName: Simple model - subject-subjectMonth
@@ -289,6 +301,12 @@ tags:
     x-displayName: Simple model - subject-linkType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-linkType" />
+
+  - name: simple-model-subject-subjectTeacher
+    x-displayName: Simple model - subject-subjectTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectTeacher" />
+      
 
   # tags - simple-models - time
 
@@ -439,10 +457,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubjects" />
 
-  - name: simple-model-regional_regionSubjectSchoolYears
-    x-displayName: Simple model - regional_regionSubjectSchoolYears
+  - name: simple-model-regional_regionSubjectSchoolYear
+    x-displayName: Simple model - regional_regionSubjectSchoolYear
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional_regionSubjectSchoolYears" />
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional_regionSubjectSchoolYear" />
 
   # tags - simple-models - school
 
@@ -970,6 +988,18 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
+  # tags - JSON:API models - system
+
+  - name: json-api-model-system-page
+    x-displayName: JSON:API model - system-page
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-page" />
+
+  - name: json-api-model-system-pageType
+    x-displayName: JSON:API model - system-pageType
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-pageType" />
+
   # tags - JSON:API models - general
 
   - name: json-api-model-general-actionType
@@ -1093,10 +1123,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-communityQuestion" />
 
-  - name: json-api-model-subject-userSubjectCommunityResponse
-    x-displayName: JSON:API model - subject-userSubjectCommunityResponse
+  - name: json-api-model-subject-subjectUserCommunityQuestionResponse
+    x-displayName: JSON:API model - subject-subjectUserCommunityQuestionResponse
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-userSubjectCommunityResponse" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectUserCommunityQuestionResponse" />
 
   - name: json-api-model-subject-subjectMonth
     x-displayName: JSON:API model - subject-subjectMonth
@@ -1112,6 +1142,12 @@ tags:
     x-displayName: JSON:API model - subject-linkType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-linkType" />
+
+  - name: json-api-model-subject-subjectTeacher
+    x-displayName: JSON:API model - subject-subjectTeacher
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectTeacher" />
+      
 
   # tags - JSON:API models - time
 
@@ -1262,10 +1298,10 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjects" />
 
-  - name: json-api-model-regional-regionSubjectSchoolYears
-    x-displayName: JSON:API model - regional-regionSubjectSchoolYears
+  - name: json-api-model-regional-regionSubjectSchoolYear
+    x-displayName: JSON:API model - regional-regionSubjectSchoolYear
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjectSchoolYears" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_regional-regionSubjectSchoolYear" />
 
   # tags - JSON:API models - teacher
   - name: json-api-model-teacher
@@ -1749,6 +1785,8 @@ x-tagGroups:
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
+      - simple-model-system-page
+      - simple-model-system-pageType
       - simple-model-general-actionType
       - simple-model-general-article
       - simple-model-general-autoEmail
@@ -1774,10 +1812,11 @@ x-tagGroups:
       - simple-model-subject-subjectArticle
       - simple-model-subject-communityQuestionType
       - simple-model-subject-communityQuestion
-      - simple-model-subject-userSubjectCommunityResponse
+      - simple-model-subject-subjectUserCommunityQuestionResponse
       - simple-model-subject-subjectMonth
       - simple-model-subject-subjectLink
       - simple-model-subject-linkType
+      - simple-model-subject-subjectTeacher
       - simple-model-time-date
       - simple-model-time-week
       - simple-model-time-month
@@ -1804,7 +1843,7 @@ x-tagGroups:
       - simple-model-regional-countrySubject
       - simple-model-regional-regionSubject
       - simple-model-regional-regionSubjects
-      - simple-model-regional-regionSubjectSchoolYears
+      - simple-model-regional-regionSubjectSchoolYear
       - simple-model-school
       - simple-model-school-academicSystem
       - simple-model-school-communityQuestion
@@ -1914,6 +1953,8 @@ x-tagGroups:
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
+      - json-api-model-system-page
+      - json-api-model-system-pageType
       - json-api-model-general-actionType
       - json-api-model-general-article
       - json-api-model-general-autoEmail
@@ -1937,10 +1978,11 @@ x-tagGroups:
       - json-api-model-subject-subjectArticle
       - json-api-model-subject-communityQuestionType
       - json-api-model-subject-communityQuestion
-      - json-api-model-subject-userSubjectCommunityResponse
+      - json-api-model-subject-subjectUserCommunityQuestionResponse
       - json-api-model-subject-subjectMonth
       - json-api-model-subject-subjectLink
       - json-api-model-subject-linkType
+      - json-api-model-subject-subjectTeacher
       - json-api-model-time-date
       - json-api-model-time-week
       - json-api-model-time-month
@@ -1968,7 +2010,7 @@ x-tagGroups:
       - json-api-model-regional-countrySubject
       - json-api-model-regional-regionSubject
       - json-api-model-regional-regionSubjects
-      - json-api-model-regional-regionSubjectSchoolYears
+      - json-api-model-regional-regionSubjectSchoolYear
       - json-api-model-school
       - json-api-model-school-academicSystem
       - json-api-model-school-communityQuestion
@@ -2074,6 +2116,7 @@ x-tagGroups:
       - job
       - meta
       - regional
+      - subject
       - school
       - teacher
       - user

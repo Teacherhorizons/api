@@ -39,32 +39,39 @@
   $ref: './../paths/general/manualEmailTemplates.yaml'
 
 # regional
-/regional-world/{worldId}:
-  $ref: './../paths/regional/world.yaml'
-/regional-regions/{regionId}:
-  $ref: './../paths/regional/region.yaml'
-/regional-regions:
-  $ref: './../paths/regional/regions.yaml'
-/regional-worldArticles:
-  $ref: './../paths/regional/worldArticles.yaml'
-/regional-regionArticles:
-  $ref: './../paths/regional/regionArticles.yaml'
-/regional-countryArticles:
-  $ref: './../paths/regional/countryArticles.yaml'
+/regional-cities/{cityId}:
+  $ref: './../paths/regional/city.yaml'
+/regional-cities:
+  $ref: './../paths/regional/cities.yaml'
 /regional-cityArticles:
   $ref: './../paths/regional/cityArticles.yaml'
 /regional-countries/{countryId}:
   $ref: './../paths/regional/country.yaml'
 /regional-countries:
   $ref: './../paths/regional/countries.yaml'
-/regional-cities/{cityId}:
-  $ref: './../paths/regional/city.yaml'
-/regional-cities:
-  $ref: './../paths/regional/cities.yaml'
+/regional-countryArticles:
+  $ref: './../paths/regional/countryArticles.yaml'
 /regional-countrySubjects/{countrySubjectId}:
   $ref: './../paths/regional/countrySubject.yaml'
 /regional-countrySubjects:
   $ref: './../paths/regional/countrySubjects.yaml'
+/regional-regions/{regionId}:
+  $ref: './../paths/regional/region.yaml'
+/regional-regions:
+  $ref: './../paths/regional/regions.yaml'
+/regional-regionArticles:
+  $ref: './../paths/regional/regionArticles.yaml'
+/regional-world/{worldId}:
+  $ref: './../paths/regional/world.yaml'
+/regional-worldArticles:
+  $ref: './../paths/regional/worldArticles.yaml'
+
+# subject
+/subjects/{subjectId}:
+  $ref: './../paths/subject/subject.yaml'
+/subjects:
+  $ref: './../paths/subject/subjects.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'

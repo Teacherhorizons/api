@@ -34,8 +34,23 @@ subject_slug:
 
 subject_numberOfLiveJobs:
   type: integer
-  example: 308
+  example: 400
   description: Derived (dw)
+
+subject_numberOfThTeachers:
+  type: integer
+  example: 3000
+  description: Derived (dw)
+
+subject_numberOfLiveHeadOfDepartmentJobs:
+  type: integer
+  example: 50
+  description: Derived (dw)
+
+subject_jobsDescription:
+  type: string
+  example: Foo bar baz
+  #description: Derived (dw)(check with RR)
 
 subject_creationDate:
   type: string

@@ -21,7 +21,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^get-(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([-a-zA-Z]*)$"
+          "pattern": "^get-(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -64,7 +64,7 @@
                           "properties": {
                             "$ref": {
                               "type": "string",
-                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|time|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)$"
+                              "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)$"
                             }
                           },
                           "required": ["$ref"]
@@ -150,7 +150,7 @@
       "properties": {
         "operationId": {
           "type": "string",
-          "pattern": "^patch-(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([-a-zA-Z]*)$"
+          "pattern": "^patch-(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([-a-zA-Z]*)$"
         },
         "summary": {
           "type": "string"
@@ -183,7 +183,7 @@
                     "properties": {
                       "$ref": {
                         "type": "string",
-                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|teacher|time|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|teacher|time|user)([a-zA-Z-]*)$"
+                        "pattern": "^../../components/responses/(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)/([a-zA-Z]*).yaml#/Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)$"
                       }
                     },
                     "required": ["$ref"]

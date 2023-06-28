@@ -48,8 +48,11 @@ SimpleModels:
     - $ref: "../../models/simple/regional/countrySubject.yaml#/SimpleModel_regional-countrySubject"
     - $ref: "../../models/simple/regional/regionSubject.yaml#/SimpleModel_regional-regionSubject"
     - $ref: "../../models/simple/regional/regionSubjects.yaml#/SimpleModel_regional-regionSubjects"
-    - $ref: "../../models/simple/regional/regionSubjectSchoolYears.yaml#/SimpleModel_regional-regionSubjectSchoolYears"
+    - $ref: "../../models/simple/regional/regionSubjectSchoolYear.yaml#/SimpleModel_regional-regionSubjectSchoolYear"
 
+    # system
+    - $ref: "../../models/simple/system/page.yaml#/SimpleModel_system-page"
+    - $ref: "../../models/simple/system/pageType.yaml#/SimpleModel_system-pageType"
 
     # general
     - $ref: "../../models/simple/general/actionType.yaml#/SimpleModel_general-actionType"
@@ -184,10 +187,11 @@ SimpleModels:
     - $ref: "../../models/simple/subject/subjectArticle.yaml#/SimpleModel_subject-subjectArticle"
     - $ref: "../../models/simple/subject/communityQuestionType.yaml#/SimpleModel_subject-communityQuestionType"
     - $ref: "../../models/simple/subject/communityQuestion.yaml#/SimpleModel_subject-communityQuestion"
-    - $ref: "../../models/simple/subject/userSubjectCommunityResponse.yaml#/SimpleModel_subject-userSubjectCommunityResponse"
+    - $ref: "../../models/simple/subject/subjectUserCommunityQuestionResponse.yaml#/SimpleModel_subject-subjectUserCommunityQuestionResponse"
     - $ref: "../../models/simple/subject/subjectMonth.yaml#/SimpleModel_subject-subjectMonth"
     - $ref: "../../models/simple/subject/subjectLink.yaml#/SimpleModel_subject-subjectLink"
     - $ref: "../../models/simple/subject/linkType.yaml#/SimpleModel_subject-linkType"
+    - $ref: "../../models/simple/subject/subjectTeacher.yaml#/SimpleModel_subject-subjectTeacher"
 
     # time
     - $ref: "../../models/simple/time/date.yaml#/SimpleModel_time-date"
@@ -245,7 +249,11 @@ JsonApiModels:
     - $ref: "../../models/json-api/regional/countrySubject.yaml#/JsonApiModel_regional-countrySubject"
     - $ref: "../../models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject"
     - $ref: "../../models/json-api/regional/regionSubjects.yaml#/JsonApiModel_regional-regionSubjects"
-    - $ref: "../../models/json-api/regional/regionSubjectSchoolYears.yaml#/JsonApiModel_regional-regionSubjectSchoolYears"
+    - $ref: "../../models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear"
+
+    # system
+    - $ref: "../../models/json-api/system/page.yaml#/JsonApiModel_system-page"
+    - $ref: "../../models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType"
 
     # general
     - $ref: "../../models/json-api/general/actionType.yaml#/JsonApiModel_general-actionType"
@@ -366,10 +374,11 @@ JsonApiModels:
     - $ref: "../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle"
     - $ref: "../../models/json-api/subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType"
     - $ref: "../../models/json-api/subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion"
-    - $ref: "../../models/json-api/subject/userSubjectCommunityResponse.yaml#/JsonApiModel_subject-userSubjectCommunityResponse"
+    - $ref: "../../models/json-api/subject/subjectUserCommunityQuestionResponse.yaml#/JsonApiModel_subject-subjectUserCommunityQuestionResponse"
     - $ref: "../../models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth"
     - $ref: "../../models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink"
     - $ref: "../../models/json-api/subject/linkType.yaml#/JsonApiModel_subject-linkType"
+    - $ref: "../../models/json-api/subject/subjectTeacher.yaml#/JsonApiModel_subject-subjectTeacher"
 
     # time
     - $ref: "../../models/json-api/time/date.yaml#/JsonApiModel_time-date"

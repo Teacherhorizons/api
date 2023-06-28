@@ -3,13 +3,20 @@ SimpleModel_time-month:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_time-month_id"
+      $ref: '#/SimpleModel_time-month_id'
+    # simple attributes
+    name:
+      $ref: '../../library/time/month.yaml#/time-month_name'
+    monthNumber:
+      $ref: '../../library/time/month.yaml#/time-month_monthNumber'
   required:
     - id
+    - name
+    - monthNumber
 
 # shared
 SimpleModel_time-month_id:
   type: integer
-  example: 1
+  example: 20220901
   readOnly: true
   description: Unique identifier of the object

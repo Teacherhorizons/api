@@ -1,28 +1,22 @@
 #attributes
-subject-subjectMonth_numberOfLiveJobs:
-  type: integer
-  example: 51
-  description: Derived (dw)
-
-subject-subjectMonth_monthNumber:
-  type: integer
-  example: 9
-  description: Derived (dw)
+subject-subjectTeacher_testimonial:
+  type: string
+  example: Foo bar
 
 #relationship attributes
-subject-subjectMonth_subjectId:
+subject-subjectTeacher_subjectId:
   type: integer
   example: 1
   description: Relationship to subject
 
-subject-subjectMonth_monthId:
+subject-subjectTeacher_teacherId:
   type: integer
-  example: 202111
-  description: Relationship to ?
+  example: 1
+  description: Relationship to teacher
 
 #relationships
 
-subject-subjectMonth_subject:
+subject-subjectTeacher_subject:
   type: object
   additionalProperties: false
   properties:
@@ -33,14 +27,14 @@ subject-subjectMonth_subject:
   required: 
     - id
 
-subject-subjectMonth_month:
+subject-subjectTeacher_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
       example: "202111"
-      description: Relationship to ?
+      description: Relationship to teacher
   required: 
     - id
   

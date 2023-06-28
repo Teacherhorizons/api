@@ -1,33 +1,33 @@
 #attributes
-regional-regionSubjectSchoolYears_numberOfLiveJobs:
+regional-regionSubjectSchoolYear_numberOfLiveJobs:
   type: integer
   example: 84
   description: Derived (dw)
 
-regional-regionSubjectSchoolYears_averageAnnualGrossIncome:
+regional-regionSubjectSchoolYear_averageAnnualGrossIncome:
   type: integer
   example: 61920
   description: Derived (dw)
 
 #relationship attributes
-regional-regionSubjectSchoolYears_regionId:
+regional-regionSubjectSchoolYear_regionId:
   type: integer
   example: 1
   description: Relationship to regional-region
 
-regional-regionSubjectSchoolYears_subjectId:
+regional-regionSubjectSchoolYear_subjectId:
   type: integer
   example: 1
   description: Relationship to subject
 
-regional-regionSubjectSchoolYears_schoolYearId:
+regional-regionSubjectSchoolYear_schoolYearId:
   type: integer
   example: 202111
   description: Relationship to ?
 
 #relationships
 
-regional-regionSubjectSchoolYears_region:
+regional-regionSubjectSchoolYear_region:
   type: object
   additionalProperties: false
   properties:
@@ -38,7 +38,7 @@ regional-regionSubjectSchoolYears_region:
   required: 
     - id
     
-regional-regionSubjectSchoolYears_subject:
+regional-regionSubjectSchoolYear_subject:
   type: object
   additionalProperties: false
   properties:
@@ -49,7 +49,7 @@ regional-regionSubjectSchoolYears_subject:
   required: 
     - id
 
-regional-regionSubjectSchoolYears_schoolYear:
+regional-regionSubjectSchoolYear_schoolYear:
   type: object
   additionalProperties: false
   properties:

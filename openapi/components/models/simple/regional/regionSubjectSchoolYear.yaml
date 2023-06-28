@@ -1,0 +1,36 @@
+SimpleModel_regional-regionSubjectSchoolYear:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_regional-regionSubjectSchoolYear_id"
+    # simple attributes
+    numberOfLiveJobs:
+      $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs"
+    averageAnnualGrossIncome:
+      $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_averageAnnualGrossIncome"
+
+    # relationship attributes
+    regionId:
+        $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_regionId"
+    subjectId:
+        $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_subjectId"
+    schoolYearId:
+        $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_schoolYearId"
+  required:
+    - id
+    - numberOfLiveJobs
+    - averageAnnualGrossIncome
+    - regionId
+    - subjectId
+    - schoolYearId
+
+# shared
+SimpleModel_regional-regionSubjectSchoolYear_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
+
+
+

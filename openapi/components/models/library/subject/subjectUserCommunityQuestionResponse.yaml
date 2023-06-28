@@ -1,48 +1,48 @@
 # attributes
-subject-userSubjectCommunityResponse_text:
+subject-subjectUserCommunityQuestionResponse_text:
   type: string
   example: fewlkjflewj ewfef 
   #maxLength: 250
 
-subject-userSubjectCommunityResponse_creationDate:
+subject-subjectUserCommunityQuestionResponse_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-subject-userSubjectCommunityResponse_latestUpdateDate:
+subject-subjectUserCommunityQuestionResponse_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
 #relationship attributes
-subject-userSubjectCommunityResponse_creationUserId:
+subject-subjectUserCommunityQuestionResponse_creationUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-subject-userSubjectCommunityResponse_latestUpdateUserId:
+subject-subjectUserCommunityQuestionResponse_latestUpdateUserId:
   type: integer
   example: 1
   description: Relationship to user
 
-subject-userSubjectCommunityResponse_userId:
+subject-subjectUserCommunityQuestionResponse_userId:
   type: integer
   example: 1
   description: Relationship to user
 
-subject-userSubjectCommunityResponse_questionId:
+subject-subjectUserCommunityQuestionResponse_questionId:
   type: integer
   example: 1
   description: Relationship to subject-communityQuestions
 
-subject-userSubjectCommunityResponse_subjectId:
+subject-subjectUserCommunityQuestionResponse_subjectId:
   type: integer
   example: 1
   description: Relationship to subject
 
 #relationships
 
-subject-userSubjectCommunityResponse_user:
+subject-subjectUserCommunityQuestionResponse_user:
   type: object
   additionalProperties: false
   properties:
@@ -53,7 +53,7 @@ subject-userSubjectCommunityResponse_user:
   required: 
     - id
 
-subject-userSubjectCommunityResponse_creationUser:
+subject-subjectUserCommunityQuestionResponse_creationUser:
   type: object
   additionalProperties: false
   properties:
@@ -64,7 +64,7 @@ subject-userSubjectCommunityResponse_creationUser:
   required: 
     - id
   
-subject-userSubjectCommunityResponse_latestUpdateUser:
+subject-subjectUserCommunityQuestionResponse_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
@@ -75,7 +75,7 @@ subject-userSubjectCommunityResponse_latestUpdateUser:
   required: 
     - id
 
-subject-userSubjectCommunityResponse_question:
+subject-subjectUserCommunityQuestionResponse_question:
   type: object
   additionalProperties: false
   properties:
@@ -86,7 +86,7 @@ subject-userSubjectCommunityResponse_question:
   required: 
     - id
 
-subject-userSubjectCommunityResponse_subject:
+subject-subjectUserCommunityQuestionResponse_subject:
   type: object
   additionalProperties: false
   properties:

@@ -3,12 +3,25 @@ JsonApiModel_time-month:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_time-month_type"
+      $ref: '#/JsonApiModel_time-month_type'
     id:
-      $ref: "#/JsonApiModel_time-month_id"
+      $ref: '#/JsonApiModel_time-month_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../library/time/month.yaml#/time-month_name'
+        monthNumber:
+          $ref: '../../library/time/month.yaml#/time-month_monthNumber'
+      required:
+        - name
+        - monthNumber
   required:
     - type
     - id
+    - attributes
 
 JsonApiModel_time-month_type:
   type: string
@@ -18,7 +31,7 @@ JsonApiModel_time-month_type:
 
 JsonApiModel_time-month_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -31,9 +44,9 @@ JsonApiModel_time-month_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_time-month_type"
+          $ref: '#/JsonApiModel_time-month_type'
         id:
-          $ref: "#/JsonApiModel_time-month_id"
+          $ref: '#/JsonApiModel_time-month_id'
       required:
         - type
         - id
@@ -45,6 +58,6 @@ JsonApiModel_time-month_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_time-month_id"
+      $ref: '#/JsonApiModel_time-month_id'
   required:
     - id

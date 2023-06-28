@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-subject
+  summary: Get a subject
+  tags:
+    - subject
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema"
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - in: path
+      name: subjectId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: include
+      description: |
+        - world -	The world
+        - regions - All regions 
+        - ambassador - Ambassador for subject
+        - jobs - First 4 related live jobs when sorted by added date, from as many distinct countries as possible
+        - subjects - All subjects which have a subject page except for the queried subject
+        - teachers - 3 random teachers who have a subject testimonial
+        - articles - All articles for subject
+        - pages - All pages for subject
+        - jobFaqs - All job FAQ responses for subject
+        - advisers - All advisers for subject
+        - trainingProviders - All training providers for subject
+        - resources - All resources for subject
+        - months - All months
+      # required: true
+      example: world, region.subject, regions, ambassador, jobs, subjects, teachers, articles, pages, jobFaqs, advisers, trainingProviders, resources, months
+      schema:
+        type: string
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[slug]:
+            type: string
+        example:
+          slug: maths
+
+  responses:
+    "200":
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/subject/subject.yaml#/Response_subject"
+    "400":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    "401":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
+    "403":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
+    "404":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
+    "413":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
+    "422":
+      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
