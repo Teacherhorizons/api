@@ -24,16 +24,16 @@ Response_subjects_notSignedInSingle:
       type: array
       items:
         anyOf:
-          - $ref: './subject.yaml#/Response_subject_includedWorld_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedRegion_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedRegionSubject_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedAmbassador_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedJob_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedSchool_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedCity_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedCountry_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedSubject_notSignedIn' 
-          - $ref: './subject.yaml#/Response_subject_includedSubjectTeacher_notSignedIn' 
+          - $ref: './subject.yaml#/Response_subject_includedWorld_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedRegion_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedRegionSubject_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedAmbassador_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedJob_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedSchool_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedCity_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedCountry_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedSubject_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedSubjectTeacher_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedTeacher_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedStaffMember_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedSubjectLink_notSignedIn'
@@ -87,4 +87,3 @@ Response_subjects_notSignedInMultiple_item:
     - type
     - id
     - attributes
-

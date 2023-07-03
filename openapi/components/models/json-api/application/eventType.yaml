@@ -2,15 +2,15 @@
 
 JsonApiModel_application-eventType:
   oneOf:
-    - $ref: "#/JsonApiModel_application-eventType_admin"
-    - $ref: "#/JsonApiModel_application-eventType_school"
-    - $ref: "#/JsonApiModel_application-eventType_teacher"
+    - $ref: '#/JsonApiModel_application-eventType_admin'
+    - $ref: '#/JsonApiModel_application-eventType_school'
+    - $ref: '#/JsonApiModel_application-eventType_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_application-eventType_admin"
-      school: "#/JsonApiModel_application-eventType_school"
-      teacher: "#/JsonApiModel_application-eventType_teacher"
+      admin: '#/JsonApiModel_application-eventType_admin'
+      school: '#/JsonApiModel_application-eventType_school'
+      teacher: '#/JsonApiModel_application-eventType_teacher'
 
 # admin
 JsonApiModel_application-eventType_admin:
@@ -22,25 +22,25 @@ JsonApiModel_application-eventType_admin:
       enum:
         - admin
     type:
-      $ref: "#/JsonApiModel_application-eventType_type"
+      $ref: '#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "#/JsonApiModel_application-eventType_id"
+      $ref: '#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
-        # simple Attributes
+        # simple attributes
         name:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_name"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_name'
         nameForSchool:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_nameForSchool'
         nameForTeacher:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_nameForTeacher'
         isVisibleToSchool:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_isVisibleToSchool'
         # relationship attributes
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
       required:
         - name
     relationships:
@@ -49,7 +49,7 @@ JsonApiModel_application-eventType_admin:
       additionalProperties: false
       properties:
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship'
   required:
     - schema
     - type
@@ -67,26 +67,26 @@ JsonApiModel_application-eventType_school:
       enum:
         - school
     type:
-      $ref: "#/JsonApiModel_application-eventType_type"
+      $ref: '#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "#/JsonApiModel_application-eventType_id"
+      $ref: '#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         nameForSchool:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForSchool"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_nameForSchool'
         # relationship attributes
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
     relationships:
       type: object
       description: Related attributes
       additionalProperties: false
       properties:
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship'
   required:
     - schema
     - type
@@ -104,26 +104,26 @@ JsonApiModel_application-eventType_teacher:
       enum:
         - teacher
     type:
-      $ref: "#/JsonApiModel_application-eventType_type"
+      $ref: '#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "#/JsonApiModel_application-eventType_id"
+      $ref: '#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         nameForTeacher:
-          $ref: "../../library/application/eventType.yaml#/application-eventType_nameForTeacher"
+          $ref: '../../library/application/eventType.yaml#/application-eventType_nameForTeacher'
         # relationship attributes
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
     relationships:
       type: object
       description: Related attributes
       additionalProperties: false
       properties:
         applicationStatus:
-          $ref: "../application/status.yaml#/JsonApiModel_application-status_relationship"
+          $ref: '../application/status.yaml#/JsonApiModel_application-status_relationship'
   required:
     - schema
     - type
@@ -140,7 +140,7 @@ JsonApiModel_application-eventType_type:
 
 JsonApiModel_application-eventType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -149,9 +149,9 @@ JsonApiModel_application-eventType_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_application-eventType_id"
+      $ref: '#/JsonApiModel_application-eventType_id'
     name:
-      $ref: "../../library/application/eventType.yaml#/application-eventType_name" 
+      $ref: '../../library/application/eventType.yaml#/application-eventType_name'
   required:
     - id
     - name
@@ -165,9 +165,9 @@ JsonApiModel_application-eventType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_application-eventType_type"
+          $ref: '#/JsonApiModel_application-eventType_type'
         id:
-          $ref: "#/JsonApiModel_application-eventType_id"
+          $ref: '#/JsonApiModel_application-eventType_id'
       required:
         - type
         - id
