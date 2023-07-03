@@ -1,0 +1,28 @@
+SimpleModel_subject-subjectGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_subject-subjectGroup_id"
+    # simple attributes
+    name:
+      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_name"
+    creationDate:
+      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_creationDate"
+    latestUpdateDate:
+      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_latestUpdateDate"
+    # relationship attributes
+    creationUserId:
+      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_creationUserId"
+    latestUpdateUserId:
+      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_latestUpdateUserId"
+  required:
+    - id
+    - name
+
+# shared
+SimpleModel_subject-subjectGroup_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -32,7 +32,7 @@ JsonApiModel_subject:
 
         # relationship attributes
         subjectGroup:
-          $ref: "../general/subjectGroup.yaml#/JsonApiModel_subjectGroup_relationship_attribute"
+          $ref: "../subject/subjectGroup.yaml#/JsonApiModel_subject-subjectGroup_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
@@ -42,7 +42,7 @@ JsonApiModel_subject:
         additionalProperties: false
         properties: 
           subjectGroup:
-            $ref: "../general/subjectGroup.yaml#/JsonApiModel_subjectGroup_relationship"
+            $ref: "../subject/subjectGroup.yaml#/JsonApiModel_subject-subjectGroup_relationship"
           creationUser:
             $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
           latestUpdateUser:

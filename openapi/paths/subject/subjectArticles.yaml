@@ -1,0 +1,46 @@
+get:
+  operationId: get-subject-subjectArticles
+  summary: Get subject articles
+  tags:
+    - subject
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[subject.id]:
+            type: integer
+          filter[subject.slug]:
+            type: string
+        example:
+          subject.id: 13
+          subject.slug: maths
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/subject/subjectArticles.yaml#/Response_subject-subjectArticles'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

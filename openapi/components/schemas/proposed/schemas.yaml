@@ -71,7 +71,6 @@ SimpleModels:
     - $ref: "../../models/simple/general/role.yaml#/SimpleModel_general-role"
     - $ref: "../../models/simple/general/roleType.yaml#/SimpleModel_general-roleType"
     - $ref: "../../models/simple/general/siteSetting.yaml#/SimpleModel_general-siteSetting"
-    - $ref: "../../models/simple/general/subjectGroup.yaml#/SimpleModel_subjectGroup"
     - $ref: "../../models/simple/general/weatherType.yaml#/SimpleModel_general-weatherType"
     - $ref: "../../models/simple/general/worldLanguage.yaml#/SimpleModel_general-worldLanguage"
     - $ref: "../../models/simple/general/document.yaml#/SimpleModel_general-document"
@@ -184,6 +183,7 @@ SimpleModels:
 
     # subject  
     - $ref: "../../models/simple/subject/subject.yaml#/SimpleModel_subject"
+    - $ref: "../../models/simple/subject/subjectGroup.yaml#/SimpleModel_subject-subjectGroup"
     - $ref: "../../models/simple/subject/subjectArticle.yaml#/SimpleModel_subject-subjectArticle"
     - $ref: "../../models/simple/subject/communityQuestionType.yaml#/SimpleModel_subject-communityQuestionType"
     - $ref: "../../models/simple/subject/communityQuestion.yaml#/SimpleModel_subject-communityQuestion"
@@ -267,7 +267,6 @@ JsonApiModels:
     - $ref: "../../models/json-api/general/religion.yaml#/JsonApiModel_general-religion"
     - $ref: "../../models/json-api/general/role.yaml#/JsonApiModel_general-role"
     - $ref: "../../models/json-api/general/roleType.yaml#/JsonApiModel_general-roleType"
-    - $ref: "../../models/json-api/general/subjectGroup.yaml#/JsonApiModel_subjectGroup"
     - $ref: "../../models/json-api//general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage"
     - $ref: "../../models/json-api//general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate"
     - $ref: "../../models/json-api//general/nationality.yaml#/JsonApiModel_general-nationality"
@@ -371,6 +370,7 @@ JsonApiModels:
 
     # subject
     - $ref: "../../models/json-api/subject/subject.yaml#/JsonApiModel_subject"
+    - $ref: "../../models/json-api/subject/subjectGroup.yaml#/JsonApiModel_subject-subjectGroup"
     - $ref: "../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle"
     - $ref: "../../models/json-api/subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType"
     - $ref: "../../models/json-api/subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion"

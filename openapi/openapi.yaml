@@ -183,11 +183,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_general-roleType" />
 
-  - name: simple-model-subjectGroup
-    x-displayName: Simple model - subjectGroup
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subjectGroup" />
-
   - name: simple-model-general-currency
     x-displayName: Simple model - general-currency
     description: |
@@ -266,6 +261,11 @@ tags:
     x-displayName: Simple model - subject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject" />
+
+  - name: simple-model-subject-subjectGroup
+    x-displayName: Simple model - subject-subjectGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectGroup" />
 
   - name: simple-model-subject-subjectArticle
     x-displayName: Simple model - subject-subjectArticle
@@ -1057,11 +1057,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_general-roleType" />
 
-  - name: json-api-model-subjectGroup
-    x-displayName: JSON:API model - subjectGroup
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subjectGroup" />
-
   - name: json-api-model-general-worldLanguage
     x-displayName: JSON:API model - general-worldLanguage
     description: |
@@ -1107,6 +1102,11 @@ tags:
     x-displayName: JSON:API model - subject
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject" />
+
+  - name: json-api-model-subject-subjectGroup
+    x-displayName: JSON:API model - subject-subjectGroup
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectGroup" />
 
   - name: json-api-model-subject-subjectArticle
     x-displayName: JSON:API model - subject-subjectArticle
@@ -1799,7 +1799,6 @@ x-tagGroups:
       - simple-model-general-religion
       - simple-model-general-role
       - simple-model-general-roleType
-      - simple-model-subjectGroup
       - simple-model-general-worldLanguage
       - simple-model-general-manualEmailTemplate
       - simple-model-general-nationality
@@ -1809,6 +1808,7 @@ x-tagGroups:
       - simple-model-general-document
       - simple-model-general-documentType
       - simple-model-subject
+      - simple-model-subject-subjectGroup
       - simple-model-subject-subjectArticle
       - simple-model-subject-communityQuestionType
       - simple-model-subject-communityQuestion
@@ -1975,6 +1975,7 @@ x-tagGroups:
       - json-api-model-general-document
       - json-api-model-general-documentType
       - json-api-model-subject
+      - json-api-model-subject-subjectGroup
       - json-api-model-subject-subjectArticle
       - json-api-model-subject-communityQuestionType
       - json-api-model-subject-communityQuestion
@@ -1987,7 +1988,6 @@ x-tagGroups:
       - json-api-model-time-week
       - json-api-model-time-month
       - json-api-model-time-schoolYear
-      - json-api-model-subjectGroup
       - json-api-model-regional-city
       - json-api-model-regional-articleCategory
       - json-api-model-regional-cityArticle
