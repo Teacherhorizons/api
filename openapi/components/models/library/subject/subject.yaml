@@ -3,27 +3,28 @@ subject_name:
   type: string
   example: Mathematics
   description: Main
-  maxLength: 250
+  maxLength: 50
 
 subject_shortName:
   type: string
   example: Maths
   description: Main
-  maxLength: 250
+  maxLength: 50
 
 subject_middleOfSentenceName:
   type: string
   example: mathematics
-  maxLength: 250
+  maxLength: 50
 
 subject_middleOfSentenceShortName:
   type: string
   example: maths
-  maxLength: 250
+  maxLength: 50
 
 subject_importance:
   type: string
   example: H
+  maxLength: 1
   #description: Derived (dw)(check with RR)
 
 subject_slug:
@@ -50,6 +51,7 @@ subject_numberOfLiveHeadOfDepartmentJobs:
 subject_jobsDescription:
   type: string
   example: Foo bar baz
+  maxLength: 1000
   #description: Derived (dw)(check with RR)
 
 subject_creationDate:
