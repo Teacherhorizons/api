@@ -38,7 +38,7 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
           - $ref: '#/Response_subject_includedArticle_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
-          
+
   required:
     - schema
     - data
@@ -153,7 +153,7 @@ Response_subject_includedWorld_notSignedIn:
           $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryInternationalCurriculumSchools'
         numberOfSecondaryOtherCurriculumSchools:
           $ref: '../../../components/models/library/regional/world.yaml#/regional-world_numberOfSecondaryOtherCurriculumSchools'
-        # relationship attribute
+        # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
@@ -342,7 +342,7 @@ Response_subject_includedSchool_notSignedIn:
           $ref: '../../../components/models/library/school/school.yaml#/school_name'
         slug:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
-        # relationship attribute
+        # relationship attributes
         smallProfilePhoto:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
           # $ref: '../../../components/models/library/school/school.yaml#/school_smallProfilePhoto'
@@ -410,9 +410,9 @@ Response_subject_includedCountry_notSignedIn:
         # simple attributes
         name:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_name'
+        #relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        #relationship attributes
         # region:
         #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
@@ -510,7 +510,7 @@ Response_subject_includedTeacher_notSignedIn:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
+        # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
@@ -541,10 +541,11 @@ Response_subject_includedStaffMember_notSignedIn:
       additionalProperties: false
       properties:
         # simple attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         description:
           $ref: '../../../components/models/library/staff/staffMember.yaml#/staff-staffMember_description'
+        # relationship attributes
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - photo
         - description
@@ -690,6 +691,7 @@ Response_subject_includedArticle_notSignedIn:
           $ref: '../../../components/models/library/general/article.yaml#/general-article_title'
         url:
           $ref: '../../../components/models/library/general/article.yaml#/general-article_url'
+        # relationship attributes
         category:
           $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
         photo:
@@ -719,7 +721,8 @@ Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn:
       properties:
         # simple attributes
         text:
-          $ref: '../../../components/models/library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_text' 
+          $ref: '../../../components/models/library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_text'
+        # relationship attributes
         question:
           $ref: '../../../components/models/json-api/subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship_attribute'
       required:
