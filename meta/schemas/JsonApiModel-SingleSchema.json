@@ -16,10 +16,10 @@
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Id"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
-          "$ref": "#/definitions/JsonApiModel-SingleSchema-RelationshipAttribute"
+          "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
-          "$ref": "#/definitions/JsonApiModel-SingleSchema-Relationship"
+          "$ref": "Shared.json#/definitions/JsonApiModel-Relationship"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-RelationshipMultiple"
@@ -196,12 +196,16 @@
       "required": ["description", "example", "type"],
       "title": "JsonApiModel-SingleSchema-Id"
     },
-    "JsonApiModel-SingleSchema-RelationshipAttribute": {
+    "zz_moved_to_shared_JsonApiModel-SingleSchema-RelationshipAttribute": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "type": {
           "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*Main properties of \\[[a-zA-Z-]*\\]\\(/#tag/simple-model-[a-zA-Z-]*\\)\\s$"
         },
         "additionalProperties": {
           "const": false
@@ -306,7 +310,7 @@
           ]
         }
       },
-      "required": ["type", "additionalProperties", "properties", "required"],
+      "required": ["type", "description", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-RelationshipAttribute"
     },
     "JsonApiModel-SingleSchema-TypeAndId": {
@@ -352,12 +356,16 @@
       },
       "required": ["type", "additionalProperties", "properties", "required"]
     },
-    "JsonApiModel-SingleSchema-Relationship": {
+    "zz_moved_to_shared_JsonApiModel-SingleSchema-Relationship": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "type": {
           "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*\\[Simple model\\]\\(/#tag/simple-model-[a-zA-Z-]*\\) \\| \\s\\[JSON:API model\\]\\(/#tag/json-api-model-[a-zA-Z-]*\\)\\s$"
         },
         "additionalProperties": {
           "const": false
@@ -385,7 +393,7 @@
           ]
         }
       },
-      "required": ["type", "additionalProperties", "properties", "required"],
+      "required": ["type", "description", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-SingleSchema-Relationship"
     },
     "JsonApiModel-SingleSchema-RelationshipMultiple": {

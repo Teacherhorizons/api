@@ -3,46 +3,46 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type"
+      $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
     id:
-      $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id"
+      $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         text:
-          $ref: "../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_text"
+          $ref: '../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_text'
         creationDate:
-          $ref: "../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_creationDate"
+          $ref: '../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_creationDate'
         latestUpdateDate:
-          $ref: "../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_latestUpdateDate"
+          $ref: '../../library/subject/subjectUserCommunityQuestionResponse.yaml#/subject-subjectUserCommunityQuestionResponse_latestUpdateDate'
 
         # relationship attributes
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         question:
-          $ref: "../subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship_attribute"
+          $ref: '../subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-          user:
-            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-          subject:
-            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
-          question:
-            $ref: "../subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship"
-          creationUser:
-            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
-          latestUpdateUser:
-            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+        subject:
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
+        question:
+          $ref: '../subject/communityQuestion.yaml#/JsonApiModel_subject-communityQuestion_relationship'
+        creationUser:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+        latestUpdateUser:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -55,12 +55,15 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse_type:
 
 JsonApiModel_subject-subjectUserCommunityQuestionResponse_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject-subjectUserCommunityQuestionResponse) | 
+    [JSON:API model](/#tag/json-api-model-subject-subjectUserCommunityQuestionResponse)
   additionalProperties: false
   properties:
     data:
@@ -68,9 +71,9 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type"
+          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
         id:
-          $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id"
+          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
       required:
         - type
         - id
@@ -86,9 +89,9 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship_multiple:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type"
+          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
         id:
-          $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id"
+          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
       required:
         - type
         - id
@@ -100,7 +103,6 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship_attribute
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id"
+      $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
   required:
     - id
-

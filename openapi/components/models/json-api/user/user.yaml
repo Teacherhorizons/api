@@ -3,69 +3,69 @@ JsonApiModel_user:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_user_type"
+      $ref: '#/JsonApiModel_user_type'
     id:
-      $ref: "#/JsonApiModel_user_id"
+      $ref: '#/JsonApiModel_user_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         fullName:
-          $ref: "../../library/user/user.yaml#/user_fullName"
+          $ref: '../../library/user/user.yaml#/user_fullName'
         firstName:
-          $ref: "../../library/user/user.yaml#/user_firstName"
+          $ref: '../../library/user/user.yaml#/user_firstName'
         lastName:
-          $ref: "../../library/user/user.yaml#/user_lastName"
+          $ref: '../../library/user/user.yaml#/user_lastName'
         email:
-          $ref: "../../library/user/user.yaml#/user_email"
+          $ref: '../../library/user/user.yaml#/user_email'
         skype:
-          $ref: "../../library/user/user.yaml#/user_skype"
+          $ref: '../../library/user/user.yaml#/user_skype'
         password:
-          $ref: "../../library/user/user.yaml#/user_password"
+          $ref: '../../library/user/user.yaml#/user_password'
         phone:
-          $ref: "../../library/user/user.yaml#/user_phone"
+          $ref: '../../library/user/user.yaml#/user_phone'
         optin:
-          $ref: "../../library/user/user.yaml#/user_optin"
+          $ref: '../../library/user/user.yaml#/user_optin'
         active:
-          $ref: "../../library/user/user.yaml#/user_active"
+          $ref: '../../library/user/user.yaml#/user_active'
         creationDate:
-          $ref: "../../library/user/user.yaml#/user_creationDate"
+          $ref: '../../library/user/user.yaml#/user_creationDate'
         latestUpdateDate:
-          $ref: "../../library/user/user.yaml#/user_latestUpdateDate"
+          $ref: '../../library/user/user.yaml#/user_latestUpdateDate'
         authToken:
-          $ref: "../../library/user/user.yaml#/user_authToken"
+          $ref: '../../library/user/user.yaml#/user_authToken'
         latestLoginDate:
-          $ref: "../../library/user/user.yaml#/user_latestLoginDate"
+          $ref: '../../library/user/user.yaml#/user_latestLoginDate'
         encryptedPassword:
-          $ref: "../../library/user/user.yaml#/user_encryptedPassword"
+          $ref: '../../library/user/user.yaml#/user_encryptedPassword'
         allowLogin:
-          $ref: "../../library/user/user.yaml#/user_allowLogin"
+          $ref: '../../library/user/user.yaml#/user_allowLogin'
         thDoNotContact:
-          $ref: "../../library/user/user.yaml#/user_thDoNotContact"
+          $ref: '../../library/user/user.yaml#/user_thDoNotContact'
         latestMessageViewDate:
-          $ref: "../../library/user/user.yaml#/user_latestMessageViewDate"
+          $ref: '../../library/user/user.yaml#/user_latestMessageViewDate'
         # relationship attributes
         type:
-          $ref: "../user/type.yaml#/JsonApiModel_user-type_relationship_attribute"
+          $ref: '../user/type.yaml#/JsonApiModel_user-type_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         phoneCodeCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         type:
-          $ref: "../user/type.yaml#/JsonApiModel_user-type_relationship"
+          $ref: '../user/type.yaml#/JsonApiModel_user-type_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         phoneCodeCountry:
-          $ref: "../regional/country.yaml#/JsonApiModel_regional-country_relationship"
+          $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
   required:
     - type
     - id
@@ -78,7 +78,7 @@ JsonApiModel_user_type:
 
 JsonApiModel_user_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -87,15 +87,18 @@ JsonApiModel_user_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_user_id"
+      $ref: '#/JsonApiModel_user_id'
     fullName:
-      $ref: "../../library/user/user.yaml#/user_fullName"
+      $ref: '../../library/user/user.yaml#/user_fullName'
   required:
     - id
     - fullName
 
 JsonApiModel_user_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-user) | 
+    [JSON:API model](/#tag/json-api-model-user)
   additionalProperties: false
   properties:
     data:
@@ -103,11 +106,9 @@ JsonApiModel_user_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_user_type"
+          $ref: '#/JsonApiModel_user_type'
         id:
-          $ref: "#/JsonApiModel_user_id"
-        fullName: 
-          $ref: "../../library/user/user.yaml#/user_fullName"
+          $ref: '#/JsonApiModel_user_id'
       required:
         - type
         - id

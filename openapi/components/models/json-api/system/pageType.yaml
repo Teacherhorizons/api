@@ -3,36 +3,36 @@ JsonApiModel_system-pageType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_system-pageType_type"
+      $ref: '#/JsonApiModel_system-pageType_type'
     id:
-      $ref: "#/JsonApiModel_system-pageType_id"
+      $ref: '#/JsonApiModel_system-pageType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/system/pageType.yaml#/system-pageType_name"
+          $ref: '../../library/system/pageType.yaml#/system-pageType_name'
         titleTemplate:
-          $ref: "../../library/system/pageType.yaml#/system-pageType_titleTemplate"
+          $ref: '../../library/system/pageType.yaml#/system-pageType_titleTemplate'
         metaDescriptionTemplate:
-          $ref: "../../library/system/pageType.yaml#/system-pageType_metaDescriptionTemplate"
+          $ref: '../../library/system/pageType.yaml#/system-pageType_metaDescriptionTemplate'
 
         # relationship attributes
-        entityType: 
-          $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute"
+        entityType:
+          $ref: '../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship_attribute'
       required:
         - name
         - titleTemplate
         - metaDescriptionTemplate
         - entityType
-        
+
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-          entityType:
-            $ref: "../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship"
+      type: object
+      additionalProperties: false
+      properties:
+        entityType:
+          $ref: '../meta/entityType.yaml#/JsonApiModel_meta-entityType_relationship'
 
   required:
     - type
@@ -46,22 +46,24 @@ JsonApiModel_system-pageType_type:
 
 JsonApiModel_system-pageType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_system-pageType_relationship_attribute:
   type: object
   additionalProperties: false
+  description: |
+    Main properties of [system-pageType](/#tag/simple-model-system-pageType)
   properties:
     id:
-      $ref: "#/JsonApiModel_system-pageType_id"
+      $ref: '#/JsonApiModel_system-pageType_id'
     name:
-      $ref: "../../library/system/pageType.yaml#/system-pageType_name"
+      $ref: '../../library/system/pageType.yaml#/system-pageType_name'
     titleTemplate:
-      $ref: "../../library/system/pageType.yaml#/system-pageType_titleTemplate"
+      $ref: '../../library/system/pageType.yaml#/system-pageType_titleTemplate'
     metaDescriptionTemplate:
-      $ref: "../../library/system/pageType.yaml#/system-pageType_metaDescriptionTemplate"
+      $ref: '../../library/system/pageType.yaml#/system-pageType_metaDescriptionTemplate'
   required:
     - id
     - name
@@ -70,6 +72,9 @@ JsonApiModel_system-pageType_relationship_attribute:
 
 JsonApiModel_system-pageType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-system-pageType) | 
+    [JSON:API model](/#tag/json-api-model-system-pageType)
   additionalProperties: false
   properties:
     data:
@@ -77,14 +82,14 @@ JsonApiModel_system-pageType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_system-pageType_type"
+          $ref: '#/JsonApiModel_system-pageType_type'
         id:
-          $ref: "#/JsonApiModel_system-pageType_id"
+          $ref: '#/JsonApiModel_system-pageType_id'
       required:
         - type
         - id
   required:
-      - data
+    - data
 
 JsonApiModel_system-pageType_relationship_multiple:
   type: object
@@ -97,9 +102,9 @@ JsonApiModel_system-pageType_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_system-pageType_type"
+            $ref: '#/JsonApiModel_system-pageType_type'
           id:
-            $ref: "#/JsonApiModel_system-pageType_id"
+            $ref: '#/JsonApiModel_system-pageType_id'
         required:
           - type
           - id

@@ -51,7 +51,227 @@
     },
     "Path-description": {
       "type": "string",
-      "pattern": "^<span class=\"testing-status-[1-5]\"><\/span>[\\S\\s]*$"
+      "pattern": "^<span class=\"testing-status-[1-5]\"></span>[\\S\\s]*$"
+    },
+    "JsonApiModel-Ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "$ref": {
+          "type": "string"
+        }
+      },
+      "required": ["$ref"]
+    },
+    "JsonApiModel-TypeAndId": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/JsonApiModel-Ref"
+            },
+            "id": {
+              "$ref": "#/definitions/JsonApiModel-Ref"
+            }
+          },
+          "required": ["type", "id"]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "allOf": [
+            {
+              "contains": {
+                "const": "type"
+              }
+            },
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["type", "additionalProperties", "properties", "required"]
+    },
+    "JsonApiModel-Relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*\\[Simple model\\]\\(/#tag/simple-model-[a-zA-Z-]*\\) \\| \\s\\[JSON:API model\\]\\(/#tag/json-api-model-[a-zA-Z-]*\\)\\s$"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/JsonApiModel-TypeAndId"
+            }
+          },
+          "required": ["data"]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "data"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["type", "description", "additionalProperties", "properties", "required"],
+      "title": "JsonApiModel-Relationship"
+    },
+    "JsonApiModel-RelationshipAttribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*Main properties of \\[[a-zA-Z-]*\\]\\(/#tag/simple-model-[a-zA-Z-]*\\)\\s$"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "name": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "slug": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "fullName": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "url": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "description": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "iconName": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "memberNumber": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            },
+            "text": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
+              "required": ["$ref"]
+            }
+          },
+          "required": ["id"]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "allOf": [
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["type", "description", "additionalProperties", "properties", "required"],
+      "title": "JsonApiModel-RelationshipAttribute"
     }
   }
 }

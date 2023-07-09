@@ -7,15 +7,16 @@ system-page_title:
 
 system-page_metaDescription:
   type: string
-  example: ""
+  example: ''
   description: Main
   maxLength: 250
-  
+
 #relationship attributes
 system-page_pageTypeId:
   type: integer
   example: 1
-  description: Relationship to system-pageType
+  description: |
+    Relationship to [system-pageType](/#tag/simple-model-system-pageType)
 
 system-page_entityId:
   type: integer
@@ -30,9 +31,9 @@ system-page_pageType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to system-pageType
-  required: 
+  required:
     - id
 
 system-page_entity:
@@ -41,7 +42,7 @@ system-page_entity:
   properties:
     id:
       type: string
-      example: "202111"
+      example: '202111'
       description: Relationship to ?
-  required: 
+  required:
     - id

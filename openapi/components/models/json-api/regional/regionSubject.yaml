@@ -3,21 +3,21 @@ JsonApiModel_regional-regionSubject:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-regionSubject_type"
+      $ref: '#/JsonApiModel_regional-regionSubject_type'
     id:
-      $ref: "#/JsonApiModel_regional-regionSubject_id"
+      $ref: '#/JsonApiModel_regional-regionSubject_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         numberOfLiveJobs:
-          $ref: "../../library/regional/regionSubject.yaml#/regional-regionSubject_numberOfLiveJobs"
+          $ref: '../../library/regional/regionSubject.yaml#/regional-regionSubject_numberOfLiveJobs'
         # relationship attributes
         region:
-          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"        
+          $ref: '../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
       required:
         - id
         - numberOfLiveJobs
@@ -28,9 +28,9 @@ JsonApiModel_regional-regionSubject:
       additionalProperties: false
       properties:
         region:
-          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"        
+          $ref: '../regional/region.yaml#/JsonApiModel_regional-region_relationship'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
   required:
     - type
     - id
@@ -43,16 +43,18 @@ JsonApiModel_regional-regionSubject_type:
 
 JsonApiModel_regional-regionSubject_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_regional-regionSubject_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-regionSubject](/#tag/simple-model-regional-regionSubject)
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-regionSubject_id"
+      $ref: '#/JsonApiModel_regional-regionSubject_id'
     # url:
     #   $ref: "../../library/regional/regionSubject.yaml#/regional-regionSubject_url"
     # description:
@@ -62,6 +64,9 @@ JsonApiModel_regional-regionSubject_relationship_attribute:
 
 JsonApiModel_regional-regionSubject_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-regionSubject) | 
+    [JSON:API model](/#tag/json-api-model-regional-regionSubject)
   additionalProperties: false
   properties:
     data:
@@ -69,9 +74,9 @@ JsonApiModel_regional-regionSubject_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-regionSubject_type"
+          $ref: '#/JsonApiModel_regional-regionSubject_type'
         id:
-          $ref: "#/JsonApiModel_regional-regionSubject_id"
+          $ref: '#/JsonApiModel_regional-regionSubject_id'
       required:
         - type
         - id
@@ -89,9 +94,9 @@ JsonApiModel_regional-regionSubject_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_regional-regionSubject_type"
+            $ref: '#/JsonApiModel_regional-regionSubject_type'
           id:
-            $ref: "#/JsonApiModel_regional-regionSubject_id"
+            $ref: '#/JsonApiModel_regional-regionSubject_id'
         required:
           - type
           - id

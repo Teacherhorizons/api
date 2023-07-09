@@ -3,25 +3,25 @@ JsonApiModel_regional-regionSubjectSchoolYear:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_type"
+      $ref: '#/JsonApiModel_regional-regionSubjectSchoolYear_type'
     id:
-      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
+      $ref: '#/JsonApiModel_regional-regionSubjectSchoolYear_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         numberOfLiveJobs:
-          $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs"
+          $ref: '../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs'
         averageAnnualGrossIncome:
-          $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_averageAnnualGrossIncome"
+          $ref: '../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_averageAnnualGrossIncome'
         # relationship attributes
         region:
-          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute"        
+          $ref: '../regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         schoolYear:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
       required:
         - id
         - numberOfLiveJobs
@@ -34,11 +34,11 @@ JsonApiModel_regional-regionSubjectSchoolYear:
       additionalProperties: false
       properties:
         region:
-          $ref: "../regional/region.yaml#/JsonApiModel_regional-region_relationship"        
+          $ref: '../regional/region.yaml#/JsonApiModel_regional-region_relationship'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
         schoolYear:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
   required:
     - type
     - id
@@ -51,16 +51,18 @@ JsonApiModel_regional-regionSubjectSchoolYear_type:
 
 JsonApiModel_regional-regionSubjectSchoolYear_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_regional-regionSubjectSchoolYear_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-regionSubjectSchoolYear](/#tag/simple-model-regional-regionSubjectSchoolYear)
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
+      $ref: '#/JsonApiModel_regional-regionSubjectSchoolYear_id'
     # url:
     #   $ref: "../../library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_url"
     # description:
@@ -70,6 +72,9 @@ JsonApiModel_regional-regionSubjectSchoolYear_relationship_attribute:
 
 JsonApiModel_regional-regionSubjectSchoolYear_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-regionSubjectSchoolYear) | 
+    [JSON:API model](/#tag/json-api-model-regional-regionSubjectSchoolYear)
   additionalProperties: false
   properties:
     data:
@@ -77,15 +82,14 @@ JsonApiModel_regional-regionSubjectSchoolYear_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_type"
+          $ref: '#/JsonApiModel_regional-regionSubjectSchoolYear_type'
         id:
-          $ref: "#/JsonApiModel_regional-regionSubjectSchoolYear_id"
+          $ref: '#/JsonApiModel_regional-regionSubjectSchoolYear_id'
       required:
         - type
         - id
   required:
     - data
-
 # JsonApiModel_regional-regionSubjectSchoolYear_relationship_multiple:
 #   type: object
 #   additionalProperties: false

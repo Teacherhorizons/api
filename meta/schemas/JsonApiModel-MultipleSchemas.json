@@ -19,10 +19,10 @@
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Id"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
-          "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipAttribute"
+          "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
-          "$ref": "#/definitions/JsonApiModel-MultipleSchemas-Relationship"
+          "$ref": "Shared.json#/definitions/JsonApiModel-Relationship"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-MultipleSchemas-RelationshipMultiple"
@@ -264,12 +264,15 @@
       "required": ["description", "example", "type"],
       "title": "JsonApiModel-MultipleSchemas-Id"
     },
-    "JsonApiModel-MultipleSchemas-RelationshipAttribute": {
+    "zz_moved_to_shared_JsonApiModel-MultipleSchemas-RelationshipAttribute": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "type": {
           "const": "object"
+        },
+        "description": {
+          "const": "TODO"
         },
         "additionalProperties": {
           "const": false
@@ -380,7 +383,7 @@
       },
       "required": ["type", "additionalProperties", "properties", "required"]
     },
-    "JsonApiModel-MultipleSchemas-Relationship": {
+    "zz_moved_to_shared_JsonApiModel-MultipleSchemas-Relationship": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -459,7 +462,7 @@
         }
       },
       "required": ["type", "additionalProperties", "properties", "required"],
-      "title": "JsonApiModel-MultipleSchemas-Relationship"
+      "title": "JsonApiModel-MultipleSchemas-RelationshipMultiple"
     },
     "JsonApiModel-MultipleSchemas-Ref": {
       "type": "object",

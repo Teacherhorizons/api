@@ -3,29 +3,29 @@ JsonApiModel_subject-communityQuestion:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-communityQuestion_type"
+      $ref: '#/JsonApiModel_subject-communityQuestion_type'
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestion_id"
+      $ref: '#/JsonApiModel_subject-communityQuestion_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         text:
-          $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text"
+          $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text'
         isActive:
-          $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_isActive"
+          $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_isActive'
         precedence:
-          $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_precedence"
+          $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_precedence'
         # relationship attributes
         typeId:
-          $ref: "../subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType_relationship_attribute"
+          $ref: '../subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType_relationship_attribute'
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-          type:
-            $ref: "../subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType_relationship"
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: '../subject/communityQuestionType.yaml#/JsonApiModel_subject-communityQuestionType_relationship'
   required:
     - type
     - id
@@ -38,12 +38,15 @@ JsonApiModel_subject-communityQuestion_type:
 
 JsonApiModel_subject-communityQuestion_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_subject-communityQuestion_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject-communityQuestion) | 
+    [JSON:API model](/#tag/json-api-model-subject-communityQuestion)
   additionalProperties: false
   properties:
     data:
@@ -51,9 +54,9 @@ JsonApiModel_subject-communityQuestion_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-communityQuestion_type"
+          $ref: '#/JsonApiModel_subject-communityQuestion_type'
         id:
-          $ref: "#/JsonApiModel_subject-communityQuestion_id"
+          $ref: '#/JsonApiModel_subject-communityQuestion_id'
       required:
         - type
         - id
@@ -65,9 +68,9 @@ JsonApiModel_subject-communityQuestion_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestion_id"
+      $ref: '#/JsonApiModel_subject-communityQuestion_id'
     text:
-      $ref: "../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text"
+      $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text'
   required:
     - id
     - text

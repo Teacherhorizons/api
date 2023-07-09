@@ -3,45 +3,45 @@ JsonApiModel_general-photo:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-photo_type"
+      $ref: '#/JsonApiModel_general-photo_type'
     id:
-      $ref: "#/JsonApiModel_general-photo_id"
+      $ref: '#/JsonApiModel_general-photo_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/photo.yaml#/general-photo_name"
+          $ref: '../../library/general/photo.yaml#/general-photo_name'
         url:
-          $ref: "../../library/general/photo.yaml#/general-photo_url"
+          $ref: '../../library/general/photo.yaml#/general-photo_url'
         creationDate:
-          $ref: "../../library/general/photo.yaml#/general-photo_creationDate"
+          $ref: '../../library/general/photo.yaml#/general-photo_creationDate'
         latestUpdateDate:
-          $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateDate"
+          $ref: '../../library/general/photo.yaml#/general-photo_latestUpdateDate'
         description:
-          $ref: "../../library/general/photo.yaml#/general-photo_description"
+          $ref: '../../library/general/photo.yaml#/general-photo_description'
         widthInPx:
-          $ref: "../../library/general/photo.yaml#/general-photo_widthInPx"
+          $ref: '../../library/general/photo.yaml#/general-photo_widthInPx'
         heightInPx:
-          $ref: "../../library/general/photo.yaml#/general-photo_heightInPx"
+          $ref: '../../library/general/photo.yaml#/general-photo_heightInPx'
         sourceUrl:
-          $ref: "../../library/general/photo.yaml#/general-photo_sourceUrl"
+          $ref: '../../library/general/photo.yaml#/general-photo_sourceUrl'
         authorName:
-          $ref: "../../library/general/photo.yaml#/general-photo_authorName"
+          $ref: '../../library/general/photo.yaml#/general-photo_authorName'
         licenseDescription:
-          $ref: "../../library/general/photo.yaml#/general-photo_licenseDescription"
+          $ref: '../../library/general/photo.yaml#/general-photo_licenseDescription'
         modificationDescription:
-          $ref: "../../library/general/photo.yaml#/general-photo_modificationDescription"
+          $ref: '../../library/general/photo.yaml#/general-photo_modificationDescription'
         notes:
-          $ref: "../../library/general/photo.yaml#/general-photo_notes"
+          $ref: '../../library/general/photo.yaml#/general-photo_notes'
         # relationship attributes
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         type:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
           #check "type" with RR
       required:
         - id
@@ -65,11 +65,11 @@ JsonApiModel_general-photo:
       additionalProperties: false
       properties:
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         type:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -82,20 +82,22 @@ JsonApiModel_general-photo_type:
 
 JsonApiModel_general-photo_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_general-photo_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-photo](/#tag/simple-model-general-photo)
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_general-photo_id"
+      $ref: '#/JsonApiModel_general-photo_id'
     url:
-      $ref: "../../library/general/photo.yaml#/general-photo_url"
+      $ref: '../../library/general/photo.yaml#/general-photo_url'
     description:
-      $ref: "../../library/general/photo.yaml#/general-photo_description"
+      $ref: '../../library/general/photo.yaml#/general-photo_description'
   required:
     - id
     - url
@@ -109,9 +111,9 @@ JsonApiModel_general-photo_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-photo_type"
+          $ref: '#/JsonApiModel_general-photo_type'
         id:
-          $ref: "#/JsonApiModel_general-photo_id"
+          $ref: '#/JsonApiModel_general-photo_id'
       required:
         - type
         - id

@@ -3,16 +3,16 @@ JsonApiModel_subject-communityQuestionType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-communityQuestionType_type"
+      $ref: '#/JsonApiModel_subject-communityQuestionType_type'
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestionType_id"
+      $ref: '#/JsonApiModel_subject-communityQuestionType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/subject/communityQuestionType.yaml#/subject-communityQuestionType_name"
+          $ref: '../../library/subject/communityQuestionType.yaml#/subject-communityQuestionType_name'
   required:
     - type
     - id
@@ -25,12 +25,15 @@ JsonApiModel_subject-communityQuestionType_type:
 
 JsonApiModel_subject-communityQuestionType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_subject-communityQuestionType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject-communityQuestionType) | 
+    [JSON:API model](/#tag/json-api-model-subject-communityQuestionType)
   additionalProperties: false
   properties:
     data:
@@ -38,9 +41,9 @@ JsonApiModel_subject-communityQuestionType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-communityQuestionType_type"
+          $ref: '#/JsonApiModel_subject-communityQuestionType_type'
         id:
-          $ref: "#/JsonApiModel_subject-communityQuestionType_id"
+          $ref: '#/JsonApiModel_subject-communityQuestionType_id'
       required:
         - type
         - id
@@ -52,6 +55,6 @@ JsonApiModel_subject-communityQuestionType_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_subject-communityQuestionType_id"
+      $ref: '#/JsonApiModel_subject-communityQuestionType_id'
   required:
     - id

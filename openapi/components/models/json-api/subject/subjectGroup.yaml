@@ -3,33 +3,33 @@ JsonApiModel_subject-subjectGroup:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-subjectGroup_type"
+      $ref: '#/JsonApiModel_subject-subjectGroup_type'
     id:
-      $ref: "#/JsonApiModel_subject-subjectGroup_id"
+      $ref: '#/JsonApiModel_subject-subjectGroup_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_name"
+          $ref: '../../library/subject/subjectGroup.yaml#/subject-subjectGroup_name'
         creationDate:
-          $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_creationDate"  
+          $ref: '../../library/subject/subjectGroup.yaml#/subject-subjectGroup_creationDate'
         latestUpdateDate:
-          $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_latestUpdateDate"
+          $ref: '../../library/subject/subjectGroup.yaml#/subject-subjectGroup_latestUpdateDate'
         # relationship attributes
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -42,7 +42,7 @@ JsonApiModel_subject-subjectGroup_type:
 
 JsonApiModel_subject-subjectGroup_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -50,16 +50,19 @@ JsonApiModel_subject-subjectGroup_relationship_attribute:
   type: object
   additionalProperties: false
   properties:
-    id: 
-      $ref: "#/JsonApiModel_subject-subjectGroup_id"
+    id:
+      $ref: '#/JsonApiModel_subject-subjectGroup_id'
     name:
-      $ref: "../../library/subject/subjectGroup.yaml#/subject-subjectGroup_name"
+      $ref: '../../library/subject/subjectGroup.yaml#/subject-subjectGroup_name'
   required:
-      - id
-      - name
+    - id
+    - name
 
 JsonApiModel_subject-subjectGroup_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject-subjectGroup) | 
+    [JSON:API model](/#tag/json-api-model-subject-subjectGroup)
   additionalProperties: false
   properties:
     data:
@@ -67,9 +70,9 @@ JsonApiModel_subject-subjectGroup_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_subject-subjectGroup_type"
+          $ref: '#/JsonApiModel_subject-subjectGroup_type'
         id:
-          $ref: "#/JsonApiModel_subject-subjectGroup_id"
+          $ref: '#/JsonApiModel_subject-subjectGroup_id'
       required:
         - type
         - id

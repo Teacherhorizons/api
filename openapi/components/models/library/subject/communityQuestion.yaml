@@ -17,7 +17,7 @@ subject-communityQuestion_precedence:
 subject-communityQuestion_typeId:
   type: integer
   example: 1
-  description: Relationship to subject-communityQuestionTypes
+  description: Relationship to subject-communityQuestionType
 
 #relationships
 subject-communityQuestion_type:
@@ -26,8 +26,7 @@ subject-communityQuestion_type:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to subject-communityQuestionTypes
-  required: 
+      example: '1'
+      description: Relationship to subject-communityQuestionType
+  required:
     - id
-  

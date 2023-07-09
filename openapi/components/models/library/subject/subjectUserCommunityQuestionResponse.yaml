@@ -1,7 +1,7 @@
 # attributes
 subject-subjectUserCommunityQuestionResponse_text:
   type: string
-  example: fewlkjflewj ewfef 
+  example: Foo bar
   #maxLength: 250
 
 subject-subjectUserCommunityQuestionResponse_creationDate:
@@ -33,7 +33,7 @@ subject-subjectUserCommunityQuestionResponse_userId:
 subject-subjectUserCommunityQuestionResponse_questionId:
   type: integer
   example: 1
-  description: Relationship to subject-communityQuestions
+  description: Relationship to subject-communityQuestion
 
 subject-subjectUserCommunityQuestionResponse_subjectId:
   type: integer
@@ -48,9 +48,9 @@ subject-subjectUserCommunityQuestionResponse_user:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
 
 subject-subjectUserCommunityQuestionResponse_creationUser:
@@ -59,20 +59,20 @@ subject-subjectUserCommunityQuestionResponse_creationUser:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
-  
+
 subject-subjectUserCommunityQuestionResponse_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to user
-  required: 
+  required:
     - id
 
 subject-subjectUserCommunityQuestionResponse_question:
@@ -81,9 +81,9 @@ subject-subjectUserCommunityQuestionResponse_question:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to subject-communityQuestions
-  required: 
+      example: '1'
+      description: Relationship to subject-communityQuestion
+  required:
     - id
 
 subject-subjectUserCommunityQuestionResponse_subject:
@@ -92,8 +92,7 @@ subject-subjectUserCommunityQuestionResponse_subject:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subject
-  required: 
+  required:
     - id
-
