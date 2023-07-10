@@ -1,0 +1,45 @@
+# attributes
+system-dataImportTask_spreadsheetId:
+  type: string
+  maxLength: 100
+  example: 1RuQjYcPYwMukdEjhzq7EU1SVU9rBOpu3ijO1uaw7A0g
+
+system-dataImportTask_worksheetId:
+  type: number
+  example: 2137514194
+
+system-dataImportTask_rangeName:
+  type: string
+  maxLength: 100
+  example: A2:P20
+
+system-dataImportTask_preImportSql:
+  type: string
+  example: TRUNCATE TABLE foo.bar;
+
+system-dataImportTask_insertDataSql:
+  type: string
+  example: INSERT INTO foo.bar(`baz`, `qux`) VALUES (%s, %s);
+
+system-dataImportTask_postImportSql:
+  type: string
+  example: call foo();
+
+system-dataImportTask_isActive:	
+  type: boolean
+  example: 1 
+
+system-dataImportTask_minutesBetweenRuns:
+  type: number
+  example: 1440
+
+system-dataImportTask_latestRunDate:	
+  type: string
+  format: date-time
+  example: 2023-04-06 10:37:56
+
+system-dataImportTask_spreadsheetUrl:
+  type: string
+  maxLength: 255
+  description: derived
+  example: https://docs.google.com/spreadsheets/d/1RuQjYcPYwMukdEjhzq7EU1SVU9rBOpu3ijO1uaw7A0g/edit#gid=2137514194

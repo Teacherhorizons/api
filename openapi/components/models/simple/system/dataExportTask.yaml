@@ -1,0 +1,43 @@
+SimpleModel_system-dataExportTask:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-dataExportTask_id"
+    # simple attributes
+    selectSql:
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_selectSql"
+    spreadsheetId:
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_spreadsheetId"	
+    worksheetId:	
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_worksheetId"
+    rangeName:	
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_rangeName"
+    latestRunDateCellName:	
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_latestRunDateCellName"
+    isActive:	
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_isActive"
+    minutesBetweenRuns:
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_minutesBetweenRuns"
+    latestRunDate:	
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_latestRunDate"
+    spreadsheetUrl:
+      $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_spreadsheetUrl"
+  required:
+    - id
+    - selectSql	
+    - spreadsheetId	
+    - worksheetId	
+    - rangeName	
+    - latestRunDateCellName	
+    - isActive	
+    - minutesBetweenRuns	
+    - latestRunDate	
+    - spreadsheetUrl 
+
+# shared
+SimpleModel_system-dataExportTask_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

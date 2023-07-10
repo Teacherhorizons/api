@@ -1,0 +1,56 @@
+JsonApiModel_system-dataExportTask:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_system-dataExportTask_type"
+    id:
+      $ref: "#/JsonApiModel_system-dataExportTask_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        selectSql:
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_selectSql"
+        spreadsheetId:
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_spreadsheetId"	
+        worksheetId:	
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_worksheetId"
+        rangeName:	
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_rangeName"
+        latestRunDateCellName:	
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_latestRunDateCellName"
+        isActive:	
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_isActive"
+        minutesBetweenRuns:
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_minutesBetweenRuns"
+        latestRunDate:	
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_latestRunDate"
+        spreadsheetUrl:
+          $ref: "../../library/system/dataExportTask.yaml#/system-dataExportTask_spreadsheetUrl"
+      required:
+        - selectSql	
+        - spreadsheetId	
+        - worksheetId	
+        - rangeName	
+        - latestRunDateCellName	
+        - isActive	
+        - minutesBetweenRuns	
+        - latestRunDate	
+        - spreadsheetUrl
+  required:
+    - type
+    - id
+
+JsonApiModel_system-dataExportTask_type:
+  type: string
+  example: system-dataExportTask
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-dataExportTask_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

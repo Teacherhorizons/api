@@ -1,0 +1,46 @@
+SimpleModel_system-dataImportTask:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-dataImportTask_id"
+    # simple attributes
+    spreadsheetId:
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_spreadsheetId"	
+    worksheetId:	
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_worksheetId"
+    rangeName:	
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_rangeName"
+    preImportSql:	
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_preImportSql"
+    insertDataSql:
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_insertDataSql"
+    postImportSql:
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_postImportSql"
+    isActive:	
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_isActive"
+    minutesBetweenRuns:
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_minutesBetweenRuns"
+    latestRunDate:	
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_latestRunDate"
+    spreadsheetUrl:
+      $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_spreadsheetUrl"
+  required:
+    - id
+    - spreadsheetId	
+    - worksheetId	
+    - rangeName	
+    - preImportSql	
+    - insertDataSql	
+    - postImportSql	
+    - isActive	
+    - minutesBetweenRuns	
+    - latestRunDate	
+    - spreadsheetUrl
+
+# shared
+SimpleModel_system-dataImportTask_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

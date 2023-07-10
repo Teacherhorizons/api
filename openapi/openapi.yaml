@@ -126,6 +126,16 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-pageType" />
 
+  - name: simple-model-system-dataExportTask
+    x-displayName: Simple model - system-dataExportTask
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataExportTask" />
+
+  - name: simple-model-system-dataImportTask
+    x-displayName: Simple model - system-dataImportTask
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataImportTask" />
+
   # tags - simple-models - general
 
   - name: simple-model-general-applicationType
@@ -940,7 +950,7 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-cachedObject" />
 
-  #   # JSON:API models
+  # JSON:API models
 
   # tags - JSON:API models - application
   - name: json-api-model-application
@@ -999,6 +1009,16 @@ tags:
     x-displayName: JSON:API model - system-pageType
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-pageType" />
+
+  - name: json-api-model-system-dataExportTask
+    x-displayName: JSON:API model - system-dataExportTask
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/json-apiModel_system-dataExportTask" />
+
+  - name: json-api-model-system-dataImportTask
+    x-displayName: JSON:API model - system-dataImportTask
+    description: |
+      <SchemaDefinition schemaRef="#/components/schemas/json-apiModel_system-dataImportTask" />
 
   # tags - JSON:API models - general
 
@@ -1787,6 +1807,8 @@ x-tagGroups:
       - simple-model-application-eventTypeAction
       - simple-model-system-page
       - simple-model-system-pageType
+      - simple-model-system-dataExportTask
+      - simple-model-system-dataImportTask
       - simple-model-general-actionType
       - simple-model-general-article
       - simple-model-general-autoEmail
@@ -1955,6 +1977,8 @@ x-tagGroups:
       - json-api-model-application-eventTypeAction
       - json-api-model-system-page
       - json-api-model-system-pageType
+      - json-api-model-system-dataExportTask
+      - json-api-model-system-dataImportTask
       - json-api-model-general-actionType
       - json-api-model-general-article
       - json-api-model-general-autoEmail

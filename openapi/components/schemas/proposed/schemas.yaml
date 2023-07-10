@@ -53,6 +53,8 @@ SimpleModels:
     # system
     - $ref: "../../models/simple/system/page.yaml#/SimpleModel_system-page"
     - $ref: "../../models/simple/system/pageType.yaml#/SimpleModel_system-pageType"
+    - $ref: "../../models/simple/system/dataExportTask.yaml#/SimpleModel_system-dataExportTask"
+    - $ref: "../../models/simple/system/dataImportTask.yaml#/SimpleModel_system-dataImportTask"
 
     # general
     - $ref: "../../models/simple/general/actionType.yaml#/SimpleModel_general-actionType"
@@ -254,6 +256,8 @@ JsonApiModels:
     # system
     - $ref: "../../models/json-api/system/page.yaml#/JsonApiModel_system-page"
     - $ref: "../../models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType"
+    - $ref: "../../models/json-api/system/dataExportTask.yaml#/JsonApiModel_system-dataExportTask"
+    - $ref: "../../models/json-api/system/dataImportTask.yaml#/JsonApiModel_system-dataImportTask"
 
     # general
     - $ref: "../../models/json-api/general/actionType.yaml#/JsonApiModel_general-actionType"
