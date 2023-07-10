@@ -1,0 +1,59 @@
+JsonApiModel_system-dataImportTask:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_system-dataImportTask_type"
+    id:
+      $ref: "#/JsonApiModel_system-dataImportTask_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        spreadsheetId:
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_spreadsheetId"	
+        worksheetId:	
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_worksheetId"
+        rangeName:	
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_rangeName"
+        preImportSql:	
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_preImportSql"
+        insertDataSql:
+        	$ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_insertDataSql"
+        postImportSql:
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_postImportSql"
+        isActive:	
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_isActive"
+        minutesBetweenRuns:
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_minutesBetweenRuns"
+        latestRunDate:	
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_latestRunDate"
+        spreadsheetUrl:
+          $ref: "../../library/system/dataImportTask.yaml#/system-dataImportTask_spreadsheetUrl"
+      required:	
+        - spreadsheetId	
+        - worksheetId	
+        - rangeName	
+        - preImportSql	
+        - insertDataSql	
+        - postImportSql	
+        - isActive	
+        - minutesBetweenRuns	
+        - latestRunDate	
+        - spreadsheetUrl
+  required:
+    - type
+    - id
+
+JsonApiModel_system-dataImportTask_type:
+  type: string
+  example: system-dataImportTask
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-dataImportTask_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
