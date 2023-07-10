@@ -17,12 +17,14 @@ school-fundingType_latestUpdateDate:
 school-fundingType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-fundingType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-fundingType_creationUser:
@@ -32,7 +34,8 @@ school-fundingType_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -43,6 +46,7 @@ school-fundingType_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

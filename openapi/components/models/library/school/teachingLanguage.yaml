@@ -18,17 +18,20 @@ school-teachingLanguage_latestUpdateDate:
 school-teachingLanguage_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-teachingLanguage_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-teachingLanguage_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-teachingLanguage_school:
@@ -37,9 +40,10 @@ school-teachingLanguage_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-teachingLanguage_creationUser:
@@ -48,9 +52,10 @@ school-teachingLanguage_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-teachingLanguage_latestUpdateUser:
@@ -59,7 +64,8 @@ school-teachingLanguage_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id

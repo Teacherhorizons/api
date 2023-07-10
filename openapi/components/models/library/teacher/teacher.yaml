@@ -67,7 +67,8 @@ teacher_numberOfYearsTeachingExperience:
 teacher_userId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher_teachingQualificationCountryId:
   type: integer
   example: 1
@@ -103,7 +104,8 @@ teacher_thDiscoveryMethodId:
 teacher_latestAdviserCommentUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher_currentCountryId:
   type: integer
   example: 1
@@ -121,7 +123,8 @@ teacher_user:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -198,7 +201,8 @@ teacher_userType:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -220,7 +224,8 @@ teacher_latestAdviserCommentUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 

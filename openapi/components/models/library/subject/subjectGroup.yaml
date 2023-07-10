@@ -19,12 +19,14 @@ subject-subjectGroup_latestUpdateDate:
 subject-subjectGroup_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 subject-subjectGroup_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 subject-subjectGroup_creationUser:
@@ -33,9 +35,10 @@ subject-subjectGroup_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 subject-subjectGroup_latestUpdateUser:
@@ -44,12 +47,8 @@ subject-subjectGroup_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-
-
-
-

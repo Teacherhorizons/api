@@ -4,6 +4,14 @@ regional-country_name:
   example: Luanda
   description: Main
   maxLength: 250
+regional-country_nameUsesThe:
+  type: boolean
+  example: true
+  description: Idea - to be able to write 'the Philippines' (true) or 'China' (false), for example
+regional-country_middleOfSentenceName:
+  type: string
+  example: the Philippines
+  description: Idea - derived based on name and nameUsesThe
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
@@ -348,11 +356,13 @@ regional-country_internationalCurrencyId:
 regional-country_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-country_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-country_regionId:
   type: integer
   example: 1
@@ -364,7 +374,8 @@ regional-country_capitalCityId:
 regional-country_ambassadorTeacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 regional-country_photo1Id:
   type: integer
   example: 1
@@ -401,7 +412,8 @@ regional-country_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -412,7 +424,8 @@ regional-country_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -445,6 +458,7 @@ regional-country_ambassadorTeacher:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id

@@ -28,12 +28,14 @@ subject-subjectArticle_latestUpdateDate:
 subject-subjectArticle_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 subject-subjectArticle_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 subject-subjectArticle_photoId:
   type: integer
@@ -57,20 +59,22 @@ subject-subjectArticle_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 subject-subjectArticle_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 subject-subjectArticle_photo:
@@ -79,9 +83,9 @@ subject-subjectArticle_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
-  required: 
+  required:
     - id
 
 subject-subjectArticle_subject:
@@ -90,9 +94,9 @@ subject-subjectArticle_subject:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subject
-  required: 
+  required:
     - id
 
 subject-subjectArticle_article:
@@ -101,10 +105,7 @@ subject-subjectArticle_article:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-article
-  required: 
+  required:
     - id
-  
-
-

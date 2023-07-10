@@ -1,8 +1,9 @@
-#relationship attributes 
+#relationship attributes
 teacher-teacherLookingForRegion_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherLookingForRegion_regionId:
   type: integer
   example: 1

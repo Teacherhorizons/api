@@ -13,7 +13,8 @@ school-schoolCurriculum_latestUpdateDate:
 school-schoolCurriculum_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolCurriculum_curriculumId:
   type: integer
@@ -23,11 +24,13 @@ school-schoolCurriculum_curriculumId:
 school-schoolCurriculum_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolCurriculum_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolCurriculum_school:
@@ -36,9 +39,10 @@ school-schoolCurriculum_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolCurriculum_curriculum:
@@ -47,9 +51,9 @@ school-schoolCurriculum_curriculum:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-curriculum
-  required: 
+  required:
     - id
 school-schoolCurriculum_creationUser:
   type: object
@@ -57,9 +61,10 @@ school-schoolCurriculum_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-schoolCurriculum_latestUpdateUser:
@@ -68,8 +73,8 @@ school-schoolCurriculum_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-

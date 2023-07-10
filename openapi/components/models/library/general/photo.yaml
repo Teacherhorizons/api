@@ -53,11 +53,13 @@ general-photo_notes:
 general-photo_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 general-photo_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 general-photo_typeId:
   type: integer
   example: 1
@@ -70,8 +72,9 @@ general-photo_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -81,8 +84,9 @@ general-photo_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -92,7 +96,7 @@ general-photo_type:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photoType
   required:
     - id

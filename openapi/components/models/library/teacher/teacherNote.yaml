@@ -15,7 +15,8 @@ teacher-teacherNote_latestUpdateDate:
 teacher-teacherNote_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 
 teacher-teacherNote_typeId:
   type: integer
@@ -25,12 +26,14 @@ teacher-teacherNote_typeId:
 teacher-teacherNote_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 teacher-teacherNote_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 teacher-teacherNote_teacher:
@@ -39,8 +42,9 @@ teacher-teacherNote_teacher:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -50,7 +54,7 @@ teacher-teacherNote_type:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-noteType
   required:
     - id
@@ -61,8 +65,9 @@ teacher-teacherNote_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -72,7 +77,8 @@ teacher-teacherNote_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

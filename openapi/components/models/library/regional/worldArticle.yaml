@@ -39,12 +39,13 @@ regional-worldArticle_photoId:
 regional-worldArticle_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-worldArticle_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
-
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #Relationships
 
@@ -54,7 +55,7 @@ regional-worldArticle_category:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-articleCategory
   required:
     - id
@@ -65,7 +66,7 @@ regional-worldArticle_article:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-article
   required:
     - id
@@ -76,7 +77,7 @@ regional-worldArticle_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
@@ -87,8 +88,9 @@ regional-worldArticle_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -98,9 +100,8 @@ regional-worldArticle_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
-
-

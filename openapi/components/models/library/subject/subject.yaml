@@ -68,12 +68,14 @@ subject_latestUpdateDate:
 subject_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 subject_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 subject_subjectGroupId:
   type: integer
@@ -87,20 +89,22 @@ subject_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 subject_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 subject_subjectGroup:
@@ -109,10 +113,7 @@ subject_subjectGroup:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subjectGroup
-  required: 
+  required:
     - id
-  
-
-

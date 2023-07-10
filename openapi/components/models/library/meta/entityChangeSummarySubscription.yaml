@@ -5,7 +5,7 @@ meta-entityChangeSummarySubscription_notes:
   description: Main
   maxLength: 100
 
- #relationships 
+  #relationships
 meta-entityChangeSummarySubscription_entityTypeId:
   type: integer
   example: 1
@@ -17,7 +17,8 @@ meta-entityChangeSummarySubscription_entityId:
 meta-entityChangeSummarySubscription_userId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationship attributes
 meta-entityChangeSummarySubscription_entityType:
@@ -26,30 +27,30 @@ meta-entityChangeSummarySubscription_entityType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to meta-entityType
-  required: 
+  required:
     - id
-  
+
 meta-entityChangeSummarySubscription_entity:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to meta-entityType
-  required: 
+  required:
     - id
-  
+
 meta-entityChangeSummarySubscription_user:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  

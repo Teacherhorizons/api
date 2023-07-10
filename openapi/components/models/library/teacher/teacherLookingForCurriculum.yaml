@@ -1,8 +1,9 @@
-#relationship attributes 
+#relationship attributes
 teacher-teacherLookingForCurriculum_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherLookingForCurriculum_curriculumId:
   type: integer
   example: 1

@@ -30,11 +30,13 @@ general-article_photoId:
 general-article_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 general-article_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 # relationships
 general-article_photo:
@@ -43,7 +45,7 @@ general-article_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to photo
   required:
     - id
@@ -54,8 +56,9 @@ general-article_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -65,7 +68,8 @@ general-article_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

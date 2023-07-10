@@ -18,22 +18,25 @@ school-schoolReview_latestUpdateDate:
 school-schoolReview_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolReview_categoryId:
   type: integer
   example: 1
-  description: Relationship to 
+  description: Relationship to
 
 school-schoolReview_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolReview_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolReview_school:
@@ -42,9 +45,10 @@ school-schoolReview_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolReview_category:
@@ -53,9 +57,10 @@ school-schoolReview_category:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolReview_creationUser:
@@ -64,22 +69,20 @@ school-schoolReview_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 school-schoolReview_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-
-
-
-

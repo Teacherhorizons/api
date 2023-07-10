@@ -41,17 +41,20 @@ application_jobId:
 application_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 
 application_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 application_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 application_statusId:
   type: integer
@@ -75,7 +78,7 @@ application_job:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to job
   required:
     - id
@@ -86,8 +89,9 @@ application_teacher:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -97,8 +101,9 @@ application_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -108,8 +113,9 @@ application_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -119,7 +125,7 @@ application_status:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to application-status
   required:
     - id
@@ -130,7 +136,7 @@ application_latestEvent:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to application-applicationEvent
   required:
     - id
@@ -141,7 +147,7 @@ application_thMatchType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to application-thMatchType
   required:
     - id

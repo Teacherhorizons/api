@@ -46,11 +46,13 @@ regional-cityArticle_photoId:
 regional-cityArticle_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-cityArticle_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #Relationships
 regional-cityArticle_city:
@@ -59,7 +61,7 @@ regional-cityArticle_city:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
@@ -70,7 +72,7 @@ regional-cityArticle_category:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-articleCategory
   required:
     - id
@@ -81,7 +83,7 @@ regional-cityArticle_article:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-article
   required:
     - id
@@ -92,7 +94,7 @@ regional-cityArticle_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
@@ -103,8 +105,9 @@ regional-cityArticle_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -114,14 +117,8 @@ regional-cityArticle_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
-
-
-
-
-
-
-

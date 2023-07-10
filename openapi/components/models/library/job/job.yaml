@@ -50,19 +50,23 @@ job_roleId:
 job_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 job_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 job_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 job_thOwnerUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 job_statusId:
   type: integer
   example: 1
@@ -75,20 +79,20 @@ job_subject:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subject
-  required: 
+  required:
     - id
-  
+
 job_type:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to job-type
-  required: 
+  required:
     - id
 
 job_role:
@@ -97,9 +101,9 @@ job_role:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-role
-  required: 
+  required:
     - id
 
 job_school:
@@ -108,9 +112,10 @@ job_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 job_creationUser:
@@ -119,9 +124,10 @@ job_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 job_latestUpdateUser:
@@ -130,9 +136,10 @@ job_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 job_thOwnerUser:
@@ -141,9 +148,10 @@ job_thOwnerUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 job_status:
@@ -152,7 +160,7 @@ job_status:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to job-status
-  required: 
+  required:
     - id

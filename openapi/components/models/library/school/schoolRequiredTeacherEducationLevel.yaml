@@ -2,7 +2,8 @@
 school-schoolRequiredTeacherEducationLevel_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 school-schoolRequiredTeacherEducationLevel_educationLevelId:
   type: integer
   example: 1
@@ -15,18 +16,19 @@ school-schoolRequiredTeacherEducationLevel_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
-  
+
 school-schoolRequiredTeacherEducationLevel_educationLevel:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-educationLevel
-  required: 
+  required:
     - id

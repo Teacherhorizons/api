@@ -18,7 +18,8 @@ teacher-teacherPhoto_latestUpdateDate:
 teacher-teacherPhoto_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherPhoto_photoId:
   type: integer
   example: 1
@@ -30,11 +31,13 @@ teacher-teacherPhoto_categoryId:
 teacher-teacherPhoto_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher-teacherPhoto_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 teacher-teacherPhoto_creationUser:
@@ -44,7 +47,8 @@ teacher-teacherPhoto_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -55,7 +59,8 @@ teacher-teacherPhoto_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -66,6 +71,7 @@ teacher-teacherPhoto_teacher:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id

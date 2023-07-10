@@ -22,15 +22,18 @@ school-schoolCommunityResponse_questionId:
 school-schoolCommunityResponse_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolCommunityResponse_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolCommunityResponse_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 #relationships
 school-schoolCommunityResponse_school:
@@ -39,9 +42,10 @@ school-schoolCommunityResponse_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 school-schoolCommunityResponse_question:
   type: object
@@ -49,9 +53,9 @@ school-schoolCommunityResponse_question:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-communityQuestion
-  required: 
+  required:
     - id
 school-schoolCommunityResponse_creationUser:
   type: object
@@ -59,9 +63,10 @@ school-schoolCommunityResponse_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 school-schoolCommunityResponse_latestUpdateUser:
   type: object
@@ -69,7 +74,8 @@ school-schoolCommunityResponse_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id

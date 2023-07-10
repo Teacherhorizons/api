@@ -17,11 +17,12 @@ teacher-teacherEmploymentRecord_allowDisplay:
   type: boolean
   example: false
 
- #relationship attributes 
+  #relationship attributes
 teacher-teacherEmploymentRecord_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherEmploymentRecord_roleId:
   type: integer
   example: 1
@@ -29,22 +30,24 @@ teacher-teacherEmploymentRecord_roleId:
 teacher-teacherEmploymentRecord_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 teacher-teacherEmploymentRecord_countryId:
   type: integer
   example: 1
   description: Relationship to regional-country
 
-#relationships 
+#relationships
 teacher-teacherEducationLevel_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
 teacher-teacherEducationLevel_role:
   type: object
@@ -52,9 +55,9 @@ teacher-teacherEducationLevel_role:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-role
-  required: 
+  required:
     - id
 teacher-teacherEducationLevel_school:
   type: object
@@ -62,9 +65,10 @@ teacher-teacherEducationLevel_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 teacher-teacherEducationLevel_country:
   type: object
@@ -72,7 +76,7 @@ teacher-teacherEducationLevel_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
-  required: 
+  required:
     - id

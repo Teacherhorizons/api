@@ -6,7 +6,7 @@ general-internationalWorkingCurrency_code:
   maxLength: 3
 general-internationalWorkingCurrency_symbol:
   type: string
-  example: "£"
+  example: '£'
   description: Main
   maxLength: 10
 general-internationalWorkingCurrency_name:
@@ -31,11 +31,13 @@ general-internationalWorkingCurrency_usdConversionRate:
 general-internationalWorkingCurrency_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 general-internationalWorkingCurrency_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 # relationships
 general-internationalWorkingCurrency_creationUser:
@@ -44,8 +46,9 @@ general-internationalWorkingCurrency_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -55,7 +58,8 @@ general-internationalWorkingCurrency_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

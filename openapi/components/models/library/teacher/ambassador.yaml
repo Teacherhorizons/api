@@ -18,7 +18,8 @@ teacher-ambassador_testimonial:
 teacher-ambassador_userId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher-ambassador_photoId:
   type: integer
   example: 1
@@ -26,11 +27,13 @@ teacher-ambassador_photoId:
 teacher-ambassador_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-ambassador_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 teacher-ambassador_cityId:
   type: integer
   example: 1
@@ -51,8 +54,9 @@ teacher-ambassador_user:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -62,8 +66,9 @@ teacher-ambassador_photo:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -73,8 +78,9 @@ teacher-ambassador_teacher:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -84,8 +90,9 @@ teacher-ambassador_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
   required:
     - id
 
@@ -95,7 +102,7 @@ teacher-ambassador_city:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id
@@ -106,7 +113,7 @@ teacher-ambassador_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -117,7 +124,7 @@ teacher-ambassador_region:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-region
   required:
     - id

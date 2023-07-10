@@ -2,7 +2,8 @@
 school-schoolRecognisedQualificationNationalityGroup_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 school-schoolRecognisedQualificationNationalityGroup_nationalityGroupId:
   type: integer
   example: 1
@@ -15,18 +16,19 @@ school-schoolRecognisedQualificationNationalityGroup_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
-  
+
 school-schoolRecognisedQualificationNationalityGroup_nationalityGroup:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-nationalityGroup
-  required: 
+  required:
     - id

@@ -34,12 +34,14 @@ regional-cityMonthNumber_cityId:
 regional-cityMonthNumber_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 regional-cityMonthNumber_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #Relationships
 regional-cityMonthNumber_city:
@@ -48,7 +50,7 @@ regional-cityMonthNumber_city:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-city
   required:
     - id

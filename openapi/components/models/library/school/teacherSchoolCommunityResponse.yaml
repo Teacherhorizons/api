@@ -17,7 +17,8 @@ school-teacherSchoolCommunityResponse_latestUpdateDate:
 school-teacherSchoolCommunityResponse_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-teacherSchoolCommunityResponse_questionId:
   type: integer
@@ -27,17 +28,20 @@ school-teacherSchoolCommunityResponse_questionId:
 school-teacherSchoolCommunityResponse_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 
 school-teacherSchoolCommunityResponse_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-teacherSchoolCommunityResponse_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-teacherSchoolCommunityResponse_school:
@@ -46,9 +50,10 @@ school-teacherSchoolCommunityResponse_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-teacherSchoolCommunityResponse_question:
@@ -57,9 +62,9 @@ school-teacherSchoolCommunityResponse_question:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-communityQuestion
-  required: 
+  required:
     - id
 
 school-teacherSchoolCommunityResponse_teacher:
@@ -68,9 +73,10 @@ school-teacherSchoolCommunityResponse_teacher:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
 
 school-teacherSchoolCommunityResponse_creationUser:
@@ -79,9 +85,10 @@ school-teacherSchoolCommunityResponse_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-teacherSchoolCommunityResponse_latestUpdateUser:
@@ -90,8 +97,8 @@ school-teacherSchoolCommunityResponse_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  

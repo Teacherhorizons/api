@@ -21,17 +21,20 @@ school-schoolEmploymentDisadvantage_latestUpdateDate:
 school-schoolEmploymentDisadvantage_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolEmploymentDisadvantage_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolEmploymentDisadvantage_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolEmploymentDisadvantage_reason:
@@ -40,9 +43,9 @@ school-schoolEmploymentDisadvantage_reason:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to Reason #looks wrong, check with RR
-  required: 
+  required:
     - id
 
 school-schoolEmploymentDisadvantage_school:
@@ -51,9 +54,10 @@ school-schoolEmploymentDisadvantage_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolEmploymentDisadvantage_creationUser:
@@ -62,9 +66,10 @@ school-schoolEmploymentDisadvantage_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-schoolEmploymentDisadvantage_latestUpdateUser:
@@ -73,8 +78,8 @@ school-schoolEmploymentDisadvantage_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  

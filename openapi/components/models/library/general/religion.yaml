@@ -19,12 +19,14 @@ general-religion_latestUpdateDate:
 general-religion_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 general-religion_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 general-religion_creationUser:
@@ -33,10 +35,11 @@ general-religion_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
-  - id
+    - id
 
 general-religion_latestUpdateUser:
   type: object
@@ -44,8 +47,8 @@ general-religion_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
-  - id
-
+    - id

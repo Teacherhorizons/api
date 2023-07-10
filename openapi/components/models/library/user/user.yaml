@@ -64,11 +64,13 @@ user_typeId:
 user_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 user_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 user_phoneCodeCountryId:
   type: integer
   example: 1
@@ -93,7 +95,8 @@ user_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -104,7 +107,8 @@ user_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 

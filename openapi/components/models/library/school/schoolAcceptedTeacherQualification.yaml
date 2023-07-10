@@ -13,22 +13,26 @@ school-schoolAcceptedTeacherQualification_latestUpdateDate:
 school-schoolAcceptedTeacherQualification_schoolId:
   type: integer
   example: 1
-  description: Relationship to School
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolAcceptedTeacherQualification_creationUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolAcceptedTeacherQualification_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to User
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolAcceptedTeacherQualification_teacherQualificationTypeId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 
 # relationships
 school-schoolAcceptedTeacherQualification_school:
@@ -37,9 +41,10 @@ school-schoolAcceptedTeacherQualification_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolAcceptedTeacherQualification_teacherQualificationType:
@@ -48,9 +53,9 @@ school-schoolAcceptedTeacherQualification_teacherQualificationType:
   properties:
     id:
       type: string
-      example: "1"
-      description: "Relationship to teacher"
-  required: 
+      example: '1'
+      description: 'Relationship to teacher'
+  required:
     - id
 
 school-schoolAcceptedTeacherQualification_creationUser:
@@ -59,9 +64,10 @@ school-schoolAcceptedTeacherQualification_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-schoolAcceptedTeacherQualification_latestUpdateUser:
@@ -70,8 +76,8 @@ school-schoolAcceptedTeacherQualification_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  

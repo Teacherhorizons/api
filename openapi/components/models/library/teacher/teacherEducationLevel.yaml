@@ -12,7 +12,8 @@ teacher-teacherEducationLevel_latestUpdateDate:
 teacher-teacherEducationLevel_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherEducationLevel_educationLevelId:
   type: integer
   example: 1
@@ -20,22 +21,25 @@ teacher-teacherEducationLevel_educationLevelId:
 teacher-teacherEducationLevel_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher-teacherEducationLevel_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
-#relationships 
+#relationships
 teacher-teacherEducationLevel_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
 teacher-teacherEducationLevel_educationLevel:
   type: object
@@ -43,9 +47,9 @@ teacher-teacherEducationLevel_educationLevel:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-educationLevel
-  required: 
+  required:
     - id
 teacher-teacherEducationLevel_creationUser:
   type: object
@@ -53,9 +57,10 @@ teacher-teacherEducationLevel_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 teacher-teacherEducationLevel_latestUpdateUser:
   type: object
@@ -63,12 +68,8 @@ teacher-teacherEducationLevel_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-
-
-
-

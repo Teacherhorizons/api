@@ -16,12 +16,14 @@ school-relocationAllowanceType_latestUpdateDate:
 school-relocationAllowanceType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-relocationAllowanceType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-relocationAllowanceType_creationUser:
   type: object
@@ -30,7 +32,8 @@ school-relocationAllowanceType_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -41,6 +44,7 @@ school-relocationAllowanceType_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

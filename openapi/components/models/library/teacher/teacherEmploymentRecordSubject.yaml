@@ -7,7 +7,8 @@ teacher-teacherEmploymentRecordSubject_precedence:
 teacher-teacherEmploymentRecordSubject_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherEmploymentRecordSubject_employmentRecordId:
   type: integer
   example: 1
@@ -24,9 +25,10 @@ teacher-teacherEmploymentRecordSubject_teacher:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
 teacher-teacherEmploymentRecordSubject_employmentRecord:
   type: object
@@ -34,9 +36,9 @@ teacher-teacherEmploymentRecordSubject_employmentRecord:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to teacher-teacherEmploymentRecord
-  required: 
+  required:
     - id
 teacher-teacherEmploymentRecordSubject_subject:
   type: object
@@ -44,7 +46,7 @@ teacher-teacherEmploymentRecordSubject_subject:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subject
-  required: 
+  required:
     - id

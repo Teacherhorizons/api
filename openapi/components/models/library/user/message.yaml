@@ -11,11 +11,13 @@ user-message_text:
 user-message_toUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 user-message_fromUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 user-message_messageStatusId:
   type: integer
   example: 1
@@ -28,27 +30,29 @@ user-message_toUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
-   - id
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
+    - id
 user-message_fromUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
-   - id
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
+    - id
 user-message_messageStatus:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to message-messageStatus
-  required: 
+  required:
     - id

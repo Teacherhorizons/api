@@ -6,7 +6,7 @@ general-currency_code:
   maxLength: 3
 general-currency_symbol:
   type: string
-  example: "£"
+  example: '£'
   description: Main
   maxLength: 10
 general-currency_name:
@@ -31,11 +31,13 @@ general-currency_usdConversionRate:
 general-currency_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 general-currency_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 # relationships
 general-currency_creationUser:
@@ -44,8 +46,9 @@ general-currency_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -55,7 +58,8 @@ general-currency_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

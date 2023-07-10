@@ -21,7 +21,8 @@ staff-staffMember_salesforceUserIdString:
 staff-staffMember_userId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 staff-staffMember_currentCityId:
   type: integer
@@ -46,7 +47,8 @@ staff-staffMember_user:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -57,7 +59,8 @@ staff-staffMember_salesforceUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 

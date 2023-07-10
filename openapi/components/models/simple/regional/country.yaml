@@ -26,6 +26,10 @@ SimpleModel_regional-country_admin:
     # simple Attributes
     name:
       $ref: '../../library/regional/country.yaml#/regional-country_name'
+    nameUsesThe:
+      $ref: '../../library/regional/country.yaml#/regional-country_nameUsesThe'
+    middleOfSentenceName:
+      $ref: '../../library/regional/country.yaml#/regional-country_middleOfSentenceName'
     alias:
       $ref: '../../library/regional/country.yaml#/regional-country_alias'
     creationDate:
@@ -222,6 +226,8 @@ SimpleModel_regional-country_admin:
     - id
     - regionId
     - name
+    - nameUsesThe
+    - middleOfSentenceName
     - slug
     - alias
     - creationDate

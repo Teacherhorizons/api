@@ -372,23 +372,28 @@ school_flightAllowanceTypeId:
 school_managedByUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school_ambassadorTeacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 school_lraUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school_smallProfilePhotoId:
   type: integer
   example: 1
@@ -496,7 +501,8 @@ school_managedByUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -507,7 +513,8 @@ school_ambassadorTeacher:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id
 
@@ -518,7 +525,8 @@ school_lraUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 school_creationUser:
@@ -528,7 +536,8 @@ school_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 school_latestUpdateUser:
@@ -538,7 +547,8 @@ school_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 school_smallProfilePhoto:

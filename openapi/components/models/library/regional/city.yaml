@@ -338,11 +338,13 @@ regional-city_countryId:
 regional-city_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-city_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-city_worldLanguageId:
   type: integer
   example: 1
@@ -350,7 +352,8 @@ regional-city_worldLanguageId:
 regional-city_ambassadorTeacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 regional-city_photo1Id:
   type: integer
   example: 1
@@ -375,7 +378,8 @@ regional-city_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -386,7 +390,8 @@ regional-city_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -408,6 +413,7 @@ regional-city_ambassadorTeacher:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
   required:
     - id

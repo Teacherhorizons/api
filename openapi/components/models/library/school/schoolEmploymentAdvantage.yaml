@@ -21,17 +21,20 @@ school-schoolEmploymentAdvantage_latestUpdateDate:
 school-schoolEmploymentAdvantage_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolEmploymentAdvantage_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolEmploymentAdvantage_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolEmploymentAdvantage_reason:
@@ -40,9 +43,9 @@ school-schoolEmploymentAdvantage_reason:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to Reason #check with RR
-  required: 
+  required:
     - id
 
 school-schoolEmploymentAdvantage_school:
@@ -51,9 +54,10 @@ school-schoolEmploymentAdvantage_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolEmploymentAdvantage_creationUser:
@@ -62,9 +66,10 @@ school-schoolEmploymentAdvantage_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 school-schoolEmploymentAdvantage_latestUpdateUser:
@@ -73,7 +78,8 @@ school-schoolEmploymentAdvantage_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id

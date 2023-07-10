@@ -12,7 +12,8 @@ teacher-teacherLookingForRole_latestUpdateDate:
 teacher-teacherLookingForRole_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherLookingForRole_roleId:
   type: integer
   example: 1
@@ -20,58 +21,58 @@ teacher-teacherLookingForRole_roleId:
 teacher-teacherLookingForRole_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 teacher-teacherLookingForRole_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
-#relationships 
+#relationships
 teacher-teacherLookingForRole_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
-  
+
 teacher-teacherLookingForRole_role:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-role
-  required: 
+  required:
     - id
-  
+
 teacher-teacherLookingForRole_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 teacher-teacherLookingForRole_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-
-
-
-

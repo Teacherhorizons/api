@@ -22,11 +22,13 @@ school-schoolDocument_categoryId:
 school-schoolDocument_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolDocument_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 # relatoinships
 school-schoolDocument_category:
@@ -35,30 +37,31 @@ school-schoolDocument_category:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-documentCategory
-  required: 
+  required:
     - id
-  
+
 school-schoolDocument_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 school-schoolDocument_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  

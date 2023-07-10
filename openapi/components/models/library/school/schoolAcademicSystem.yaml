@@ -12,7 +12,8 @@ school-schoolAcademicSystem_latestUpdateDate:
 school-schoolAcademicSystem_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 school-schoolAcademicSystem_academicSystemId:
   type: integer
   example: 1
@@ -20,11 +21,13 @@ school-schoolAcademicSystem_academicSystemId:
 school-schoolAcademicSystem_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolAcademicSystem_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolAcademicSystem_school:
@@ -33,42 +36,43 @@ school-schoolAcademicSystem_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
-  
+
 school-schoolAcademicSystem_academicSystem:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-academicSystem
-  required: 
+  required:
     - id
-  
+
 school-schoolAcademicSystem_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 school-schoolAcademicSystem_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-

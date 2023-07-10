@@ -8,7 +8,8 @@ user-favouriteJob_creationDate:
 user-favouriteJob_userId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 user-favouriteJob_jobId:
   type: integer
   example: 1
@@ -21,9 +22,10 @@ user-favouriteJob_user:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 user-favouriteJob_job:
   type: object
@@ -31,9 +33,7 @@ user-favouriteJob_job:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to Job
-  required: 
+  required:
     - id
-
-

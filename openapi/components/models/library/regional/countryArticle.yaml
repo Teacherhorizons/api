@@ -47,11 +47,13 @@ regional-countryArticle_photoId:
 regional-countryArticle_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 regional-countryArticle_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #Relationships
 regional-countryArticle_country:
@@ -60,7 +62,7 @@ regional-countryArticle_country:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-country
   required:
     - id
@@ -71,7 +73,7 @@ regional-countryArticle_category:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to regional-articleCategory
   required:
     - id
@@ -82,7 +84,7 @@ regional-countryArticle_article:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-article
   required:
     - id
@@ -93,7 +95,7 @@ regional-countryArticle_photo:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-photo
   required:
     - id
@@ -104,8 +106,9 @@ regional-countryArticle_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -115,15 +118,8 @@ regional-countryArticle_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
-
-
-
-
-
-
-
-

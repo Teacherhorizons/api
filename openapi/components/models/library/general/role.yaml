@@ -19,12 +19,14 @@ general-role_latestUpdateDate:
 general-role_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 general-role_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 general-role_typeId:
   type: integer
@@ -38,10 +40,11 @@ general-role_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
-  - id
+    - id
 
 general-role_latestUpdateUser:
   type: object
@@ -49,9 +52,10 @@ general-role_latestUpdateUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
 
 general-role_roleType:
@@ -60,8 +64,7 @@ general-role_roleType:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to general-roleType
-  required: 
+  required:
     - id
-  

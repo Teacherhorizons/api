@@ -17,7 +17,8 @@ school-schoolFacility_latestUpdateDate:
 school-schoolFacility_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 
 school-schoolFacility_facilityId:
   type: integer
@@ -27,12 +28,14 @@ school-schoolFacility_facilityId:
 school-schoolFacility_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 school-schoolFacility_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolFacility_school:
@@ -41,9 +44,10 @@ school-schoolFacility_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
 
 school-schoolFacility_facility:
@@ -52,9 +56,9 @@ school-schoolFacility_facility:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-facility
-  required: 
+  required:
     - id
 
 school-schoolFacility_creationUser:
@@ -63,23 +67,20 @@ school-schoolFacility_creationUser:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 school-schoolFacility_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-
-
-
-

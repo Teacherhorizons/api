@@ -11,7 +11,8 @@ teacher-teacherLookingForSubject_subjectId:
 teacher-teacherLookingForSubject_teacherId:
   type: integer
   example: 1
-  description: Relationship to teacher
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
 
 #relarionships
 teacher-teacherLookingForSubject_subject:
@@ -20,19 +21,19 @@ teacher-teacherLookingForSubject_subject:
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to subject
-  required: 
+  required:
     - id
-  
+
 teacher-teacherLookingForSubject_teacher:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to teacher
-  required: 
+      example: '1'
+      description: |
+        Relationship to [teacher](/#tag/simple-model-teacher)
+  required:
     - id
-  

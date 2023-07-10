@@ -18,7 +18,8 @@ school-schoolPhoto_latestUpdateDate:
 school-schoolPhoto_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 school-schoolPhoto_photoId:
   type: integer
   example: 1
@@ -30,11 +31,13 @@ school-schoolPhoto_categoryId:
 school-schoolPhoto_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolPhoto_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 # relatoinships
 school-schoolPhoto_category:
@@ -55,7 +58,8 @@ school-schoolPhoto_creationUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id
 
@@ -66,6 +70,7 @@ school-schoolPhoto_latestUpdateUser:
     id:
       type: string
       example: '1'
-      description: Relationship to user
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
   required:
     - id

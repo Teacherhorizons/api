@@ -12,7 +12,8 @@ school-schoolAccreditationType_latestUpdateDate:
 school-schoolAccreditationType_schoolId:
   type: integer
   example: 1
-  description: Relationship to school
+  description: |
+    Relationship to [school](/#tag/simple-model-school)
 school-schoolAccreditationType_accreditationTypeId:
   type: integer
   example: 1
@@ -20,11 +21,13 @@ school-schoolAccreditationType_accreditationTypeId:
 school-schoolAccreditationType_creationUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 school-schoolAccreditationType_latestUpdateUserId:
   type: integer
   example: 1
-  description: Relationship to user
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
 
 #relationships
 school-schoolAccreditationType_school:
@@ -33,42 +36,43 @@ school-schoolAccreditationType_school:
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to school
-  required: 
+      example: '1'
+      description: |
+        Relationship to [school](/#tag/simple-model-school)
+  required:
     - id
-  
+
 school-schoolAccreditationType_accreditationType:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
+      example: '1'
       description: Relationship to school-accreditationType
-  required: 
+  required:
     - id
-  
+
 school-schoolAccreditationType_creationUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
+
 school-schoolAccreditationType_latestUpdateUser:
   type: object
   additionalProperties: false
   properties:
     id:
       type: string
-      example: "1"
-      description: Relationship to user
-  required: 
+      example: '1'
+      description: |
+        Relationship to [user](/#tag/simple-model-user)
+  required:
     - id
-  
-
