@@ -129,6 +129,7 @@ tags:
   - name: simple-model-system-dataExportTask
     x-displayName: Simple model - system-dataExportTask
     description: |
+      [JSON:API model](/#tag/json-api-model-system-dataExportTask)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataExportTask" />
 
   - name: simple-model-system-dataImportTask
@@ -316,7 +317,6 @@ tags:
     x-displayName: Simple model - subject-subjectTeacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_subject-subjectTeacher" />
-      
 
   # tags - simple-models - time
 
@@ -1013,12 +1013,13 @@ tags:
   - name: json-api-model-system-dataExportTask
     x-displayName: JSON:API model - system-dataExportTask
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/json-apiModel_system-dataExportTask" />
+      [Simple model](/#tag/simple-model-system-dataExportTask)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-dataExportTask" />
 
   - name: json-api-model-system-dataImportTask
     x-displayName: JSON:API model - system-dataImportTask
     description: |
-      <SchemaDefinition schemaRef="#/components/schemas/json-apiModel_system-dataImportTask" />
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-dataImportTask" />
 
   # tags - JSON:API models - general
 
@@ -1167,7 +1168,6 @@ tags:
     x-displayName: JSON:API model - subject-subjectTeacher
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_subject-subjectTeacher" />
-      
 
   # tags - JSON:API models - time
 
