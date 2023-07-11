@@ -6,10 +6,12 @@ system-dataExportTask_selectSql:
 system-dataExportTask_spreadsheetId:
   type: string
   maxLength: 100
+  description: non-standard id property (in 2 ways)
   example: 1RuQjYcPYwMukdEjhzq7EU1SVU9rBOpu3ijO1uaw7A0g
 
 system-dataExportTask_worksheetId:
   type: number
+  description: non-standard id property (in 1 way)
   example: 2137514194
 
 system-dataExportTask_rangeName:
