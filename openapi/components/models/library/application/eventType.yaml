@@ -24,7 +24,8 @@ application-eventType_isVisibleToTeacher:
 application-eventType_applicationStatusId:
   type: integer
   example: 1
-  description: Relationship to application-status
+  description: |
+    Relationship to [application-status](/#tag/simple-model-application-status)
 
 # relationships
 application-eventType_applicationStatus:
@@ -34,6 +35,7 @@ application-eventType_applicationStatus:
     id:
       type: string
       example: "1"
-      description: Relationship to application-status
+      description: |
+        Relationship to [application-status](/#tag/simple-model-application-status)
   required:
     - id

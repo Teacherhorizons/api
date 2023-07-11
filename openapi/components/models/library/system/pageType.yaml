@@ -21,7 +21,8 @@ system-pageType_metaDescriptionTemplate:
 system-pageType_entityTypeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityType
+  description: |
+    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 
 #relationships
 
@@ -32,6 +33,7 @@ system-pageType_entityType:
     id:
       type: string
       example: '202111'
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required:
     - id

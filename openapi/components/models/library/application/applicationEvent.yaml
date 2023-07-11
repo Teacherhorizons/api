@@ -24,17 +24,20 @@ application-applicationEvent_latestUpdateDate:
 application-applicationEvent_applicationId:
   type: integer
   example: 1
-  description: Relationship to application
+  description: |
+    Relationship to [application](/#tag/simple-model-application)
 
 application-applicationEvent_typeId:
   type: integer
   example: 1
-  description: Relationship to application-eventType
+  description: |
+    Relationship to [application-eventType](/#tag/simple-model-application-eventType)
 
 application-applicationEvent_emailId:
   type: integer
   example: 1
-  description: Relationship to general-autoEmail #check with RR
+  description: |
+    Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
 
 application-applicationEvent_creationUserId:
   type: integer
@@ -56,7 +59,8 @@ application-applicationEvent_application:
     id:
       type: string
       example: '1'
-      description: Relationship to application
+      description: |
+        Relationship to [application](/#tag/simple-model-application)
   required:
     - id
 
@@ -67,7 +71,8 @@ application-applicationEvent_type:
     id:
       type: string
       example: '1'
-      description: Relationship to application-eventType
+      description: |
+        Relationship to [application-eventType](/#tag/simple-model-application-eventType)
   required:
     - id
 
@@ -78,7 +83,8 @@ application-applicationEvent_email:
     id:
       type: string
       example: '1'
-      description: Relationship to general-autoEmail
+      description: |
+        Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail )
   required:
     - id
 

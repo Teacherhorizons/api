@@ -8,19 +8,23 @@ application-eventTypeAction_label:
 application-eventTypeAction_applicationEventTypeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityType
+  description: |
+    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 application-eventTypeAction_actionTypeId:
   type: integer
   example: 1
-  description: Relationship to general-actionType
+  description: |
+    Relationship to [general-actionType](/#tag/simple-model-general-actionType)
 application-eventTypeAction_manualEmailTemplateId:
   type: integer
   example: 1
-  description: Relationship to general-manualEmailTemplate
+  description: |
+    Relationship to [general-manualEmailTemplate](/#tag/simple-model-general-manualEmailTemplate)
 application-eventTypeAction_autoEmailId:
   type: integer
   example: 1
-  description: Relationship to general-autoEmail
+  description: |
+    Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail )
 
 # relationships
 application-eventTypeAction_applicationEventType:
@@ -30,7 +34,8 @@ application-eventTypeAction_applicationEventType:
     id:
       type: string
       example: "1"
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required: 
     - id
 application-eventTypeAction_actionType:
@@ -40,7 +45,8 @@ application-eventTypeAction_actionType:
     id:
       type: string
       example: "1"
-      description: Relationship to general-actionType
+      description: |
+        Relationship to [general-actionType](/#tag/simple-model-general-actionType)
   required: 
     - id
 application-eventTypeAction_manualEmailTemplate:
@@ -50,7 +56,8 @@ application-eventTypeAction_manualEmailTemplate:
     id:
       type: string
       example: "1"
-      description: Relationship to general-manualEmailTemplate
+      description: |
+        Relationship to [general-manualEmailTemplate](/#tag/simple-model-general-manualEmailTemplate)
   required: 
     - id
 application-eventTypeAction_autoEmail:
@@ -60,6 +67,7 @@ application-eventTypeAction_autoEmail:
     id:
       type: string
       example: "1"
-      description: Relationship to general-autoEmail
+      description: |
+        Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail )
   required: 
     - id

@@ -19,7 +19,8 @@ meta-entityChangeSummary_isProcessed:
 meta-entityChangeSummary_entityTypeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityType
+  description: |
+    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 meta-entityChangeSummary_entityId:
   type: integer
   example: 1
@@ -42,7 +43,8 @@ meta-entityChangeSummary_entityType:
     id:
       type: string
       example: '1'
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required:
     - id
 
@@ -53,6 +55,7 @@ meta-entityChangeSummary_entity:
     id:
       type: string
       example: '1'
-      description: Relationship to meta-entityType #check with RR
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType) #check with RR
   required:
     - id

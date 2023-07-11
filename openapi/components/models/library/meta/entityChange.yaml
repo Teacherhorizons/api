@@ -11,7 +11,8 @@ meta-entityChange_isProcessed:
 meta-entityChange_entityTypeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityType
+  description: |
+    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 meta-entityChange_entityId:
   type: integer
   example: 1
@@ -34,7 +35,8 @@ meta-entityChange_entityType:
     id:
       type: string
       example: '1'
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required:
     - id
 meta-entityChange_entity:

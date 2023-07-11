@@ -42,7 +42,8 @@ job_subjectId:
 job_typeId:
   type: integer
   example: 1
-  description: Relationship to job-type
+  description: |
+    Relationship to [job-type](/#tag/simple-model-job-type)
 job_roleId:
   type: integer
   example: 1
@@ -70,7 +71,8 @@ job_thOwnerUserId:
 job_statusId:
   type: integer
   example: 1
-  description: Relationship to job-status
+  description: |
+    Relationship to [job](/#tag/simple-model-job)-status
 
 # relationships
 job_subject:
@@ -91,7 +93,8 @@ job_type:
     id:
       type: string
       example: '1'
-      description: Relationship to job-type
+      description: |
+        Relationship to [job-type](/#tag/simple-model-job-type)
   required:
     - id
 
@@ -161,6 +164,7 @@ job_status:
     id:
       type: string
       example: '1'
-      description: Relationship to job-status
+      description: |
+        Relationship to [job](/#tag/simple-model-job)-status
   required:
     - id

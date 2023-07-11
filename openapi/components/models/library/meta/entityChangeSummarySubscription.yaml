@@ -9,7 +9,8 @@ meta-entityChangeSummarySubscription_notes:
 meta-entityChangeSummarySubscription_entityTypeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityType
+  description: |
+    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 meta-entityChangeSummarySubscription_entityId:
   type: integer
   example: 1
@@ -28,7 +29,8 @@ meta-entityChangeSummarySubscription_entityType:
     id:
       type: string
       example: '1'
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required:
     - id
 
@@ -39,7 +41,8 @@ meta-entityChangeSummarySubscription_entity:
     id:
       type: string
       example: '1'
-      description: Relationship to meta-entityType
+      description: |
+        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
   required:
     - id
 

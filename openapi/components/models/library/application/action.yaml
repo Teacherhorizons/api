@@ -17,7 +17,8 @@ application-action_endStateId:
 application-action_emailId:
   type: integer
   example: 1
-  description: Relationship to general-autoEmail #check with RR
+  description: |
+    Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
 
 # relationships
 application-action_endState:
@@ -38,7 +39,8 @@ application-action_email:
     id:
       type: string
       example: "1"
-      description: Relationship to general-autoEmail #check with RR
+      description: |
+        Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
   required: 
     - id
   

@@ -36,7 +36,8 @@ application_thSystemMatchScore:
 application_jobId:
   type: integer
   example: 1
-  description: Relationship to job
+  description: |
+    Relationship to [job](/#tag/simple-model-job)
 
 application_teacherId:
   type: integer
@@ -59,17 +60,20 @@ application_latestUpdateUserId:
 application_statusId:
   type: integer
   example: 1
-  description: Relationship to application-status
+  description: |
+    Relationship to [application-status](/#tag/simple-model-application-status)
 
 application_latestEventId:
   type: integer
   example: 1
-  description: Relationship to application-applicationEvent
+  description: |
+    Relationship to [application-applicationEvent](/#tag/simple-model-application-applicationEvent)
 
 application_thMatchTypeId:
   type: integer
   example: 1
-  description: Relationship to application-thMatchType
+  description: |
+    Relationship to [application-thMatchType](/#tag/simple-model-application-thMatchType)
 
 # relationships
 application_job:
@@ -79,7 +83,8 @@ application_job:
     id:
       type: string
       example: '1'
-      description: Relationship to job
+      description: |
+        Relationship to [job](/#tag/simple-model-job)
   required:
     - id
 
@@ -126,7 +131,8 @@ application_status:
     id:
       type: string
       example: '1'
-      description: Relationship to application-status
+      description: |
+        Relationship to [application-status](/#tag/simple-model-application-status)
   required:
     - id
 
@@ -137,7 +143,8 @@ application_latestEvent:
     id:
       type: string
       example: '1'
-      description: Relationship to application-applicationEvent
+      description: |
+        Relationship to [application-applicationEvent](/#tag/simple-model-application-applicationEvent)
   required:
     - id
 
@@ -148,6 +155,7 @@ application_thMatchType:
     id:
       type: string
       example: '1'
-      description: Relationship to application-thMatchType
+      description: |
+        Relationship to [application-thMatchType](/#tag/simple-model-application-thMatchType)
   required:
     - id

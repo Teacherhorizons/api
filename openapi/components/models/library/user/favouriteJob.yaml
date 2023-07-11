@@ -13,7 +13,8 @@ user-favouriteJob_userId:
 user-favouriteJob_jobId:
   type: integer
   example: 1
-  description: Relationship to Job
+  description: |
+    Relationship to [job](/#tag/simple-model-job)
 
 #relationships
 user-favouriteJob_user:
@@ -34,6 +35,7 @@ user-favouriteJob_job:
     id:
       type: string
       example: '1'
-      description: Relationship to Job
+      description: |
+        Relationship to [job](/#tag/simple-model-job)
   required:
     - id
