@@ -63,7 +63,8 @@ general-photo_latestUpdateUserId:
 general-photo_typeId:
   type: integer
   example: 1
-  description: Relationship to general-photoType
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)Type
 
 #Relationship
 general-photo_creationUser:
@@ -97,6 +98,7 @@ general-photo_type:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photoType
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)Type
   required:
     - id

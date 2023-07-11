@@ -11,7 +11,8 @@ regional-regionPhoto_regionId:
 regional-regionPhoto_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 
 #relationships
 regional-regionPhoto_region:
@@ -32,6 +33,7 @@ regional-regionPhoto_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id

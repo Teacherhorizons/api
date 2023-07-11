@@ -47,7 +47,8 @@ job_typeId:
 job_roleId:
   type: integer
   example: 1
-  description: Relationship to general-role
+  description: |
+    Relationship to [general-role](/#tag/simple-model-general-role)
 job_schoolId:
   type: integer
   example: 1
@@ -105,7 +106,8 @@ job_role:
     id:
       type: string
       example: '1'
-      description: Relationship to general-role
+      description: |
+        Relationship to [general-role](/#tag/simple-model-general-role)
   required:
     - id
 

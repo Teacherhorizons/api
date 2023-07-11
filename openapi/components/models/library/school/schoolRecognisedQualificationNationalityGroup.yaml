@@ -7,7 +7,8 @@ school-schoolRecognisedQualificationNationalityGroup_schoolId:
 school-schoolRecognisedQualificationNationalityGroup_nationalityGroupId:
   type: integer
   example: 1
-  description: Relationship to general-nationalityGroup
+  description: |
+    Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
 
 # relatoinships
 school-schoolRecognisedQualificationNationalityGroup_school:
@@ -29,6 +30,7 @@ school-schoolRecognisedQualificationNationalityGroup_nationalityGroup:
     id:
       type: string
       example: '1'
-      description: Relationship to general-nationalityGroup
+      description: |
+        Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
   required:
     - id

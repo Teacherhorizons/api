@@ -84,7 +84,8 @@ teacher_jobSeekingStatusId:
 teacher_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 teacher_maritalStatusId:
   type: integer
   example: 1
@@ -168,7 +169,8 @@ teacher_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id
 

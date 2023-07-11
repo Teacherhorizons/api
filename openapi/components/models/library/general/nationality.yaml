@@ -23,7 +23,8 @@ general-nationality_latestUpdateDate:
 general-nationality_nationalityGroupId:
   type: integer
   example: 1
-  description: Relationship to general-nationalityGroup
+  description: |
+    Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
 general-nationality_creationUserId:
   type: integer
   example: 1
@@ -43,7 +44,8 @@ general-nationality_nationalityGroup:
     id:
       type: string
       example: '1'
-      description: Relationship to general-nationalityGroup
+      description: |
+        Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
   required:
     - id
 general-nationality_creationUser:

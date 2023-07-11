@@ -19,7 +19,8 @@ regional-cityPhoto_cityId:
 regional-cityPhoto_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 
 #relationships
 regional-cityPhoto_city:
@@ -40,6 +41,7 @@ regional-cityPhoto_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id

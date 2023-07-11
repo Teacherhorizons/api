@@ -17,7 +17,8 @@ teacher-teacherLookingForRole_teacherId:
 teacher-teacherLookingForRole_roleId:
   type: integer
   example: 1
-  description: Relationship to general-role
+  description: |
+    Relationship to [general-role](/#tag/simple-model-general-role)
 teacher-teacherLookingForRole_creationUserId:
   type: integer
   example: 1
@@ -49,7 +50,8 @@ teacher-teacherLookingForRole_role:
     id:
       type: string
       example: '1'
-      description: Relationship to general-role
+      description: |
+        Relationship to [general-role](/#tag/simple-model-general-role)
   required:
     - id
 

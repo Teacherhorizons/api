@@ -32,7 +32,8 @@ staff-staffMember_currentCityId:
 staff-staffMember_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 
 staff-staffMember_currentCountryId:
   type: integer
@@ -82,7 +83,8 @@ staff-staffMember_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id
 

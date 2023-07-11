@@ -40,7 +40,8 @@ subject-subjectArticle_latestUpdateUserId:
 subject-subjectArticle_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 
 subject-subjectArticle_subjectId:
   type: integer
@@ -84,7 +85,8 @@ subject-subjectArticle_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id
 

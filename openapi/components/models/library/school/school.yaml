@@ -397,11 +397,13 @@ school_latestUpdateUserId:
 school_smallProfilePhotoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 school_largeProfilePhotoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 #relationships
 school_city:
   type: object
@@ -558,7 +560,8 @@ school_smallProfilePhoto:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id
 school_largeProfilePhoto:
@@ -568,6 +571,7 @@ school_largeProfilePhoto:
     id:
       type: string
       example: '1'
-      description: Relationship to general-photo
+      description: |
+        Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id

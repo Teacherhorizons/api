@@ -31,7 +31,8 @@ general-role_latestUpdateUserId:
 general-role_typeId:
   type: integer
   example: 1
-  description: Relationship to general-roleType
+  description: |
+    Relationship to [general-roleType](/#tag/simple-model-general-roleType)
 
 #relationships
 general-role_creationUser:
@@ -65,6 +66,7 @@ general-role_roleType:
     id:
       type: string
       example: '1'
-      description: Relationship to general-roleType
+      description: |
+        Relationship to [general-roleType](/#tag/simple-model-general-roleType)
   required:
     - id

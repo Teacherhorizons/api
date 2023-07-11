@@ -26,7 +26,8 @@ teacher-teacherEmploymentRecord_teacherId:
 teacher-teacherEmploymentRecord_roleId:
   type: integer
   example: 1
-  description: Relationship to general-role
+  description: |
+    Relationship to [general-role](/#tag/simple-model-general-role)
 teacher-teacherEmploymentRecord_schoolId:
   type: integer
   example: 1
@@ -56,7 +57,8 @@ teacher-teacherEducationLevel_role:
     id:
       type: string
       example: '1'
-      description: Relationship to general-role
+      description: |
+        Relationship to [general-role](/#tag/simple-model-general-role)
   required:
     - id
 teacher-teacherEducationLevel_school:

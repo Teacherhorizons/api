@@ -26,7 +26,8 @@ general-article_latestUpdateDate:
 general-article_photoId:
   type: integer
   example: 1
-  description: Relationship to general-photo
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
 general-article_creationUserId:
   type: integer
   example: 1
@@ -46,7 +47,7 @@ general-article_photo:
     id:
       type: string
       example: '1'
-      description: Relationship to photo
+      description: Relationship to [general-photo](/#tag/simple-model-general-photo)
   required:
     - id
 
