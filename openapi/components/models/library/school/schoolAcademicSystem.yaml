@@ -8,7 +8,7 @@ school-schoolAcademicSystem_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-  #relationship attributes
+# relationship attributes
 school-schoolAcademicSystem_schoolId:
   type: integer
   example: 1
@@ -28,51 +28,3 @@ school-schoolAcademicSystem_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#relationships
-school-schoolAcademicSystem_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [school](/#tag/simple-model-school)
-  required:
-    - id
-
-school-schoolAcademicSystem_academicSystem:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to school-academicSystem
-  required:
-    - id
-
-school-schoolAcademicSystem_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-school-schoolAcademicSystem_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

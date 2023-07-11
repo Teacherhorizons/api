@@ -9,28 +9,3 @@ school-schoolMainTeacherNationalityGroup_nationalityGroupId:
   example: 1
   description: |
     Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
-
-# relatoinships
-school-schoolMainTeacherNationalityGroup_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [school](/#tag/simple-model-school)
-  required:
-    - id
-
-school-schoolMainTeacherNationalityGroup_nationalityGroup:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
-  required:
-    - id

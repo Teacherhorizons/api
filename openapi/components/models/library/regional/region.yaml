@@ -274,28 +274,3 @@ regional-region_photo1Id:
   type: integer
   example: 1
   description: Derived (dw); Relationship to general-photo
-
-#relationships
-regional-region_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-job)
-  required:
-    - id
-
-regional-region_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-job)
-  required:
-    - id

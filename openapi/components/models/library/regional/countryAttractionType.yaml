@@ -27,28 +27,3 @@ regional-countryAttractionType_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#Relationships
-regional-countryAttractionType_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-regional-countryAttractionType_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

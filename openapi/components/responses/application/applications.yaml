@@ -236,8 +236,9 @@ Response_applications_teacher:
             type: object
             additionalProperties: false
             properties:
+              # relationship attributes
               status:
-                $ref: '../../../components/models/library/application/application.yaml#/application_status'
+                $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
             required:
               - status
           relationships:

@@ -39,39 +39,3 @@ school-schoolPhoto_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-# relatoinships
-school-schoolPhoto_category:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to school-photoCategory
-  required:
-    - id
-
-school-schoolPhoto_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-school-schoolPhoto_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

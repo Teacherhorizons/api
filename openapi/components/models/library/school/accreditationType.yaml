@@ -30,28 +30,3 @@ school-accreditationType_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#relationsahips
-school-accreditationType_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-school-accreditationType_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

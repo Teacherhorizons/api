@@ -1,4 +1,4 @@
-# attributes
+# simple attributes
 regional-city_name:
   type: string
   example: Luanda
@@ -180,7 +180,8 @@ regional-city_walkingAloneInDaylightSafetyIndex:
 regional-city_walkingAloneAtNightSafetyIndex:
   type: number
   example: 67
-# junior teacher
+
+# simple attributes - junior teacher
 regional-city_minGrossSalaryJuniorTeacher:
   type: integer
   example: 12000
@@ -206,7 +207,8 @@ regional-city_maxGrossSalaryJuniorTeacher:
   type: integer
   example: 55000
   description: Derived (dw)
-# senior teacher
+
+# simple attributes - senior teacher
 regional-city_minGrossSalarySeniorTeacher:
   type: integer
   example: 21000
@@ -330,7 +332,7 @@ regional-city_communityResponseQuestionIds:
   example: [4, 7, 10, 14]
   description: Derived (dw)
 
-# Relationship attributes
+# relationship attributes
 regional-city_countryId:
   type: integer
   example: 1
@@ -358,62 +360,3 @@ regional-city_photo1Id:
   type: integer
   example: 1
   description: Derived (dw); Relationship to general-photo
-
-# Relationships
-regional-city_country:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to regional-country
-  required:
-    - id
-
-regional-city_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-regional-city_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-regional-city_language:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to geneeral-language
-  required:
-    - id
-
-regional-city_ambassadorTeacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id

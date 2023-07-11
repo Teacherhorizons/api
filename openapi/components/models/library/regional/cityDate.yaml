@@ -19,37 +19,3 @@ regional-cityDate_weatherTypeId:
   type: integer
   example: 1
   description: Relationship to general-weatherType
-
-#Relationships
-regional-cityDate_city:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to regional-city
-  required:
-    - id
-
-regional-cityDate_date:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to regional-city
-  required:
-    - id
-
-regional-cityDate_weatherType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to general-weatherType
-  required:
-    - id

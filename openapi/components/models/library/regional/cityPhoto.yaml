@@ -21,27 +21,3 @@ regional-cityPhoto_photoId:
   example: 1
   description: |
     Relationship to [general-photo](/#tag/simple-model-general-photo)
-
-#relationships
-regional-cityPhoto_city:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to regional-city
-  required:
-    - id
-
-regional-cityPhoto_photo:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-photo](/#tag/simple-model-general-photo)
-  required:
-    - id

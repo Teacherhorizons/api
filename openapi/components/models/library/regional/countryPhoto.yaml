@@ -21,27 +21,3 @@ regional-countryPhoto_photoId:
   example: 1
   description: |
     Relationship to [general-photo](/#tag/simple-model-general-photo)
-
-#relationships
-regional-countryPhoto_country:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to regional-country
-  required:
-    - id
-  
-regional-countryPhoto_photo:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: |
-        Relationship to [general-photo](/#tag/simple-model-general-photo)
-  required:
-    - id

@@ -42,15 +42,3 @@ regional-cityMonthNumber_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#Relationships
-regional-cityMonthNumber_city:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to regional-city
-  required:
-    - id

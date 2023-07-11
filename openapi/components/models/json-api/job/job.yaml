@@ -3,69 +3,69 @@ JsonApiModel_job:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_job_type"
+      $ref: '#/JsonApiModel_job_type'
     id:
-      $ref: "#/JsonApiModel_job_id"
+      $ref: '#/JsonApiModel_job_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         startDate:
-          $ref: "../../library/job/job.yaml#/job_startDate"
+          $ref: '../../library/job/job.yaml#/job_startDate'
         deadlineDate:
-          $ref: "../../library/job/job.yaml#/job_deadlineDate"
+          $ref: '../../library/job/job.yaml#/job_deadlineDate'
         advertExpiryDate:
-          $ref: "../../library/job/job.yaml#/job_advertExpiryDate"
+          $ref: '../../library/job/job.yaml#/job_advertExpiryDate'
         furtherInfo:
-          $ref: "../../library/job/job.yaml#/job_furtherInfo"
+          $ref: '../../library/job/job.yaml#/job_furtherInfo'
         title:
-          $ref: "../../library/job/job.yaml#/job_title"
+          $ref: '../../library/job/job.yaml#/job_title'
         excludeFromJobSearch:
-          $ref: "../../library/job/job.yaml#/job_excludeFromJobSearch"
+          $ref: '../../library/job/job.yaml#/job_excludeFromJobSearch'
         creationDate:
-          $ref: "../../library/job/job.yaml#/job_creationDate"
+          $ref: '../../library/job/job.yaml#/job_creationDate'
         latestUpdateDate:
-          $ref: "../../library/job/job.yaml#/job_latestUpdateDate"
+          $ref: '../../library/job/job.yaml#/job_latestUpdateDate'
         isBoosted:
-          $ref: "../../library/job/job.yaml#/job_isBoosted"
+          $ref: '../../library/job/job.yaml#/job_isBoosted'
         # relationship attributes
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         type:
-          $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship_attribute"
+          $ref: '../job/type.yaml#/JsonApiModel_job-type_relationship_attribute'
         role:
-          $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship_attribute"
+          $ref: '../general/role.yaml#/JsonApiModel_general-role_relationship_attribute'
         school:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
+          $ref: '../school/school.yaml#/JsonApiModel_school_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         thOwnerUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         status:
-          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship_attribute"
+          $ref: '../job/status.yaml#/JsonApiModel_job-status_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
         type:
-          $ref: "../job/type.yaml#/JsonApiModel_job-type_relationship"
+          $ref: '../job/type.yaml#/JsonApiModel_job-type_relationship'
         role:
-          $ref: "../general/role.yaml#/JsonApiModel_general-role_relationship"
+          $ref: '../general/role.yaml#/JsonApiModel_general-role_relationship'
         school:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship"
+          $ref: '../school/school.yaml#/JsonApiModel_school_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         thOwnerUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         status:
-          $ref: "../job/status.yaml#/JsonApiModel_job-status_relationship"
+          $ref: '../job/status.yaml#/JsonApiModel_job-status_relationship'
   required:
     - type
     - id
@@ -78,7 +78,7 @@ JsonApiModel_job_type:
 
 JsonApiModel_job_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -87,15 +87,17 @@ JsonApiModel_job_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_job_id"
+      $ref: '#/JsonApiModel_job_id'
     title:
-      $ref: "../../library/job/job.yaml#/job_title"
+      $ref: '../../library/job/job.yaml#/job_title'
   required:
     - id
     - title
 
 JsonApiModel_job_relationship:
   type: object
+  description: |
+    foo
   additionalProperties: false
   properties:
     data:
@@ -103,9 +105,9 @@ JsonApiModel_job_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_job_type"
+          $ref: '#/JsonApiModel_job_type'
         id:
-          $ref: "#/JsonApiModel_job_id"
+          $ref: '#/JsonApiModel_job_id'
       required:
         - type
         - id
@@ -123,9 +125,9 @@ JsonApiModel_job_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_job_type"
+            $ref: '#/JsonApiModel_job_type'
           id:
-            $ref: "#/JsonApiModel_job_id"
+            $ref: '#/JsonApiModel_job_id'
         required:
           - type
           - id

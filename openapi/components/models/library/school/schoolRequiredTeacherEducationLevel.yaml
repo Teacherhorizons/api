@@ -8,27 +8,3 @@ school-schoolRequiredTeacherEducationLevel_educationLevelId:
   type: integer
   example: 1
   description: Relationship to general-educationLevel
-
-# relatoinships
-school-schoolRequiredTeacherEducationLevel_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [school](/#tag/simple-model-school)
-  required:
-    - id
-
-school-schoolRequiredTeacherEducationLevel_educationLevel:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to general-educationLevel
-  required:
-    - id

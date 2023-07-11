@@ -3,31 +3,31 @@ JsonApiModel_general-article:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-article_type"
+      $ref: '#/JsonApiModel_general-article_type'
     id:
-      $ref: "#/JsonApiModel_general-article_id"
+      $ref: '#/JsonApiModel_general-article_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         title:
-          $ref: "../../library/general/article.yaml#/general-article_title"
+          $ref: '../../library/general/article.yaml#/general-article_title'
         snippet:
-          $ref: "../../library/general/article.yaml#/general-article_snippet"
+          $ref: '../../library/general/article.yaml#/general-article_snippet'
         url:
-          $ref: "../../library/general/article.yaml#/general-article_url"
+          $ref: '../../library/general/article.yaml#/general-article_url'
         creationDate:
-          $ref: "../../library/general/article.yaml#/general-article_creationDate"
+          $ref: '../../library/general/article.yaml#/general-article_creationDate'
         latestUpdateDate:
-          $ref: "../../library/general/article.yaml#/general-article_latestUpdateDate"
+          $ref: '../../library/general/article.yaml#/general-article_latestUpdateDate'
         # relationship attributes
-        photo: 
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        photo:
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         # simple attributes
         - title
@@ -43,12 +43,12 @@ JsonApiModel_general-article:
       type: object
       additionalProperties: false
       properties:
-        photo: 
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+        photo:
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -61,7 +61,7 @@ JsonApiModel_general-article_type:
 
 JsonApiModel_general-article_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -70,11 +70,11 @@ JsonApiModel_general-article_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_general-article_id"
+      $ref: '#/JsonApiModel_general-article_id'
     title:
-      $ref: "../../library/general/article.yaml#/general-article_title"
+      $ref: '../../library/general/article.yaml#/general-article_title'
     url:
-      $ref: "../../library/general/article.yaml#/general-article_url"
+      $ref: '../../library/general/article.yaml#/general-article_url'
   required:
     - id
     - title
@@ -89,9 +89,9 @@ JsonApiModel_general-article_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-article_type"
+          $ref: '#/JsonApiModel_general-article_type'
         id:
-          $ref: "#/JsonApiModel_general-article_id"
+          $ref: '#/JsonApiModel_general-article_id'
       required:
         - type
         - id
@@ -103,15 +103,17 @@ JsonApiModel_general-article_relationship_multiple:
   additionalProperties: false
   properties:
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: "#/JsonApiModel_general-article_type"
-        id:
-          $ref: "#/JsonApiModel_general-article_id"
-      required:
-        - type
-        - id
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: '#/JsonApiModel_general-article_type'
+          id:
+            $ref: '#/JsonApiModel_general-article_id'
+        required:
+          - type
+          - id
   required:
     - data

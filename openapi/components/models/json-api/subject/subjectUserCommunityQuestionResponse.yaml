@@ -85,16 +85,18 @@ JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship_multiple:
   additionalProperties: false
   properties:
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
-        id:
-          $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
-      required:
-        - type
-        - id
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_type'
+          id:
+            $ref: '#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_id'
+        required:
+          - type
+          - id
   required:
     - data
 
