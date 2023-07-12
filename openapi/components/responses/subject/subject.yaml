@@ -275,23 +275,15 @@ Response_subject_includedAmbassador_notSignedIn:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        # user:
-        #   $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - photo
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        # photo:
-        #   $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship'
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+        - user
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedJob_notSignedIn:
   type: object
@@ -546,21 +538,16 @@ Response_subject_includedStaffMember_notSignedIn:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-      required:
-        - photo
-        - description
-
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
         user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+      required:
+        - description
+        - photo
+        - user
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedSubjectLink_notSignedIn:
   type: object
