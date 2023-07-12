@@ -74,7 +74,8 @@ user_latestUpdateUserId:
 user_phoneCodeCountryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 
 #relationships
 user_type:
@@ -119,6 +120,7 @@ user_phoneCodeCountry:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id

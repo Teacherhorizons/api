@@ -38,11 +38,13 @@ teacher-ambassador_schoolId:
 teacher-ambassador_cityId:
   type: integer
   example: 1
-  description: Relationship to regional-city
+  description: |
+    Relationship to [regional-city](/#tag/simple-model-regional-city)
 teacher-ambassador_countryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-ambassador_regionId:
   type: integer
   example: 1
@@ -104,7 +106,8 @@ teacher-ambassador_city:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-city
+      description: |
+        Relationship to [regional-city](/#tag/simple-model-regional-city)
   required:
     - id
 
@@ -115,7 +118,8 @@ teacher-ambassador_country:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
 

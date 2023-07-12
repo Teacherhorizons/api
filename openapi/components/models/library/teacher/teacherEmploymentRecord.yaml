@@ -36,7 +36,8 @@ teacher-teacherEmploymentRecord_schoolId:
 teacher-teacherEmploymentRecord_countryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 
 #relationships
 teacher-teacherEducationLevel_teacher:
@@ -79,6 +80,7 @@ teacher-teacherEducationLevel_country:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id

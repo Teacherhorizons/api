@@ -73,7 +73,7 @@ job_statusId:
   type: integer
   example: 1
   description: |
-    Relationship to [job](/#tag/simple-model-job)-status
+    Relationship to [job-status](/#tag/simple-model-job-status)
 
 # relationships
 job_subject:
@@ -167,6 +167,6 @@ job_status:
       type: string
       example: '1'
       description: |
-        Relationship to [job](/#tag/simple-model-job)-status
+        Relationship to [job-status](/#tag/simple-model-job-status)
   required:
     - id

@@ -52,7 +52,8 @@ teacher-teacherReferenceRequest_statusId:
 teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-teacherReferenceRequest_schoolId:
   type: integer
   example: 1
@@ -61,7 +62,8 @@ teacher-teacherReferenceRequest_schoolId:
 teacher-teacherReferenceRequest_countryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-teacherReferenceRequest_creationUserId:
   type: integer
   example: 1
@@ -112,7 +114,8 @@ teacher-teacherReferenceRequest_refereePhoneCodeCountry:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
 teacher-teacherReferenceRequest_school:
@@ -133,7 +136,8 @@ teacher-teacherReferenceRequest_country:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
 teacher-teacherReferenceRequest_creationUser:
