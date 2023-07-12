@@ -110,7 +110,8 @@ teacher_latestAdviserCommentUserId:
 teacher_currentCountryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher_numberOfDependentChildrenId:
   type: integer
   example: 1
@@ -136,7 +137,8 @@ teacher_teachingQualificationCountry:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
 
@@ -238,7 +240,8 @@ teacher_currentCountry:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
 

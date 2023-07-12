@@ -27,7 +27,8 @@ staff-staffMember_userId:
 staff-staffMember_currentCityId:
   type: integer
   example: 1
-  description: Relationship to regional-city
+  description: |
+    Relationship to [regional-city](/#tag/simple-model-regional-city)
 
 staff-staffMember_photoId:
   type: integer
@@ -38,7 +39,8 @@ staff-staffMember_photoId:
 staff-staffMember_currentCountryId:
   type: integer
   example: 1
-  description: Relationship to regional-country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 
 #relationship
 staff-staffMember_user:
@@ -72,7 +74,8 @@ staff-staffMember_currentCity:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-city
+      description: |
+        Relationship to [regional-city](/#tag/simple-model-regional-city)
   required:
     - id
 
@@ -95,6 +98,7 @@ staff-staffMember_currentCountry:
     id:
       type: string
       example: '1'
-      description: Relationship to regional-country
+      description: |
+        Relationship to [regional-country](/#tag/simple-model-regional-country)
   required:
     - id
