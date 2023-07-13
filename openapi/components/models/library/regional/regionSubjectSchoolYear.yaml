@@ -13,12 +13,14 @@ regional-regionSubjectSchoolYear_averageAnnualGrossIncome:
 regional-regionSubjectSchoolYear_regionId:
   type: integer
   example: 1
-  description: Relationship to regional-region
+  description: |
+    Relationship to [regional-region](/#tag/simple-model-regional-region)
 
 regional-regionSubjectSchoolYear_subjectId:
   type: integer
   example: 1
-  description: Relationship to subject
+  description: |
+    Relationship to [subject](/#tag/simple-model-subject)
 
 regional-regionSubjectSchoolYear_schoolYearId:
   type: integer

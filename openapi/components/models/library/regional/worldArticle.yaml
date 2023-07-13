@@ -27,15 +27,18 @@ regional-worldArticle_latestUpdateDate:
 regional-worldArticle_categoryId:
   type: integer
   example: 1
-  description: Relationship to regional-articleCategory
+  description: |
+    Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
 regional-worldArticle_articleId:
   type: integer
   example: 1
-  description: Relationship to regional-regionArticle
+  description: |
+    Relationship to [regional-region](/#tag/simple-model-regional-region)Article
 regional-worldArticle_photoId:
   type: integer
   example: 1
-  description: Derived (dw), Relationship to general-photo
+  description: |
+    Derived (dw), Relationship to [general-photo](/#tag/simple-model-general-photo)
 regional-worldArticle_creationUserId:
   type: integer
   example: 1

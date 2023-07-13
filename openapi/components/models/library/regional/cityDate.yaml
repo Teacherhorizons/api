@@ -1,4 +1,4 @@
-#Attributes
+# Simple attributes
 regional-cityDate_minTemperatureInDegreesC:
   type: integer
   example: 17
@@ -6,7 +6,7 @@ regional-cityDate_maxTemperatureInDegreesC:
   type: integer
   example: 21
 
-#Relationship attributes
+# Relationship attributes
 regional-cityDate_cityId:
   type: integer
   example: 1
@@ -15,8 +15,10 @@ regional-cityDate_cityId:
 regional-cityDate_dateId:
   type: integer
   example: 20000101
-  description: Relationship to time-date
+  description: |
+    Relationship to [time-date](/#tag/simple-model-time-date)
 regional-cityDate_weatherTypeId:
   type: integer
   example: 1
-  description: Relationship to general-weatherType
+  description: |
+    Relationship to [general-weatherType](/#tag/simple-model-general-weatherType)

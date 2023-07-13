@@ -1,4 +1,4 @@
-#Attribute
+# Simple attributes
 regional-cityArticle_title:
   type: string
   maxLength: 100
@@ -26,7 +26,7 @@ regional-cityArticle_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
   format: date-time
 
-#Relationship attributes
+# Relationship attributes
 regional-cityArticle_cityId:
   type: integer
   example: 1
@@ -35,7 +35,8 @@ regional-cityArticle_cityId:
 regional-cityArticle_categoryId:
   type: integer
   example: 1
-  description: Relationship to regional-articleCategory
+  description: |
+    Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
 regional-cityArticle_articleId:
   type: integer
   example: 1
@@ -44,7 +45,8 @@ regional-cityArticle_articleId:
 regional-cityArticle_photoId:
   type: integer
   example: 1
-  description: Derived (dw), Relationship to general-photo
+  description: |
+    Derived (dw), Relationship to [general-photo](/#tag/simple-model-general-photo)
 regional-cityArticle_creationUserId:
   type: integer
   example: 1

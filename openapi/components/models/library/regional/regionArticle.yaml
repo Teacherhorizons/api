@@ -28,19 +28,23 @@ regional-regionArticle_latestUpdateDate:
 regional-regionArticle_photoId:
   type: integer
   example: 1
-  description: Derived (dw), Relationship to general-photo
+  description: |
+    Derived (dw), Relationship to [general-photo](/#tag/simple-model-general-photo)
 regional-regionArticle_regionId:
   type: integer
   example: 1
-  description: Relationship to regional-region
+  description: |
+    Relationship to [regional-region](/#tag/simple-model-regional-region)
 regional-regionArticle_categoryId:
   type: integer
   example: 1
-  description: Relationship to regional-articleCategory
+  description: |
+    Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
 regional-regionArticle_articleId:
   type: integer
   example: 1
-  description: Relationship to general-article
+  description: |
+    Relationship to [general-article](/#tag/simple-model-general-article)
 regional-regionArticle_creationUserId:
   type: integer
   example: 1

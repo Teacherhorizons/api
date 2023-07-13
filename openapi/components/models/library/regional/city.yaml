@@ -351,7 +351,8 @@ regional-city_latestUpdateUserId:
 regional-city_worldLanguageId:
   type: integer
   example: 1
-  description: Relationship to general-worldLanguage
+  description: |
+    Relationship to [general-worldLanguage](/#tag/simple-model-general-worldLanguage)
 regional-city_ambassadorTeacherId:
   type: integer
   example: 1
@@ -360,4 +361,5 @@ regional-city_ambassadorTeacherId:
 regional-city_photo1Id:
   type: integer
   example: 1
-  description: Derived (dw); Relationship to general-photo
+  description: |
+    Derived (dw); Relationship to [general-photo](/#tag/simple-model-general-photo)

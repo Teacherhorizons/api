@@ -1,4 +1,4 @@
-# attributes
+# Simple attributes
 regional-country_name:
   type: string
   example: Luanda
@@ -348,7 +348,8 @@ regional-country_communityResponseQuestionIds:
 regional-country_localCurrencyId:
   type: integer
   example: 1
-  description: Relationship to general-currency
+  description: |
+    Relationship to [general-currency](/#tag/simple-model-general-currency)
 regional-country_internationalCurrencyId:
   type: integer
   example: 1
@@ -367,7 +368,8 @@ regional-country_latestUpdateUserId:
 regional-country_regionId:
   type: integer
   example: 1
-  description: Relationship to regional-region
+  description: |
+    Relationship to [regional-region](/#tag/simple-model-regional-region)
 regional-country_capitalCityId:
   type: integer
   example: 1
@@ -381,4 +383,5 @@ regional-country_ambassadorTeacherId:
 regional-country_photo1Id:
   type: integer
   example: 1
-  description: Derived (dw); Relationship to general-photo
+  description: |
+    Derived (dw); Relationship to [general-photo](/#tag/simple-model-general-photo)
