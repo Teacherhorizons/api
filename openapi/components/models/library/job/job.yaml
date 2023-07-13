@@ -38,7 +38,8 @@ job_isBoosted:
 job_subjectId:
   type: integer
   example: 1
-  description: Relationship to subject
+  description: |
+    Relationship to [subject](/#tag/simple-model-subject)
 job_typeId:
   type: integer
   example: 1
@@ -74,99 +75,3 @@ job_statusId:
   example: 1
   description: |
     Relationship to [job-status](/#tag/simple-model-job-status)
-
-# relationships
-job_subject:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to subject
-  required:
-    - id
-
-job_type:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [job-type](/#tag/simple-model-job-type)
-  required:
-    - id
-
-job_role:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-role](/#tag/simple-model-general-role)
-  required:
-    - id
-
-job_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [school](/#tag/simple-model-school)
-  required:
-    - id
-
-job_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-job_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-job_thOwnerUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-job_status:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [job-status](/#tag/simple-model-job-status)
-  required:
-    - id

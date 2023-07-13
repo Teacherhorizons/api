@@ -3,16 +3,16 @@ JsonApiModel_teacher-internationalExperience:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-internationalExperience_type"
+      $ref: '#/JsonApiModel_teacher-internationalExperience_type'
     id:
-      $ref: "#/JsonApiModel_teacher-internationalExperience_id"
+      $ref: '#/JsonApiModel_teacher-internationalExperience_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
+          $ref: '../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name'
   required:
     - type
     - id
@@ -25,7 +25,7 @@ JsonApiModel_teacher-internationalExperience_type:
 
 JsonApiModel_teacher-internationalExperience_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -34,9 +34,21 @@ JsonApiModel_teacher-internationalExperience_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_teacher-internationalExperience_id"
+      $ref: '#/JsonApiModel_teacher-internationalExperience_id'
     name:
-      $ref: "../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name"
+      $ref: '../../library/teacher/internationalExperience.yaml#/teacher-internationalExperience_name'
+  required:
+    - id
+    - name
+
+JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_id'
+    name:
+      $ref: '../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name'
   required:
     - id
     - name
@@ -50,9 +62,9 @@ JsonApiModel_teacher-internationalExperience_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_teacher-internationalExperience_type"
+          $ref: '#/JsonApiModel_teacher-internationalExperience_type'
         id:
-          $ref: "#/JsonApiModel_teacher-internationalExperience_id"
+          $ref: '#/JsonApiModel_teacher-internationalExperience_id'
       required:
         - type
         - id

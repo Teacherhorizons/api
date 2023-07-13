@@ -7,35 +7,11 @@ subject-subjectTeacher_testimonial:
 subject-subjectTeacher_subjectId:
   type: integer
   example: 1
-  description: Relationship to subject
+  description: |
+    Relationship to [subject](/#tag/simple-model-subject)
 
 subject-subjectTeacher_teacherId:
   type: integer
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
-
-#relationships
-
-subject-subjectTeacher_subject:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to subject
-  required:
-    - id
-
-subject-subjectTeacher_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '202111'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id

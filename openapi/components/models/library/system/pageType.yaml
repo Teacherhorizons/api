@@ -23,17 +23,3 @@ system-pageType_entityTypeId:
   example: 1
   description: |
     Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
-
-#relationships
-
-system-pageType_entityType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '202111'
-      description: |
-        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
-  required:
-    - id

@@ -63,6 +63,21 @@ teacher_numberOfYearsTeachingExperience:
   type: integer
   example: 4
 
+# TODO: review
+teacher_thDoNotContact:
+  type: boolean
+  example: true
+
+# TODO: consider removing when no longer needed (now prefer to include using user relationship attribute)
+teacher_fullName:
+  type: string
+  example: Foo Bar
+
+# TODO: consider removing when no longer needed (now possibly prefer to include using photo relationship attribute)
+teacher_profilePhotoUrl:
+  type: string
+  example: ...
+
 #relationship attributes
 teacher_userId:
   type: integer
@@ -116,166 +131,3 @@ teacher_numberOfDependentChildrenId:
   type: integer
   example: 1
   description: Relationship to teacher-numberOfDependentChildren
-
-#relationships
-teacher_user:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher_teachingQualificationCountry:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [regional-country](/#tag/simple-model-regional-country)
-  required:
-    - id
-
-teacher_qualificationType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-qualificationType
-  required:
-    - id
-
-teacher_jobSeekingStatus:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-referenceStatus
-  required:
-    - id
-
-teacher_photo:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-photo](/#tag/simple-model-general-photo)
-  required:
-    - id
-
-teacher_maritalStatus:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-maritalStatus
-  required:
-    - id
-
-teacher_internationalSchoolExperience:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-internationalExperience
-  required:
-    - id
-
-teacher_userType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher_thDiscoveryMethod:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-thDiscoveryMethod
-  required:
-    - id
-
-teacher_latestAdviserCommentUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher_currentCountry:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [regional-country](/#tag/simple-model-regional-country)
-  required:
-    - id
-
-teacher_numberOfDependentChildren:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to teacher-numberOfDependentChildren
-  required:
-    - id
-
-# teacher_user:
-#   type: object
-#   additionalProperties: false
-#   properties:
-#     id:
-#       type: string
-#       example: "1"
-#       description: Relationship to teacher-numberOfDependentChildren
-#   required:
-#     - id
-
-# TODO: review these 3
-teacher_thDoNotContact:
-  type: boolean
-  example: true
-
-teacher_fullName:
-  type: string
-  example: Foo Bar
-
-teacher_profilePhotoUrl:
-  type: string
-  example: ...

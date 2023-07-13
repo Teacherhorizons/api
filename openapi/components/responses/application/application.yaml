@@ -117,18 +117,20 @@ Response_application_includedJob_admin:
       type: object
       additionalProperties: false
       properties:
+        # simple attributes
         title:
           $ref: '../../../components/models/library/job/job.yaml#/job_title'
         startDate:
           $ref: '../../../components/models/library/job/job.yaml#/job_startDate'
+        # relationship attributes
         thOwnerUser:
-          $ref: '../../../components/models/library/job/job.yaml#/job_thOwnerUser'
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
         status:
-          $ref: '../../../components/models/library/job/job.yaml#/job_status'
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
         subject:
-          $ref: '../../../components/models/library/job/job.yaml#/job_subject'
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         role:
-          $ref: '../../../components/models/library/job/job.yaml#/job_role'
+          $ref: '../../../components/models/json-api/general/role.yaml#/JsonApiModel_general-role_relationship_attribute'
       required:
         - title
         - startDate
@@ -257,12 +259,13 @@ Response_application_includedJob_teacher:
           $ref: '../../../components/models/library/job/job.yaml#/job_title'
         startDate:
           $ref: '../../../components/models/library/job/job.yaml#/job_startDate'
+        # relationship attributes
         status:
-          $ref: '../../../components/models/library/job/job.yaml#/job_status'
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
         subject:
-          $ref: '../../../components/models/library/job/job.yaml#/job_subject'
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         role:
-          $ref: '../../../components/models/library/job/job.yaml#/job_role'
+          $ref: '../../../components/models/json-api/general/role.yaml#/JsonApiModel_general-role_relationship_attribute'
       required:
         - title
         - startDate
@@ -465,10 +468,11 @@ Response_application_includedJob_school:
           $ref: '../../../components/models/library/job/job.yaml#/job_title'
         startDate:
           $ref: '../../../components/models/library/job/job.yaml#/job_startDate'
+        # relationship attributes
         status:
-          $ref: '../../../components/models/library/job/job.yaml#/job_status'
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
         subject:
-          $ref: '../../../components/models/library/job/job.yaml#/job_subject'
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
       required:
         - title
         - startDate

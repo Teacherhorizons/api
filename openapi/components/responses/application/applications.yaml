@@ -433,8 +433,10 @@ Response_applications_includedTeacher_school:
       properties:
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
+        # TODO: consider replacing with user relationship attribute
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
+        # TODO: consider replacing with photo relationship attribute
         profilePhotoUrl:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
   required:

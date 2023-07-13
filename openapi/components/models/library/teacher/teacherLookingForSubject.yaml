@@ -7,7 +7,8 @@ teacher-teacherLookingForSubject_precedence:
 teacher-teacherLookingForSubject_subjectId:
   type: integer
   example: 1
-  description: Relationship to subject
+  description: |
+    Relationship to [subject](/#tag/simple-model-subject)
 teacher-teacherLookingForSubject_teacherId:
   type: integer
   example: 1
@@ -22,7 +23,8 @@ teacher-teacherLookingForSubject_subject:
     id:
       type: string
       example: '1'
-      description: Relationship to subject
+      description: |
+        Relationship to [subject](/#tag/simple-model-subject)
   required:
     - id
 

@@ -18,15 +18,3 @@ subject-communityQuestion_typeId:
   type: integer
   example: 1
   description: Relationship to subject-communityQuestionType
-
-#relationships
-subject-communityQuestion_type:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to subject-communityQuestionType
-  required:
-    - id

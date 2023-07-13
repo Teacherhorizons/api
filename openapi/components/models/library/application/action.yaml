@@ -19,27 +19,3 @@ application-action_emailId:
   example: 1
   description: |
     Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
-
-# relationships
-application-action_endState:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to State #check with RR
-  required:
-    - id
-
-application-action_email:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
-  required:
-    - id

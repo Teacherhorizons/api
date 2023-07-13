@@ -15,7 +15,7 @@ meta-entityChangeSummary_isProcessed:
   type: boolean
   example: true
 
-#relationships
+#relationships attributes
 meta-entityChangeSummary_entityTypeId:
   type: integer
   example: 1
@@ -34,28 +34,3 @@ meta-entityChangeSummary_userId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#relationship attributes
-meta-entityChangeSummary_entityType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
-  required:
-    - id
-
-meta-entityChangeSummary_entity:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType) #check with RR
-  required:
-    - id

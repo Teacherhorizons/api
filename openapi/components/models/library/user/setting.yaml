@@ -13,26 +13,3 @@ user-setting_appliesToUserCategoryId:
   type: integer
   example: 1
   description: ''
-
-#relationship
-user-setting_editableByUserCategory:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: ''
-  required:
-    - id
-
-user-setting_appliesToUserCategory:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: ''
-  required:
-    - id

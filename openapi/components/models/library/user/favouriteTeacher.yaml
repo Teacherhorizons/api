@@ -15,28 +15,3 @@ user-favouriteTeacher_teacherId:
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
-
-#relationships
-user-favouriteTeacher_user:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-user-favouriteTeacher_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id

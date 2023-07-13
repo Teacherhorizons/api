@@ -38,28 +38,3 @@ general-currency_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-# relationships
-general-currency_creationUser:
-  additionalProperties: false
-  type: object
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-general-currency_latestUpdateUser:
-  additionalProperties: false
-  type: object
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

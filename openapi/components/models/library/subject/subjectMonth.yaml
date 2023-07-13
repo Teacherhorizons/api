@@ -13,36 +13,10 @@ subject-subjectMonth_monthNumber:
 subject-subjectMonth_subjectId:
   type: integer
   example: 1
-  description: Relationship to subject
+  description: |
+    Relationship to [subject](/#tag/simple-model-subject)
 
 subject-subjectMonth_monthId:
   type: integer
   example: 202111
   description: Relationship to ?
-
-#relationships
-
-subject-subjectMonth_subject:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to subject
-  required: 
-    - id
-
-subject-subjectMonth_month:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "202111"
-      description: Relationship to ?
-  required: 
-    - id
-  
-
-

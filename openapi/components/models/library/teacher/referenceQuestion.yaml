@@ -10,25 +10,8 @@ teacher-referenceQuestion_isRequired:
   type: boolean
   example: true
 
-#relationship attribute  
+#relationship attribute
 teacher-referenceQuestion_referenceTypeId:
   type: integer
   example: 1
   description: Relationship to teacher-referenceType
-
-#relationship 
-teacher-referenceQuestion_referenceType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to teacher-referenceType
-  required: 
-    - id
-  
-
-
-
-

@@ -25,8 +25,6 @@ JsonApiModel_teacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_profileStrength'
         birthYear:
           $ref: '../../library/teacher/teacher.yaml#/teacher_birthYear'
-        numberOfDependentChildren:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfDependentChildren'
         latestAdviserCommentDate:
           $ref: '../../library/teacher/teacher.yaml#/teacher_latestAdviserCommentDate'
         isInterestedInPrivateTuition:
@@ -74,6 +72,9 @@ JsonApiModel_teacher:
           $ref: '../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship_attribute'
         internationalSchoolExperience:
           $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute'
+        # TODO RR: investigate why the below is erroring
+        # numberOfDependentChildren:
+        #   $ref: '../teacher/numberOfDependentChildren.yaml#/JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute'
         photo:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
     relationships:

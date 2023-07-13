@@ -26,37 +26,3 @@ meta-entityChange_typeId:
   type: integer
   example: 1
   description: Relationship to meta-entityChangeType
-
-# relationships
-meta-entityChange_entityType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
-  required:
-    - id
-meta-entityChange_entity:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to the related entity
-  required:
-    - id
-meta-entityChange_user:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

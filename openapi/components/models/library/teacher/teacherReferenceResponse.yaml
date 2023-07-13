@@ -12,25 +12,3 @@ teacher-teacherReferenceResponse_questionId:
   type: integer
   example: 1
   description: Relationship to teacher-referenceQuestion
-
-#relationships
-teacher-teacherReferenceResponse_request:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to teacher-teacherReferenceRequest
-  required:
-    - id
-teacher-teacherReferenceResponse_question:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: Relationship to teacher-referenceQuestion
-  required:
-    - id

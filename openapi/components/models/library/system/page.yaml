@@ -22,27 +22,3 @@ system-page_entityId:
   type: integer
   example: 1
   description: Relationship to ?
-
-#relationships
-
-system-page_pageType:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: Relationship to system-pageType
-  required:
-    - id
-
-system-page_entity:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '202111'
-      description: Relationship to ?
-  required:
-    - id
