@@ -505,20 +505,15 @@ Response_subject_includedTeacher_notSignedIn:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+        user:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - photo
-
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+        - user
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedStaffMember_notSignedIn:
   type: object
@@ -679,15 +674,12 @@ Response_subject_includedArticle_notSignedIn:
         url:
           $ref: '../../../components/models/library/general/article.yaml#/general-article_url'
         # relationship attributes
-        category:
-          $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - snippet
         - title
         - url
-        - category
         - photo
   required:
     - type
