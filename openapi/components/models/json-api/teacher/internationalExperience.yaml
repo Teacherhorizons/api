@@ -41,18 +41,6 @@ JsonApiModel_teacher-internationalExperience_relationship_attribute:
     - id
     - name
 
-JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_id'
-    name:
-      $ref: '../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name'
-  required:
-    - id
-    - name
-
 JsonApiModel_teacher-internationalExperience_relationship:
   type: object
   additionalProperties: false

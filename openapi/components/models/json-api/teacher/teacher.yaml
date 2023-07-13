@@ -59,7 +59,7 @@ JsonApiModel_teacher:
         jobSeekingStatus:
           $ref: '../teacher/jobSeekingStatus.yaml#/JsonApiModel_teacher-jobSeekingStatus_relationship_attribute'
         userType:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute' # TODO: check (names don't match)
         thDiscoveryMethod:
           $ref: '../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship_attribute'
         latestAdviserCommentUser:
@@ -71,10 +71,9 @@ JsonApiModel_teacher:
         maritalStatus:
           $ref: '../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship_attribute'
         internationalSchoolExperience:
-          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute'
-        # TODO RR: investigate why the below is erroring
-        # numberOfDependentChildren:
-        #   $ref: '../teacher/numberOfDependentChildren.yaml#/JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute'
+          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship_attribute' # TODO: check (names don't match)
+        numberOfDependentChildren:
+          $ref: '../teacher/numberOfDependentChildren.yaml#/JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute'
         photo:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
     relationships:
@@ -88,9 +87,9 @@ JsonApiModel_teacher:
         qualificationType:
           $ref: '../teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType_relationship'
         jobSeekingStatus:
-          $ref: '../job/status.yaml#/JsonApiModel_job-status_relationship'
+          $ref: '../job/status.yaml#/JsonApiModel_job-status_relationship' # TODO: check (names don't match)
         userType:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship' # TODO: check (names don't match)
         thDiscoveryMethod:
           $ref: '../teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod_relationship'
         latestAdviserCommentUser:
@@ -100,7 +99,9 @@ JsonApiModel_teacher:
         maritalStatus:
           $ref: '../teacher/maritalStatus.yaml#/JsonApiModel_teacher-maritalStatus_relationship'
         internationalSchoolExperience:
-          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship'
+          $ref: '../teacher/internationalExperience.yaml#/JsonApiModel_teacher-internationalExperience_relationship' # TODO: check (names don't match)
+        numberOfDependentChildren:
+          $ref: '../teacher/numberOfDependentChildren.yaml#/JsonApiModel_teacher-numberOfDependentChildren_relationship'
         photo:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
   required:

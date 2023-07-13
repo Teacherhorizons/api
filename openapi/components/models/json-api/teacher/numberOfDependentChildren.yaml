@@ -3,16 +3,16 @@ JsonApiModel_teacher-numberOfDependentChildren:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_type"
+      $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_type'
     id:
-      $ref: "#/JsonApiModel_teacher-numberOfDependentChildren_id"
+      $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name"
+          $ref: '../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name'
   required:
     - type
     - id
@@ -25,6 +25,36 @@ JsonApiModel_teacher-numberOfDependentChildren_type:
 
 JsonApiModel_teacher-numberOfDependentChildren_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
+
+JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_id'
+    name:
+      $ref: '../../library/teacher/numberOfDependentChildren.yaml#/teacher-numberOfDependentChildren_name'
+  required:
+    - id
+    - name
+
+JsonApiModel_teacher-numberOfDependentChildren_relationship:
+  type: object
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_type'
+        id:
+          $ref: '#/JsonApiModel_teacher-numberOfDependentChildren_id'
+      required:
+        - type
+        - id
+  required:
+    - data
