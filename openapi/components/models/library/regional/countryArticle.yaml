@@ -36,15 +36,18 @@ regional-countryArticle_countryId:
 regional-countryArticle_categoryId:
   type: integer
   example: 1
-  description: Relationship to regional-articleCategory
+  description: |
+    Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
 regional-countryArticle_articleId:
   type: integer
   example: 1
-  description: Relationship to regional-regionArticle
+  description: |
+    Relationship to [regional-articleCategory](/#tag/simple-model-regional-regionArticle)
 regional-countryArticle_photoId:
   type: integer
   example: 1
-  description: Derived (dw), Relationship to general-photo
+  description: |
+    Derived (dw), Relationship to [general-photo](/#tag/simple-model-general-photo)
 regional-countryArticle_creationUserId:
   type: integer
   example: 1
