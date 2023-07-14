@@ -18,6 +18,9 @@ Response_subjects_notSignedInSingle:
         - not-signed-in-single
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-subject) | 
+        [JSON:API model](/#tag/json-api-model-subject)
       items:
         $ref: './subject.yaml#/Response_subject_notSignedIn_item'
     included:
@@ -57,6 +60,9 @@ Response_subjects_notSignedInMultiple:
         - not-signed-in-multiple
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-subject) | 
+        [JSON:API model](/#tag/json-api-model-subject)
       items:
         $ref: '#/Response_subjects_notSignedInMultiple_item'
   required:
@@ -65,6 +71,9 @@ Response_subjects_notSignedInMultiple:
 
 Response_subjects_notSignedInMultiple_item:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject) | 
+    [JSON:API model](/#tag/json-api-model-subject)
   additionalProperties: false
   properties:
     type:
