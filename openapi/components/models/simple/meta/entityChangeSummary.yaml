@@ -3,25 +3,25 @@ SimpleModel_meta-entityChangeSummary:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_meta-entityChangeSummary_id"
+      $ref: '#/SimpleModel_meta-entityChangeSummary_id'
     # simple attributes
     fromDate:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_fromDate"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_fromDate'
     toDate:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_toDate"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_toDate'
     notes:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_notes"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_notes'
     isProcessed:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_isProcessed"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_isProcessed'
     # relationship attributes
     entityTypeId:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_entityTypeId"
-    entityId:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_entityId"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_entityTypeId'
+    entityId: #  (non-specific relationship)
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_entityId'
     typeId:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_typeId"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_typeId'
     userId:
-      $ref: "../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_userId"
+      $ref: '../../library/meta/entityChangeSummary.yaml#/meta-entityChangeSummary_userId'
   required:
     - id
 

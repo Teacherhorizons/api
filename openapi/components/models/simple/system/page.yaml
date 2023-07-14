@@ -3,18 +3,17 @@ SimpleModel_system-page:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_system-page_id"
+      $ref: '#/SimpleModel_system-page_id'
     # simple attributes
     title:
-      $ref: "../../library/system/page.yaml#/system-page_title"
+      $ref: '../../library/system/page.yaml#/system-page_title'
     metaDescription:
-      $ref: "../../library/system/page.yaml#/system-page_metaDescription"
-
+      $ref: '../../library/system/page.yaml#/system-page_metaDescription'
     # relationship attributes
     pageTypeId:
-      $ref: "../../library/system/page.yaml#/system-page_pageTypeId"
-    entityId:
-      $ref: "../../library/system/page.yaml#/system-page_entityId"    
+      $ref: '../../library/system/page.yaml#/system-page_pageTypeId'
+    entityId: # (non-specific relationship)
+      $ref: '../../library/system/page.yaml#/system-page_entityId'
   required:
     - id
     - title

@@ -3,18 +3,17 @@ SimpleModel_meta-entityChangeSummarySubscription:
   additionalProperties: false
   properties:
     id:
-      $ref:
-        "#/SimpleModel_meta-entityChangeSummarySubscription_id"
-        # simple attributes
+      $ref: '#/SimpleModel_meta-entityChangeSummarySubscription_id'
+    # simple attributes
     notes:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes"
+      $ref: '../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_notes'
     # relationship attributes
     entityTypeId:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_entityTypeId"
-    entityId:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_entityId"
+      $ref: '../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_entityTypeId'
+    entityId: # (non-specific relationship)
+      $ref: '../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_entityId'
     userId:
-      $ref: "../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_userId"
+      $ref: '../../library/meta/entityChangeSummarySubscription.yaml#/meta-entityChangeSummarySubscription_userId'
   required:
     - id
 

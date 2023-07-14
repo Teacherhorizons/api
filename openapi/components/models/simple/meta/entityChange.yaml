@@ -3,22 +3,21 @@ SimpleModel_meta-entityChange:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_meta-entityChange_id"
+      $ref: '#/SimpleModel_meta-entityChange_id'
     # simple attributes
     date:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_date"
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_date'
     isProcessed:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_isProcessed"
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_isProcessed'
     # relationship attributes
     entityTypeId:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_entityTypeId"
-    entityId:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_entityId"
-      # TODO RR: think about how to do this better (this attribute is an exception)
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_entityTypeId'
+    entityId: # (non-specific relationship)
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_entityId'
     userId:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_userId"
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_userId'
     typeId:
-      $ref: "../../library/meta/entityChange.yaml#/meta-entityChange_typeId"
+      $ref: '../../library/meta/entityChange.yaml#/meta-entityChange_typeId'
   required:
     - id
 

@@ -13,18 +13,18 @@ meta-entityChange_entityTypeId:
   example: 1
   description: |
     Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
+
 meta-entityChange_entityId:
   type: integer
   example: 1
-  description: Relationship to the related entity
-# cheeck with RR
+  description: The id of the related entity (non-specific relationship)
 
 meta-entityChange_userId:
   type: integer
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-    
+
 meta-entityChange_typeId:
   type: integer
   example: 1
