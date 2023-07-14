@@ -17,6 +17,7 @@ meta-entityChange_entityId:
   type: integer
   example: 1
   description: Relationship to the related entity
+# cheeck with RR
 meta-entityChange_userId:
   type: integer
   example: 1
@@ -25,4 +26,5 @@ meta-entityChange_userId:
 meta-entityChange_typeId:
   type: integer
   example: 1
-  description: Relationship to meta-entityChangeType
+  description: |
+    Relationship to [meta-entityChangeType](/#tag/simple-model-meta-entityChangeType)
