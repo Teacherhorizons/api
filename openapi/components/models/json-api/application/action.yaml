@@ -50,6 +50,8 @@ JsonApiModel_application-action_id:
 
 JsonApiModel_application-actionType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [application-action](/#tag/simple-model-application-action)
   additionalProperties: false
   properties:
     id:
@@ -62,6 +64,9 @@ JsonApiModel_application-actionType_relationship_attribute:
 
 JsonApiModel_application-action_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-application-action) | 
+    [JSON:API model](/#tag/json-api-model-application-action)
   additionalProperties: false
   properties:
     data:

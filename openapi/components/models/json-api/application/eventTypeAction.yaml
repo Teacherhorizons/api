@@ -2,15 +2,15 @@
 
 JsonApiModel_application-eventTypeAction:
   oneOf:
-    - $ref: "#/JsonApiModel_application-eventTypeAction_admin"
-    - $ref: "#/JsonApiModel_application-eventTypeAction_school"
-    - $ref: "#/JsonApiModel_application-eventTypeAction_teacher"
+    - $ref: '#/JsonApiModel_application-eventTypeAction_admin'
+    - $ref: '#/JsonApiModel_application-eventTypeAction_school'
+    - $ref: '#/JsonApiModel_application-eventTypeAction_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/JsonApiModel_application-eventTypeAction_admin"
-      school: "#/JsonApiModel_application-eventTypeAction_school"
-      teacher: "#/JsonApiModel_application-eventTypeAction_teacher"
+      admin: '#/JsonApiModel_application-eventTypeAction_admin'
+      school: '#/JsonApiModel_application-eventTypeAction_school'
+      teacher: '#/JsonApiModel_application-eventTypeAction_teacher'
 
 # admin
 JsonApiModel_application-eventTypeAction_admin:
@@ -22,25 +22,25 @@ JsonApiModel_application-eventTypeAction_admin:
       enum:
         - admin
     type:
-      $ref: "#/JsonApiModel_application-eventTypeAction_type"
+      $ref: '#/JsonApiModel_application-eventTypeAction_type'
     id:
-      $ref: "#/JsonApiModel_application-eventTypeAction_id"
+      $ref: '#/JsonApiModel_application-eventTypeAction_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         label:
-          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+          $ref: '../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
         # relationship attributes
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
         actionType:
-          $ref: "../application/action.yaml#/JsonApiModel_application-actionType_relationship_attribute"
+          $ref: '../application/action.yaml#/JsonApiModel_application-actionType_relationship_attribute'
         manualEmailTemplate:
-          $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship_attribute"
+          $ref: '../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship_attribute'
         autoEmail:
-          $ref: "../general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship_attribute"
+          $ref: '../general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship_attribute'
       required:
         - label
         - applicationEventType
@@ -53,13 +53,13 @@ JsonApiModel_application-eventTypeAction_admin:
       additionalProperties: false
       properties:
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship'
         actionType:
-          $ref: "../application/action.yaml#/JsonApiModel_application-action_relationship"
+          $ref: '../application/action.yaml#/JsonApiModel_application-action_relationship'
         manualEmailTemplate:
-          $ref: "../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship"
+          $ref: '../general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship'
         autoEmail:
-          $ref: "../general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship"
+          $ref: '../general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship'
   required:
     - schema
     - type
@@ -77,19 +77,19 @@ JsonApiModel_application-eventTypeAction_school:
       enum:
         - school
     type:
-      $ref: "#/JsonApiModel_application-eventTypeAction_type"
+      $ref: '#/JsonApiModel_application-eventTypeAction_type'
     id:
-      $ref: "#/JsonApiModel_application-eventTypeAction_id"
+      $ref: '#/JsonApiModel_application-eventTypeAction_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         label:
-          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+          $ref: '../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
         # relationship attributes
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
       required:
         - label
         - applicationEventType
@@ -99,7 +99,7 @@ JsonApiModel_application-eventTypeAction_school:
       additionalProperties: false
       properties:
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship'
   required:
     - schema
     - type
@@ -117,19 +117,19 @@ JsonApiModel_application-eventTypeAction_teacher:
       enum:
         - teacher
     type:
-      $ref: "#/JsonApiModel_application-eventTypeAction_type"
+      $ref: '#/JsonApiModel_application-eventTypeAction_type'
     id:
-      $ref: "#/JsonApiModel_application-eventTypeAction_id"
+      $ref: '#/JsonApiModel_application-eventTypeAction_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         label:
-          $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label"
+          $ref: '../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
         # relationship attributes
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
       required:
         - label
         - applicationEventType
@@ -139,7 +139,7 @@ JsonApiModel_application-eventTypeAction_teacher:
       additionalProperties: false
       properties:
         applicationEventType:
-          $ref: "../application/eventType.yaml#/JsonApiModel_application-eventType_relationship"
+          $ref: '../application/eventType.yaml#/JsonApiModel_application-eventType_relationship'
   required:
     - schema
     - type
@@ -156,24 +156,29 @@ JsonApiModel_application-eventTypeAction_type:
 
 JsonApiModel_application-eventTypeAction_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
 JsonApiModel_application-eventTypeAction_relationship_attribute:
   type: object
+  description: |
+    Main properties of [application-eventTypeAction](/#tag/simple-model-application-eventTypeAction)
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_application-eventTypeAction_id"
+      $ref: '#/JsonApiModel_application-eventTypeAction_id'
     label:
-      $ref: "../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label" 
+      $ref: '../../library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
   required:
     - id
     - label
 
 JsonApiModel_application-eventTypeAction_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-application-eventTypeAction) | 
+    [JSON:API model](/#tag/json-api-model-application-eventTypeAction)
   additionalProperties: false
   properties:
     data:
@@ -181,9 +186,9 @@ JsonApiModel_application-eventTypeAction_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_application-eventTypeAction_type"
+          $ref: '#/JsonApiModel_application-eventTypeAction_type'
         id:
-          $ref: "#/JsonApiModel_application-eventTypeAction_id"
+          $ref: '#/JsonApiModel_application-eventTypeAction_id'
       required:
         - type
         - id

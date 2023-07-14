@@ -146,6 +146,8 @@ JsonApiModel_application-eventType_id:
 
 JsonApiModel_application-eventType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [application-eventType](/#tag/simple-model-application-eventType)
   additionalProperties: false
   properties:
     id:
@@ -158,6 +160,9 @@ JsonApiModel_application-eventType_relationship_attribute:
 
 JsonApiModel_application-eventType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-application-eventType) | 
+    [JSON:API model](/#tag/json-api-model-application-eventType)
   additionalProperties: false
   properties:
     data:
