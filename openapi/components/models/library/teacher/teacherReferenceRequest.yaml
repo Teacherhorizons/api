@@ -7,7 +7,8 @@ teacher-teacherReferenceRequest_teacherId:
 teacher-teacherReferenceRequest_typeId:
   type: integer
   example: 1
-  description: Relationship to teacher-referenceType
+  description: |
+    Relationship to [teacher-referenceType](/#tag/simple-model-teacher-referenceType)
 teacher-teacherReferenceRequest_refereeFullName:
   type: string
   example: Loreem ipsum
@@ -48,7 +49,8 @@ teacher-teacherReferenceRequest_score:
 teacher-teacherReferenceRequest_statusId:
   type: integer
   example: 1
-  description: Relationship to teacher-referenceStatus
+  description: |
+    Relationship to [teacher-referenceStatus](/#tag/simple-model-teacher-referenceStatus)
 teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
   type: integer
   example: 1

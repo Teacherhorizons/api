@@ -12,7 +12,8 @@ teacher-teacherEmploymentRecordSubject_teacherId:
 teacher-teacherEmploymentRecordSubject_employmentRecordId:
   type: integer
   example: 1
-  description: Relationship to teacher-teacherEmploymentRecord
+  description: |
+    Relationship to [teacher-teacherEmploymentRecord](/#tag/simple-model-teacher-teacherEmploymentRecord)
 teacher-teacherEmploymentRecordSubject_subjectId:
   type: integer
   example: 1
@@ -38,7 +39,8 @@ teacher-teacherEmploymentRecordSubject_employmentRecord:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher-teacherEmploymentRecord
+      description: |
+        Relationship to [teacher-teacherEmploymentRecord](/#tag/simple-model-teacher-teacherEmploymentRecord)
   required:
     - id
 teacher-teacherEmploymentRecordSubject_subject:

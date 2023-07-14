@@ -10,10 +10,13 @@ teacher-teacherBadge_teacherId:
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
+
 teacher-teacherBadge_badgeId:
   type: integer
   example: 1
-  description: Relationship to teacher-badge
+  description: |
+    Relationship to [teacher-badge](/#tag/simple-model-teacher-badge)
+
 teacher-teacherBadge_creationUserId:
   type: integer
   example: 1
@@ -39,7 +42,8 @@ teacher-teacherBadge_teacherBadge:
     id:
       type: string
       example: '1'
-      description: Relationship to teacher-badge
+      description: |
+        Relationship to [teacher-badge](/#tag/simple-model-teacher-badge)  
   required:
     - id
 teacher-teacherBadge_creationUser:

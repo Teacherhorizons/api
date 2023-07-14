@@ -14,15 +14,19 @@ teacher-teacherEducationLevel_teacherId:
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
+
 teacher-teacherEducationLevel_educationLevelId:
   type: integer
   example: 1
-  description: Relationship to general-educationLevel
+  description: |
+    Relationship to [general-educationLevel](/#tag/simple-model-general-educationLevel)
+
 teacher-teacherEducationLevel_creationUserId:
   type: integer
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
+
 teacher-teacherEducationLevel_latestUpdateUserId:
   type: integer
   example: 1
@@ -48,7 +52,8 @@ teacher-teacherEducationLevel_educationLevel:
     id:
       type: string
       example: '1'
-      description: Relationship to general-educationLevel
+      description: |
+        Relationship to [general-educationLevel](/#tag/simple-model-general-educationLevel)  
   required:
     - id
 teacher-teacherEducationLevel_creationUser:

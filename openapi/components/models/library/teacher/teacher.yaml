@@ -87,15 +87,18 @@ teacher_userId:
 teacher_teachingQualificationCountryId:
   type: integer
   example: 1
-  description: Relationship to country
+  description: |
+    Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher_qualificationTypeId:
   type: integer
   example: 1
-  description: Relationship to teacher-qualificationType
+  description: |
+    Relationship to [teacher-qualificationType](/#tag/simple-model-teacher-qualificationType)
 teacher_jobSeekingStatusId:
   type: integer
   example: 1
-  description: Relationship to teacher-jobSeekingStatus
+  description: |
+    Relationship to [teacher-jobSeekingStatus](/#tag/simple-model-teacher-jobSeekingStatus)
 teacher_photoId:
   type: integer
   example: 1
@@ -104,11 +107,13 @@ teacher_photoId:
 teacher_maritalStatusId:
   type: integer
   example: 1
-  description: Relationship to teacher-maritalStatus
+  description: |
+    Relationship to [teacher-maritalStatus](/#tag/simple-model-teacher-maritalStatus)
 teacher_internationalSchoolExperienceId:
   type: integer
   example: 1
-  description: Relationship to teacher-internationalExperience
+  description: |
+    Relationship to [teacher-internationalExperience](/#tag/simple-model-teacher-internationalExperience)
 teacher_userTypeId:
   type: integer
   example: 1
@@ -116,7 +121,8 @@ teacher_userTypeId:
 teacher_thDiscoveryMethodId:
   type: integer
   example: 1
-  description: Relationship to teacher-thDiscoveryMethod
+  description: |
+    Relationship to [teacher-thDiscoveryMethod](/#tag/simple-model-teacher-thDiscoveryMethod)
 teacher_latestAdviserCommentUserId:
   type: integer
   example: 1
@@ -130,4 +136,6 @@ teacher_currentCountryId:
 teacher_numberOfDependentChildrenId:
   type: integer
   example: 1
-  description: Relationship to teacher-numberOfDependentChildren
+  description: |
+    Relationship to [teacher-numberOfDependentChildren](/#tag/simple-model-teacher-numberOfDependentChildren)
+ 
