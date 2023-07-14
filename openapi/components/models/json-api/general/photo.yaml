@@ -41,8 +41,7 @@ JsonApiModel_general-photo:
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         type:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
-          #check "type" with RR
+          $ref: '../general/photoType.yaml#/JsonApiModel_general-photoType_relationship_attribute'
       required:
         - id
         - name
@@ -69,7 +68,7 @@ JsonApiModel_general-photo:
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         type:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../general/photoType.yaml#/JsonApiModel_general-photoType_relationship'
   required:
     - type
     - id
@@ -104,6 +103,9 @@ JsonApiModel_general-photo_relationship_attribute:
 
 JsonApiModel_general-photo_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-photo) | 
+    [JSON:API model](/#tag/json-api-model-general-photo)
   additionalProperties: false
   properties:
     data:
