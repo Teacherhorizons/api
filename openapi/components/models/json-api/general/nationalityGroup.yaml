@@ -50,6 +50,8 @@ JsonApiModel_general-nationalityGroup_id:
 
 JsonApiModel_general-nationalityGroup_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-nationalityGroup](/#tag/simple-model-general-nationalityGroup)
   additionalProperties: false
   properties:
     id:
@@ -62,6 +64,9 @@ JsonApiModel_general-nationalityGroup_relationship_attribute:
 
 JsonApiModel_general-nationalityGroup_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-nationalityGroup) | 
+    [JSON:API model](/#tag/json-api-model-general-nationalityGroup)
   additionalProperties: false
   properties:
     data:

@@ -84,6 +84,8 @@ JsonApiModel_job_id:
 
 JsonApiModel_job_relationship_attribute:
   type: object
+  description: |
+    Main properties of [job](/#tag/simple-model-job)
   additionalProperties: false
   properties:
     id:
@@ -97,7 +99,10 @@ JsonApiModel_job_relationship_attribute:
 JsonApiModel_job_relationship:
   type: object
   description: |
-    foo
+    [Simple model](/#tag/simple-model-job) | 
+    [JSON:API model](/#tag/json-api-model-job)
+  # description: |
+  #   foo
   additionalProperties: false
   properties:
     data:

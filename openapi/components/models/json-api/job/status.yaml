@@ -31,6 +31,8 @@ JsonApiModel_job-status_id:
 
 JsonApiModel_job-status_relationship_attribute:
   type: object
+  description: |
+    Main properties of [job-status](/#tag/simple-model-job-status)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_job-status_relationship_attribute:
 
 JsonApiModel_job-status_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-job-status) | 
+    [JSON:API model](/#tag/json-api-model-job-status)
   additionalProperties: false
   properties:
     data:

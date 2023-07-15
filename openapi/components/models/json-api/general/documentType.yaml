@@ -34,6 +34,8 @@ JsonApiModel_general-documentType_id:
 
 JsonApiModel_general-documentType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-documentType](/#tag/simple-model-general-documentType)
   additionalProperties: false
   properties:
     id:
@@ -46,6 +48,9 @@ JsonApiModel_general-documentType_relationship_attribute:
 
 JsonApiModel_general-documentType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-documentType) | 
+    [JSON:API model](/#tag/json-api-model-general-documentType)
   additionalProperties: false
   properties:
     data:

@@ -67,6 +67,8 @@ JsonApiModel_general-article_id:
 
 JsonApiModel_general-article_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-article](/#tag/simple-model-general-article)
   additionalProperties: false
   properties:
     id:
@@ -82,6 +84,9 @@ JsonApiModel_general-article_relationship_attribute:
 
 JsonApiModel_general-article_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-article) | 
+    [JSON:API model](/#tag/json-api-model-general-article)
   additionalProperties: false
   properties:
     data:

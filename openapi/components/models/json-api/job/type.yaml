@@ -31,6 +31,8 @@ JsonApiModel_job-type_id:
 
 JsonApiModel_job-type_relationship_attribute:
   type: object
+  description: |
+    Main properties of [job-type](/#tag/simple-model-job-type)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_job-type_relationship_attribute:
 
 JsonApiModel_job-type_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-job-type) | 
+    [JSON:API model](/#tag/json-api-model-job-type)
   additionalProperties: false
   properties:
     data:

@@ -31,6 +31,8 @@ JsonApiModel_general-weatherType_id:
 
 JsonApiModel_general-weatherType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-weatherType](/#tag/simple-model-general-weatherType)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_general-weatherType_relationship_attribute:
 
 JsonApiModel_general-weatherType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-weatherType) | 
+    [JSON:API model](/#tag/json-api-model-general-weatherType)
   additionalProperties: false
   properties:
     data:

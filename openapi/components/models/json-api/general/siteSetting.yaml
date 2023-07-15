@@ -33,6 +33,8 @@ JsonApiModel_general-siteSetting_id:
 
 JsonApiModel_general-siteSetting_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-siteSetting](/#tag/simple-model-general-siteSetting)
   additionalProperties: false
   properties:
     id: 
@@ -45,6 +47,9 @@ JsonApiModel_general-siteSetting_relationship_attribute:
 
 JsonApiModel_general-siteSetting_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-siteSetting) | 
+    [JSON:API model](/#tag/json-api-model-general-siteSetting)
   additionalProperties: false
   properties:
     data:

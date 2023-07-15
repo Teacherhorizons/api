@@ -56,6 +56,8 @@ JsonApiModel_general-nationality_id:
 
 JsonApiModel_general-nationality_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-nationality](/#tag/simple-model-general-nationality)
   additionalProperties: false
   properties:
     id:
@@ -68,6 +70,9 @@ JsonApiModel_general-nationality_relationship_attribute:
 
 JsonApiModel_general-nationality_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-nationality) | 
+    [JSON:API model](/#tag/json-api-model-general-nationality)
   additionalProperties: false
   properties:
     data:

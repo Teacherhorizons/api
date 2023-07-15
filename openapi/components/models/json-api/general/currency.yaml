@@ -163,6 +163,8 @@ JsonApiModel_general-currency_id:
 
 JsonApiModel_general-currency_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-currency](/#tag/simple-model-general-currency)
   additionalProperties: false
   properties:
     id:
@@ -175,6 +177,9 @@ JsonApiModel_general-currency_relationship_attribute:
 
 JsonApiModel_general-currency_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-currency) | 
+    [JSON:API model](/#tag/json-api-model-general-currency)
   additionalProperties: false
   properties:
     data:

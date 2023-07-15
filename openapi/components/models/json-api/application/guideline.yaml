@@ -44,6 +44,8 @@ JsonApiModel_application-guideline_id:
 
 JsonApiModel_application-guideline_relationship_attribute:
   type: object
+  description: |
+    Main properties of [application-guideline](/#tag/simple-model-application-guideline)
   additionalProperties: false
   properties:
     id:
@@ -56,6 +58,9 @@ JsonApiModel_application-guideline_relationship_attribute:
 
 JsonApiModel_application-guideline_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-application-guideline) | 
+    [JSON:API model](/#tag/json-api-model-application-guideline)
   additionalProperties: false
   properties:
     data:

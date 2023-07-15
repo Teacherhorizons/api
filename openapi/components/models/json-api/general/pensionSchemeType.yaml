@@ -48,6 +48,8 @@ JsonApiModel_general-pensionSchemeType_id:
 
 JsonApiModel_general-pensionSchemeType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-pensionSchemeType](/#tag/simple-model-general-pensionSchemeType)
   additionalProperties: false
   properties:
     id:
@@ -60,6 +62,9 @@ JsonApiModel_general-pensionSchemeType_relationship_attribute:
 
 JsonApiModel_general-pensionSchemeType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-pensionSchemeType) | 
+    [JSON:API model](/#tag/json-api-model-general-pensionSchemeType)
   additionalProperties: false
   properties:
     data:

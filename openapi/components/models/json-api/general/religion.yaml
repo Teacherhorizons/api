@@ -48,6 +48,8 @@ JsonApiModel_general-religion_id:
 
 JsonApiModel_general-religion_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-religion](/#tag/simple-model-general-religion)
   additionalProperties: false
   properties:
     id:
@@ -60,6 +62,9 @@ JsonApiModel_general-religion_relationship_attribute:
 
 JsonApiModel_general-religion_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-religion) | 
+    [JSON:API model](/#tag/json-api-model-general-religion)
   additionalProperties: false
   properties:
     data:

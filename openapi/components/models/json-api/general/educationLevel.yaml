@@ -31,6 +31,8 @@ JsonApiModel_general-educationLevel_id:
 
 JsonApiModel_general-educationLevel_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-educationLevel](/#tag/simple-model-general-educationLevel)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_general-educationLevel_relationship_attribute:
 
 JsonApiModel_general-educationLevel_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-educationLevel) | 
+    [JSON:API model](/#tag/json-api-model-general-educationLevel)
   additionalProperties: false
   properties:
     data:

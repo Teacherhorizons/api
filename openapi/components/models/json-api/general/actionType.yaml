@@ -31,6 +31,8 @@ JsonApiModel_general-actionType_id:
 
 JsonApiModel_general-actionType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-actionType](/#tag/simple-model-general-actionType)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_general-actionType_relationship_attribute:
 
 JsonApiModel_general-actionType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-actionType) | 
+    [JSON:API model](/#tag/json-api-model-general-actionType)
   additionalProperties: false
   properties:
     data:

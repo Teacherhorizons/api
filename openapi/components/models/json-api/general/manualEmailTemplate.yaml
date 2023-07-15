@@ -41,6 +41,8 @@ JsonApiModel_general-manualEmailTemplate_id:
 
 JsonApiModel_general-manualEmailTemplate_relationship_attribute:
   type: object
+  description: |
+    Main properties of [general-manualEmailTemplate](/#tag/simple-model-general-manualEmailTemplate)
   additionalProperties: false
   properties:
     id:
@@ -53,6 +55,9 @@ JsonApiModel_general-manualEmailTemplate_relationship_attribute:
 
 JsonApiModel_general-manualEmailTemplate_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-manualEmailTemplate) | 
+    [JSON:API model](/#tag/json-api-model-general-manualEmailTemplate)
   additionalProperties: false
   properties:
     data:
