@@ -79,6 +79,8 @@ JsonApiModel_regional-regionArticle_id:
 
 JsonApiModel_regional-regionArticle_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-regionArticle](/#tag/simple-model-regional-regionArticle)
   additionalProperties: false
   properties:
     id:
@@ -94,6 +96,9 @@ JsonApiModel_regional-regionArticle_relationship_attribute:
 
 JsonApiModel_regional-regionArticle_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-regionArticle) | 
+    [JSON:API model](/#tag/json-api-model-regional-regionArticle)
   additionalProperties: false
   properties:
     data:

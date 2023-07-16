@@ -73,6 +73,8 @@ JsonApiModel_regional-countrySubject_id:
 
 JsonApiModel_regional-countrySubject_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-countrySubject](/#tag/simple-model-regional-countrySubject)
   additionalProperties: false
   properties:
     id:
@@ -85,6 +87,9 @@ JsonApiModel_regional-countrySubject_relationship_attribute:
 
 JsonApiModel_regional-countrySubject_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-countrySubject) | 
+    [JSON:API model](/#tag/json-api-model-regional-countrySubject)
   additionalProperties: false
   properties:
     data:

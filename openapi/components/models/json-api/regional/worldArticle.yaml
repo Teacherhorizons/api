@@ -76,6 +76,8 @@ JsonApiModel_regional-worldArticle_id:
 
 JsonApiModel_regional-worldArticle_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-worldArticle](/#tag/simple-model-regional-worldArticle)
   additionalProperties: false
   properties:
     id:
@@ -91,6 +93,9 @@ JsonApiModel_regional-worldArticle_relationship_attribute:
 
 JsonApiModel_regional-worldArticle_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-worldArticle) | 
+    [JSON:API model](/#tag/json-api-model-regional-worldArticle)
   additionalProperties: false
   properties:
     data:
