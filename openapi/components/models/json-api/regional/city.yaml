@@ -455,6 +455,8 @@ JsonApiModel_regional-city_id:
 
 JsonApiModel_regional-city_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-city](/#tag/simple-model-regional-city)
   additionalProperties: false
   properties:
     id:
@@ -470,6 +472,9 @@ JsonApiModel_regional-city_relationship_attribute:
 
 JsonApiModel_regional-city_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-city) | 
+    [JSON:API model](/#tag/json-api-model-regional-city)
   additionalProperties: false
   properties:
     data:

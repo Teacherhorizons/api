@@ -83,6 +83,8 @@ JsonApiModel_regional-cityArticle_id:
 
 JsonApiModel_regional-cityArticle_relationship_attribute:
   type: object
+  description: |
+    Main properties of [regional-cityArticle](/#tag/simple-model-regional-cityArticle)
   additionalProperties: false
   properties:
     id:
@@ -98,6 +100,9 @@ JsonApiModel_regional-cityArticle_relationship_attribute:
 
 JsonApiModel_regional-cityArticle_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-regional-cityArticle) | 
+    [JSON:API model](/#tag/json-api-model-regional-cityArticle)
   additionalProperties: false
   properties:
     data:

@@ -31,6 +31,8 @@ JsonApiModel_meta-entityChangeType_id:
 
 JsonApiModel_meta-entityChangeType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [meta-entityChangeType](/#tag/simple-model-meta-entityChangeType)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_meta-entityChangeType_relationship_attribute:
 
 JsonApiModel_meta-entityChangeType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-meta-entityChangeType) | 
+    [JSON:API model](/#tag/json-api-model-meta-entityChangeType)
   additionalProperties: false
   properties:
     data:

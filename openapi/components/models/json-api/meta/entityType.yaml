@@ -31,6 +31,8 @@ JsonApiModel_meta-entityType_id:
 
 JsonApiModel_meta-entityType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [meta-entityType](/#tag/simple-model-meta-entityType)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_meta-entityType_relationship_attribute:
 
 JsonApiModel_meta-entityType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-meta-entityType) | 
+    [JSON:API model](/#tag/json-api-model-meta-entityType)
   additionalProperties: false
   properties:
     data:
