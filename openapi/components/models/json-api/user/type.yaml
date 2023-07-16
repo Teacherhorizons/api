@@ -33,6 +33,8 @@ JsonApiModel_user-type_id:
 
 JsonApiModel_user-type_relationship_attribute:
   type: object
+  description: |
+    Main properties of [user-type](/#tag/simple-model-user-type)
   additionalProperties: false
   properties:
     id:
@@ -45,6 +47,9 @@ JsonApiModel_user-type_relationship_attribute:
 
 JsonApiModel_user-type_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-type) | 
+    [JSON:API model](/#tag/json-api-model-user-type)
   additionalProperties: false
   properties:
     data:

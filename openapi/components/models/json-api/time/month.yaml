@@ -35,8 +35,22 @@ JsonApiModel_time-month_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_time-month_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [time-month](/#tag/simple-model-time-month)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_time-month_id'
+  required:
+    - id
+
 JsonApiModel_time-month_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-time-month) | 
+    [JSON:API model](/#tag/json-api-model-time-month)
   additionalProperties: false
   properties:
     data:
@@ -53,11 +67,4 @@ JsonApiModel_time-month_relationship:
   required:
     - data
 
-JsonApiModel_time-month_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: '#/JsonApiModel_time-month_id'
-  required:
-    - id
+

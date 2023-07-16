@@ -44,6 +44,8 @@ JsonApiModel_user-setting_id:
 
 JsonApiModel_user-setting_relationship_attribute:
   type: object
+  description: |
+    Main properties of [user-setting](/#tag/simple-model-user-setting)
   additionalProperties: false
   properties:
     id: 
@@ -56,6 +58,9 @@ JsonApiModel_user-setting_relationship_attribute:
 
 JsonApiModel_user-setting_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-setting) | 
+    [JSON:API model](/#tag/json-api-model-user-setting)
   additionalProperties: false
   properties:
     data:

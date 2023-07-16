@@ -42,6 +42,20 @@ JsonApiModel_subject-communityQuestion_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_subject-communityQuestion_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [subject-communityQuestion](/#tag/simple-model-subject-communityQuestion)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_subject-communityQuestion_id'
+    text:
+      $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text'
+  required:
+    - id
+    - text
+
 JsonApiModel_subject-communityQuestion_relationship:
   type: object
   description: |
@@ -63,16 +77,4 @@ JsonApiModel_subject-communityQuestion_relationship:
   required:
     - data
 
-JsonApiModel_subject-communityQuestion_relationship_attribute:
-  type: object
-  description: |
-    Main properties of [subject-communityQuestion](/#tag/simple-model-subject-communityQuestion)
-  additionalProperties: false
-  properties:
-    id:
-      $ref: '#/JsonApiModel_subject-communityQuestion_id'
-    text:
-      $ref: '../../library/subject/communityQuestion.yaml#/subject-communityQuestion_text'
-  required:
-    - id
-    - text
+

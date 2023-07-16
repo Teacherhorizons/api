@@ -70,6 +70,8 @@ JsonApiModel_staff-staffMember_id:
 
 JsonApiModel_staff-staffMember_relationship_attribute:
   type: object
+  description: |
+    Main properties of [staff-staffMember](/#tag/simple-model-staff-staffMember)
   additionalProperties: false
   properties:
     id:
@@ -79,6 +81,9 @@ JsonApiModel_staff-staffMember_relationship_attribute:
 
 JsonApiModel_staff-staffMember_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-staff-staffMember) | 
+    [JSON:API model](/#tag/json-api-model-staff-staffMember)
   additionalProperties: false
   properties:
     data:

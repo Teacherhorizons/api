@@ -31,6 +31,8 @@ JsonApiModel_user-messageStatus_id:
 
 JsonApiModel_user-messageStatus_relationship_attribute:
   type: object
+  description: |
+    Main properties of [user-messageStatus](/#tag/simple-model-user-messageStatus)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_user-messageStatus_relationship_attribute:
 
 JsonApiModel_user-messageStatus_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-messageStatus) | 
+    [JSON:API model](/#tag/json-api-model-user-messageStatus)
   additionalProperties: false
   properties:
     data:
