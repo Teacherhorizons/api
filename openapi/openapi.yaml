@@ -462,11 +462,6 @@ tags:
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubject" />
 
-  - name: simple-model-regional-regionSubjects
-    x-displayName: Simple model - regional-regionSubjects
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_regional-regionSubjects" />
-
   - name: simple-model-regional_regionSubjectSchoolYear
     x-displayName: Simple model - regional_regionSubjectSchoolYear
     description: |
@@ -1859,7 +1854,6 @@ x-tagGroups:
       - simple-model-regional-worldPhoto
       - simple-model-regional-countrySubject
       - simple-model-regional-regionSubject
-      - simple-model-regional-regionSubjects
       - simple-model-regional-regionSubjectSchoolYear
       - simple-model-school
       - simple-model-school-academicSystem
@@ -2028,7 +2022,6 @@ x-tagGroups:
       - json-api-model-regional-worldPhoto
       - json-api-model-regional-countrySubject
       - json-api-model-regional-regionSubject
-      - json-api-model-regional-regionSubjects
       - json-api-model-regional-regionSubjectSchoolYear
       - json-api-model-school
       - json-api-model-school-academicSystem
@@ -2132,17 +2125,16 @@ x-tagGroups:
     tags:
       - application
       - general
-      - job
+      # - job
       - meta
       - regional
+      # - school
+      # - staff
       - subject
-      - school
-      - teacher
-      - user
-
-      # TODO: remove
-      - sites
-      - test
+      # - system
+      # - teacher
+      # - time
+      # - user
 
   - name: API (not JsonApi)
     tags:
@@ -2150,14 +2142,14 @@ x-tagGroups:
       - community-responses-not-jsonapi
       - documents-not-jsonapi
       - employment-records-not-jsonapi
-      - job-applications-not-jsonapi
+      # - job-applications-not-jsonapi
       - jobs-not-jsonapi
       - lists-not-jsonapi
-      - school-not-jsonapi
-      - teacher-not-jsonapi
-      - schools-not-jsonapi
       - other-not-jsonapi
       - references-not-jsonapi
+      - school-not-jsonapi
+      - schools-not-jsonapi
+      - teacher-not-jsonapi
       - teachers-not-jsonapi
       - users-not-jsonapi
 
