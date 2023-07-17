@@ -13,11 +13,11 @@ JsonApiModel_time-month:
         # simple attributes
         name:
           $ref: '../../library/time/month.yaml#/time-month_name'
-        monthNumber:
-          $ref: '../../library/time/month.yaml#/time-month_monthNumber'
+        number:
+          $ref: '../../library/time/month.yaml#/time-month_number'
       required:
         - name
-        - monthNumber
+        - number
   required:
     - type
     - id
@@ -66,5 +66,3 @@ JsonApiModel_time-month_relationship:
         - id
   required:
     - data
-
-

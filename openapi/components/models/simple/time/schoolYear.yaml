@@ -9,11 +9,11 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_name'
   required:
     - id
-    - dateId
+    - name
 
 # shared
 SimpleModel_time-schoolYear_id:
   type: integer
-  example: 20220901
+  example: 202223
   readOnly: true
   description: Unique identifier of the object

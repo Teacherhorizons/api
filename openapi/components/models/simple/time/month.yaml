@@ -7,16 +7,16 @@ SimpleModel_time-month:
     # simple attributes
     name:
       $ref: '../../library/time/month.yaml#/time-month_name'
-    monthNumber:
-      $ref: '../../library/time/month.yaml#/time-month_monthNumber'
+    number:
+      $ref: '../../library/time/month.yaml#/time-month_number'
   required:
     - id
     - name
-    - monthNumber
+    - number
 
 # shared
 SimpleModel_time-month_id:
   type: integer
-  example: 20220901
+  example: 202209
   readOnly: true
   description: Unique identifier of the object
