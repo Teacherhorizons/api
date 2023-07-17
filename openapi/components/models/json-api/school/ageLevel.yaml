@@ -34,8 +34,22 @@ JsonApiModel_school-ageLevel:
     - type
     - id
 
+JsonApiModel_school-ageLevel_type:
+  type: string
+  example: school-ageLevel
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_school-ageLevel_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
 JsonApiModel_school-ageLevel_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school-ageLevel](/#tag/simple-model-school-ageLevel)
   additionalProperties: false
   properties:
     id:
@@ -49,6 +63,9 @@ JsonApiModel_school-ageLevel_relationship_attribute:
 
 JsonApiModel_school-ageLevel_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-ageLevel) | 
+    [JSON:API model](/#tag/json-api-model-school-ageLevel)
   additionalProperties: false
   properties:
     data:
@@ -65,14 +82,4 @@ JsonApiModel_school-ageLevel_relationship:
   required:
     - data
 
-JsonApiModel_school-ageLevel_type:
-  type: string
-  example: school-ageLevel
-  description: Unique identifier of the entity type
-  readOnly: true
 
-JsonApiModel_school-ageLevel_id:
-  type: string
-  example: "1"
-  readOnly: true
-  description: Unique identifier of the entity (string)

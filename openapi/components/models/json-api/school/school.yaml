@@ -294,6 +294,8 @@ JsonApiModel_school_id:
 
 JsonApiModel_school_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school](/#tag/simple-model-school)
   additionalProperties: false
   properties:
     id:
@@ -307,6 +309,9 @@ JsonApiModel_school_relationship_attribute:
 
 JsonApiModel_school_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school) | 
+    [JSON:API model](/#tag/json-api-model-school)
   additionalProperties: false
   properties:
     data:

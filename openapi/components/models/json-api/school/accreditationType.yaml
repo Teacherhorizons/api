@@ -38,6 +38,8 @@ JsonApiModel_school-accreditationType:
 
 JsonApiModel_school-accreditationType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school-accreditationType](/#tag/simple-model-school-accreditationType)
   additionalProperties: false
   properties:
     id:
@@ -53,6 +55,9 @@ JsonApiModel_school-accreditationType_relationship_attribute:
 
 JsonApiModel_school-accreditationType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-accreditationType) | 
+    [JSON:API model](/#tag/json-api-model-school-accreditationType)
   additionalProperties: false
   properties:
     data:
