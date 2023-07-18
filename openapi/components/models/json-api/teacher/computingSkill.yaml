@@ -30,8 +30,25 @@ JsonApiModel_teacher-computingSkill_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_teacher-computingSkill_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [teacher-computingSkill](/#tag/simple-model-teacher-computingSkill)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-computingSkill_id"
+    name:
+      $ref: "../../library/teacher/computingSkill.yaml#/teacher-computingSkill_name"
+  required:
+    - id
+    - name
+
 JsonApiModel_teacher-computingSkill_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-computingSkill) | 
+    [JSON:API model](/#tag/json-api-model-teacher-computingSkill)
   additionalProperties: false
   properties:
     data:
@@ -48,14 +65,3 @@ JsonApiModel_teacher-computingSkill_relationship:
   required:
     - data
 
-JsonApiModel_teacher-computingSkill_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: "#/JsonApiModel_teacher-computingSkill_id"
-    name:
-      $ref: "../../library/teacher/computingSkill.yaml#/teacher-computingSkill_name"
-  required:
-    - id
-    - name

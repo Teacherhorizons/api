@@ -31,6 +31,8 @@ JsonApiModel_teacher-maritalStatus_id:
 
 JsonApiModel_teacher-maritalStatus_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-maritalStatus](/#tag/simple-model-teacher-maritalStatus)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_teacher-maritalStatus_relationship_attribute:
 
 JsonApiModel_teacher-maritalStatus_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-maritalStatus) | 
+    [JSON:API model](/#tag/json-api-model-teacher-maritalStatus)
   additionalProperties: false
   properties:
     data:

@@ -52,6 +52,8 @@ JsonApiModel_teacher-teacherBadge_id:
 
 JsonApiModel_teacher-teacherBadge_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-teacherBadge](/#tag/simple-model-teacher-teacherBadge)
   additionalProperties: false
   properties:
     id:
@@ -61,6 +63,9 @@ JsonApiModel_teacher-teacherBadge_relationship_attribute:
 
 JsonApiModel_teacher-teacherBadge_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-teacherBadge) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherBadge)
   additionalProperties: false
   properties:
     data:

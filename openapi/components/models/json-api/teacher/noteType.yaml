@@ -50,6 +50,8 @@ JsonApiModel_teacher-noteType_id:
 
 JsonApiModel_teacher-noteType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-noteType](/#tag/simple-model-teacher-noteType)
   additionalProperties: false
   properties:
     id:
@@ -62,6 +64,9 @@ JsonApiModel_teacher-noteType_relationship_attribute:
 
 JsonApiModel_teacher-noteType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-noteType) | 
+    [JSON:API model](/#tag/json-api-model-teacher-noteType)
   additionalProperties: false
   properties:
     data:

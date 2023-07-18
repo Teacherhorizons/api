@@ -41,6 +41,8 @@ JsonApiModel_teacher-teacherTeachingLanguage_id:
 
 JsonApiModel_teacher-teacherTeachingLanguage_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-teacherTeachingLanguage](/#tag/simple-model-teacher-teacherTeachingLanguage)
   additionalProperties: false
   properties:
     id:
@@ -50,6 +52,9 @@ JsonApiModel_teacher-teacherTeachingLanguage_relationship_attribute:
 
 JsonApiModel_teacher-teacherTeachingLanguage_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-teacherTeachingLanguage) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherTeachingLanguage)
   additionalProperties: false
   properties:
     data:

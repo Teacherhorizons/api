@@ -30,8 +30,25 @@ JsonApiModel_teacher-videoCategory_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_teacher-videoCategory_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [teacher-videoCategory](/#tag/simple-model-teacher-videoCategory)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-videoCategory_id"
+    name:
+      $ref: "../../library/teacher/videoCategory.yaml#/teacher-videoCategory_name"
+  required:
+    - id
+    - name
+
 JsonApiModel_teacher-videoCategory_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-videoCategory) | 
+    [JSON:API model](/#tag/json-api-model-teacher-videoCategory)
   additionalProperties: false
   properties:
     data:
@@ -48,17 +65,7 @@ JsonApiModel_teacher-videoCategory_relationship:
   required:
     - data
 
-JsonApiModel_teacher-videoCategory_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: "#/JsonApiModel_teacher-videoCategory_id"
-    name:
-      $ref: "../../library/teacher/videoCategory.yaml#/teacher-videoCategory_name"
-  required:
-    - id
-    - name
+
 
 
 

@@ -57,8 +57,10 @@ JsonApiModel_teacher-teacherPhoto_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_teacherPhoto_relationship_attribute:
+JsonApiModel_teacher-teacherPhoto_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-teacherPhoto](/#tag/simple-model-teacher-teacherPhoto)
   additionalProperties: false
   properties:
     id:
@@ -66,8 +68,11 @@ JsonApiModel_teacherPhoto_relationship_attribute:
   required:
     - id
 
-JsonApiModel_teacherPhoto_relationship:
+JsonApiModel_teacher-teacherPhoto_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-teacherPhoto) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherPhoto)
   additionalProperties: false
   properties:
     data:

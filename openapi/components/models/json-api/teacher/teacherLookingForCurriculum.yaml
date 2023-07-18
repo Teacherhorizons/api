@@ -41,6 +41,8 @@ JsonApiModel_teacher-teacherLookingForCurriculum_id:
 
 JsonApiModel_teacher-teacherLookingForCurriculum_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-teacherLookingForCurriculum](/#tag/simple-model-teacher-teacherLookingForCurriculum)
   additionalProperties: false
   properties:
     id:
@@ -50,6 +52,9 @@ JsonApiModel_teacher-teacherLookingForCurriculum_relationship_attribute:
 
 JsonApiModel_teacher-teacherLookingForCurriculum_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-teacherLookingForCurriculum) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherLookingForCurriculum)
   additionalProperties: false
   properties:
     data:

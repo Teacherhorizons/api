@@ -31,6 +31,8 @@ JsonApiModel_teacher-numberOfDependentChildren_id:
 
 JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-numberOfDependentChildren](/#tag/simple-model-teacher-numberOfDependentChildren)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_teacher-numberOfDependentChildren_relationship_attribute:
 
 JsonApiModel_teacher-numberOfDependentChildren_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-numberOfDependentChildren) | 
+    [JSON:API model](/#tag/json-api-model-teacher-numberOfDependentChildren)
   additionalProperties: false
   properties:
     data:

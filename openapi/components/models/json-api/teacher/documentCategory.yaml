@@ -30,8 +30,25 @@ JsonApiModel_teacher-documentCategory_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_teacher-documentCategory_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [teacher-documentCategory](/#tag/simple-model-teacher-documentCategory)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_teacher-documentCategory_id"
+    name:
+      $ref: "../../library/teacher/documentCategory.yaml#/teacher-documentCategory_name"
+  required:
+    - id
+    - name
+
 JsonApiModel_teacher-documentCategory_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-documentCategory) | 
+    [JSON:API model](/#tag/json-api-model-teacher-documentCategory)
   additionalProperties: false
   properties:
     data:
@@ -48,14 +65,4 @@ JsonApiModel_teacher-documentCategory_relationship:
   required:
     - data
 
-JsonApiModel_teacher-documentCategory_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: "#/JsonApiModel_teacher-documentCategory_id"
-    name:
-      $ref: "../../library/teacher/documentCategory.yaml#/teacher-documentCategory_name"
-  required:
-    - id
-    - name
+

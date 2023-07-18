@@ -41,6 +41,8 @@ JsonApiModel_teacher-teacherComputingSkill_id:
 
 JsonApiModel_teacher-teacherComputingSkill_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-teacherComputingSkill](/#tag/simple-model-teacher-teacherComputingSkill)
   additionalProperties: false
   properties:
     id:
@@ -50,6 +52,9 @@ JsonApiModel_teacher-teacherComputingSkill_relationship_attribute:
 
 JsonApiModel_teacher-teacherComputingSkill_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-teacherComputingSkill) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherComputingSkill)
   additionalProperties: false
   properties:
     data:

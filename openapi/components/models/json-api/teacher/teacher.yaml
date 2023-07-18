@@ -122,6 +122,8 @@ JsonApiModel_teacher_id:
 
 JsonApiModel_teacher_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher](/#tag/simple-model-teacher)
   additionalProperties: false
   properties:
     id:
@@ -134,6 +136,9 @@ JsonApiModel_teacher_relationship_attribute:
 
 JsonApiModel_teacher_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher) | 
+    [JSON:API model](/#tag/json-api-model-teacher)
   additionalProperties: false
   properties:
     data:
