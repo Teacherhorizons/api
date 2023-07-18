@@ -54,6 +54,8 @@ JsonApiModel_school-schoolReview_id:
 
 JsonApiModel_school-schoolReview_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school-schoolReview](/#tag/simple-model-school-schoolReview)
   additionalProperties: false
   properties:
     id:
@@ -63,6 +65,9 @@ JsonApiModel_school-schoolReview_relationship_attribute:
 
 JsonApiModel_school-schoolReview_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-schoolReview) | 
+    [JSON:API model](/#tag/json-api-model-school-schoolReview)
   additionalProperties: false
   properties:
     data:

@@ -48,6 +48,8 @@ JsonApiModel_school-facility_id:
 
 JsonApiModel_school-facility_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school-facility](/#tag/simple-model-school-facility)
   additionalProperties: false
   properties:
     id:
@@ -60,6 +62,9 @@ JsonApiModel_school-facility_relationship_attribute:
 
 JsonApiModel_school-facility_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-facility) | 
+    [JSON:API model](/#tag/json-api-model-school-facility)
   additionalProperties: false
   properties:
     data:

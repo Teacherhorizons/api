@@ -31,6 +31,8 @@ JsonApiModel_teacher-internationalExperience_id:
 
 JsonApiModel_teacher-internationalExperience_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-internationalExperience](/#tag/simple-model-teacher-internationalExperience)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_teacher-internationalExperience_relationship_attribute:
 
 JsonApiModel_teacher-internationalExperience_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-internationalExperience) | 
+    [JSON:API model](/#tag/json-api-model-teacher-internationalExperience)
   additionalProperties: false
   properties:
     data:

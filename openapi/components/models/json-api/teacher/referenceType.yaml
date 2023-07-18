@@ -31,6 +31,8 @@ JsonApiModel_teacher-referenceType_id:
 
 JsonApiModel_teacher-referenceType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-referenceType](/#tag/simple-model-teacher-referenceType)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_teacher-referenceType_relationship_attribute:
 
 JsonApiModel_teacher-referenceType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-referenceType) | 
+    [JSON:API model](/#tag/json-api-model-teacher-referenceType)
   additionalProperties: false
   properties:
     data:

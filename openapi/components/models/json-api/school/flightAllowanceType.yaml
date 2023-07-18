@@ -48,6 +48,8 @@ JsonApiModel_school-flightAllowanceType_id:
 
 JsonApiModel_school-flightAllowanceType_relationship_attribute:
   type: object
+  description: |
+    Main properties of [school-flightAllowanceType](/#tag/simple-model-school-flightAllowanceType)
   additionalProperties: false
   properties:
     id:
@@ -60,6 +62,9 @@ JsonApiModel_school-flightAllowanceType_relationship_attribute:
 
 JsonApiModel_school-flightAllowanceType_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-flightAllowanceType) | 
+    [JSON:API model](/#tag/json-api-model-school-flightAllowanceType)
   additionalProperties: false
   properties:
     data:

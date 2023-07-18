@@ -31,6 +31,8 @@ JsonApiModel_teacher-jobSeekingStatus_id:
 
 JsonApiModel_teacher-jobSeekingStatus_relationship_attribute:
   type: object
+  description: |
+    Main properties of [teacher-jobSeekingStatus](/#tag/simple-model-teacher-jobSeekingStatus)
   additionalProperties: false
   properties:
     id:
@@ -43,6 +45,9 @@ JsonApiModel_teacher-jobSeekingStatus_relationship_attribute:
 
 JsonApiModel_teacher-jobSeekingStatus_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher-jobSeekingStatus) | 
+    [JSON:API model](/#tag/json-api-model-teacher-jobSeekingStatus)
   additionalProperties: false
   properties:
     data:

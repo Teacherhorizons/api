@@ -46,8 +46,25 @@ JsonApiModel_school-academicSystem_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_school-academicSystem_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [school-academicSystem](/#tag/simple-model-school-academicSystem)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_school-academicSystem_id"
+    name:
+      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_name"
+  required:
+    - id
+    - name
+
 JsonApiModel_school-academicSystem_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-school-academicSystem) | 
+    [JSON:API model](/#tag/json-api-model-school-academicSystem)
   additionalProperties: false
   properties:
     data:
@@ -64,14 +81,4 @@ JsonApiModel_school-academicSystem_relationship:
   required:
     - data
 
-JsonApiModel_school-academicSystem_relationship_attribute:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      $ref: "#/JsonApiModel_school-academicSystem_id"
-    name:
-      $ref: "../../library/school/academicSystem.yaml#/school-academicSystem_name"
-  required:
-    - id
-    - name
+
