@@ -3,25 +3,24 @@ SimpleModel_subject-subjectLink:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_subject-subjectLink_id"
+      $ref: '#/SimpleModel_subject-subjectLink_id'
     # simple attributes
     name:
-      $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_name"
+      $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_name'
     url:
-      $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_url"
+      $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_url'
     description:
-      $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_description"
+      $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_description'
 
     # relationship attributes
     linkTypeId:
-      $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_linkTypeId"
+      $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_linkTypeId'
     subjectId:
-      $ref: "../../library/subject/subjectLink.yaml#/subject-subjectLink_subjectId"    
+      $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_subjectId'
   required:
     - id
     - name
     - url
-    - description
     - linkTypeId
     - subjectId
 
