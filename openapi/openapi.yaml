@@ -694,6 +694,12 @@ tags:
       [JSON:API model](/#tag/json-api-model-school-additionalVideoUrlCategory)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalVideoUrlCategory" />
 
+  - name: simple-model-school-additionalUrlMediaCategory
+    x-displayName: Simple model - school-additionalUrlMediaCategory
+    description: |
+      [JSON:API model](/#tag/json-api-model-school-additionalUrlMediaCategory)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-additionalUrlMediaCategory" />
+
   - name: simple-model-school-schoolDocument
     x-displayName: Simple model - school-schoolDocument
     description: |
@@ -2011,6 +2017,12 @@ tags:
       [Simple model](/#tag/simple-model-school-schoolReview)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-schoolReview" />
 
+  - name: json-api-model-school-thRating
+    x-displayName: JSON:API model - school-thRating
+    description: |
+      [Simple model](/#tag/simple-model-school-thRating)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_school-thRating" />
+
   # tags - json-api-models - users
 
   - name: json-api-model-user
@@ -2217,7 +2229,7 @@ x-tagGroups:
       - simple-model-school-schoolReview
       - simple-model-teacher
       - simple-model-teacher-ambassador
-      - simple-model-teacher-additionalPhotoCategory
+      # - simple-model-teacher-additionalPhotoCategory
       - simple-model-teacher-photoCategory
       - simple-model-teacher-badge
       - simple-model-teacher-qualificationType
@@ -2233,7 +2245,7 @@ x-tagGroups:
       - simple-model-teacher-teacherBadge
       - simple-model-teacher-teacherLookingForRole
       - simple-model-teacher-teacherNationality
-      - simple-model-teacher-teacherAdditionalPhotoCategory
+      # - simple-model-teacher-teacherAdditionalPhotoCategory
       - simple-model-teacher-teacherPhoto
       - simple-model-teacher-teacherEducationLevel
       - simple-model-teacher-internationalExperience
@@ -2251,7 +2263,7 @@ x-tagGroups:
       - simple-model-teacher-computingSkill
       - simple-model-teacher-teacherComputingSkill
       - simple-model-teacher-teacherTeachingSkill
-      - simple-model-teacher-teachingSkill
+      # - simple-model-teacher-teachingSkill
       - simple-model-teacher-teacherTeachingLanguage
       - simple-model-teacher-teacherExperienceCurriculum
       - simple-model-teacher-teacherLookingForCurriculum
@@ -2275,7 +2287,7 @@ x-tagGroups:
       - simple-model-meta-entityChangeSummary
       - simple-model-meta-entityChangeSummarySubscription
       - simple-model-meta-entityChangeType
-      - simple-model-meta-manualEmailTemplate
+      # - simple-model-meta-manualEmailTemplate
       - simple-model-meta-cachedObject
 
   - name: JSON:API models
@@ -2419,7 +2431,7 @@ x-tagGroups:
       - json-api-model-teacher-computingSkill
       - json-api-model-teacher-teacherComputingSkill
       - json-api-model-teacher-teacherTeachingSkill
-      - json-api-model-teacher-teachingSkill
+      # - json-api-model-teacher-teachingSkill
       - json-api-model-teacher-teacherTeachingLanguage
       - json-api-model-teacher-teacherExperienceCurriculum
       - json-api-model-teacher-teacherLookingForCurriculum
@@ -2443,7 +2455,7 @@ x-tagGroups:
       - json-api-model-meta-entityChangeSummary
       - json-api-model-meta-entityChangeSummarySubscription
       - json-api-model-meta-entityChangeType
-      - json-api-model-meta-manualEmailTemplate
+      # - json-api-model-meta-manualEmailTemplate
       - json-api-model-meta-cachedObject
 
   - name: API (JsonApi)
