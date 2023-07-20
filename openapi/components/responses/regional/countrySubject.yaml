@@ -342,6 +342,10 @@ Response_regional-countrySubject_includedRegionSubject_notSignedIn:
       required:
         - numberOfLiveJobs
         - region
+  required:
+    - type
+    - id
+    - attributes
 
 Response_regional-countrySubject_includedJob_notSignedIn:
   type: object
