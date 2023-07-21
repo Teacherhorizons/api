@@ -1,0 +1,58 @@
+JsonApiModel_staff-adviserSubjectGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_staff-adviserSubjectGroup_type'
+    id:
+      $ref: '#/JsonApiModel_staff-adviserSubjectGroup_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        fromDate:
+          $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_fromDate'
+        toDate:
+          $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_toDate'
+        # relationship attributes
+        adviser:
+          $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_adviserId'
+        subjectGroup:
+          $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_subjectGroupId'
+      required:
+        # simple attributes
+        - fromDate
+        - toDate
+        # relationship attributes
+        - adviser
+        - subjectGroup
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        adviser:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+        subjectGroup:
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+  required:
+    - type
+    - id
+
+JsonApiModel_staff-adviserSubjectGroup_type:
+  type: string
+  example: staff-adviserSubjectGroup
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_staff-adviserSubjectGroup_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+
+
+
+
+

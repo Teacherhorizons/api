@@ -1066,17 +1066,25 @@ tags:
       [JSON:API model](/#tag/json-api-model-user-messageStatus)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-messageStatus" />
 
+  - name: simple-model-user-setting
+    x-displayName: Simple model - user-setting
+    description: |
+      [JSON:API model](/#tag/json-api-model-user-setting)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-setting" />
+
+#   # tags - simple-models - staff
+
   - name: simple-model-staff-staffMember
     x-displayName: Simple model - staff-staffMember
     description: |
       [JSON:API model](/#tag/json-api-model-staff-staffMember)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_staff-staffMember" />
 
-  - name: simple-model-user-setting
-    x-displayName: Simple model - user-setting
+  - name: simple-model-staff-adviserSubjectGroup
+    x-displayName: Simple model - staff-adviserSubjectGroup
     description: |
-      [JSON:API model](/#tag/json-api-model-user-setting)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-setting" />
+      [JSON:API model](/#tag/json-api-model-staff-adviserSubjectGroup)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_staff-adviserSubjectGroup" />
 
   #   # tags - simple-models - meta
 
@@ -2067,17 +2075,25 @@ tags:
       [Simple model](/#tag/simple-model-user-messageStatus)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
 
-  - name: json-api-model-staff-staffMember
-    x-displayName: JSON:API model - staff-staffMember
-    description: |
-      [Simple model](/#tag/simple-model-user-staffMember)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_staff-staffMember" />
-
   - name: json-api-model-user-setting
     x-displayName: JSON:API model - user-setting
     description: |
       [Simple model](/#tag/simple-model-user-setting)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-setting" />
+
+  # staff
+
+  - name: json-api-model-staff-staffMember
+    x-displayName: JSON:API model - staff-staffMember
+    description: |
+      [Simple model](/#tag/simple-model-staff-staffMember)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_staff-staffMember" />
+
+  - name: json-api-model-staff-adviserSubjectGroup
+    x-displayName: JSON:API model - staff-adviserSubjectGroup
+    description: |
+      [Simple model](/#tag/simple-model-staff-adviserSubjectGroup)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_staff-adviserSubjectGroup" />
 
   # # tags - json-api-models - meta
 
@@ -2277,8 +2293,9 @@ x-tagGroups:
       - simple-model-user-type
       - simple-model-user-message
       - simple-model-user-messageStatus
-      - simple-model-staff-staffMember
       - simple-model-user-setting
+      - simple-model-staff-staffMember
+      - simple-model-staff-adviserSubjectGroup
       - simple-model-job
       - simple-model-job-status
       - simple-model-job-type
@@ -2445,8 +2462,9 @@ x-tagGroups:
       - json-api-model-user-type
       - json-api-model-user-message
       - json-api-model-user-messageStatus
-      - json-api-model-staff-staffMember
       - json-api-model-user-setting
+      - json-api-model-staff-staffMember
+      - json-api-model-staff-adviserSubjectGroup
       - json-api-model-job
       - json-api-model-job-status
       - json-api-model-job-type

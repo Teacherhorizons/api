@@ -1,0 +1,31 @@
+SimpleModel_staff-adviserSubjectGroup:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/SimpleModel_staff-adviserSubjectGroup_id'
+    # simple attributes
+    fromDate:
+      $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_fromDate'
+    toDate:
+      $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_toDate'
+    # relationship attributes
+    adviserId:
+      $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_adviserId'
+    subjectGroupId:
+      $ref: '../../library/staff/adviserSubjectGroup.yaml#/staff-adviserSubjectGroup_subjectGroupId'
+  required:
+    - id
+    # simple attributes
+    - fromDate
+    - toDate
+    # relationship attributes
+    - adviserId
+    - subjectGroupId
+
+# shared
+SimpleModel_staff-adviserSubjectGroup_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

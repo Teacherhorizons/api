@@ -179,8 +179,11 @@ SimpleModels:
     - $ref: '../../models/simple/user/type.yaml#/SimpleModel_user-type'
     - $ref: '../../models/simple/user/message.yaml#/SimpleModel_user-message'
     - $ref: '../../models/simple/user/messageStatus.yaml#/SimpleModel_user-messageStatus'
-    - $ref: '../../models/simple/staff/staffMember.yaml#/SimpleModel_staff-staffMember'
     - $ref: '../../models/simple/user/setting.yaml#/SimpleModel_user-setting'
+
+    # staff
+    - $ref: '../../models/simple/staff/staffMember.yaml#/SimpleModel_staff-staffMember'
+    - $ref: '../../models/simple/staff/adviserSubjectGroup.yaml#/SimpleModel_staff-adviserSubjectGroup'
 
     # subject
     - $ref: '../../models/simple/subject/subject.yaml#/SimpleModel_subject'
@@ -367,8 +370,11 @@ JsonApiModels:
     - $ref: '../../models/json-api/user/type.yaml#/JsonApiModel_user-type'
     - $ref: '../../models/json-api/user/message.yaml#/JsonApiModel_user-message'
     - $ref: '../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus'
-    - $ref: '../../models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember'
     - $ref: '../../models/json-api/user/setting.yaml#/JsonApiModel_user-setting'
+
+    # staff
+    - $ref: '../../models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember'
+    - $ref: '../../models/json-api/staff/adviserSubjectGroup.yaml#/JsonApiModel_staff-adviserSubjectGroup'
 
     # subject
     - $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject'

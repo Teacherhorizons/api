@@ -1,0 +1,23 @@
+#attributes
+staff-adviserSubjectGroup_fromDate:
+  type: string
+  format: date-time
+  example: 1 Sep 2022
+staff-adviserSubjectGroup_toDate:
+  type: string
+  format: date-time
+  example: 31 Aug 2023
+
+#relationship attribute
+staff-adviserSubjectGroup_adviserId:
+  type: integer
+  example: 123
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
+
+staff-adviserSubjectGroup_subjectGroupId:
+  type: integer
+  example: 45
+  description: |
+    Relationship to [regional-city](/#tag/simple-model-regional-city)
+
