@@ -13,8 +13,10 @@ JsonApiModel_time-schoolYear:
         # simple attributes
         name:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_name'
-      required:
-        - name
+        isMostRecentComplete:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isMostRecentComplete'
+        isCurrent:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
   required:
     - type
     - id

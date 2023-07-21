@@ -7,10 +7,16 @@ SimpleModel_time-schoolYear:
     # simple attributes
     name:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_name'
+    isMostRecentComplete:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isMostRecentComplete'
+    isCurrent:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
   required:
     - id
     - name
-
+    - isMostRecentComplete
+    - isCurrent
+    
 # shared
 SimpleModel_time-schoolYear_id:
   type: integer

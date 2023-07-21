@@ -2,8 +2,17 @@
 time-month_name:
   type: string
   example: Sep 2022
+  
 time-month_number:
   type: integer
   example: 9
   description: Derived (dw)
-#relationship attributes
+
+time-month_isMostRecentComplete: 
+  type: boolean
+  example: true
+
+time-month_isCurrent: 
+  type: boolean
+  example: true
+

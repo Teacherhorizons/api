@@ -13,8 +13,10 @@ JsonApiModel_time-week:
         # simple attributes
         name:
           $ref: '../../library/time/week.yaml#/time-week_name'
-      required:
-        - name
+        isMostRecentComplete:
+          $ref: '../../library/time/week.yaml#/time-week_isMostRecentComplete'
+        isCurrent:
+          $ref: '../../library/time/week.yaml#/time-week_isCurrent'
   required:
     - type
     - id

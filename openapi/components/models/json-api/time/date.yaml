@@ -11,12 +11,18 @@ JsonApiModel_time-date:
       additionalProperties: false
       properties:
         # simple attributes
-        dateId:
-          $ref: "../../library/time/date.yaml#/time-date_dateId"
+        date: 
+          $ref: "../../library/time/date.yaml#/time-date_date"
+        name:
+          $ref: '../../library/time/date.yaml#/time-date_name'
+        isMostRecentComplete:
+          $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
+        isCurrent:
+          $ref: '../../library/time/date.yaml#/time-date_isCurrent'
   required:
     - type
     - id
-    - dateId
+    - attributes
 
 JsonApiModel_time-date_type:
   type: string

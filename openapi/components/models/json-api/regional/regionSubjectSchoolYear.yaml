@@ -21,7 +21,7 @@ JsonApiModel_regional-regionSubjectSchoolYear:
         subject:
           $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
         schoolYear:
-          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
+          $ref: '../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship_attribute'
       required:
         - id
         - numberOfLiveJobs
@@ -38,7 +38,7 @@ JsonApiModel_regional-regionSubjectSchoolYear:
         subject:
           $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
         schoolYear:
-          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
+          $ref: '../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship'
   required:
     - type
     - id

@@ -5,9 +5,20 @@ SimpleModel_time-date:
     id:
       $ref: '#/SimpleModel_time-date_id'
     # simple attributes
+    date:
+      $ref: '../../library/time/date.yaml#/time-date_date'
+    name:
+      $ref: '../../library/time/date.yaml#/time-date_name'
+    isMostRecentComplete:
+      $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
+    isCurrent:
+      $ref: '../../library/time/date.yaml#/time-date_isCurrent'
   required:
     - id
-    - dateId
+    - date
+    - name
+    - isMostRecentComplete
+    - isCurrent
 
 # shared
 SimpleModel_time-date_id:
