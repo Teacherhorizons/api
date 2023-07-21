@@ -105,6 +105,13 @@ get:
         type: string
 
     - in: query
+      name: is-active
+      description: Whether school is active or not (1 means true). Will generally use is-active=1.
+      example: 1
+      schema:
+        type: string
+
+    - in: query
       name: lras
       description: The Advisers id
       example: 1
@@ -199,15 +206,15 @@ get:
   # , @RequestParam(value="match-member-number",required=false) Integer matchMemberNumber
   # , @RequestParam(value="min-match-score",required=false) Double minMatchScore
   responses:
-    "200":
+    '200':
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/current/schools/schools-search-school-area-full.yaml"
-    "400":
+            $ref: '../../components/schemas/current/schools/schools-search-school-area-full.yaml'
+    '400':
       description: Invalid ID supplied
-    "404":
+    '404':
       description: Pet not found
   security:
     - api_key: []
