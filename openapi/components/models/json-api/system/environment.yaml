@@ -1,0 +1,32 @@
+JsonApiModel_system-environment:
+  type: object
+  description: foo
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_system-environment_type'
+    id:
+      $ref: '#/JsonApiModel_system-environment_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        staticUrlPathStub:
+          $ref: '../../library/system/environment.yaml#/system-environment_staticUrlPathStub'
+  required:
+    - type
+    - id
+    - attributes
+
+JsonApiModel_system-environment_type:
+  type: string
+  example: system-environment
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-environment_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)

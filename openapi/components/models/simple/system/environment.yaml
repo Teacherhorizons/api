@@ -1,0 +1,20 @@
+SimpleModel_system-environment:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-environment_id"
+    # simple attributes
+    staticUrlPathStub:
+      $ref: "../../library/system/environment.yaml#/system-environment_staticUrlPathStub"
+  required:
+    - id
+    - staticUrlPathStub	
+
+
+# shared
+SimpleModel_system-environment_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
