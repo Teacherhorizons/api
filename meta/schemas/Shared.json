@@ -26,6 +26,9 @@
             "const": "school"
           },
           {
+            "const": "subject"
+          },
+          {
             "const": "teacher"
           },
           {
@@ -163,88 +166,8 @@
         "properties": {
           "type": "object",
           "additionalProperties": false,
-          "properties": {
-            "id": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "name": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "slug": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "fullName": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "url": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "description": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "iconName": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "memberNumber": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                }
-              },
-              "required": ["$ref"]
-            },
-            "text": {
+          "patternProperties": {
+            "id|caption|description|detail|filePath|fullName|iconName|label|memberNumber|metaDescriptionTemplate|monthNumber|name|notes|slug|subject|text|title|url": {
               "type": "object",
               "additionalProperties": false,
               "properties": {

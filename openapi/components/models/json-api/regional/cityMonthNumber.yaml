@@ -3,37 +3,36 @@ JsonApiModel_regional-cityMonthNumber:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_regional-cityMonthNumber_type"
+      $ref: '#/JsonApiModel_regional-cityMonthNumber_type'
     id:
-      $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+      $ref: '#/JsonApiModel_regional-cityMonthNumber_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         monthNumber:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber'
         averageMinTemperatureInDegreesC:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMinTemperatureInDegreesC"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMinTemperatureInDegreesC'
         averageMaxTemperatureInDegreesC:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMaxTemperatureInDegreesC"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageMaxTemperatureInDegreesC'
         averageRainfallInMM:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_averageRainfallInMM'
         notes:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_notes"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_notes'
         creationDate:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_creationDate"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_creationDate'
         latestUpdateDate:
-          $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_latestUpdateDate"
+          $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_latestUpdateDate'
         # relationship attributes
         city:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
-        - cityId
         - monthNumber
         - averageMinTemperatureInDegreesC
         - averageMaxTemperatureInDegreesC
@@ -44,11 +43,11 @@ JsonApiModel_regional-cityMonthNumber:
       additionalProperties: false
       properties:
         city:
-          $ref: "../regional/city.yaml#/JsonApiModel_regional-city_relationship"
+          $ref: '../regional/city.yaml#/JsonApiModel_regional-city_relationship'
         creationUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -61,7 +60,7 @@ JsonApiModel_regional-cityMonthNumber_type:
 
 JsonApiModel_regional-cityMonthNumber_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -72,9 +71,9 @@ JsonApiModel_regional-cityMonthNumber_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+      $ref: '#/JsonApiModel_regional-cityMonthNumber_id'
     monthNumber:
-      $ref: "../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber"
+      $ref: '../../library/regional/cityMonthNumber.yaml#/regional-cityMonthNumber_monthNumber'
   required:
     - id
     - monthNumber
@@ -91,9 +90,9 @@ JsonApiModel_regional-cityMonthNumber_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_regional-cityMonthNumber_type"
+          $ref: '#/JsonApiModel_regional-cityMonthNumber_type'
         id:
-          $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+          $ref: '#/JsonApiModel_regional-cityMonthNumber_id'
       required:
         - type
         - id
@@ -114,9 +113,9 @@ JsonApiModel_regional-cityMonthNumber_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_regional-cityMonthNumber_type"
+            $ref: '#/JsonApiModel_regional-cityMonthNumber_type'
           id:
-            $ref: "#/JsonApiModel_regional-cityMonthNumber_id"
+            $ref: '#/JsonApiModel_regional-cityMonthNumber_id'
         required:
           - type
           - id

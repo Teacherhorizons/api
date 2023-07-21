@@ -260,7 +260,7 @@
                   "type": "object",
                   "additionalProperties": false,
                   "patternProperties": {
-                    "^[a-zA-Z1]*$": {
+                    "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff)$": {
                       "oneOf": [
                         {
                           "$ref": "#/definitions/Response-MultipleSchemas-AttributeReference"
@@ -286,7 +286,10 @@
                   "required": []
                 },
                 "required": {
-                  "type": "array"
+                  "type": "array",
+                  "items": {
+                    "pattern": "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff)$"
+                  }
                 }
               },
               "required": ["type", "additionalProperties", "properties"]
@@ -382,7 +385,7 @@
         }
       },
       "required": ["type", "additionalProperties", "properties", "required"],
-      "title": "Response-MultipleSchemas-Data"
+      "title": "Response-MultipleSchemas-DataItem"
     },
     "Response-MultipleSchemas-Type": {
       "type": "object",

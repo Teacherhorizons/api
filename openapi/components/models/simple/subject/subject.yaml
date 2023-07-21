@@ -3,45 +3,45 @@ SimpleModel_subject:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_subject_id"
+      $ref: '#/SimpleModel_subject-subject_id'
     # simple attributes
     name:
-      $ref: "../../library/subject/subject.yaml#/subject_name"
+      $ref: '../../library/subject/subject.yaml#/subject_name'
     shortName:
-      $ref: "../../library/subject/subject.yaml#/subject_shortName"
+      $ref: '../../library/subject/subject.yaml#/subject_shortName'
     middleOfSentenceName:
-      $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceName"
+      $ref: '../../library/subject/subject.yaml#/subject_middleOfSentenceName'
     middleOfSentenceShortName:
-      $ref: "../../library/subject/subject.yaml#/subject_middleOfSentenceShortName"
+      $ref: '../../library/subject/subject.yaml#/subject_middleOfSentenceShortName'
     importance:
-      $ref: "../../library/subject/subject.yaml#/subject_importance"
+      $ref: '../../library/subject/subject.yaml#/subject_importance'
     numberOfThTeachers:
-      $ref: "../../library/subject/subject.yaml#/subject_numberOfThTeachers"
+      $ref: '../../library/subject/subject.yaml#/subject_numberOfThTeachers'
     slug:
-      $ref: "../../library/subject/subject.yaml#/subject_slug"
+      $ref: '../../library/subject/subject.yaml#/subject_slug'
     numberOfLiveJobs:
-      $ref: "../../library/subject/subject.yaml#/subject_numberOfLiveJobs"
+      $ref: '../../library/subject/subject.yaml#/subject_numberOfLiveJobs'
     numberOfLiveHeadOfDepartmentJobs:
-      $ref: "../../library/subject/subject.yaml#/subject_numberOfLiveHeadOfDepartmentJobs"
+      $ref: '../../library/subject/subject.yaml#/subject_numberOfLiveHeadOfDepartmentJobs'
     jobsDescription:
-      $ref: "../../library/subject/subject.yaml#/subject_jobsDescription"
+      $ref: '../../library/subject/subject.yaml#/subject_jobsDescription'
     creationDate:
-      $ref: "../../library/subject/subject.yaml#/subject_creationDate"
+      $ref: '../../library/subject/subject.yaml#/subject_creationDate'
     latestUpdateDate:
-      $ref: "../../library/subject/subject.yaml#/subject_latestUpdateDate"
+      $ref: '../../library/subject/subject.yaml#/subject_latestUpdateDate'
     # relationship attributes
     subjectGroupId:
-      $ref: "../../library/subject/subject.yaml#/subject_subjectGroupId"
+      $ref: '../../library/subject/subject.yaml#/subject_subjectGroupId'
     creationUserId:
-      $ref: "../../library/subject/subject.yaml#/subject_creationUserId"
+      $ref: '../../library/subject/subject.yaml#/subject_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/subject/subject.yaml#/subject_latestUpdateUserId"
+      $ref: '../../library/subject/subject.yaml#/subject_latestUpdateUserId'
   required:
     - id
     - name
 
 # shared
-SimpleModel_subject_id:
+SimpleModel_subject-subject_id:
   type: integer
   example: 1
   readOnly: true
