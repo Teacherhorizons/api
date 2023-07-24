@@ -15,18 +15,11 @@ JsonApiModel_system-page:
           $ref: "../../library/system/page.yaml#/system-page_title"
         metaDescription:
           $ref: "../../library/system/page.yaml#/system-page_metaDescription"
-
         # relationship attributes
         pageType:
           $ref: "../system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute"
         entity:  #check with RR about the relationship attribute
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-      required:
-        - title
-        - metaDescription
-        - pageType
-        - entity
-        
     relationships:
         type: object
         additionalProperties: false
@@ -38,6 +31,7 @@ JsonApiModel_system-page:
   required:
     - type
     - id
+    - attributes
 
 JsonApiModel_system-page_type:
   type: string

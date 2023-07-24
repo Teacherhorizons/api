@@ -19,10 +19,27 @@ JsonApiModel_time-date:
           $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
         isCurrent:
           $ref: '../../library/time/date.yaml#/time-date_isCurrent'
+        # relationship attributes
+        weekId:
+          $ref: '../../library/time/date.yaml#/time-date_weekId'
+        monthId:
+          $ref: '../../library/time/date.yaml#/time-date_monthId'
+        schoolYearId:
+          $ref: '../../library/time/date.yaml#/time-date_schoolYearId'
+    relationships:
+        type: object
+        additionalProperties: false
+        properties: 
+            weekId:
+              $ref: "../time/week.yaml#/JsonApiModel_time-week_relationship"
+            monthId:
+              $ref: "../time/month.yaml#/JsonApiModel_time-month_relationship"
+            schoolYearId:
+              $ref: "../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship"
   required:
     - type
     - id
-    - attributes
+    - attributes        
 
 JsonApiModel_time-date_type:
   type: string
