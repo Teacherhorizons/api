@@ -1,12 +1,12 @@
 Response_application-applicationDataIssues:
   oneOf:
-    - $ref: "#/Response_application-applicationDataIssues_admin"
-    - $ref: "#/Response_application-applicationDataIssues_admin-v2"
+    - $ref: '#/Response_application-applicationDataIssues_admin'
+    - $ref: '#/Response_application-applicationDataIssues_admin-v2'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_application-applicationDataIssues_admin"
-      admin-v2: "#/Response_application-applicationDataIssues_admin-v2"
+      admin: '#/Response_application-applicationDataIssues_admin'
+      admin-v2: '#/Response_application-applicationDataIssues_admin-v2'
 
 # admin (non-standard, deprecated)
 Response_application-applicationDataIssues_admin:
@@ -26,16 +26,16 @@ Response_application-applicationDataIssues_admin:
         additionalProperties: false
         properties:
           type:
-            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+            $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type'
           id:
-            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+            $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id'
           attributes:
             type: object
             additionalProperties: false
             properties:
               # Name of the related guideline (non-standard json-api)
               name:
-                $ref: "../../../components/models/library/application/guideline.yaml#/application-guideline_name"
+                $ref: '../../../components/models/library/application/guideline.yaml#/application-guideline_name'
             required:
               - name
         required:
@@ -43,7 +43,8 @@ Response_application-applicationDataIssues_admin:
           - id
           - attributes
   required:
-    # errors due to this spec being non-standard (actual api response doesn't have a schema)
+    # note: actual api response doesn't have a schema
+    - schema
     - data
 
 # admin-v2
@@ -62,15 +63,15 @@ Response_application-applicationDataIssues_admin-v2:
         additionalProperties: false
         properties:
           type:
-            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+            $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type'
           id:
-            $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+            $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id'
           attributes:
             type: object
             additionalProperties: false
             properties:
               date:
-                $ref: "../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+                $ref: '../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date'
             required:
               - date
           relationships:
@@ -80,7 +81,7 @@ Response_application-applicationDataIssues_admin-v2:
               # application:
               #   $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
               guideline:
-                $ref: "../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship"
+                $ref: '../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship'
             required:
               # - application
               - guideline
@@ -93,7 +94,7 @@ Response_application-applicationDataIssues_admin-v2:
       type: array
       items:
         anyOf:
-          - $ref: "#/Response_application-applicationDataIssues_includedGuideline_admin-v2"
+          - $ref: '#/Response_application-applicationDataIssues_includedGuideline_admin-v2'
   required:
     - schema
     - data
@@ -104,15 +105,15 @@ Response_application-applicationDataIssues_includedGuideline_admin-v2:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type"
+      $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_type'
     id:
-      $ref: "../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id"
+      $ref: '../../../components/models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         name:
-          $ref: "../../../components/models/library/application/guideline.yaml#/application-guideline_name"
+          $ref: '../../../components/models/library/application/guideline.yaml#/application-guideline_name'
       required:
         - name
   required:

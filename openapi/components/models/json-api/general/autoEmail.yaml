@@ -3,24 +3,24 @@ JsonApiModel_general-autoEmail:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_general-autoEmail_type"
+      $ref: '#/JsonApiModel_general-autoEmail_type'
     id:
-      $ref: "#/JsonApiModel_general-autoEmail_id"
+      $ref: '#/JsonApiModel_general-autoEmail_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_name"
+          $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_name'
         storedProcedureName:
-          $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_storedProcedureName"
+          $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_storedProcedureName'
         mandrillTemplateSlug:
-          $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateSlug"
+          $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateSlug'
         mandrillTemplateType:
-          $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateType"
+          $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_mandrillTemplateType'
         includeInAllEmailJobsRun:
-          $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_includeInAllEmailJobsRun"
+          $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_includeInAllEmailJobsRun'
   required:
     - type
     - id
@@ -33,9 +33,23 @@ JsonApiModel_general-autoEmail_type:
 
 JsonApiModel_general-autoEmail_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
+
+JsonApiModel_general-autoEmail_relationship_attribute_idOnly:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-general-autoEmail) | 
+    [JSON:API model](/#tag/json-api-model-general-autoEmail)
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: '1'
+      description: Unique identifier of the entity (string)
+  required:
+    - id
 
 JsonApiModel_general-autoEmail_relationship_attribute:
   type: object
@@ -44,9 +58,9 @@ JsonApiModel_general-autoEmail_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_general-autoEmail_id"
+      $ref: '#/JsonApiModel_general-autoEmail_id'
     name:
-      $ref: "../../library/general/autoEmail.yaml#/general-autoEmail_name"
+      $ref: '../../library/general/autoEmail.yaml#/general-autoEmail_name'
   required:
     - id
     - name
@@ -63,9 +77,9 @@ JsonApiModel_general-autoEmail_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_general-autoEmail_type"
+          $ref: '#/JsonApiModel_general-autoEmail_type'
         id:
-          $ref: "#/JsonApiModel_general-autoEmail_id"
+          $ref: '#/JsonApiModel_general-autoEmail_id'
       required:
         - type
         - id

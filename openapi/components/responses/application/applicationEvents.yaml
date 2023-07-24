@@ -35,8 +35,7 @@ Response_application-applicationEvents_admin-oneApplication:
             type: object
             additionalProperties: false
             properties:
-              type:
-                $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type'
+              # simple attributes
               date:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
               creationDate:
@@ -45,6 +44,9 @@ Response_application-applicationEvents_admin-oneApplication:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate'
               notes:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
+              # relationship attributes
+              type:
+                $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
             required:
               - type
               - date
@@ -123,8 +125,7 @@ Response_application-applicationEvents_admin-allApplications:
             type: object
             additionalProperties: false
             properties:
-              type:
-                $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type'
+              # simple attributes
               date:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
               creationDate:
@@ -133,6 +134,9 @@ Response_application-applicationEvents_admin-allApplications:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate'
               notes:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
+              # relationship attributes
+              type:
+                $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
             required:
               - type
               - date
@@ -302,10 +306,12 @@ Response_application-applicationEvents_teacher:
             type: object
             additionalProperties: false
             properties:
-              type:
-                $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type'
+              # simple attributes
               date:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+              # relationship attributes
+              type:
+                $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
             required:
               - type
               - date
@@ -340,10 +346,12 @@ Response_application-applicationEvents_school:
             type: object
             additionalProperties: false
             properties:
-              type:
-                $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type'
+              # simple attributes
               date:
                 $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+              # relationship attributes
+              type:
+                $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
             required:
               - type
               - date

@@ -26,16 +26,3 @@ application-eventType_applicationStatusId:
   example: 1
   description: |
     Relationship to [application-status](/#tag/simple-model-application-status)
-
-# relationships
-application-eventType_applicationStatus:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: "1"
-      description: |
-        Relationship to [application-status](/#tag/simple-model-application-status)
-  required:
-    - id

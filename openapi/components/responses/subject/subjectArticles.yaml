@@ -38,9 +38,6 @@ Response_subject-subjectArticles_notSignedIn:
               # relationship attributes
               photo:
                 $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-              category:
-                $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_relationship_attribute'
-                #check above with RR regarding the above path
         required:
           - type
           - id

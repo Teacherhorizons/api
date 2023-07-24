@@ -15,7 +15,7 @@ patch:
       example: 1
       schema:
         type: integer
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
   requestBody:
     content:
       application/json:
@@ -27,39 +27,40 @@ patch:
               example: application-applicationEvent
             id:
               type: string
-              example: "1"
+              example: '1'
             attributes:
               type: object
               additionalProperties: false
               properties:
-                eventType:
-                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_type"
                 date:
-                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date"
+                  $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
                 notes:
-                  $ref: "../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes"
+                  $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
+                # relationship attributes
+                type:
+                  $ref: '../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
               required:
-                - eventType
+                - type
                 - date
           required:
             - type
             - id
             - attributes
   responses:
-    "204":
-      $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+    '204':
+      $ref: '../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
 
 # TODO: add related meta-schema
 delete:
@@ -77,19 +78,19 @@ delete:
       example: 1
       schema:
         type: integer
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
   responses:
-    "204":
-      $ref: "../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+    '204':
+      $ref: '../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
