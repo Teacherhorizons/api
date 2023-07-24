@@ -3,31 +3,31 @@ JsonApiModel_system-page:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_system-page_type"
+      $ref: '#/JsonApiModel_system-page_type'
     id:
-      $ref: "#/JsonApiModel_system-page_id"
+      $ref: '#/JsonApiModel_system-page_id'
     attributes:
       type: object
+      description: \'entity\' relationship attribute not included for now (since it\'s a non-specific relationship)
       additionalProperties: false
       properties:
         # simple attributes
         title:
-          $ref: "../../library/system/page.yaml#/system-page_title"
+          $ref: '../../library/system/page.yaml#/system-page_title'
         metaDescription:
-          $ref: "../../library/system/page.yaml#/system-page_metaDescription"
+          $ref: '../../library/system/page.yaml#/system-page_metaDescription'
         # relationship attributes
         pageType:
-          $ref: "../system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute"
-        entity:  #check with RR about the relationship attribute
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
+        # entity - removed for now (since is a non-specific relationship)
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-          pageType:
-            $ref: "../system/pageType.yaml#/JsonApiModel_system-pageType_relationship"
-          entity:  #check with RR about the relationship attribute
-            $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+      type: object
+      description: \'entity\' relationship not included for now (since it\'s a non-specific relationship)
+      additionalProperties: false
+      properties:
+        pageType:
+          $ref: '../system/pageType.yaml#/JsonApiModel_system-pageType_relationship'
+        # entity - removed for now (since it's a non-specific relationship)
   required:
     - type
     - id
@@ -41,7 +41,7 @@ JsonApiModel_system-page_type:
 
 JsonApiModel_system-page_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -50,7 +50,7 @@ JsonApiModel_system-page_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_system-page_id"
+      $ref: '#/JsonApiModel_system-page_id'
     # name:
     #   $ref: "../../library/system/page.yaml#/system-page_name"
     # slug:
@@ -67,14 +67,14 @@ JsonApiModel_system-page_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_system-page_type"
+          $ref: '#/JsonApiModel_system-page_type'
         id:
-          $ref: "#/JsonApiModel_system-page_id"
+          $ref: '#/JsonApiModel_system-page_id'
       required:
         - type
         - id
   required:
-      - data
+    - data
 
 JsonApiModel_system-page_relationship_multiple:
   type: object
@@ -90,9 +90,9 @@ JsonApiModel_system-page_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: "#/JsonApiModel_system-page_type"
+            $ref: '#/JsonApiModel_system-page_type'
           id:
-            $ref: "#/JsonApiModel_system-page_id"
+            $ref: '#/JsonApiModel_system-page_id'
         required:
           - type
           - id
