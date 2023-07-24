@@ -30,6 +30,7 @@ Response_regional-countrySubject_notSignedIn:
           - $ref: '#/Response_regional-countrySubject_includedCountrySubject_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedStaff_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedAmbassador_notSignedIn'
+          - $ref: '#/Response_regional-countrySubject_includedEnvironment_notSignedIn'
   required:
     - schema
     - data
@@ -559,6 +560,28 @@ Response_regional-countrySubject_includedAmbassador_notSignedIn:
       required:
         - photo
         - user
+  required:
+    - type
+    - id
+    - attributes
+
+Response_regional-countrySubject_includedEnvironment_notSignedIn:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_type'
+    id:
+      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        staticUrlPathStub:
+          $ref: '../../../components/models/library/system/environment.yaml#/system-environment_staticUrlPathStub'
+      required:
+        - staticUrlPathStub
   required:
     - type
     - id
