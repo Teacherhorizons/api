@@ -16,3 +16,22 @@ time-month_isCurrent:
   type: boolean
   example: true
 
+#relationship attributes
+time-month_startDateId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [time-date](/#tag/simple-model-time-date)
+
+time-month_endDateId:
+  type: integer
+  example: 1
+  description: Relationship to [time-date](/#tag/simple-model-time-date)
+
+time-month_schoolYearId:
+  type: integer
+  example: 1
+  description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
+
+
+
