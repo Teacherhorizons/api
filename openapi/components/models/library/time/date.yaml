@@ -17,5 +17,23 @@ time-date_isCurrent:
   type: boolean
   example: true
 
+#relationship attributes
+time-date_weekId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [time-week](/#tag/simple-model-time-week)
+
+time-date_monthId:
+  type: integer
+  example: 1
+  description: Relationship to [time-month](/#tag/simple-model-time-month)
+
+time-date_schoolYearId:
+  type: integer
+  example: 1
+  description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
+
+
 
 

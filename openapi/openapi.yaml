@@ -986,11 +986,11 @@ tags:
       [JSON:API model](/#tag/json-api-model-teacher-teacherTeachingSkill)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherTeachingSkill" />
 
-  - name: simple-model-teacher-teacherSkill
-    x-displayName: Simple model - teacher-teacherSkill
+  - name: simple-model-teacher-teachingSkill
+    x-displayName: Simple model - teacher-teachingSkill
     description: |
-      [JSON:API model](/#tag/json-api-model-teacher-teacherSkill)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherSkill" />
+      [JSON:API model](/#tag/json-api-model-teacher-teachingSkill)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teachingSkill" />
 
   - name: simple-model-teacher-teacherTeachingLanguage
     x-displayName: Simple model - teacher-teacherTeachingLanguage
@@ -1789,11 +1789,11 @@ tags:
       [Simple model](/#tag/simple-model-teacher-teacherTeachingSkill)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherTeachingSkill" />
 
-  - name: json-api-model-teacher-teacherSkill
-    x-displayName: JSON:API model - teacher-teacherSkill
+  - name: json-api-model-teacher-teachingSkill
+    x-displayName: JSON:API model - teacher-teachingSkill
     description: |
-      [Simple model](/#tag/simple-model-teacher-teacherSkill)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherSkill" />
+      [Simple model](/#tag/simple-model-teacher-teachingSkill)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teachingSkill" />
 
   - name: json-api-model-teacher-teacherTeachingLanguage
     x-displayName: JSON:API model - teacher-teacherTeachingLanguage
@@ -2292,7 +2292,7 @@ x-tagGroups:
       - simple-model-teacher-computingSkill
       - simple-model-teacher-teacherComputingSkill
       - simple-model-teacher-teacherTeachingSkill
-      # - simple-model-teacher-teachingSkill
+      - simple-model-teacher-teachingSkill
       - simple-model-teacher-teacherTeachingLanguage
       - simple-model-teacher-teacherExperienceCurriculum
       - simple-model-teacher-teacherLookingForCurriculum
@@ -2462,7 +2462,7 @@ x-tagGroups:
       - json-api-model-teacher-computingSkill
       - json-api-model-teacher-teacherComputingSkill
       - json-api-model-teacher-teacherTeachingSkill
-      # - json-api-model-teacher-teachingSkill
+      - json-api-model-teacher-teachingSkill
       - json-api-model-teacher-teacherTeachingLanguage
       - json-api-model-teacher-teacherExperienceCurriculum
       - json-api-model-teacher-teacherLookingForCurriculum

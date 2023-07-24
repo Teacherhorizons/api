@@ -13,12 +13,22 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/date.yaml#/time-date_isCurrent'
+    # relationship attributes
+    weekId:
+      $ref: '../../library/time/date.yaml#/time-date_weekId'
+    monthId:
+      $ref: '../../library/time/date.yaml#/time-date_monthId'
+    schoolYearId:
+      $ref: '../../library/time/date.yaml#/time-date_schoolYearId'
   required:
     - id
     - date
     - name
     - isMostRecentComplete
     - isCurrent
+    - weekId
+    - monthId
+    - schoolYearId   
 
 # shared
 SimpleModel_time-date_id:

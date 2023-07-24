@@ -32,9 +32,9 @@ JsonApiModel_staff-adviserSubjectGroup:
       additionalProperties: false
       properties:
         adviser:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship'
         subjectGroup:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../subject/subjectGroup.yaml#/JsonApiModel_subject-subjectGroup_relationship'
   required:
     - type
     - id
