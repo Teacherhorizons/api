@@ -120,6 +120,21 @@ JsonApiModel_teacher_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_teacher_relationship_attribute_idsOnly: # note 'ids' rather than 'id' (teacher is an exception)
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher) | 
+    [JSON:API model](/#tag/json-api-model-teacher)
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      example: '1'
+      description: Unique identifier of the entity (string)
+    memberNumber:
+      type: integer
+      example: 1
+
 JsonApiModel_teacher_relationship_attribute:
   type: object
   description: |

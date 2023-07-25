@@ -19,7 +19,7 @@ get:
           - admin
           - school
           - teacher
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - in: query
       name: filter
       style: deepObject
@@ -109,24 +109,24 @@ get:
       schema:
         type: string
   responses:
-    "200":
+    '200':
       description: OK (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/responses/application/applications.yaml#/Response_applications"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+            $ref: '../../components/responses/application/applications.yaml#/Response_applications'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
 
 post:
   operationId: post-application
@@ -137,7 +137,7 @@ post:
   description: |
     <span class="testing-status-1"></span>
   parameters:
-    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
   requestBody:
     content:
       application/json:
@@ -154,30 +154,31 @@ post:
                   allOf:
                     - type: object
                       properties:
+                        # relationship attributes (id only)
                         job:
-                          $ref: "../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_attribute"
-                        memberNumber:
-                          $ref: "../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber"
+                          $ref: '../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_attribute_idOnly'
+                        teacher:
+                          $ref: '../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute_idsOnly'
                     - required:
                         - job
-                        - memberNumber
+                        - teacher
 
   responses:
-    "201":
+    '201':
       description: CREATED (Request successful)
       content:
         application/json:
           schema:
-            $ref: "../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
-    "401":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401"
-    "403":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403"
-    "404":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404"
-    "413":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413"
-    "422":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422"
+            $ref: '../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

@@ -2,6 +2,7 @@
 teacher_memberNumber:
   type: integer
   example: 1
+  readOnly: true
   description: Main
 teacher_availableFromDate:
   type: string
@@ -138,4 +139,3 @@ teacher_numberOfDependentChildrenId:
   example: 1
   description: |
     Relationship to [teacher-numberOfDependentChildren](/#tag/simple-model-teacher-numberOfDependentChildren)
- 

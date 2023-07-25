@@ -89,7 +89,7 @@ post:
                       $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
                     notes:
                       $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
-                    # relationship attributes
+                    # relationship attributes (id only)
                     application:
                       $ref: '../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship_attribute_idOnly'
                     type:

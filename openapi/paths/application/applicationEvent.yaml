@@ -37,7 +37,7 @@ patch:
                   $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
                 notes:
                   $ref: '../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
-                # relationship attributes
+                # relationship attributes (id only)
                 type:
                   $ref: '../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute_idOnly'
               required:
