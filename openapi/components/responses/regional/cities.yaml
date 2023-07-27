@@ -18,6 +18,9 @@ Response_regional-cities_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-city) | 
+        [JSON:API model](/#tag/json-api-model-regional-city)
       items:
         $ref: './city.yaml#/Response_regional-city_notSignedIn_item'
     included:
