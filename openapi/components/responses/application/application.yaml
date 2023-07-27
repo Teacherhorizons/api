@@ -20,57 +20,7 @@ Response_application_admin:
       enum:
         - admin
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
-        id:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            creationDate:
-              $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
-            latestUpdateDate:
-              $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
-            recommendationText:
-              $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
-            thSystemMatchScore:
-              $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
-            hasDataIssues:
-              $ref: '../../../components/models/library/application/application.yaml#/application_hasDataIssues'
-            # relationship attributes
-            thMatchType:
-              $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
-            status:
-              $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-          required:
-            - creationDate
-            - latestUpdateDate
-            - hasDataIssues
-            - status
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            job:
-              $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
-            teacher:
-              $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-            # TODO: potential issue - latestEvent is a relationship, but not included
-            latestEvent:
-              $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
-          required:
-            - job
-            - teacher
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      $ref: '#/Response_application_adminItem'
     included:
       type: array
       items:
@@ -83,6 +33,62 @@ Response_application_admin:
     - schema
     - data
     - included
+
+Response_application_adminItem:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-application) | 
+    [JSON:API model](/#tag/json-api-model-application)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        recommendationText:
+          $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
+        thSystemMatchScore:
+          $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
+        hasDataIssues:
+          $ref: '../../../components/models/library/application/application.yaml#/application_hasDataIssues'
+        # relationship attributes
+        thMatchType:
+          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+      required:
+        - creationDate
+        - latestUpdateDate
+        - hasDataIssues
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        # TODO: potential issue - latestEvent is a relationship, but not included
+        latestEvent:
+          $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
+      required:
+        - job
+        - teacher
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_application_includedTeacher_admin:
   type: object
@@ -194,43 +200,7 @@ Response_application_teacher:
       enum:
         - teacher
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
-        id:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            creationDate:
-              $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
-            # relationship attributes
-            status:
-              $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-            # TODO AS: fix this (half-done by RR - contactStage needs to be defined, currently using status)
-            contactStage:
-              $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-          required:
-            - creationDate
-            - status
-            - contactStage
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            job:
-              $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
-          required:
-            - job
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      $ref: '#/Response_application_teacherItem'
     included:
       type: array
       items:
@@ -239,9 +209,51 @@ Response_application_teacher:
           - $ref: '#/Response_application_includedJob_teacher'
           - $ref: '#/Response_application_includedUser_teacher'
   required:
-    - schema
-    - data
-    - included
+  - schema
+  - data
+  - included
+
+Response_application_teacherItem:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-teacher) | 
+    [JSON:API model](/#tag/json-api-model-teacher)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
+        # relationship attributes
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+        # TODO AS: fix this (half-done by RR - contactStage needs to be defined, currently using status)
+        contactStage:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+      required:
+        - creationDate
+        - status
+        - contactStage
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+      required:
+        - job
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_application_includedJob_teacher:
   type: object
@@ -394,51 +406,7 @@ Response_application_school:
       enum:
         - school
     data:
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
-        id:
-          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
-        attributes:
-          type: object
-          additionalProperties: false
-          properties:
-            # simple attributes
-            submissionToSchoolDate:
-              $ref: '../../../components/models/library/application/application.yaml#/application_submissionToSchoolDate'
-            latestUpdateDate:
-              $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
-            recommendationText:
-              $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
-            # relationship attributes
-            thMatchType:
-              $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
-            status:
-              $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-          required:
-            - submissionToSchoolDate
-            - latestUpdateDate
-            - recommendationText
-            - thMatchType
-            - status
-        relationships:
-          type: object
-          additionalProperties: false
-          properties:
-            job:
-              $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
-            teacher:
-              $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-          required:
-            - job
-            - teacher
-      required:
-        - type
-        - id
-        - attributes
-        - relationships
+      $ref: '#/Response_application_schoolItem'
     included:
       type: array
       items:
@@ -451,6 +419,56 @@ Response_application_school:
     - schema
     - data
     - included
+
+Response_application_schoolItem:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-school) | 
+    [JSON:API model](/#tag/json-api-model-school)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        submissionToSchoolDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_submissionToSchoolDate'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        recommendationText:
+          $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
+        # relationship attributes
+        thMatchType:
+          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+      required:
+        - submissionToSchoolDate
+        - latestUpdateDate
+        - recommendationText
+        - thMatchType
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+      required:
+        - job
+        - teacher
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_application_includedJob_school:
   type: object
