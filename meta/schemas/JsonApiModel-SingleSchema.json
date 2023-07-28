@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!(_id|_type|_relationship_attribute|_relationship))$": {
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!(_id|_type|_relationship_attribute_idOnly|_relationship_attribute|_relationship))$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Schema"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_type$": {
@@ -14,6 +14,9 @@
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Id"
+        },
+        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute_idOnly$": {
+          "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute-IdOnly"
         },
         "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute"
@@ -402,6 +405,10 @@
       "properties": {
         "type": {
           "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*\\[Simple model\\]\\(/#tag/simple-model-[a-zA-Z-]*\\) \\| \\s\\[JSON:API model\\]\\(/#tag/json-api-model-[a-zA-Z-]*\\)\\s$"
         },
         "additionalProperties": {
           "const": false

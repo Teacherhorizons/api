@@ -30,6 +30,9 @@
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         },
+        "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z_]*_item$": {
+          "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
+        },
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z_0-9]*_description$": {
           "$ref": "#/definitions/Response-MultipleSchemas-Description"
         }
@@ -202,8 +205,18 @@
         "type": {
           "const": "array"
         },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*\\[Simple model\\]\\(/#tag/simple-model-[a-zA-Z-]*\\) \\| \\s\\[JSON:API model\\]\\(/#tag/json-api-model-[a-zA-Z-]*\\)\\s$"
+        },
         "items": {
-          "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "$ref": {
+              "type": "string"
+            }
+          }
         }
       }
     },
@@ -213,6 +226,10 @@
       "properties": {
         "type": {
           "const": "object"
+        },
+        "description": {
+          "type": "string",
+          "pattern": "^\\s*\\[Simple model\\]\\(/#tag/simple-model-[a-zA-Z-]*\\) \\| \\s\\[JSON:API model\\]\\(/#tag/json-api-model-[a-zA-Z-]*\\)\\s$"
         },
         "additionalProperties": {
           "const": false

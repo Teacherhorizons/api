@@ -3,23 +3,32 @@ JsonApiModel_meta-cachedObject:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_meta-cachedObject_type"
+      $ref: '#/JsonApiModel_meta-cachedObject_type'
+    id:
+      $ref: '#/JsonApiModel_meta-cachedObject_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         key:
-          $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_key"
+          $ref: '../../library/meta/cachedObject.yaml#/meta-cachedObject_key'
         object:
-          $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_object"
+          $ref: '../../library/meta/cachedObject.yaml#/meta-cachedObject_object'
         durationInSeconds:
-          $ref: "../../library/meta/cachedObject.yaml#/meta-cachedObject_durationInSeconds"
+          $ref: '../../library/meta/cachedObject.yaml#/meta-cachedObject_durationInSeconds'
   required:
     - type
+    - id
 
 JsonApiModel_meta-cachedObject_type:
   type: string
   example: meta-cachedObject
   description: Unique identifier of the entity type
   readOnly: true
+
+JsonApiModel_meta-cachedObject_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)

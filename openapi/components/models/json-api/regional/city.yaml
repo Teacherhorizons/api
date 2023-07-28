@@ -500,14 +500,16 @@ JsonApiModel_regional-city_relationship_multiple:
   properties:
     data:
       type: array
-      additionalProperties: false
-      properties:
-        type:
-          $ref: '#/JsonApiModel_regional-city_type'
-        id:
-          $ref: '#/JsonApiModel_regional-city_id'
-      required:
-        - type
-        - id
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: '#/JsonApiModel_regional-city_type'
+          id:
+            $ref: '#/JsonApiModel_regional-city_id'
+        required:
+          - type
+          - id
   required:
     - data
