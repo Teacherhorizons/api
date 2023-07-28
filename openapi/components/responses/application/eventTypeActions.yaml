@@ -17,40 +17,11 @@ Response_application-eventTypeActions_admin:
         - admin
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-eventTypeActions) | 
+        [JSON:API model](/#tag/json-api-model-application-eventTypeActions)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type'
-          id:
-            $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id'
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              #simple attributes
-              label:
-                $ref: '../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
-              applicationEventType:
-                $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
-              #relationship attribute
-              autoEmail:
-                $ref: '../../../components/models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship_attribute'
-            required:
-              - label
-          relationships:
-            type: object
-            additionalProperties: false
-            properties:
-              manualEmailTemplate:
-                $ref: '../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship'
-            required:
-              - manualEmailTemplate
-        required:
-          - type
-          - id
-          - attributes
+        $ref: '#/Response_application-eventTypeActions_admin_item'
     included:
       type: array
       items:
@@ -60,6 +31,41 @@ Response_application-eventTypeActions_admin:
     - schema
     - data
     - included
+
+Response_application-eventTypeActions_admin_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type'
+    id:
+      $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        label:
+          $ref: '../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
+        applicationEventType:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
+        #relationship attribute
+        autoEmail:
+          $ref: '../../../components/models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail_relationship_attribute'
+      required:
+        - label
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        manualEmailTemplate:
+          $ref: '../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship'
+      required:
+        - manualEmailTemplate
+  required:
+    - type
+    - id
+    - attributes
 
 Response_application-eventTypeActions_includedManualEmailTemplate_admin:
   type: object

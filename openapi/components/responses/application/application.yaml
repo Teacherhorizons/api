@@ -20,7 +20,7 @@ Response_application_admin:
       enum:
         - admin
     data:
-      $ref: '#/Response_application_adminItem'
+      $ref: '#/Response_application_admin_item'
     included:
       type: array
       items:
@@ -34,7 +34,7 @@ Response_application_admin:
     - data
     - included
 
-Response_application_adminItem:
+Response_application_admin_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-application) | 
@@ -200,7 +200,7 @@ Response_application_teacher:
       enum:
         - teacher
     data:
-      $ref: '#/Response_application_teacherItem'
+      $ref: '#/Response_application_teacher_item'
     included:
       type: array
       items:
@@ -213,7 +213,7 @@ Response_application_teacher:
   - data
   - included
 
-Response_application_teacherItem:
+Response_application_teacher_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-teacher) | 
@@ -406,7 +406,7 @@ Response_application_school:
       enum:
         - school
     data:
-      $ref: '#/Response_application_schoolItem'
+      $ref: '#/Response_application_school_item'
     included:
       type: array
       items:
@@ -420,7 +420,7 @@ Response_application_school:
     - data
     - included
 
-Response_application_schoolItem:
+Response_application_school_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-school) | 

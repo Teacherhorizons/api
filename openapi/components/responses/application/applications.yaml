@@ -225,47 +225,19 @@ Response_applications_teacher:
   type: object
   additionalProperties: false
   properties:
-    meta:
-      $ref: '#/Response_applications_meta'
     schema:
       type: string
       enum:
-        - admin
+        - teacher
+    meta:
+      $ref: '#/Response_applications_meta'
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-application) | 
+        [JSON:API model](/#tag/json-api-model-application)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
-          id:
-            $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              # relationship attributes
-              status:
-                $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-            required:
-              - status
-          relationships:
-            type: object
-            additionalProperties: false
-            properties:
-              job:
-                $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
-              latestEvent:
-                $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
-            required:
-              - job
-              - latestEvent
-        required:
-          - type
-          - id
-          - attributes
-          - relationships
+        $ref: '#/Response_applications_teacher_item'
     included:
       type: array
       items:
@@ -278,6 +250,40 @@ Response_applications_teacher:
     - schema
     - data
     - included
+
+Response_applications_teacher_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+      required:
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        latestEvent:
+          $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
+      required:
+        - job
+        - latestEvent
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_applications_includedJob_teacher:
   type: object
@@ -371,49 +377,19 @@ Response_applications_school:
   type: object
   additionalProperties: false
   properties:
-    meta:
-      $ref: '#/Response_applications_meta'
     schema:
       type: string
       enum:
-        - admin
+        - school
+    meta:
+      $ref: '#/Response_applications_meta'
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-application) | 
+        [JSON:API model](/#tag/json-api-model-application)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
-          id:
-            $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              # simple attributes
-              creationDate:
-                $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
-              latestUpdateDate:
-                $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
-              # relationship attributes
-              status:
-                $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-          relationships:
-            type: object
-            additionalProperties: false
-            properties:
-              job:
-                $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
-              teacher:
-                $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-              latestEvent:
-                $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
-        required:
-          - type
-          - id
-          - attributes
-          - relationships
+        $ref: '#/Response_applications_school_item'
     included:
       type: array
       items:
@@ -427,6 +403,42 @@ Response_applications_school:
     - schema
     - data
     - included
+
+Response_applications_school_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        # relationship attributes
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        latestEvent:
+          $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
 
 Response_applications_includedTeacher_school:
   type: object
