@@ -16,34 +16,40 @@ Response_regional-countryArticles_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-countryArticle) | 
+        [JSON:API model](/#tag/json-api-model-regional-countryArticle)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_type"
-          id:
-            $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_id"
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              #simple attributes
-              title:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_title"
-              snippet:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
-              url:
-                $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_url"
-              #relationship attribute
-              photo:
-                $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
-              category:
-                $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
-        required:
-          - type
-          - id
-          - attributes
+        $ref: '#/Response_regional-countryArticles_item'
   required:
     - schema
     - data
+
+Response_regional-countryArticles_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_type"
+    id:
+      $ref: "../../models/json-api/regional/countryArticle.yaml#/JsonApiModel_regional-countryArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        title:
+          $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_title"
+        snippet:
+          $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
+        url:
+          $ref: "../../models/library/regional/countryArticle.yaml#/regional-countryArticle_url"
+        #relationship attribute
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        category:
+          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+  required:
+    - type
+    - id
+    - attributes

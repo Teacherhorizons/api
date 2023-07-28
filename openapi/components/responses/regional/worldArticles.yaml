@@ -16,34 +16,40 @@ Response_regional-worldArticles_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-worldArticle) | 
+        [JSON:API model](/#tag/json-api-model-regional-worldArticle)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_type"
-          id:
-            $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_id"
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              #simple attributes
-              title:
-                $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_title"
-              snippet:
-                $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
-              url:
-                $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_url"
-              #relationship attribute
-              photo:
-                $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
-              category:
-                $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
-        required:
-          - type
-          - id
-          - attributes
+        $ref: '#/Response_regional-worldArticles_item'
   required:
     - schema
     - data
+
+Response_regional-worldArticles_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_type"
+    id:
+      $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        title:
+          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_title"
+        snippet:
+          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
+        url:
+          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_url"
+        #relationship attribute
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        category:
+          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+  required:
+    - type
+    - id
+    - attributes

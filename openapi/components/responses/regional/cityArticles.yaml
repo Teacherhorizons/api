@@ -16,40 +16,46 @@ Response_regional-cityArticles_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-cityArticle) | 
+        [JSON:API model](/#tag/json-api-model-regional-cityArticle)
       items:
-        type: object
-        additionalProperties: false
-        properties:
-          type:
-            $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_type"
-          id:
-            $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_id"
-          attributes:
-            type: object
-            additionalProperties: false
-            properties:
-              #simple attributes
-              title:
-                $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title"
-              snippet:
-                $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet"
-              url:
-                $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url"
-              #relationship attribute
-              photo:
-                $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
-              category:
-                $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
-            required:
-              - title
-              - snippet
-              - url
-              - photo
-              - category
-        required:
-          - type
-          - id
-          - attributes
+        $ref: '#/Response_regional-cityArticles_item'
   required:
     - schema
     - data
+
+Response_regional-cityArticles_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_type"
+    id:
+      $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        #simple attributes
+        title:
+          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title"
+        snippet:
+          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet"
+        url:
+          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url"
+        #relationship attribute
+        photo:
+          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+        category:
+          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+      required:
+        - title
+        - snippet
+        - url
+        - photo
+        - category
+  required:
+    - type
+    - id
+    - attributes
