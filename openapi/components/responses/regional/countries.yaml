@@ -18,6 +18,9 @@ Response_regional-countries_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-country) | 
+        [JSON:API model](/#tag/json-api-model-regional-country)
       items:
         $ref: './country.yaml#/Response_regional-country_notSignedIn_item'
     included:
@@ -45,6 +48,9 @@ Response_regional-countries_notSignedInMultiple:
         - not-signed-in-multiple
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-country) | 
+        [JSON:API model](/#tag/json-api-model-regional-country)
       items:
         $ref: '#/Response_regional-countries_notSignedInMultiple_item'
   required:

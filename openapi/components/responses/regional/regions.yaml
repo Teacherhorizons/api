@@ -18,6 +18,9 @@ Response_regional-regions_notSignedIn:
         - not-signed-in
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-region) | 
+        [JSON:API model](/#tag/json-api-model-regional-region)
       items:
         $ref: './region.yaml#/Response_regional-region_notSignedIn_item'
     included:
@@ -44,6 +47,9 @@ Response_regional-regions_notSignedInMultiple:
         - not-signed-in-multiple
     data:
       type: array
+      description: |
+        [Simple model](/#tag/simple-model-regional-region) | 
+        [JSON:API model](/#tag/json-api-model-regional-region)
       items:
         $ref: '#/Response_regional-regions_notSignedInMultiple_item'
   required:
