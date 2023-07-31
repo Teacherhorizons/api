@@ -1,14 +1,17 @@
-#attributes
+# simple attributes
 teacher-teacherDocument_url:
   type: object
   example: /foo/bar/baz.html
+
 teacher-teacherDocument_name:
   type: object
   example: Lorem ipsum
+
 teacher-teacherDocument_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+
 teacher-teacherDocument_latestUpdateDate:
   type: integer
   format: date-time
@@ -20,54 +23,21 @@ teacher-teacherDocument_creationUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
+
 teacher-teacherDocument_latestUpdateUserId:
   type: integer
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
+
 teacher-teacherDocument_teacherId:
   type: integer
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
+
 teacher-teacherDocument_categoryId:
   type: integer
   example: 1
   description: |
     Relationship to [teacher-documentCategory](/#tag/simple-model-teacher-documentCategory)
-#relationships
-teacher-teacherDocument_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher-teacherDocument_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher-teacherDocument_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id

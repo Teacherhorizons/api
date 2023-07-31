@@ -3,10 +3,10 @@ SimpleModel_teacher-photoCategory:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_teacher-photoCategory_id"
-    #simple attributes
+      $ref: '#/SimpleModel_teacher-photoCategory_id'
+    # simple attributes
     name:
-      $ref: "../../library/teacher/photoCategory.yaml#/teacher-photoCategory_name"
+      $ref: '../../library/teacher/photoCategory.yaml#/teacher-photoCategory_name'
   required:
     - id
 

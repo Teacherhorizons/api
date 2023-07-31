@@ -3,10 +3,10 @@ SimpleModel_teacher-videoCategory:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_teacher-videoCategory_id"
-    #simple attributes
+      $ref: '#/SimpleModel_teacher-videoCategory_id'
+    # simple attributes
     name:
-      $ref: "../../library/teacher/videoCategory.yaml#/teacher-videoCategory_name"
+      $ref: '../../library/teacher/videoCategory.yaml#/teacher-videoCategory_name'
   required:
     - id
 

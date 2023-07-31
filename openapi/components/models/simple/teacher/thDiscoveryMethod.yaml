@@ -3,15 +3,15 @@ SimpleModel_teacher-thDiscoveryMethod:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_teacher-thDiscoveryMethod_id"
-    #simple attributes
+      $ref: '#/SimpleModel_teacher-thDiscoveryMethod_id'
+    # simple attributes
     name:
-      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_name"
+      $ref: '../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_name'
     precedence:
-      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_precedence"
-    #relationship attributes:
+      $ref: '../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_precedence'
+    # relationship attributes:
     categoryId:
-      $ref: "../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_categoryId"
+      $ref: '../../library/teacher/thDiscoveryMethod.yaml#/teacher-thDiscoveryMethod_categoryId'
   required:
     - id
 # shared

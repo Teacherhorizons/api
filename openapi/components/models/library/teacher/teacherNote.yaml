@@ -1,4 +1,4 @@
-#attributes
+# simple attributes
 teacher-teacherNote_text:
   type: string
   example: Lorem ipsum
@@ -11,7 +11,7 @@ teacher-teacherNote_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-#relationship attributes
+# relationship attributes
 teacher-teacherNote_teacherId:
   type: integer
   example: 1
@@ -23,7 +23,7 @@ teacher-teacherNote_typeId:
   example: 1
   description: |
     Relationship to [teacher-noteType](/#tag/simple-model-teacher-noteType)
- 
+
 teacher-teacherNote_creationUserId:
   type: integer
   example: 1

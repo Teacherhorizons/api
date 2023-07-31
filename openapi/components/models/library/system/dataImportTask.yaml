@@ -1,4 +1,4 @@
-# attributes
+# simple attributes
 system-dataImportTask_spreadsheetId:
   type: string
   maxLength: 100
@@ -6,7 +6,7 @@ system-dataImportTask_spreadsheetId:
   example: 1RuQjYcPYwMukdEjhzq7EU1SVU9rBOpu3ijO1uaw7A0g
 
 system-dataImportTask_worksheetId:
-  type: number
+  type: integer
   description: non-standard id property (in 1 way)
   example: 2137514194
 
@@ -27,15 +27,15 @@ system-dataImportTask_postImportSql:
   type: string
   example: call foo();
 
-system-dataImportTask_isActive:	
+system-dataImportTask_isActive:
   type: boolean
-  example: 1 
+  example: 1
 
 system-dataImportTask_minutesBetweenRuns:
   type: number
   example: 1440
 
-system-dataImportTask_latestRunDate:	
+system-dataImportTask_latestRunDate:
   type: string
   format: date-time
   example: 2023-04-06 10:37:56

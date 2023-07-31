@@ -1,23 +1,23 @@
-#attributes
+# simple attributes
 staff-adviserSubjectGroup_fromDate:
   type: string
   format: date-time
   example: 1 Sep 2022
+
 staff-adviserSubjectGroup_toDate:
   type: string
   format: date-time
   example: 31 Aug 2023
 
-#relationship attribute
+# relationship attributes
 staff-adviserSubjectGroup_adviserId:
   type: integer
-  example: 123
+  example: 1
   description: |
     Relationship to [staff-staffMember](/#tag/simple-model-staff-staffMember)
 
 staff-adviserSubjectGroup_subjectGroupId:
   type: integer
-  example: 45
+  example: 1
   description: |
     Relationship to [subject-subjectGroup](/#tag/simple-model-subject-subjectGroup)
-

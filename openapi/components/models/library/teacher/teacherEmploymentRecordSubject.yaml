@@ -1,9 +1,9 @@
-#Attributes
+# simple attributes
 teacher-teacherEmploymentRecordSubject_precedence:
   type: integer
   example: 1
 
-#Relationship attributes
+# relationship attributes
 teacher-teacherEmploymentRecordSubject_teacherId:
   type: integer
   example: 1
@@ -19,38 +19,3 @@ teacher-teacherEmploymentRecordSubject_subjectId:
   example: 1
   description: |
     Relationship to [subject](/#tag/simple-model-subject)
-
-#Relationships
-teacher-teacherEmploymentRecordSubject_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id
-teacher-teacherEmploymentRecordSubject_employmentRecord:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher-teacherEmploymentRecord](/#tag/simple-model-teacher-teacherEmploymentRecord)
-  required:
-    - id
-teacher-teacherEmploymentRecordSubject_subject:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [subject](/#tag/simple-model-subject)
-  required:
-    - id

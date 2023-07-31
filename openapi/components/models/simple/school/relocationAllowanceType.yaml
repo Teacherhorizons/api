@@ -3,20 +3,19 @@ SimpleModel_school-relocationAllowanceType:
   additionalProperties: false
   properties:
     id:
-      $ref:
-        "#/SimpleModel_school-relocationAllowanceType_id"
+      $ref: '#/SimpleModel_school-relocationAllowanceType_id'
     # simple attributes
     name:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_name"
+      $ref: '../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_name'
     creationDate:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_creationDate"
+      $ref: '../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_creationDate'
     latestUpdateDate:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_latestUpdateDate"
+      $ref: '../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_latestUpdateDate'
     # relationship attributes
     creationUserId:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_creationUserId"
+      $ref: '../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/school/flightAllowanceType.yaml#/school-flightAllowanceType_latestUpdateUserId"
+      $ref: '../../library/school/relocationAllowanceType.yaml#/school-relocationAllowanceType_latestUpdateUserId'
   required:
     - id
 

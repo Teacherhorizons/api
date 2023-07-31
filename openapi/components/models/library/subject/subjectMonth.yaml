@@ -1,4 +1,4 @@
-#attributes
+# simple attributes
 subject-subjectMonth_numberOfLiveJobs:
   type: integer
   example: 51
@@ -9,7 +9,7 @@ subject-subjectMonth_monthNumber:
   example: 9
   description: Derived (dw)
 
-#relationship attributes
+# relationship attributes
 subject-subjectMonth_subjectId:
   type: integer
   example: 1
@@ -18,6 +18,6 @@ subject-subjectMonth_subjectId:
 
 subject-subjectMonth_monthId:
   type: integer
-  example: 202111
+  example: 202209
   description: |
     Relationship to [time-month](/#tag/simple-model-time-month)

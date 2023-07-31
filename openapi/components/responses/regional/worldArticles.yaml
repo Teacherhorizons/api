@@ -1,10 +1,10 @@
 Response_regional-worldArticles:
   oneOf:
-    - $ref: "#/Response_regional-worldArticles_notSignedIn"
+    - $ref: '#/Response_regional-worldArticles_notSignedIn'
   discriminator:
     propertyName: schema
     mapping:
-      not-signed-in: "#/Response_regional-worldArticles_notSignedIn"
+      not-signed-in: '#/Response_regional-worldArticles_notSignedIn'
 
 Response_regional-worldArticles_notSignedIn:
   type: object
@@ -30,25 +30,25 @@ Response_regional-worldArticles_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_type"
+      $ref: '../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_type'
     id:
-      $ref: "../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_id"
+      $ref: '../../models/json-api/regional/worldArticle.yaml#/JsonApiModel_regional-worldArticle_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         title:
-          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_title"
+          $ref: '../../models/library/regional/worldArticle.yaml#/regional-worldArticle_title'
         snippet:
-          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
+          $ref: '../../models/library/regional/worldArticle.yaml#/regional-worldArticle_snippet'
         url:
-          $ref: "../../models/library/regional/worldArticle.yaml#/regional-worldArticle_url"
+          $ref: '../../models/library/regional/worldArticle.yaml#/regional-worldArticle_url'
         #relationship attribute
         photo:
-          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         category:
-          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+          $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
   required:
     - type
     - id

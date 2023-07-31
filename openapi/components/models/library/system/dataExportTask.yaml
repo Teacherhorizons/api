@@ -1,4 +1,4 @@
-# attributes
+# simple attributes
 system-dataExportTask_selectSql:
   type: string
   example: SELECT id, name FROM foo.bar;
@@ -10,7 +10,7 @@ system-dataExportTask_spreadsheetId:
   example: 1RuQjYcPYwMukdEjhzq7EU1SVU9rBOpu3ijO1uaw7A0g
 
 system-dataExportTask_worksheetId:
-  type: number
+  type: integer
   description: non-standard id property (in 1 way)
   example: 2137514194
 
@@ -19,20 +19,20 @@ system-dataExportTask_rangeName:
   maxLength: 100
   example: A2:P20
 
-system-dataExportTask_latestRunDateCellName:	
+system-dataExportTask_latestRunDateCellName:
   type: string
   maxLength: 5
   example: B25
 
-system-dataExportTask_isActive:	
+system-dataExportTask_isActive:
   type: boolean
-  example: 1 
+  example: 1
 
 system-dataExportTask_minutesBetweenRuns:
   type: number
   example: 1440
 
-system-dataExportTask_latestRunDate:	
+system-dataExportTask_latestRunDate:
   type: string
   format: date-time
   example: 2023-04-06 10:37:56

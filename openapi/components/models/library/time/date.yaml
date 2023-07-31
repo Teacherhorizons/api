@@ -1,4 +1,4 @@
-# attributes
+# simple attributes
 time-date_date:
   type: string
   format: date-time
@@ -9,15 +9,15 @@ time-date_name:
   type: string
   example: Sep 2022
 
-time-date_isMostRecentComplete: 
+time-date_isMostRecentComplete:
   type: boolean
   example: true
 
-time-date_isCurrent: 
+time-date_isCurrent:
   type: boolean
   example: true
 
-#relationship attributes
+# relationship attributes
 time-date_weekId:
   type: integer
   example: 1
@@ -33,7 +33,3 @@ time-date_schoolYearId:
   type: integer
   example: 1
   description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
-
-
-
-

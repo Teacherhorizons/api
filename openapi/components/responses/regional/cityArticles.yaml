@@ -1,10 +1,10 @@
 Response_regional-cityArticles:
   oneOf:
-    - $ref: "#/Response_regional-cityArticles_notSignedIn"
+    - $ref: '#/Response_regional-cityArticles_notSignedIn'
   discriminator:
     propertyName: schema
     mapping:
-      not-signed-in: "#/Response_regional-cityArticles_notSignedIn"
+      not-signed-in: '#/Response_regional-cityArticles_notSignedIn'
 
 Response_regional-cityArticles_notSignedIn:
   type: object
@@ -30,25 +30,25 @@ Response_regional-cityArticles_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_type"
+      $ref: '../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_type'
     id:
-      $ref: "../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_id"
+      $ref: '../../models/json-api/regional/cityArticle.yaml#/JsonApiModel_regional-cityArticle_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         title:
-          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title"
+          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title'
         snippet:
-          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet"
+          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet'
         url:
-          $ref: "../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url"
+          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url'
         #relationship attribute
         photo:
-          $ref: "../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         category:
-          $ref: "../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
+          $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
       required:
         - title
         - snippet

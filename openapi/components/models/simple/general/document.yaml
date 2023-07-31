@@ -3,36 +3,37 @@ SimpleModel_general-document:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_general-document_id"
+      $ref: '#/SimpleModel_general-document_id'
     # simple attributes
     name:
-      $ref: "../../library/general/document.yaml#/general-document_name"
+      $ref: '../../library/general/document.yaml#/general-document_name'
     filePath:
-      $ref: "../../library/general/document.yaml#/general-document_filePath"
+      $ref: '../../library/general/document.yaml#/general-document_filePath'
     creationDate:
-      $ref: "../../library/general/document.yaml#/general-document_creationDate"
+      $ref: '../../library/general/document.yaml#/general-document_creationDate'
     latestUpdateDate:
-      $ref: "../../library/general/document.yaml#/general-document_latestUpdateDate"
+      $ref: '../../library/general/document.yaml#/general-document_latestUpdateDate'
     caption:
-      $ref: "../../library/general/document.yaml#/general-document_caption"
+      $ref: '../../library/general/document.yaml#/general-document_caption'
     # relationship attributes
     typeId:
-      $ref: "../../library/general/document.yaml#/general-document_typeId"
+      $ref: '../../library/general/document.yaml#/general-document_typeId'
     creationUserId:
-      $ref: "../../library/general/document.yaml#/general-document_creationUserId"
-    latestUpdateUser:
-      $ref: "../../library/general/document.yaml#/general-document_latestUpdateUserId"
+      $ref: '../../library/general/document.yaml#/general-document_creationUserId'
+    latestUpdateUserId:
+      $ref: '../../library/general/document.yaml#/general-document_latestUpdateUserId'
   required:
-  # simple attributes
-  - name
-  - filePath
-  - creationDate
-  - latestUpdateDate
-  - caption
-  # relationship attributes
-  - creationUser
-  - latestUpdateUser
-  - type
+    - id
+    # simple attributes
+    - name
+    - filePath
+    - creationDate
+    - latestUpdateDate
+    - caption
+    # relationship attributes
+    - typeId
+    - creationUserId
+    - latestUpdateUserId
 
 # shared
 SimpleModel_general-document_id:

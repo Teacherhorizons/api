@@ -10,12 +10,12 @@ JsonApiModel_application-action:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         detail:
           $ref: '../../library/application/action.yaml#/application-action_detail'
         politeEmailMessage:
           $ref: '../../library/application/action.yaml#/application-action_politeEmailMessage'
-        #relationship attributes
+        # relationship attributes
         # TODO RR: check / consider removing
         # endState:
         #   $ref: "../../library/application/action.yaml#/application-action_endState"

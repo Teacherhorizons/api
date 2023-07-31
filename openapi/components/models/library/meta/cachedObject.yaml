@@ -1,12 +1,12 @@
-#Attributes
+# simple attributes
 meta-cachedObject_key:
   type: string
   example: regional-regions/?schema=not-signed-in,filter[slug]=europe,include=staff
 
 meta-cachedObject_object:
-  type: string 
-  example: { "schema": "not-signed-in", data: [...] }
+  type: string
+  example: { 'schema': 'not-signed-in', data: [...] }
 
-meta-cachedObject_durationInSeconds: 
+meta-cachedObject_durationInSeconds:
   type: number
   example: 3600

@@ -1,4 +1,4 @@
-#attributes
+# simple attributes
 teacher-teacherLookingForRole_creationDate:
   type: string
   format: date-time
@@ -8,7 +8,7 @@ teacher-teacherLookingForRole_latestUpdateDate:
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-#relationship attributes
+# relationship attributes
 teacher-teacherLookingForRole_teacherId:
   type: integer
   example: 1
@@ -29,52 +29,3 @@ teacher-teacherLookingForRole_latestUpdateUserId:
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
-
-#relationships
-teacher-teacherLookingForRole_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id
-
-teacher-teacherLookingForRole_role:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-role](/#tag/simple-model-general-role)
-  required:
-    - id
-
-teacher-teacherLookingForRole_creationUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id
-
-teacher-teacherLookingForRole_latestUpdateUser:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [user](/#tag/simple-model-user)
-  required:
-    - id

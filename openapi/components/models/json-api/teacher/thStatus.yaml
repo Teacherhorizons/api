@@ -3,16 +3,16 @@ JsonApiModel_teacher-thStatus:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_teacher-thStatus_type"
+      $ref: '#/JsonApiModel_teacher-thStatus_type'
     id:
-      $ref: "#/JsonApiModel_teacher-thStatus_id"
+      $ref: '#/JsonApiModel_teacher-thStatus_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         description:
-          $ref: "../../library/teacher/thStatus.yaml#/teacher-thStatus_description"
+          $ref: '../../library/teacher/thStatus.yaml#/teacher-thStatus_description'
   required:
     - type
     - id
@@ -25,14 +25,6 @@ JsonApiModel_teacher-thStatus_type:
 
 JsonApiModel_teacher-thStatus_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
-
-
-
-
-
-
-
-

@@ -1,9 +1,9 @@
-#attributes
+# simple attributes
 teacher-teacherLookingForSubject_precedence:
   type: integer
   example: 1
 
-#relationship attributes
+# relationship attributes
 teacher-teacherLookingForSubject_subjectId:
   type: integer
   example: 1
@@ -14,28 +14,3 @@ teacher-teacherLookingForSubject_teacherId:
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
-
-#relarionships
-teacher-teacherLookingForSubject_subject:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [subject](/#tag/simple-model-subject)
-  required:
-    - id
-
-teacher-teacherLookingForSubject_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id

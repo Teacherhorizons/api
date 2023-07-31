@@ -10,7 +10,7 @@ JsonApiModel_teacher:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         memberNumber:
           $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
         availableFromDate:
@@ -51,7 +51,7 @@ JsonApiModel_teacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl'
         videoInterviewClipUrl:
           $ref: '../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl'
-        #relationship attributes
+        # relationship attributes
         user:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         qualificationType:

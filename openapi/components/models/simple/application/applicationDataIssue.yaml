@@ -3,17 +3,17 @@ SimpleModel_application-applicationDataIssue:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_application-applicationDataIssue_id"
+      $ref: '#/SimpleModel_application-applicationDataIssue_id'
     # simple attributes
     date:
-      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date"
+      $ref: '../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date'
     name:
-      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_name"
-    #relationship attributes
+      $ref: '../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_name'
+    # relationship attributes
     applicationId:
-      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_applicationId"
+      $ref: '../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_applicationId'
     guidelineId:
-      $ref: "../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_guidelineId"
+      $ref: '../../library/application/applicationDataIssue.yaml#/application-applicationDataIssue_guidelineId'
   required:
     - id
     - date

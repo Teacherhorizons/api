@@ -1,22 +1,22 @@
-#simple attributes
+# simple attributes
 time-month_name:
   type: string
   example: Sep 2022
-  
+
 time-month_number:
   type: integer
   example: 9
   description: Derived (dw)
 
-time-month_isMostRecentComplete: 
+time-month_isMostRecentComplete:
   type: boolean
   example: true
 
-time-month_isCurrent: 
+time-month_isCurrent:
   type: boolean
   example: true
 
-#relationship attributes
+# relationship attributes
 time-month_startDateId:
   type: integer
   example: 1
@@ -32,6 +32,3 @@ time-month_schoolYearId:
   type: integer
   example: 1
   description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
-
-
-

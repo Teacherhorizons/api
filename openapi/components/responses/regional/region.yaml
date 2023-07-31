@@ -173,7 +173,7 @@ Response_regional-region_includedCountry_notSignedIn:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_numberOfSchools'
         isoCode:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_isoCode'
-        #relationship attributes
+        # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
@@ -302,7 +302,7 @@ Response_regional-region_includedSchool_notSignedIn:
           $ref: '../../../components/models/library/school/school.yaml#/school_name'
         slug:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
-        #relationship attributes
+        # relationship attributes
         smallProfilePhoto:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:

@@ -1,4 +1,4 @@
-#Attributes
+# simple attributes
 teacher-teacherEmploymentRecord_employerName:
   type: string
   example: Colegio Internacional
@@ -17,7 +17,7 @@ teacher-teacherEmploymentRecord_allowDisplay:
   type: boolean
   example: false
 
-  #relationship attributes
+  # relationship attributes
 teacher-teacherEmploymentRecord_teacherId:
   type: integer
   example: 1
@@ -38,49 +38,3 @@ teacher-teacherEmploymentRecord_countryId:
   example: 1
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)
-
-#relationships
-teacher-teacherEducationLevel_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [teacher](/#tag/simple-model-teacher)
-  required:
-    - id
-teacher-teacherEducationLevel_role:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [general-role](/#tag/simple-model-general-role)
-  required:
-    - id
-teacher-teacherEducationLevel_school:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [school](/#tag/simple-model-school)
-  required:
-    - id
-teacher-teacherEducationLevel_country:
-  type: object
-  additionalProperties: false
-  properties:
-    id:
-      type: string
-      example: '1'
-      description: |
-        Relationship to [regional-country](/#tag/simple-model-regional-country)
-  required:
-    - id

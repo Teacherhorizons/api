@@ -340,7 +340,7 @@ Response_regional-countrySubject_includedRegionSubject_notSignedIn:
         # simple attributes
         numberOfLiveJobs:
           $ref: '../../models/library/regional/regionSubject.yaml#/regional-regionSubject_numberOfLiveJobs'
-        #relationship attributes
+        # relationship attributes
         region:
           $ref: '../../models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
@@ -526,7 +526,7 @@ Response_regional-countrySubject_includedStaff_notSignedIn:
       type: object
       additionalProperties: false
       properties:
-        #simple attributes
+        # simple attributes
         description:
           $ref: '../../models/library/staff/staffMember.yaml#/staff-staffMember_description'
         # relationship attributes

@@ -3,18 +3,18 @@ SimpleModel_application-action:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_application-action_id"
-    #simple attributes
+      $ref: '#/SimpleModel_application-action_id'
+    # simple attributes
     detail:
-      $ref: "../../library/application/action.yaml#/application-action_detail"
+      $ref: '../../library/application/action.yaml#/application-action_detail'
     politeEmailMessage:
-      $ref: "../../library/application/action.yaml#/application-action_politeEmailMessage"
-    #relationship attributes
+      $ref: '../../library/application/action.yaml#/application-action_politeEmailMessage'
+    # relationship attributes
     endStateId:
-      $ref: "../../library/application/action.yaml#/application-action_endStateId"
+      $ref: '../../library/application/action.yaml#/application-action_endStateId'
       #endState - check with Ryan
     emailId:
-      $ref: "../../library/application/action.yaml#/application-action_emailId"
+      $ref: '../../library/application/action.yaml#/application-action_emailId'
   required:
     - id
 

@@ -1,9 +1,9 @@
-#attributes
+# simple attributes
 teacher-teacherReferenceResponse_text:
   type: string
   example: Foo bar
 
-#relationship attributes
+# relationship attributes
 teacher-teacherReferenceResponse_requestId:
   type: integer
   example: 1
@@ -14,4 +14,3 @@ teacher-teacherReferenceResponse_questionId:
   example: 1
   description: |
     Relationship to [teacher-referenceQuestion](/#tag/simple-model-teacher-referenceQuestion)
- 

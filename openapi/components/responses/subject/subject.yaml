@@ -406,7 +406,7 @@ Response_subject_includedCountry_notSignedIn:
         # simple attributes
         name:
           $ref: '../../../components/models/library/regional/country.yaml#/regional-country_name'
-        #relationship attributes
+        # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         # region:
@@ -736,4 +736,3 @@ Response_subject_includedEnvironment_notSignedIn:
     - type
     - id
     - attributes
-
