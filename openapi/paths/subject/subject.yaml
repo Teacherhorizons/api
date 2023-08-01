@@ -11,6 +11,7 @@ get:
   parameters:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_notSignedInSchema'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: path
       name: subjectId
       required: true
@@ -37,19 +38,6 @@ get:
       example: world, regions, ambassador, jobs, subjects, teachers, articles, pages, jobFaqs, advisers, trainingProviders, resources, months
       schema:
         type: string
-    - in: query
-      name: filter
-      style: deepObject
-      allowReserved: true
-      explode: true
-      schema:
-        type: object
-        additionalProperties: false
-        properties:
-          filter[slug]:
-            type: string
-        example:
-          slug: maths
 
   responses:
     '200':

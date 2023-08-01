@@ -8,6 +8,7 @@ JsonApiModel_system-page:
       $ref: '#/JsonApiModel_system-page_id'
     attributes:
       type: object
+      # TODO RR: consider
       description: \'entity\' relationship attribute not included for now (since it\'s a non-specific relationship)
       additionalProperties: false
       properties:
@@ -22,6 +23,7 @@ JsonApiModel_system-page:
         # entity - removed for now (since is a non-specific relationship)
     relationships:
       type: object
+      # TODO RR: consider
       description: \'entity\' relationship not included for now (since it\'s a non-specific relationship)
       additionalProperties: false
       properties:
@@ -47,6 +49,8 @@ JsonApiModel_system-page_id:
 
 JsonApiModel_system-page_relationship_attribute:
   type: object
+  description: |
+    Main properties of [system-page](/#tag/simple-model-system-page)
   additionalProperties: false
   properties:
     id:
@@ -60,6 +64,9 @@ JsonApiModel_system-page_relationship_attribute:
 
 JsonApiModel_system-page_relationship:
   type: object
+  description: |
+    [Simple model](/#tag/simple-model-system-page) | 
+    [JSON:API model](/#tag/json-api-model-system-page)
   additionalProperties: false
   properties:
     data:

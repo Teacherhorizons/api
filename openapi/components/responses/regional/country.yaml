@@ -411,7 +411,7 @@ Response_regional-country_includedAmbassador_notSignedIn:
       $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_id'
     attributes:
       type: object
-      # additionalProperties: false
+      additionalProperties: false
       properties:
         # simple attributes
         levelName:

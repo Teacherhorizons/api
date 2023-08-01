@@ -1,14 +1,14 @@
 Response_general-currency:
   oneOf:
-    - $ref: "#/Response_general-currency_admin"
-    - $ref: "#/Response_general-currency_school"
-    - $ref: "#/Response_general-currency_teacher"
+    - $ref: '#/Response_general-currency_admin'
+    - $ref: '#/Response_general-currency_school'
+    - $ref: '#/Response_general-currency_teacher'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_general-currency_admin"
-      school: "#/Response_general-currency_school"
-      teacher: "#/Response_general-currency_teacher"
+      admin: '#/Response_general-currency_admin'
+      school: '#/Response_general-currency_school'
+      teacher: '#/Response_general-currency_teacher'
 
 Response_general-currency_admin:
   type: object
@@ -34,23 +34,23 @@ Response_general-currency_admin_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type'
     id:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         code:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_code'
         symbol:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_symbol'
         name:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_name'
         creationDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_creationDate'
         latestUpdateDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate'
       required:
         - code
         - symbol
@@ -58,9 +58,9 @@ Response_general-currency_admin_item:
         - creationDate
         - latestUpdateDate
   required:
-  - type
-  - id
-  - attributes
+    - type
+    - id
+    - attributes
 
 Response_general-currency_school:
   type: object
@@ -86,23 +86,23 @@ Response_general-currency_school_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type'
     id:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         code:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_code'
         symbol:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_symbol'
         name:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_name'
         creationDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_creationDate'
         latestUpdateDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate'
       required:
         - code
         - symbol
@@ -138,23 +138,23 @@ Response_general-currency_teacher_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_type'
     id:
-      $ref: "../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id"
+      $ref: '../../../components/models/json-api/general/currency.yaml#/JsonApiModel_general-currency_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         code:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_code"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_code'
         symbol:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_symbol"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_symbol'
         name:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_name"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_name'
         creationDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_creationDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_creationDate'
         latestUpdateDate:
-          $ref: "../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate"
+          $ref: '../../../components/models/library/general/currency.yaml#/general-currency_latestUpdateDate'
       required:
         - code
         - symbol

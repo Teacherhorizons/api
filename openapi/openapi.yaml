@@ -674,6 +674,7 @@ tags:
     x-displayName: Simple model - school-thRating
     description: |
       [JSON:API model](/#tag/json-api-model-school-thRating)
+      <br/><br/>Non-standard entity - TODO RR: consider
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_school-thRating" />
 
   - name: simple-model-school-ageLevel
@@ -1078,7 +1079,7 @@ tags:
       [JSON:API model](/#tag/json-api-model-user-setting)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-setting" />
 
-#   # tags - simple-models - staff
+  #   # tags - simple-models - staff
 
   - name: simple-model-staff-staffMember
     x-displayName: Simple model - staff-staffMember
@@ -1128,6 +1129,7 @@ tags:
     x-displayName: Simple model - meta-cachedObject
     description: |
       [JSON:API model](/#tag/json-api-model-meta-cachedObject)
+      <br/><br/>Non-standard entity (no id) - TODO RR: consider
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_meta-cachedObject" />
 
   # JSON:API models
@@ -1695,7 +1697,7 @@ tags:
 
   - name: json-api-model-teacher-teacherEducationLevel
     x-displayName: JSON:API model - teacher-teacherEducationLevel
-    description: |  
+    description: |
       [Simple model](/#tag/simple-model-teacher-teacherEducationLevel)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherEducationLevel" />
 

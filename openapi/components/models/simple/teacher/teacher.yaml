@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../../../../meta/schemas/SimpleModel-MultipleSchemas.json
 
-# note: schema issue here is because this ends with 'teacher', which has multiple meanings. TODO: fix
+# note: schema issue here is because this ends with 'teacher', which has multiple meanings. TODO RR: consider
 SimpleModel_teacher:
   oneOf:
     - $ref: '#/SimpleModel_teacher_admin'

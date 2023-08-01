@@ -209,9 +209,9 @@ Response_application_teacher:
           - $ref: '#/Response_application_includedJob_teacher'
           - $ref: '#/Response_application_includedUser_teacher'
   required:
-  - schema
-  - data
-  - included
+    - schema
+    - data
+    - included
 
 Response_application_teacher_item:
   type: object

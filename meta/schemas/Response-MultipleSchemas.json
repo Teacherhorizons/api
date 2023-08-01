@@ -30,7 +30,7 @@
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_included[-a-zA-Z_0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z_]*_item$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z_0-9-]*_item$": {
           "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
         },
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z_0-9]*_description$": {
@@ -111,6 +111,15 @@
             },
             "data": {
               "oneOf": [
+                {
+                  "properties": {
+                    "$ref": {
+                      "type": "string",
+                      "pattern": "^#/Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z_0-9-]*_item$"
+                    }
+                  },
+                  "required": ["$ref"]
+                },
                 {
                   "$ref": "#/definitions/Response-MultipleSchemas-DataItem"
                 },
