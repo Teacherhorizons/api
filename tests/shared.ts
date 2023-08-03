@@ -252,3 +252,111 @@ const betaData: Config.Data = {
   ],
   test: { id: 116 },
 };
+
+// TOOD: move below somewhere, investigate if interfaces can be joined with frontend
+
+// Check Response
+
+type Schema = 'not-signed-in-single' | 'not-signed-in-multiple';
+interface DataItem {
+  id: string;
+  type: string;
+}
+
+interface RelationshipData {
+  data: DataItem | DataItem[];
+}
+
+interface Relationships {
+  [key: string]: RelationshipData;
+}
+
+interface Attributes {
+  [key: string]: any;
+}
+
+interface JsonApi_Data extends DataItem {
+  relationships: Relationships;
+  attributes: Attributes;
+}
+
+interface JsonApiResponse {
+  schema: Schema;
+  data: JsonApi_Data[];
+  included: JsonApi_Data[];
+}
+
+const getDataItems = (relationships: Relationships): DataItem[] => {
+  const baseRelationshipDataItems: DataItem[] = [];
+
+  for (const relationship of Object.values(relationships)) {
+    if (Array.isArray(relationship.data)) {
+      const mappedRegions = relationship.data.map((d) => ({
+        id: d.id,
+        type: d.type,
+      }));
+      baseRelationshipDataItems.push(...mappedRegions);
+    } else {
+      baseRelationshipDataItems.push({ id: relationship.data.id, type: relationship.data.type });
+    }
+  }
+
+  return baseRelationshipDataItems;
+};
+
+const isEveryAinB = (a: DataItem[], b: DataItem[]) => {
+  return a.every((aDataItem) =>
+    b.some((bDataItem) => bDataItem.id === aDataItem.id && bDataItem.type === aDataItem.type)
+  );
+};
+
+export const getIsResponseValid = (response: JsonApiResponse) => {
+  if (!response.data[0]?.relationships) return true;
+
+  const baseRelationships = response.data[0].relationships;
+  const includedRelationships = response.included
+    .filter((item) => item.hasOwnProperty('relationships'))
+    .map((item) => item.relationships);
+
+  const baseRelationshipDataItems = getDataItems(baseRelationships);
+
+  let includedRelationshipDataItems: DataItem[] = [];
+
+  for (const includedRelationship of includedRelationships) {
+    includedRelationshipDataItems.push(...getDataItems(includedRelationship));
+  }
+
+  const allRelationships = [...baseRelationshipDataItems, ...includedRelationshipDataItems];
+
+  console.log('allRelationships: ', allRelationships);
+
+  const includedDataItems: DataItem[] = response.included.map((item) => ({ id: item.id, type: item.type }));
+
+  console.log('includedDataItems', includedDataItems);
+
+  // Step 1. Every include has a matching relationship
+  const doesEveryIncludeHaveRelationship = isEveryAinB(includedDataItems, allRelationships);
+  console.log('doesEveryIncludeHaveRelationship: ', doesEveryIncludeHaveRelationship);
+
+  // Step 2. Every relationship has a matching include
+  const doesEveryRelationshipHaveInclude = isEveryAinB(allRelationships, includedDataItems);
+  console.log('doesEveryRelationshipHaveInclude', doesEveryRelationshipHaveInclude);
+
+  // Step 3. No duplicated includes
+  const hasDuplicateInIncludes = includedDataItems.some(
+    (dataItem, index) =>
+      includedDataItems.findIndex((item) => item.id === dataItem.id && item.type === dataItem.type) !== index
+  );
+  console.log('hasDuplicateInIncludes: ', hasDuplicateInIncludes);
+
+  // Step 4. Number of includes <= Number of relationship
+  const isIncludesLessThanOrEqualRelationships = includedDataItems.length <= allRelationships.length;
+  console.log('isIncludesLessThanOrEqualRelationships: ', isIncludesLessThanOrEqualRelationships);
+
+  return (
+    doesEveryIncludeHaveRelationship &&
+    doesEveryRelationshipHaveInclude &&
+    !hasDuplicateInIncludes &&
+    isIncludesLessThanOrEqualRelationships
+  );
+};
