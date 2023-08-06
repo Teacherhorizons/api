@@ -124,7 +124,6 @@ Response_subject_notSignedIn_item:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedWorld_notSignedIn:
   type: object
@@ -242,7 +241,6 @@ Response_subject_includedRegion_notSignedIn:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedRegionSubject_notSignedIn:
   type: object
@@ -411,25 +409,20 @@ Response_subject_includedCountry_notSignedIn:
         # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        # region:
-        #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
-        - photo
-        # relationship attributes
-        # - region
+        - photo1
 
     relationships:
       type: object
       additionalProperties: false
       properties:
         region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
+          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship'
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedSubject_notSignedIn:
   type: object
