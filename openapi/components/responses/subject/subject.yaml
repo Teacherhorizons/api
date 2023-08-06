@@ -116,13 +116,14 @@ Response_subject_notSignedIn_item:
           $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
         articles:
           $ref: '../../../components/models/json-api/general/article.yaml#/JsonApiModel_general-article_relationship_multiple'
+        environment:
+          $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_relationship'
         jobFaqs:
           $ref: '../../../components/models/json-api/subject/subjectUserCommunityQuestionResponse.yaml#/JsonApiModel_subject-subjectUserCommunityQuestionResponse_relationship_multiple'
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedWorld_notSignedIn:
   type: object
@@ -240,7 +241,6 @@ Response_subject_includedRegion_notSignedIn:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedRegionSubject_notSignedIn:
   type: object
@@ -409,25 +409,20 @@ Response_subject_includedCountry_notSignedIn:
         # relationship attributes
         photo1:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        # region:
-        #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
-        - photo
-        # relationship attributes
-        # - region
+        - photo1
 
     relationships:
       type: object
       additionalProperties: false
       properties:
         region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_multiple'
+          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship'
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_subject_includedSubject_notSignedIn:
   type: object
