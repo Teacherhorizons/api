@@ -102,6 +102,17 @@
       main();
 
       function main() {
+        // update document title to match url (initially and on navigation)
+        document.addEventListener('DOMContentLoaded', function () {
+          document.title = getLastPartOfUrl(window.location.href);
+        });
+        navigation.addEventListener('navigate', (e) => {
+          setTimeout(() => {
+            document.title = getLastPartOfUrl(e.destination.url);
+          }, 0);
+        });
+
+        // TODO: add comment
         const mutationObserverCallback = () => {
           const el = document.querySelector('.menu-content');
           if (el) {
@@ -111,6 +122,15 @@
         };
         const mutationObserver = new MutationObserver(mutationObserverCallback);
         mutationObserver.observe(document.body, { subtree: true, childList: true });
+      }
+
+      function getLastPartOfUrl(url) {
+        return getLastPartOfString(url, '/');
+      }
+
+      function getLastPartOfString(s, separator) {
+        const parts = s.split('/');
+        return parts[parts.length - 1];
       }
 
       function menuLoaded() {

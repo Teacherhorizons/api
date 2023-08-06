@@ -64,13 +64,15 @@ tags:
     description: ...
 
   # tags - simple-models
-
   # tags - simple-models - application
   - name: simple-model-application
     x-displayName: Simple model - application
     description: |
       [JSON:API model](/#tag/json-api-model-application)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application" />
+    # x-meta: # couldn't get to work
+    #   seo:
+    #     title: 'Custom page title'
 
   - name: simple-model-application-applicationEvent
     x-displayName: Simple model - application-applicationEvent
@@ -125,9 +127,7 @@ tags:
     description: |
       [JSON:API model](/#tag/json-api-model-application-eventTypeAction)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
-
   # tags - simple-models - system
-
   - name: simple-model-system-page
     x-displayName: Simple model - system-page
     description: |

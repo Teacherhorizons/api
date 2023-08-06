@@ -12,19 +12,20 @@ lint:
     #   severity: error
 features.openapi:
   htmlTemplate: ./docs/index.html
+  # pagination: item # couldn't get to work
   theme:
     colors:
       primary:
-        main: "#00264B"
+        main: '#00264B'
       secondary:
-        main: "#3FA9B3"
+        main: '#3FA9B3'
       warning:
-        main: "#FF725E"
+        main: '#FF725E'
   generateCodeSamples:
     languages: # Array of language config objects; indicates in which languages to generate code samples.
       - lang: curl # Can be one of the following supported languages: "curl", "Node.js", "JavaScript".
-      - lang: "Node.js"
-      - lang: "JavaScript"
+      - lang: 'Node.js'
+      - lang: 'JavaScript'
   expandResponses: all
   hideDownloadButton: true
   jsonSampleExpandLevel: all

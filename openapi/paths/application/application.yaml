@@ -1,6 +1,9 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
+  # x-meta: # couldn't get to work
+  #   seo:
+  #     title: 'Custom page title'
   operationId: get-application
   summary: Get an application
   tags:
