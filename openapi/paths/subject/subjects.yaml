@@ -31,6 +31,7 @@ get:
         - subjects - All subjects which have a subject page except for the queried subject
         - teachers - 3 random teachers who have a subject testimonial
         - articles - All articles for subject
+        - environment - The system environment
         - pages - All pages for subject
         - jobFaqs - All job FAQ responses for subject
         - advisers - All advisers for subject
@@ -38,7 +39,7 @@ get:
         - resources - All resources for subject
         - months - Months of previous school year
       # required: true
-      example: world, regions, ambassador, jobs, subjects, teachers, articles, pages, jobFaqs, advisers, trainingProviders, resources, months
+      example: world, regions, ambassador, jobs, subjects, teachers, articles, environment, pages, jobFaqs, advisers, trainingProviders, resources, months
       schema:
         type: string
     - in: query

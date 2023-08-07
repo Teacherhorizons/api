@@ -89,6 +89,8 @@ Response_regional-countrySubject_notSignedIn_item:
           $ref: '../../models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship'
         jobs:
           $ref: '../../models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
+        environment:
+          $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_relationship'
   required:
     - type
     - id
