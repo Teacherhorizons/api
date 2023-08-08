@@ -276,6 +276,9 @@ Response_subject_includedAmbassador_notSignedIn:
       type: object
       additionalProperties: false
       properties:
+        # simple attributes
+        testimonial:
+          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial'
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
