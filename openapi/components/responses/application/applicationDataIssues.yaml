@@ -91,21 +91,15 @@ Response_application-applicationDataIssues_admin-v2_item:
       type: object
       additionalProperties: false
       properties:
+        #simple attribute
         date:
           $ref: '../../../components/models/library/application/applicationDataIssue.yaml#/application-applicationDataIssue_date'
+        #relationship attribute
+        guideline:
+          $ref: '../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute'
       required:
         - date
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        # application:
-        #   $ref: "../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship"
-        guideline:
-          $ref: '../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship'
-      required:
-        # - application
-        - guideline
+        - guideline       
   required:
     - type
     - id
