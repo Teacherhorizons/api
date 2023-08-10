@@ -11,8 +11,8 @@ JsonApiModel_teacher-thStatus:
       additionalProperties: false
       properties:
         # simple attributes
-        description:
-          $ref: '../../library/teacher/thStatus.yaml#/teacher-thStatus_description'
+        name:
+          $ref: '../../library/teacher/thStatus.yaml#/teacher-thStatus_name'
   required:
     - type
     - id

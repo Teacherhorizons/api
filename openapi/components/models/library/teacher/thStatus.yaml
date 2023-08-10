@@ -1,4 +1,12 @@
 # simple attributes
-teacher-thStatus_description:
+teacher-thStatus_name:
   type: string
   example: New
+  description: |
+    Possible values are:
+      - New
+      - Rejected
+      - Pre-CV
+      - Awaiting CV review
+      - CV rejected
+      - Activated (used to be Reserve and Endorsed, separately)

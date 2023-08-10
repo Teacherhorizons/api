@@ -116,9 +116,16 @@ teacher_internationalSchoolExperienceId:
   description: |
     Relationship to [teacher-internationalExperience](/#tag/simple-model-teacher-internationalExperience)
 teacher_userTypeId:
+  deprecated: true
   type: integer
   example: 1
-  description: Relationship to user [TODO - looks wrong, review]
+  description: |
+    Relationship to [teacher-thStatus](/#tag/simple-model-teacher-thStatus)
+teacher_thStatusId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [teacher-thStatus](/#tag/simple-model-teacher-thStatus); was referred to as userTypeId
 teacher_thDiscoveryMethodId:
   type: integer
   example: 1
