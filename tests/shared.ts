@@ -179,6 +179,27 @@ const jpLocalData: Config.Data = {
     { id: 131494 },
   ],
   test: { id: 109 },
+};
+
+const betaData: Config.Data = {
+  schools: [
+    { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
+    { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
+  ],
+  teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
+  jobs: [{ id: 1852 }, { id: 1853 }],
+  applications: [{ id: 135370 }, { id: 135371 }, { id: 135372 }, { id: 135373 }, { id: 135374 }],
+  applicationEvents: [
+    { id: 2408108 },
+    { id: 2408109 },
+    { id: 2408110 },
+    { id: 2408111 },
+    { id: 2408112 },
+    { id: 2408113 },
+    { id: 2408114 },
+    { id: 2408115 },
+  ],
+  regions: [{ id: 3, slug: 'central-america', numberOfArticles: 3, numberOfCountries: 18, numberOfStaff: 2 }],
   dataIssues: [{ id: 34, expectedDataLength: 5 }],
   users: [
     { id: 2, userTypeSlug: 'admin' },
@@ -380,4 +401,17 @@ export const getIsResponseValid = (response: JsonApiResponse) => {
     !hasDuplicateInIncludes &&
     isIncludesLessThanOrEqualRelationships
   );
+};
+
+export const isArrayOfLength1 = (x: unknown) => isArrayOfLengthN(x);
+
+export const isArrayOfLengthN = (x: unknown, lengthN: number = 1): boolean => {
+  if (!Array.isArray(x)) return false;
+  if (x.length !== lengthN) return false;
+  return true;
+};
+
+export const numberOfIncludedMatches = (response: JsonApi.Response, entityType: string, number: number): boolean => {
+  if (response.included.filter((x: JsonApi.ResourceObject) => x.type === entityType).length !== number) return false;
+  return true;
 };

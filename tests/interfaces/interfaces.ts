@@ -48,6 +48,11 @@ declare namespace Config {
   export interface Region {
     id?: number;
     slug?: string;
+
+    // stats for testing
+    numberOfArticles?: number;
+    numberOfCountries?: number;
+    numberOfStaff?: number;
   }
 
   export interface Application {
@@ -73,9 +78,9 @@ declare namespace Config {
     schools: School[];
     teachers: Teacher[];
     jobs: Job[];
-    cities: City[];
-    countries: Country[];
-    regions: Region[];
+    cities?: City[];
+    countries?: Country[];
+    regions?: Region[];
     applications: Application[];
     applicationEvents: ApplicationEvent[];
     users?: User[];

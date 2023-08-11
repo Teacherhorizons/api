@@ -58,14 +58,30 @@ declare namespace Test {
     name?: string;
     userEmail: string;
     expectedStatus: number;
+    getPassesCustomChecks?: (response: JsonApi.Response, data: Config.Data) => boolean;
+
+    /**
+     * @deprecated TODO: remove (once no longer used)
+     */
     expectedDataLength?: number;
-    count?: number; // TODO: remove (once no longer used)
-    payloadId?: number; // TODO: remove (once no longer used)
+
+    /**
+     * @deprecated TODO: remove (once no longer used)
+     */
+    count?: number;
+
+    /**
+     * @deprecated TODO: remove (once no longer used)
+     */
+    payloadId?: number;
   }
 
   export interface TestGroup {
-    getUrl: (data: Config.Data) => string;
+    getUrl: (data?: Config.Data) => string;
     getPayload?: (data: Config.Data) => object;
-    tests: Pick<Test, 'name' | 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'payloadId' | 'count'>[];
+    tests: Pick<
+      Test,
+      'name' | 'userEmail' | 'expectedStatus' | 'expectedDataLength' | 'getPassesCustomChecks' | 'payloadId' | 'count'
+    >[];
   }
 }
