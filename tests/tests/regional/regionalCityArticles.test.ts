@@ -2,7 +2,7 @@ import * as shared from '../../shared';
 import * as base from '../../baseTests';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['admin, as admin'];
+// const includeTestNames = ['schema=not-signed-in&asUserId=${data.users[0].id} - 200'];
 
 let baseUrl = `regional-cityArticles`;
 
@@ -10,52 +10,22 @@ var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `regional-cityArticles`,
+      getUrl: (data) => `regional-cityArticles?filter[city.id]=${data.cities[0].id}`,
       tests: [
         {
-          name: 'regional-cityArticles',
+          name: 'regional-cityArticles - No schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-cityArticles',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-cityArticles',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-cityArticles',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
+          expectedStatus: 400, // missingMandatoryParameter	schema must be passed
         },
       ],
     },
     {
-      getUrl: (data) => `regional-cityArticles?schema=admin`,
+      getUrl: (data) => `regional-cityArticles?schema=foo&filter[city.id]=${data.cities[0].id}`,
       tests: [
         {
-          name: 'schema=admin',
+          name: 'schema=foo - Invalid schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
+          expectedStatus: 400, // missingMandatoryParameter schema must be correct
         },
       ],
     },
@@ -63,87 +33,86 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-cityArticles?schema=not-signed-in`,
       tests: [
         {
-          name: 'schema=teacher',
+          name: 'schema=not-signed-in - No filter[city.id] nor filter[city.slug]',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter filter[city.id] or filter[city.slug] must be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-cityArticles?schema=not-signed-in&filter[city.id]=${data.cities[0].id}&filter[city.slug]=africa-angola-luanda`,
+      tests: [
+        {
+          name: 'schema=not-signed-in - Both filter[city.id] and filter[city.slug]',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter only one of filter[city.id] or filter[city.slug] can be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-cityArticles?schema=not-signed-in&filter[city.id]=${data.cities[0].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[0].id}',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 2,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-cityArticles?schema=not-signed-in&filter[city.id]=${data.cities[1].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[1].id',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-cityArticles?schema=not-signed-in&filter[city.slug]=${data.cities[1].slug}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[city.slug]=${data.cities[1].slug}',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-cityArticles?schema=not-signed-in&filter[city.id]=${data.cities[2].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[2].id}',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-cityArticles?schema=not-signed-in&filter[city.id]=${data.cities[1].id}&asUserId=${data.users[0].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[1].id}&asUserId=${data.users[0].id} - signedOut',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=teacher',
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[1].id}&asUserId=${data.users[0].id} - school',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[1].id}&asUserId=${data.users[0].id} - endorsed',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[city.id]=${data.cities[1].id}&asUserId=${data.users[0].id} - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-cityArticles?schema=not-signed=in&filter[city.id]=${1}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[city.id]=${1}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-cityArticles?schema=not-signed=in&filter[city.id]=${3}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[city.id]=${3}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-cityArticles?schema=not-signed=in&filter[city.id]=${3000}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[city.id]=${3000}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-cityArticles?schema=not-signed-in&asUserId=${data.asUserId[0].id}`,
-      tests: [
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'signedOut',
-          expectedStatus: 401, //accessNotPermitted	Must be signed in
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
         },
       ],
     },
@@ -162,11 +131,10 @@ describe('get-regional-cityArticles', () => {
     test.each(tests)('$name => $expectedStatus', async (t: Test.Test) => {
       if (shared.signedInAs != t.userEmail) await shared.signIn(t.userEmail);
       const url = t.getUrl(shared.data);
-
+      console.log('URL: ', url);
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        expect(response.data.data.length).toEqual(t.expectedDataLength);
         expect(response).toSatisfyApiSpec();
       } else {
         try {

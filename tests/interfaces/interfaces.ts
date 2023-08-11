@@ -35,6 +35,21 @@ declare namespace Config {
     id?: number;
   }
 
+  export interface City {
+    id?: number;
+    slug?: string;
+  }
+
+  export interface Country {
+    id?: number;
+    slug?: string;
+  }
+
+  export interface Region {
+    id?: number;
+    slug?: string;
+  }
+
   export interface Application {
     id?: number;
   }
@@ -58,6 +73,9 @@ declare namespace Config {
     schools: School[];
     teachers: Teacher[];
     jobs: Job[];
+    cities: City[];
+    countries: Country[];
+    regions: Region[];
     applications: Application[];
     applicationEvents: ApplicationEvent[];
     users?: User[];

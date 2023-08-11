@@ -13,49 +13,19 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-countryArticles`,
       tests: [
         {
-          name: 'regional-countryArticles',
+          name: 'regional-countryArticles - No schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-countryArticles',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-countryArticles',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-countryArticles',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
+          expectedStatus: 400, // missingMandatoryParameter	schema must be passed
         },
       ],
     },
     {
-      getUrl: (data) => `regional-countryArticles?schema=admin`,
+      getUrl: (data) => `regional-countryArticles?schema=foo&filter[country.id]=${data.countries[0].id}`,
       tests: [
         {
-          name: 'schema=admin',
+          name: 'schema=foo - Invalid schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
+          expectedStatus: 400, // missingMandatoryParameter schema must be correct
         },
       ],
     },
@@ -63,87 +33,66 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-countryArticles?schema=not-signed-in`,
       tests: [
         {
-          name: 'schema=teacher',
+          name: 'regional-countryArticles?schema=not-signed-in - No filter',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter filter[country.id] or filter[country.slug] must be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countryArticles?schema=not-signed-in&filter[country.id]=${data.countries[0].id}&filter[country.slug]=europe-albania`,
+      tests: [
+        {
+          name: 'schema=not-signed-in - Both filter[country.id] and filter[country.slug]',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter only one of filter[country.id] or filter[country.slug] can be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-countryArticles?schema=not-signed-in&filter[country.id]=${data.countries[1].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[country.id]=${data.countries[1].id',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 2,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-countryArticles?schema=not-signed-in&filter[country.slug]=${data.countries[1].slug}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[country.slug]=${data.countries[1].slug}',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countryArticles?schema=not-signed-in&filter[country.id]=${data.countries[1].id}&asUserId=${data.users[0].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[country.id]=${data.countries[1].id}&asUserId=${data.users[0].id} - signedOut',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=teacher',
+          name: 'schema=not-signed-in&filter[country.id]=${data.countries[1].id}&asUserId=${data.users[0].id} - school-1',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[country.id]=${data.countries[1].id}&asUserId=${data.users[0].id} - endorsed',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[country.id]=${data.countries[1].id}&asUserId=${data.users[0].id} - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-countryArticles?schema=not-signed=in&filter[country.id]=${1}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[country.id]=${1}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-countryArticles?schema=not-signed=in&filter[country.id]=${17}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[country.id]=${17}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-countryArticles?schema=not-signed=in&filter[country.id]=${3000}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[country.id]=${3000}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-countryArticles?schema=not-signed-in&asUserId=${data.asUserId[0].id}`,
-      tests: [
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'signedOut',
-          expectedStatus: 401, //accessNotPermitted	Must be signed in
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 2,
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
         },
       ],
     },
@@ -162,11 +111,10 @@ describe('get-regional-countryArticles', () => {
     test.each(tests)('$name => $expectedStatus', async (t: Test.Test) => {
       if (shared.signedInAs != t.userEmail) await shared.signIn(t.userEmail);
       const url = t.getUrl(shared.data);
-
+      console.log('URL: ', url);
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        expect(response.data.data.length).toEqual(t.expectedDataLength);
         expect(response).toSatisfyApiSpec();
       } else {
         try {

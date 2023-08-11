@@ -16,8 +16,8 @@ export var data: Config.Data;
 const mockGetData = async (): Promise<Config.Data> => {
   // if (config.createTestData) return;
   // await new Promise((resolve) => setTimeout(resolve, 1000));
-  return betaData;
-  // return config.local ? meLocalData : betaData;
+  // return betaData;
+  return config.local ? jpLocalData : betaData;
 };
 
 export const setupBeforeAll = async () => {
@@ -51,48 +51,8 @@ export function setup(context = {}) {
   beforeAll(async () => {
     try {
       if (config.createTestData) data = await addTestData();
-      else if (!config.createTestData && config.local)
-        data = {
-          schools: [
-            { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
-            { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
-          ],
-          teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
-          jobs: [{ id: 1662 }, { id: 1663 }],
-          applications: [{ id: 62103 }, { id: 62104 }, { id: 62105 }, { id: 62106 }, { id: 62107 }],
-          applicationEvents: [
-            { id: 131487 },
-            { id: 131488 },
-            { id: 131489 },
-            { id: 131490 },
-            { id: 131491 },
-            { id: 131492 },
-            { id: 131493 },
-            { id: 131494 },
-          ],
-          test: { id: 109 },
-        };
-      else if (!config.createTestData && !config.local)
-        data = {
-          schools: [
-            { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
-            { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
-          ],
-          teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
-          jobs: [{ id: 1832 }, { id: 1833 }],
-          applications: [{ id: 135338 }, { id: 135339 }, { id: 135340 }, { id: 135341 }, { id: 135342 }],
-          applicationEvents: [
-            { id: 2407997 },
-            { id: 2407998 },
-            { id: 2407999 },
-            { id: 2408000 },
-            { id: 2408001 },
-            { id: 2408002 },
-            { id: 2408003 },
-            { id: 2408004 },
-          ],
-          test: { id: 109 },
-        };
+      else if (!config.createTestData && config.local) data = jpLocalData;
+      else if (!config.createTestData && !config.local) data = betaData;
       console.log('data: ', data);
       // start ---
       shell.exec('npm run build-yaml');
@@ -194,13 +154,19 @@ export const addTestGroups = (tests: Test.Test[], testGroups: Test.TestGroup[]) 
   return tests;
 };
 
-const meLocalData: Config.Data = {
+const jpLocalData: Config.Data = {
   schools: [
     { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
     { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
   teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
   jobs: [{ id: 1662 }, { id: 1663 }],
+  cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
+  countries: [
+    { id: 54, slug: 'europe-portugal' },
+    { id: 18, slug: 'europe-denmark' },
+  ],
+  regions: [{ id: 4, slug: 'europe' }],
   applications: [{ id: 62103 }, { id: 62104 }, { id: 62105 }, { id: 62106 }, { id: 62107 }],
   applicationEvents: [
     { id: 131487 },
@@ -212,36 +178,7 @@ const meLocalData: Config.Data = {
     { id: 131493 },
     { id: 131494 },
   ],
-  dataIssues: [{ id: 10, expectedDataLength: 2 }],
-  users: [
-    { id: 2, userTypeSlug: 'admin' },
-    { id: 1031, userTypeSlug: 'school-1-school' },
-    { id: 1070, userTypeSlug: 'school-2-schools' },
-    { id: 1064, userTypeSlug: 'teacher-new' },
-    { id: 1059, userTypeSlug: 'teacher-endorsed' },
-  ],
-  // asUserId: [{ id: 2 }, { id: 1031 }, { id: 23638 }, { id: 1070 }, { id: 1059 }],
   test: { id: 109 },
-};
-
-const betaData: Config.Data = {
-  schools: [
-    { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
-    { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
-  ],
-  teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
-  jobs: [{ id: 1852 }, { id: 1853 }],
-  applications: [{ id: 135370 }, { id: 135371 }, { id: 135372 }, { id: 135373 }, { id: 135374 }],
-  applicationEvents: [
-    { id: 2408108 },
-    { id: 2408109 },
-    { id: 2408110 },
-    { id: 2408111 },
-    { id: 2408112 },
-    { id: 2408113 },
-    { id: 2408114 },
-    { id: 2408115 },
-  ],
   dataIssues: [{ id: 34, expectedDataLength: 5 }],
   users: [
     { id: 2, userTypeSlug: 'admin' },
@@ -250,7 +187,91 @@ const betaData: Config.Data = {
     { id: 1064, userTypeSlug: 'teacher-new' },
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
-  test: { id: 116 },
+  // test: { id: 116 },
+
+  // schools: [
+  //   { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
+  //   { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
+  // ],
+  // teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
+  // jobs: [{ id: 1852 }, { id: 1853 }],
+  // cities: [{ id: 1 }, { id: 3 }, { id: 3000 }],
+  // applications: [{ id: 135370 }, { id: 135371 }, { id: 135372 }, { id: 135373 }, { id: 135374 }],
+  // applicationEvents: [
+  //   { id: 2408108 },
+  //   { id: 2408109 },
+  //   { id: 2408110 },
+  //   { id: 2408111 },
+  //   { id: 2408112 },
+  //   { id: 2408113 },
+  //   { id: 2408114 },
+  //   { id: 2408115 },
+  // ],
+  // dataIssues: [{ id: 34, expectedDataLength: 5 }],
+  // users: [
+  //   { id: 2, userTypeSlug: 'admin' },
+  //   { id: 1031, userTypeSlug: 'school-1-school' },
+  //   { id: 1070, userTypeSlug: 'school-2-schools' },
+  //   { id: 1064, userTypeSlug: 'teacher-new' },
+  //   { id: 1059, userTypeSlug: 'teacher-endorsed' },
+  // ],
+  // test: { id: 116 },
+};
+const betaData: Config.Data = {
+  schools: [
+    { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
+    { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
+  ],
+  teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
+  jobs: [{ id: 1832 }, { id: 1833 }],
+  cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
+  countries: [
+    { id: 1, slug: 'europe-albania' },
+    { id: 17, slug: 'africa-democratic-republic-of-congo' },
+  ],
+  regions: [
+    { id: 1, slug: 'africa' },
+    { id: 3, slug: 'central-america' },
+  ],
+  applications: [{ id: 135338 }, { id: 135339 }, { id: 135340 }, { id: 135341 }, { id: 135342 }],
+  applicationEvents: [
+    { id: 2407997 },
+    { id: 2407998 },
+    { id: 2407999 },
+    { id: 2408000 },
+    { id: 2408001 },
+    { id: 2408002 },
+    { id: 2408003 },
+    { id: 2408004 },
+  ],
+  test: { id: 109 },
+  // schools: [
+  //   { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
+  //   { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
+  // ],
+  // teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
+  // jobs: [{ id: 1852 }, { id: 1853 }],
+  // cities: [{ id: 1 }, { id: 3 }, { id: 3000 }],
+  // applications: [{ id: 135370 }, { id: 135371 }, { id: 135372 }, { id: 135373 }, { id: 135374 }],
+  // applicationEvents: [
+  //   { id: 2408108 },
+  //   { id: 2408109 },
+  //   { id: 2408110 },
+  //   { id: 2408111 },
+  //   { id: 2408112 },
+  //   { id: 2408113 },
+  //   { id: 2408114 },
+  //   { id: 2408115 },
+  // ],
+  // dataIssues: [{ id: 34, expectedDataLength: 5 }],
+  users: [
+    { id: 2, userTypeSlug: 'admin' },
+    { id: 1031, userTypeSlug: 'school-1-school' },
+    { id: 1070, userTypeSlug: 'school-2-schools' },
+    { id: 1064, userTypeSlug: 'teacher-new' },
+    { id: 1059, userTypeSlug: 'teacher-endorsed' },
+  ],
+  // test: { id: 116 },
 };
 
 // TOOD: move below somewhere, investigate if interfaces can be joined with frontend

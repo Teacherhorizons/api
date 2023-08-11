@@ -2,6 +2,7 @@ import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
 // const includeTestNames = ['regional-subjects - standard response'];
+// const includeTestNames = ['subjects - included pages'];
 
 var tests = shared.addTestGroups(
   [],

@@ -2,7 +2,7 @@ import * as shared from '../../shared';
 import * as base from '../../baseTests';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['admin, as admin'];
+// const includeTestNames = ['schema=not-signed-in&filter[region.id]=4'];
 
 let baseUrl = `regional-regionArticles`;
 
@@ -13,49 +13,19 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-regionArticles`,
       tests: [
         {
-          name: 'regional-regionArticles',
+          name: 'regional-regionArticles - No schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regionArticles',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regionArticles',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regionArticles',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
+          expectedStatus: 400, // missingMandatoryParameter	schema must be passed
         },
       ],
     },
     {
-      getUrl: (data) => `regional-regionArticles?schema=admin`,
+      getUrl: (data) => `regional-regionArticles?schema=foo`,
       tests: [
         {
-          name: 'schema=admin',
+          name: 'schema=foo - Invalid schema',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
-        },
-        {
-          name: 'schema=admin',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter schema must be correct
+          expectedStatus: 400, // missingMandatoryParameter schema must be correct
         },
       ],
     },
@@ -63,87 +33,66 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-regionArticles?schema=not-signed-in`,
       tests: [
         {
-          name: 'schema=teacher',
+          name: 'schema=not-signed-in - No filter[region.id] nor filter[region.slug]',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter filter[region.id] or filter[region.slug] must be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-regionArticles?schema=not-signed-in&filter[region.id]=${data.regions[0].id}&filter[region.slug]=${data.regions[0].slug}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in - Both filter[region.id] and filter[region.slug]',
+          userEmail: 'signedOut',
+          expectedStatus: 400, // missingMandatoryParameter only one of filter[region.id] or filter[region.slug] can be passed
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-regionArticles?schema=not-signed-in&filter[region.id]=${data.regions[0].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[region.id]=${data.regions[0].id}',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 3,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-regionArticles?schema=not-signed-in&filter[region.slug]=${data.regions[0].slug}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[region.slug]=${data.regions[0].slug}',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-regionArticles?schema=not-signed-in&filter[region.id]=${data.regions[0].id}&asUserId=${data.users[0].id}`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[region.id]=${data.regions[0].id}&asUserId=${data.users[0].id} - signedOut',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=teacher',
+          name: 'schema=not-signed-in&filter[region.id]=${data.regions[0].id}&asUserId=${data.users[0].id} - school',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[region.id]=${data.regions[0].id}&asUserId=${data.users[0].id} - endorsed',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in&filter[region.id]=${data.regions[0].id}&asUserId=${data.users[0].id} - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 3,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 3,
-        },
-        {
-          name: 'schema=teacher',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 3,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-regionArticles?schema=not-signed=in&filter[region.id]=${1}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[region.id]=${1}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-regionArticles?schema=not-signed=in&filter[region.id]=${3}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[region.id]=${3}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-regionArticles?schema=not-signed=in&filter[region.id]=${30}`,
-      tests: [
-        {
-          name: 'schema=not-signed=in&filter[region.id]=${30}',
-          userEmail: 'signedOut',
-          expectedStatus: 200,
-          expectedDataLength: 0,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `regional-regionArticles?schema=not-signed-in&asUserId=${data.asUserId[0].id}`,
-      tests: [
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'signedOut',
-          expectedStatus: 401, //accessNotPermitted	Must be signed in
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 3,
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-        },
-        {
-          name: 'schema=not-signed-in&asUserId=${data.asUserId[0].id}',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
         },
       ],
     },

@@ -201,7 +201,6 @@ describe('get-regional-countrySubjects', () => {
         // spec test
         // const isResponseValid = shared.getIsResponseValid(response.data);
         // expect(isResponseValid).toBe(true);
-
         expect(response).toSatisfyApiSpec();
       } else {
         try {
