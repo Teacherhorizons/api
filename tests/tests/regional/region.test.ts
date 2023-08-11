@@ -361,7 +361,14 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 1,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLengthN(response)) return false;
+            if (!shared.numberOfIncludedMatches(response, 'regional-country', data.regions[0].numberOfCountries))
+              return false;
+            if (!shared.numberOfIncludedMatches(response, 'staff-staffMember', data.regions[0].numberOfStaff))
+              return false;
+            return true;
+          },
         },
         {
           name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
@@ -493,7 +500,8 @@ describe('get-regional-regions', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        expect(response.data.data.length).toEqual(t.expectedDataLength);
+        // expect(response.data.data.length).toEqual(t.expectedDataLength); // TODO: remove
+        expect(t.getPassesCustomChecks(response, shared.data)).toBe(true);
         expect(response).toSatisfyApiSpec();
       } else {
         try {

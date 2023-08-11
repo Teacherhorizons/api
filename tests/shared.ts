@@ -242,6 +242,7 @@ const betaData: Config.Data = {
     { id: 2408114 },
     { id: 2408115 },
   ],
+  regions: [{ id: 3, slug: 'central-america', numberOfArticles: 3, numberOfCountries: 18, numberOfStaff: 2 }],
   dataIssues: [{ id: 34, expectedDataLength: 5 }],
   users: [
     { id: 2, userTypeSlug: 'admin' },
@@ -359,4 +360,17 @@ export const getIsResponseValid = (response: JsonApiResponse) => {
     !hasDuplicateInIncludes &&
     isIncludesLessThanOrEqualRelationships
   );
+};
+
+export const isArrayOfLength1 = (x: unknown) => isArrayOfLengthN(x);
+
+export const isArrayOfLengthN = (x: unknown, lengthN: number = 1): boolean => {
+  if (!Array.isArray(x)) return false;
+  if (x.length !== lengthN) return false;
+  return true;
+};
+
+export const numberOfIncludedMatches = (response: JsonApi.Response, entityType: string, number: number): boolean => {
+  if (response.included.filter((x: JsonApi.ResourceObject) => x.type === entityType).length !== number) return false;
+  return true;
 };
