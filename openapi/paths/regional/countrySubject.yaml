@@ -21,7 +21,7 @@ get:
     - in: query
       name: include
       required: true
-      example: country,subject,jobs,country.subjects,country.attractions,environment,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school
+      example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school
       schema:
         type: string
 
