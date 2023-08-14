@@ -102,15 +102,15 @@ Response_subject_notSignedIn_item:
           $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
         subjects:
           $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_relationship_multiple'
-        teachers:
-          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship_multiple'
+        subjectTeachers:
+          $ref: '../../../components/models/json-api/subject/subjectTeacher.yaml#/JsonApiModel_subject-subjectTeacher_relationship_multiple'
         advisers:
           $ref: '../../../components/models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple'
         trainingProviders:
           $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_relationship_multiple'
         resources:
           $ref: '../../../components/models/json-api/subject/subjectLink.yaml#/JsonApiModel_subject-subjectLink_relationship_multiple'
-        months:
+        subjectMonths:
           $ref: '../../../components/models/json-api/subject/subjectMonth.yaml#/JsonApiModel_subject-subjectMonth_relationship_multiple'
         pages:
           $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
@@ -233,9 +233,9 @@ Response_subject_includedRegion_notSignedIn:
       type: object
       additionalProperties: false
       properties:
-        subject:
+        regionSubject:
           $ref: '../../../components/models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_relationship'
-        mostRecentCompleteSchoolYear:
+        mostRecentCompleteRegionSubjectSchoolYear:
           $ref: '../../../components/models/json-api/regional/regionSubjectSchoolYear.yaml#/JsonApiModel_regional-regionSubjectSchoolYear_relationship'
   required:
     - type
