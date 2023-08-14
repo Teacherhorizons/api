@@ -269,7 +269,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
       type: object
       additionalProperties: false
       properties:
-        subjects:
+        countrySubjects:
           $ref: '../../models/json-api/regional/countrySubject.yaml#/JsonApiModel_regional-countrySubject_relationship_multiple'
         attractions:
           $ref: '../../models/json-api/regional/countryAttraction.yaml#/JsonApiModel_regional-countryAttraction_relationship_multiple'
@@ -281,6 +281,7 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
     - type
     - id
     - attributes
+
 Response_regional-countrySubject_includedSubject_notSignedIn:
   type: object
   additionalProperties: false
@@ -313,12 +314,11 @@ Response_regional-countrySubject_includedSubject_notSignedIn:
         - middleOfSentenceShortName
         - slug
         - numberOfLiveJobs
-
     relationships:
       type: object
       additionalProperties: false
       properties:
-        regions:
+        subjectRegions:
           $ref: '../../models/json-api/regional/regionSubject.yaml#/JsonApiModel_regional-regionSubject_relationship_multiple'
         advisers:
           $ref: '../../models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember_relationship_multiple'
