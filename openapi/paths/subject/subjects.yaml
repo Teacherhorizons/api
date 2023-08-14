@@ -29,7 +29,7 @@ get:
         - ambassador - Ambassador for subject
         - jobs - First 4 related live jobs when sorted by added date, from as many distinct countries as possible
         - subjects - All subjects which have a subject page except for the queried subject
-        - teachers - 3 random teachers who have a subject testimonial
+        - subjectTeachers - 3 random teachers who have a subject testimonial
         - articles - All articles for subject
         - environment - The system environment
         - pages - All pages for subject
@@ -37,9 +37,9 @@ get:
         - advisers - All advisers for subject
         - trainingProviders - All training providers for subject
         - resources - All resources for subject
-        - months - Months of previous school year
+        - subjectMonths - Months of previous school year
       # required: true
-      example: world, regions, ambassador, jobs, subjects, teachers, articles, environment, pages, jobFaqs, advisers, trainingProviders, resources, months
+      example: world, regions, ambassador, jobs, subjects, subjectTeachers, articles, environment, pages, jobFaqs, advisers, trainingProviders, resources, subjectMonths
       schema:
         type: string
     - in: query

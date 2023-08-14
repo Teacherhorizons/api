@@ -27,16 +27,16 @@ get:
         - country - Related country
         - subject - Related subject
         - jobs - First 4 related live jobs when sorted by added date
-        - country.subjects - All subjects for related country except the queried subject where numberOfLiveJobs > 0
+        - country.countrySubjects - All subjects for related country except the queried subject where numberOfLiveJobs > 0
         - country.attractions - All attractions in the related country
         - country.photos - All photos for the related country
         - country.ambassador - Ambassador for related country
-        - subject.regions - All regions for related subject
+        - subject.subjectRegions - All regions for related subject
         - subject.advisers - All advisers for related subject
         - environment - The system environment
         - jobs.school- School for each related job - TODO: consider whether we want this
       # required: true
-      example: country,subject,jobs,country.subjects,country.attractions,environment,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school
+      example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school
       schema:
         type: string
     - in: query
