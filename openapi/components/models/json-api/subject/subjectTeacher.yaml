@@ -3,35 +3,35 @@ JsonApiModel_subject-subjectTeacher:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_subject-subjectTeacher_type"
+      $ref: '#/JsonApiModel_subject-subjectTeacher_type'
     id:
-      $ref: "#/JsonApiModel_subject-subjectTeacher_id"
+      $ref: '#/JsonApiModel_subject-subjectTeacher_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         testimonial:
-          $ref: "../../library/subject/subjectTeacher.yaml#/subject-subjectTeacher_testimonial"
+          $ref: '../../library/subject/subjectTeacher.yaml#/subject-subjectTeacher_testimonial'
 
         # relationship attributes
         teacher:
-          $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute'
         subject:
-          $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute'
       required:
         - id
         - testimonial
         - teacher
         - subject
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-          teacher:
-            $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship"
-          subject:
-            $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
+      type: object
+      additionalProperties: false
+      properties:
+        teacher:
+          $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        subject:
+          $ref: '../subject/subject.yaml#/JsonApiModel_subject_relationship'
 
   required:
     - type
@@ -45,7 +45,29 @@ JsonApiModel_subject-subjectTeacher_type:
 
 JsonApiModel_subject-subjectTeacher_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_subject-subjectTeacher_relationship_multiple:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-subject-subjectTeacher) | 
+    [JSON:API model](/#tag/json-api-model-subject-subjectTeacher)
+  additionalProperties: false
+  properties:
+    data:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        properties:
+          type:
+            $ref: '#/JsonApiModel_subject-subjectTeacher_type'
+          id:
+            $ref: '#/JsonApiModel_subject-subjectTeacher_id'
+        required:
+          - type
+          - id
+  required:
+    - data
