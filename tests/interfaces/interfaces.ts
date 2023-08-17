@@ -84,12 +84,5 @@ declare namespace Config {
     applications: Application[];
     applicationEvents: ApplicationEvent[];
     users?: User[];
-    // asUserId?: UserId[];
   }
-
-  // export const data: Data = {
-  //   schools: [],
-  //   teachers: [],
-  //   jobs: [],
-  // };
 }

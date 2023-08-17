@@ -1,7 +1,7 @@
 import * as shared from '../../shared';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = ['regional-subjects - standard response'];
+// const includeTestNames: string[] = null;
+const includeTestNames = ['subjects - standard response 2'];
 // const includeTestNames = ['subjects - included pages'];
 
 var tests = shared.addTestGroups(
@@ -88,10 +88,10 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=months`,
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjectMonths`,
       tests: [
         {
-          name: 'subjects - included months',
+          name: 'subjects - included subjectMonths',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -128,10 +128,10 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=teachers`,
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjectTeachers`,
       tests: [
         {
-          name: 'subjects - included teachers',
+          name: 'subjects - included subjectTeachers',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -139,7 +139,18 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,teachers,articles,pages,advisers,trainingProviders,resources,months&useCache=false`,
+        `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjects,subjectTeachers&useCache=false`,
+      tests: [
+        {
+          name: 'subjects - standard response 2',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths&useCache=false`,
       tests: [
         {
           name: 'subjects - standard response',

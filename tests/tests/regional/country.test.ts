@@ -1,20 +1,84 @@
 import * as shared from '../../shared';
 
-// const includeTestNames: string[] = null;
-const includeTestNames = [
-  'regional-country - standard response - sparse data',
-  'regional-country - standard response - full data',
-];
+const includeTestNames: string[] = null;
+// const includeTestNames = [
+//   'regional-country - standard response - sparse data',
+//   'regional-country - standard response - full data',
+// ];
+// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe-portugal&include=staff'];
 
 var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) =>
-        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=cities`,
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=staff`,
       tests: [
         {
-          name: 'regional-country - standard response - sparse data',
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=staff',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLength1(response.data)) return false;
+            return true;
+          },
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=cities`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=cities',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=photos`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=photos',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=attractions`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=attractions',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=ambassadors`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=ambassadors',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=schools`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=schools',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=jobs`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=jobs',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -26,6 +90,17 @@ var tests = shared.addTestGroups(
       tests: [
         {
           name: 'regional-country - standard response - full data',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs`,
+      tests: [
+        {
+          name: 'regional-country - standard response - sparse data',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -50,20 +125,11 @@ describe('get-regional-country', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        // expect(response.data.data.length).toEqual(t.expectedDataLength); undefined?
 
-        // custom tests (for standard response)
-        // const included: JsonApi.ResourceObject[] = response.data.included;
+        if (t.getPassesCustomChecks) {
+          expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
+        }
 
-        // const schools = included.filter((x) => x.type === 'school');
-        // expect(schools.length).toBeGreaterThanOrEqual(4);
-        // expect(schools.length).toBeLessThanOrEqual(8);
-
-        // const jobs = included.filter((x) => x.type === 'job');
-        // expect(jobs.length).toBeLessThanOrEqual(4);
-
-        // spec test
-        expect(response).toSatisfyApiSpec();
         expect(response).toSatisfyApiSpec();
       } else {
         try {

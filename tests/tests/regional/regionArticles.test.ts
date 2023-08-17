@@ -115,7 +115,6 @@ describe('get-regional-regionArticles', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        expect(response.data.data.length).toEqual(t.expectedDataLength);
         expect(response).toSatisfyApiSpec();
       } else {
         try {

@@ -55,10 +55,10 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=subject.regions`,
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=subject.subjectRegions`,
       tests: [
         {
-          name: 'subject.regions included but subject not included',
+          name: 'subject.subjectRegions included but subject not included',
           userEmail: 'signedOut',
           expectedStatus: 400,
         },
@@ -77,10 +77,10 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country.subjects`,
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country.countrySubjects`,
       tests: [
         {
-          name: 'country.subjects included but country not included',
+          name: 'country.countrySubjects included but country not included',
           userEmail: 'signedOut',
           expectedStatus: 400,
         },
@@ -165,7 +165,7 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.subjects,country.attractions,country.photos,country.ambassador,subject.regions,subject.advisers,jobs.school`,
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school`,
       tests: [
         {
           name: 'filter[slug]=asia-singapore-english - all params',
@@ -178,11 +178,7 @@ var tests = shared.addTestGroups(
 );
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
-tests = tests.filter(
-  (t) => includeTestNames == null || includeTestNames.includes(t.name)
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
-  // (t) => t.name === 'no query params'
-);
+tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 
 describe('get-regional-countrySubjects', () => {
   beforeAll(async () => {

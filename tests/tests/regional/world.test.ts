@@ -1,15 +1,69 @@
 import * as shared from '../../shared';
 
-// const includeTestNames: string[] = null;
-const includeTestNames = ['regional-world - standard response'];
+const includeTestNames: string[] = null;
+// const includeTestNames = ['regional-world - standard response'];
+// const includeTestNames = ['regional-world - include jobs'];
 
 var tests = shared.addTestGroups(
   [],
   [
     {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=staff`,
+      tests: [
+        {
+          name: 'regional-world - include staff',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=regions`,
+      tests: [
+        {
+          name: 'regional-world - include regions',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=jobs`,
+      tests: [
+        {
+          name: 'regional-world - include jobs',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=schools`,
+      tests: [
+        {
+          name: 'regional-world - include schools',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const schools = response.included.filter((x) => x.type === 'school');
+            return schools.length >= 4 && schools.length <= 8;
+          },
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=ambassadors`,
+      tests: [
+        {
+          name: 'regional-world - include ambassadors',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
       getUrl: (data) =>
         `regional-world/1?useCache=false&schema=not-signed-in&include=staff,regions,jobs,schools,ambassadors`,
-      // `regional-world/1?useCache=false&schema=not-signed-in&include=regions,schools,jobs,staff`,
       tests: [
         {
           name: 'regional-world - standard response',
@@ -22,11 +76,7 @@ var tests = shared.addTestGroups(
 );
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
-tests = tests.filter(
-  (t) => includeTestNames == null || includeTestNames.includes(t.name)
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff' && t.userEmail === 'signedOut'
-);
+tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 
 describe('get-regional-world', () => {
   beforeAll(async () => {
@@ -41,19 +91,14 @@ describe('get-regional-world', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        expect(response.data.data.length).toEqual(t.expectedDataLength);
 
-        // custom tests (for standard response)
-        const included: JsonApi.ResourceObject[] = response.data.included;
+        const isResponseValid = shared.getIsResponseValid(response.data);
+        expect(isResponseValid).toBe(true);
 
-        const schools = included.filter((x) => x.type === 'school');
-        expect(schools.length).toBeGreaterThanOrEqual(4);
-        expect(schools.length).toBeLessThanOrEqual(8);
+        if (t.getPassesCustomChecks) {
+          expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
+        }
 
-        const jobs = included.filter((x) => x.type === 'job');
-        expect(jobs.length).toBeLessThanOrEqual(4);
-
-        // spec test
         expect(response).toSatisfyApiSpec();
       } else {
         try {
