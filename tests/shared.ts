@@ -253,6 +253,8 @@ export const getIsResponseValid = (response: JsonApi.Response) => {
   const data = Array.isArray(response.data) ? response.data[0] : response.data;
   const baseRelationships = data.relationships;
 
+  if (!baseRelationships && response.included.length === 0) return true;
+
   const includedRelationships = response.included
     .filter((item) => item.hasOwnProperty('relationships'))
     .map((item) => item.relationships);
