@@ -92,6 +92,12 @@ var tests = shared.addTestGroups(
           name: 'regional-country - standard response - full data',
           userEmail: 'signedOut',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            // something with somehow compares number of distinct types in response.data.included to spec (e.g. 7 should equal 7)
+            // number of distinct types in response.data.included - easy?
+            // spec - don't know?
+            return true;
+          },
         },
       ],
     },
