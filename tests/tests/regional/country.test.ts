@@ -5,7 +5,7 @@ const includeTestNames: string[] = null;
 //   'regional-country - standard response - sparse data',
 //   'regional-country - standard response - full data',
 // ];
-// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe-portugal&include=staff'];
+// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe-portugal&include=jobs'];
 
 var tests = shared.addTestGroups(
   [],
@@ -125,6 +125,9 @@ describe('get-regional-country', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
+
+        const isResponseValid = shared.getIsResponseValid(response.data);
+        expect(isResponseValid).toBe(true);
 
         if (t.getPassesCustomChecks) {
           expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);

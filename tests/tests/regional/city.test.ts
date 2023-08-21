@@ -2,6 +2,7 @@ import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
 // const includeTestNames = ['regional-city - standard response'];
+// const includeTestNames = ['regional-city - include jobs'];
 
 var tests = shared.addTestGroups(
   [],
@@ -129,6 +130,9 @@ describe('get-regional-city', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
+
+        const isResponseValid = shared.getIsResponseValid(response.data);
+        expect(isResponseValid).toBe(true);
 
         if (t.getPassesCustomChecks) {
           expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
