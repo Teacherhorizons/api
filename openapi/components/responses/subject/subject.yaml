@@ -35,11 +35,11 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedSubjectLink_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectMonth_notSignedIn'
           - $ref: '#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
-          - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
+          # - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
+          - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
           - $ref: '#/Response_subject_includedArticle_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
           - $ref: '#/Response_subject_includedEnvironment_notSignedIn'
-
   required:
     - schema
     - data
@@ -620,40 +620,39 @@ Response_subject_includedRegionSubjectSchoolYear_notSignedIn:
           $ref: '../../../components/models/library/regional/regionSubjectSchoolYear.yaml#/regional-regionSubjectSchoolYear_numberOfLiveJobs'
       required:
         - numberOfLiveJobs
-
   required:
     - type
     - id
     - attributes
 
-Response_subject_includedSystemPage_notSignedIn:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_type'
-    id:
-      $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        title:
-          $ref: '../../../components/models/library/system/page.yaml#/system-page_title'
-        metaDescription:
-          $ref: '../../../components/models/library/system/page.yaml#/system-page_metaDescription'
-        pageType:
-          $ref: '../../../components/models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
-      required:
-        - title
-        - metaDescription
-        - pageType
-
-  required:
-    - type
-    - id
-    - attributes
+# TODO: remove once confident with JsonApiModel_system-page_includedResponse_default idea
+# Response_subject_includedSystemPage_notSignedIn:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     type:
+#       $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_type'
+#     id:
+#       $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_id'
+#     attributes:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         # simple attributes
+#         title:
+#           $ref: '../../../components/models/library/system/page.yaml#/system-page_title'
+#         metaDescription:
+#           $ref: '../../../components/models/library/system/page.yaml#/system-page_metaDescription'
+#         pageType:
+#           $ref: '../../../components/models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
+#       required:
+#         - title
+#         - metaDescription
+#         - pageType
+#   required:
+#     - type
+#     - id
+#     - attributes
 
 Response_subject_includedArticle_notSignedIn:
   type: object

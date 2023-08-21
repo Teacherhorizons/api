@@ -35,8 +35,9 @@ get:
         - subject.advisers - All advisers for related subject
         - environment - The system environment
         - jobs.school- School for each related job - TODO: consider whether we want this
+        - pages - All pages for country subject
       # required: true
-      example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school
+      example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,pages
       schema:
         type: string
     - in: query

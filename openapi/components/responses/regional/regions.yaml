@@ -33,6 +33,7 @@ Response_regional-regions_notSignedIn:
           - $ref: './region.yaml#/Response_regional-region_includedSchool_notSignedIn'
           - $ref: './region.yaml#/Response_regional-region_includedAmbassador_notSignedIn'
           - $ref: './region.yaml#/Response_regional-region_includedCity_notSignedIn'
+          - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
   required:
     - schema
     - data

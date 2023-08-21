@@ -35,6 +35,7 @@ Response_regional-countrySubjects_notSignedInSingle:
           - $ref: './countrySubject.yaml#/Response_regional-countrySubject_includedStaff_notSignedIn'
           - $ref: './countrySubject.yaml#/Response_regional-countrySubject_includedAmbassador_notSignedIn'
           - $ref: './countrySubject.yaml#/Response_regional-countrySubject_includedEnvironment_notSignedIn'
+          - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
   required:
     - schema
     - data

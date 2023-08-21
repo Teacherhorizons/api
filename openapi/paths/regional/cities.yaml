@@ -31,8 +31,8 @@ get:
         - schools - First 4 related schools when sorted by 'is subscribed' (TODO), percentage complete, random
         - ambassadors - A random 20 ambassadors (including city ambassador and school ambassadors)
         - attractions - All attractions in the city
-      required: true
-      example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions
+        - pages - All pages for city
+      example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions,pages
       schema:
         type: string
     - in: query

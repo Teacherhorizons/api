@@ -105,3 +105,31 @@ JsonApiModel_system-page_relationship_multiple:
           - id
   required:
     - data
+
+JsonApiModel_system-page_includedResponse_default:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_system-page_type'
+    id:
+      $ref: '#/JsonApiModel_system-page_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: '../../library/system/page.yaml#/system-page_title'
+        metaDescription:
+          $ref: '../../library/system/page.yaml#/system-page_metaDescription'
+        pageType:
+          $ref: 'pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
+      required:
+        - title
+        - metaDescription
+        - pageType
+  required:
+    - type
+    - id
+    - attributes
