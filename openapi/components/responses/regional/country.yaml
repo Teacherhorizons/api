@@ -53,6 +53,10 @@ Response_regional-country_notSignedIn_item:
           $ref: '../../models/library/regional/country.yaml#/regional-country_name'
         slug:
           $ref: '../../models/library/regional/country.yaml#/regional-country_slug'
+        nameUsesThe:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_nameUsesThe'
+        middleOfSentenceName:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_middleOfSentenceName'
         population:
           $ref: '../../models/library/regional/country.yaml#/regional-country_population'
         numberOfCitiesWithSchools:
@@ -184,6 +188,8 @@ Response_regional-country_notSignedIn_item:
       required:
         - name
         - slug
+        - nameUsesThe
+        - middleOfSentenceName
         # - population
         # - photo1
         - numberOfCitiesWithSchools
