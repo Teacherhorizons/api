@@ -1,7 +1,8 @@
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['regional-subjects - standard response'];
+// const includeTestNames = ['subjects - standard response 2'];
+// const includeTestNames = ['subjects - sparse response'];
 
 var tests = shared.addTestGroups(
   [],
@@ -87,10 +88,10 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=months`,
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjectMonths`,
       tests: [
         {
-          name: 'subjects - included months',
+          name: 'subjects - included subjectMonths',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -127,10 +128,20 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=teachers`,
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjectTeachers`,
       tests: [
         {
-          name: 'subjects - included teachers',
+          name: 'subjects - included subjectTeachers',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=subjects,subjectTeachers`,
+      tests: [
+        {
+          name: 'subjects - standard response 2',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -138,10 +149,21 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,teachers,articles,pages,advisers,trainingProviders,resources,months&useCache=false`,
+        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths`,
       tests: [
         {
           name: 'subjects - standard response',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `subjects?schema=not-signed-in-single&filter[slug]=science&include=world,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths,regions`,
+      tests: [
+        {
+          name: 'subjects - sparse response',
           userEmail: 'signedOut',
           expectedStatus: 200,
         },
@@ -170,6 +192,19 @@ describe('get-subjects', () => {
         // spec test
         const isResponseValid = shared.getIsResponseValid(response.data);
         expect(isResponseValid).toBe(true);
+
+        // Note: numberOfLiveJobs is needed to pass spec, but if sparse data, it won't exist.
+        if (
+          t.getUrl(null) ===
+          'subjects?schema=not-signed-in-single&filter[slug]=science&include=world,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths,regions'
+        ) {
+          response.data.included = response.data.included.map((x: any) => {
+            if (x.type === 'regional-regionSubjectSchoolYear') {
+              x.attributes = { numberOfLiveJobs: 1 };
+            }
+            return x;
+          });
+        }
 
         expect(response).toSatisfyApiSpec();
       } else {

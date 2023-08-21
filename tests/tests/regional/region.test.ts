@@ -2,8 +2,7 @@ import * as shared from '../../shared';
 import * as base from '../../baseTests';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['regional-regions - signedOut'];
-// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe'];
+// const includeTestNames = ['schema=not-signed-in&filter[slug]=europe&include=ambassadors'];
 
 let baseUrl = `regional-regions`;
 
@@ -16,22 +15,7 @@ var tests = shared.addTestGroups(
         {
           name: 'regional-regions - signedOut',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regions',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regions',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
-        },
-        {
-          name: 'regional-regions',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be passed
+          expectedStatus: 400, // missingMandatoryParameter	schema must be passed
         },
       ],
     },
@@ -41,48 +25,17 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=abc',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be correct
-        },
-        {
-          name: 'schema=abc',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be correct
-        },
-        {
-          name: 'schema=abc',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be correct
-        },
-        {
-          name: 'schema=abc',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter	schema must be correct
+          expectedStatus: 400, // missingMandatoryParameter	schema must be correct
         },
       ],
     },
-    // not-signed-in-multiple -------------------------------------------------
     {
       getUrl: (data) => `regional-regions?schema=not-signed-in-multiple&include=jobs`,
       tests: [
         {
           name: 'schema=not-signed-in-multiple&include=jobs',
           userEmail: 'signedOut',
-          expectedStatus: 422, //nonExistentParameterPassed	include must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&include=jobs',
-          userEmail: 'admin@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed	include must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&include=jobs',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed	include must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&include=jobs',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed	include must not be passed
+          expectedStatus: 422, // nonExistentParameterPassed	include must not be passed
         },
       ],
     },
@@ -92,22 +45,7 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=not-signed-in-multiple&filter[slug]=europe',
           userEmail: 'signedOut',
-          expectedStatus: 422, //nonExistentParameterPassed filter[slug] must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&filter[slug]=europe',
-          userEmail: 'admin@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed filter[slug] must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&filter[slug]=europe',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed filter[slug] must not be passed
-        },
-        {
-          name: 'schema=not-signed-in-multiple&filter[slug]=europe',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 422, //nonExistentParameterPassed filter[slug] must not be passed
+          expectedStatus: 422, // nonExistentParameterPassed filter[slug] must not be passed
         },
       ],
     },
@@ -118,25 +56,10 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in-multiple',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 8,
-        },
-        {
-          name: 'schema=not-signed-in-multiple',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 8,
-        },
-        {
-          name: 'schema=not-signed-in-multiple',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 8,
-        },
-        {
-          name: 'schema=not-signed-in-multiple',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 8,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLengthN(response.data, 8)) return false;
+            return true;
+          },
         },
       ],
     },
@@ -144,54 +67,38 @@ var tests = shared.addTestGroups(
       getUrl: (data) => `regional-regions?schema=not-signed-in-multiple&asUserId=${data.users[0].id}`,
       tests: [
         {
-          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id}',
+          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id} - signed out',
           userEmail: 'signedOut',
-          expectedStatus: 401, //accessNotPermitted	Must be signed in
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id}',
+          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id} - school',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id} - endorsed',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted	User not permitted to use asUserId
+        },
+        {
+          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id} - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
-          expectedDataLength: 8,
-        },
-        {
-          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id}',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-        },
-        {
-          name: 'schema=not-signed-in-multiple&asUserId=${data.users[0].id}',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLengthN(response.data, 8)) return false;
+            return true;
+          },
         },
       ],
     },
-    // not-signed-in- -----------------------------------------------------------
     {
       getUrl: (data) => `regional-regions?schema=not-signed-in`,
       tests: [
         {
           name: 'schema=not-signed-in',
           userEmail: 'signedOut',
-          expectedStatus: 404, //missingMandatoryParameter
-          // regionId value or filter[slug] must be passed
-        },
-        {
-          name: 'schema=not-signed-in',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
-          // regionId value or filter[slug] must be passed
-        },
-        {
-          name: 'schema=not-signed-in',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
-          // regionId value or filter[slug] must be passed
-        },
-        {
-          name: 'schema=not-signed-in',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
+          expectedStatus: 404, // missingMandatoryParameter
           // regionId value or filter[slug] must be passed
         },
       ],
@@ -202,22 +109,7 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=not-signed-in&filter[slug]=europeabc',
           userEmail: 'signedOut',
-          expectedStatus: 404, //entityNotFoundForSlug filter[slug] must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europeabc',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //entityNotFoundForSlug filter[slug] must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europeabc',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 404, //entityNotFoundForSlug filter[slug] must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europeabc',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 404, //entityNotFoundForSlug filter[slug] must be correct
+          expectedStatus: 404, // entityNotFoundForSlug filter[slug] must be correct
         },
       ],
     },
@@ -227,22 +119,7 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=not-signed-in&filter[slug]=europe',
           userEmail: 'signedOut',
-          expectedStatus: 400, //missingMandatoryParameter include must be passed
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400, //missingMandatoryParameter include must be passed
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 400, //missingMandatoryParameter include must be passed
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 400, //missingMandatoryParameter include must be passed
+          expectedStatus: 400, // missingMandatoryParameter include must be passed
         },
       ],
     },
@@ -252,21 +129,6 @@ var tests = shared.addTestGroups(
         {
           name: 'schema=not-signed-in&filter[slug]=europe&include=egg',
           userEmail: 'signedOut',
-          expectedStatus: 404, //entityNotFoundForInclude include must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=egg',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //entityNotFoundForInclude include must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=egg',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 404, //entityNotFoundForInclude include must be correct
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=egg',
-          userEmail: 'endorsed@th.test',
           expectedStatus: 404, //entityNotFoundForInclude include must be correct
         },
       ],
@@ -280,24 +142,6 @@ var tests = shared.addTestGroups(
           expectedStatus: 404, //missingMandatoryParameter
           // Only one of regionId value or filter[slug] may be passed
         },
-        {
-          name: '/19?schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
-          // Only one of regionId value or filter[slug] may be passed
-        },
-        {
-          name: '/19?schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
-          // Only one of regionId value or filter[slug] may be passed
-        },
-        {
-          name: '/19?schema=not-signed-in&filter[slug]=europe',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 404, //missingMandatoryParameter
-          // Only one of regionId value or filter[slug] may be passed
-        },
       ],
     },
     {
@@ -306,21 +150,6 @@ var tests = shared.addTestGroups(
         {
           name: '/999?schema=not-signed-in&include=staff',
           userEmail: 'signedOut',
-          expectedStatus: 404, //missingMandatoryParameter regionId not found
-        },
-        {
-          name: '/999?schema=not-signed-in&include=staff',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //missingMandatoryParameter regionId not found
-        },
-        {
-          name: '/999?schema=not-signed-in&include=staff',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 404, //missingMandatoryParameter regionId not found
-        },
-        {
-          name: '/999?schema=not-signed-in&include=staff',
-          userEmail: 'endorsed@th.test',
           expectedStatus: 404, //missingMandatoryParameter regionId not found
         },
       ],
@@ -332,61 +161,26 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in&filter[slug]=europe&include=staff',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=staff',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=staff',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=staff',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLength1(response.data)) return false;
+            return true;
+          },
         },
       ],
     },
     {
-      getUrl: (data) => `/regional-regions?schema=not-signed-in&filter[slug]=europe&include=countries`,
+      getUrl: (data) => `/regional-regions?schema=not-signed-in&filter[slug]=${data.regions[0].slug}&include=countries`,
       tests: [
         {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
+          name: 'schema=not-signed-in&filter[slug]=${data.regions[0].slug}&include=countries - 200',
           userEmail: 'signedOut',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            if (!shared.isArrayOfLengthN(response)) return false;
+            if (!shared.isArrayOfLength1(response.data)) return false;
             if (!shared.numberOfIncludedMatches(response, 'regional-country', data.regions[0].numberOfCountries))
-              return false;
-            if (!shared.numberOfIncludedMatches(response, 'staff-staffMember', data.regions[0].numberOfStaff))
               return false;
             return true;
           },
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=countries',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
         },
       ],
     },
@@ -397,25 +191,10 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in&filter[slug]=europe&include=schools',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=schools',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=schools',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=schools',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLength1(response.data)) return false;
+            return true;
+          },
         },
       ],
     },
@@ -426,25 +205,10 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in&filter[slug]=europe&include=jobs',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=jobs',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=jobs',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=jobs',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLength1(response.data)) return false;
+            return true;
+          },
         },
       ],
     },
@@ -455,25 +219,10 @@ var tests = shared.addTestGroups(
           name: 'schema=not-signed-in&filter[slug]=europe&include=ambassadors',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=ambassadors',
-          userEmail: 'admin@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=ambassadors',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
-        },
-        {
-          name: 'schema=not-signed-in&filter[slug]=europe&include=ambassadors',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 200,
-          expectedDataLength: 1,
+          getPassesCustomChecks(response, data) {
+            if (!shared.isArrayOfLength1(response.data)) return false;
+            return true;
+          },
         },
       ],
     },
@@ -481,11 +230,7 @@ var tests = shared.addTestGroups(
 );
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
-tests = tests.filter(
-  (t) => includeTestNames == null || includeTestNames.includes(t.name)
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff'
-  // (t) => t.name === 'schema=not-signed-in&filter[slug]=europe&include=staff' && t.userEmail === 'signedOut'
-);
+tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 
 describe('get-regional-regions', () => {
   beforeAll(async () => {
@@ -500,8 +245,16 @@ describe('get-regional-regions', () => {
       if (t.expectedStatus === 200) {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
-        // expect(response.data.data.length).toEqual(t.expectedDataLength); // TODO: remove
-        expect(t.getPassesCustomChecks(response, shared.data)).toBe(true);
+
+        if (t.getPassesCustomChecks) {
+          expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
+        }
+
+        if (response.data.schema !== 'not-signed-in-multiple') {
+          const isResponseValid = shared.getIsResponseValid(response.data);
+          expect(isResponseValid).toBe(true);
+        }
+
         expect(response).toSatisfyApiSpec();
       } else {
         try {

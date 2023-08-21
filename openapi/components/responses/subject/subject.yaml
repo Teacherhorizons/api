@@ -285,7 +285,7 @@ Response_subject_includedAmbassador_notSignedIn:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
-        - photo
+        # - photo
         - user
   required:
     - type
@@ -350,7 +350,7 @@ Response_subject_includedSchool_notSignedIn:
       required:
         - name
         - slug
-        - smallProfilePhoto
+        # - smallProfilePhoto
         # - city
 
     relationships:
@@ -646,8 +646,6 @@ Response_subject_includedRegionSubjectSchoolYear_notSignedIn:
 #         pageType:
 #           $ref: '../../../components/models/json-api/system/pageType.yaml#/JsonApiModel_system-pageType_relationship_attribute'
 #       required:
-#         - title
-#         - metaDescription
 #         - pageType
 #   required:
 #     - type

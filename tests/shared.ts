@@ -16,8 +16,8 @@ export var data: Config.Data;
 const mockGetData = async (): Promise<Config.Data> => {
   // if (config.createTestData) return;
   // await new Promise((resolve) => setTimeout(resolve, 1000));
-  return betaData;
-  // return config.local ? meLocalData : betaData;
+  // return betaData;
+  return config.local ? jpLocalData : betaData;
 };
 
 export const setupBeforeAll = async () => {
@@ -51,48 +51,8 @@ export function setup(context = {}) {
   beforeAll(async () => {
     try {
       if (config.createTestData) data = await addTestData();
-      else if (!config.createTestData && config.local)
-        data = {
-          schools: [
-            { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
-            { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
-          ],
-          teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
-          jobs: [{ id: 1662 }, { id: 1663 }],
-          applications: [{ id: 62103 }, { id: 62104 }, { id: 62105 }, { id: 62106 }, { id: 62107 }],
-          applicationEvents: [
-            { id: 131487 },
-            { id: 131488 },
-            { id: 131489 },
-            { id: 131490 },
-            { id: 131491 },
-            { id: 131492 },
-            { id: 131493 },
-            { id: 131494 },
-          ],
-          test: { id: 109 },
-        };
-      else if (!config.createTestData && !config.local)
-        data = {
-          schools: [
-            { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
-            { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
-          ],
-          teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
-          jobs: [{ id: 1832 }, { id: 1833 }],
-          applications: [{ id: 135338 }, { id: 135339 }, { id: 135340 }, { id: 135341 }, { id: 135342 }],
-          applicationEvents: [
-            { id: 2407997 },
-            { id: 2407998 },
-            { id: 2407999 },
-            { id: 2408000 },
-            { id: 2408001 },
-            { id: 2408002 },
-            { id: 2408003 },
-            { id: 2408004 },
-          ],
-          test: { id: 109 },
-        };
+      else if (!config.createTestData && config.local) data = jpLocalData;
+      else if (!config.createTestData && !config.local) data = betaData;
       console.log('data: ', data);
       // start ---
       shell.exec('npm run build-yaml');
@@ -194,13 +154,19 @@ export const addTestGroups = (tests: Test.Test[], testGroups: Test.TestGroup[]) 
   return tests;
 };
 
-const meLocalData: Config.Data = {
+const jpLocalData: Config.Data = {
   schools: [
     { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
     { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
   teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
   jobs: [{ id: 1662 }, { id: 1663 }],
+  cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
+  countries: [
+    { id: 54, slug: 'europe-portugal' },
+    { id: 18, slug: 'europe-denmark' },
+  ],
+  regions: [{ id: 4, slug: 'europe', numberOfArticles: 5, numberOfCountries: 47, numberOfStaff: 7 }],
   applications: [{ id: 62103 }, { id: 62104 }, { id: 62105 }, { id: 62106 }, { id: 62107 }],
   applicationEvents: [
     { id: 131487 },
@@ -212,7 +178,7 @@ const meLocalData: Config.Data = {
     { id: 131493 },
     { id: 131494 },
   ],
-  dataIssues: [{ id: 10, expectedDataLength: 2 }],
+  test: { id: 109 },
   users: [
     { id: 2, userTypeSlug: 'admin' },
     { id: 1031, userTypeSlug: 'school-1-school' },
@@ -220,30 +186,36 @@ const meLocalData: Config.Data = {
     { id: 1064, userTypeSlug: 'teacher-new' },
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
-  // asUserId: [{ id: 2 }, { id: 1031 }, { id: 23638 }, { id: 1070 }, { id: 1059 }],
-  test: { id: 109 },
 };
 
 const betaData: Config.Data = {
   schools: [
-    { id: 3640, slug: 'europe-germany-berlin-my-test-school-101' },
-    { id: 3641, slug: 'europe-germany-berlin-my-test-school-102' },
+    { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
+    { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
-  teachers: [{ memberNumber: 2223666 }, { memberNumber: 2223667 }],
-  jobs: [{ id: 1852 }, { id: 1853 }],
-  applications: [{ id: 135370 }, { id: 135371 }, { id: 135372 }, { id: 135373 }, { id: 135374 }],
+  teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
+  jobs: [{ id: 1832 }, { id: 1833 }],
+  cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
+  countries: [
+    { id: 1, slug: 'europe-albania' },
+    { id: 17, slug: 'africa-democratic-republic-of-congo' },
+  ],
+  regions: [
+    { id: 3, slug: 'central-america', numberOfArticles: 3, numberOfCountries: 18, numberOfStaff: 2 },
+    { id: 1, slug: 'africa' },
+  ],
+  applications: [{ id: 135338 }, { id: 135339 }, { id: 135340 }, { id: 135341 }, { id: 135342 }],
   applicationEvents: [
-    { id: 2408108 },
-    { id: 2408109 },
-    { id: 2408110 },
-    { id: 2408111 },
-    { id: 2408112 },
-    { id: 2408113 },
-    { id: 2408114 },
-    { id: 2408115 },
+    { id: 2407997 },
+    { id: 2407998 },
+    { id: 2407999 },
+    { id: 2408000 },
+    { id: 2408001 },
+    { id: 2408002 },
+    { id: 2408003 },
+    { id: 2408004 },
   ],
-  regions: [{ id: 3, slug: 'central-america', numberOfArticles: 3, numberOfCountries: 18, numberOfStaff: 2 }],
-  dataIssues: [{ id: 34, expectedDataLength: 5 }],
+  test: { id: 109 },
   users: [
     { id: 2, userTypeSlug: 'admin' },
     { id: 1031, userTypeSlug: 'school-1-school' },
@@ -251,44 +223,10 @@ const betaData: Config.Data = {
     { id: 1064, userTypeSlug: 'teacher-new' },
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
-  test: { id: 116 },
 };
 
-// TOOD: move below somewhere, investigate if interfaces can be joined with frontend
-
-// Check Response
-
-type Schema = 'not-signed-in-single' | 'not-signed-in-multiple';
-interface DataItem {
-  id: string;
-  type: string;
-}
-
-interface RelationshipData {
-  data: DataItem | DataItem[];
-}
-
-interface Relationships {
-  [key: string]: RelationshipData;
-}
-
-interface Attributes {
-  [key: string]: any;
-}
-
-interface JsonApi_Data extends DataItem {
-  relationships: Relationships;
-  attributes: Attributes;
-}
-
-interface JsonApiResponse {
-  schema: Schema;
-  data: JsonApi_Data[];
-  included: JsonApi_Data[];
-}
-
-const getDataItems = (relationships: Relationships): DataItem[] => {
-  const baseRelationshipDataItems: DataItem[] = [];
+const getDataItems = (relationships: JsonApi.Relationships): JsonApi.ResourceObject[] => {
+  const baseRelationshipDataItems: JsonApi.ResourceObject[] = [];
 
   for (const relationship of Object.values(relationships)) {
     if (Array.isArray(relationship.data)) {
@@ -305,23 +243,25 @@ const getDataItems = (relationships: Relationships): DataItem[] => {
   return baseRelationshipDataItems;
 };
 
-const isEveryAinB = (a: DataItem[], b: DataItem[]) => {
+const isEveryAinB = (a: JsonApi.ResourceObject[], b: JsonApi.ResourceObject[]) => {
   return a.every((aDataItem) =>
     b.some((bDataItem) => bDataItem.id === aDataItem.id && bDataItem.type === aDataItem.type)
   );
 };
 
-export const getIsResponseValid = (response: JsonApiResponse) => {
-  if (!response.data[0]?.relationships) return true;
+export const getIsResponseValid = (response: JsonApi.Response) => {
+  const data = Array.isArray(response.data) ? response.data[0] : response.data;
+  const baseRelationships = data.relationships;
 
-  const baseRelationships = response.data[0].relationships;
+  if (!baseRelationships && response.included.length === 0) return true;
+
   const includedRelationships = response.included
     .filter((item) => item.hasOwnProperty('relationships'))
     .map((item) => item.relationships);
 
   const baseRelationshipDataItems = getDataItems(baseRelationships);
 
-  let includedRelationshipDataItems: DataItem[] = [];
+  let includedRelationshipDataItems: JsonApi.ResourceObject[] = [];
 
   for (const includedRelationship of includedRelationships) {
     includedRelationshipDataItems.push(...getDataItems(includedRelationship));
@@ -331,7 +271,10 @@ export const getIsResponseValid = (response: JsonApiResponse) => {
 
   console.log('allRelationships: ', allRelationships);
 
-  const includedDataItems: DataItem[] = response.included.map((item) => ({ id: item.id, type: item.type }));
+  const includedDataItems: JsonApi.ResourceObject[] = response.included.map((item) => ({
+    id: item.id,
+    type: item.type,
+  }));
 
   console.log('includedDataItems', includedDataItems);
 
