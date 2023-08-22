@@ -4,6 +4,9 @@ import { AxiosInstance } from 'axios';
 import jestOpenAPI from 'jest-openapi';
 import path from 'path';
 import shell from 'shelljs';
+import fs from 'fs';
+import yaml from 'js-yaml';
+import { ResourceObject } from 'ts-json-api';
 
 import config from './config';
 import { api as api1, signOut as signOut1, signIn as signIn1 } from './api';
@@ -34,6 +37,45 @@ export const setupBeforeAll = async () => {
   } catch (error) {
     console.log('setup - beforeAll:', error);
   }
+};
+
+const getResponseDistinctIncludesCount = (included: ResourceObject[]): number => {
+  const distinctTypes = new Set<string>();
+  for (const resourceObject of included) {
+    distinctTypes.add(resourceObject.type);
+  }
+  return distinctTypes.size;
+};
+
+const getJsonFromYaml = (category: string, fileNameWithoutExtension: string): Record<string, any> => {
+  const filePath = `openapi/components/responses/${category}/${fileNameWithoutExtension}.yaml`;
+  const yamlFilePath = path.join(process.cwd(), filePath);
+  const yamlContent = fs.readFileSync(yamlFilePath, 'utf8');
+  const json: Record<string, any> = yaml.load(yamlContent);
+  return json;
+};
+
+const getSpecIncludesCount = (category: string, fileNameWithoutExtension: string, schema = 'notSignedIn') => {
+  // e.g. Response_regional-countries_notSignedIn
+  const specResponseName = `Response_${category}-${fileNameWithoutExtension}_${schema}`;
+  const json = getJsonFromYaml(category, fileNameWithoutExtension);
+
+  if (!json.hasOwnProperty(specResponseName)) return -1;
+
+  return json[specResponseName].properties.included.items.anyOf.length ?? -1;
+};
+
+export const doesResponseHaveAllSpecIncludes = (
+  included: ResourceObject[],
+  category: string,
+  fileNameWithoutExtension: string,
+  schema = 'notSignedIn'
+) => {
+  const responseDistinctIncludesCount = getResponseDistinctIncludesCount(included);
+  const specIncludesCount = getSpecIncludesCount(category, fileNameWithoutExtension, schema);
+  console.log('responseDistinctIncludesCount: ', responseDistinctIncludesCount);
+  console.log('specIncludesCount: ', specIncludesCount);
+  return responseDistinctIncludesCount === specIncludesCount;
 };
 
 export const setupAfterAll = async () => {

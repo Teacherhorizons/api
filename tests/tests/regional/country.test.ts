@@ -1,10 +1,10 @@
 import * as shared from '../../shared';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = [
-//   'regional-country - standard response - sparse data',
-//   'regional-country - standard response - full data',
-// ];
+// const includeTestNames: string[] = null;
+const includeTestNames = [
+  // 'regional-country - standard response - sparse data',
+  'regional-country - standard response - full data',
+];
 // const includeTestNames = ['schema=not-signed-in&filter[slug]=europe-portugal&include=jobs'];
 
 var tests = shared.addTestGroups(
@@ -93,10 +93,7 @@ var tests = shared.addTestGroups(
           userEmail: 'signedOut',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            // something with somehow compares number of distinct types in response.data.included to spec (e.g. 7 should equal 7)
-            // number of distinct types in response.data.included - easy?
-            // spec - don't know?
-            return true;
+            return shared.doesResponseHaveAllSpecIncludes(response.included, 'regional', 'country');
           },
         },
       ],
