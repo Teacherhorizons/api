@@ -165,7 +165,18 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school`,
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=environment`,
+      tests: [
+        {
+          name: 'filter[slug]=asia-singapore-english - environment',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,environment`,
       tests: [
         {
           name: 'filter[slug]=asia-singapore-english - all params',
@@ -194,9 +205,6 @@ describe('get-regional-countrySubjects', () => {
         const response = await shared.api.get(url);
         expect(response.status).toEqual(t.expectedStatus);
 
-        // spec test
-        // const isResponseValid = shared.getIsResponseValid(response.data);
-        // expect(isResponseValid).toBe(true);
         expect(response).toSatisfyApiSpec();
       } else {
         try {
