@@ -1,7 +1,7 @@
 import * as shared from '../../shared';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = ['subjects - standard response 2'];
+// const includeTestNames: string[] = null;
+const includeTestNames = ['subjects - standard response'];
 // const includeTestNames = ['subjects - sparse response'];
 
 var tests = shared.addTestGroups(
@@ -148,13 +148,31 @@ var tests = shared.addTestGroups(
       ],
     },
     {
+      getUrl: (data) => `subjects?schema=not-signed-in-single&filter[slug]=english&include=environment`,
+      tests: [
+        {
+          name: 'subjects - include environment',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
       getUrl: (data) =>
-        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths`,
+        `subjects?schema=not-signed-in-single&filter[slug]=english&include=world,regions,ambassador,jobs,subjects,subjectTeachers,articles,pages,advisers,trainingProviders,resources,subjectMonths,environment`,
       tests: [
         {
           name: 'subjects - standard response',
           userEmail: 'signedOut',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            return shared.doesResponseHaveAllSpecIncludes(
+              response.included,
+              'subject',
+              'subject',
+              'Response_subject_notSignedIn'
+            );
+          },
         },
       ],
     },
@@ -192,6 +210,10 @@ describe('get-subjects', () => {
         // spec test
         const isResponseValid = shared.getIsResponseValid(response.data);
         expect(isResponseValid).toBe(true);
+
+        if (t.getPassesCustomChecks) {
+          expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
+        }
 
         // Note: numberOfLiveJobs is needed to pass spec, but if sparse data, it won't exist.
         if (

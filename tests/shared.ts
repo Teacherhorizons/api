@@ -39,12 +39,12 @@ export const setupBeforeAll = async () => {
   }
 };
 
-const getResponseDistinctIncludesCount = (included: ResourceObject[]): number => {
+const getResponseDistinctIncludes = (included: ResourceObject[]): Set<string> => {
   const distinctTypes = new Set<string>();
   for (const resourceObject of included) {
     distinctTypes.add(resourceObject.type);
   }
-  return distinctTypes.size;
+  return distinctTypes;
 };
 
 const getJsonFromYaml = (category: string, fileNameWithoutExtension: string): Record<string, any> => {
@@ -55,27 +55,45 @@ const getJsonFromYaml = (category: string, fileNameWithoutExtension: string): Re
   return json;
 };
 
-const getSpecIncludesCount = (category: string, fileNameWithoutExtension: string, schema = 'notSignedIn') => {
-  // e.g. Response_regional-countries_notSignedIn
-  const specResponseName = `Response_${category}-${fileNameWithoutExtension}_${schema}`;
+const getSpecIncludes = (
+  category: string,
+  fileNameWithoutExtension: string,
+  specResponseName: string,
+  schema = 'notSignedIn'
+) => {
+  // e.g. 1 - Response_regional-countries_notSignedIn
+  // e.g. 2 - Response_subject_notSignedIn
+  const responseName = specResponseName || `Response_${category}-${fileNameWithoutExtension}_${schema}`;
   const json = getJsonFromYaml(category, fileNameWithoutExtension);
 
-  if (!json.hasOwnProperty(specResponseName)) return -1;
+  if (!json.hasOwnProperty(responseName)) return -1;
 
-  return json[specResponseName].properties.included.items.anyOf.length ?? -1;
+  return json[responseName].properties.included.items.anyOf;
 };
 
 export const doesResponseHaveAllSpecIncludes = (
   included: ResourceObject[],
   category: string,
   fileNameWithoutExtension: string,
+  specResponseName = '',
   schema = 'notSignedIn'
-) => {
-  const responseDistinctIncludesCount = getResponseDistinctIncludesCount(included);
-  const specIncludesCount = getSpecIncludesCount(category, fileNameWithoutExtension, schema);
+): boolean => {
+  const responseDistinctIncludes = getResponseDistinctIncludes(included);
+  const specIncludes = getSpecIncludes(category, fileNameWithoutExtension, specResponseName, schema);
+
+  const responseDistinctIncludesCount = responseDistinctIncludes.size;
+  const specIncludesCount = specIncludes?.length || -1;
+
   console.log('responseDistinctIncludesCount: ', responseDistinctIncludesCount);
   console.log('specIncludesCount: ', specIncludesCount);
-  return responseDistinctIncludesCount === specIncludesCount;
+
+  if (responseDistinctIncludesCount !== specIncludesCount) {
+    console.log('responseDistinctIncludes: ', responseDistinctIncludes);
+    console.log('specIncludes: ', specIncludes);
+    return false;
+  }
+
+  return true;
 };
 
 export const setupAfterAll = async () => {
