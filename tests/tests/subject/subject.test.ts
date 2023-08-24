@@ -1,5 +1,7 @@
 import * as shared from '../../shared';
 
+import { ResourceObject } from 'ts-json-api';
+
 // const includeTestNames: string[] = null;
 const includeTestNames = ['subjects - standard response'];
 // const includeTestNames = ['subjects - sparse response'];
@@ -166,12 +168,7 @@ var tests = shared.addTestGroups(
           userEmail: 'signedOut',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            return shared.doesResponseHaveAllSpecIncludes(
-              response.included,
-              'subject',
-              'subject',
-              'Response_subject_notSignedIn'
-            );
+            return shared.doesResponseHaveAllBaseRelationships(response.data as ResourceObject[], '/subjects');
           },
         },
       ],

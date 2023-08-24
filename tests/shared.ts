@@ -4,13 +4,14 @@ import { AxiosInstance } from 'axios';
 import jestOpenAPI from 'jest-openapi';
 import path from 'path';
 import shell from 'shelljs';
-import fs from 'fs';
-import yaml from 'js-yaml';
 import { ResourceObject } from 'ts-json-api';
 
 import config from './config';
 import { api as api1, signOut as signOut1, signIn as signIn1 } from './api';
 import { addTestData, deleteTestData, getAddTestData } from './data/main';
+
+// import specJson from '../tests/specs/openapi.json'; // --resolveJsonModule
+const specJson = require('../tests/specs/openapi.json');
 
 // export var api: AxiosInstance;
 export var data: Config.Data;
@@ -39,61 +40,45 @@ export const setupBeforeAll = async () => {
   }
 };
 
-const getResponseDistinctIncludes = (included: ResourceObject[]): Set<string> => {
+const getResponseDistinctIncludesCount = (included: ResourceObject[]): number => {
   const distinctTypes = new Set<string>();
   for (const resourceObject of included) {
     distinctTypes.add(resourceObject.type);
   }
-  return distinctTypes;
+  return distinctTypes.size;
 };
 
-const getJsonFromYaml = (category: string, fileNameWithoutExtension: string): Record<string, any> => {
-  const filePath = `openapi/components/responses/${category}/${fileNameWithoutExtension}.yaml`;
-  const yamlFilePath = path.join(process.cwd(), filePath);
-  const yamlContent = fs.readFileSync(yamlFilePath, 'utf8');
-  const json: Record<string, any> = yaml.load(yamlContent);
-  return json;
+const getSpecIncludedCount = (endpointPath: string): number => {
+  const includedCount =
+    specJson.paths[endpointPath].get.responses[200].content['application/json'].schema.oneOf[0].properties.included
+      .items.anyOf.length;
+
+  return includedCount;
 };
 
-const getSpecIncludes = (
-  category: string,
-  fileNameWithoutExtension: string,
-  specResponseName: string,
-  schema = 'notSignedIn'
-) => {
-  // e.g. 1 - Response_regional-countries_notSignedIn
-  // e.g. 2 - Response_subject_notSignedIn
-  const responseName = specResponseName || `Response_${category}-${fileNameWithoutExtension}_${schema}`;
-  const json = getJsonFromYaml(category, fileNameWithoutExtension);
-
-  if (!json.hasOwnProperty(responseName)) return -1;
-
-  return json[responseName].properties.included.items.anyOf;
-};
-
-export const doesResponseHaveAllSpecIncludes = (
-  included: ResourceObject[],
-  category: string,
-  fileNameWithoutExtension: string,
-  specResponseName = '',
-  schema = 'notSignedIn'
-): boolean => {
-  const responseDistinctIncludes = getResponseDistinctIncludes(included);
-  const specIncludes = getSpecIncludes(category, fileNameWithoutExtension, specResponseName, schema);
-
-  const responseDistinctIncludesCount = responseDistinctIncludes.size;
-  const specIncludesCount = specIncludes?.length || -1;
-
+// e.g. endpointPath = '/subjects'
+export const doesResponseHaveAllIncludes = (included: ResourceObject[], endpointPath: string) => {
+  const responseDistinctIncludesCount = getResponseDistinctIncludesCount(included);
+  const specIncludesCount = getSpecIncludedCount(endpointPath);
   console.log('responseDistinctIncludesCount: ', responseDistinctIncludesCount);
   console.log('specIncludesCount: ', specIncludesCount);
+  return responseDistinctIncludesCount === specIncludesCount;
+};
 
-  if (responseDistinctIncludesCount !== specIncludesCount) {
-    console.log('responseDistinctIncludes: ', responseDistinctIncludes);
-    console.log('specIncludes: ', specIncludes);
-    return false;
-  }
+const getSpecBaseRelationshipsCount = (endpointPath: string): number => {
+  const baseRelationships =
+    specJson.paths[endpointPath].get.responses[200].content['application/json'].schema.oneOf[0].properties.data.items
+      .properties.relationships.properties;
 
-  return true;
+  return Object.keys(baseRelationships).length;
+};
+
+export const doesResponseHaveAllBaseRelationships = (data: ResourceObject[], endpointPath: string) => {
+  const responseBaseRelationshipsCount = Object.keys(data[0].relationships).length;
+  const specBaseRelationshipCount = getSpecBaseRelationshipsCount(endpointPath);
+  console.log('responseBaseRelationshipsCount: ', responseBaseRelationshipsCount);
+  console.log('specIncludesCount: ', specBaseRelationshipCount);
+  return responseBaseRelationshipsCount === specBaseRelationshipCount;
 };
 
 export const setupAfterAll = async () => {

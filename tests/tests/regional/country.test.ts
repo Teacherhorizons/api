@@ -1,3 +1,5 @@
+import { ResourceObject } from 'ts-json-api';
+
 import * as shared from '../../shared';
 
 // const includeTestNames: string[] = null;
@@ -93,7 +95,10 @@ var tests = shared.addTestGroups(
           userEmail: 'signedOut',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            return shared.doesResponseHaveAllSpecIncludes(response.included, 'regional', 'country');
+            return (
+              shared.doesResponseHaveAllIncludes(response.included, '/regional-countries') &&
+              shared.doesResponseHaveAllBaseRelationships(response.data as ResourceObject[], '/regional-countries')
+            );
           },
         },
       ],
