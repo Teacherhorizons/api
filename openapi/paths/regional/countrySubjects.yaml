@@ -21,6 +21,7 @@ get:
         - not-signed-in-single - List of one country subject with lots of data
         - [LATER] not-signed-in-multiple - List of multiple country subjects, each with minimal data
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: query
       name: include
       description: |
@@ -33,11 +34,11 @@ get:
         - country.ambassador - Ambassador for related country
         - subject.subjectRegions - All regions for related subject
         - subject.advisers - All advisers for related subject
-        - environment - The system environment
         - jobs.school- School for each related job - TODO: consider whether we want this
+        - environment - The system environment
         - pages - All pages for country subject
       # required: true
-      example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,pages
+      example: country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,environment,pages
       schema:
         type: string
     - in: query

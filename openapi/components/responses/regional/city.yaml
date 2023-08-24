@@ -29,6 +29,7 @@ Response_regional-city_notSignedIn:
           - $ref: '#/Response_regional-city_includedCountryPhoto_notSignedIn'
           - $ref: '#/Response_regional-city_includedAttraction_notSignedIn'
           - $ref: '#/Response_regional-city_includedCityMonthNumber_notSignedIn'
+          - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
   required:
     - schema

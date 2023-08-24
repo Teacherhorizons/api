@@ -43,11 +43,10 @@ Response_subjects_notSignedInSingle:
           - $ref: './subject.yaml#/Response_subject_includedSubjectLink_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedSubjectMonth_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
-          # - $ref: './subject.yaml#/Response_subject_includedSystemPage_notSignedIn'
+          - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
           - $ref: './subject.yaml#/Response_subject_includedArticle_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedEnvironment_notSignedIn'
   required:
     - schema
     - data

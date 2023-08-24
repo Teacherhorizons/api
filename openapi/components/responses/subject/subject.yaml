@@ -35,11 +35,10 @@ Response_subject_notSignedIn:
           - $ref: '#/Response_subject_includedSubjectLink_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectMonth_notSignedIn'
           - $ref: '#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
-          # - $ref: '#/Response_subject_includedSystemPage_notSignedIn'
+          - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
           - $ref: '#/Response_subject_includedArticle_notSignedIn'
           - $ref: '#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
-          - $ref: '#/Response_subject_includedEnvironment_notSignedIn'
   required:
     - schema
     - data
@@ -705,28 +704,6 @@ Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn:
       required:
         - text
         - question
-  required:
-    - type
-    - id
-    - attributes
-
-Response_subject_includedEnvironment_notSignedIn:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_type'
-    id:
-      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        staticUrlPathStub:
-          $ref: '../../../components/models/library/system/environment.yaml#/system-environment_staticUrlPathStub'
-      required:
-        - staticUrlPathStub
   required:
     - type
     - id

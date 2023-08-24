@@ -21,6 +21,7 @@ get:
         - not-signed-in-multiple - List of multiple cities, each with minimal data
         - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: query
       name: include
       description: |
@@ -31,6 +32,7 @@ get:
         - schools - First 4 related schools when sorted by 'is subscribed' (TODO), percentage complete, random
         - ambassadors - A random 20 ambassadors (including city ambassador and school ambassadors)
         - attractions - All attractions in the city
+        - environment - The system environment
         - pages - All pages for city
       example: staff,photos,countryPhotos,jobs,schools,ambassadors,attractions,pages
       schema:
