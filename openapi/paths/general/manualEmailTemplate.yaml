@@ -10,6 +10,7 @@ get:
     <span class="testing-status-1"></span>
   parameters:
     - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: path
       name: manualEmailTemplateId
       required: true

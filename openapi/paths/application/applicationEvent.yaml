@@ -18,6 +18,7 @@ patch:
       schema:
         type: integer
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
   requestBody:
     content:
       application/json:
