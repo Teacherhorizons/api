@@ -21,6 +21,7 @@ get:
         - not-signed-in-single - List of one subject with lots of data
         - [LATER] not-signed-in-multiple - List of multiple subjects, each with minimal data
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: query
       name: include
       description: |

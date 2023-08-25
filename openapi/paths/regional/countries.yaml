@@ -21,6 +21,7 @@ get:
         - not-signed-in-multiple - List of multiple countries, each with minimal data
         - TODO - may change 'not-signed-in' to 'not-signed-in-single' (later)
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: query
       name: include
       description: |
@@ -33,7 +34,6 @@ get:
         - attractions - All attractions in the country
         - environment - The system environment
         - pages - All pages for country
-      # required: true
       example: staff,cities,photos,jobs,schools,ambassadors,attractions,pages
       schema:
         type: string

@@ -17,6 +17,7 @@ delete:
       schema:
         type: integer
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    # - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
   responses:
     '204':
       $ref: '../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204'
