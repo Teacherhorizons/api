@@ -20,7 +20,6 @@ get:
         type: integer
     - in: query
       name: include
-      required: true
       example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,pages
       schema:
         type: string
