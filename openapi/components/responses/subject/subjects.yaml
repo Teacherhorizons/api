@@ -28,25 +28,33 @@ Response_subjects_notSignedInSingle:
       type: array
       items:
         anyOf:
-          - $ref: './subject.yaml#/Response_subject_includedWorld_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedRegion_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedRegionSubject_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedAmbassador_notSignedIn'
+          # general
+          - $ref: './subject.yaml#/Response_subject_includedArticle_notSignedIn'
+          # job
           - $ref: './subject.yaml#/Response_subject_includedJob_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedSchool_notSignedIn'
+          # regional
           - $ref: './subject.yaml#/Response_subject_includedCity_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedCountry_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedRegion_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedRegionSubject_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedWorld_notSignedIn'
+          # school
+          - $ref: './subject.yaml#/Response_subject_includedSchool_notSignedIn'
+          # subject
           - $ref: './subject.yaml#/Response_subject_includedSubject_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedSubjectTeacher_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedTeacher_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedStaffMember_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedSubjectLink_notSignedIn'
           - $ref: './subject.yaml#/Response_subject_includedSubjectMonth_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedRegionSubjectSchoolYear_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedSubjectTeacher_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
+          # staff
+          - $ref: './subject.yaml#/Response_subject_includedStaffMember_notSignedIn'
+          # system
           - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
-          - $ref: './subject.yaml#/Response_subject_includedArticle_notSignedIn'
-          - $ref: './subject.yaml#/Response_subject_includedSubjectUserCommunityQuestionResponse_notSignedIn'
+          # teacher
+          - $ref: './subject.yaml#/Response_subject_includedAmbassador_notSignedIn'
+          - $ref: './subject.yaml#/Response_subject_includedTeacher_notSignedIn'
   required:
     - schema
     - data
