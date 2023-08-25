@@ -20,6 +20,15 @@ get:
         type: integer
     - in: query
       name: include
+      description: |
+        - staff - All staff in the country
+        - cities - All cities in the country
+        - photos - All photos for the country
+        - jobs - First 4 related live jobs when sorted by added date
+        - schools - First 4 related schools when sorted by 'is subscribed' (TODO), percentage complete, random
+        - ambassadors - A random 20 ambassadors (including country ambassador, city ambassadors and school ambassadors)
+        - attractions - All attractions in the country
+        - pages - All pages for country
       example: staff,cities,photos,jobs,schools,ambassadors,attractions,pages
       schema:
         type: string

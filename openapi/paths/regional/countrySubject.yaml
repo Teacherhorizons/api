@@ -20,6 +20,19 @@ get:
         type: integer
     - in: query
       name: include
+      description: |
+        - country - Related country
+        - subject - Related subject
+        - jobs - First 4 related live jobs when sorted by added date
+        - country.countrySubjects - All subjects for related country except the queried subject where numberOfLiveJobs > 0
+        - country.attractions - All attractions in the related country
+        - country.photos - All photos for the related country
+        - country.ambassador - Ambassador for related country
+        - subject.subjectRegions - All regions for related subject
+        - subject.advisers - All advisers for related subject
+        - environment - The system environment
+        - jobs.school- School for each related job - TODO: consider whether we want this
+        - pages - All pages for country subject
       example: country,subject,jobs,country.countrySubjects,country.attractions,environment,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,pages
       schema:
         type: string
