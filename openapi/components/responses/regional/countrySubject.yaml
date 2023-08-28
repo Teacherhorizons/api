@@ -116,6 +116,10 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../models/library/regional/country.yaml#/regional-country_name'
         slug:
           $ref: '../../models/library/regional/country.yaml#/regional-country_slug'
+        nameUsesThe:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_nameUsesThe'
+        middleOfSentenceName:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_middleOfSentenceName'
         ambassadorTestimonial:
           $ref: '../../models/library/regional/country.yaml#/regional-country_ambassadorTestimonial'
         averageAnnualSaving:
@@ -217,6 +221,9 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
       required:
         - name
         - slug
+        - nameUsesThe
+        - middleOfSentenceName
+        #
         - averageAnnualSaving
         - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
