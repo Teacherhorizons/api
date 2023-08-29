@@ -69,12 +69,14 @@ const getSpecBaseRelationshipsCount = (endpointPath: string): number => {
   const baseRelationships =
     specJson.paths[endpointPath].get.responses[200].content['application/json'].schema.oneOf[0].properties.data.items
       .properties.relationships.properties;
-
+  console.log('specBaseRelationships: ', baseRelationships);
   return Object.keys(baseRelationships).length;
 };
 
-export const doesResponseHaveAllBaseRelationships = (data: ResourceObject[], endpointPath: string) => {
-  const responseBaseRelationshipsCount = Object.keys(data[0].relationships).length;
+export const doesResponseHaveAllBaseRelationships = (data: ResourceObject, endpointPath: string) => {
+  const responseBaseRelationships = Object.keys(data.relationships);
+  console.log('responseBaseRelationships: ', responseBaseRelationships);
+  const responseBaseRelationshipsCount = responseBaseRelationships.length;
   const specBaseRelationshipCount = getSpecBaseRelationshipsCount(endpointPath);
   console.log('responseBaseRelationshipsCount: ', responseBaseRelationshipsCount);
   console.log('specIncludesCount: ', specBaseRelationshipCount);

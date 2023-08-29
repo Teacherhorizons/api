@@ -97,7 +97,29 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-cities?useCache=false&schema=not-signed-in&filter[slug]=europe-portugal-lisbon&include=staff,countryPhotos,photos,climate,attractions,ambassadors,jobs,schools`,
+        `regional-cities?useCache=false&schema=not-signed-in&filter[slug]=europe-portugal-lisbon&include=environment`,
+      tests: [
+        {
+          name: 'regional-city - include environment',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-cities?useCache=false&schema=not-signed-in&filter[slug]=europe-portugal-lisbon&include=pages`,
+      tests: [
+        {
+          name: 'regional-city - include pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-cities?useCache=false&schema=not-signed-in&filter[slug]=europe-portugal-lisbon&include=staff,countryPhotos,photos,climate,attractions,ambassadors,jobs,schools,environment,pages`,
       tests: [
         {
           name: 'regional-city - standard response',

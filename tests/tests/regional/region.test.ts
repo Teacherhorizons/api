@@ -226,6 +226,37 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) => `/regional-regions?schema=not-signed-in&filter[slug]=europe&include=environment`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe&include=environment',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-regions?schema=not-signed-in&filter[slug]=europe&include=pages`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe&include=pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `/regional-regions?schema=not-signed-in&filter[slug]=europe&include=staff,countries,jobs,schools,ambassadors,environment,pages`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe&include=staff,countries,jobs,schools,ambassadors,environment,pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
