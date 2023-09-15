@@ -65,19 +65,19 @@ Response_application-applicationDataIssues_admin-v2:
     data:
       type: array
       description: |
-        [Simple model](/#tag/simple-model-application-applicationDataIssues) | 
-        [JSON:API model](/#tag/json-api-model-application-applicationDataIssues)
+        [Simple model](/#tag/simple-model-application-applicationDataIssue) | 
+        [JSON:API model](/#tag/json-api-model-application-applicationDataIssue)
       items:
         $ref: '#/Response_application-applicationDataIssues_admin-v2_item'
-    included:
-      type: array
-      items:
-        anyOf:
-          - $ref: '#/Response_application-applicationDataIssues_includedGuideline_admin-v2'
+    # included:
+    #   type: array
+    #   items:
+    #     anyOf:
+    #       - $ref: '#/Response_application-applicationDataIssues_includedGuideline_admin-v2'
   required:
     - schema
     - data
-    - included
+    # - included
 
 Response_application-applicationDataIssues_admin-v2_item:
   type: object
@@ -99,12 +99,11 @@ Response_application-applicationDataIssues_admin-v2_item:
           $ref: '../../../components/models/json-api/application/guideline.yaml#/JsonApiModel_application-guideline_relationship_attribute'
       required:
         - date
-        - guideline       
+        - guideline
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_application-applicationDataIssues_includedGuideline_admin-v2:
   type: object

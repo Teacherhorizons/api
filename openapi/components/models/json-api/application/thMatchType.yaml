@@ -3,16 +3,16 @@ JsonApiModel_application-thMatchType:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_application-thMatchType_type"
+      $ref: '#/JsonApiModel_application-thMatchType_type'
     id:
-      $ref: "#/JsonApiModel_application-thMatchType_id"
+      $ref: '#/JsonApiModel_application-thMatchType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
+          $ref: '../../library/application/thMatchType.yaml#/application-thMatchType_name'
   required:
     - type
     - id
@@ -26,7 +26,7 @@ JsonApiModel_application-thMatchType_type:
 
 JsonApiModel_application-thMatchType_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -37,9 +37,9 @@ JsonApiModel_application-thMatchType_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_application-thMatchType_id"
+      $ref: '#/JsonApiModel_application-thMatchType_id'
     name:
-      $ref: "../../library/application/thMatchType.yaml#/application-thMatchType_name"
+      $ref: '../../library/application/thMatchType.yaml#/application-thMatchType_name'
   required:
     - id
     - name
@@ -56,11 +56,21 @@ JsonApiModel_application-thMatchType_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_application-thMatchType_type"
+          $ref: '#/JsonApiModel_application-thMatchType_type'
         id:
-          $ref: "#/JsonApiModel_application-thMatchType_id"
+          $ref: '#/JsonApiModel_application-thMatchType_id'
       required:
-      - type
-      - id
+        - type
+        - id
   required:
     - data
+
+# deprecated
+JsonApiModel_application-thMatchType_idOnly_deprecated:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_application-thMatchType_id'
+  required:
+    - id

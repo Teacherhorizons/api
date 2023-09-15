@@ -1,12 +1,14 @@
 Response_applications:
   oneOf:
     - $ref: '#/Response_applications_admin'
+    - $ref: '#/Response_applications_admin-v2'
     - $ref: '#/Response_applications_school'
     - $ref: '#/Response_applications_teacher'
   discriminator:
     propertyName: schema
     mapping:
       admin: '#/Response_applications_admin'
+      admin-v2: '#/Response_applications_admin-v2'
       school: '#/Response_applications_school'
       teacher: '#/Response_applications_teacher'
 
@@ -26,9 +28,6 @@ Response_applications_meta:
 # admin
 Response_applications_admin:
   type: object
-  # description: |
-  #   [Simple model](/#tag/simple-model-applications) |
-  #   [JSON:API model](/#tag/json-api-model-applications)
   additionalProperties: false
   properties:
     schema:
@@ -69,18 +68,19 @@ Response_applications_admin_item:
       additionalProperties: false
       properties:
         # simple attributes
-        # creationDate: # not used => remove
-        #   $ref: "../../../components/models/library/application/application.yaml#/application_creationDate"
+        creationDate: # not used => remove in v2
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
+        hasDataIssues:
+          $ref: '../../../components/models/library/application/application.yaml#/application_hasDataIssues'
         latestUpdateDate:
           $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        thSystemMatchScore:
+          $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
         # relationship attributes
         thMatchType:
-          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
+          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_idOnly_deprecated'
         status:
-          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
-          # allOf:
-          # - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin"
-          # - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
       required:
         - latestUpdateDate
         - status
@@ -183,7 +183,7 @@ Response_applications_includedSchool_admin:
           $ref: '../../../components/models/library/school/school.yaml#/school_thRating'
         # relationship attributes
         city:
-          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_idOnly_deprecated'
       required:
         - name
         - slug
@@ -195,6 +195,202 @@ Response_applications_includedSchool_admin:
     - attributes
 
 Response_applications_includedApplicationEvent_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type'
+    id:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+        # relationship attributes
+        type:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
+      required:
+        - date
+        - type
+  required:
+    - type
+    - id
+    - attributes
+
+# admin-v2
+Response_applications_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin
+    meta:
+      $ref: '#/Response_applications_meta'
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application) | 
+        [JSON:API model](/#tag/json-api-model-application)
+      items:
+        $ref: '#/Response_applications_admin-v2_item'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: '#/Response_applications_includedTeacher_admin-v2'
+          - $ref: '#/Response_applications_includedJob_admin-v2'
+          - $ref: '#/Response_applications_includedSchool_admin-v2'
+          - $ref: '#/Response_applications_includedApplicationEvent_admin-v2'
+  required:
+    - schema
+    - data
+
+Response_applications_admin-v2_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        hasDataIssues:
+          $ref: '../../../components/models/library/application/application.yaml#/application_hasDataIssues'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        thSystemMatchScore:
+          $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
+        # relationship attributes
+        thMatchType:
+          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
+          # allOf:
+          # - $ref: "../../../components/models/library/application/application.yaml#/application_attributes_admin-v2"
+          # - $ref: "../../../components/models/library/application/application.yaml#/application_properties_status"
+      required:
+        - latestUpdateDate
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        latestEvent:
+          $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_applications_includedTeacher_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type'
+    id:
+      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        memberNumber:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
+        thDoNotContact:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thDoNotContact'
+        thPlaceabilityRating:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating'
+        fullName:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
+        profilePhotoUrl:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
+      required:
+        - memberNumber
+        - thDoNotContact
+        - fullName
+        - profilePhotoUrl
+  required:
+    - type
+    - id
+    - attributes
+
+Response_applications_includedJob_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type'
+    id:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        title:
+          $ref: '../../../components/models/library/job/job.yaml#/job_title'
+      required:
+        - title
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
+      required:
+        - school
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_applications_includedSchool_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type'
+    id:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/school/school.yaml#/school_name'
+        slug:
+          $ref: '../../../components/models/library/school/school.yaml#/school_slug'
+        thRating:
+          $ref: '../../../components/models/library/school/school.yaml#/school_thRating'
+        # relationship attributes
+        city:
+          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+      required:
+        - name
+        - slug
+        - thRating
+        - city
+  required:
+    - type
+    - id
+    - attributes
+
+Response_applications_includedApplicationEvent_admin-v2:
   type: object
   additionalProperties: false
   properties:
