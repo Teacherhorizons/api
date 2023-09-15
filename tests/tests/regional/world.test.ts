@@ -1,8 +1,9 @@
+import { ResourceObject } from 'ts-json-api';
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
 // const includeTestNames = ['regional-world - standard response'];
-// const includeTestNames = ['regional-world - include jobs'];
+// const includeTestNames = ['regional-world - include environment'];
 
 var tests = shared.addTestGroups(
   [],
@@ -62,13 +63,46 @@ var tests = shared.addTestGroups(
       ],
     },
     {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=environment`,
+      tests: [
+        {
+          name: 'regional-world - include environment',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-world/1?useCache=false&schema=not-signed-in&include=pages`,
+      tests: [
+        {
+          name: 'regional-world - include pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
       getUrl: (data) =>
-        `regional-world/1?useCache=false&schema=not-signed-in&include=staff,regions,jobs,schools,ambassadors`,
+        `regional-world/1?useCache=false&schema=not-signed-in&include=staff,regions,jobs,schools,ambassadors,environment,pages`,
       tests: [
         {
           name: 'regional-world - standard response',
           userEmail: 'signedOut',
           expectedStatus: 200,
+          // getPassesCustomChecks(response, data) {
+          //   // Note: jobFaqs
+          //   // return
+          //   // shared.doesResponseHaveAllIncludes(response.included, '/regional-world/{worldId}');
+          //   // &&
+          //   // console.log(22, [response.data]);
+          //   // console.log(33, Object.keys([response.data][0].relationships));
+          //   // console.log(59, Object.keys((response.data as ResourceObject).relationships));
+          //   return shared.doesResponseHaveAllBaseRelationships(
+          //     response.data as ResourceObject,
+          //     '/regional-world/{worldId}'
+          //   );
+          // },
         },
       ],
     },

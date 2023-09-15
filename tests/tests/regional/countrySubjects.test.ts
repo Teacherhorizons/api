@@ -176,7 +176,18 @@ var tests = shared.addTestGroups(
     },
     {
       getUrl: (data) =>
-        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,environment`,
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=pages`,
+      tests: [
+        {
+          name: 'filter[slug]=asia-singapore-english - pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countrySubjects?useCache=false&schema=not-signed-in-single&filter[slug]=asia-singapore-english&include=country,subject,jobs,country.countrySubjects,country.attractions,country.photos,country.ambassador,subject.subjectRegions,subject.advisers,jobs.school,environment,pages`,
       tests: [
         {
           name: 'filter[slug]=asia-singapore-english - all params',

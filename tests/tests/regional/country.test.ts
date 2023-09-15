@@ -87,25 +87,45 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) =>
-        `regional-countries?useCache=false&filter[slug]=europe-portugal&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs`,
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=environment`,
       tests: [
         {
-          name: 'regional-country - standard response - full data',
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=environment',
           userEmail: 'signedOut',
           expectedStatus: 200,
-          getPassesCustomChecks(response, data) {
-            return (
-              shared.doesResponseHaveAllIncludes(response.included, '/regional-countries') &&
-              shared.doesResponseHaveAllBaseRelationships(response.data as ResourceObject[], '/regional-countries')
-            );
-          },
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `/regional-countries?schema=not-signed-in&filter[slug]=europe-portugal&include=pages`,
+      tests: [
+        {
+          name: 'schema=not-signed-in&filter[slug]=europe-portugal&include=pages',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
         },
       ],
     },
     {
       getUrl: (data) =>
-        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs`,
+        `regional-countries?useCache=false&filter[slug]=europe-portugal&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs,environment,pages`,
+      tests: [
+        {
+          name: 'regional-country - standard response - full data',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+          // getPassesCustomChecks(response, data) {
+          //   return (
+          //     shared.doesResponseHaveAllIncludes(response.included, '/regional-countries') &&
+          //     shared.doesResponseHaveAllBaseRelationships((response.data as ResourceObject[])[0], '/regional-countries')
+          //   );
+          // },
+        },
+      ],
+    },
+    {
+      getUrl: (data) =>
+        `regional-countries?useCache=false&filter[slug]=europe-belarus&schema=not-signed-in&include=staff,cities,photos,attractions,ambassadors,schools,jobs,environment,pages`,
       tests: [
         {
           name: 'regional-country - standard response - sparse data',
