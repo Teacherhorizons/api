@@ -45,6 +45,8 @@ school_hasBeenVisitedByTh:
 school_acronym:
   type: string
   example: ESCOLA
+  maxLength: 15
+  description: Updated from maxLength 10 in Sep 2023 due to 'Dwight School Hanoi' being unhappy to go shorter than 'Dwight Hanoi' (12 chars).
 school_profileStrength:
   type: number
   example: 75
