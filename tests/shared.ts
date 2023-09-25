@@ -233,6 +233,7 @@ const jpLocalData: Config.Data = {
     { id: 1064, userTypeSlug: 'teacher-new' },
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
+  dataIssues: [{ id: 1 }],
 };
 
 const betaData: Config.Data = {

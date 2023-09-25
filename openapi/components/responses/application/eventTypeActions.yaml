@@ -1,10 +1,12 @@
 Response_application-eventTypeActions:
   oneOf:
     - $ref: '#/Response_application-eventTypeActions_admin'
+    - $ref: '#/Response_application-eventTypeActions_admin-v2'
   discriminator:
     propertyName: schema
     mapping:
       admin: '#/Response_application-eventTypeActions_admin'
+      admin-v2: '#/Response_application-eventTypeActions_admin-v2'
 
 # admin
 Response_application-eventTypeActions_admin:
@@ -32,7 +34,68 @@ Response_application-eventTypeActions_admin:
     - data
     - included
 
+# admin-v2
+Response_application-eventTypeActions_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-v2
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-eventTypeActions) | 
+        [JSON:API model](/#tag/json-api-model-application-eventTypeActions)
+      items:
+        $ref: '#/Response_application-eventTypeActions_admin_item-v2'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: '#/Response_application-eventTypeActions_includedManualEmailTemplate_admin'
+  required:
+    - schema
+    - data
+    - included
+
 Response_application-eventTypeActions_admin_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_type'
+    id:
+      $ref: '../../../components/models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        label:
+          $ref: '../../../components/models/library/application/eventTypeAction.yaml#/application-eventTypeAction_label'
+        applicationEventType:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_idOnly_deprecated'
+        #relationship attribute
+        autoEmail:
+          $ref: '../../../components/models/json-api/general/autoEmail.yaml#/JsonApiModel_general-autoEmail_idOnly_deprecated'
+      required:
+        - label
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        manualEmailTemplate:
+          $ref: '../../../components/models/json-api/general/manualEmailTemplate.yaml#/JsonApiModel_general-manualEmailTemplate_relationship'
+      required:
+        - manualEmailTemplate
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-eventTypeActions_admin_item-v2:
   type: object
   additionalProperties: false
   properties:
@@ -87,8 +150,8 @@ Response_application-eventTypeActions_includedManualEmailTemplate_admin:
           $ref: '../../../components/models/library/general/manualEmailTemplate.yaml#/general-manualEmailTemplate_body'
       required:
         - to
-        - cc
-        - bcc
+        # - cc
+        # - bcc
         - subject
         - body
     id:

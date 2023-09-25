@@ -192,3 +192,14 @@ JsonApiModel_application-eventType_relationship:
         - id
   required:
     - data
+
+JsonApiModel_application-eventType_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [application-eventType](/#tag/simple-model-application-eventType)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_application-eventType_id'
+  required:
+    - id

@@ -1,12 +1,14 @@
 Response_application:
   oneOf:
     - $ref: '#/Response_application_admin'
+    - $ref: '#/Response_application_admin-v2'
     - $ref: '#/Response_application_school'
     - $ref: '#/Response_application_teacher'
   discriminator:
     propertyName: schema
     mapping:
       admin: '#/Response_application_admin'
+      admin-v2: '#/Response_application_admin-v2'
       school: '#/Response_application_school'
       teacher: '#/Response_application_teacher'
 
@@ -28,6 +30,33 @@ Response_application_admin:
           - $ref: '#/Response_application_includedSchool_admin'
           - $ref: '#/Response_application_includedJob_admin'
           - $ref: '#/Response_application_includedTeacher_admin'
+          - $ref: '#/Response_application_includedUser_admin'
+
+          # - $ref: "#/Response_application_includedApplicationEvent_admin" # TODO: consider if needed
+  required:
+    - schema
+    - data
+    - included
+
+# admin-v2
+Response_application_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-v2
+    data:
+      $ref: '#/Response_application_admin-v2_item'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: '#/Response_application_includedSchool_admin-v2'
+          - $ref: '#/Response_application_includedJob_admin-v2'
+          - $ref: '#/Response_application_includedTeacher_admin'
+          - $ref: '#/Response_application_includedUser_admin'
           # - $ref: "#/Response_application_includedApplicationEvent_admin" # TODO: consider if needed
   required:
     - schema
@@ -35,6 +64,62 @@ Response_application_admin:
     - included
 
 Response_application_admin_item:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-application) | 
+    [JSON:API model](/#tag/json-api-model-application)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        creationDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
+        recommendationText:
+          $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
+        thSystemMatchScore:
+          $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
+        hasDataIssues:
+          $ref: '../../../components/models/library/application/application.yaml#/application_hasDataIssues'
+        # relationship attributes
+        thMatchType:
+          $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_idOnly_deprecated'
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+      required:
+        - creationDate
+        - latestUpdateDate
+        - hasDataIssues
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+        teacher:
+          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        # TODO: potential issue - latestEvent is a relationship, but not included
+        latestEvent:
+          $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_relationship'
+      required:
+        - job
+        - teacher
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_application_admin-v2_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-application) | 
@@ -130,6 +215,52 @@ Response_application_includedJob_admin:
           $ref: '../../../components/models/library/job/job.yaml#/job_startDate'
         # relationship attributes
         thOwnerUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_idOnly_deprecated'
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+        subject:
+          $ref: '../../../components/models/json-api/subject/subject.yaml#/JsonApiModel_subject_idOnly_deprecated'
+        role:
+          $ref: '../../../components/models/json-api/general/role.yaml#/JsonApiModel_general-role_idOnly_deprecated'
+      required:
+        - title
+        - startDate
+        - status
+        - subject
+        - role
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        school:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
+      required:
+        - school
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_application_includedJob_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_type'
+    id:
+      $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        title:
+          $ref: '../../../components/models/library/job/job.yaml#/job_title'
+        startDate:
+          $ref: '../../../components/models/library/job/job.yaml#/job_startDate'
+        # relationship attributes
+        thOwnerUser:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
         status:
           $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
@@ -180,11 +311,56 @@ Response_application_includedSchool_admin:
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
         lraUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_idOnly_deprecated'
+      required:
+        - name
+        - slug
+        - city
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        lraUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application_includedSchool_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type'
+    id:
+      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/school/school.yaml#/school_name'
+        thRating:
+          $ref: '../../../components/models/library/school/school.yaml#/school_thRating'
+        slug:
+          $ref: '../../../components/models/library/school/school.yaml#/school_slug'
+        # relationship attributes
+        city:
+          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+        lraUser:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
         - name
         - slug
         - city
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        lraUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
@@ -587,6 +763,34 @@ Response_application_includedUser_school:
         email:
           $ref: '../../../components/models/library/user/user.yaml#/user_email'
       description: Note that a user is only included if the lraUser or thOwnerUser are included
+      required:
+        - firstName
+        - lastName
+        - email
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application_includedUser_admin:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type'
+    id:
+      $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id'
+    attributes:
+      type: object
+      description: Note that a user is only included if the lraUser or thOwnerUser are included
+      additionalProperties: false
+      properties:
+        firstName:
+          $ref: '../../../components/models/library/user/user.yaml#/user_firstName'
+        lastName:
+          $ref: '../../../components/models/library/user/user.yaml#/user_lastName'
+        email:
+          $ref: '../../../components/models/library/user/user.yaml#/user_email'
       required:
         - firstName
         - lastName

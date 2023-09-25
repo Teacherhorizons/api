@@ -76,6 +76,8 @@ Response_applications_admin_item:
           $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
         thSystemMatchScore:
           $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
+        recommendationText:
+          $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
         # relationship attributes
         thMatchType:
           $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_idOnly_deprecated'
@@ -120,13 +122,13 @@ Response_applications_includedTeacher_admin:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating'
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
-        profilePhotoUrl:
+        profileImageUrl:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
       required:
         - memberNumber
         - thDoNotContact
         - fullName
-        - profilePhotoUrl
+        - profileImageUrl
   required:
     - type
     - id
@@ -181,6 +183,8 @@ Response_applications_includedSchool_admin:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
         thRating:
           $ref: '../../../components/models/library/school/school.yaml#/school_thRating'
+        acronym:
+          $ref: '../../../components/models/library/school/school.yaml#/school_acronym'
         # relationship attributes
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_idOnly_deprecated'
@@ -211,7 +215,7 @@ Response_applications_includedApplicationEvent_admin:
           $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute_idOnly'
       required:
         - date
         - type
@@ -228,7 +232,7 @@ Response_applications_admin-v2:
     schema:
       type: string
       enum:
-        - admin
+        - admin-v2
     meta:
       $ref: '#/Response_applications_meta'
     data:
@@ -269,6 +273,8 @@ Response_applications_admin-v2_item:
           $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
         thSystemMatchScore:
           $ref: '../../../components/models/library/application/application.yaml#/application_thSystemMatchScore'
+        recommendationText:
+          $ref: '../../../components/models/library/application/application.yaml#/application_recommendationText'
         # relationship attributes
         thMatchType:
           $ref: '../../../components/models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType_relationship_attribute'
@@ -316,13 +322,13 @@ Response_applications_includedTeacher_admin-v2:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating'
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
-        profilePhotoUrl:
+        profileImageUrl:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
       required:
         - memberNumber
         - thDoNotContact
         - fullName
-        - profilePhotoUrl
+        - profileImageUrl
   required:
     - type
     - id
@@ -377,6 +383,8 @@ Response_applications_includedSchool_admin-v2:
           $ref: '../../../components/models/library/school/school.yaml#/school_slug'
         thRating:
           $ref: '../../../components/models/library/school/school.yaml#/school_thRating'
+        acronym:
+          $ref: '../../../components/models/library/school/school.yaml#/school_acronym'
         # relationship attributes
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
@@ -654,7 +662,7 @@ Response_applications_includedTeacher_school:
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
         # TODO: consider replacing with photo relationship attribute
-        profilePhotoUrl:
+        profileImageUrl:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
   required:
     - type

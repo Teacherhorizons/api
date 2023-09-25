@@ -128,3 +128,15 @@ JsonApiModel_subject_relationship_multiple:
           - id
   required:
     - data
+
+# deprecated
+JsonApiModel_subject_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [subject](/#tag/simple-model-subject)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_subject_id'
+  required:
+    - id
