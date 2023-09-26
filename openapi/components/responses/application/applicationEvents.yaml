@@ -3,6 +3,7 @@ Response_application-applicationEvents:
     - $ref: '#/Response_application-applicationEvents_admin-oneApplication'
     - $ref: '#/Response_application-applicationEvents_admin-v2-oneApplication'
     - $ref: '#/Response_application-applicationEvents_admin-allApplications'
+    - $ref: '#/Response_application-applicationEvents_admin-v2-allApplications'
     - $ref: '#/Response_application-applicationEvents_school'
     - $ref: '#/Response_application-applicationEvents_teacher'
   discriminator:
@@ -11,6 +12,7 @@ Response_application-applicationEvents:
       admin-oneApplication: '#/Response_application-applicationEvents_admin-oneApplication'
       admin-v2-oneApplication: '#/Response_application-applicationEvents_admin-v2-oneApplication'
       admin-allApplications: '#/Response_application-applicationEvents_admin-allApplications'
+      admin-v2-allApplications: '#/Response_application-applicationEvents_admin-v2-allApplications'
       school: '#/Response_application-applicationEvents_school'
       teacher: '#/Response_application-applicationEvents_teacher'
 
@@ -212,7 +214,85 @@ Response_application-applicationEvents_admin-allApplications:
     - data
     - included
 
+# admin-v2-allApplications
+Response_application-applicationEvents_admin-v2-allApplications:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-v2-allApplications
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-applicationEvents) | 
+        [JSON:API model](/#tag/json-api-model-application-applicationEvents)
+      items:
+        $ref: '#/Response_application-applicationEvents_admin-v2-allApplications_item'
+    included:
+      type: array
+      items:
+        anyOf:
+          - $ref: '#/Response_application-applicationEvents_includedUser_admin-allApplications'
+          - $ref: '#/Response_application-applicationEvents_includedApplication_admin-v2-allApplications'
+          - $ref: '#/Response_application-applicationEvents_includedJob_admin-allApplications'
+          - $ref: '#/Response_application-applicationEvents_includedSchool_admin-allApplications'
+  required:
+    - schema
+    - data
+    - included
+
 Response_application-applicationEvents_admin-allApplications_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type'
+    id:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+        creationDate:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_creationDate'
+        latestUpdateDate:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_latestUpdateDate'
+        notes:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
+        # relationship attributes
+        type:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_idOnly_deprecated'
+      required:
+        - type
+        - date
+        - creationDate
+        - latestUpdateDate
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        application:
+          $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_relationship'
+        creationUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+        latestUpdateUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - application
+        - creationUser
+        - latestUpdateUser
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_application-applicationEvents_admin-v2-allApplications_item:
   type: object
   additionalProperties: false
   properties:
@@ -286,6 +366,37 @@ Response_application-applicationEvents_includedUser_admin-allApplications:
     - attributes
 
 Response_application-applicationEvents_includedApplication_admin-allApplications:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_type'
+    id:
+      $ref: '../../../components/models/json-api/application/application.yaml#/JsonApiModel_application_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # relationship attributes
+        status:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+      required:
+        - status
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        job:
+          $ref: '../../../components/models/json-api/job/job.yaml#/JsonApiModel_job_relationship'
+      required:
+        - job
+  required:
+    - type
+    - id
+    - attributes
+    - relationships
+
+Response_application-applicationEvents_includedApplication_admin-v2-allApplications:
   type: object
   additionalProperties: false
   properties:

@@ -19,6 +19,17 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) =>
+        `application-applicationEvents?schema=admin-allApplications&filter[application.teacher.memberNumber]=111627`,
+      tests: [
+        {
+          name: 'application-applicationEvents',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
