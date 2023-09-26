@@ -44,9 +44,9 @@ JsonApiModel_application-eventTypeAction_admin:
       required:
         - label
         - applicationEventType
-        - actionType
-        - manualEmailTemplate
-        - autoEmail
+        # - actionType
+        # - manualEmailTemplate
+        # - autoEmail
     relationships:
       type: object
       description: Related attributes

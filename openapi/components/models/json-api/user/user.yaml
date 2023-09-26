@@ -116,3 +116,14 @@ JsonApiModel_user_relationship:
         - id
   required:
     - data
+
+JsonApiModel_user_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [user](/#tag/simple-model-user)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_user_id'
+  required:
+    - id

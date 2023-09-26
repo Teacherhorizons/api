@@ -84,3 +84,15 @@ JsonApiModel_general-role_relationship:
         - id
   required:
     - data
+
+# deprecated
+JsonApiModel_general-role_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [general-role](/#tag/simple-model-general-role)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_general-role_id'
+  required:
+    - id

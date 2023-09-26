@@ -85,3 +85,14 @@ JsonApiModel_general-autoEmail_relationship:
         - id
   required:
     - data
+
+JsonApiModel_general-autoEmail_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [general-autoEmail](/#tag/simple-model-general-autoEmail)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_general-autoEmail_id'
+  required:
+    - id
