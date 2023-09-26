@@ -10,7 +10,7 @@ var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `application-applicationEvents?schema=admin-v2oneApplication&filter[application.id]=1`,
+      getUrl: (data) => `application-applicationEvents?schema=admin-v2-oneApplication&filter[application.id]=1`,
       tests: [
         {
           name: 'application-applicationEvents',

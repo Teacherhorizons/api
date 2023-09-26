@@ -9,7 +9,7 @@
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[a-zA-Z0-9]*$": {
+        "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[v2-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
         "^Response_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_type$": {
@@ -198,7 +198,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(admin|school|teacher|not-signed-in)[-]*[a-zA-Z0-9]*$"
+            "pattern": "^(admin|school|teacher|not-signed-in)[-]*[v2-]*[a-zA-Z0-9]*$"
           },
           "minItems": 1,
           "maxItems": 1

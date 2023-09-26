@@ -1,7 +1,7 @@
 Response_application-applicationEvents:
   oneOf:
     - $ref: '#/Response_application-applicationEvents_admin-oneApplication'
-    - $ref: '#/Response_application-applicationEvents_admin-v2oneApplication'
+    - $ref: '#/Response_application-applicationEvents_admin-v2-oneApplication'
     - $ref: '#/Response_application-applicationEvents_admin-allApplications'
     - $ref: '#/Response_application-applicationEvents_school'
     - $ref: '#/Response_application-applicationEvents_teacher'
@@ -9,7 +9,7 @@ Response_application-applicationEvents:
     propertyName: schema
     mapping:
       admin-oneApplication: '#/Response_application-applicationEvents_admin-oneApplication'
-      admin-v2oneApplication: '#/Response_application-applicationEvents_admin-v2oneApplication'
+      admin-v2-oneApplication: '#/Response_application-applicationEvents_admin-v2-oneApplication'
       admin-allApplications: '#/Response_application-applicationEvents_admin-allApplications'
       school: '#/Response_application-applicationEvents_school'
       teacher: '#/Response_application-applicationEvents_teacher'
@@ -40,22 +40,22 @@ Response_application-applicationEvents_admin-oneApplication:
     - data
     - included
 
-# admin-v2oneApplication
-Response_application-applicationEvents_admin-v2oneApplication:
+# admin-v2-oneApplication
+Response_application-applicationEvents_admin-v2-oneApplication:
   type: object
   additionalProperties: false
   properties:
     schema:
       type: string
       enum:
-        - admin-v2oneApplication
+        - admin-v2-oneApplication
     data:
       type: array
       description: |
         [Simple model](/#tag/simple-model-application-applicationEvents) | 
         [JSON:API model](/#tag/json-api-model-application-applicationEvents)
       items:
-        $ref: '#/Response_application-applicationEvents_admin-v2oneApplication_item'
+        $ref: '#/Response_application-applicationEvents_admin-v2-oneApplication_item'
 
     included:
       type: array
@@ -90,11 +90,12 @@ Response_application-applicationEvents_admin-oneApplication_item:
           $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_notes'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_relationship_attribute'
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_idOnly_deprecated'
       required:
         - date
         - creationDate
         - latestUpdateDate
+        - type
     relationships:
       type: object
       additionalProperties: false
@@ -112,7 +113,7 @@ Response_application-applicationEvents_admin-oneApplication_item:
     - attributes
     - relationships
 
-Response_application-applicationEvents_admin-v2oneApplication_item:
+Response_application-applicationEvents_admin-v2-oneApplication_item:
   type: object
   additionalProperties: false
   properties:

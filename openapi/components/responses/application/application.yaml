@@ -355,12 +355,6 @@ Response_application_includedSchool_admin-v2:
         - name
         - slug
         - city
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        lraUser:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
   required:
     - type
     - id
