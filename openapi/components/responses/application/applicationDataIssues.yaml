@@ -28,7 +28,7 @@ Response_application-applicationDataIssues_admin:
         $ref: '#/Response_application-applicationDataIssues_admin_item'
   required:
     # note: actual api response doesn't have a schema
-    - schema
+    # - schema
     - data
 
 Response_application-applicationDataIssues_admin_item:
@@ -75,7 +75,7 @@ Response_application-applicationDataIssues_admin-v2:
     #     anyOf:
     #       - $ref: '#/Response_application-applicationDataIssues_includedGuideline_admin-v2'
   required:
-    - schema
+    # - schema
     - data
     # - included
 

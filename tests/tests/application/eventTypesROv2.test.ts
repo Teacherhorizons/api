@@ -9,15 +9,10 @@ let baseUrl = `application-eventTypes`;
 var tests = shared.addTestGroups(
   [],
   [
-    // base.signedOutAdminSchema(baseUrl, ``, 401, null),
-    // base.adminNoSchema(baseUrl, ``, 400, null),
+    base.signedOutAdminSchema(baseUrl, ``, 401, null),
     base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 24, 'admin-v2'),
-    // base.adminAdminSchemaSchoolUser(baseUrl, ``, 400, null),
-    // base.adminSchoolSchemaSchoolUser(baseUrl, ``, 200, 16),
-    // base.adminTeacherSchemaTeacherUser(baseUrl, ``, 200, 24),
-    // base.schoolSchoolSchema(baseUrl, ``, 200, 16),
-    // base.techerTeacherSchema(baseUrl, ``, 200, 24),
-    // base.techerTeacherSchemaTeacherUser(baseUrl, ``, 401, null),
+    base.schoolSchoolSchema(baseUrl, ``, 200, 16, 'school-v2'),
+    base.techerTeacherSchema(baseUrl, ``, 200, 24, 'teacher-v2'),
   ]
 );
 

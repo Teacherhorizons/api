@@ -109,10 +109,11 @@ export function schoolSchoolSchema(
   urlParam: string,
   filtersParam: string,
   statusParam: number,
-  dataLengthParam: number
+  dataLengthParam: number,
+  schema = 'school'
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=school` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=${schema}` + filtersParam,
     tests: [
       {
         name: 'BASE: school, with school schema',
@@ -128,10 +129,11 @@ export function techerTeacherSchema(
   urlParam: string,
   filtersParam: string,
   statusParam: number,
-  dataLengthParam: number
+  dataLengthParam: number,
+  schema = 'teacher'
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=teacher` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=${schema}` + filtersParam,
     tests: [
       {
         name: 'BASE: teacher, with teacher schema',

@@ -6,21 +6,7 @@ const includeTestNames: string[] = null;
 
 let baseUrl = `application-eventTypeActions`;
 
-var tests = shared.addTestGroups(
-  [],
-  [
-    // base.signedOutAdminSchema(baseUrl, ``, 401, null),
-    // base.adminNoSchema(baseUrl, ``, 400, null),
-    base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 33, 'admin-v2'),
-    // base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 29),
-    // base.adminAdminSchemaSchoolUser(baseUrl, ``, 401, null),
-    // base.adminSchoolSchemaSchoolUser(baseUrl, ``, 400, null),
-    // base.adminTeacherSchemaTeacherUser(baseUrl, ``, 400, null),
-    // base.schoolSchoolSchema(baseUrl, ``, 400, null),
-    // base.techerTeacherSchema(baseUrl, ``, 400, null),
-    // base.techerTeacherSchemaTeacherUser(baseUrl, ``, 401, null),
-  ]
-);
+var tests = shared.addTestGroups([], [base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 33, 'admin-v2')]);
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
