@@ -30,6 +30,26 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) => `application-applicationEvents?schema=school-v2&filter[application.id]=1`,
+      tests: [
+        {
+          name: 'application-applicationEvents',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationEvents?schema=teacher-v2&filter[application.id]=1`,
+      tests: [
+        {
+          name: 'application-applicationEvents',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 

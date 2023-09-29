@@ -5,7 +5,9 @@ Response_application-applicationEvents:
     - $ref: '#/Response_application-applicationEvents_admin-allApplications'
     - $ref: '#/Response_application-applicationEvents_admin-v2-allApplications'
     - $ref: '#/Response_application-applicationEvents_school'
+    - $ref: '#/Response_application-applicationEvents_school-v2'
     - $ref: '#/Response_application-applicationEvents_teacher'
+    - $ref: '#/Response_application-applicationEvents_teacher-v2'
   discriminator:
     propertyName: schema
     mapping:
@@ -14,7 +16,9 @@ Response_application-applicationEvents:
       admin-allApplications: '#/Response_application-applicationEvents_admin-allApplications'
       admin-v2-allApplications: '#/Response_application-applicationEvents_admin-v2-allApplications'
       school: '#/Response_application-applicationEvents_school'
+      school-v2: '#/Response_application-applicationEvents_school-v2'
       teacher: '#/Response_application-applicationEvents_teacher'
+      teacher-v2: '#/Response_application-applicationEvents_teacher-v2'
 
 # admin-oneApplication
 Response_application-applicationEvents_admin-oneApplication:
@@ -501,7 +505,53 @@ Response_application-applicationEvents_teacher:
     - schema
     - data
 
+# teacher-v2
+Response_application-applicationEvents_teacher-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher-v2
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-applicationEvents) | 
+        [JSON:API model](/#tag/json-api-model-application-applicationEvents)
+      items:
+        $ref: '#/Response_application-applicationEvents_teacher-v2_item'
+  required:
+    - schema
+    - data
+
 Response_application-applicationEvents_teacher_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type'
+    id:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+        # relationship attributes
+        type:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_idOnly_deprecated'
+      required:
+        - type
+        - date
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-applicationEvents_teacher-v2_item:
   type: object
   additionalProperties: false
   properties:
@@ -547,7 +597,50 @@ Response_application-applicationEvents_school:
     - schema
     - data
 
+# school-v2
+Response_application-applicationEvents_school-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school-v2
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-applicationEvents) | 
+        [JSON:API model](/#tag/json-api-model-application-applicationEvents)
+      items:
+        $ref: '#/Response_application-applicationEvents_school-v2_item'
+  required:
+    - schema
+    - data
+
 Response_application-applicationEvents_school_item:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_type'
+    id:
+      $ref: '../../../components/models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: '../../../components/models/library/application/applicationEvent.yaml#/application-applicationEvent_date'
+        # relationship attributes
+        type:
+          $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_idOnly_deprecated'
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-applicationEvents_school-v2_item:
   type: object
   additionalProperties: false
   properties:

@@ -9,17 +9,34 @@ import {
   signedInAs,
 } from '../../shared';
 
-import config from '../../config';
-
 var testsForGet = addTestGroups(
   [],
   [
     {
-      // TODO JP+RR: change backend so it matches the latest spec (e.g. status now has 'name' attribute)
       getUrl: (data) => `applications/${data.applications[0].id}?schema=admin-v2&asUserId=${data.users[0].id}`,
       tests: [
         {
           name: 'admin, as admin',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `applications/1?schema=teacher-v2`,
+      tests: [
+        {
+          name: 'admin, schema=teacher',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `applications/1?schema=school-v2`,
+      tests: [
+        {
+          name: 'admin, schema=school',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },

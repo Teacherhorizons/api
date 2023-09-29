@@ -502,6 +502,8 @@ Response_applications_teacher_item:
       type: object
       additionalProperties: false
       properties:
+        creationDate:
+          $ref: '../../../components/models/library/application/application.yaml#/application_creationDate'
         latestUpdateDate:
           $ref: '../../../components/models/library/application/application.yaml#/application_latestUpdateDate'
         # relationship attributes
