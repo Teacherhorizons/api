@@ -1,0 +1,19 @@
+SimpleModel_explorer-eventType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_explorer-eventType_id"
+    # simple attributes
+    nameForAdmin:
+      $ref: "../../library/explorer/eventType.yaml#/explorer-eventType_nameForAdmin"
+  required:
+    - id
+    - nameForAdmin
+
+# shared
+SimpleModel_explorer-eventType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

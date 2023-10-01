@@ -127,6 +127,39 @@ tags:
     description: |
       [JSON:API model](/#tag/json-api-model-application-eventTypeAction)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
+
+ # tags - simple-models - explorer
+
+  - name: simple-model-explorer-eventType
+    x-displayName: Simple model - explorer-eventType
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-eventType)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-eventType" />
+
+  - name: simple-model-explorer-status
+    x-displayName: Simple model - explorer-status
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-status)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-status" />
+
+  - name: simple-model-explorer-explorerRecord
+    x-displayName: Simple model - explorer-explorerRecord
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-explorerRecord)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-explorerRecord" />
+  
+  - name: simple-model-explorer-event
+    x-displayName: Simple model - explorer-event
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-event)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-event" />
+
+  - name: simple-model-explorer-eventTypeReason
+    x-displayName: Simple model - explorer-eventTypeReason
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-eventTypeReason)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-eventTypeReason" />
+
   # tags - simple-models - system
   - name: simple-model-system-page
     x-displayName: Simple model - system-page
@@ -1189,6 +1222,38 @@ tags:
       [Simple model](/#tag/simple-model-application-eventTypeAction)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-eventTypeAction" />
 
+  # tags - JSON:API models - explorer
+
+  - name: json-api-model-explorer-eventType
+    x-displayName: JSON:API model - explorer-eventType
+    description: |
+      [Simple model](/#tag/simple-model-explorer-eventType)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-eventType" />
+
+  - name: json-api-model-explorer-status
+    x-displayName: JSON:API model - explorer-status
+    description: |
+      [Simple model](/#tag/simple-model-explorer-status)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-status" />
+
+  - name: json-api-model-explorer-explorerRecord
+    x-displayName: JSON:API model - explorer-explorerRecord
+    description: |
+      [Simple model](/#tag/simple-model-explorer-explorerRecord)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-explorerRecord" />
+
+  - name: json-api-model-explorer-event
+    x-displayName: JSON:API model - explorer-event
+    description: |
+      [Simple model](/#tag/simple-model-explorer-event)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-event" />
+
+  - name: json-api-model-explorer-eventTypeReason
+    x-displayName: JSON:API model - explorer-eventTypeReason
+    description: |
+      [Simple model](/#tag/simple-model-explorer-eventTypeReason)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-eventTypeReason" />
+
   # tags - JSON:API models - system
 
   - name: json-api-model-system-page
@@ -2162,6 +2227,11 @@ x-tagGroups:
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
+      - simple-model-explorer-eventType
+      - simple-model-explorer-status
+      - simple-model-explorer-explorerRecord
+      - simple-model-explorer-event
+      - simple-model-explorer-eventTypeReason
       - simple-model-system-page
       - simple-model-system-pageType
       - simple-model-system-dataExportTask
@@ -2333,6 +2403,11 @@ x-tagGroups:
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
+      - json-api-model-explorer-eventType
+      - json-api-model-explorer-status
+      - json-api-model-explorer-explorerRecord
+      - json-api-model-explorer-event
+      - json-api-model-explorer-eventTypeReason
       - json-api-model-system-page
       - json-api-model-system-pageType
       - json-api-model-system-dataExportTask

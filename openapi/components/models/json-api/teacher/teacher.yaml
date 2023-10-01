@@ -51,6 +51,8 @@ JsonApiModel_teacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_facebookProfileUrl'
         videoInterviewClipUrl:
           $ref: '../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl'
+        averageReferenceScoreOutOf5:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf5'
         # relationship attributes
         user:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'

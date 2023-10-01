@@ -1,0 +1,19 @@
+SimpleModel_explorer-status:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_explorer-status_id"
+    # simple attributes
+    name:
+      $ref: "../../library/explorer/status.yaml#/explorer-status_name"
+  required:
+    - id
+    - name
+
+# shared
+SimpleModel_explorer-status_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

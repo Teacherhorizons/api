@@ -1,0 +1,29 @@
+# simple attributes
+explorer-explorerRecord_creationDate:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+
+# relationship attributes
+explorer-explorerRecord_teacherId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [teacher](/#tag/simple-model-teacher)
+# teacherId	
+# (teacherFullName)	
+
+explorer-explorerRecord_schoolUserId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
+
+explorer-explorerRecord_statusId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [explorer-status](/#tag/simple-model-explorer-status)
+
+# statusId	
+# (status.name)	

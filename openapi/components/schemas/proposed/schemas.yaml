@@ -89,6 +89,13 @@ SimpleModels:
     - $ref: '../../models/simple/application/thMatchType.yaml#/SimpleModel_application-thMatchType'
     - $ref: '../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction'
 
+    # explorer
+    - $ref: '../../models/simple/explorer/eventType.yaml#/SimpleModel_explorer-eventType'
+    - $ref: '../../models/simple/explorer/status.yaml#/SimpleModel_explorer-status'
+    - $ref: '../../models/simple/explorer/explorerRecord.yaml#/SimpleModel_explorer-explorerRecord'
+    - $ref: '../../models/simple/explorer/event.yaml#/SimpleModel_explorer-event'
+    - $ref: '../../models/simple/explorer/eventTypeReason.yaml#/SimpleModel_explorer-eventTypeReason'
+
     # school
     - $ref: '../../models/simple/school/school.yaml#/SimpleModel_school'
     - $ref: '../../models/simple/school/academicSystem.yaml#/SimpleModel_school-academicSystem'
@@ -229,6 +236,13 @@ JsonApiModels:
     - $ref: '../../models/json-api/application/status.yaml#/JsonApiModel_application-status'
     - $ref: '../../models/json-api/application/thMatchType.yaml#/JsonApiModel_application-thMatchType'
     - $ref: '../../models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction'
+
+    # explorer
+    - $ref: '../../models/json-api/explorer/eventType.yaml#/JsonApiModel_explorer-eventType'
+    - $ref: '../../models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status'
+    - $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord'
+    - $ref: '../../models/json-api/explorer/event.yaml#/JsonApiModel_explorer-event'
+    - $ref: '../../models/json-api/explorer/eventTypeReason.yaml#/JsonApiModel_explorer-eventTypeReason'
 
     # regional
     - $ref: '../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city'

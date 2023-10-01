@@ -1,0 +1,23 @@
+SimpleModel_explorer-eventTypeReason:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_explorer-eventTypeReason_id"
+    # simple attributes
+    name:
+      $ref: "../../library/explorer/eventTypeReason.yaml#/explorer-eventTypeReason_name"
+    # relationship attributes
+    typeId:
+      $ref: "../../library/explorer/eventTypeReason.yaml#/explorer-eventTypeReason_typeId"
+  required:
+    - id
+    - name
+    - typeId
+
+# shared
+SimpleModel_explorer-eventTypeReason_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
