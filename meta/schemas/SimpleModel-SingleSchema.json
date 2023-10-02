@@ -6,10 +6,10 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!_id)$": {
+        "^SimpleModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!_id)$": {
           "$ref": "#/definitions/SimpleModel-SingleSchema-Schema"
         },
-        "^SimpleModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*[a-z]_id$": {
+        "^SimpleModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*[a-z]_id$": {
           "$ref": "#/definitions/SimpleModel-SingleSchema-Id"
         }
       },

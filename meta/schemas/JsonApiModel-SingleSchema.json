@@ -6,25 +6,25 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!(_id|_type|_relationship_attribute_idOnly|_relationship_attribute|_relationship))$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*(?<!(_id|_type|_relationship_attribute_idOnly|_relationship_attribute|_relationship))$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Schema"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_type$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_type$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Type"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_id$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_id$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-Id"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute_idOnly$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute_idOnly$": {
           "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute-IdOnly"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_attribute$": {
           "$ref": "Shared.json#/definitions/JsonApiModel-RelationshipAttribute"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship$": {
           "$ref": "Shared.json#/definitions/JsonApiModel-Relationship"
         },
-        "^JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-RelationshipMultiple"
         }
       },
@@ -51,7 +51,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z-]*_type$"
+                  "pattern": "^#/JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z-]*_type$"
                 }
               }
             },
@@ -61,7 +61,7 @@
               "properties": {
                 "$ref": {
                   "type": "string",
-                  "pattern": "^#/JsonApiModel_(application|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z-]*_id$"
+                  "pattern": "^#/JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[a-zA-Z-]*_id$"
                 }
               }
             },
