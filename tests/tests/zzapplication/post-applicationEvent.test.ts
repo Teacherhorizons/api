@@ -9,7 +9,7 @@ var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.asUserId[0].id}`,
+      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[0].id}`,
       getPayload: (data) => ({
         //payload 1
         data: {
@@ -32,7 +32,7 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.asUserId[1].id}`,
+      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
       getPayload: (data) => ({
         //payload 1
         data: {
@@ -60,7 +60,7 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.asUserId[1].id}`,
+      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
       getPayload: (data) => ({
         //payload 2
         data: {
@@ -83,7 +83,7 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.asUserId[4].id}`,
+      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[4].id}`,
       getPayload: (data) => ({
         //payload 1
         data: {
