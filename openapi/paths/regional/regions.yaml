@@ -30,8 +30,9 @@ get:
         - jobs - First 4 live jobs when sorted by added date, from as many distinct countries as possible
         - schools - First 4 schools when sorted by 'is subscribed' (TODO), percentage complete, random
         - ambassadors - A random 20 ambassadors (including region ambassador, country ambassadors, city ambassadors and school ambassadors)
+        - environment - The system environment
         - pages - All pages for region
-      example: staff,countries,jobs,schools,ambassadors,pages
+      example: staff,countries,jobs,schools,ambassadors,environment,pages
       schema:
         type: string
     - in: query

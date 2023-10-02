@@ -32,8 +32,9 @@ get:
         - schools - First 4 related schools when sorted by 'is subscribed' (TODO), percentage complete, random
         - ambassadors - A random 20 ambassadors (including country ambassador, city ambassadors and school ambassadors)
         - attractions - All attractions in the country
+        - environment - The system environment
         - pages - All pages for country
-      example: staff,cities,photos,jobs,schools,ambassadors,attractions,pages
+      example: staff,cities,photos,jobs,schools,ambassadors,attractions,environment,pages
       schema:
         type: string
     - in: query

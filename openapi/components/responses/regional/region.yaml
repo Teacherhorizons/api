@@ -26,6 +26,7 @@ Response_regional-region_notSignedIn:
           - $ref: '#/Response_regional-region_includedSchool_notSignedIn'
           - $ref: '#/Response_regional-region_includedAmbassador_notSignedIn'
           - $ref: '#/Response_regional-region_includedCity_notSignedIn'
+          - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
   required:
     - schema
@@ -147,11 +148,14 @@ Response_regional-region_notSignedIn_item:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
         ambassadors:
           $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_relationship_multiple'
+        environment:
+          $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_relationship'
+        pages:
+          $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_regional-region_includedCountry_notSignedIn:
   type: object

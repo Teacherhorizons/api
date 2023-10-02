@@ -1,14 +1,20 @@
 Response_application-eventTypes:
   oneOf:
-    - $ref: "#/Response_application-eventTypes_admin"
-    - $ref: "#/Response_application-eventTypes_school"
-    - $ref: "#/Response_application-eventTypes_teacher"
+    - $ref: '#/Response_application-eventTypes_admin'
+    - $ref: '#/Response_application-eventTypes_admin-v2'
+    - $ref: '#/Response_application-eventTypes_school'
+    - $ref: '#/Response_application-eventTypes_school-v2'
+    - $ref: '#/Response_application-eventTypes_teacher'
+    - $ref: '#/Response_application-eventTypes_teacher-v2'
   discriminator:
     propertyName: schema
     mapping:
-      admin: "#/Response_application-eventTypes_admin"
-      school: "#/Response_application-eventTypes_school"
-      teacher: "#/Response_application-eventTypes_teacher"
+      admin: '#/Response_application-eventTypes_admin'
+      admin-v2: '#/Response_application-eventTypes_admin-v2'
+      school: '#/Response_application-eventTypes_school'
+      school-v2: '#/Response_application-eventTypes_school-v2'
+      teacher: '#/Response_application-eventTypes_teacher'
+      teacher-v2: '#/Response_application-eventTypes_teacher-v2'
 
 # admin
 Response_application-eventTypes_admin:
@@ -22,10 +28,29 @@ Response_application-eventTypes_admin:
     data:
       type: array
       description: |
+        [Simple model](/#tag/simple-model-application-eventType) | 
+        [JSON:API model](/#tag/json-api-model-application-eventType)
+      items:
+        $ref: '#/Response_application-eventTypes_admin_item'
+  required:
+    - schema
+    - data
+
+Response_application-eventTypes_admin-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - admin-v2
+    data:
+      type: array
+      description: |
         [Simple model](/#tag/simple-model-application-eventTypes) | 
         [JSON:API model](/#tag/json-api-model-application-eventTypes)
       items:
-        $ref: '#/Response_application-eventTypes_admin_item'
+        $ref: '#/Response_application-eventTypes_admin_item-v2'
   required:
     - schema
     - data
@@ -35,19 +60,44 @@ Response_application-eventTypes_admin_item:
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_name"
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_name'
         # relationship attributes
         applicationStatus:
-          $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+      required:
+        - name
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-eventTypes_admin_item-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
+    id:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_name'
+        # relationship attributes
+        applicationStatus:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
       required:
         - name
   required:
@@ -75,24 +125,68 @@ Response_application-eventTypes_school:
     - schema
     - data
 
+Response_application-eventTypes_school-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - school-v2
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-eventTypes) | 
+        [JSON:API model](/#tag/json-api-model-application-eventTypes)
+      items:
+        $ref: '#/Response_application-eventTypes_school_item-v2'
+  required:
+    - schema
+    - data
+
 Response_application-eventTypes_school_item:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         nameForSchool:
-          $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool"
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool'
         # relationship attributes
         applicationStatus:
-          $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+      required:
+        - nameForSchool
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-eventTypes_school_item-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
+    id:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        nameForSchool:
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_nameForSchool'
+        # relationship attributes
+        applicationStatus:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
       required:
         - nameForSchool
   required:
@@ -120,24 +214,68 @@ Response_application-eventTypes_teacher:
     - schema
     - data
 
+Response_application-eventTypes_teacher-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - teacher-v2
+    data:
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-application-eventTypes) | 
+        [JSON:API model](/#tag/json-api-model-application-eventTypes)
+      items:
+        $ref: '#/Response_application-eventTypes_teacher_item-v2'
+  required:
+    - schema
+    - data
+
 Response_application-eventTypes_teacher_item:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
     id:
-      $ref: "../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id"
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         nameForTeacher:
-          $ref: "../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher"
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher'
         # relationship attributes
         applicationStatus:
-          $ref: "../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute"
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_idOnly_deprecated'
+      required:
+        - nameForTeacher
+  required:
+    - type
+    - id
+    - attributes
+
+Response_application-eventTypes_teacher_item-v2:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_type'
+    id:
+      $ref: '../../../components/models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        nameForTeacher:
+          $ref: '../../../components/models/library/application/eventType.yaml#/application-eventType_nameForTeacher'
+        # relationship attributes
+        applicationStatus:
+          $ref: '../../../components/models/json-api/application/status.yaml#/JsonApiModel_application-status_relationship_attribute'
       required:
         - nameForTeacher
   required:

@@ -33,10 +33,11 @@ export function adminAdminSchemaAdminUser(
   urlParam: string,
   filtersParam: string,
   statusParam: number,
-  dataLengthParam: number
+  dataLengthParam: number,
+  schema = 'admin'
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=admin&asUserId=${data.asUserId[0].id}` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=${schema}&asUserId=${data.users[0].id}` + filtersParam,
     tests: [
       {
         name: 'BASE: admin, with admin schema, as admin user',
@@ -55,7 +56,7 @@ export function adminAdminSchemaSchoolUser(
   dataLengthParam: number
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=admin&asUserId=${data.asUserId[1].id}` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=admin&asUserId=${data.users[1].id}` + filtersParam,
     tests: [
       {
         name: 'BASE: admin, with admin schema, as school user',
@@ -73,7 +74,7 @@ export function adminSchoolSchemaSchoolUser(
   dataLengthParam: number
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=school&asUserId=${data.asUserId[1].id}` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=school&asUserId=${data.users[1].id}` + filtersParam,
     tests: [
       {
         name: 'BASE: admin, with school schema, as school user',
@@ -92,7 +93,7 @@ export function adminTeacherSchemaTeacherUser(
   dataLengthParam: number
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=teacher&asUserId=${data.asUserId[2].id}` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=teacher&asUserId=${data.users[2].id}` + filtersParam,
     tests: [
       {
         name: 'BASE: admin, with teacher schema, as teacher user',
@@ -108,10 +109,11 @@ export function schoolSchoolSchema(
   urlParam: string,
   filtersParam: string,
   statusParam: number,
-  dataLengthParam: number
+  dataLengthParam: number,
+  schema = 'school'
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=school` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=${schema}` + filtersParam,
     tests: [
       {
         name: 'BASE: school, with school schema',
@@ -127,10 +129,11 @@ export function techerTeacherSchema(
   urlParam: string,
   filtersParam: string,
   statusParam: number,
-  dataLengthParam: number
+  dataLengthParam: number,
+  schema = 'teacher'
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=teacher` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=${schema}` + filtersParam,
     tests: [
       {
         name: 'BASE: teacher, with teacher schema',
@@ -149,7 +152,7 @@ export function techerTeacherSchemaTeacherUser(
   dataLengthParam: number
 ) {
   return {
-    getUrl: (data) => urlParam + `?schema=teacher&asUserId=${data.asUserId[2].id}` + filtersParam,
+    getUrl: (data) => urlParam + `?schema=teacher&asUserId=${data.users[2].id}` + filtersParam,
     tests: [
       {
         name: 'BASE: teacher (any non-admin), with teacher schema, as teacher User',

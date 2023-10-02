@@ -50,3 +50,25 @@ JsonApiModel_system-environment_relationship:
         - id
   required:
     - data
+
+JsonApiModel_system-environment_includedResponse_default:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_system-environment_type'
+    id:
+      $ref: '#/JsonApiModel_system-environment_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        staticUrlPathStub:
+          $ref: '../../library/system/environment.yaml#/system-environment_staticUrlPathStub'
+      required:
+        - staticUrlPathStub
+  required:
+    - type
+    - id
+    - attributes

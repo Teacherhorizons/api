@@ -3,16 +3,16 @@ JsonApiModel_application-status:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_application-status_type"
+      $ref: '#/JsonApiModel_application-status_type'
     id:
-      $ref: "#/JsonApiModel_application-status_id"
+      $ref: '#/JsonApiModel_application-status_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: "../../library/application/status.yaml#/application-status_name"
+          $ref: '../../library/application/status.yaml#/application-status_name'
       required:
         - name
   required:
@@ -29,7 +29,7 @@ JsonApiModel_application-status_type:
 
 JsonApiModel_application-status_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -40,9 +40,9 @@ JsonApiModel_application-status_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_application-status_id"
+      $ref: '#/JsonApiModel_application-status_id'
     name:
-      $ref: "../../library/application/status.yaml#/application-status_name"
+      $ref: '../../library/application/status.yaml#/application-status_name'
   required:
     - id
     - name
@@ -59,11 +59,21 @@ JsonApiModel_application-status_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_application-status_type"
+          $ref: '#/JsonApiModel_application-status_type'
         id:
-          $ref: "#/JsonApiModel_application-status_id"
+          $ref: '#/JsonApiModel_application-status_id'
       required:
         - type
         - id
   required:
     - data
+
+# deprecated
+JsonApiModel_application-status_idOnly_deprecated:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_application-status_id'
+  required:
+    - id

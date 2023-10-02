@@ -69,7 +69,7 @@ declare namespace Config {
 
   export interface DataIssues {
     id?: number;
-    expectedDataLength: number;
+    expectedDataLength?: number;
   }
 
   export interface Data {

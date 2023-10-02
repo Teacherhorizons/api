@@ -207,6 +207,8 @@ JsonApiModel_school:
           $ref: '../../library/school/school.yaml#/school_logoUrl'
         accreditationRating:
           $ref: '../../library/school/school.yaml#/school_accreditationRating'
+        summaryTemplate:
+          $ref: '../../library/school/school.yaml#/school_summaryTemplate'
         # relationship attributes
         creationUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'

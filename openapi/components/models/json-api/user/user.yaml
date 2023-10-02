@@ -69,7 +69,7 @@ JsonApiModel_user:
         phoneCodeCountry:
           $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
         photo:
-          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
   required:
     - type
     - id
@@ -120,3 +120,14 @@ JsonApiModel_user_relationship:
         - id
   required:
     - data
+
+JsonApiModel_user_idOnly_deprecated:
+  type: object
+  description: |
+    Main properties of [user](/#tag/simple-model-user)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_user_id'
+  required:
+    - id

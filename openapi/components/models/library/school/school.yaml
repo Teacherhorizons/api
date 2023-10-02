@@ -45,6 +45,8 @@ school_hasBeenVisitedByTh:
 school_acronym:
   type: string
   example: ESCOLA
+  maxLength: 15
+  description: Updated from maxLength 10 in Sep 2023 due to 'Dwight School Hanoi' being unhappy to go shorter than 'Dwight Hanoi' (12 chars).
 school_profileStrength:
   type: number
   example: 75
@@ -293,6 +295,9 @@ school_hasThSaferRecruitmentBadgeOnOwnWebsite:
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
+school_smallProfileImageUrl:
+  type: string
+  example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
 school_accreditationRating:
   type: integer
   example: 3
@@ -331,6 +336,9 @@ school_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+school_summaryTemplate:
+  type: string
+  example: Foo bar ${baz}
 
 # relationship attributes
 school_phoneCodeCountryId:

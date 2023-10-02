@@ -30,7 +30,7 @@ Response_regional-countrySubject_notSignedIn:
           - $ref: '#/Response_regional-countrySubject_includedCountrySubject_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedStaff_notSignedIn'
           - $ref: '#/Response_regional-countrySubject_includedAmbassador_notSignedIn'
-          - $ref: '#/Response_regional-countrySubject_includedEnvironment_notSignedIn'
+          - $ref: '../../models/json-api/system/environment.yaml#/JsonApiModel_system-environment_includedResponse_default'
           - $ref: '../../models/json-api/system/page.yaml#/JsonApiModel_system-page_includedResponse_default'
   required:
     - schema
@@ -92,6 +92,8 @@ Response_regional-countrySubject_notSignedIn_item:
           $ref: '../../models/json-api/job/job.yaml#/JsonApiModel_job_relationship_multiple'
         environment:
           $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_relationship'
+        pages:
+          $ref: '../../../components/models/json-api/system/page.yaml#/JsonApiModel_system-page_relationship_multiple'
   required:
     - type
     - id
@@ -114,6 +116,10 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
           $ref: '../../models/library/regional/country.yaml#/regional-country_name'
         slug:
           $ref: '../../models/library/regional/country.yaml#/regional-country_slug'
+        nameUsesThe:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_nameUsesThe'
+        middleOfSentenceName:
+          $ref: '../../models/library/regional/country.yaml#/regional-country_middleOfSentenceName'
         ambassadorTestimonial:
           $ref: '../../models/library/regional/country.yaml#/regional-country_ambassadorTestimonial'
         averageAnnualSaving:
@@ -215,6 +221,9 @@ Response_regional-countrySubject_includedCountry_notSignedIn:
       required:
         - name
         - slug
+        - nameUsesThe
+        - middleOfSentenceName
+        #
         - averageAnnualSaving
         - monthlyRent1BedroomApartmentInCityCentre
         - monthlyRent1BedroomApartmentOutsideCityCentre
@@ -566,28 +575,6 @@ Response_regional-countrySubject_includedAmbassador_notSignedIn:
       required:
         - photo
         - user
-  required:
-    - type
-    - id
-    - attributes
-
-Response_regional-countrySubject_includedEnvironment_notSignedIn:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_type'
-    id:
-      $ref: '../../../components/models/json-api/system/environment.yaml#/JsonApiModel_system-environment_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        staticUrlPathStub:
-          $ref: '../../../components/models/library/system/environment.yaml#/system-environment_staticUrlPathStub'
-      required:
-        - staticUrlPathStub
   required:
     - type
     - id

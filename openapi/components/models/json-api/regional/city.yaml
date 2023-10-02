@@ -513,3 +513,13 @@ JsonApiModel_regional-city_relationship_multiple:
           - id
   required:
     - data
+
+# deprecated
+JsonApiModel_regional-city_idOnly_deprecated:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_regional-city_id'
+  required:
+    - id
