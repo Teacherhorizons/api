@@ -247,6 +247,41 @@
       },
       "required": ["type", "description", "additionalProperties", "properties", "required"],
       "title": "JsonApiModel-RelationshipAttribute"
+    },
+    "JsonApiModel-idOnly_deprecated": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object"
+        },
+        "additionalProperties": {
+          "const": false
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "$ref": "#/definitions/JsonApiModel-Ref"
+            }
+          },
+          "required": ["id"]
+        },
+        "required": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "allOf": [
+            {
+              "contains": {
+                "const": "id"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["type", "additionalProperties", "properties", "required"]
     }
   }
 }

@@ -26,6 +26,9 @@
         },
         "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_relationship_multiple$": {
           "$ref": "#/definitions/JsonApiModel-SingleSchema-RelationshipMultiple"
+        },
+        "^JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_idOnly_deprecated$": {
+          "$ref": "Shared.json#/definitions/JsonApiModel-idOnly_deprecated"
         }
       },
       "required": [],
