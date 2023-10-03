@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-explorerRecord
+  summary: Get explorer record
+  tags:
+    - explorer
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  parameters:
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
+    - in: path
+      name: explorerRecordId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: include
+      # description: |
+      example: ....
+      schema:
+        type: string
+
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/explorer/explorerRecord.yaml#/Response_explorer-explorerRecord'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

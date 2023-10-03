@@ -96,9 +96,12 @@ JsonApiModel_user_relationship_attribute:
       $ref: '#/JsonApiModel_user_id'
     fullName:
       $ref: '../../library/user/user.yaml#/user_fullName'
+    # photo:
+    #   $ref: '../../library/user/user.yaml#/user_photo'
   required:
     - id
     - fullName
+    # - photo
 
 JsonApiModel_user_relationship:
   type: object
@@ -121,9 +124,10 @@ JsonApiModel_user_relationship:
   required:
     - data
 
-# deprecated
 JsonApiModel_user_idOnly_deprecated:
   type: object
+  description: |
+    Main properties of [user](/#tag/simple-model-user)
   additionalProperties: false
   properties:
     id:

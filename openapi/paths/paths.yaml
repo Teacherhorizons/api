@@ -74,6 +74,10 @@
 /subject-subjectArticles:
   $ref: './../paths/subject/subjectArticles.yaml'
 
+# explorer
+/explorer/{explorerRecordId}:
+  $ref: './../paths/explorer/explorerRecord.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'
