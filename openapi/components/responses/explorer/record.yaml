@@ -1,17 +1,17 @@
-Response_explorer-explorerRecord:
+Response_explorer-record:
   oneOf:
-    - $ref: '#/Response_explorer-explorerRecord_admin'
-    - $ref: '#/Response_explorer-explorerRecord_school'
-    - $ref: '#/Response_explorer-explorerRecord_teacher'
+    - $ref: '#/Response_explorer-record_admin'
+    - $ref: '#/Response_explorer-record_school'
+    - $ref: '#/Response_explorer-record_teacher'
 
   discriminator:
     propertyName: schema
     mapping:
-      admin: '#/Response_explorer-explorerRecord_admin'
-      school: '#/Response_explorer-explorerRecord_school'
-      teacher: '#/Response_explorer-explorerRecord_teacher'
+      admin: '#/Response_explorer-record_admin'
+      school: '#/Response_explorer-record_school'
+      teacher: '#/Response_explorer-record_teacher'
 
-Response_explorer-explorerRecord_admin:
+Response_explorer-record_admin:
   type: object
   additionalProperties: false
   properties:
@@ -20,37 +20,37 @@ Response_explorer-explorerRecord_admin:
       enum:
         - admin
     data:
-      $ref: '#/Response_explorer-explorerRecord_admin_item'
+      $ref: '#/Response_explorer-record_admin_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-explorerRecord_includedEvent_admin'
-          - $ref: '#/Response_explorer-explorerRecord_includedUser_admin'
-          - $ref: '#/Response_explorer-explorerRecord_includedSchool_admin'
-          - $ref: '#/Response_explorer-explorerRecord_includedTeacher_admin'
+          - $ref: '#/Response_explorer-record_includedEvent_admin'
+          - $ref: '#/Response_explorer-record_includedUser_admin'
+          - $ref: '#/Response_explorer-record_includedSchool_admin'
+          - $ref: '#/Response_explorer-record_includedTeacher_admin'
   required:
     - schema
     - data
 
-Response_explorer-explorerRecord_admin_item:
+Response_explorer-record_admin_item:
   type: object
   description: |
-    [Simple model](/#tag/simple-model-explorer-explorerRecord) | 
-    [JSON:API model](/#tag/json-api-model-explorer-explorerRecord)
+    [Simple model](/#tag/simple-model-explorer-record) | 
+    [JSON:API model](/#tag/json-api-model-explorer-record)
   additionalProperties: false
   properties:
     type:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_type'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_type'
     id:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_id'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         creationDate:
-          $ref: '../../models/library/explorer/explorerRecord.yaml#/explorer-explorerRecord_creationDate'
+          $ref: '../../models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
@@ -70,7 +70,7 @@ Response_explorer-explorerRecord_admin_item:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedEvent_admin:
+Response_explorer-record_includedEvent_admin:
   type: object
   additionalProperties: false
   properties:
@@ -102,7 +102,7 @@ Response_explorer-explorerRecord_includedEvent_admin:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedUser_admin:
+Response_explorer-record_includedUser_admin:
   type: object
   additionalProperties: false
   properties:
@@ -134,7 +134,7 @@ Response_explorer-explorerRecord_includedUser_admin:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedSchool_admin:
+Response_explorer-record_includedSchool_admin:
   type: object
   additionalProperties: false
   properties:
@@ -163,7 +163,7 @@ Response_explorer-explorerRecord_includedSchool_admin:
     - id
     - attributes
 
-Response_explorer-explorerRecord_includedTeacher_admin:
+Response_explorer-record_includedTeacher_admin:
   type: object
   additionalProperties: false
   properties:
@@ -194,8 +194,7 @@ Response_explorer-explorerRecord_includedTeacher_admin:
     - id
     - attributes
 
-
-Response_explorer-explorerRecord_school:
+Response_explorer-record_school:
   type: object
   additionalProperties: false
   properties:
@@ -204,36 +203,36 @@ Response_explorer-explorerRecord_school:
       enum:
         - school
     data:
-      $ref: '#/Response_explorer-explorerRecord_school_item'
+      $ref: '#/Response_explorer-record_school_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-explorerRecord_includedEvent_school'
-          - $ref: '#/Response_explorer-explorerRecord_includedUser_school'
-          - $ref: '#/Response_explorer-explorerRecord_includedTeacher_school'
+          - $ref: '#/Response_explorer-record_includedEvent_school'
+          - $ref: '#/Response_explorer-record_includedUser_school'
+          - $ref: '#/Response_explorer-record_includedTeacher_school'
   required:
     - schema
     - data
 
-Response_explorer-explorerRecord_school_item:
+Response_explorer-record_school_item:
   type: object
   description: |
-    [Simple model](/#tag/simple-model-explorer-explorerRecord) | 
-    [JSON:API model](/#tag/json-api-model-explorer-explorerRecord)
+    [Simple model](/#tag/simple-model-explorer-record) | 
+    [JSON:API model](/#tag/json-api-model-explorer-record)
   additionalProperties: false
   properties:
     type:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_type'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_type'
     id:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_id'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         creationDate:
-          $ref: '../../models/library/explorer/explorerRecord.yaml#/explorer-explorerRecord_creationDate'
+          $ref: '../../models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
@@ -253,7 +252,7 @@ Response_explorer-explorerRecord_school_item:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedEvent_school:
+Response_explorer-record_includedEvent_school:
   type: object
   additionalProperties: false
   properties:
@@ -285,7 +284,7 @@ Response_explorer-explorerRecord_includedEvent_school:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedUser_school:
+Response_explorer-record_includedUser_school:
   type: object
   additionalProperties: false
   properties:
@@ -310,7 +309,7 @@ Response_explorer-explorerRecord_includedUser_school:
     - id
     - attributes
 
-Response_explorer-explorerRecord_includedTeacher_school:
+Response_explorer-record_includedTeacher_school:
   type: object
   additionalProperties: false
   properties:
@@ -341,7 +340,7 @@ Response_explorer-explorerRecord_includedTeacher_school:
     - id
     - attributes
 
-Response_explorer-explorerRecord_teacher:
+Response_explorer-record_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -350,37 +349,37 @@ Response_explorer-explorerRecord_teacher:
       enum:
         - teacher
     data:
-      $ref: '#/Response_explorer-explorerRecord_teacher_item'
+      $ref: '#/Response_explorer-record_teacher_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-explorerRecord_includedEvent_teacher'
-          - $ref: '#/Response_explorer-explorerRecord_includedUser_teacher'
-          - $ref: '#/Response_explorer-explorerRecord_includedSchool_teacher'
-          - $ref: '#/Response_explorer-explorerRecord_includedTeacher_teacher'
+          - $ref: '#/Response_explorer-record_includedEvent_teacher'
+          - $ref: '#/Response_explorer-record_includedUser_teacher'
+          - $ref: '#/Response_explorer-record_includedSchool_teacher'
+          - $ref: '#/Response_explorer-record_includedTeacher_teacher'
   required:
     - schema
     - data
 
-Response_explorer-explorerRecord_teacher_item:
+Response_explorer-record_teacher_item:
   type: object
   description: |
-    [Simple model](/#tag/simple-model-explorer-explorerRecord) | 
-    [JSON:API model](/#tag/json-api-model-explorer-explorerRecord)
+    [Simple model](/#tag/simple-model-explorer-record) | 
+    [JSON:API model](/#tag/json-api-model-explorer-record)
   additionalProperties: false
   properties:
     type:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_type'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_type'
     id:
-      $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_id'
+      $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple Attributes
         creationDate:
-          $ref: '../../models/library/explorer/explorerRecord.yaml#/explorer-explorerRecord_creationDate'
+          $ref: '../../models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
@@ -400,7 +399,7 @@ Response_explorer-explorerRecord_teacher_item:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedEvent_teacher:
+Response_explorer-record_includedEvent_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -432,7 +431,7 @@ Response_explorer-explorerRecord_includedEvent_teacher:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedUser_teacher:
+Response_explorer-record_includedUser_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -462,7 +461,7 @@ Response_explorer-explorerRecord_includedUser_teacher:
     - attributes
     - relationships
 
-Response_explorer-explorerRecord_includedSchool_teacher:
+Response_explorer-record_includedSchool_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -491,7 +490,7 @@ Response_explorer-explorerRecord_includedSchool_teacher:
     - id
     - attributes
 
-Response_explorer-explorerRecord_includedTeacher_teacher:
+Response_explorer-record_includedTeacher_teacher:
   type: object
   additionalProperties: false
   properties:

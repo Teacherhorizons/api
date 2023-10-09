@@ -1,0 +1,29 @@
+SimpleModel_explorer-record:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/SimpleModel_explorer-record_id'
+    # simple attributes
+    creationDate:
+      $ref: '../../library/explorer/record.yaml#/explorer-record_creationDate'
+    # relationship attributes
+    teacherId:
+      $ref: '../../library/explorer/record.yaml#/explorer-record_teacherId'
+    schoolUserId:
+      $ref: '../../library/explorer/record.yaml#/explorer-record_schoolUserId'
+    statusId:
+      $ref: '../../library/explorer/record.yaml#/explorer-record_statusId'
+  required:
+    - id
+    - creationDate
+    - teacherId
+    - schoolUserId
+    - statusId
+
+# shared
+SimpleModel_explorer-record_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

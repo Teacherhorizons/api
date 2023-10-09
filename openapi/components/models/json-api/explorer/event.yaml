@@ -12,22 +12,22 @@ JsonApiModel_explorer-event:
       properties:
         # simple attributes
         date:
-          $ref: "../../library/explorer/event.yaml#/explorer-event_date"
+          $ref: '../../library/explorer/event.yaml#/explorer-event_date'
         creationDate:
-          $ref: "../../library/explorer/event.yaml#/explorer-event_creationDate"
+          $ref: '../../library/explorer/event.yaml#/explorer-event_creationDate'
         latestUpdateDate:
-          $ref: "../../library/explorer/event.yaml#/explorer-event_latestUpdateDate"
+          $ref: '../../library/explorer/event.yaml#/explorer-event_latestUpdateDate'
         text:
-          $ref: "../../library/explorer/event.yaml#/explorer-event_text"
+          $ref: '../../library/explorer/event.yaml#/explorer-event_text'
         # relationship attributes
         record:
-          $ref: "../explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_relationship_attribute"
+          $ref: '../explorer/record.yaml#/JsonApiModel_explorer-record_relationship_attribute'
         creationUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         type:
-          $ref: "../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship_attribute"
+          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship_attribute'
       required:
         - id
         - date
@@ -43,13 +43,13 @@ JsonApiModel_explorer-event:
       additionalProperties: false
       properties:
         record:
-          $ref: "../explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord_relationship"
+          $ref: '../explorer/record.yaml#/JsonApiModel_explorer-record_relationship'
         creationUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         type:
-          $ref: "../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship"
+          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship'
   required:
     - type
     - id
