@@ -19,8 +19,12 @@ get:
         type: integer
     - in: query
       name: include
-      # description: |
-      example: ....
+      description: |
+        - events - All related events
+        - schoolUser - Related school user
+        - schoolUser.schools - All schools related to school user (for admin and teacher schemas only)
+        - teacher - Related teacher
+      example: events,schoolUser,schoolUser.schools,teacher
       schema:
         type: string
 
