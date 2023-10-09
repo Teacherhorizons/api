@@ -94,7 +94,7 @@ var testsForPost = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications?asUserId=${data.asUserId[0].id}`,
+      getUrl: (data) => `applications?asUserId=${data.users[0].id}`,
       tests: [
         {
           // POST an application using jobId & teacherMemberNumber | works for admin
@@ -106,7 +106,7 @@ var testsForPost = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications?asUserId=${data.asUserId[1].id}`,
+      getUrl: (data) => `applications?asUserId=${data.users[1].id}`,
       tests: [
         {
           name: 'admin POST 1, as school',
@@ -117,7 +117,7 @@ var testsForPost = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications?asUserId=${data.asUserId[0].id}`,
+      getUrl: (data) => `applications?asUserId=${data.users[0].id}`,
       tests: [
         {
           name: 'school1 POST 1, as admin',
@@ -213,7 +213,7 @@ var testsForPatch = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.asUserId[0].id}`,
+      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.users[0].id}`,
       tests: [
         {
           // PATCH an application using jobId & teacherMemberNumber | works for admin
@@ -225,7 +225,7 @@ var testsForPatch = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.asUserId[1].id}`,
+      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.users[1].id}`,
       tests: [
         {
           name: 'admin PATCH 101, as school1',
@@ -236,7 +236,7 @@ var testsForPatch = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.asUserId[0].id}`,
+      getUrl: (data) => `applications/${testApplicationIds[0]}?asUserId=${data.users[0].id}`,
       tests: [
         {
           name: 'school1 PATCH 101, as admin',

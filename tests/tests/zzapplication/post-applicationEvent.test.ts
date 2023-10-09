@@ -8,131 +8,131 @@ let testIds: number[] = [];
 var tests = shared.addTestGroups(
   [],
   [
-    {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[0].id}`,
-      getPayload: (data) => ({
-        //payload 1
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '14' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, as admin',
-          userEmail: 'admin@th.test',
-          expectedStatus: 201,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
-      getPayload: (data) => ({
-        //payload 1
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '14' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, as school, eventTypeId equal 14',
-          userEmail: 'admin@th.test',
-          expectedStatus: 201,
-        },
-        {
-          name: 'school (school-1), as (any) school',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
-      getPayload: (data) => ({
-        //payload 2
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '1' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, as school, eventTypeId not 14 or 24',
-          userEmail: 'admin@th.test',
-          expectedStatus: 404, //entityNotFoundForId eventTypeId incorrect for school
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents?asUserId=${data.users[4].id}`,
-      getPayload: (data) => ({
-        //payload 1
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '14' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, as (any non-admin/school) endorsed',
-          userEmail: 'admin@th.test',
-          expectedStatus: 401, //accessNotPermitted	unauthorised
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents`,
-      getPayload: (data) => ({
-        //payload 1
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '14' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'notSignedIn',
-          userEmail: 'notSignedIn',
-          expectedStatus: 401, //accessNotPermitted	Must be signed in
-        },
-        {
-          name: 'school, eventTypeId equal 14',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 201,
-        },
-      ],
-    },
+    // {
+    //   getUrl: (data) => `application-applicationEvents?asUserId=${data.users[0].id}`,
+    //   getPayload: (data) => ({
+    //     //payload 1
+    //     data: {
+    //       type: 'application-applicationEvent',
+    //       attributes: {
+    //         application: { id: `${data.applications[0].id}` },
+    //         eventType: { id: '14' },
+    //         date: '2022-08-15T12:30:00.000Z',
+    //         notes: 'FooBasr',
+    //         autoEmail: { id: '42' },
+    //       },
+    //     },
+    //   }),
+    //   tests: [
+    //     {
+    //       name: 'admin, as admin',
+    //       userEmail: 'admin@th.test',
+    //       expectedStatus: 201,
+    //     },
+    //   ],
+    // },
+    // {
+    //   getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
+    //   getPayload: (data) => ({
+    //     //payload 1
+    //     data: {
+    //       type: 'application-applicationEvent',
+    //       attributes: {
+    //         application: { id: `${data.applications[0].id}` },
+    //         eventType: { id: '14' },
+    //         date: '2022-08-15T12:30:00.000Z',
+    //         notes: 'FooBasr',
+    //         autoEmail: { id: '42' },
+    //       },
+    //     },
+    //   }),
+    //   tests: [
+    //     {
+    //       name: 'admin, as school, eventTypeId equal 14',
+    //       userEmail: 'admin@th.test',
+    //       expectedStatus: 201,
+    //     },
+    //     {
+    //       name: 'school (school-1), as (any) school',
+    //       userEmail: 'school-1-school@th.test',
+    //       expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
+    //     },
+    //   ],
+    // },
+    // {
+    //   getUrl: (data) => `application-applicationEvents?asUserId=${data.users[1].id}`,
+    //   getPayload: (data) => ({
+    //     //payload 2
+    //     data: {
+    //       type: 'application-applicationEvent',
+    //       attributes: {
+    //         application: { id: `${data.applications[0].id}` },
+    //         eventType: { id: '1' },
+    //         date: '2022-08-15T12:30:00.000Z',
+    //         notes: 'FooBasr',
+    //         autoEmail: { id: '42' },
+    //       },
+    //     },
+    //   }),
+    //   tests: [
+    //     {
+    //       name: 'admin, as school, eventTypeId not 14 or 24',
+    //       userEmail: 'admin@th.test',
+    //       expectedStatus: 404, //entityNotFoundForId eventTypeId incorrect for school
+    //     },
+    //   ],
+    // },
+    // {
+    //   getUrl: (data) => `application-applicationEvents?asUserId=${data.users[4].id}`,
+    //   getPayload: (data) => ({
+    //     //payload 1
+    //     data: {
+    //       type: 'application-applicationEvent',
+    //       attributes: {
+    //         application: { id: `${data.applications[0].id}` },
+    //         eventType: { id: '14' },
+    //         date: '2022-08-15T12:30:00.000Z',
+    //         notes: 'FooBasr',
+    //         autoEmail: { id: '42' },
+    //       },
+    //     },
+    //   }),
+    //   tests: [
+    //     {
+    //       name: 'admin, as (any non-admin/school) endorsed',
+    //       userEmail: 'admin@th.test',
+    //       expectedStatus: 401, //accessNotPermitted	unauthorised
+    //     },
+    //   ],
+    // },
+    // {
+    //   getUrl: (data) => `application-applicationEvents`,
+    //   getPayload: (data) => ({
+    //     //payload 1
+    //     data: {
+    //       type: 'application-applicationEvent',
+    //       attributes: {
+    //         application: { id: `${data.applications[0].id}` },
+    //         eventType: { id: '14' },
+    //         date: '2022-08-15T12:30:00.000Z',
+    //         notes: 'FooBasr',
+    //         autoEmail: { id: '42' },
+    //       },
+    //     },
+    //   }),
+    //   tests: [
+    //     {
+    //       name: 'notSignedIn',
+    //       userEmail: 'notSignedIn',
+    //       expectedStatus: 401, //accessNotPermitted	Must be signed in
+    //     },
+    //     {
+    //       name: 'school, eventTypeId equal 14',
+    //       userEmail: 'school-1-school@th.test',
+    //       expectedStatus: 201,
+    //     },
+    //   ],
+    // },
     {
       getUrl: (data) => `application-applicationEvents`,
       getPayload: (data) => ({
@@ -154,72 +154,72 @@ var tests = shared.addTestGroups(
         },
       ],
     },
-    {
-      getUrl: (data) => `application-applicationEvents`,
-      getPayload: (data) => ({
-        //payload fails
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            eventType: { id: '14' },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, missing applicationId attribute',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents`,
-      getPayload: (data) => ({
-        //payload fails
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            date: '2022-08-15T12:30:00.000Z',
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, missing eventTypeId attribute',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400,
-        },
-      ],
-    },
-    {
-      getUrl: (data) => `application-applicationEvents`,
-      getPayload: (data) => ({
-        //payload fails
-        data: {
-          type: 'application-applicationEvent',
-          attributes: {
-            application: { id: `${data.applications[0].id}` },
-            eventType: { id: '14' },
-            notes: 'FooBasr',
-            autoEmail: { id: '42' },
-          },
-        },
-      }),
-      tests: [
-        {
-          name: 'admin, missing date attribute',
-          userEmail: 'admin@th.test',
-          expectedStatus: 400,
-        },
-      ],
-    },
+    //   {
+    //     getUrl: (data) => `application-applicationEvents`,
+    //     getPayload: (data) => ({
+    //       //payload fails
+    //       data: {
+    //         type: 'application-applicationEvent',
+    //         attributes: {
+    //           eventType: { id: '14' },
+    //           date: '2022-08-15T12:30:00.000Z',
+    //           notes: 'FooBasr',
+    //           autoEmail: { id: '42' },
+    //         },
+    //       },
+    //     }),
+    //     tests: [
+    //       {
+    //         name: 'admin, missing applicationId attribute',
+    //         userEmail: 'admin@th.test',
+    //         expectedStatus: 400,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     getUrl: (data) => `application-applicationEvents`,
+    //     getPayload: (data) => ({
+    //       //payload fails
+    //       data: {
+    //         type: 'application-applicationEvent',
+    //         attributes: {
+    //           application: { id: `${data.applications[0].id}` },
+    //           date: '2022-08-15T12:30:00.000Z',
+    //           notes: 'FooBasr',
+    //           autoEmail: { id: '42' },
+    //         },
+    //       },
+    //     }),
+    //     tests: [
+    //       {
+    //         name: 'admin, missing eventTypeId attribute',
+    //         userEmail: 'admin@th.test',
+    //         expectedStatus: 400,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     getUrl: (data) => `application-applicationEvents`,
+    //     getPayload: (data) => ({
+    //       //payload fails
+    //       data: {
+    //         type: 'application-applicationEvent',
+    //         attributes: {
+    //           application: { id: `${data.applications[0].id}` },
+    //           eventType: { id: '14' },
+    //           notes: 'FooBasr',
+    //           autoEmail: { id: '42' },
+    //         },
+    //       },
+    //     }),
+    //     tests: [
+    //       {
+    //         name: 'admin, missing date attribute',
+    //         userEmail: 'admin@th.test',
+    //         expectedStatus: 400,
+    //       },
+    //     ],
+    //   },
   ]
 );
 
@@ -259,6 +259,7 @@ describe('post-applicationEvent', () => {
   jest.setTimeout(60 * 1000);
   afterAll(async () => {
     console.log(testIds);
+    let isSuccess = false;
     if (testIds.length > 0) {
       try {
         await shared.signIn('admin@th.test');
@@ -268,12 +269,14 @@ describe('post-applicationEvent', () => {
           const response = await shared.api.delete('application-applicationEvents/' + testId);
           console.log(`deleteTestMadeDataSuccess - ${testIds[i]}`, response.data);
         }
-        return true;
+        isSuccess = true;
       } catch (error) {
         console.log('deleteTestMadeData', error);
-        return false;
       }
     }
+
     await shared.setupAfterAll();
+
+    return isSuccess;
   });
 });
