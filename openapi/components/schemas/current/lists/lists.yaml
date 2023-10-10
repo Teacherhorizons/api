@@ -862,3 +862,97 @@ properties:
         currency:
           type: string
           example: Australian dollar
+  explorerEventTypesAdmin: 	
+    type: array
+    items:
+      type: object
+      properties:	
+       id:	
+        type: integer
+        format: int32
+        example: 1	
+       name:
+        type: string
+        example: Invited for interview	
+       recordStatus:		
+        type: object
+        properties:
+          id:	
+           type: integer
+           format: int32
+           example: 1	
+          name:
+           type: string
+           example: Open	
+  explorerEventTypesSchool: 	
+    type: array
+    items:
+      type: object
+      properties:	
+       id:	
+        type: integer
+        format: int32
+        example: 1	
+       name:
+        type: string
+        example: Interview request sent
+       recordStatus:		
+        type: object
+        properties:
+          id:	
+           type: integer
+           format: int32
+           example: 1	
+          name:
+           type: string
+           example: Open	
+  explorerEventTypesTeacher: 	
+    type: array
+    items:
+      type: object
+      properties:	
+       id:	
+        type: integer
+        format: int32
+        example: 1	
+       name:
+        type: string
+        example: Interview request received from school
+       recordStatus:		
+        type: object
+        properties:
+          id:	
+           type: integer
+           format: int32
+           example: 1	
+          name:
+           type: string
+           example: Open
+  explorerStatuses:	
+    type: array
+    items:
+      type: object
+      properties:	
+       id:	
+        type: integer
+        format: int32
+        example: 1	
+       name:
+        type: string
+        example: Open
+  explorerEventTypeReasons:	
+    type: array
+    items:
+      type: object
+      properties:	
+       id:	
+        type: integer
+        format: int32
+        example: 1	
+       typeId:	
+        type: integer
+        format: int32
+        example: 1	
+       name:
+        type: string
+        example: Accepted another offer
