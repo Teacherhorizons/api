@@ -1,24 +1,24 @@
-JsonApiModel_explorer-event:
+JsonApiModel_explorer-activity:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: '#/JsonApiModel_explorer-event_type'
+      $ref: '#/JsonApiModel_explorer-activity_type'
     id:
-      $ref: '#/JsonApiModel_explorer-event_id'
+      $ref: '#/JsonApiModel_explorer-activity_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         date:
-          $ref: '../../library/explorer/event.yaml#/explorer-event_date'
+          $ref: '../../library/explorer/activity.yaml#/explorer-activity_date'
         creationDate:
-          $ref: '../../library/explorer/event.yaml#/explorer-event_creationDate'
+          $ref: '../../library/explorer/activity.yaml#/explorer-activity_creationDate'
         latestUpdateDate:
-          $ref: '../../library/explorer/event.yaml#/explorer-event_latestUpdateDate'
+          $ref: '../../library/explorer/activity.yaml#/explorer-activity_latestUpdateDate'
         text:
-          $ref: '../../library/explorer/event.yaml#/explorer-event_text'
+          $ref: '../../library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         record:
           $ref: '../explorer/record.yaml#/JsonApiModel_explorer-record_relationship_attribute'
@@ -27,7 +27,7 @@ JsonApiModel_explorer-event:
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         type:
-          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship_attribute'
+          $ref: '../explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
       required:
         - id
         - date
@@ -49,39 +49,39 @@ JsonApiModel_explorer-event:
         latestUpdateUser:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         type:
-          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship'
+          $ref: '../explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship'
   required:
     - type
     - id
 
-JsonApiModel_explorer-event_type:
+JsonApiModel_explorer-activity_type:
   type: string
-  example: explorer-event
+  example: explorer-activity
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_explorer-event_id:
+JsonApiModel_explorer-activity_id:
   type: string
   example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
-JsonApiModel_explorer-event_relationship_attribute:
+JsonApiModel_explorer-activity_relationship_attribute:
   type: object
   description: |
-    Main properties of [explorer-event](/#tag/simple-model-explorer-event)
+    Main properties of [explorer-activity](/#tag/simple-model-explorer-activity)
   additionalProperties: false
   properties:
     id:
-      $ref: '#/JsonApiModel_explorer-event_id'
+      $ref: '#/JsonApiModel_explorer-activity_id'
   required:
     - id
 
-JsonApiModel_explorer-event_relationship:
+JsonApiModel_explorer-activity_relationship:
   type: object
   description: |
-    [Simple model](/#tag/simple-model-explorer-event) | 
-    [JSON:API model](/#tag/json-api-model-explorer-event)
+    [Simple model](/#tag/simple-model-explorer-activity) | 
+    [JSON:API model](/#tag/json-api-model-explorer-activity)
   additionalProperties: false
   properties:
     data:
@@ -89,20 +89,20 @@ JsonApiModel_explorer-event_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: '#/JsonApiModel_explorer-event_type'
+          $ref: '#/JsonApiModel_explorer-activity_type'
         id:
-          $ref: '#/JsonApiModel_explorer-event_id'
+          $ref: '#/JsonApiModel_explorer-activity_id'
       required:
         - type
         - id
   required:
     - data
 
-JsonApiModel_explorer-event_relationship_multiple:
+JsonApiModel_explorer-activity_relationship_multiple:
   type: object
   description: |
-    [Simple model](/#tag/simple-model-explorer-event) | 
-    [JSON:API model](/#tag/json-api-model-explorer-event)
+    [Simple model](/#tag/simple-model-explorer-activity) | 
+    [JSON:API model](/#tag/json-api-model-explorer-activity)
   additionalProperties: false
   properties:
     data:
@@ -112,9 +112,9 @@ JsonApiModel_explorer-event_relationship_multiple:
         additionalProperties: false
         properties:
           type:
-            $ref: '#/JsonApiModel_explorer-event_type'
+            $ref: '#/JsonApiModel_explorer-activity_type'
           id:
-            $ref: '#/JsonApiModel_explorer-event_id'
+            $ref: '#/JsonApiModel_explorer-activity_id'
         required:
           - type
           - id

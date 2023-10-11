@@ -1,46 +1,45 @@
 # simple attributes
-explorer-event_date:
+explorer-activity_date:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-explorer-event_creationDate:
+explorer-activity_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-explorer-event_latestUpdateDate:
+explorer-activity_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
 
-explorer-event_text:
+explorer-activity_text:
   type: string
   example: Accepted another offer
 
 # relationship attributes
 
-explorer-event_recordId:
+explorer-activity_recordId:
   type: integer
   example: 1
   description: |
     Relationship to [explorer-record](/#tag/simple-model-explorer-record)
 
-explorer-event_creationUserId:
+explorer-activity_creationUserId:
   type: integer
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
 
-explorer-event_latestUpdateUserId:
+explorer-activity_latestUpdateUserId:
   type: integer
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
 
-explorer-event_typeId:
+explorer-activity_typeId:
   type: integer
   example: 1
   description: |
     Relationship to [explorer-type](/#tag/simple-model-explorer-type)
-

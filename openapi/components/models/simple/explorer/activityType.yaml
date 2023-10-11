@@ -1,18 +1,18 @@
-SimpleModel_explorer-eventType:
+SimpleModel_explorer-activityType:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_explorer-eventType_id"
+      $ref: '#/SimpleModel_explorer-activityType_id'
     # simple attributes
     nameForAdmin:
-      $ref: "../../library/explorer/eventType.yaml#/explorer-eventType_nameForAdmin"
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
   required:
     - id
     - nameForAdmin
 
 # shared
-SimpleModel_explorer-eventType_id:
+SimpleModel_explorer-activityType_id:
   type: integer
   example: 1
   readOnly: true
