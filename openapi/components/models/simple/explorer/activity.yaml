@@ -1,0 +1,41 @@
+SimpleModel_explorer-activity:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/SimpleModel_explorer-activity_id'
+    # simple attributes
+    date:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_date'
+    creationDate:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_creationDate'
+    latestUpdateDate:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_latestUpdateDate'
+    text:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_text'
+    # relationship attributes
+    recordId:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_recordId'
+    creationUserId:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_creationUserId'
+    latestUpdateUserId:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_latestUpdateUserId'
+    typeId:
+      $ref: '../../library/explorer/activity.yaml#/explorer-activity_typeId'
+  required:
+    - id
+    - date
+    - creationDate
+    - latestUpdateDate
+    - text
+    - recordId
+    - creationUserId
+    - latestUpdateUserId
+    - typeId
+
+# shared
+SimpleModel_explorer-activity_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

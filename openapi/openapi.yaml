@@ -128,13 +128,13 @@ tags:
       [JSON:API model](/#tag/json-api-model-application-eventTypeAction)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-eventTypeAction" />
 
- # tags - simple-models - explorer
+  # tags - simple-models - explorer
 
-  - name: simple-model-explorer-eventType
-    x-displayName: Simple model - explorer-eventType
+  - name: simple-model-explorer-activityType
+    x-displayName: Simple model - explorer-activityType
     description: |
-      [JSON:API model](/#tag/json-api-model-explorer-eventType)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-eventType" />
+      [JSON:API model](/#tag/json-api-model-explorer-activityType)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-activityType" />
 
   - name: simple-model-explorer-status
     x-displayName: Simple model - explorer-status
@@ -142,23 +142,23 @@ tags:
       [JSON:API model](/#tag/json-api-model-explorer-status)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-status" />
 
-  - name: simple-model-explorer-explorerRecord
-    x-displayName: Simple model - explorer-explorerRecord
+  - name: simple-model-explorer-record
+    x-displayName: Simple model - explorer-record
     description: |
-      [JSON:API model](/#tag/json-api-model-explorer-explorerRecord)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-explorerRecord" />
-  
-  - name: simple-model-explorer-event
-    x-displayName: Simple model - explorer-event
-    description: |
-      [JSON:API model](/#tag/json-api-model-explorer-event)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-event" />
+      [JSON:API model](/#tag/json-api-model-explorer-record)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-record" />
 
-  - name: simple-model-explorer-eventTypeReason
-    x-displayName: Simple model - explorer-eventTypeReason
+  - name: simple-model-explorer-activity
+    x-displayName: Simple model - explorer-activity
     description: |
-      [JSON:API model](/#tag/json-api-model-explorer-eventTypeReason)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-eventTypeReason" />
+      [JSON:API model](/#tag/json-api-model-explorer-activity)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-activity" />
+
+  - name: simple-model-explorer-activityTypeReason
+    x-displayName: Simple model - explorer-activityTypeReason
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-activityTypeReason)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-activityTypeReason" />
 
   # tags - simple-models - system
   - name: simple-model-system-page
@@ -1224,11 +1224,11 @@ tags:
 
   # tags - JSON:API models - explorer
 
-  - name: json-api-model-explorer-eventType
-    x-displayName: JSON:API model - explorer-eventType
+  - name: json-api-model-explorer-activityType
+    x-displayName: JSON:API model - explorer-activityType
     description: |
-      [Simple model](/#tag/simple-model-explorer-eventType)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-eventType" />
+      [Simple model](/#tag/simple-model-explorer-activityType)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-activityType" />
 
   - name: json-api-model-explorer-status
     x-displayName: JSON:API model - explorer-status
@@ -1236,23 +1236,23 @@ tags:
       [Simple model](/#tag/simple-model-explorer-status)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-status" />
 
-  - name: json-api-model-explorer-explorerRecord
-    x-displayName: JSON:API model - explorer-explorerRecord
+  - name: json-api-model-explorer-record
+    x-displayName: JSON:API model - explorer-record
     description: |
-      [Simple model](/#tag/simple-model-explorer-explorerRecord)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-explorerRecord" />
+      [Simple model](/#tag/simple-model-explorer-record)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-record" />
 
-  - name: json-api-model-explorer-event
-    x-displayName: JSON:API model - explorer-event
+  - name: json-api-model-explorer-activity
+    x-displayName: JSON:API model - explorer-activity
     description: |
-      [Simple model](/#tag/simple-model-explorer-event)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-event" />
+      [Simple model](/#tag/simple-model-explorer-activity)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-activity" />
 
-  - name: json-api-model-explorer-eventTypeReason
-    x-displayName: JSON:API model - explorer-eventTypeReason
+  - name: json-api-model-explorer-activityTypeReason
+    x-displayName: JSON:API model - explorer-activityTypeReason
     description: |
-      [Simple model](/#tag/simple-model-explorer-eventTypeReason)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-eventTypeReason" />
+      [Simple model](/#tag/simple-model-explorer-activityTypeReason)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-activityTypeReason" />
 
   # tags - JSON:API models - system
 
@@ -2227,11 +2227,11 @@ x-tagGroups:
       - simple-model-application-status
       - simple-model-application-thMatchType
       - simple-model-application-eventTypeAction
-      - simple-model-explorer-eventType
+      - simple-model-explorer-activityType
       - simple-model-explorer-status
-      - simple-model-explorer-explorerRecord
-      - simple-model-explorer-event
-      - simple-model-explorer-eventTypeReason
+      - simple-model-explorer-record
+      - simple-model-explorer-activity
+      - simple-model-explorer-activityTypeReason
       - simple-model-system-page
       - simple-model-system-pageType
       - simple-model-system-dataExportTask
@@ -2403,11 +2403,11 @@ x-tagGroups:
       - json-api-model-application-status
       - json-api-model-application-thMatchType
       - json-api-model-application-eventTypeAction
-      - json-api-model-explorer-eventType
+      - json-api-model-explorer-activityType
       - json-api-model-explorer-status
-      - json-api-model-explorer-explorerRecord
-      - json-api-model-explorer-event
-      - json-api-model-explorer-eventTypeReason
+      - json-api-model-explorer-record
+      - json-api-model-explorer-activity
+      - json-api-model-explorer-activityTypeReason
       - json-api-model-system-page
       - json-api-model-system-pageType
       - json-api-model-system-dataExportTask

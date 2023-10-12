@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-explorerRecord
+  operationId: get-explorer-record
   summary: Get explorer record
   tags:
     - explorer
@@ -12,15 +12,19 @@ get:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: path
-      name: explorerRecordId
+      name: recordId
       required: true
       example: 1
       schema:
         type: integer
     - in: query
       name: include
-      # description: |
-      example: ....
+      description: |
+        - activities - All related activities
+        - schoolUser - Related school user
+        - schoolUser.schools - All schools related to school user (for admin and teacher schemas only)
+        - teacher - Related teacher
+      example: activities,schoolUser,schoolUser.schools,teacher
       schema:
         type: string
 
@@ -30,7 +34,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/explorer/explorerRecord.yaml#/Response_explorer-explorerRecord'
+            $ref: '../../components/responses/explorer/record.yaml#/Response_explorer-record'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':

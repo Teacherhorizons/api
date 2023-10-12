@@ -1,0 +1,65 @@
+JsonApiModel_explorer-activityType:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_explorer-activityType_type'
+    id:
+      $ref: '#/JsonApiModel_explorer-activityType_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        nameForAdmin:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+  required:
+    - type
+    - id
+
+JsonApiModel_explorer-activityType_type:
+  type: string
+  example: explorer-activityType
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_explorer-activityType_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_explorer-activityType_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [explorer-activityType](/#tag/simple-model-explorer-activityType)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_explorer-activityType_id'
+    nameForAdmin:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+  required:
+    - id
+    - nameForAdmin
+
+JsonApiModel_explorer-activityType_relationship:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-explorer-activityType) | 
+    [JSON:API model](/#tag/json-api-model-explorer-activityType)
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: '#/JsonApiModel_explorer-activityType_type'
+        id:
+          $ref: '#/JsonApiModel_explorer-activityType_id'
+      required:
+        - type
+        - id
+  required:
+    - data

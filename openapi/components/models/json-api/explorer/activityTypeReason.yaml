@@ -1,21 +1,21 @@
-JsonApiModel_explorer-eventTypeReason:
+JsonApiModel_explorer-activityTypeReason:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: '#/JsonApiModel_explorer-eventTypeReason_type'
+      $ref: '#/JsonApiModel_explorer-activityTypeReason_type'
     id:
-      $ref: '#/JsonApiModel_explorer-eventTypeReason_id'
+      $ref: '#/JsonApiModel_explorer-activityTypeReason_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
         name:
-          $ref: '../../library/explorer/eventTypeReason.yaml#/explorer-eventTypeReason_name'
+          $ref: '../../library/explorer/activityTypeReason.yaml#/explorer-activityTypeReason_name'
         # relationship attributes
         type:
-          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship_attribute'
+          $ref: '../explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
       required:
         - name
         - type
@@ -24,20 +24,19 @@ JsonApiModel_explorer-eventTypeReason:
       additionalProperties: false
       properties:
         type:
-          $ref: '../explorer/eventType.yaml#/JsonApiModel_explorer-eventType_relationship'
+          $ref: '../explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship'
   required:
     - type
     - id
 
-JsonApiModel_explorer-eventTypeReason_type:
+JsonApiModel_explorer-activityTypeReason_type:
   type: string
-  example: explorer-eventTypeReason
+  example: explorer-activityTypeReason
   description: Unique identifier of the entity type
   readOnly: true
 
-JsonApiModel_explorer-eventTypeReason_id:
+JsonApiModel_explorer-activityTypeReason_id:
   type: string
   example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
-

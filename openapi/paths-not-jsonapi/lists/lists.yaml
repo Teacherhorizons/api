@@ -6,17 +6,22 @@ get:
   parameters:
     - name: key
       in: query
-      description: Comma separated list of list keys (keywords)
+      description: |
+        Comma separated list of list keys (keywords)
+        - explorerEventTypesAdmin - list of all explorer event types with nameForAdmin as name
+        - explorerEventTypesSchool - list of explorer event types where isVisibleToSchool = 1 with nameForSchool as name
+        - explorerEventTypesTeacher - list of explorer event types where isVisibleToTeacher = 1 with nameForTeacher as name
+        - explorerStatuses - list of explorer statuses
       example: subjects,countries
       schema:
         type: string
   responses:
-    "200":
+    '200':
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: "../../components/schemas/current/lists/lists.yaml"
+            $ref: '../../components/schemas/current/lists/lists.yaml'
     # TODO: add correct current errors (rather than json-api ones)
-    "400":
-      $ref: "../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400"
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'

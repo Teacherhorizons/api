@@ -90,11 +90,11 @@ SimpleModels:
     - $ref: '../../models/simple/application/eventTypeAction.yaml#/SimpleModel_application-eventTypeAction'
 
     # explorer
-    - $ref: '../../models/simple/explorer/eventType.yaml#/SimpleModel_explorer-eventType'
+    - $ref: '../../models/simple/explorer/activityType.yaml#/SimpleModel_explorer-activityType'
     - $ref: '../../models/simple/explorer/status.yaml#/SimpleModel_explorer-status'
-    - $ref: '../../models/simple/explorer/explorerRecord.yaml#/SimpleModel_explorer-explorerRecord'
-    - $ref: '../../models/simple/explorer/event.yaml#/SimpleModel_explorer-event'
-    - $ref: '../../models/simple/explorer/eventTypeReason.yaml#/SimpleModel_explorer-eventTypeReason'
+    - $ref: '../../models/simple/explorer/record.yaml#/SimpleModel_explorer-record'
+    - $ref: '../../models/simple/explorer/activity.yaml#/SimpleModel_explorer-activity'
+    - $ref: '../../models/simple/explorer/activityTypeReason.yaml#/SimpleModel_explorer-activityTypeReason'
 
     # school
     - $ref: '../../models/simple/school/school.yaml#/SimpleModel_school'
@@ -238,11 +238,11 @@ JsonApiModels:
     - $ref: '../../models/json-api/application/eventTypeAction.yaml#/JsonApiModel_application-eventTypeAction'
 
     # explorer
-    - $ref: '../../models/json-api/explorer/eventType.yaml#/JsonApiModel_explorer-eventType'
+    - $ref: '../../models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType'
     - $ref: '../../models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status'
-    - $ref: '../../models/json-api/explorer/explorerRecord.yaml#/JsonApiModel_explorer-explorerRecord'
-    - $ref: '../../models/json-api/explorer/event.yaml#/JsonApiModel_explorer-event'
-    - $ref: '../../models/json-api/explorer/eventTypeReason.yaml#/JsonApiModel_explorer-eventTypeReason'
+    - $ref: '../../models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record'
+    - $ref: '../../models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity'
+    - $ref: '../../models/json-api/explorer/activityTypeReason.yaml#/JsonApiModel_explorer-activityTypeReason'
 
     # regional
     - $ref: '../../models/json-api/regional/city.yaml#/JsonApiModel_regional-city'
