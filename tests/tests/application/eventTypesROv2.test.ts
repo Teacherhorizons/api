@@ -10,9 +10,20 @@ var tests = shared.addTestGroups(
   [],
   [
     base.signedOutAdminSchema(baseUrl, ``, 401, null),
-    base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 24, 'admin-v2'),
     base.schoolSchoolSchema(baseUrl, ``, 200, 16, 'school-v2'),
     base.techerTeacherSchema(baseUrl, ``, 200, 24, 'teacher-v2'),
+    // base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 24, 'admin-v2'),
+    {
+      getUrl: (data) => `${baseUrl}?schema=admin-v2`,
+      tests: [
+        {
+          name: 'admin',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          expectedDataLength: 24,
+        },
+      ],
+    },
   ]
 );
 

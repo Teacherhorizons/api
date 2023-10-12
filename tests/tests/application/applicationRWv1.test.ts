@@ -24,6 +24,24 @@ var testsForPost = addTestGroups(
           expectedStatus: 201,
           payloadId: 1,
         },
+        {
+          name: 'signedOut POST 1',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted | Must be signed in,
+          payloadId: 1,
+        },
+        {
+          name: 'school1 POST 1',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, //accessNotPermitted | unauthorised
+          payloadId: 1,
+        },
+        {
+          name: 'teacher POST 1',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted | unauthorised
+          payloadId: 1,
+        },
       ],
     },
   ]
@@ -36,10 +54,27 @@ var testsForPatch = addTestGroups(
       getUrl: (data) => `applications/${testApplicationIds[0]}`,
       tests: [
         {
-          // PATCH an application using jobId & teacherMemberNumber | works for admin
-          name: 'admin PATCH 101',
+          name: 'admin PATCH 101, as admin',
           userEmail: 'admin@th.test',
           expectedStatus: 204,
+          payloadId: 101,
+        },
+        {
+          name: 'signedOut PATCH 101',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted | Must be signed in,
+          payloadId: 101,
+        },
+        {
+          name: 'school1 PATCH 101',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, //accessNotPermitted | unauthorised
+          payloadId: 101,
+        },
+        {
+          name: 'teacher PATCH 101',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted | unauthorised
           payloadId: 101,
         },
       ],

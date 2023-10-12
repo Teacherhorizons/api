@@ -15,6 +15,21 @@ var tests = shared.addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 204,
         },
+        {
+          name: 'notSignedIn',
+          userEmail: 'notSignedIn',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'teacher PATCH 101',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
+        {
+          name: 'school, eventTypeId equal 14',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
       ],
     },
   ]

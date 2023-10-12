@@ -13,12 +13,27 @@ var testsForGet = addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `applications/${data.applications[0].id}?schema=admin-v2&asUserId=${data.users[0].id}`,
+      getUrl: (data) => `applications/1?schema=admin-v2`,
       tests: [
         {
-          name: 'admin, as admin',
+          name: 'applications/1?schema=admin-v2',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+        },
+        {
+          name: 'applications/1?schema=admin-v2',
+          userEmail: 'signedOut',
+          expectedStatus: 401, //accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'applications/1?schema=admin-v2',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
+        },
+        {
+          name: 'applications/1?schema=admin-v2',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
         },
       ],
     },
@@ -26,9 +41,24 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `applications/1?schema=teacher-v2`,
       tests: [
         {
-          name: 'admin, schema=teacher',
+          name: 'applications/1?schema=teacher-v2',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+        },
+        {
+          name: 'applications/1?schema=teacher-v2',
+          userEmail: 'signedOut',
+          expectedStatus: 401, //accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'applications/1?schema=teacher-v2',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
+        },
+        {
+          name: 'applications/1?schema=teacher-v2',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
         },
       ],
     },
@@ -36,9 +66,24 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `applications/1?schema=school-v2`,
       tests: [
         {
-          name: 'admin, schema=school',
+          name: 'applications/1?schema=school-v2',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+        },
+        {
+          name: 'applications/1?schema=school-v2',
+          userEmail: 'signedOut',
+          expectedStatus: 401, //accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'applications/1?schema=school-v2',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
+        },
+        {
+          name: 'applications/1?schema=school-v2',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, //accessNotPermitted	user type must be correct
         },
       ],
     },
