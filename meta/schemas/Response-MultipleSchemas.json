@@ -286,7 +286,7 @@
                   "type": "object",
                   "additionalProperties": false,
                   "patternProperties": {
-                    "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff)$": {
+                    "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff|averageReferenceScoreOutOf100)$": {
                       "oneOf": [
                         {
                           "$ref": "#/definitions/Response-MultipleSchemas-AttributeReference"
@@ -314,7 +314,7 @@
                 "required": {
                   "type": "array",
                   "items": {
-                    "pattern": "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff)$"
+                    "pattern": "^([a-zA-Z]*|photo1|costOfMidRange3CourseMealFor2|monthlyRent1BedroomApartmentInCityCentre|monthlyRent1BedroomApartmentOutsideCityCentre|costOf1WayTicketLocalTransport|costOfGasoline1Litre|costOfTaxi1KilometerNormalTariff|averageReferenceScoreOutOf100)$"
                   }
                 }
               },

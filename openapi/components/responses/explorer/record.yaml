@@ -176,8 +176,8 @@ Response_explorer-record_includedTeacher_admin:
       additionalProperties: false
       properties:
         # simple attributes
-        averageReferenceScoreOutOf5:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf5'
+        averageReferenceScoreOutOf100:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
         # relationship attributes
@@ -322,8 +322,8 @@ Response_explorer-record_includedTeacher_school:
       additionalProperties: false
       properties:
         # simple attributes
-        averageReferenceScoreOutOf5:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf5'
+        averageReferenceScoreOutOf100:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
         # relationship attributes
