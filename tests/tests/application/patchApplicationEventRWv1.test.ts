@@ -26,6 +26,21 @@ var tests = shared.addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 204,
         },
+        {
+          name: 'notSignedIn',
+          userEmail: 'notSignedIn',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'teacher PATCH 101',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
+        {
+          name: 'school, eventTypeId equal 14',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
       ],
     },
   ]
@@ -90,6 +105,7 @@ describe('patch-applicationEvent', () => {
   jest.setTimeout(60 * 1000);
   afterAll(async () => {
     console.log(testIds);
+    let isSuccess = false;
     if (testIds.length > 0) {
       try {
         await shared.signIn('admin@th.test');
@@ -99,12 +115,12 @@ describe('patch-applicationEvent', () => {
           const response = await shared.api.delete('application-applicationEvents/' + testId);
           console.log(`deleteTestMadeDataSuccess - ${testIds[i]}`, response.data);
         }
-        return true;
+        isSuccess = true;
       } catch (error) {
         console.log('deleteTestMadeData', error);
-        return false;
       }
     }
     await shared.setupAfterAll();
+    return isSuccess;
   });
 });

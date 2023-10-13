@@ -6,7 +6,37 @@ const includeTestNames: string[] = null;
 
 let baseUrl = `application-eventTypeActions`;
 
-var tests = shared.addTestGroups([], [base.adminAdminSchemaAdminUser(baseUrl, ``, 200, 33, 'admin-v2')]);
+var tests = shared.addTestGroups(
+  [],
+  [
+    {
+      getUrl: (data) => `application-eventTypeActions?schema=admin-v2`,
+      tests: [
+        {
+          name: 'admin',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          expectedDataLength: 33,
+        },
+        {
+          name: 'notSignedIn',
+          userEmail: 'notSignedIn',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'teacher PATCH 101',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
+        {
+          name: 'school, eventTypeId equal 14',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
+      ],
+    },
+  ]
+);
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));

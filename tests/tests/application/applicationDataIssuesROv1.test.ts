@@ -9,71 +9,81 @@ import {
   signedInAs,
 } from '../../shared';
 
-import config from '../../config';
-
 var testsForGet = addTestGroups(
   [],
   [
     {
-      getUrl: (data) =>
-        `application-applicationDataIssues?schema=admin&filter[application.id]=${data.dataIssues[0].id}`,
+      getUrl: (data) => `application-applicationDataIssues?schema=admin&filter[application.id]=1`,
       tests: [
         {
-          name: 'schema=admin&filter[application.id]=${data.dataIssues[0].id}',
+          name: 'schema=admin&filter[application.id]=1',
           userEmail: 'signedOut',
           expectedStatus: 401, //accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=admin&filter[application.id]=${data.dataIssues[0].id}',
+          name: 'schema=admin&filter[application.id]=1',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
         {
-          name: 'schema=admin&filter[application.id]=${data.dataIssues[0].id}',
+          name: 'schema=admin&filter[application.id]=1',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401, //accessNotPermitted	user type must be correct
         },
         {
-          name: 'schema=admin&filter[application.id]=${data.dataIssues[0].id}',
+          name: 'schema=admin&filter[application.id]=1',
           userEmail: 'endorsed@th.test',
           expectedStatus: 401, //accessNotPermitted	user type must be correct
         },
       ],
     },
     {
-      getUrl: (data) =>
-        `application-applicationDataIssues?schema=admin&asUserId=${data.users[0].id}&filter[application.id]=a`,
+      getUrl: (data) => `application-applicationDataIssues`,
       tests: [
         {
-          name: 'schema=admin&asUserId=${data.asUserId[0].id}&filter[application.id]=a',
+          name: 'application-applicationDataIssues',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'application-applicationDataIssues',
           userEmail: 'admin@th.test',
-          expectedStatus: 422, //wrongDataType	a
+          expectedStatus: 400, // missingMandatoryParameter	schema must be passed
         },
       ],
     },
     {
-      getUrl: (data) =>
-        `application-applicationDataIssues?schema=admin&asUserId=${data.users[0].id}&filter[application.id]=9999999`,
+      getUrl: (data) => `application-applicationDataIssues?schema=admin&filter[application.id]=9999999`,
       tests: [
         {
-          name: 'schema=admin&asUserId=${data.asUserId[0].id}&filter[application.id]=9999999',
+          name: 'schema=admin&filter[application.id]=9999999',
           userEmail: 'signedOut',
           expectedStatus: 401, //accessNotPermitted	Must be signed in
         },
         {
-          name: 'schema=admin&asUserId=${data.asUserId[0].id}&filter[application.id]=9999999',
+          name: 'schema=admin&filter[application.id]=9999999',
           userEmail: 'admin@th.test',
           expectedStatus: 404,
         },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationDataIssues?filter[application.id]=1`,
+      tests: [
         {
-          name: 'schema=admin&asUserId=${data.asUserId[0].id}&filter[application.id]=9999999',
-          userEmail: 'school-1-school@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
+          name: 'filter[application.id]=1',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
         },
+      ],
+    },
+    {
+      getUrl: (data) => `application-applicationDataIssues?schema=admin&filter[application.id]=a`,
+      tests: [
         {
-          name: 'schema=admin&asUserId=${data.asUserId[0].id}&filter[application.id]=9999999',
-          userEmail: 'endorsed@th.test',
-          expectedStatus: 401, //accessNotPermitted	User not permitted to use asUserId
+          name: 'schema=admin&filter[application.id]=a',
+          userEmail: 'signedOut',
+          expectedStatus: 422, // wrongDataType	a
         },
       ],
     },

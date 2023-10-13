@@ -27,6 +27,38 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) => `application-applicationEvents`,
+      getPayload: (data) => ({
+        data: {
+          type: 'application-applicationEvent',
+          attributes: {
+            application: { id: `${data.applications[0].id}` },
+            eventType: { id: '14' },
+            date: '2022-08-15T12:30:00.000Z',
+            notes: 'FooBasr',
+            autoEmail: { id: '42' },
+          },
+        },
+      }),
+      tests: [
+        {
+          name: 'notSignedIn',
+          userEmail: 'notSignedIn',
+          expectedStatus: 401, // accessNotPermitted	Must be signed in
+        },
+        {
+          name: 'teacher PATCH 101',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted | unauthorised
+        },
+        {
+          name: 'school, eventTypeId equal 14',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 201,
+        },
+      ],
+    },
   ]
 );
 
