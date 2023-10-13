@@ -106,7 +106,16 @@ get:
           size: 1
     - in: query
       name: sort
-      example: -creationDate
+      example: -creationDate,jobTitle
+      description: |
+        Possible values:
+        - creationDate
+        - latestUpdateDate
+        - thSystemMatchScore
+        - jobTitle
+        - latestEventDate
+        - schoolThRating
+        - teacherThPlaceabilityRating
       schema:
         type: string
   responses:
