@@ -3,9 +3,32 @@ explorer-activityType_nameForAdmin:
   type: string
   example: Job offered
   description: Main
-  maxLength: 20
-# explorer-activityType_footerNote:
-#   type: string
-#   example: Click 'Accept job' to...
-#   maxLength: 20
+  maxLength: 50
+explorer-activityType_nameForSchool:
+  type: string
+  example: Interview request sent
+  description: Main
+  maxLength: 50
+explorer-activityType_nameForTeacher:
+  type: string
+  example: Interview request received from school
+  description: Main
+  maxLength: 50
+explorer-activityType_isVisibleToSchool:
+  type: boolean
+  example: true
+explorer-activityType_isVisibleToTeacher:
+  type: boolean
+  example: true
+explorer-activityType_templateText:
+  type: string
+  example: Dear ${teacher.firstName}, I lead on staff recruitment at ${schools[0].name} in ${schools[0].city.country.name}....
+  description: Main
+  
+# relationship attributes
+explorer-activityType_statusId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [explorer-activityType-status](/#tag/simple-model-explorer-activityType-status)	
 

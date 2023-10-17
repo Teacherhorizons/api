@@ -7,9 +7,28 @@ SimpleModel_explorer-activityType:
     # simple attributes
     nameForAdmin:
       $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+    nameForSchool:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
+    nameForTeacher:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'	
+    isVisibleToSchool:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'	
+    isVisibleToTeacher:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'	
+    templateText:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_templateText'
+    # relationship attributes
+    statusId:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_statusId'	
   required:
     - id
     - nameForAdmin
+    - nameForSchool	
+    - nameForTeacher	
+    - isVisibleToSchool	
+    - isVisibleToTeacher	
+    - templateText
+    - statusId	
 
 # shared
 SimpleModel_explorer-activityType_id:
