@@ -13,9 +13,30 @@ JsonApiModel_explorer-activityType:
         # simple attributes
         nameForAdmin:
           $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+        nameForSchool:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
+        nameForTeacher:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'	
+        isVisibleToSchool:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'	
+        isVisibleToTeacher:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'	
+        templateText:
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_templateText'
+        # relationship attributes	
+        status:
+          $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        status:
+          $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship'
   required:
     - type
     - id
+    - attributes
+    - relationships
 
 JsonApiModel_explorer-activityType_type:
   type: string
