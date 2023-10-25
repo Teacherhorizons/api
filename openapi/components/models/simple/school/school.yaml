@@ -4,15 +4,16 @@ SimpleModel_school:
   properties:
     id:
       $ref: '#/SimpleModel_school-school_id'
+    # main attributes
+    name:
+      $ref: '../../library/school/school.yaml#/school_name'
+    slug:
+      $ref: '../../library/school/school.yaml#/school_slug'
     # simple attributes
     creationDate:
       $ref: '../../library/school/school.yaml#/school_creationDate'
     latestUpdateDate:
       $ref: '../../library/school/school.yaml#/school_latestUpdateDate'
-    name:
-      $ref: '../../library/school/school.yaml#/school_name'
-    slug:
-      $ref: '../../library/school/school.yaml#/school_slug'
     isActive:
       $ref: '../../library/school/school.yaml#/school_isActive'
     thRating:

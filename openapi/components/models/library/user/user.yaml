@@ -2,7 +2,10 @@
 user_fullName:
   type: string
   example: Simon Jones
-  description: Main
+  description: |
+    Main. Derived:
+    - school: firstName
+    - admin, teacher: `${firstName} ${lastName}`
 user_firstName:
   type: string
   example: Simon
@@ -12,19 +15,24 @@ user_lastName:
 user_email:
   type: string
   example: simon.jones@gmail.com
-user_skype:
+user_skypeUserName:
   type: string
   example: abc_teacher
 user_password:
+  deprecated: true
   type: string
   example: 123
 user_phone:
   type: string
   example: 1234567890
 user_optin:
+  deprecated: true
+  description: Deprecated until we figure out what this is used for. Possibly used to represent when user would like to receive job emails.
   type: integer
   example: 0
 user_active:
+  deprecated: true
+  description: Physically used to represent 'thDoNotContact' (where 'active' 0 means 'thDoNotContact' 1 )
   type: integer
   example: 1
 user_creationDate:
@@ -49,6 +57,7 @@ user_allowLogin:
   type: integer
   example: 0
 user_thDoNotContact:
+  description: Physically represented by 'active' column (where 'active' 0 means 'thDoNotContact' 1 )
   type: boolean
   example: true
 user_latestMessageViewDate:

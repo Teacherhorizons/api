@@ -3,39 +3,40 @@ SimpleModel_general-photo:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_general-photo_id"
-    # simple attributes
+      $ref: '#/SimpleModel_general-photo_id'
+    # main attributes
     name:
-      $ref: "../../library/general/photo.yaml#/general-photo_name"
+      $ref: '../../library/general/photo.yaml#/general-photo_name'
     url:
-      $ref: "../../library/general/photo.yaml#/general-photo_url"
-    creationDate:
-      $ref: "../../library/general/photo.yaml#/general-photo_creationDate"
-    latestUpdateDate:
-      $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateDate"
+      $ref: '../../library/general/photo.yaml#/general-photo_url'
     description:
-      $ref: "../../library/general/photo.yaml#/general-photo_description"
+      $ref: '../../library/general/photo.yaml#/general-photo_description'
+    # simple attributes
+    creationDate:
+      $ref: '../../library/general/photo.yaml#/general-photo_creationDate'
+    latestUpdateDate:
+      $ref: '../../library/general/photo.yaml#/general-photo_latestUpdateDate'
     widthInPx:
-      $ref: "../../library/general/photo.yaml#/general-photo_widthInPx"
+      $ref: '../../library/general/photo.yaml#/general-photo_widthInPx'
     heightInPx:
-      $ref: "../../library/general/photo.yaml#/general-photo_heightInPx"
+      $ref: '../../library/general/photo.yaml#/general-photo_heightInPx'
     sourceUrl:
-      $ref: "../../library/general/photo.yaml#/general-photo_sourceUrl"
+      $ref: '../../library/general/photo.yaml#/general-photo_sourceUrl'
     authorName:
-      $ref: "../../library/general/photo.yaml#/general-photo_authorName"
+      $ref: '../../library/general/photo.yaml#/general-photo_authorName'
     licenseDescription:
-      $ref: "../../library/general/photo.yaml#/general-photo_licenseDescription"
+      $ref: '../../library/general/photo.yaml#/general-photo_licenseDescription'
     modificationDescription:
-      $ref: "../../library/general/photo.yaml#/general-photo_modificationDescription"
+      $ref: '../../library/general/photo.yaml#/general-photo_modificationDescription'
     notes:
-      $ref: "../../library/general/photo.yaml#/general-photo_notes"
+      $ref: '../../library/general/photo.yaml#/general-photo_notes'
     # relationship attributes
     creationUserId:
-      $ref: "../../library/general/photo.yaml#/general-photo_creationUserId"
+      $ref: '../../library/general/photo.yaml#/general-photo_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/general/photo.yaml#/general-photo_latestUpdateUserId"
+      $ref: '../../library/general/photo.yaml#/general-photo_latestUpdateUserId'
     typeId:
-      $ref: "../../library/general/photo.yaml#/general-photo_typeId"
+      $ref: '../../library/general/photo.yaml#/general-photo_typeId'
   required:
     - id
     - name

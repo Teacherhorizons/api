@@ -3,53 +3,53 @@ SimpleModel_user:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_user-user_id"
+      $ref: '#/SimpleModel_user-user_id'
     # simple attributes
     fullName:
-      $ref: "../../library/user/user.yaml#/user_fullName"
+      $ref: '../../library/user/user.yaml#/user_fullName'
     firstName:
-      $ref: "../../library/user/user.yaml#/user_firstName"
+      $ref: '../../library/user/user.yaml#/user_firstName'
     lastName:
-      $ref: "../../library/user/user.yaml#/user_lastName"
+      $ref: '../../library/user/user.yaml#/user_lastName'
     email:
-      $ref: "../../library/user/user.yaml#/user_email"
-    skype:
-      $ref: "../../library/user/user.yaml#/user_skype"
+      $ref: '../../library/user/user.yaml#/user_email'
+    skypeUserName:
+      $ref: '../../library/user/user.yaml#/user_skypeUserName'
     password:
-      $ref: "../../library/user/user.yaml#/user_password"
+      $ref: '../../library/user/user.yaml#/user_password'
     phone:
-      $ref: "../../library/user/user.yaml#/user_phone"
+      $ref: '../../library/user/user.yaml#/user_phone'
     optin:
-      $ref: "../../library/user/user.yaml#/user_optin"
+      $ref: '../../library/user/user.yaml#/user_optin'
     active:
-      $ref: "../../library/user/user.yaml#/user_active"
+      $ref: '../../library/user/user.yaml#/user_active'
     creationDate:
-      $ref: "../../library/user/user.yaml#/user_creationDate"
+      $ref: '../../library/user/user.yaml#/user_creationDate'
     latestUpdateDate:
-      $ref: "../../library/user/user.yaml#/user_latestUpdateDate"
+      $ref: '../../library/user/user.yaml#/user_latestUpdateDate'
     authToken:
-      $ref: "../../library/user/user.yaml#/user_authToken"
+      $ref: '../../library/user/user.yaml#/user_authToken'
     latestLoginDate:
-      $ref: "../../library/user/user.yaml#/user_latestLoginDate"
+      $ref: '../../library/user/user.yaml#/user_latestLoginDate'
     encryptedPassword:
-      $ref: "../../library/user/user.yaml#/user_encryptedPassword"
+      $ref: '../../library/user/user.yaml#/user_encryptedPassword'
     allowLogin:
-      $ref: "../../library/user/user.yaml#/user_allowLogin"
+      $ref: '../../library/user/user.yaml#/user_allowLogin'
     thDoNotContact:
-      $ref: "../../library/user/user.yaml#/user_thDoNotContact"
+      $ref: '../../library/user/user.yaml#/user_thDoNotContact'
     latestMessageViewDate:
-      $ref: "../../library/user/user.yaml#/user_latestMessageViewDate"
+      $ref: '../../library/user/user.yaml#/user_latestMessageViewDate'
     # relationship attributes
     typeId:
-      $ref: "../../library/user/user.yaml#/user_typeId"
+      $ref: '../../library/user/user.yaml#/user_typeId'
     creationUserId:
-      $ref: "../../library/user/user.yaml#/user_creationUserId"
+      $ref: '../../library/user/user.yaml#/user_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/user/user.yaml#/user_latestUpdateUserId"
+      $ref: '../../library/user/user.yaml#/user_latestUpdateUserId'
     phoneCodeCountryId:
-      $ref: "../../library/user/user.yaml#/user_phoneCodeCountryId"
+      $ref: '../../library/user/user.yaml#/user_phoneCodeCountryId'
     photoId:
-      $ref: "../../library/user/user.yaml#/user_photoId"
+      $ref: '../../library/user/user.yaml#/user_photoId'
   required:
     - id
 

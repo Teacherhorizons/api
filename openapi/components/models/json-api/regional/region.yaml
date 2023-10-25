@@ -29,13 +29,14 @@ JsonApiModel_regional-region_admin:
       type: object
       additionalProperties: false
       properties:
-        # simple Attributes
+        # main attributes
         name:
           $ref: '../../library/regional/region.yaml#/regional-region_name'
-        alias:
-          $ref: '../../library/regional/region.yaml#/regional-region_alias'
         slug:
           $ref: '../../library/regional/region.yaml#/regional-region_slug'
+        # simple attributes
+        alias:
+          $ref: '../../library/regional/region.yaml#/regional-region_alias'
         creationDate:
           $ref: '../../library/regional/region.yaml#/regional-region_creationDate'
         latestUpdateDate:

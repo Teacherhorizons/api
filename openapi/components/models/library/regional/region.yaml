@@ -12,8 +12,9 @@ regional-region_slug:
 # Raw data
 regional-region_alias:
   type: string
-  example: /Africa
   maxLength: 60
+  deprecated: true
+  example: /Africa
 regional-region_creationDate:
   type: string
   format: date-time

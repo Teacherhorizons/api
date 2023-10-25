@@ -29,9 +29,12 @@ JsonApiModel_regional-country_admin:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
+        # main attributes
         name:
           $ref: '../../library/regional/country.yaml#/regional-country_name'
+        slug:
+          $ref: '../../library/regional/country.yaml#/regional-country_slug'
+        # simple attributes
         alias:
           $ref: '../../library/regional/country.yaml#/regional-country_alias'
         creationDate:
@@ -42,8 +45,6 @@ JsonApiModel_regional-country_admin:
           $ref: '../../library/regional/country.yaml#/regional-country_isoCode'
         phoneCode:
           $ref: '../../library/regional/country.yaml#/regional-country_phoneCode'
-        slug:
-          $ref: '../../library/regional/country.yaml#/regional-country_slug'
         locationLatitude:
           $ref: '../../library/regional/country.yaml#/regional-country_locationLatitude'
         locationLongitude:
