@@ -10,25 +10,25 @@ SimpleModel_explorer-activityType:
     nameForSchool:
       $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
     nameForTeacher:
-      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'	
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'
     isVisibleToSchool:
-      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'	
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'
     isVisibleToTeacher:
-      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'	
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'
     templateText:
       $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_templateText'
     # relationship attributes
-    statusId:
-      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_statusId'	
+    recordStatusId:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_recordStatusId'
   required:
     - id
     - nameForAdmin
-    - nameForSchool	
-    - nameForTeacher	
-    - isVisibleToSchool	
-    - isVisibleToTeacher	
+    - nameForSchool
+    - nameForTeacher
+    - isVisibleToSchool
+    - isVisibleToTeacher
     - templateText
-    - statusId	
+    - statusId
 
 # shared
 SimpleModel_explorer-activityType_id:

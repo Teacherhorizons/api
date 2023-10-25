@@ -24,11 +24,10 @@ explorer-activityType_templateText:
   type: string
   example: Dear ${teacher.firstName}, I lead on staff recruitment at ${schools[0].name} in ${schools[0].city.country.name}....
   description: Main
-  
+
 # relationship attributes
-explorer-activityType_statusId:
+explorer-activityType_recordStatusId:
   type: integer
   example: 1
   description: |
-    Relationship to [explorer-activityType-status](/#tag/simple-model-explorer-activityType-status)	
-
+    Relationship to [explorer-status](/#tag/simple-model-explorer-status)

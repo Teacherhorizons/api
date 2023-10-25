@@ -16,21 +16,21 @@ JsonApiModel_explorer-activityType:
         nameForSchool:
           $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
         nameForTeacher:
-          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'	
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'
         isVisibleToSchool:
-          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'	
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToSchool'
         isVisibleToTeacher:
-          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'	
+          $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_isVisibleToTeacher'
         templateText:
           $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_templateText'
-        # relationship attributes	
-        status:
+        # relationship attributes
+        recordStatus:
           $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
       properties:
-        status:
+        recordStatus:
           $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship'
   required:
     - type
