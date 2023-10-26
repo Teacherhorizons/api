@@ -3,15 +3,15 @@ SimpleModel_user-setting:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_user-setting_id"
+      $ref: '#/SimpleModel_user-setting_id'
     # simple attributes
     name:
-      $ref: "../../library/user/setting.yaml#/user-setting_name"
+      $ref: '../../library/user/setting.yaml#/user-setting_name'
     # relationship attributes
-    editableByUserCategoryId:
-      $ref: "../../library/user/setting.yaml#/user-setting_editableByUserCategoryId"
-    appliesToUserCategoryId:
-      $ref: "../../library/user/setting.yaml#/user-setting_appliesToUserCategoryId"
+    editableByUserTypeId:
+      $ref: '../../library/user/setting.yaml#/user-setting_editableByUserTypeId'
+    appliesToUserTypeId:
+      $ref: '../../library/user/setting.yaml#/user-setting_appliesToUserTypeId'
   required:
     - id
 
