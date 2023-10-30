@@ -50,6 +50,7 @@ JsonApiModel_explorer-activityType_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+# relationship_attribute; TODO RR+AS: add names to meta schema (and consider names)
 JsonApiModel_explorer-activityType_relationship_attribute:
   type: object
   description: |
@@ -60,10 +61,59 @@ JsonApiModel_explorer-activityType_relationship_attribute:
       $ref: '#/JsonApiModel_explorer-activityType_id'
     nameForAdmin:
       $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+    nameForSchool:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
+    nameForTeacher:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'
+  required:
+    - id
+    - nameForAdmin
+    - nameForSchool
+    - nameForTeacher
+
+JsonApiModel_explorer-activityType_relationship_attribute_admin:
+  type: object
+  description: |
+    Main properties of [explorer-activityType](/#tag/simple-model-explorer-activityType) - for admin
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_explorer-activityType_id'
+    nameForAdmin:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
   required:
     - id
     - nameForAdmin
 
+JsonApiModel_explorer-activityType_relationship_attribute_school:
+  type: object
+  description: |
+    Main properties of [explorer-activityType](/#tag/simple-model-explorer-activityType) - for school
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_explorer-activityType_id'
+    nameForSchool:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
+  required:
+    - id
+    - nameForSchool
+
+JsonApiModel_explorer-activityType_relationship_attribute_teacher:
+  type: object
+  description: |
+    Main properties of [explorer-activityType](/#tag/simple-model-explorer-activityType) - for teacher
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_explorer-activityType_id'
+    nameForTeacher:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'
+  required:
+    - id
+    - nameForTeacher
+
+#
 JsonApiModel_explorer-activityType_relationship:
   type: object
   description: |

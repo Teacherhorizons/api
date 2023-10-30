@@ -89,7 +89,7 @@ Response_explorer-record_includedActivity_admin:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_admin'
     relationships:
       type: object
       additionalProperties: false
@@ -271,7 +271,7 @@ Response_explorer-record_includedActivity_school:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_school'
     relationships:
       type: object
       additionalProperties: false
@@ -418,7 +418,7 @@ Response_explorer-record_includedActivity_teacher:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_admin'
     relationships:
       type: object
       additionalProperties: false
