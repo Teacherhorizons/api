@@ -1,14 +1,14 @@
 get:
   operationId: get-explorer-records
-  summary: Get list of 20 records
+  summary: Get list of 20 explorer records
   tags:
     - explorer
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
-    - Admin: Can see all records and all related events
-    - Teacher: Can see only records which relate to them, and all related events
-    - School: Can see only records which have been submitted to them, and only events from that point onwards
+    - Admin: Can see all records and all related activity
+    - Teacher: Can see only records which relate to them, and all related activity
+    - School: Can see only records which have been submitted to them, and only activity from that point onwards
   parameters:
     - in: query
       name: schema
@@ -30,42 +30,42 @@ get:
         type: object
         additionalProperties: false
         properties:
-          filter[school.name][matches]:	
+          filter[school.name][matches]:
             type: string
-          filter[status.id][contains]:	
-            type: string		
+          filter[status.id][contains]:
+            type: string
           filter[school.city.country.region.id][contains]:
             type: string
-          filter[teacher.fullName][matches]:	
-            type: string		
-          filter[latestActivity.date][lte]:		
+          filter[teacher.fullName][matches]:
+            type: string
+          filter[latestActivity.date][lte]:
             type: string
             format: date-time
           filter[school.city.country.id][contains]:
             type: string
-          filter[teacher.memberNumber][contains]:	
-            type: string		
-          filter[activity.type.id][contains]:	
-            type: string		
+          filter[teacher.memberNumber][contains]:
+            type: string
+          filter[activity.type.id][contains]:
+            type: string
           filter[school.city.id][contains]:
             type: string
-          filter[minActivity.date][gte]:	
+          filter[minActivity.date][gte]:
             type: string
-            format: date-time	
+            format: date-time
           filter[maxActivity.date][lte]:
             type: string
-            format: date-time		
+            format: date-time
         example:
-          school.name][matches: alic			
-          status.id][contains: 1,2			
+          school.name][matches: alic
+          status.id][contains: 1,2
           school.city.country.region.id][contains: 1,2
-          teacher.fullName][matches: smi			
-          latestActivity.date][lte: 2022-08-11T00:00:00Z			
+          teacher.fullName][matches: smi
+          latestActivity.date][lte: 2022-08-11T00:00:00Z
           school.city.country.id][contains: 1,2
-          teacher.memberNumber][contains: 1,2			
-          activity.type.id][contains: 1,2			
+          teacher.memberNumber][contains: 1,2
+          activity.type.id][contains: 1,2
           school.city.id][contains: 1,2
-          minActivity.date][gte: 2022-08-11T00:00:00Z			
+          minActivity.date][gte: 2022-08-11T00:00:00Z
           maxActivity.date][lte: 2022-08-11T00:00:00Z
     - in: query
       name: page
@@ -113,4 +113,3 @@ get:
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
     '422':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
-

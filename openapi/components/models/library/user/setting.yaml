@@ -4,16 +4,16 @@ user-setting_name:
   example: can-see-candidate-filter
 
 #relationship attribute
-user-setting_editableByUserCategoryId:
+user-setting_editableByUserTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    Relationship to [user-type](/#tag/simple-model-user-type)
   # check with RR
 
-user-setting_appliesToUserCategoryId:
+user-setting_appliesToUserTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    Relationship to [user-type](/#tag/simple-model-user-type)
   # check with RR
