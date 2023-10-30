@@ -72,6 +72,10 @@ declare namespace Config {
     expectedDataLength?: number;
   }
 
+  export interface ExplorerRecord {
+    id?: number;
+  }
+
   export interface Data {
     test?: Test;
     dataIssues?: DataIssues[];
@@ -84,5 +88,6 @@ declare namespace Config {
     applications: Application[];
     applicationEvents: ApplicationEvent[];
     users?: User[];
+    explorerRecords?: ExplorerRecord[];
   }
 }
