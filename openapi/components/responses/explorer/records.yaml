@@ -66,7 +66,7 @@ Response_explorer-records_admin_item:
       additionalProperties: false
       properties:
         # simple attributes
-        creationDate: 
+        creationDate:
           $ref: '../../../components/models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship attributes
         status:
@@ -88,7 +88,6 @@ Response_explorer-records_admin_item:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-records_includedTeacher_admin:
   type: object
@@ -145,7 +144,6 @@ Response_explorer-records_includedUser_admin:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-records_includedActivity_admin:
   type: object
@@ -214,7 +212,7 @@ Response_explorer-records_teacher_item:
       additionalProperties: false
       properties:
         # simple attributes
-        creationDate: 
+        creationDate:
           $ref: '../../../components/models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship attributes
         status:
@@ -234,7 +232,6 @@ Response_explorer-records_teacher_item:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-records_includedUser_teacher:
   type: object
@@ -265,7 +262,6 @@ Response_explorer-records_includedUser_teacher:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-records_includedActivity_teacher:
   type: object
@@ -334,7 +330,7 @@ Response_explorer-records_school_item:
       additionalProperties: false
       properties:
         # simple attributes
-        creationDate: 
+        creationDate:
           $ref: '../../../components/models/library/explorer/record.yaml#/explorer-record_creationDate'
         # relationship attributes
         status:
@@ -354,7 +350,6 @@ Response_explorer-records_school_item:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-records_includedTeacher_school:
   type: object

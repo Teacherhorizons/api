@@ -60,9 +60,12 @@ JsonApiModel_explorer-activityType_relationship_attribute:
       $ref: '#/JsonApiModel_explorer-activityType_id'
     nameForAdmin:
       $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForAdmin'
+    nameForSchool:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForSchool'
+    nameForTeacher:
+      $ref: '../../library/explorer/activityType.yaml#/explorer-activityType_nameForTeacher'
   required:
     - id
-    - nameForAdmin
 
 JsonApiModel_explorer-activityType_relationship:
   type: object

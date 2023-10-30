@@ -234,6 +234,7 @@ const jpLocalData: Config.Data = {
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
   dataIssues: [{ id: 1 }],
+  explorerRecords: [{ id: 1 }, { id: 3 }],
 };
 
 const betaData: Config.Data = {
