@@ -46,9 +46,10 @@ Response_explorer-records_admin:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-records_includedUser_admin'
-          - $ref: '#/Response_explorer-records_includedTeacher_admin'
           - $ref: '#/Response_explorer-records_includedActivity_admin'
+          - $ref: '#/Response_explorer-records_includedSchool_admin'
+          - $ref: '#/Response_explorer-records_includedTeacher_admin'
+          - $ref: '#/Response_explorer-records_includedUser_admin'
   required:
     - schema
     - data
@@ -145,7 +146,7 @@ Response_explorer-records_includedUser_admin:
     - id
     - attributes
 
-Response_explorer-record_includedSchool_admin:
+Response_explorer-records_includedSchool_admin:
   type: object
   additionalProperties: false
   properties:
@@ -192,11 +193,13 @@ Response_explorer-records_includedActivity_admin:
         # relationship attributes
         type:
           $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_admin'
+      required:
+        - date
+        - type
   required:
     - type
     - id
     - attributes
-    - relationships
 
 # teacher
 Response_explorer-records_teacher:
@@ -220,8 +223,9 @@ Response_explorer-records_teacher:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-records_includedUser_teacher'
           - $ref: '#/Response_explorer-records_includedActivity_teacher'
+          - $ref: '#/Response_explorer-records_includedSchool_admin'
+          - $ref: '#/Response_explorer-records_includedUser_teacher'
   required:
     - meta
     - schema
@@ -292,7 +296,7 @@ Response_explorer-records_includedUser_teacher:
     - id
     - attributes
 
-Response_explorer-record_includedSchool_teacher:
+Response_explorer-records_includedSchool_teacher:
   type: object
   additionalProperties: false
   properties:

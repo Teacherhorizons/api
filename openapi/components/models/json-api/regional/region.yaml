@@ -377,6 +377,8 @@ JsonApiModel_regional-region_relationship_attribute:
       $ref: '../../library/regional/region.yaml#/regional-region_slug'
   required:
     - id
+    - name
+    - slug
 
 JsonApiModel_regional-region_relationship:
   type: object

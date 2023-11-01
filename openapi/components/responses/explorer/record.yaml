@@ -26,9 +26,9 @@ Response_explorer-record_admin:
       items:
         anyOf:
           - $ref: '#/Response_explorer-record_includedActivity_admin'
-          - $ref: '#/Response_explorer-record_includedUser_admin'
           - $ref: '#/Response_explorer-record_includedSchool_admin'
           - $ref: '#/Response_explorer-record_includedTeacher_admin'
+          - $ref: '#/Response_explorer-record_includedUser_admin'
   required:
     - schema
     - data
