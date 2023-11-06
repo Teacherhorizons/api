@@ -26,9 +26,9 @@ Response_explorer-record_admin:
       items:
         anyOf:
           - $ref: '#/Response_explorer-record_includedActivity_admin'
-          - $ref: '#/Response_explorer-record_includedUser_admin'
           - $ref: '#/Response_explorer-record_includedSchool_admin'
           - $ref: '#/Response_explorer-record_includedTeacher_admin'
+          - $ref: '#/Response_explorer-record_includedUser_admin'
   required:
     - schema
     - data
@@ -54,6 +54,9 @@ Response_explorer-record_admin_item:
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
+      required:
+        - creationDate
+        - status
     relationships:
       type: object
       additionalProperties: false
@@ -64,6 +67,10 @@ Response_explorer-record_admin_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+      required:
+        - schoolUser
+        - teacher
+        - activities
   required:
     - type
     - id
@@ -88,13 +95,19 @@ Response_explorer-record_includedActivity_admin:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_admin'
+      required:
+        - date
+        - text
+        - type
     relationships:
       type: object
       additionalProperties: false
       properties:
         creationUser:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - creationUser
   required:
     - type
     - id
@@ -121,16 +134,23 @@ Response_explorer-record_includedUser_admin:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - firstName
+        - fullName
+        - photo
     relationships:
       type: object
       additionalProperties: false
       properties:
         schools:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
+      required:
+        - schools
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_explorer-record_includedSchool_admin:
   type: object
@@ -156,6 +176,12 @@ Response_explorer-record_includedSchool_admin:
           $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         region:
           $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+      required:
+        - name
+        - slug
+        - city
+        - country
+        - region
   required:
     - type
     - id
@@ -181,16 +207,23 @@ Response_explorer-record_includedTeacher_admin:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - averageReferenceScoreOutOf100
+        - memberNumber
+        - photo
     relationships:
       type: object
       additionalProperties: false
       properties:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - user 
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_explorer-record_school:
   type: object
@@ -234,6 +267,9 @@ Response_explorer-record_school_item:
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
+      required:
+        - creationDate
+        - status
     relationships:
       type: object
       additionalProperties: false
@@ -244,10 +280,15 @@ Response_explorer-record_school_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+      required:
+        - schoolUser
+        - teacher
+        - activities
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_explorer-record_includedActivity_school:
   type: object
@@ -268,13 +309,19 @@ Response_explorer-record_includedActivity_school:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_school'
+      required:
+        - date
+        - text
+        - type
     relationships:
       type: object
       additionalProperties: false
       properties:
         creationUser:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - creationUser
   required:
     - type
     - id
@@ -301,10 +348,15 @@ Response_explorer-record_includedUser_school:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - firstName
+        - fullName
+        - photo
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_explorer-record_includedTeacher_school:
   type: object
@@ -326,16 +378,23 @@ Response_explorer-record_includedTeacher_school:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - averageReferenceScoreOutOf100
+        - memberNumber
+        - photo
     relationships:
       type: object
       additionalProperties: false
       properties:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - user
   required:
     - type
     - id
     - attributes
+    - relationships
 
 Response_explorer-record_teacher:
   type: object
@@ -380,6 +439,9 @@ Response_explorer-record_teacher_item:
         # relationship Attributes
         status:
           $ref: '../../../components/models/json-api/explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
+      required:
+        - creationDate
+        - status
     relationships:
       type: object
       additionalProperties: false
@@ -390,6 +452,10 @@ Response_explorer-record_teacher_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+      required:
+        - schoolUser
+        - teacher
+        - activities
   required:
     - type
     - id
@@ -414,13 +480,19 @@ Response_explorer-record_includedActivity_teacher:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_teacher'
+      required:
+        - date
+        - text
+        - type
     relationships:
       type: object
       additionalProperties: false
       properties:
         creationUser:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+      required:
+        - creationUser
   required:
     - type
     - id
@@ -445,12 +517,17 @@ Response_explorer-record_includedUser_teacher:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - fullName
+        - photo
     relationships:
       type: object
       additionalProperties: false
       properties:
         schools:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
+      required:
+        - schools
   required:
     - type
     - id
@@ -480,6 +557,12 @@ Response_explorer-record_includedSchool_teacher:
           $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
         region:
           $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+      required:
+        - name
+        - slug
+        - city
+        - country
+        - region
   required:
     - type
     - id
@@ -500,6 +583,8 @@ Response_explorer-record_includedTeacher_teacher:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - photo
   required:
     - type
     - id

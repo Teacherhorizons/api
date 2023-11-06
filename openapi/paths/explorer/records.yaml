@@ -7,8 +7,8 @@ get:
   description: |
     <span class="testing-status-1"></span>
     - Admin: Can see all records and all related activity
-    - Teacher: Can see only records which relate to them, and all related activity
-    - School: Can see only records which have been submitted to them, and only activity from that point onwards
+    - Teacher: Can see only records which relate to them, and all activities which are visible to them
+    - School: Can see only records which relate to them, and all activities which are visible to them
   parameters:
     - in: query
       name: schema
@@ -113,3 +113,66 @@ get:
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
     '422':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
+
+#POST /explorer-records
+
+post:
+  operationId: post-explorer-record
+  summary: Add explorer record
+  tags:
+    - explorer
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span><br/><br/>
+    [Simple model](/#tag/simple-model-explorer-record) | 
+    [JSON:API model](/#tag/json-api-model-explorer-record)
+  parameters:
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: explorer
+                attributes:
+                  allOf:
+                    - type: object
+                      properties:
+                        # simple attribute
+                        text: 
+                          $ref: '../../components/models/library/user/message.yaml#/user-message_text'
+                        # relationship attributes
+                        teacher:
+                          $ref: '../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute_idsOnly'
+                    - required:
+                        - text
+                        - teacher
+
+  responses:
+    '201':
+      description: CREATED (Request successful)
+      content:
+        explorer/json:
+          schema:
+            $ref: '../../components/models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_relationship'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
+
+
+
