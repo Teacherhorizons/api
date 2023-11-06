@@ -133,6 +133,26 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) => `regional-cities/?schema=not-signed-in&filter[slug]=africa-mali-bamako&include=schools`,
+      tests: [
+        {
+          name: 'city with no schools',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `regional-cities/?schema=not-signed-in&filter[slug]=africa-mali-bamako&include=schools,jobs`,
+      tests: [
+        {
+          name: 'city with no schools + jobs',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
