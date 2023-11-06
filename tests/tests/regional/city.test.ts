@@ -156,6 +156,19 @@ var tests = shared.addTestGroups(
   ]
 );
 
+// TODO: better name
+var getPassesFooBar = (url: string, response: JsonApi.Response, data: Config.Data): boolean => {
+  /*
+      general rule: if include relates to a list and there are no related records,
+                    the response should contain an empty array (rather than no attribute)
+                    e.g. include=schools should respond with school: [] (rather than nothing at all)
+  */
+  // TODO JP
+  // check if include=...schools... then data.relationships.schools is present and is an array
+  // check if include=...jobs... then data.relationships.jobs is present and is an array
+  return true;
+};
+
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 
@@ -175,6 +188,8 @@ describe('get-regional-city', () => {
 
         const isResponseValid = shared.getIsResponseValid(response.data);
         expect(isResponseValid).toBe(true);
+
+        expect(getPassesFooBar(url, response.data, shared.data)).toBe(true);
 
         if (t.getPassesCustomChecks) {
           expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
