@@ -1,3 +1,4 @@
+import { ResourceObjects } from 'ts-json-api';
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
@@ -153,19 +154,43 @@ var tests = shared.addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) =>
+        `regional-cities?useCache=false&schema=not-signed-in&filter[slug]=africa-mali-bamako&include=staff,countryPhotos,photos,climate,attractions,ambassadors,jobs,schools,environment,pages`,
+      tests: [
+        {
+          name: 'sparse city - all params',
+          userEmail: 'signedOut',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
 // TODO: better name
-var getPassesFooBar = (url: string, response: JsonApi.Response, data: Config.Data): boolean => {
+const getPassesFooBar = (url: string, response: JsonApi.Response, data: Config.Data): boolean => {
   /*
       general rule: if include relates to a list and there are no related records,
                     the response should contain an empty array (rather than no attribute)
                     e.g. include=schools should respond with school: [] (rather than nothing at all)
   */
-  // TODO JP
-  // check if include=...schools... then data.relationships.schools is present and is an array
-  // check if include=...jobs... then data.relationships.jobs is present and is an array
+
+  const includedParamsString = url.split('include=');
+
+  if (includedParamsString.length <= 1) return true;
+
+  const includedParams = includedParamsString[1].split(',');
+
+  if (includedParams.length > 0) {
+    for (const param of includedParams) {
+      const relationship = (response?.data as ResourceObjects)[0]?.relationships[param];
+      if (!relationship || !relationship.data || (!Array.isArray(relationship.data) && param !== 'environment')) {
+        return false;
+      }
+    }
+  }
+
   return true;
 };
 
