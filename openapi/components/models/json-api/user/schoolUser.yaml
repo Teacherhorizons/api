@@ -1,0 +1,86 @@
+JsonApiModel_user-schoolUser:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-schoolUser_type"
+    id:
+      $ref: "#/JsonApiModel_user-schoolUser_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        numberOfExplorerCandidatesInvitedForInterview:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesInvitedForInterview'
+        numberOfExplorerCandidatesNotYetInterviewed:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed'
+      # relationship attributes
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+      required:
+        - numberOfExplorerCandidatesInvitedForInterview
+        - numberOfExplorerCandidatesNotYetInterviewed
+        - user
+        - photo
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        user:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        photo:
+          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-schoolUser_type:
+  type: string
+  example: user-schoolUser
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_user-schoolUser_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_user-schoolUser_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [user-schoolUser](/#tag/simple-model-user-schoolUser)
+  additionalProperties: false
+  properties:
+    id: 
+      $ref: "#/JsonApiModel_user-schoolUser_id"
+    name:
+      $ref: "../../library/user/schoolUser.yaml#/user-schoolUser_name"
+  required:
+    - id
+    - name
+
+JsonApiModel_user-schoolUser_relationship:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-schoolUser) | 
+    [JSON:API model](/#tag/json-api-model-user-schoolUser)
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_user-schoolUser_type"
+        id:
+          $ref: "#/JsonApiModel_user-schoolUser_id"
+      required:
+        - type
+        - id
+  required:
+    - data
+

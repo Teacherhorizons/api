@@ -1,0 +1,29 @@
+SimpleModel_user-schoolUser:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/SimpleModel_user-schoolUser_id'
+    # simple attributes
+    numberOfExplorerCandidatesInvitedForInterview:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesInvitedForInterview'
+    numberOfExplorerCandidatesNotYetInterviewed:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed'
+    # relationship attributes
+    userId:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_userId'
+    photoId:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_photoId'
+  required:
+    - id
+    - numberOfExplorerCandidatesInvitedForInterview
+    - numberOfExplorerCandidatesNotYetInterviewed
+    - userId
+    - photoId
+
+# shared
+SimpleModel_user-schoolUser_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

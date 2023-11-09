@@ -1112,6 +1112,12 @@ tags:
       [JSON:API model](/#tag/json-api-model-user-setting)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-setting" />
 
+  - name: simple-model-user-schoolUser
+    x-displayName: Simple model - user-schoolUser
+    description: |
+      [JSON:API model](/#tag/json-api-model-user-schoolUser)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-schoolUser" />
+
   #   # tags - simple-models - staff
 
   - name: simple-model-staff-staffMember
@@ -2160,6 +2166,12 @@ tags:
       [Simple model](/#tag/simple-model-user-setting)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-setting" />
 
+  - name: json-api-model-user-schoolUser
+    x-displayName: JSON:API model - user-schoolUser
+    description: |
+      [Simple model](/#tag/simple-model-user-schoolUser)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-schoolUser" />
+
   # staff
 
   - name: json-api-model-staff-staffMember
@@ -2379,6 +2391,7 @@ x-tagGroups:
       - simple-model-user-message
       - simple-model-user-messageStatus
       - simple-model-user-setting
+      - simple-model-user-schoolUser
       - simple-model-staff-staffMember
       - simple-model-staff-adviserSubjectGroup
       - simple-model-job
@@ -2554,6 +2567,7 @@ x-tagGroups:
       - json-api-model-user-message
       - json-api-model-user-messageStatus
       - json-api-model-user-setting
+      - json-api-model-user-schoolUser
       - json-api-model-staff-staffMember
       - json-api-model-staff-adviserSubjectGroup
       - json-api-model-job

@@ -1,0 +1,24 @@
+# simple attributes
+user-schoolUser_numberOfExplorerCandidatesInvitedForInterview:
+  type: integer
+  example: 4
+  description: Derived (dw)
+
+user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed:
+  type: integer
+  example: 15
+  description: Derived (dw)
+
+#relationship attribute
+user-schoolUser_userId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [user](/#tag/simple-model-user)
+
+user-schoolUser_photoId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [general-photo](/#tag/simple-model-general-photo)
+
