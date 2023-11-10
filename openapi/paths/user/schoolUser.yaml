@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-explorer-record
-  summary: Get explorer record
+  operationId: get-user-schoolUser
+  summary: Get a school user
   tags:
-    - explorer
+    - user
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
@@ -12,7 +12,7 @@ get:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
     - in: path
-      name: recordId
+      name: schoolUserId
       required: true
       example: 1
       schema:
@@ -20,11 +20,11 @@ get:
     - in: query
       name: include
       description: |
-        - activities - include all related activities
-        - schoolUser - include related school user
-        - schoolUser.schools - include all schools related to school user (for admin and teacher schemas only)
-        - teacher - include related teacher
-      example: activities,schoolUser,schoolUser.schools,teacher
+        - user - include user attribute
+        - photo - include photo attribute in user-schoolUser
+        - explorer - include explorer summary attributes in user-schoolUser
+        - upcomingExplorerInterviews - include related upcoming Explorer interviews
+      example: user,photo,explorer,upcomingExplorerInterviews
       schema:
         type: string
 
@@ -34,7 +34,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/explorer/record.yaml#/Response_explorer-record'
+            $ref: '../../components/responses/user/schoolUser.yaml#/Response_user'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':

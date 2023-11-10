@@ -80,6 +80,10 @@
 /explorer-records/{recordId}:
   $ref: './../paths/explorer/record.yaml'
 
+# user
+/user-schoolUsers/{schoolUserId}:
+  $ref: './../paths/user/schoolUser.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'
