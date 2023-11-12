@@ -80,7 +80,7 @@ Response_explorer-records_admin_item:
       additionalProperties: false
       properties:
         schoolUser:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
         teacher:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         latestActivity:
@@ -277,7 +277,7 @@ Response_explorer-records_teacher_item:
       additionalProperties: false
       properties:
         schoolUser:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
         latestActivity:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
       required:

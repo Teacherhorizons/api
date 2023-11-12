@@ -17,9 +17,11 @@ JsonApiModel_explorer-record:
         teacher:
           $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute'
         schoolUser:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
+          $ref: '../user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship_attribute'
         status:
           $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship_attribute'
+        latestActivity:
+          $ref: '../explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_attribute'
       required:
         # simple attributes
         - creationDate
@@ -27,6 +29,7 @@ JsonApiModel_explorer-record:
         - teacher
         - schoolUser
         - status
+        - latestActivity
     relationships:
       type: object
       additionalProperties: false
@@ -34,9 +37,13 @@ JsonApiModel_explorer-record:
         teacher:
           $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         schoolUser:
-          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
+          $ref: '../user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
         status:
           $ref: '../explorer/status.yaml#/JsonApiModel_explorer-status_relationship'
+        latestActivity:
+          $ref: '../explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
+        activities:
+          $ref: '../explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
   required:
     - type
     - id

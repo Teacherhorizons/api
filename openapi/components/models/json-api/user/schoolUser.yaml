@@ -57,11 +57,8 @@ JsonApiModel_user-schoolUser_relationship_attribute:
   properties:
     id: 
       $ref: "#/JsonApiModel_user-schoolUser_id"
-    name:
-      $ref: "../../library/user/schoolUser.yaml#/user-schoolUser_name"
   required:
     - id
-    - name
 
 JsonApiModel_user-schoolUser_relationship:
   type: object
