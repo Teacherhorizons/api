@@ -49,12 +49,22 @@ get:
             type: string
           filter[school.city.id][contains]:
             type: string
-          filter[minActivity.date][gte]:
+          filter[activity.date][gte]:
             type: string
             format: date-time
-          filter[maxActivity.date][lte]:
+          filter[activity.date][lte]:
             type: string
             format: date-time
+          filter[activity.type.id][doesNotContain]:
+            type: string
+          filter[activity.type.id][containsInPast]:
+            type: string
+          filter[activity.type.id][doesNotContainInPast]:
+            type: string
+          filter[latestActivity.type.id][contains]:
+            type: string
+          filter[latestActivity.creationUser.id][contains]:
+            type: string
         example:
           school.name][matches: alic
           status.id][contains: 1,2
@@ -65,8 +75,13 @@ get:
           teacher.memberNumber][contains: 1,2
           activity.type.id][contains: 1,2
           school.city.id][contains: 1,2
-          minActivity.date][gte: 2022-08-11T00:00:00Z
-          maxActivity.date][lte: 2022-08-11T00:00:00Z
+          activity.date][gte: 2022-08-11T00:00:00Z
+          activity.date][lte: 2022-08-11T00:00:00Z
+          activity.type.id][doesNotContain: 1,2
+          activity.type.id][containsInPast: 1,2
+          activity.type.id][doesNotContainInPast: 1,2
+          latestActivity.type.id][contains: 1,2
+          latestActivity.creationUser.id][contains: 1,2
     - in: query
       name: page
       style: deepObject
