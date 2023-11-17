@@ -5,10 +5,38 @@ SimpleModel_user-schoolUser:
     id:
       $ref: '#/SimpleModel_user-schoolUser_id'
     # simple attributes
-    numberOfExplorerCandidatesInvitedForInterview:
-      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesInvitedForInterview'
-    numberOfExplorerCandidatesNotYetInterviewed:
-      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed'
+    numberOfExplorerOpen:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
+    numberOfExplorerOpenNotYetInterviewed:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenNotYetInterviewed'
+    numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
+    numberOfExplorerOpenWithoutInterviewNudged:  
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewNudged'
+    numberOfExplorerOpenInterviewed:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewed'
+    numberOfExplorerOpenInterviewedNotYetOffered:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered'	
+    numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
+    numberOfExplorerOpenUpcomingInterviews:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenUpcomingInterviews'
+    numberOfExplorerPendingJobOffer:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerPendingJobOffer'	
+    numberOfExplorerJobOffered:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOffered'
+    numberOfExplorerJobOfferedResolved:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferedResolved'
+    numberOfExplorerJobOfferAccepted:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferAccepted'	
+    numberOfExplorerJobOfferRejected:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferRejected'
+    numberOfApplications:	
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfApplications'
+    numberOfPageVisits:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfPageVisits'	
+    numberOfSchools:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfSchools'
     # relationship attributes
     userId:
       $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_userId'
@@ -16,8 +44,22 @@ SimpleModel_user-schoolUser:
       $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_photoId'
   required:
     - id
-    - numberOfExplorerCandidatesInvitedForInterview
-    - numberOfExplorerCandidatesNotYetInterviewed
+    - numberOfExplorerOpen	
+    - numberOfExplorerOpenNotYetInterviewed	
+    - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher	
+    - numberOfExplorerOpenWithoutInterviewNudged	
+    - numberOfExplorerOpenInterviewed	
+    - numberOfExplorerOpenInterviewedNotYetOffered	
+    - numberOfExplorerOpenInterviewedNotYetOfferedNudged	
+    - numberOfExplorerOpenUpcomingInterviews	
+    - numberOfExplorerPendingJobOffer	
+    - numberOfExplorerJobOffered	
+    - numberOfExplorerJobOfferedResolved	
+    - numberOfExplorerJobOfferAccepted	
+    - numberOfExplorerJobOfferRejected	
+    - numberOfApplications	
+    - numberOfPageVisits	
+    - numberOfSchools
     - userId
     - photoId
 

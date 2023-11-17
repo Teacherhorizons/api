@@ -11,18 +11,61 @@ JsonApiModel_user-schoolUser:
       additionalProperties: false
       properties:
         # simple attributes
-        numberOfExplorerCandidatesInvitedForInterview:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesInvitedForInterview'
-        numberOfExplorerCandidatesNotYetInterviewed:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed'
+        numberOfExplorerOpen:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
+        numberOfExplorerOpenNotYetInterviewed:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenNotYetInterviewed'
+        numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
+        numberOfExplorerOpenWithoutInterviewNudged:  
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewNudged'
+        numberOfExplorerOpenInterviewed:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewed'
+        numberOfExplorerOpenInterviewedNotYetOffered:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered'	
+        numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
+        numberOfExplorerOpenUpcomingInterviews:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenUpcomingInterviews'
+        numberOfExplorerPendingJobOffer:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerPendingJobOffer'	
+        numberOfExplorerJobOffered:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOffered'
+        numberOfExplorerJobOfferedResolved:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferedResolved'
+        numberOfExplorerJobOfferAccepted:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferAccepted'	
+        numberOfExplorerJobOfferRejected:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferRejected'
+        numberOfApplications:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfApplications'
+        numberOfPageVisits:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfPageVisits'	
+        numberOfSchools:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfSchools'
       # relationship attributes
         user:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         photo:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
-        - numberOfExplorerCandidatesInvitedForInterview
-        - numberOfExplorerCandidatesNotYetInterviewed
+        - id
+        - numberOfExplorerOpen	
+        - numberOfExplorerOpenNotYetInterviewed	
+        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher	
+        - numberOfExplorerOpenWithoutInterviewNudged	
+        - numberOfExplorerOpenInterviewed	
+        - numberOfExplorerOpenInterviewedNotYetOffered	
+        - numberOfExplorerOpenInterviewedNotYetOfferedNudged	
+        - numberOfExplorerOpenUpcomingInterviews	
+        - numberOfExplorerPendingJobOffer	
+        - numberOfExplorerJobOffered	
+        - numberOfExplorerJobOfferedResolved	
+        - numberOfExplorerJobOfferAccepted	
+        - numberOfExplorerJobOfferRejected	
+        - numberOfApplications	
+        - numberOfPageVisits	
+        - numberOfSchools
         - user
         - photo
     relationships:
