@@ -14,12 +14,15 @@ SimpleModel_explorer-record:
       $ref: '../../library/explorer/record.yaml#/explorer-record_schoolUserId'
     statusId:
       $ref: '../../library/explorer/record.yaml#/explorer-record_statusId'
+    latestActivityId:
+      $ref: '../../library/explorer/record.yaml#/explorer-record_latestActivityId'
   required:
     - id
     - creationDate
     - teacherId
     - schoolUserId
     - statusId
+    - latestActivityId
 
 # shared
 SimpleModel_explorer-record_id:

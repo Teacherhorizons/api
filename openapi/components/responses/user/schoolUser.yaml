@@ -30,8 +30,8 @@ Response_user_schoolUser:
 Response_user_schoolUser_item:
   type: object
   description: |
-        [Simple model](/#tag/simple-model-schoolUser) | 
-        [JSON:API model](/#tag/json-api-model-schoolUser)
+        [Simple model](/#tag/simple-model-user-schoolUser) | 
+        [JSON:API model](/#tag/json-api-model-user-schoolUser)
   additionalProperties: false
   properties:
     type:
@@ -43,18 +43,18 @@ Response_user_schoolUser_item:
       additionalProperties: false
       properties:
         # simple attributes
-        numberOfExplorerCandidatesInvitedForInterview:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesInvitedForInterview'
-        numberOfExplorerCandidatesNotYetInterviewed:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerCandidatesNotYetInterviewed'
+        numberOfExplorerOpen:
+          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
+        numberOfExplorerOpenNotYetInterviewed:
+          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenNotYetInterviewed'
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
-        - numberOfExplorerCandidatesInvitedForInterview
-        - numberOfExplorerCandidatesNotYetInterviewed
+       - numberOfExplorerOpen	
+       - numberOfExplorerOpenNotYetInterviewed
     relationships:
       type: object
       additionalProperties: false

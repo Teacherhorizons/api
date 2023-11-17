@@ -17,7 +17,7 @@ explorer-record_schoolUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    Relationship to [user-schoolUser](/#tag/simple-model-user-schoolUser)
 
 explorer-record_statusId:
   type: integer
@@ -25,5 +25,9 @@ explorer-record_statusId:
   description: |
     Relationship to [explorer-status](/#tag/simple-model-explorer-status)
 
-# statusId
-# (status.name)
+explorer-record_latestActivityId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [explorer-activity](/#tag/simple-model-explorer-activity)
+

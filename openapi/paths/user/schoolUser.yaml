@@ -34,7 +34,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/user/schoolUser.yaml#/Response_user'
+            $ref: '../../components/responses/user/schoolUser.yaml#/Response_user_schoolUser'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':
