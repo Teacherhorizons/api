@@ -1,80 +1,83 @@
-Response_user:
+Response_teacher:
   oneOf:
-    - $ref: '#/Response_user_schoolUser'
+    - $ref: '#/Response_teacher_v1'
   discriminator:
     propertyName: schema
     mapping:
-      schoolUser: '#/Response_user_schoolUser'
+      teacher: '#/Response_teacher_v1'
 
-Response_user_schoolUser:
+Response_teacher_v1:
   type: object
   additionalProperties: false
   properties:
     schema:
       type: string
       enum:
-        - schoolUser
+        - teacher
     data:
-      $ref: '#/Response_user_schoolUser_item'
+      $ref: '#/Response_teacher_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_user_includedExplorerActivity_schoolUser'
-          - $ref: '#/Response_user_includedExplorerRecord_schoolUser'
-          - $ref: '#/Response_user_includedTeacher_schoolUser'
+          - $ref: '#/Response_teacher_includedExplorerActivity_teacher'
+          - $ref: '#/Response_teacher_includedExplorerRecord_teacher'
+          - $ref: '#/Response_teacher_includedSchoolUser_teacher'
   required:
     - schema
     - data
 
-Response_user_schoolUser_item:
+Response_teacher_item:
   type: object
   description: |
-        [Simple model](/#tag/simple-model-user-schoolUser) | 
-        [JSON:API model](/#tag/json-api-model-user-schoolUser)
+        [Simple model](/#tag/simple-model-teacher) | 
+        [JSON:API model](/#tag/json-api-model-teacher)
   additionalProperties: false
   properties:
     type:
-      $ref: '../../models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_type'
+      $ref: '../../models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type'
     id:
-      $ref: '../../models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_id'
+      $ref: '../../models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
+        memberNumber:
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_memberNumber'
         numberOfExplorerOpen:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpen'
         numberOfExplorerOpenNotYetInterviewed:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenNotYetInterviewed'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenNotYetInterviewed'
         numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
         numberOfExplorerOpenWithoutInterviewNudged:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewNudged'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewNudged'
         numberOfExplorerOpenInterviewed:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewed'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewed'
         numberOfExplorerOpenInterviewedNotYetOffered:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'
         numberOfExplorerOpenInterviewedNotYetOfferedNudged:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
         numberOfExplorerOpenUpcomingInterviews:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenUpcomingInterviews'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenUpcomingInterviews'
         numberOfExplorerPendingJobOffer:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerPendingJobOffer'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'
         numberOfExplorerJobOffered:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOffered'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOffered'
         numberOfExplorerJobOfferedResolved:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferedResolved'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferedResolved'
         numberOfExplorerJobOfferAccepted:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferAccepted'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'
         numberOfExplorerJobOfferRejected:
-          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferRejected'
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferRejected'
         # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
+       - memberNumber
        - numberOfExplorerOpen	
        - numberOfExplorerOpenNotYetInterviewed
        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
@@ -88,6 +91,8 @@ Response_user_schoolUser_item:
        - numberOfExplorerJobOfferedResolved
        - numberOfExplorerJobOfferAccepted
        - numberOfExplorerJobOfferRejected
+       - user
+       - photo
     relationships:
       type: object
       additionalProperties: false
@@ -101,7 +106,7 @@ Response_user_schoolUser_item:
     - id
     - attributes
 
-Response_user_includedExplorerActivity_schoolUser:
+Response_teacher_includedExplorerActivity_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -139,7 +144,7 @@ Response_user_includedExplorerActivity_schoolUser:
     - attributes
     - relationships
 
-Response_user_includedExplorerRecord_schoolUser:
+Response_teacher_includedExplorerRecord_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -151,51 +156,36 @@ Response_user_includedExplorerRecord_schoolUser:
       type: object
       additionalProperties: false
       properties:
-        candidate:
-          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
+        schoolUser:
+          $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
       required:
-        - candidate
+        - schoolUser
   required:
     - type
     - id
     - relationships
 
 
-Response_user_includedTeacher_schoolUser:
+Response_teacher_includedSchoolUser_teacher:
   type: object
   additionalProperties: false
   properties:
     type:
-      $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_type'
+      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_type'
     id:
-      $ref: '../../../components/models/json-api/teacher/ambassador.yaml#/JsonApiModel_teacher-ambassador_id'
+      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
-        levelName:
-          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName'
-        testimonial:
-          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial'
         # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
-        school:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
-        city:
-          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
-        country:
-          $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
-        region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
-        - levelName
         - user
-        # - testimonial
-        - region
+        - photo
   required:
     - type
     - id

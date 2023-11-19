@@ -177,6 +177,9 @@
 /v2/candidates/search/country-area/full/count:
   $ref: './../paths-not-jsonapi/teachers/candidates-search-country-area-full-count.yaml'
 
+/teachers/{teacherId}:
+  $ref: './../paths/teacher/teacher.yaml'
+
 # users
 /v1/user/bundle:
   $ref: './../paths-not-jsonapi/users/user-bundle.yaml'
