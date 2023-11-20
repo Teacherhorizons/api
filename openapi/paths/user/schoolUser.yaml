@@ -8,8 +8,11 @@ get:
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
+  security:
+    - standard:
+        - admin
+        - school
   parameters:
-
     - in: path
       name: schoolUserId
       required: true

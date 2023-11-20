@@ -2642,9 +2642,9 @@ components:
         implicit:
           authorizationUrl: '/th/api/auth/sign-in'
           scopes:
-            admin: Can use any schema
-            school: Can use school and not-signed-in schema types only
-            teacher: Can use teacher and not-signed-in schema types only
+            admin: Can use any schema. In some case can pass asUserId to make the API call as though they are another user.
+            school: Can use school and not-signed-in schema types only. Can see themselves only.
+            teacher: Can use teacher and not-signed-in schema types only. Can see themselves only.
             not-signed-in: Can use not-signed-in schema types only
     api_key:
       type: apiKey

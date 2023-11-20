@@ -3,16 +3,16 @@
 get:
   operationId: get-explorer-record
   summary: Get explorer record
-  security:
-    - standard:
-        - admin
-        - school
-        - teacher
   tags:
     - explorer
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
+  security:
+    - standard:
+        - admin
+        - school
+        - teacher
   parameters:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
