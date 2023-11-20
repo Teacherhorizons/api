@@ -10,17 +10,18 @@ JsonApiModel_general-photo:
       type: object
       additionalProperties: false
       properties:
+        # main attributes
+        url:
+          $ref: '../../library/general/photo.yaml#/general-photo_url'
+        description:
+          $ref: '../../library/general/photo.yaml#/general-photo_description'
         # simple attributes
         name:
           $ref: '../../library/general/photo.yaml#/general-photo_name'
-        url:
-          $ref: '../../library/general/photo.yaml#/general-photo_url'
         creationDate:
           $ref: '../../library/general/photo.yaml#/general-photo_creationDate'
         latestUpdateDate:
           $ref: '../../library/general/photo.yaml#/general-photo_latestUpdateDate'
-        description:
-          $ref: '../../library/general/photo.yaml#/general-photo_description'
         widthInPx:
           $ref: '../../library/general/photo.yaml#/general-photo_widthInPx'
         heightInPx:

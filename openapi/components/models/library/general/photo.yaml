@@ -1,9 +1,4 @@
 # simple attributes
-general-photo_name:
-  type: string
-  maxLength: 250
-  description: Main
-  example: Foo
 general-photo_url:
   type: string
   maxLength: 65535
@@ -14,6 +9,12 @@ general-photo_description:
   maxLength: 250
   example: abc ff
   description: Main
+general-photo_name:
+  deprecated: true
+  type: string
+  maxLength: 250
+  description: Attribute not needed for photos (hopefully)
+  example: Foo
 general-photo_creationDate:
   type: string
   format: date-time
