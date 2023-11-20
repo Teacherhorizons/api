@@ -3,6 +3,11 @@
 get:
   operationId: get-explorer-record
   summary: Get explorer record
+  security:
+    - standard:
+        - admin
+        - school
+        - teacher
   tags:
     - explorer
     - testing-status-1

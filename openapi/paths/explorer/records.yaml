@@ -4,6 +4,11 @@ get:
   tags:
     - explorer
     - testing-status-1
+  security:
+    - standard:
+        - admin
+        - school
+        - teacher
   description: |
     <span class="testing-status-1"></span>
     - Admin: Can see all records and all related activity

@@ -2223,7 +2223,6 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-meta-cachedObject)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_meta-cachedObject" />
-
 x-tagGroups:
   - name: Simple models
     tags:
@@ -2635,23 +2634,21 @@ servers:
   - url: 'https://beta.teacherhorizons.com/th/api'
 paths:
   $ref: './paths/paths.yaml'
-
 components:
   securitySchemes:
-    main_auth:
+    standard:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          authorizationUrl: '/th/api/auth/sign-in'
           scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
+            admin: Can use any schema
+            school: Can use school and not-signed-in schema types only
+            teacher: Can use teacher and not-signed-in schema types only
+            not-signed-in: Can use not-signed-in schema types only
     api_key:
       type: apiKey
       in: header
       name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
   schemas:
     $ref: './components/schemas/proposed/schemas.yaml'
