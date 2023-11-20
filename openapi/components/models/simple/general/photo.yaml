@@ -5,13 +5,13 @@ SimpleModel_general-photo:
     id:
       $ref: '#/SimpleModel_general-photo_id'
     # main attributes
-    name:
-      $ref: '../../library/general/photo.yaml#/general-photo_name'
     url:
       $ref: '../../library/general/photo.yaml#/general-photo_url'
     description:
       $ref: '../../library/general/photo.yaml#/general-photo_description'
     # simple attributes
+    name:
+      $ref: '../../library/general/photo.yaml#/general-photo_name'
     creationDate:
       $ref: '../../library/general/photo.yaml#/general-photo_creationDate'
     latestUpdateDate:
