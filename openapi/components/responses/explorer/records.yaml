@@ -149,8 +149,8 @@ Response_explorer-records_includedUser_admin:
       type: object
       additionalProperties: false
       properties:
-        school:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
+        schools:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
       required:
         - school
   required:
@@ -312,8 +312,8 @@ Response_explorer-records_includedUser_teacher:
       type: object
       additionalProperties: false
       properties:
-        school:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship'
+        schools:
+          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
       required:
         - school
   required:
