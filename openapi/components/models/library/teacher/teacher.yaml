@@ -4,69 +4,154 @@ teacher_memberNumber:
   example: 1
   readOnly: true
   description: Main
+
 teacher_availableFromDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+
 teacher_statement:
   type: string
   example: Foo bar
+
 teacher_partnerMemberNumber:
   type: integer
   example: 1
+
 teacher_profileStrength:
   type: integer
   example: 12
+
 teacher_birthYear:
   type: integer
   example: 1990
+
 teacher_latestAdviserCommentDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+
 teacher_isInterestedInPrivateTuition:
   type: boolean
   example: true
+
 teacher_isInterestedInCommunityFeatures:
   type: boolean
   example: true
+
 teacher_neverPotentialRiskToChildren:
   type: boolean
   example: true
+
 teacher_neverBehaviouralConcernsTowardsChildren:
   type: boolean
   example: true
+
 teacher_thPlaceabilityRating:
   type: integer
   example: 1
+
 teacher_teacherDoesNotWantToBeContacted:
   type: boolean
   example: true
+
 teacher_isAvailableForRemoteTeaching:
   type: boolean
   example: true
+
 teacher_twitterHandle:
   type: string
   example: '@teacherhorizons'
+
 teacher_instagramHandle:
   type: string
   example: teacher.horizons
+
 teacher_linkedInProfileUrl:
   type: string
   example: https://www.linkedin.com/company/teacherhorizons
+
 teacher_facebookProfileUrl:
   type: string
   example: https://facebook.com/teacherhorizons
+
 teacher_videoInterviewClipUrl:
   type: string
   example: https://youtu.be/cEHAWhG6B3c
+
 teacher_numberOfYearsTeachingExperience:
   type: integer
   example: 4
+
 teacher_averageReferenceScoreOutOf100:
   type: number
   description: Derived (dw)
   example: 96.5
+  
+teacher_numberOfExplorerOpen:
+  type: integer
+  example: 22
+  description: Derived 	
+
+teacher_numberOfExplorerOpenNotYetInterviewed:
+  type: integer
+  example: 11
+  description: Derived 	
+
+teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
+  type: integer
+  example: 6
+  description: Derived 	
+
+teacher_numberOfExplorerOpenWithoutInterviewNudged:
+  type: integer
+  example: 5
+  description: Derived 	
+
+teacher_numberOfExplorerOpenInterviewed:	
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerOpenInterviewedNotYetOffered:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerOpenUpcomingInterviews:
+  type: integer
+  example: 4
+  description: Derived 
+
+teacher_numberOfExplorerPendingJobOffer:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerJobOffered:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerJobOfferedResolved:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerJobOfferAccepted:
+  type: integer
+  example: 4
+  description: Derived 	
+
+teacher_numberOfExplorerJobOfferRejected:
+  type: integer
+  example: 4
+  description: Derived 	
 
 # TODO: review
 teacher_thDoNotContact:

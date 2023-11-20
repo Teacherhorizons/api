@@ -1,17 +1,16 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-user-schoolUser
-  summary: Get a school user
+  operationId: get-teacher
+  summary: Get a teacher
   tags:
-    - user
+    - teacher
     - testing-status-1
   description: |
     <span class="testing-status-1"></span>
   parameters:
-
     - in: path
-      name: schoolUserId
+      name: teacherId
       required: true
       example: 1
       schema:
@@ -26,10 +25,10 @@ get:
     - in: query
       name: include
       description: |
-        - user - include user attribute
-        - photo - include photo attribute in user-schoolUser
-        - explorer - include explorer summary attributes in user-schoolUser
-        - upcomingExplorerInterviews - include related upcoming Explorer interviews
+        - user - include user attribute in teacher
+        - photo - include photo attribute in teacher
+        - explorer - include explorer summary attributes in teacher
+        - upcomingExplorerInterviews - include all related upcoming Explorer interviews
       example: user,photo,explorer,upcomingExplorerInterviews
       schema:
         type: string
@@ -40,7 +39,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/user/schoolUser.yaml#/Response_user_schoolUser'
+            $ref: '../../components/responses/teacher/teacher.yaml#/Response_teacher'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':

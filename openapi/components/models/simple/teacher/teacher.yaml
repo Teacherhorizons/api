@@ -75,6 +75,32 @@ SimpleModel_teacher_admin:
       $ref: '../../library/teacher/teacher.yaml#/teacher_videoInterviewClipUrl'
     averageReferenceScoreOutOf100:
       $ref: '../../library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
+    numberOfExplorerOpen:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpen'
+    numberOfExplorerOpenNotYetInterviewed:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenNotYetInterviewed'
+    numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
+    numberOfExplorerOpenWithoutInterviewNudged:  
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewNudged'
+    numberOfExplorerOpenInterviewed:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewed'
+    numberOfExplorerOpenInterviewedNotYetOffered:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'	
+    numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
+    numberOfExplorerOpenUpcomingInterviews:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenUpcomingInterviews'
+    numberOfExplorerPendingJobOffer:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'	
+    numberOfExplorerJobOffered:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOffered'
+    numberOfExplorerJobOfferedResolved:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferedResolved'
+    numberOfExplorerJobOfferAccepted:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'	
+    numberOfExplorerJobOfferRejected:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferRejected'
     # relationship attributes
     userId:
       $ref: '../../library/teacher/teacher.yaml#/teacher_userId'
