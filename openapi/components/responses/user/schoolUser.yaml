@@ -13,7 +13,7 @@ Response_user_schoolUser:
     schema:
       type: string
       enum:
-        - schoolUser
+        - default
     data:
       $ref: '#/Response_user_schoolUser_item'
     included:
@@ -30,8 +30,8 @@ Response_user_schoolUser:
 Response_user_schoolUser_item:
   type: object
   description: |
-        [Simple model](/#tag/simple-model-user-schoolUser) | 
-        [JSON:API model](/#tag/json-api-model-user-schoolUser)
+    [Simple model](/#tag/simple-model-user-schoolUser) | 
+    [JSON:API model](/#tag/json-api-model-user-schoolUser)
   additionalProperties: false
   properties:
     type:
@@ -53,8 +53,8 @@ Response_user_schoolUser_item:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
-       - numberOfExplorerOpen	
-       - numberOfExplorerOpenNotYetInterviewed
+        - numberOfExplorerOpen
+        - numberOfExplorerOpenNotYetInterviewed
     relationships:
       type: object
       additionalProperties: false
@@ -126,7 +126,6 @@ Response_user_includedExplorerRecord_schoolUser:
     - type
     - id
     - relationships
-
 
 Response_user_includedTeacher_schoolUser:
   type: object
