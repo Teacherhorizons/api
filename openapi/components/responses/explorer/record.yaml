@@ -3,7 +3,6 @@ Response_explorer-record:
     - $ref: '#/Response_explorer-record_admin'
     - $ref: '#/Response_explorer-record_school'
     - $ref: '#/Response_explorer-record_teacher'
-
   discriminator:
     propertyName: schema
     mapping:
@@ -11,6 +10,7 @@ Response_explorer-record:
       school: '#/Response_explorer-record_school'
       teacher: '#/Response_explorer-record_teacher'
 
+# admin
 Response_explorer-record_admin:
   type: object
   additionalProperties: false
@@ -28,7 +28,8 @@ Response_explorer-record_admin:
           - $ref: '#/Response_explorer-record_includedActivity_admin'
           - $ref: '#/Response_explorer-record_includedSchool_admin'
           - $ref: '#/Response_explorer-record_includedTeacher_admin'
-          - $ref: '#/Response_explorer-record_includedUser_admin'
+          - $ref: '#/Response_explorer-record_includedUser_shared'
+          - $ref: '#/Response_explorer-record_includedSchoolUser_admin'
   required:
     - schema
     - data
@@ -114,7 +115,7 @@ Response_explorer-record_includedActivity_admin:
     - attributes
     - relationships
 
-Response_explorer-record_includedUser_admin:
+Response_explorer-record_includedSchoolUser_admin:
   type: object
   additionalProperties: false
   properties:
@@ -127,8 +128,6 @@ Response_explorer-record_includedUser_admin:
       additionalProperties: false
       properties:
         # simple attributes
-        firstName:
-          $ref: '../../../components/models/library/user/user.yaml#/user_firstName'
         fullName:
           $ref: '../../../components/models/library/user/user.yaml#/user_fullName'
         # relationship attributes
@@ -218,13 +217,14 @@ Response_explorer-record_includedTeacher_admin:
         user:
           $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship'
       required:
-        - user 
+        - user
   required:
     - type
     - id
     - attributes
     - relationships
 
+# school
 Response_explorer-record_school:
   type: object
   additionalProperties: false
@@ -396,6 +396,7 @@ Response_explorer-record_includedTeacher_school:
     - attributes
     - relationships
 
+# teacher
 Response_explorer-record_teacher:
   type: object
   additionalProperties: false
@@ -585,6 +586,32 @@ Response_explorer-record_includedTeacher_teacher:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - photo
+  required:
+    - type
+    - id
+    - attributes
+
+# shared
+Response_explorer-record_includedUser_shared:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_type'
+    id:
+      $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        fullName:
+          $ref: '../../../components/models/library/user/user.yaml#/user_fullName'
+        # relationship attributes
+        photo:
+          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+      required:
+        - fullName
   required:
     - type
     - id

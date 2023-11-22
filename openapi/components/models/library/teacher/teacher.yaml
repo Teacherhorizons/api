@@ -87,71 +87,71 @@ teacher_averageReferenceScoreOutOf100:
   type: number
   description: Derived (dw)
   example: 96.5
-  
+
 teacher_numberOfExplorerOpen:
   type: integer
   example: 22
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenNotYetInterviewed:
   type: integer
   example: 11
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
   type: integer
   example: 6
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenWithoutInterviewNudged:
   type: integer
   example: 5
-  description: Derived 	
+  description: Derived
 
-teacher_numberOfExplorerOpenInterviewed:	
+teacher_numberOfExplorerOpenInterviewed:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenInterviewedNotYetOffered:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerOpenUpcomingInterviews:
   type: integer
   example: 4
-  description: Derived 
+  description: Derived
 
 teacher_numberOfExplorerPendingJobOffer:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerJobOffered:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerJobOfferedResolved:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerJobOfferAccepted:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 teacher_numberOfExplorerJobOfferRejected:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 # TODO: review
 teacher_thDoNotContact:
@@ -190,10 +190,11 @@ teacher_jobSeekingStatusId:
   description: |
     Relationship to [teacher-jobSeekingStatus](/#tag/simple-model-teacher-jobSeekingStatus)
 teacher_photoId:
+  deprecated: true
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo)
+    Relationship to [general-photo](/#tag/simple-model-general-photo). Historically phyically on teacher, but now moving photo to user.
 teacher_maritalStatusId:
   type: integer
   example: 1
