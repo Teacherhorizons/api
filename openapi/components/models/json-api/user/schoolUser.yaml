@@ -11,6 +11,8 @@ JsonApiModel_user-schoolUser:
       additionalProperties: false
       properties:
         # simple attributes
+        fullName:
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_fullName'
         numberOfExplorerOpen:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
         numberOfExplorerOpenNotYetInterviewed:
@@ -50,6 +52,7 @@ JsonApiModel_user-schoolUser:
           $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - id
+        - fullName
         - numberOfExplorerOpen	
         - numberOfExplorerOpenNotYetInterviewed	
         - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher	

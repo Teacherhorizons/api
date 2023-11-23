@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-user
+  summary: Get users
+  tags:
+    - user
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+    - Admin - Select from all users
+    - School - Select from users involved in their explorer activities
+    - Teacher - Select from users involved in their explorer activities
+  security:
+    - standard:
+        - admin
+        - school
+  parameters:
+    - in: path
+      name: userId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - default
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[context]:
+            type: string
+          filter[fullName][matches]:
+            type: string
+        example:
+          context: explorerActivities
+          fullName][matches: f
+
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/user/user.yaml#/Response_user'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

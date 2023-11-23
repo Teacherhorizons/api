@@ -1,4 +1,10 @@
 # simple attributes
+staff-staffMember_firstName:
+  type: string
+  example: Foo bar
+staff-staffMember_fullName:
+  type: string
+  example: Foo Bar
 staff-staffMember_initials:
   type: string
   example: SW
@@ -31,6 +37,7 @@ staff-staffMember_currentCityId:
     Relationship to [regional-city](/#tag/simple-model-regional-city)
 
 staff-staffMember_photoId:
+  deprecated: true
   type: integer
   example: 1
   description: |

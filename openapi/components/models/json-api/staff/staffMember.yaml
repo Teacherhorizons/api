@@ -11,6 +11,10 @@ JsonApiModel_staff-staffMember:
       additionalProperties: false
       properties:
         # simple attributes
+        firstName:
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_firstName'
+        fullName:
+          $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_fullName'
         initials:
           $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_initials'
         activeInTh: # TODO: consider naming as 'isActiveInTh'
@@ -32,6 +36,8 @@ JsonApiModel_staff-staffMember:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         # simple attributes
+        - firstName
+        - fullName
         - initials
         - activeInTh
         - description

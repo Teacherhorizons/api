@@ -11,6 +11,10 @@ JsonApiModel_teacher:
       additionalProperties: false
       properties:
         # simple attributes
+        firstName:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_firstName'
+        fullName:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_fullName'
         memberNumber:
           $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
         availableFromDate:
