@@ -465,6 +465,8 @@ JsonApiModel_regional-city_relationship_attribute:
       $ref: '../../library/regional/city.yaml#/regional-city_name'
     slug:
       $ref: '../../library/regional/city.yaml#/regional-city_slug'
+    country:
+      $ref: 'country.yaml#/JsonApiModel_regional-country_relationship_attribute'
   required:
     - id
     - name
