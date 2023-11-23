@@ -1,0 +1,46 @@
+Response_user:
+  oneOf:
+    - $ref: '#/Response_user_v1'
+  discriminator:
+    propertyName: schema
+    mapping:
+      user: '#/Response_user_v1'
+
+Response_user_v1:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - user
+    data:
+      $ref: '#/Response_user_item'
+  required:
+    - schema
+    - data
+
+Response_user_item:
+  type: object
+  description: |
+        [Simple model](/#tag/simple-model-user) | 
+        [JSON:API model](/#tag/json-api-model-user)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../models/json-api/user/user.yaml#/JsonApiModel_user_type'
+    id:
+      $ref: '../../models/json-api/user/user.yaml#/JsonApiModel_user_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        fullName:
+          $ref: '../../models/library/user/user.yaml#/user_fullName'
+      required:
+       - fullName
+  required:
+    - type
+    - id
+    - attributes

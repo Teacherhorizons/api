@@ -1,4 +1,8 @@
 # simple attributes
+user-schoolUser_fullName:
+  type: string
+  example: Foo Bar
+
 user-schoolUser_numberOfExplorerOpen:
   type: integer
   example: 22
@@ -87,6 +91,7 @@ user-schoolUser_userId:
     Relationship to [user](/#tag/simple-model-user)
 
 user-schoolUser_photoId:
+  deprecated: true
   type: integer
   example: 1
   description: |

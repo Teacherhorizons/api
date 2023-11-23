@@ -84,6 +84,9 @@
 /user-schoolUsers/{schoolUserId}:
   $ref: './../paths/user/schoolUser.yaml'
 
+/users/{userId}:
+  $ref: './../paths/user/user.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'
