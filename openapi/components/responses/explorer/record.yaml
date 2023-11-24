@@ -27,9 +27,9 @@ Response_explorer-record_admin:
         anyOf:
           - $ref: '#/Response_explorer-record_includedActivity_admin'
           - $ref: '#/Response_explorer-record_includedSchool_shared'
+          - $ref: '#/Response_explorer-record_includedSchoolUser_shared'
           - $ref: '#/Response_explorer-record_includedTeacher_shared'
           - $ref: '#/Response_explorer-record_includedUser_shared'
-          - $ref: '#/Response_explorer-record_includedSchoolUser_shared'
   required:
     - schema
     - data
@@ -131,8 +131,8 @@ Response_explorer-record_school:
       items:
         anyOf:
           - $ref: '#/Response_explorer-record_includedActivity_school'
-          - $ref: '#/Response_explorer-record_includedUser_school'
-          - $ref: '#/Response_explorer-record_includedTeacher_school'
+          - $ref: '#/Response_explorer-record_includedTeacher_shared'
+          - $ref: '#/Response_explorer-record_includedUser_shared'
   required:
     - schema
     - data
@@ -219,70 +219,6 @@ Response_explorer-record_includedActivity_school:
     - attributes
     - relationships
 
-Response_explorer-record_includedUser_school:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_type'
-    id:
-      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        fullName:
-          $ref: '../../../components/models/library/user/user.yaml#/user_fullName'
-        # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-      required:
-        - firstName
-        - fullName
-        - photo
-  required:
-    - type
-    - id
-    - attributes
-    - relationships
-
-Response_explorer-record_includedTeacher_school:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type'
-    id:
-      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        fullName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
-        firstName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_firstName'
-        averageReferenceScoreOutOf100:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
-        memberNumber:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
-        # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-      required:
-        - fullName
-        - firstName
-        - averageReferenceScoreOutOf100
-        - memberNumber
-        - photo
-  required:
-    - type
-    - id
-    - attributes
-    - relationships
-
 # teacher
 Response_explorer-record_teacher:
   type: object
@@ -299,9 +235,9 @@ Response_explorer-record_teacher:
       items:
         anyOf:
           - $ref: '#/Response_explorer-record_includedActivity_teacher'
-          - $ref: '#/Response_explorer-record_includedSchoolUser_teacher'
-          - $ref: '#/Response_explorer-record_includedSchool_teacher'
-          - $ref: '#/Response_explorer-record_includedTeacher_teacher'
+          - $ref: '#/Response_explorer-record_includedSchool_shared'
+          - $ref: '#/Response_explorer-record_includedSchoolUser_shared'
+          - $ref: '#/Response_explorer-record_includedUser_shared'
   required:
     - schema
     - data
@@ -386,98 +322,6 @@ Response_explorer-record_includedActivity_teacher:
     - id
     - attributes
     - relationships
-
-Response_explorer-record_includedSchoolUser_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_type'
-    id:
-      $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        fullName:
-          $ref: '../../../components/models/library/user/schoolUser.yaml#/user-schoolUser_fullName'
-        # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-      required:
-        - fullName
-        - photo
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        schools:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
-      required:
-        - schools
-  required:
-    - type
-    - id
-    - attributes
-
-Response_explorer-record_includedSchool_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_type'
-    id:
-      $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        name:
-          $ref: '../../../components/models/library/school/school.yaml#/school_name'
-        slug:
-          $ref: '../../../components/models/library/school/school.yaml#/school_slug'
-        # relationship attributes
-        city:
-          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
-      required:
-        - name
-        - slug
-        - city
-  required:
-    - type
-    - id
-    - attributes
-
-Response_explorer-record_includedTeacher_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_type'
-    id:
-      $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        fullName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
-        firstName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_firstName'
-        # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-      required:
-        - fullName
-        - firstName
-        - photo
-  required:
-    - type
-    - id
-    - attributes
 
 # shared
 Response_explorer-record_includedUser_shared:
