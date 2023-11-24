@@ -441,16 +441,10 @@ Response_explorer-record_includedSchool_teacher:
         # relationship attributes
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
-        country:
-          $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
-        region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
         - slug
         - city
-        - country
-        - region
   required:
     - type
     - id
@@ -602,16 +596,10 @@ Response_explorer-record_includedSchool_shared:
         # relationship attributes
         city:
           $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
-        country:
-          $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
-        region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
         - name
         - slug
         - city
-        - country
-        - region
   required:
     - type
     - id
