@@ -43,6 +43,8 @@ Response_user_schoolUser_item:
       additionalProperties: false
       properties:
         # simple attributes
+        fullName:
+          $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_fullName'
         numberOfExplorerOpen:
           $ref: '../../models/library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpen'
         numberOfExplorerOpenNotYetInterviewed:
@@ -72,9 +74,8 @@ Response_user_schoolUser_item:
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
       required:
+        - fullName
         - numberOfExplorerOpen
         - numberOfExplorerOpenNotYetInterviewed
         - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
@@ -173,28 +174,32 @@ Response_user_includedTeacher_schoolUser:
       additionalProperties: false
       properties:
         # simple attributes
-        levelName:
-          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName'
-        testimonial:
-          $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial'
+        fullName:
+         $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_fullName'
+        # levelName:
+        #   $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_levelName'
+        # testimonial:
+        #   $ref: '../../../components/models/library/teacher/ambassador.yaml#/teacher-ambassador_testimonial'
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
-        school:
-          $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
-        city:
-          $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
-        country:
-          $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
-        region:
-          $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
+        # user:
+        #   $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        # school:
+        #   $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_attribute'
+        # city:
+        #   $ref: '../../../components/models/json-api/regional/city.yaml#/JsonApiModel_regional-city_relationship_attribute'
+        # country:
+        #   $ref: '../../../components/models/json-api/regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
+        # region:
+        #   $ref: '../../../components/models/json-api/regional/region.yaml#/JsonApiModel_regional-region_relationship_attribute'
       required:
-        - levelName
-        - user
+        - fullName
+        - photo
+        # - levelName
+        # - user
         # - testimonial
-        - region
+        # - region
   required:
     - type
     - id
