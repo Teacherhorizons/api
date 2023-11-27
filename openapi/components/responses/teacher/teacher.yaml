@@ -45,6 +45,8 @@ Response_teacher_item:
         # simple attributes
         memberNumber:
           $ref: '../../models/library/teacher/teacher.yaml#/teacher_memberNumber'
+        fullName:
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_fullName'
         numberOfExplorerOpen:
           $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerOpen'
         numberOfExplorerOpenNotYetInterviewed:
@@ -72,12 +74,11 @@ Response_teacher_item:
         numberOfExplorerJobOfferRejected:
           $ref: '../../models/library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferRejected'
         # relationship attributes
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
        - memberNumber
+       - fullName
        - numberOfExplorerOpen	
        - numberOfExplorerOpenNotYetInterviewed
        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
@@ -91,7 +92,6 @@ Response_teacher_item:
        - numberOfExplorerJobOfferedResolved
        - numberOfExplorerJobOfferAccepted
        - numberOfExplorerJobOfferRejected
-       - user
        - photo
     relationships:
       type: object
@@ -178,13 +178,14 @@ Response_teacher_includedSchoolUser_teacher:
       type: object
       additionalProperties: false
       properties:
+        # simple attributes
+        fullName:
+          $ref: '../../../components/models/library/user/schoolUser.yaml#/user-schoolUser_fullName'
         # relationship attributes
-        user:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
-        - user
+        - fullName
         - photo
   required:
     - type
