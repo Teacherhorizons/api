@@ -4,7 +4,7 @@ Response_user:
   discriminator:
     propertyName: schema
     mapping:
-      user: '#/Response_user_v1'
+      default: '#/Response_user_v1'
 
 Response_user_v1:
   type: object
@@ -13,9 +13,11 @@ Response_user_v1:
     schema:
       type: string
       enum:
-        - user
+        - default
     data:
-      $ref: '#/Response_user_item'
+      type: array
+      items:
+        $ref: '#/Response_user_item'
   required:
     - schema
     - data
@@ -23,8 +25,8 @@ Response_user_v1:
 Response_user_item:
   type: object
   description: |
-        [Simple model](/#tag/simple-model-user) | 
-        [JSON:API model](/#tag/json-api-model-user)
+    [Simple model](/#tag/simple-model-user) | 
+    [JSON:API model](/#tag/json-api-model-user)
   additionalProperties: false
   properties:
     type:
@@ -39,7 +41,7 @@ Response_user_item:
         fullName:
           $ref: '../../models/library/user/user.yaml#/user_fullName'
       required:
-       - fullName
+        - fullName
   required:
     - type
     - id
