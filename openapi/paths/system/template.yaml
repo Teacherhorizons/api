@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-system-template
+  summary: Get a template
+  tags:
+    - system
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+    - Used for various tempates - e.g. template for school inviting candidate to an interview
+
+  security:
+    - standard:
+        - admin
+        - school
+  parameters:
+    - in: path
+      name: templateId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - default
+
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/system/template.yaml#/Response_system-template'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

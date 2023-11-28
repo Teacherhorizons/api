@@ -87,6 +87,13 @@
 /users/{userId}:
   $ref: './../paths/user/user.yaml'
 
+# system
+/system-templates:
+  $ref: './../paths/system/templates.yaml'
+
+/system-templates/{templateId}:
+  $ref: './../paths/system/template.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'

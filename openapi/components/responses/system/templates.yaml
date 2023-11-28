@@ -1,0 +1,48 @@
+Response_system-templates:
+  oneOf:
+    - $ref: '#/Response_system-templates_v1'
+  discriminator:
+    propertyName: schema
+    mapping:
+      default: '#/Response_system-templates_v1'
+
+Response_system-templates_v1:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - default
+    data:
+      type: array
+      items:
+        $ref: '#/Response_system-templates_item'
+  required:
+    - schema
+    - data
+
+Response_system-templates_item:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-system-template) | 
+    [JSON:API model](/#tag/json-api-model-system-template)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../models/json-api/system/template.yaml#/JsonApiModel_system-template_type'
+    id:
+      $ref: '../../models/json-api/system/template.yaml#/JsonApiModel_system-template_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        template:
+          $ref: '../../models/library/system/template.yaml#/system-template_template'
+      required:
+        - template
+  required:
+    - type
+    - id
+    - attributes
