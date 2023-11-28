@@ -68,10 +68,6 @@ Response_explorer-record_admin_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
-      required:
-        - schoolUser
-        - teacher
-        - activities
   required:
     - type
     - id
@@ -171,15 +167,10 @@ Response_explorer-record_school_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
-      required:
-        - schoolUser
-        - teacher
-        - activities
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-record_includedActivity_school:
   type: object
@@ -276,10 +267,6 @@ Response_explorer-record_teacher_item:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         activities:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
-      required:
-        - schoolUser
-        - teacher
-        - activities
   required:
     - type
     - id
@@ -368,22 +355,17 @@ Response_explorer-record_includedSchoolUser_shared:
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
-        - firstName
         - fullName
-        - photo
     relationships:
       type: object
       additionalProperties: false
       properties:
         schools:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
-      required:
-        - schools
   required:
     - type
     - id
     - attributes
-    - relationships
 
 Response_explorer-record_includedTeacher_shared:
   type: object
