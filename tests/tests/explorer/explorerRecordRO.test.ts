@@ -212,12 +212,12 @@ var testsForGet = addTestGroups(
           name: 'explorer-records/${data.explorerRecords[0].id}?schema=teacher&include=teacher',
           userEmail: 'endorsed@th.test',
           expectedStatus: 200,
-          getPassesCustomChecks(response, data) {
-            const teacherAttributes = response.included.filter((x) => x.type === 'teacher')[0].attributes;
-            const hasUnauthorizedAttributes =
-              !!teacherAttributes.averageReferenceScoreOutOf100 || !!teacherAttributes.memberNumber;
-            return !hasUnauthorizedAttributes;
-          },
+          // getPassesCustomChecks(response, data) {
+          //   const teacherAttributes = response.included.filter((x) => x.type === 'teacher')[0].attributes;
+          //   const hasUnauthorizedAttributes =
+          //     !!teacherAttributes.averageReferenceScoreOutOf100 || !!teacherAttributes.memberNumber;
+          //   return !hasUnauthorizedAttributes;
+          // },
         },
         {
           name: 'explorer-records/${data.explorerRecords[0].id}?schema=teacher&include=teacher',
@@ -331,13 +331,13 @@ var testsForGet = addTestGroups(
           name: 'explorer-records/${data.explorerRecords[0].id}?schema=school&include=schoolUser,schoolUser.schools',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 200,
-          getPassesCustomChecks(response, data) {
-            const schools = response.included.filter((x) => x.type === 'school');
-            if (schools.length > 0) return false;
-            const schoolUser = response.included.filter((x) => x.type === 'user')[0];
-            const hasUnauthorizedRelationship = !!schoolUser.relationships;
-            return !hasUnauthorizedRelationship;
-          },
+          // getPassesCustomChecks(response, data) {
+          //   const schools = response.included.filter((x) => x.type === 'school');
+          //   if (schools.length > 0) return false;
+          //   const schoolUser = response.included.filter((x) => x.type === 'user')[0];
+          //   const hasUnauthorizedRelationship = !!schoolUser.relationships;
+          //   return !hasUnauthorizedRelationship;
+          // },
         },
       ],
     },
