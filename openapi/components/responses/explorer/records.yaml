@@ -3,26 +3,12 @@ Response_explorer-records:
     - $ref: '#/Response_explorer-records_admin'
     - $ref: '#/Response_explorer-records_school'
     - $ref: '#/Response_explorer-records_teacher'
-
   discriminator:
     propertyName: schema
     mapping:
       admin: '#/Response_explorer-records_admin'
       school: '#/Response_explorer-records_school'
       teacher: '#/Response_explorer-records_teacher'
-
-Response_explorer-records_meta:
-  type: object
-  properties:
-    count:
-      type: integer
-      example: 123
-    pageCount:
-      type: integer
-      example: 20
-  required:
-    - count
-    - pageCount
 
 # admin
 Response_explorer-records_admin:
@@ -34,7 +20,7 @@ Response_explorer-records_admin:
       enum:
         - admin
     meta:
-      $ref: '#/Response_explorer-records_meta'
+      $ref: '#/Response_explorer-records_meta_shared'
     data:
       type: array
       description: |
@@ -46,12 +32,13 @@ Response_explorer-records_admin:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-record_includedActivity_admin'
-          - $ref: '#/Response_explorer-record_includedSchool_shared'
-          - $ref: '#/Response_explorer-record_includedTeacher_shared'
-          - $ref: '#/Response_explorer-record_includedSchoolUser_shared'
+          - $ref: '#/Response_explorer-records_includedActivity_admin'
+          - $ref: '#/Response_explorer-records_includedSchool_shared'
+          - $ref: '#/Response_explorer-records_includedTeacher_shared'
+          - $ref: '#/Response_explorer-records_includedSchoolUser_shared'
   required:
     - schema
+    - meta
     - data
 
 Response_explorer-records_admin_item:
@@ -86,18 +73,19 @@ Response_explorer-records_admin_item:
           $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
         teacher:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-        activities:
-          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+        latestActivity:
+          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
       required:
         - schoolUser
         - teacher
-        - activities
+        - latestActivity
   required:
     - type
     - id
     - attributes
+    - relationships
 
-Response_explorer-record_includedActivity_admin:
+Response_explorer-records_includedActivity_admin:
   type: object
   additionalProperties: false
   properties:
@@ -112,14 +100,11 @@ Response_explorer-record_includedActivity_admin:
         # simple attributes
         date:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_date'
-        text:
-          $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
           $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_admin'
       required:
         - date
-        - text
         - type
   required:
     - type
@@ -135,19 +120,27 @@ Response_explorer-records_school:
       type: string
       enum:
         - school
+    meta:
+      $ref: '#/Response_explorer-records_meta_shared'
     data:
-      $ref: '#/Response_explorer-record_school_item'
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-explorer-record) | 
+        [JSON:API model](/#tag/json-api-model-explorer-record)
+      items:
+        $ref: '#/Response_explorer-records_school_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-record_includedActivity_school'
-          - $ref: '#/Response_explorer-record_includedTeacher_school'
+          - $ref: '#/Response_explorer-records_includedActivity_school'
+          - $ref: '#/Response_explorer-records_includedTeacher_school'
   required:
     - schema
+    - meta
     - data
 
-Response_explorer-record_school_item:
+Response_explorer-records_school_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-explorer-record) | 
@@ -175,23 +168,20 @@ Response_explorer-record_school_item:
       type: object
       additionalProperties: false
       properties:
-        schoolUser:
-          $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
         teacher:
           $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-        activities:
-          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+        latestActivity:
+          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
       required:
-        - schoolUser
         - teacher
-        - activities
+        - latestActivity
   required:
     - type
     - id
     - attributes
     - relationships
 
-Response_explorer-record_includedActivity_school:
+Response_explorer-records_includedActivity_school:
   type: object
   additionalProperties: false
   properties:
@@ -206,21 +196,18 @@ Response_explorer-record_includedActivity_school:
         # simple attributes
         date:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_date'
-        text:
-          $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
           $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_school'
       required:
         - date
-        - text
         - type
   required:
     - type
     - id
     - attributes
 
-Response_explorer-record_includedTeacher_school:
+Response_explorer-records_includedTeacher_school:
   type: object
   additionalProperties: false
   properties:
@@ -245,7 +232,6 @@ Response_explorer-record_includedTeacher_school:
     - type
     - id
     - attributes
-    - relationships
 
 # teacher
 Response_explorer-records_teacher:
@@ -256,20 +242,28 @@ Response_explorer-records_teacher:
       type: string
       enum:
         - teacher
+    meta:
+      $ref: '#/Response_explorer-records_meta_shared'
     data:
-      $ref: '#/Response_explorer-record_teacher_item'
+      type: array
+      description: |
+        [Simple model](/#tag/simple-model-explorer-record) | 
+        [JSON:API model](/#tag/json-api-model-explorer-record)
+      items:
+        $ref: '#/Response_explorer-records_teacher_item'
     included:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_explorer-record_includedActivity_teacher'
-          - $ref: '#/Response_explorer-record_includedSchoolUser_shared'
-          - $ref: '#/Response_explorer-record_includedSchool_shared'
+          - $ref: '#/Response_explorer-records_includedActivity_teacher'
+          - $ref: '#/Response_explorer-records_includedSchoolUser_shared'
+          - $ref: '#/Response_explorer-records_includedSchool_shared'
   required:
     - schema
+    - meta
     - data
 
-Response_explorer-record_teacher_item:
+Response_explorer-records_teacher_item:
   type: object
   description: |
     [Simple model](/#tag/simple-model-explorer-record) | 
@@ -299,20 +293,18 @@ Response_explorer-record_teacher_item:
       properties:
         schoolUser:
           $ref: '../../../components/models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser_relationship'
-        teacher:
-          $ref: '../../../components/models/json-api/teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
-        activities:
-          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
+        latestActivity:
+          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
       required:
         - schoolUser
-        - teacher
-        - activities
+        - latestActivity
   required:
     - type
     - id
     - attributes
+    - relationships
 
-Response_explorer-record_includedActivity_teacher:
+Response_explorer-records_includedActivity_teacher:
   type: object
   additionalProperties: false
   properties:
@@ -327,14 +319,11 @@ Response_explorer-record_includedActivity_teacher:
         # simple attributes
         date:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_date'
-        text:
-          $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
           $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_teacher'
       required:
         - date
-        - text
         - type
   required:
     - type
@@ -342,7 +331,20 @@ Response_explorer-record_includedActivity_teacher:
     - attributes
 
 # shared
-Response_explorer-record_includedSchoolUser_shared:
+Response_explorer-records_meta_shared:
+  type: object
+  properties:
+    count:
+      type: integer
+      example: 123
+    pageCount:
+      type: integer
+      example: 20
+  required:
+    - count
+    - pageCount
+
+Response_explorer-records_includedSchoolUser_shared:
   type: object
   additionalProperties: false
   properties:
@@ -361,7 +363,6 @@ Response_explorer-record_includedSchoolUser_shared:
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
-        - firstName
         - fullName
         - photo
     relationships:
@@ -370,15 +371,12 @@ Response_explorer-record_includedSchoolUser_shared:
       properties:
         schools:
           $ref: '../../../components/models/json-api/school/school.yaml#/JsonApiModel_school_relationship_multiple'
-      required:
-        - schools
   required:
     - type
     - id
     - attributes
-    - relationships
 
-Response_explorer-record_includedTeacher_shared:
+Response_explorer-records_includedTeacher_shared:
   type: object
   additionalProperties: false
   properties:
@@ -404,7 +402,7 @@ Response_explorer-record_includedTeacher_shared:
     - id
     - attributes
 
-Response_explorer-record_includedSchool_shared:
+Response_explorer-records_includedSchool_shared:
   type: object
   additionalProperties: false
   properties:
