@@ -1,0 +1,31 @@
+SimpleModel_system-template:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-template_id"
+    # simple attributes
+    description:
+      $ref: "../../library/system/template.yaml#/system-template_description"
+    template:
+      $ref: "../../library/system/template.yaml#/system-template_template"
+    isVisibleToAdmin:
+      $ref: "../../library/system/template.yaml#/system-template_isVisibleToAdmin"
+    isVisibleToSchool:
+      $ref: "../../library/system/template.yaml#/system-template_isVisibleToSchool"
+    isVisibleToTeacher:
+      $ref: "../../library/system/template.yaml#/system-template_isVisibleToTeacher"
+  required:
+    - id
+    - description	
+    - template
+    - isVisibleToAdmin
+    - isVisibleToSchool
+    - isVisibleToTeacher
+
+# shared
+SimpleModel_system-template_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -191,6 +191,12 @@ tags:
       [JSON:API model](/#tag/json-api-model-system-environment)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-environment" />
 
+  - name: simple-model-system-template
+    x-displayName: Simple model - system-template
+    description: |
+      [JSON:API model](/#tag/json-api-model-system-template)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-template" />
+
   # tags - simple-models - general
 
   - name: simple-model-general-applicationType
@@ -1292,6 +1298,12 @@ tags:
       [Simple model](/#tag/simple-model-system-environment)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-environment" />
 
+  - name: json-api-model-system-template
+    x-displayName: JSON:API model - system-template
+    description: |
+      [Simple model](/#tag/simple-model-system-template)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-template" />
+
   # tags - JSON:API models - general
 
   - name: json-api-model-general-actionType
@@ -2248,6 +2260,7 @@ x-tagGroups:
       - simple-model-system-dataExportTask
       - simple-model-system-dataImportTask
       - simple-model-system-environment
+      - simple-model-system-template
       - simple-model-general-actionType
       - simple-model-general-article
       - simple-model-general-autoEmail
@@ -2425,6 +2438,7 @@ x-tagGroups:
       - json-api-model-system-dataExportTask
       - json-api-model-system-dataImportTask
       - json-api-model-system-environment
+      - json-api-model-system-template
       - json-api-model-general-actionType
       - json-api-model-general-article
       - json-api-model-general-autoEmail

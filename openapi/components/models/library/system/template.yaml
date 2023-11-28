@@ -1,0 +1,24 @@
+# simple attributes
+system-template_description:
+  type: string
+  maxLength: 250
+  example: School invite candidate to an interview (single school)
+
+system-template_template:
+  type: string
+  maxLength: 500
+  example: "Dear ${teacher.firstName}, I lead on staff recruitment at ${school.name} in ${school.city.country.name}. I accessed your profile..."
+
+system-template_isVisibleToAdmin:
+  type: boolean
+  example: 0
+
+system-template_isVisibleToSchool:
+  type: boolean
+  example: 1
+
+system-template_isVisibleToTeacher:
+  type: boolean
+  example: 0
+
+		
