@@ -1,0 +1,67 @@
+#POST /explorer-activitiess
+
+post:
+  operationId: post-explorer-activity
+  summary: Add explorer activity
+  tags:
+    - explorer
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span><br/><br/>
+    [Simple model](/#tag/simple-model-explorer-activity) | 
+    [JSON:API model](/#tag/json-api-model-explorer-activity)
+
+    Adds an explorer activity
+  parameters:
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                type:
+                  type: string
+                  example: explorer
+                attributes:
+                  allOf:
+                    - type: object
+                      properties:
+                        # simple attribute
+                        date:
+                          $ref: '../../components/models/library/explorer/activity.yaml#/explorer-activity_date'
+                        text:
+                          $ref: '../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
+                        # relationship attributes
+                        record:
+                          $ref: '../../components/models/json-api/explorer/record.yaml#/JsonApiModel_explorer-record_relationship_attribute_idsOnly'
+                        type:
+                          $ref: '../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_idsOnly'
+                    - required:
+                        - date
+                        - text
+                        - record
+                        - type
+
+ responses:
+    '200':
+      description: CREATED (Request successful)
+      content:
+        explorer/json:
+          schema:
+            $ref: '../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
