@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
+
+get:
+  operationId: get-explorer-summary
+  summary: Get explorer summary
+  tags:
+    - explorer
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span>
+  security:
+    - standard:
+        - admin
+        - school
+  parameters:
+    - in: query
+      name: schema
+      required: true
+      schema:
+        type: string
+        enum:
+          - admin
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_useCache'
+    - in: query
+      name: filter
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          filter[explorer-record.creationDate][gte]:
+            type: string
+          filter[explorer-record.creationstring][lt]:
+            type: string
+        example:
+          explorer-record.creationDate][gte: 2022-09-01T00:00:00Z
+          explorer-record.creationDate][lt: 2023-09-01T00:00:00Z
+    # - in: query
+    #   name: include
+    #   schema:
+    #     type: string
+  responses:
+    '200':
+      description: OK (Request successful)
+      content:
+        explorer/json:
+          schema:
+            $ref: '../../components/responses/explorer/summary.yaml#/Response_explorer-summary'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'

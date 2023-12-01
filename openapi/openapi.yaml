@@ -160,6 +160,12 @@ tags:
       [JSON:API model](/#tag/json-api-model-explorer-activityTypeReason)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-activityTypeReason" />
 
+  - name: simple-model-explorer-summary
+    x-displayName: Simple model - explorer-summary
+    description: |
+      [JSON:API model](/#tag/json-api-model-explorer-summary)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_explorer-summary" />
+
   # tags - simple-models - system
   - name: simple-model-system-page
     x-displayName: Simple model - system-page
@@ -1266,6 +1272,12 @@ tags:
       [Simple model](/#tag/simple-model-explorer-activityTypeReason)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-activityTypeReason" />
 
+  - name: json-api-model-explorer-summary
+    x-displayName: JSON:API model - explorer-summary
+    description: |
+      [Simple model](/#tag/simple-model-explorer-summary)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_explorer-summary" />
+
   # tags - JSON:API models - system
 
   - name: json-api-model-system-page
@@ -2255,6 +2267,7 @@ x-tagGroups:
       - simple-model-explorer-record
       - simple-model-explorer-activity
       - simple-model-explorer-activityTypeReason
+      - simple-model-explorer-summary
       - simple-model-system-page
       - simple-model-system-pageType
       - simple-model-system-dataExportTask
@@ -2433,6 +2446,7 @@ x-tagGroups:
       - json-api-model-explorer-record
       - json-api-model-explorer-activity
       - json-api-model-explorer-activityTypeReason
+      - json-api-model-explorer-summary
       - json-api-model-system-page
       - json-api-model-system-pageType
       - json-api-model-system-dataExportTask

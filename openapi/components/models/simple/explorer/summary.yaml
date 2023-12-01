@@ -1,0 +1,55 @@
+SimpleModel_explorer-summary:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_explorer-summary_id"
+    # simple attributes
+    numberOfExplorerOpen:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpen'
+    numberOfExplorerOpenNotYetInterviewed:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenNotYetInterviewed'
+    numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
+    numberOfExplorerOpenWithoutInterviewNudged:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenWithoutInterviewNudged'
+    numberOfExplorerOpenInterviewed:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewed'
+    numberOfExplorerOpenInterviewedNotYetOffered:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewedNotYetOffered'
+    numberOfExplorerOpenInterviewedNotYetOfferedNudged:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
+    numberOfExplorerOpenUpcomingInterviews:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenUpcomingInterviews'
+    numberOfExplorerPendingJobOffer:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerPendingJobOffer'
+    numberOfExplorerJobOffered:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOffered'
+    numberOfExplorerJobOfferedResolved:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferedResolved'
+    numberOfExplorerJobOfferAccepted:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferAccepted'
+    numberOfExplorerJobOfferRejected:
+      $ref: '../../library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferRejected'
+  required:
+    - id
+    - numberOfExplorerOpen
+    - numberOfExplorerOpenNotYetInterviewed
+    - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
+    - numberOfExplorerOpenWithoutInterviewNudged
+    - numberOfExplorerOpenInterviewed
+    - numberOfExplorerOpenInterviewedNotYetOffered
+    - numberOfExplorerOpenInterviewedNotYetOfferedNudged
+    - numberOfExplorerOpenUpcomingInterviews
+    - numberOfExplorerPendingJobOffer
+    - numberOfExplorerJobOffered
+    - numberOfExplorerJobOfferedResolved
+    - numberOfExplorerJobOfferAccepted
+    - numberOfExplorerJobOfferRejected
+
+# shared
+SimpleModel_explorer-summary_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
