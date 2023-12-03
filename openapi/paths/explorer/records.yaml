@@ -70,6 +70,8 @@ get:
             type: string
           filter[latestActivity.creationUser.id][contains]:
             type: string
+          filter[latestActivity.creationDate][gte]:
+            type: string
         example:
           school.name][matches: alic
           status.id][contains: 1,2
@@ -87,6 +89,7 @@ get:
           activity.type.id][doesNotContainInPast: 1,2
           latestActivity.type.id][contains: 1,2
           latestActivity.creationUser.id][contains: 1,2
+          latestActivity.creationDate][gte: 2022-08-11T00:00:00Z
     - in: query
       name: page
       style: deepObject
