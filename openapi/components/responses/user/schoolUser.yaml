@@ -55,13 +55,13 @@ Response_user_schoolUser_item:
       type: object
       additionalProperties: false
       properties:
+        explorerSummary:
+          $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_relationship'
         upcomingExplorerInterviews:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
-        summary:
-          $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_relationship'
       required:
+        - explorerSummary
         - upcomingExplorerInterviews
-        - summary
   required:
     - type
     - id
