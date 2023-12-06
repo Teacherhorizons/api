@@ -1,13 +1,19 @@
 # simple attributes
-teacher_firstName:
-  type: string
-  example: Foo bar
-
 teacher_memberNumber:
   type: integer
   example: 1
   readOnly: true
   description: Main
+
+teacher_fullName:
+  type: string
+  example: Foo Bar
+  description: Main. Derived from user.
+
+teacher_firstName:
+  type: string
+  example: Foo bar
+  description: Main. Derived from user.
 
 teacher_availableFromDate:
   type: string
@@ -161,11 +167,6 @@ teacher_numberOfExplorerJobOfferRejected:
 teacher_thDoNotContact:
   type: boolean
   example: true
-
-# TODO: consider removing when no longer needed (now prefer to include using user relationship attribute)
-teacher_fullName:
-  type: string
-  example: Foo Bar
 
 # TODO: consider removing when no longer needed (now possibly prefer to include using photo relationship attribute)
 teacher_profilePhotoUrl:

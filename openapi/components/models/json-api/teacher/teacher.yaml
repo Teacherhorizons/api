@@ -11,12 +11,12 @@ JsonApiModel_teacher:
       additionalProperties: false
       properties:
         # simple attributes
-        firstName:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_firstName'
-        fullName:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_fullName'
         memberNumber:
           $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
+        fullName:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_fullName'
+        firstName:
+          $ref: '../../library/teacher/teacher.yaml#/teacher_firstName'
         availableFromDate:
           $ref: '../../library/teacher/teacher.yaml#/teacher_availableFromDate'
         statement:
@@ -63,25 +63,25 @@ JsonApiModel_teacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenNotYetInterviewed'
         numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
-        numberOfExplorerOpenWithoutInterviewNudged:  
+        numberOfExplorerOpenWithoutInterviewNudged:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewNudged'
         numberOfExplorerOpenInterviewed:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewed'
         numberOfExplorerOpenInterviewedNotYetOffered:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'	
-        numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'
+        numberOfExplorerOpenInterviewedNotYetOfferedNudged:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
-        numberOfExplorerOpenUpcomingInterviews:	
+        numberOfExplorerOpenUpcomingInterviews:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenUpcomingInterviews'
         numberOfExplorerPendingJobOffer:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'	
-        numberOfExplorerJobOffered:	
+          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'
+        numberOfExplorerJobOffered:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOffered'
-        numberOfExplorerJobOfferedResolved:	
+        numberOfExplorerJobOfferedResolved:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferedResolved'
         numberOfExplorerJobOfferAccepted:
-          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'	
-        numberOfExplorerJobOfferRejected:	
+          $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'
+        numberOfExplorerJobOfferRejected:
           $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferRejected'
         # relationship attributes
         user:
@@ -177,9 +177,15 @@ JsonApiModel_teacher_relationship_attribute:
       $ref: '#/JsonApiModel_teacher_id'
     memberNumber:
       $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
+    fullName:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_fullName'
+    firstName:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_firstName'
   required:
     - id
     - memberNumber
+    - fullName
+    - firstName
 
 JsonApiModel_teacher_relationship:
   type: object

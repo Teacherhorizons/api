@@ -35,6 +35,10 @@ SimpleModel_teacher_admin:
     # simple attributes
     memberNumber:
       $ref: '../../library/teacher/teacher.yaml#/teacher_memberNumber'
+    fullName:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_fullName'
+    firstName:
+      $ref: '../../library/teacher/teacher.yaml#/teacher_firstName'
     availableFromDate:
       $ref: '../../library/teacher/teacher.yaml#/teacher_availableFromDate'
     statement:
@@ -81,25 +85,25 @@ SimpleModel_teacher_admin:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenNotYetInterviewed'
     numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
-    numberOfExplorerOpenWithoutInterviewNudged:  
+    numberOfExplorerOpenWithoutInterviewNudged:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenWithoutInterviewNudged'
     numberOfExplorerOpenInterviewed:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewed'
     numberOfExplorerOpenInterviewedNotYetOffered:
-      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'	
-    numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOffered'
+    numberOfExplorerOpenInterviewedNotYetOfferedNudged:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
-    numberOfExplorerOpenUpcomingInterviews:	
+    numberOfExplorerOpenUpcomingInterviews:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerOpenUpcomingInterviews'
     numberOfExplorerPendingJobOffer:
-      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'	
-    numberOfExplorerJobOffered:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerPendingJobOffer'
+    numberOfExplorerJobOffered:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOffered'
-    numberOfExplorerJobOfferedResolved:	
+    numberOfExplorerJobOfferedResolved:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferedResolved'
     numberOfExplorerJobOfferAccepted:
-      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'	
-    numberOfExplorerJobOfferRejected:	
+      $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferAccepted'
+    numberOfExplorerJobOfferRejected:
       $ref: '../../library/teacher/teacher.yaml#/teacher_numberOfExplorerJobOfferRejected'
     # relationship attributes
     userId:
@@ -131,6 +135,9 @@ SimpleModel_teacher_admin:
   required:
     - schema
     - id
+    - memberNumber
+    - fullName
+    - firstName
 
 # SimpleModel_teacher_adminOnly:
 #   allOf:

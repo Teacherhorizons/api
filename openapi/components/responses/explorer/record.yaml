@@ -380,14 +380,14 @@ Response_explorer-record_includedTeacher_shared:
       additionalProperties: false
       properties:
         # simple attributes
-        firstName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_firstName'
-        fullName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
-        averageReferenceScoreOutOf100:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
+        fullName:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
+        firstName:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_firstName'
+        averageReferenceScoreOutOf100:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_averageReferenceScoreOutOf100'
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'

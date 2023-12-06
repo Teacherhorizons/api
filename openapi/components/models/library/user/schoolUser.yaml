@@ -2,86 +2,87 @@
 user-schoolUser_fullName:
   type: string
   example: Foo Bar
+  description: Main. Derived from user.
 
 user-schoolUser_numberOfExplorerOpen:
   type: integer
   example: 22
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenNotYetInterviewed:
   type: integer
   example: 11
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
   type: integer
   example: 6
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenWithoutInterviewNudged:
   type: integer
   example: 5
-  description: Derived 	
+  description: Derived
 
-user-schoolUser_numberOfExplorerOpenInterviewed:	
+user-schoolUser_numberOfExplorerOpenInterviewed:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenInterviewedNotYetOfferedNudged:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerOpenUpcomingInterviews:
   type: integer
   example: 4
-  description: Derived 
+  description: Derived
 
 user-schoolUser_numberOfExplorerPendingJobOffer:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerJobOffered:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerJobOfferedResolved:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerJobOfferAccepted:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfExplorerJobOfferRejected:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived
 
 user-schoolUser_numberOfApplications:
   type: integer
   example: 4
-  description: Derived 	
+  description: Derived. TODO - consider moving to relationship to a new 'application-summary' entity (similar to 'explorer-summary' relationship)
 
 user-schoolUser_numberOfPageVisits:
   type: integer
   example: 4
-  description: Derived 	
-  
+  description: Derived
+
 user-schoolUser_numberOfSchools:
   type: integer
   example: 4
-  description: Derived 
+  description: Derived. TODO - consider moving to relationship to a new 'school-summary' entity (similar to 'explorer-summary' relationship)
 
 #relationship attribute
 user-schoolUser_userId:
@@ -96,5 +97,3 @@ user-schoolUser_photoId:
   example: 1
   description: |
     Relationship to [general-photo](/#tag/simple-model-general-photo)
-
-

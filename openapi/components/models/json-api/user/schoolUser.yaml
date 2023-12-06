@@ -3,9 +3,9 @@ JsonApiModel_user-schoolUser:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_user-schoolUser_type"
+      $ref: '#/JsonApiModel_user-schoolUser_type'
     id:
-      $ref: "#/JsonApiModel_user-schoolUser_id"
+      $ref: '#/JsonApiModel_user-schoolUser_id'
     attributes:
       type: object
       additionalProperties: false
@@ -19,55 +19,55 @@ JsonApiModel_user-schoolUser:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenNotYetInterviewed'
         numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
-        numberOfExplorerOpenWithoutInterviewNudged:  
+        numberOfExplorerOpenWithoutInterviewNudged:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenWithoutInterviewNudged'
         numberOfExplorerOpenInterviewed:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewed'
         numberOfExplorerOpenInterviewedNotYetOffered:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered'	
-        numberOfExplorerOpenInterviewedNotYetOfferedNudged:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOffered'
+        numberOfExplorerOpenInterviewedNotYetOfferedNudged:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
-        numberOfExplorerOpenUpcomingInterviews:	
+        numberOfExplorerOpenUpcomingInterviews:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerOpenUpcomingInterviews'
         numberOfExplorerPendingJobOffer:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerPendingJobOffer'	
-        numberOfExplorerJobOffered:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerPendingJobOffer'
+        numberOfExplorerJobOffered:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOffered'
-        numberOfExplorerJobOfferedResolved:	
+        numberOfExplorerJobOfferedResolved:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferedResolved'
         numberOfExplorerJobOfferAccepted:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferAccepted'	
-        numberOfExplorerJobOfferRejected:	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferAccepted'
+        numberOfExplorerJobOfferRejected:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfExplorerJobOfferRejected'
-        numberOfApplications:	
+        numberOfApplications:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfApplications'
         numberOfPageVisits:
-          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfPageVisits'	
+          $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfPageVisits'
         numberOfSchools:
           $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_numberOfSchools'
-      # relationship attributes
+        # relationship attributes
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
         - id
         - fullName
-        - numberOfExplorerOpen	
-        - numberOfExplorerOpenNotYetInterviewed	
-        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher	
-        - numberOfExplorerOpenWithoutInterviewNudged	
-        - numberOfExplorerOpenInterviewed	
-        - numberOfExplorerOpenInterviewedNotYetOffered	
-        - numberOfExplorerOpenInterviewedNotYetOfferedNudged	
-        - numberOfExplorerOpenUpcomingInterviews	
-        - numberOfExplorerPendingJobOffer	
-        - numberOfExplorerJobOffered	
-        - numberOfExplorerJobOfferedResolved	
-        - numberOfExplorerJobOfferAccepted	
-        - numberOfExplorerJobOfferRejected	
-        - numberOfApplications	
-        - numberOfPageVisits	
+        - numberOfExplorerOpen
+        - numberOfExplorerOpenNotYetInterviewed
+        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
+        - numberOfExplorerOpenWithoutInterviewNudged
+        - numberOfExplorerOpenInterviewed
+        - numberOfExplorerOpenInterviewedNotYetOffered
+        - numberOfExplorerOpenInterviewedNotYetOfferedNudged
+        - numberOfExplorerOpenUpcomingInterviews
+        - numberOfExplorerPendingJobOffer
+        - numberOfExplorerJobOffered
+        - numberOfExplorerJobOfferedResolved
+        - numberOfExplorerJobOfferAccepted
+        - numberOfExplorerJobOfferRejected
+        - numberOfApplications
+        - numberOfPageVisits
         - numberOfSchools
         - user
         - photo
@@ -76,9 +76,9 @@ JsonApiModel_user-schoolUser:
       additionalProperties: false
       properties:
         user:
-          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+          $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
+          $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
   required:
     - type
     - id
@@ -91,7 +91,7 @@ JsonApiModel_user-schoolUser_type:
 
 JsonApiModel_user-schoolUser_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -101,10 +101,13 @@ JsonApiModel_user-schoolUser_relationship_attribute:
     Main properties of [user-schoolUser](/#tag/simple-model-user-schoolUser)
   additionalProperties: false
   properties:
-    id: 
-      $ref: "#/JsonApiModel_user-schoolUser_id"
+    id:
+      $ref: '#/JsonApiModel_user-schoolUser_id'
+    fullName:
+      $ref: '../../library/user/schoolUser.yaml#/user-schoolUser_fullName'
   required:
     - id
+    - fullName
 
 JsonApiModel_user-schoolUser_relationship:
   type: object
@@ -118,12 +121,11 @@ JsonApiModel_user-schoolUser_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_user-schoolUser_type"
+          $ref: '#/JsonApiModel_user-schoolUser_type'
         id:
-          $ref: "#/JsonApiModel_user-schoolUser_id"
+          $ref: '#/JsonApiModel_user-schoolUser_id'
       required:
         - type
         - id
   required:
     - data
-

@@ -318,20 +318,21 @@ Response_applications_includedTeacher_admin-v2:
       type: object
       additionalProperties: false
       properties:
+        # TODO: add all main properties
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
+        fullName:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
         thDoNotContact:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thDoNotContact'
         thPlaceabilityRating:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_thPlaceabilityRating'
-        fullName:
-          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
         profileImageUrl:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_profilePhotoUrl'
       required:
         - memberNumber
-        - thDoNotContact
         - fullName
+        - thDoNotContact
         - profileImageUrl
   required:
     - type
@@ -862,9 +863,9 @@ Response_applications_includedTeacher_school:
       type: object
       additionalProperties: false
       properties:
+        # TODO: add all main properties
         memberNumber:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_memberNumber'
-        # TODO: consider replacing with user relationship attribute
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
         # TODO: consider replacing with photo relationship attribute

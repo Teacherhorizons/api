@@ -503,6 +503,7 @@ Response_subject_includedTeacher_notSignedIn:
       type: object
       additionalProperties: false
       properties:
+        # TODO: add all main properties (and remove user)
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
