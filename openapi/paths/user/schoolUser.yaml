@@ -29,11 +29,10 @@ get:
     - in: query
       name: include
       description: |
-        - user - include user attribute
         - photo - include photo attribute in user-schoolUser
-        - explorer - include explorer summary attributes in user-schoolUser
-        - upcomingExplorerInterviews - include related upcoming Explorer interviews
-      example: user,photo,explorer,upcomingExplorerInterviews
+        - explorerSummary - include explorer summary attributes in user-schoolUser
+        - upcomingExplorerInterviews - include all related upcoming Explorer interviews
+      example: photo,explorerSummary,upcomingExplorerInterviews
       schema:
         type: string
 

@@ -20,7 +20,7 @@ Response_teacher_v1:
       type: array
       items:
         anyOf:
-          - $ref: '#/Response_teacher_includedExplorerSummary_teacher'
+          - $ref: '../../models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary'
           - $ref: '#/Response_teacher_includedExplorerActivity_teacher'
           - $ref: '#/Response_teacher_includedExplorerRecord_teacher'
           - $ref: '#/Response_teacher_includedSchoolUser_teacher'
@@ -59,68 +59,13 @@ Response_teacher_item:
       type: object
       additionalProperties: false
       properties:
+        explorerSummary:
+          $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_relationship'
         upcomingExplorerInterviews:
           $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
       required:
+        - explorerSummary
         - upcomingExplorerInterviews
-  required:
-    - type
-    - id
-    - attributes
-
-Response_teacher_includedExplorerSummary_teacher:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_type'
-    id:
-      $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        numberOfExplorerOpen:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpen'
-        numberOfExplorerOpenNotYetInterviewed:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenNotYetInterviewed'
-        numberOfExplorerOpenWithoutInterviewLatestActivityTeacher:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenWithoutInterviewLatestActivityTeacher'
-        numberOfExplorerOpenWithoutInterviewNudged:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenWithoutInterviewNudged'
-        numberOfExplorerOpenInterviewed:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewed'
-        numberOfExplorerOpenInterviewedNotYetOffered:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewedNotYetOffered'
-        numberOfExplorerOpenInterviewedNotYetOfferedNudged:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenInterviewedNotYetOfferedNudged'
-        numberOfExplorerOpenUpcomingInterviews:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerOpenUpcomingInterviews'
-        numberOfExplorerPendingJobOffer:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerPendingJobOffer'
-        numberOfExplorerJobOffered:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOffered'
-        numberOfExplorerJobOfferedResolved:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferedResolved'
-        numberOfExplorerJobOfferAccepted:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferAccepted'
-        numberOfExplorerJobOfferRejected:
-          $ref: '../../models/library/explorer/summary.yaml#/explorer-summary_numberOfExplorerJobOfferRejected'
-      required:
-        - numberOfExplorerOpen
-        - numberOfExplorerOpenNotYetInterviewed
-        - numberOfExplorerOpenWithoutInterviewLatestActivityTeacher
-        - numberOfExplorerOpenWithoutInterviewNudged
-        - numberOfExplorerOpenInterviewed
-        - numberOfExplorerOpenInterviewedNotYetOffered
-        - numberOfExplorerOpenInterviewedNotYetOfferedNudged
-        - numberOfExplorerOpenUpcomingInterviews
-        - numberOfExplorerPendingJobOffer
-        - numberOfExplorerJobOffered
-        - numberOfExplorerJobOfferedResolved
-        - numberOfExplorerJobOfferAccepted
-        - numberOfExplorerJobOfferRejected
   required:
     - type
     - id
@@ -145,7 +90,7 @@ Response_teacher_includedExplorerActivity_teacher:
           $ref: '../../../components/models/library/explorer/activity.yaml#/explorer-activity_text'
         # relationship attributes
         type:
-          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute'
+          $ref: '../../../components/models/json-api/explorer/activityType.yaml#/JsonApiModel_explorer-activityType_relationship_attribute_teacher'
       required:
         - date
         - text
