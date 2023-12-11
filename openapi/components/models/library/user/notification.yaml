@@ -1,0 +1,19 @@
+	
+# simple attributes
+user-notification_date:
+  type: string
+  format: date-time
+  example: 2011-02-07T15:53:34Z
+user-notification_text:
+  type: string
+  example: You have new notifications, including 1 with high importance.
+user-notification_notes:
+  type: string
+  example: Foo Bar
+
+# relationship attributes
+user-notification_toUserId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [user](/#tag/simple-model-user)

@@ -48,12 +48,15 @@ Response_teacher_item:
           $ref: '../../models/library/teacher/teacher.yaml#/teacher_memberNumber'
         fullName:
           $ref: '../../models/library/teacher/teacher.yaml#/teacher_fullName'
+        firstName:
+          $ref: '../../models/library/teacher/teacher.yaml#/teacher_firstName'
         # relationship attributes
         photo:
           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
       required:
        - memberNumber
        - fullName
+       - firstName
        - photo
     relationships:
       type: object

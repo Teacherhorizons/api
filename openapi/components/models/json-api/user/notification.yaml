@@ -1,0 +1,43 @@
+JsonApiModel_user-notification:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-notification_type"
+    id:
+      $ref: "#/JsonApiModel_user-notification_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: "../../library/user/notification.yaml#/user-notification_date"
+        text:
+          $ref: "../../library/user/notification.yaml#/user-notification_text"
+        notes:
+          $ref: "../../library/user/notification.yaml#/user-notification_notes"
+      # relationship attributes
+        toUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        toUser:
+          $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-notification_type:
+  type: string
+  example: user-notification
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_user-notification_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

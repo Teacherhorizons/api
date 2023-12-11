@@ -1,0 +1,64 @@
+Response_user:
+  oneOf:
+    - $ref: '#/Response_user_notification'
+  discriminator:
+    propertyName: schema
+    mapping:
+      default: '#/Response_user_notification'
+
+Response_user_notification:
+  type: object
+  additionalProperties: false
+  properties:
+    schema:
+      type: string
+      enum:
+        - default
+    data:
+      type: array
+      items:
+        $ref: '#/Response_user-notification_item'
+  required:
+    - schema
+    - data
+
+Response_user-notification_item:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-notification) | 
+    [JSON:API model](/#tag/json-api-model-user-notification)
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '../../models/json-api/user/notification.yaml#/JsonApiModel_user-notification_type'
+    id:
+      $ref: '../../models/json-api/user/notification.yaml#/JsonApiModel_user-notification_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        date:
+          $ref: '../../models/library/user/notification.yaml#/user-notification_date'
+        text:
+          $ref: '../../models/library/user/notification.yaml#/user-notification_text'
+        # relationship attributes
+        toUser:
+          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+      required:
+        - date
+        - text
+        - toUser
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        status:
+          $ref: '../../../components/models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship'
+      required:
+        - status
+  required:
+    - type
+    - id
+    - attributes
+
