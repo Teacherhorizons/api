@@ -1,0 +1,18 @@
+SimpleModel_user-notificationType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_user-notificationType_id"
+    # simple attributes
+    name:
+      $ref: "../../library/user/notificationType.yaml#/user-notificationType_name"
+  required:
+    - id
+
+# shared
+SimpleModel_user-notificationType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

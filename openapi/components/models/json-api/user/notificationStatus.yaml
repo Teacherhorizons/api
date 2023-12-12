@@ -12,7 +12,7 @@ JsonApiModel_user-notificationStatus:
       properties:
         # simple attributes
         name:
-          $ref: "../../library/user/messageStatus.yaml#/user-notificationStatus_name"
+          $ref: "../../library/user/notificationStatus.yaml#/user-notificationStatus_name"
   required:
     - type
     - id
@@ -38,7 +38,7 @@ JsonApiModel_user-notificationStatus_relationship_attribute:
     id:
       $ref: "#/JsonApiModel_user-notificationStatus_id"
     name:
-      $ref: "../../library/user/messageStatus.yaml#/user-notificationStatus_name"
+      $ref: "../../library/user/notificationStatus.yaml#/user-notificationStatus_name"
   required:
     - id
     - name

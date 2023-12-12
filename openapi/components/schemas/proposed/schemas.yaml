@@ -188,10 +188,12 @@ SimpleModels:
     - $ref: '../../models/simple/user/favouriteTeacher.yaml#/SimpleModel_user-favouriteTeacher'
     - $ref: '../../models/simple/user/type.yaml#/SimpleModel_user-type'
     # - $ref: '../../models/simple/user/message.yaml#/SimpleModel_user-message'
-    - $ref: '../../models/simple/user/messageStatus.yaml#/SimpleModel_user-notificationStatus'
+    - $ref: '../../models/simple/user/notificationStatus.yaml#/SimpleModel_user-notificationStatus'
     - $ref: '../../models/simple/user/setting.yaml#/SimpleModel_user-setting'
     - $ref: '../../models/simple/user/schoolUser.yaml#/SimpleModel_user-schoolUser'
     - $ref: '../../models/simple/user/notification.yaml#/SimpleModel_user-notification'
+    - $ref: '../../models/simple/user/notificationType.yaml#/SimpleModel_user-notificationType'
+    - $ref: '../../models/simple/user/notificationImportance.yaml#/SimpleModel_user-notificationImportance'
 
     # staff
     - $ref: '../../models/simple/staff/staffMember.yaml#/SimpleModel_staff-staffMember'
@@ -391,10 +393,12 @@ JsonApiModels:
     - $ref: '../../models/json-api/user/favouriteTeacher.yaml#/JsonApiModel_user-favouriteTeacher'
     - $ref: '../../models/json-api/user/type.yaml#/JsonApiModel_user-type'
     # - $ref: '../../models/json-api/user/message.yaml#/JsonApiModel_user-message'
-    - $ref: '../../models/json-api/user/messageStatus.yaml#/JsonApiModel_user-notificationStatus'
+    - $ref: '../../models/json-api/user/notificationStatus.yaml#/JsonApiModel_user-notificationStatus'
     - $ref: '../../models/json-api/user/setting.yaml#/JsonApiModel_user-setting'
     - $ref: '../../models/json-api/user/schoolUser.yaml#/JsonApiModel_user-schoolUser'
     - $ref: '../../models/json-api/user/notification.yaml#/JsonApiModel_user-notification'
+    - $ref: '../../models/json-api/user/notificationType.yaml#/JsonApiModel_user-notificationType'
+    - $ref: '../../models/json-api/user/notificationImportance.yaml#/JsonApiModel_user-notificationImportance'
 
     # staff
     - $ref: '../../models/json-api/staff/staffMember.yaml#/JsonApiModel_staff-staffMember'

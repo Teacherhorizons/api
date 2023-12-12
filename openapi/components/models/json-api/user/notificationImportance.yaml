@@ -1,0 +1,65 @@
+JsonApiModel_user-notificationImportance:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_user-notificationImportance_type"
+    id:
+      $ref: "#/JsonApiModel_user-notificationImportance_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        name:
+          $ref: "../../library/user/notificationImportance.yaml#/user-notificationImportance_name"
+  required:
+    - type
+    - id
+
+JsonApiModel_user-notificationImportance_type:
+  type: string
+  example: user-notificationImportance
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_user-notificationImportance_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_user-notificationImportance_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [user-notificationImportance](/#tag/simple-model-user-notificationImportance)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/JsonApiModel_user-notificationImportance_id"
+    name:
+      $ref: "../../library/user/notificationImportance.yaml#/user-notificationImportance_name"
+  required:
+    - id
+    - name
+
+JsonApiModel_user-notificationImportance_relationship:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-user-notificationImportance) | 
+    [JSON:API model](/#tag/json-api-model-user-notificationImportance)
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: "#/JsonApiModel_user-notificationImportance_type"
+        id:
+          $ref: "#/JsonApiModel_user-notificationImportance_id"
+      required:
+        - type
+        - id
+  required:
+    - data

@@ -20,6 +20,9 @@ get:
         type: string
         enum:
           - default
+    - $ref: "../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId"
+      description: |
+        - admin only
     - in: query
       name: filter
       style: deepObject
@@ -29,11 +32,35 @@ get:
         type: object
         additionalProperties: false
         properties:
-          filter[messageStatusId][contains]:
+          filter[text][matches]:
+            type: string
+          filter[status.id][contains]:
+            type: integer
+          filter[importance.id][contains]:
+            type: integer
+          filter[type.id][contains]:
             type: integer
         example:
-          messageStatusId][contains: 1
-
+          text][matches: foo
+          status.id][contains: 1,2
+          importance.id][contains: 1,2
+          type.id][contains: 1,2
+    - in: query
+      name: pageNumber
+      style: deepObject
+      allowReserved: true
+      explode: true
+      schema:
+        type: object
+        additionalProperties: false
+        properties:
+          page[number]:
+            type: number
+          page[size]:
+            type: number
+        example:
+          number: 1
+          size: 20
   responses:
     '200':
       description: OK (Request successful)
