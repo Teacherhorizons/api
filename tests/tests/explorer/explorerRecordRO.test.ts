@@ -92,7 +92,7 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records/${data.explorerRecords[0].id}?schema=admin`,
+      getUrl: (data) => `explorer-records/${data.explorerRecords[0].id}?schema=admin&useCache=false`,
       tests: [
         {
           name: 'explorer-records/${data.explorerRecords[0].id}?schema=admin',
