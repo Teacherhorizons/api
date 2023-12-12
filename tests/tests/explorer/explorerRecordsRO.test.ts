@@ -421,6 +421,17 @@ var testsForGet = addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) =>
+        `explorer-records?schema=admin&page[size]=10&page[number]=2&sort=teacherFullName&filter[status.id][contains]=1,2`,
+      tests: [
+        {
+          name: 'explorer-records?schema=admin - multiple filters',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
