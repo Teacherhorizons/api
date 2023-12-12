@@ -21,7 +21,7 @@ JsonApiModel_user-message:
         fromUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         messageStatus:
-          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship_attribute"
+          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-notificationStatus_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
@@ -31,7 +31,7 @@ JsonApiModel_user-message:
         fromUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         messageStatus:
-          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship"
+          $ref: "../user/messageStatus.yaml#/JsonApiModel_user-notificationStatus_relationship"
   required:
     - type
     - id

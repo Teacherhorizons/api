@@ -1,17 +1,17 @@
-SimpleModel_user-messageStatus:
+SimpleModel_user-notificationStatus:
   type: object
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_user-messageStatus_id"
+      $ref: "#/SimpleModel_user-notificationStatus_id"
     # simple attributes
     name:
-      $ref: "../../library/user/messageStatus.yaml#/user-messageStatus_name"
+      $ref: "../../library/user/messageStatus.yaml#/user-notificationStatus_name"
   required:
     - id
 
 # shared
-SimpleModel_user-messageStatus_id:
+SimpleModel_user-notificationStatus_id:
   type: integer
   example: 1
   readOnly: true

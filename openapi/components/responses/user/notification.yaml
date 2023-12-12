@@ -54,7 +54,7 @@ Response_user-notification_item:
       additionalProperties: false
       properties:
         status:
-          $ref: '../../../components/models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship'
+          $ref: '../../../components/models/json-api/user/messageStatus.yaml#/JsonApiModel_user-notificationStatus_relationship'
       required:
         - status
   required:
