@@ -15,6 +15,11 @@ user_lastName:
 user_uniqueName:
   type: string
   example: Fred Smith (12345)
+  description: |
+    Derived:
+    - school: firstName (with city name if firstName not unique) - e.g. 'British School of Alexandria' or 'British International School (Lisbon)'
+    - admin: `${firstName} ${lastName}` - e.g. 'Alex Reynolds'
+    - teacher: `${firstName} ${lastName} (${memberNumber})` - e.g. 'Poobie Kisten (123724)'
 user_email:
   type: string
   example: simon.jones@gmail.com
