@@ -1,12 +1,12 @@
 Response_explorer-summary:
   oneOf:
-    - $ref: '#/Response_explorer_summary_v1'
+    - $ref: '#/Response_explorer-summary_default'
   discriminator:
     propertyName: schema
     mapping:
-      summary: '#/Response_explorer_summary_v1'
+      default: '#/Response_explorer-summary_default'
 
-Response_explorer_summary_v1:
+Response_explorer-summary_default:
   type: object
   additionalProperties: false
   properties:

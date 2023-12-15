@@ -1,12 +1,12 @@
 Response_user:
   oneOf:
-    - $ref: '#/Response_user_v1'
+    - $ref: '#/Response_user_default'
   discriminator:
     propertyName: schema
     mapping:
-      default: '#/Response_user_v1'
+      default: '#/Response_user_default'
 
-Response_user_v1:
+Response_user_default:
   type: object
   additionalProperties: false
   properties:

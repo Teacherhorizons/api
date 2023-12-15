@@ -58,7 +58,7 @@ Response_user_schoolUser_item:
         explorerSummary:
           $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_relationship'
         upcomingExplorerInterviews:
-          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
+          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
   required:
     - type
     - id

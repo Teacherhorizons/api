@@ -100,6 +100,10 @@
 /system-templates/{templateId}:
   $ref: './../paths/system/template.yaml'
 
+# teacher
+/teachers/{teacherId}:
+  $ref: './../paths/teacher/teacher.yaml'
+
 # test
 /test-apiTests:
   $ref: './../paths/test/apiTests.yaml'
@@ -192,9 +196,6 @@
   $ref: './../paths-not-jsonapi/teachers/candidates-search-full.yaml'
 /v2/candidates/search/country-area/full/count:
   $ref: './../paths-not-jsonapi/teachers/candidates-search-country-area-full-count.yaml'
-
-/teachers/{teacherId}:
-  $ref: './../paths/teacher/teacher.yaml'
 
 # users
 /v1/user/bundle:

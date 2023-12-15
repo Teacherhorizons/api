@@ -1,12 +1,12 @@
 Response_teacher:
   oneOf:
-    - $ref: '#/Response_teacher_v1'
+    - $ref: '#/Response_teacher_default'
   discriminator:
     propertyName: schema
     mapping:
-      teacher: '#/Response_teacher_v1'
+      default: '#/Response_teacher_default'
 
-Response_teacher_v1:
+Response_teacher_default:
   type: object
   additionalProperties: false
   properties:
@@ -64,7 +64,7 @@ Response_teacher_item:
         explorerSummary:
           $ref: '../../../components/models/json-api/explorer/summary.yaml#/JsonApiModel_explorer-summary_relationship'
         upcomingExplorerInterviews:
-          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship'
+          $ref: '../../../components/models/json-api/explorer/activity.yaml#/JsonApiModel_explorer-activity_relationship_multiple'
   required:
     - type
     - id

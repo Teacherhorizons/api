@@ -6,10 +6,10 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^Response_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_admin|_school|_teacher|_notSignedIn))$": {
+        "^Response_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)(?<!(_id|_default|_admin|_school|_teacher|_notSignedIn))$": {
           "$ref": "#/definitions/Response-MultipleSchemas-OneOfMainSchema"
         },
-        "^Response_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)_(admin|school|teacher|notSignedIn)[-]*[v2-]*[a-zA-Z0-9]*$": {
+        "^Response_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)([a-zA-Z-]*)_(default|admin|school|teacher|notSignedIn)[-]*[v2-]*[a-zA-Z0-9]*$": {
           "$ref": "#/definitions/Response-MultipleSchemas-MainSchema"
         },
         "^Response_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-]*[a-zA-Z]*_type$": {
@@ -67,7 +67,7 @@
             "mapping": {
               "type": "object",
               "patternProperties": {
-                "^(all|admin|school|teacher|notSignedIn)$": {
+                "^(all|default|admin|school|teacher|notSignedIn)$": {
                   "type": "string"
                 }
               },
@@ -667,7 +667,7 @@
       "properties": {
         "$ref": {
           "type": "string",
-          "pattern": "^([./a-zA-Z]*.yaml#/(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-a-zA-Z_]*relationship_attribute)$"
+          "pattern": "^([./a-zA-Z]*.yaml#/(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-a-zA-Z_]*)|([./a-zA-Z]*.yaml#/JsonApiModel_(application|explorer|general|job|meta|regional|school|staff|subject|system|teacher|time|user)[-a-zA-Z_]*relationship_attribute(_teacher)*)$"
         }
       },
       "required": ["$ref"]
