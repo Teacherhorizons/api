@@ -6,6 +6,23 @@ Response_user:
     mapping:
       default: '#/Response_user_notification'
 
+Response_user_notification_meta:
+  type: object
+  properties:
+    count:
+      type: integer
+      example: 128
+    pageCount:
+      type: integer
+      example: 7
+    latestMessageViewDate:
+      type: string
+      example: 2011-02-07T15:53:35Z
+  required:
+    - count
+    - pageCount
+    - latestMessageViewDate
+
 Response_user_notification:
   type: object
   additionalProperties: false
@@ -14,6 +31,8 @@ Response_user_notification:
       type: string
       enum:
         - default
+    meta:
+      $ref: '#/Response_user_notification_meta'
     data:
       type: array
       items:
@@ -43,20 +62,18 @@ Response_user-notification_item:
         text:
           $ref: '../../models/library/user/notification.yaml#/user-notification_text'
         # relationship attributes
-        toUser:
-          $ref: '../../../components/models/json-api/user/user.yaml#/JsonApiModel_user_relationship_attribute'
+        importance:
+          $ref: '../../../components/models/json-api/user/notificationImportance.yaml#/JsonApiModel_user-notificationImportance_relationship_attribute'
+        status:
+          $ref: '../../../components/models/json-api/user/notificationStatus.yaml#/JsonApiModel_user-notificationStatus_relationship_attribute'
+        type:
+          $ref: '../../../components/models/json-api/user/notificationType.yaml#/JsonApiModel_user-notificationType_relationship_attribute'
       required:
         - date
         - text
-        - toUser
-    relationships:
-      type: object
-      additionalProperties: false
-      properties:
-        status:
-          $ref: '../../../components/models/json-api/user/messageStatus.yaml#/JsonApiModel_user-messageStatus_relationship'
-      required:
+        - importance
         - status
+        - type
   required:
     - type
     - id

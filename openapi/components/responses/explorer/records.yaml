@@ -220,6 +220,8 @@ Response_explorer-records_includedTeacher_school:
       additionalProperties: false
       properties:
         # simple attributes
+        firstName:
+          $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_firstName'
         fullName:
           $ref: '../../../components/models/library/teacher/teacher.yaml#/teacher_fullName'
         # relationship attributes

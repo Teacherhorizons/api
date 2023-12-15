@@ -1106,17 +1106,17 @@ tags:
       [JSON:API model](/#tag/json-api-model-user-type)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-type" />
 
-  - name: simple-model-user-message
-    x-displayName: Simple model - user-message
-    description: |
-      [JSON:API model](/#tag/json-api-model-user-message)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-message" />
+  # - name: simple-model-user-message
+  #   x-displayName: Simple model - user-message
+  #   description: |
+  #     [JSON:API model](/#tag/json-api-model-user-message)
+  #     <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-message" />
 
-  - name: simple-model-user-messageStatus
-    x-displayName: Simple model - user-messageStatus
+  - name: simple-model-user-notificationStatus
+    x-displayName: Simple model - user-notificationStatus
     description: |
-      [JSON:API model](/#tag/json-api-model-user-messageStatus)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-messageStatus" />
+      [JSON:API model](/#tag/json-api-model-user-notificationStatus)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-notificationStatus" />
 
   - name: simple-model-user-setting
     x-displayName: Simple model - user-setting
@@ -1135,6 +1135,18 @@ tags:
     description: |
       [JSON:API model](/#tag/json-api-model-user-notification)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-notification" />
+
+  - name: simple-model-user-notificationType
+    x-displayName: Simple model - user-notificationType
+    description: |
+      [JSON:API model](/#tag/json-api-model-user-notificationType)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-notificationType" />
+
+  - name: simple-model-user-notificationImportance
+    x-displayName: Simple model - user-notificationImportance
+    description: |
+      [JSON:API model](/#tag/json-api-model-user-notificationImportance)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_user-notificationImportance" />
 
   #   # tags - simple-models - staff
 
@@ -2178,17 +2190,17 @@ tags:
       [Simple model](/#tag/simple-model-user-type)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-type" />
 
-  - name: json-api-model-user-message
-    x-displayName: JSON:API model - user-message
-    description: |
-      [Simple model](/#tag/simple-model-user-message)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-message" />
+  # - name: json-api-model-user-message
+  #   x-displayName: JSON:API model - user-message
+  #   description: |
+  #     [Simple model](/#tag/simple-model-user-message)
+  #     <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-message" />
 
-  - name: json-api-model-user-messageStatus
-    x-displayName: JSON:API model - user-messageStatus
+  - name: json-api-model-user-notificationStatus
+    x-displayName: JSON:API model - user-notificationStatus
     description: |
-      [Simple model](/#tag/simple-model-user-messageStatus)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-messageStatus" />
+      [Simple model](/#tag/simple-model-user-notificationStatus)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notificationStatus" />
 
   - name: json-api-model-user-setting
     x-displayName: JSON:API model - user-setting
@@ -2207,6 +2219,18 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-user-notification)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notification" />
+
+  - name: json-api-model-user-notificationType
+    x-displayName: JSON:API model - user-notificationType
+    description: |
+      [Simple model](/#tag/simple-model-user-notificationType)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notificationType" />
+  
+  - name: json-api-model-user-notificationImportance
+    x-displayName: JSON:API model - user-notificationImportance
+    description: |
+      [Simple model](/#tag/simple-model-user-notificationImportance)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notificationImportance" />
 
   # staff
 
@@ -2425,11 +2449,13 @@ x-tagGroups:
       - simple-model-user-favouriteSchool
       - simple-model-user-favouriteTeacher
       - simple-model-user-type
-      - simple-model-user-message
-      - simple-model-user-messageStatus
+      # - simple-model-user-message
+      - simple-model-user-notificationStatus
       - simple-model-user-setting
       - simple-model-user-schoolUser
       - simple-model-user-notification
+      - simple-model-user-notificationType
+      - simple-model-user-notificationImportance
       - simple-model-staff-staffMember
       - simple-model-staff-adviserSubjectGroup
       - simple-model-job
@@ -2604,11 +2630,13 @@ x-tagGroups:
       - json-api-model-user-favouriteSchool
       - json-api-model-user-favouriteTeacher
       - json-api-model-user-type
-      - json-api-model-user-message
-      - json-api-model-user-messageStatus
+      # - json-api-model-user-message
+      - json-api-model-user-notificationStatus
       - json-api-model-user-setting
       - json-api-model-user-schoolUser
       - json-api-model-user-notification
+      - json-api-model-user-notificationType
+      - json-api-model-user-notificationImportance
       - json-api-model-staff-staffMember
       - json-api-model-staff-adviserSubjectGroup
       - json-api-model-job
