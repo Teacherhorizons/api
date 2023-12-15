@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../../meta/schemas/Path-Singular.json
 
 get:
-  operationId: get-user
+  operationId: get-users
   summary: Get users
   tags:
     - user
@@ -42,9 +42,12 @@ get:
             type: string
           filter[fullName][matches]:
             type: string
+          filter[uniqueName][matches]:
+            type: string
         example:
           context: explorerActivities
           fullName][matches: f
+          uniqueNameName][matches: f
 
   responses:
     '200':

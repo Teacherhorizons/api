@@ -40,8 +40,11 @@ Response_user_item:
         # simple attributes
         fullName:
           $ref: '../../models/library/user/user.yaml#/user_fullName'
+        uniqueName:
+          $ref: '../../models/library/user/user.yaml#/user_uniqueName'
       required:
         - fullName
+        - uniqueName
   required:
     - type
     - id
