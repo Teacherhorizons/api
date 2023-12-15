@@ -9,6 +9,8 @@ get:
   description: |
     <span class="testing-status-1"></span>
     - Used for various tempates - e.g. template for school inviting candidate to an interview
+    - Users can only see templates which are visible to their user type
+    - If user requests a template which is not visible to their user type, that one won't be included in the array
 
   security:
     - standard:
@@ -35,7 +37,6 @@ get:
             type: integer
         example:
           id: 1,3
-
 
   responses:
     '200':

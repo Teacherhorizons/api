@@ -24,7 +24,7 @@
 - https://roger13.github.io/SwagDefGen/ - Convert JSON response to YAML
 - https://metamug.com/util/postman-to-swagger/ - Convert JSON response to YAML (very simple)
 - https://support.google.com/admanager/answer/10358597?hl=en - Capture web session traffic (in a HAR file)
-- https://github.com/dcarr178/har2openapi - Generate OpenAPI YAML from  HAR file
+- https://github.com/dcarr178/har2openapi - Generate OpenAPI YAML from HAR file
 - https://springdoc.org/ - For future, generate OpenAPI YAML from Spring Boot
 
 ### Auto-generation of back-end code (for future)
@@ -60,23 +60,22 @@
 
 - Filters aren't yet fully supported. Workaround: ...
 
-
 <!-- This is an **example** API to demonstrate features of the OpenAPI specification. -->
 
 <!-- TODO RR -->
 
 <!-- This API definition is intended to to be a good starting point for
-describing your API in 
+describing your API in
 
 [OpenAPI/Swagger
 format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
 
 It also demonstrates features of the
 [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-and 
+and
 
 the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-the standard OpenAPI syntax, we use a few 
+the standard OpenAPI syntax, we use a few
 
 [vendor
 extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
@@ -91,7 +90,7 @@ allows both humans and computers to discover and understand the capabilities
 of the service without access to source
 
 code, documentation, or through network traffic inspection. When properly
-defined via OpenAPI, a consumer can 
+defined via OpenAPI, a consumer can
 
 understand and interact with the remote service with a minimal amount of
 implementation logic. Similar to what
@@ -108,7 +107,6 @@ guesswork in calling the service. -->
 ### Current API call
 
 /v3/schools/search/school-area/full?countries=2,3
-
 
 ### All possible values (simplified response, for example purposes):
 
@@ -190,7 +188,7 @@ included: {
         "country": {
           "data": { "type": "country", "id": "17" }
         },
-      }      
+      }
     },
     {
       type: "country"
@@ -205,7 +203,6 @@ included: {
 
 
 ```
-
 
 <!-- /schools?include=city,city.country,city.country.region& -->
 
@@ -223,20 +220,30 @@ included: {
 
 #### Versioning process
 
-  1. change the spec so it describes what we want things to change to (no need to keep the spec for the 'old' version)
-  2. if spec implies a significant breaking change, create parallel code in backend which requires version=2
-  3. release backend
-  4. update front-end to use version=2
-  5. once nothing's using the 'old' version, delete the related backend code and gradually remove version=2 from everywhere
+1. change the spec so it describes what we want things to change to (no need to keep the spec for the 'old' version)
+2. if spec implies a significant breaking change, create parallel code in backend which requires version=2
+3. release backend
+4. update front-end to use version=2
+5. once nothing's using the 'old' version, delete the related backend code and gradually remove version=2 from everywhere
 
 - This is to keep it simple. Will tweak if it isn't simple in a particular case.
-- This way 'version' is only a *temporary state*, and exists only to support separate backend and front-end releases
+- This way 'version' is only a _temporary state_, and exists only to support separate backend and front-end releases
 - Add deprecation marking into the process if we ever need into
 - Useful link: https://apisyouwonthate.com/blog/api-versioning-has-no-right-way
 
 ## Approach to error handling
 
 TODO
+
 ## Approach to different user types
 
 See the 'Pet' example.
+
+## Guidelines
+
+- Simple models give the ... properties of the entity
+- Properties labelled with 'Main' will always be included and will be required if they're required in the simple model
+- Json-API models give all the possible properties which can be used in related API calls
+- All properties of the simple model will be in the related database a-view (e.g. aTeachers)
+- All properties of the Json-API model will be in the related database b-view (e.g. bTeachers)
+- All properties of the simple model will be in the related database a-view (e.g. aTeachers)

@@ -9,6 +9,8 @@ get:
   description: |
     <span class="testing-status-1"></span>
     - Used for various tempates - e.g. template for school inviting candidate to an interview
+    - Users can only see templates which are visible to their user type
+    - If user requests a template which is not visible to their user type, returns a not found error
 
   security:
     - standard:

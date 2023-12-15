@@ -1,7 +1,7 @@
 import * as shared from '../../shared';
 
-// const includeTestNames: string[] = null;
-const includeTestNames = ['explorer-records - admin 101', 'explorer-records - admin 102'];
+const includeTestNames: string[] = null;
+// const includeTestNames = ['explorer-records - teacher 101', 'explorer-records - teacher 102'];
 
 var tests = shared.addTestGroups(
   [],

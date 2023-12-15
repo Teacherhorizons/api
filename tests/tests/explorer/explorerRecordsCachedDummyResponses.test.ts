@@ -1,7 +1,7 @@
 import * as shared from '../../shared';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = ['explorer-records - teacher'];
+// const includeTestNames: string[] = null;
+const includeTestNames = ['explorer-records - admin'];
 
 var tests = shared.addTestGroups(
   [],
@@ -60,8 +60,8 @@ describe('get-dummy-explorer-records', () => {
           expect(t.getPassesCustomChecks(response.data, shared.data)).toBe(true);
         }
 
-        // const isResponseValid = shared.getIsResponseValid(response.data);
-        // expect(isResponseValid).toBe(true);
+        const isResponseValid = shared.getIsResponseValid(response.data);
+        expect(isResponseValid).toBe(true);
 
         expect(response).toSatisfyApiSpec();
       } else {

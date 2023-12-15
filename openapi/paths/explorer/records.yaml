@@ -31,6 +31,9 @@ get:
       style: deepObject
       allowReserved: true
       explode: true
+      description: |
+        - filter[school... - will have no significant effect for school users
+        - filter[teacher... - will have no significant effect for teacher users
       schema:
         type: object
         additionalProperties: false
@@ -113,8 +116,7 @@ get:
         - creationDate
         - latestUpdateDate
         - teacherFullName
-        - latestActivityDate
-      example: -creationDate
+      example: teacherFullName,-creationDate
       schema:
         type: string
   responses:
