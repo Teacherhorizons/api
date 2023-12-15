@@ -89,5 +89,6 @@ declare namespace Config {
     applicationEvents: ApplicationEvent[];
     users?: User[];
     explorerRecords?: ExplorerRecord[];
+    schoolUsers?: User[];
   }
 }

@@ -52,7 +52,6 @@ var testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 400, // invalidParameterValue - recordId
         },
-
         {
           name: 'explorer-records/foo',
           userEmail: 'school-1-school@th.test',
@@ -78,7 +77,6 @@ var testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 400, // invalidParameterValue - schema
         },
-
         {
           name: 'explorer-records/${data.explorerRecords[0].id}?schema=foo',
           userEmail: 'school-1-school@th.test',

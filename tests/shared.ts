@@ -206,7 +206,7 @@ const jpLocalData: Config.Data = {
     { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
     { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
-  teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }],
+  teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }, { id: 1031 }],
   jobs: [{ id: 1662 }, { id: 1663 }],
   cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
   countries: [
@@ -235,6 +235,7 @@ const jpLocalData: Config.Data = {
   ],
   dataIssues: [{ id: 1 }],
   explorerRecords: [{ id: 1 }, { id: 3 }],
+  schoolUsers: [{ id: 6 }],
 };
 
 const betaData: Config.Data = {
