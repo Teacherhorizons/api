@@ -15,50 +15,50 @@ import {
 var testsForGet = addTestGroups(
   [],
   [
-    // {
-    //   getUrl: (data) => `teachers/${data.teachers[2].id}`,
-    //   tests: [
-    //     {
-    //       name: 'teachers - no schema',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // missingMandatoryParameter - schema
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `teachers/foo`,
-    //   tests: [
-    //     {
-    //       name: 'teachers/foo',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // invalidParameterValue - userId
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `teachers/${data.teachers[2].id}?schema=foo`,
-    //   tests: [
-    //     {
-    //       name: 'teachers/${data.teachers[2].id}?schema=foo',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // invalidParameterValue - schema
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default`,
-    //   tests: [
-    //     {
-    //       name: 'teachers/${data.teachers[2].id}?schema=default',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //       getPassesCustomChecks(response, data) {
-    //         const responseData = response.data as ResourceObject;
-    //         return responseData.attributes.photo === undefined;
-    //       },
-    //     },
-    //   ],
-    // },
+    {
+      getUrl: (data) => `teachers/${data.teachers[2].id}`,
+      tests: [
+        {
+          name: 'teachers - no schema',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // missingMandatoryParameter - schema
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `teachers/foo`,
+      tests: [
+        {
+          name: 'teachers/foo',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // invalidParameterValue - userId
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `teachers/${data.teachers[2].id}?schema=foo`,
+      tests: [
+        {
+          name: 'teachers/${data.teachers[2].id}?schema=foo',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // invalidParameterValue - schema
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default`,
+      tests: [
+        {
+          name: 'teachers/${data.teachers[2].id}?schema=default',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return responseData.attributes.photo === undefined;
+          },
+        },
+      ],
+    },
     {
       getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default&include=photo`,
       tests: [
@@ -73,20 +73,20 @@ var testsForGet = addTestGroups(
         },
       ],
     },
-    // {
-    //   getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default&include=explorerSummary`,
-    //   tests: [
-    //     {
-    //       name: 'teachers/${data.teachers[2].id}?schema=default&include=explorerSummary',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //       getPassesCustomChecks(response, data) {
-    //         const responseData = response.data as ResourceObject;
-    //         return responseData.attributes.photo === undefined;
-    //       },
-    //     },
-    //   ],
-    // },
+    {
+      getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default&include=explorerSummary`,
+      tests: [
+        {
+          name: 'teachers/${data.teachers[2].id}?schema=default&include=explorerSummary',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return responseData.attributes.photo === undefined;
+          },
+        },
+      ],
+    },
     {
       getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default&include=upcomingExplorerInterviews`,
       tests: [
@@ -101,17 +101,17 @@ var testsForGet = addTestGroups(
         },
       ],
     },
-    // {
-    //   getUrl: (data) =>
-    //     `teachers/${data.teachers[2].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews`,
-    //   tests: [
-    //     {
-    //       name: 'teachers/${data.teachers[2].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //     },
-    //   ],
-    // },
+    {
+      getUrl: (data) =>
+        `teachers/${data.teachers[2].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews`,
+      tests: [
+        {
+          name: 'teachers/${data.teachers[2].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 

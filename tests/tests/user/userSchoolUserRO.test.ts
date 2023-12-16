@@ -15,78 +15,78 @@ import {
 var testsForGet = addTestGroups(
   [],
   [
-    // {
-    //   getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers - no schema',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // missingMandatoryParameter - schema
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `user-schoolUsers/foo`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/foo',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // invalidParameterValue - userId
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=foo`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=foo',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 400, // invalidParameterValue - schema
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //       getPassesCustomChecks(response, data) {
-    //         const responseData = response.data as ResourceObject;
-    //         return responseData.attributes.photo === undefined;
-    //       },
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //       getPassesCustomChecks(response, data) {
-    //         const responseData = response.data as ResourceObject;
-    //         return !!responseData.attributes.photo;
-    //       },
-    //     },
-    //   ],
-    // },
-    // {
-    //   getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=explorerSummary`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=explorerSummary',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //       getPassesCustomChecks(response, data) {
-    //         const responseData = response.data as ResourceObject;
-    //         return responseData.attributes.photo === undefined;
-    //       },
-    //     },
-    //   ],
-    // },
+    {
+      getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}`,
+      tests: [
+        {
+          name: 'user-schoolUsers - no schema',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // missingMandatoryParameter - schema
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `user-schoolUsers/foo`,
+      tests: [
+        {
+          name: 'user-schoolUsers/foo',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // invalidParameterValue - userId
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=foo`,
+      tests: [
+        {
+          name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=foo',
+          userEmail: 'admin@th.test',
+          expectedStatus: 400, // invalidParameterValue - schema
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default`,
+      tests: [
+        {
+          name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return responseData.attributes.photo === undefined;
+          },
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo`,
+      tests: [
+        {
+          name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return !!responseData.attributes.photo;
+          },
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=explorerSummary`,
+      tests: [
+        {
+          name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=explorerSummary',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return responseData.attributes.photo === undefined;
+          },
+        },
+      ],
+    },
     {
       getUrl: (data) => `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=upcomingExplorerInterviews`,
       tests: [
@@ -101,17 +101,17 @@ var testsForGet = addTestGroups(
         },
       ],
     },
-    // {
-    //   getUrl: (data) =>
-    //     `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews`,
-    //   tests: [
-    //     {
-    //       name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews',
-    //       userEmail: 'admin@th.test',
-    //       expectedStatus: 200,
-    //     },
-    //   ],
-    // },
+    {
+      getUrl: (data) =>
+        `user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews`,
+      tests: [
+        {
+          name: 'user-schoolUsers/${data.schoolUsers[0].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+      ],
+    },
   ]
 );
 
