@@ -312,12 +312,12 @@ const getMultipleBaseRelationshipDataItems = (response: JsonApi.Response) => {
 };
 
 export const getIsResponseValid = (response: JsonApi.Response) => {
-  const doesSingleHaveBaseRelationships =
+  const isSingleWithBaseRelationships =
     !Array.isArray(response.data) && !!(response.data as ResourceObject)?.relationships;
 
-  const doesMultiHaveBaseRelationships = Array.isArray(response.data) && response.data.some((d) => d?.relationships);
+  const isMultiWithBaseRelationships = Array.isArray(response.data) && response.data.some((d) => d?.relationships);
 
-  const hasBaseRelationships = doesSingleHaveBaseRelationships || doesMultiHaveBaseRelationships;
+  const hasBaseRelationships = isSingleWithBaseRelationships || isMultiWithBaseRelationships;
 
   if (!hasBaseRelationships && response.included.length === 0) return true;
 
