@@ -456,8 +456,8 @@ describe('explorer-records', () => {
         expect(t.getPassesCustomChecks(response.data, data)).toBe(true);
       }
 
-      // const isResponseValid = getIsResponseValid(response.data);
-      // expect(isResponseValid).toBe(true);
+      const isResponseValid = getIsResponseValid(response.data);
+      expect(isResponseValid).toBe(true);
 
       expect(response).toSatisfyApiSpec();
     } else {

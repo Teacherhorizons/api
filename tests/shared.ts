@@ -299,17 +299,35 @@ const isEveryAinB = (a: JsonApi.ResourceObject[], b: JsonApi.ResourceObject[]) =
   );
 };
 
-export const getIsResponseValid = (response: JsonApi.Response) => {
-  const data = Array.isArray(response.data) ? response.data[0] : response.data;
-  const baseRelationships = data.relationships;
+const getMultipleBaseRelationshipDataItems = (response: JsonApi.Response) => {
+  const dataItems: ResourceObject[] = [];
 
-  if (!baseRelationships && response.included.length === 0) return true;
+  (response.data as any[]).forEach((item) => {
+    for (const relationship in item.relationships) {
+      dataItems.push(item.relationships[relationship].data);
+    }
+  });
+
+  return dataItems;
+};
+
+export const getIsResponseValid = (response: JsonApi.Response) => {
+  const doesSingleHaveBaseRelationships =
+    !Array.isArray(response.data) && !!(response.data as ResourceObject)?.relationships;
+
+  const doesMultiHaveBaseRelationships = Array.isArray(response.data) && response.data.some((d) => d?.relationships);
+
+  const hasBaseRelationships = doesSingleHaveBaseRelationships || doesMultiHaveBaseRelationships;
+
+  if (!hasBaseRelationships && response.included.length === 0) return true;
 
   const includedRelationships = response.included
     .filter((item) => item.hasOwnProperty('relationships'))
     .map((item) => item.relationships);
 
-  const baseRelationshipDataItems = getDataItems(baseRelationships);
+  const baseRelationshipDataItems = Array.isArray(response.data)
+    ? getMultipleBaseRelationshipDataItems(response)
+    : getDataItems(response.data.relationships);
 
   let includedRelationshipDataItems: JsonApi.ResourceObject[] = [];
 
