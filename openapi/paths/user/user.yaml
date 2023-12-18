@@ -40,13 +40,14 @@ get:
         properties:
           filter[context]:
             type: string
-          filter[fullName][matches]:
-            type: string
+            description: |
+                Possible values:
+                - explorerActivities: will search related explorer activity users only
+                - (no parameter, admin only): will search all users
           filter[uniqueName][matches]:
             type: string
         example:
           context: explorerActivities
-          fullName][matches: f
           uniqueNameName][matches: f
 
   responses:
