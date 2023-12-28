@@ -319,9 +319,11 @@ export const getIsResponseValid = (response: JsonApi.Response) => {
 
   const hasBaseRelationships = isSingleWithBaseRelationships || isMultiWithBaseRelationships;
 
-  if (!hasBaseRelationships && response.included.length === 0) return true;
+  const included = response.included ?? [];
 
-  const includedRelationships = response.included
+  if (!hasBaseRelationships && included.length === 0) return true;
+
+  const includedRelationships = included
     .filter((item) => item.hasOwnProperty('relationships'))
     .map((item) => item.relationships);
 
@@ -339,7 +341,7 @@ export const getIsResponseValid = (response: JsonApi.Response) => {
 
   console.log('allRelationships: ', allRelationships);
 
-  const includedDataItems: JsonApi.ResourceObject[] = response.included.map((item) => ({
+  const includedDataItems: JsonApi.ResourceObject[] = included.map((item) => ({
     id: item.id,
     type: item.type,
   }));
