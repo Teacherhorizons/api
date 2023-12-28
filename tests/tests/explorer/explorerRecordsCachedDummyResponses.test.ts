@@ -7,7 +7,7 @@ var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `explorer-records?schema=admin`,
+      getUrl: (data) => `system-cachedApiResponses/5101?path=/explorer-records&schema=admin`,
       tests: [
         {
           name: 'explorer-records - admin',
@@ -17,7 +17,7 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=school`,
+      getUrl: (data) => `system-cachedApiResponses/5102?path=/explorer-records&schema=school`,
       tests: [
         {
           name: 'explorer-records - school',
@@ -27,7 +27,7 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=teacher`,
+      getUrl: (data) => `system-cachedApiResponses/5103?path=/explorer-records&schema=teacher`,
       tests: [
         {
           name: 'explorer-records - teacher',
@@ -63,6 +63,7 @@ describe('get-dummy-explorer-records', () => {
         const isResponseValid = shared.getIsResponseValid(response.data);
         expect(isResponseValid).toBe(true);
 
+        response.request.path = '/th/api/explorer-records';
         expect(response).toSatisfyApiSpec();
       } else {
         try {

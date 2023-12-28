@@ -1,13 +1,19 @@
 import * as shared from '../../shared';
 
-const includeTestNames: string[] = null;
+// const includeTestNames: string[] = null;
+const includeTestNames = [
+  'explorer-records - admin 101',
+  'explorer-records - admin 102',
+  'explorer-records - school 101',
+];
 // const includeTestNames = ['explorer-records - teacher 101', 'explorer-records - teacher 102'];
 
 var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `explorer-records/101?schema=admin&include=activities,schoolUser,schoolUser.schools,teacher`,
+      getUrl: (data) =>
+        `system-cachedApiResponses/5001?path=/explorer-records/101&schema=admin&include=activities,schoolUser,schoolUser.schools,teacher`,
       tests: [
         {
           name: 'explorer-records - admin 101',
@@ -17,7 +23,8 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records/102?schema=admin&include=activities,schoolUser,schoolUser.schools,teacher`,
+      getUrl: (data) =>
+        `system-cachedApiResponses/5002?path=/explorer-records/102&schema=admin&include=activities,schoolUser,schoolUser.schools,teacher`,
       tests: [
         {
           name: 'explorer-records - admin 102',
@@ -27,7 +34,8 @@ var tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records/101?schema=school&include=activities,teacher`,
+      getUrl: (data) =>
+        `system-cachedApiResponses/5003?path=/explorer-records/101&schema=school&include=activities,teacher`,
       tests: [
         {
           name: 'explorer-records - school 101',
@@ -93,6 +101,7 @@ describe('get-dummy-explorer-record', () => {
         const isResponseValid = shared.getIsResponseValid(response.data);
         expect(isResponseValid).toBe(true);
 
+        response.request.path = '/th/api/explorer-records/1';
         expect(response).toSatisfyApiSpec();
       } else {
         try {
