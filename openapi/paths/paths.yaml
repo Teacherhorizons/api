@@ -87,8 +87,8 @@
 /user-schoolUsers/{schoolUserId}:
   $ref: './../paths/user/schoolUser.yaml'
 
-/users/{userId}:
-  $ref: './../paths/user/user.yaml'
+/users:
+  $ref: './../paths/user/users.yaml'
 
 /user/notifications:
   $ref: './../paths/user/notification.yaml'

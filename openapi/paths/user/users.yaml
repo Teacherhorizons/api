@@ -16,12 +16,6 @@ get:
         - admin
         - school
   parameters:
-    - in: path
-      name: userId
-      required: true
-      example: 1
-      schema:
-        type: integer
     - in: query
       name: schema
       required: true
@@ -41,9 +35,9 @@ get:
           filter[context]:
             type: string
             description: |
-                Possible values:
-                - explorerActivities: will search related explorer activity users only
-                - (no parameter, admin only): will search all users
+              Possible values:
+              - explorerActivities: will search related explorer activity users only
+              - (no parameter, admin only): will search all users
           filter[uniqueName][matches]:
             type: string
         example:
