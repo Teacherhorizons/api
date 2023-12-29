@@ -40,9 +40,32 @@ get:
               - (no parameter, admin only): will search all users
           filter[uniqueName][matches]:
             type: string
+          filter[typeSlug][contains]:
+            type: string
+            description: |
+              Possible values:
+              - admin: will search all admin users
+              - school: will search all school users
+              - teacher: will search all teacher users
+              - admin,school: will search all admin and school users
+              - school,admin: will search all admin and school users
+              - admin,teacher: will search all admin and teacher users
+              - teacher,admin: will search all admin and teacher users
+              - school,teacher: will search all school and teacher users
+              - teacher,school: will search all school and teacher users
+              - admin,school,teacher: will search all users
+              - admin,teacher,school: will search all users
+              - school,admin,teacher: will search all users
+              - school,teacher,admin: will search all users
+              - teacher,admin,school: will search all users
+              - teacher,school,admin: will search all users
+              - (no parameter): will search all users
+          page[size]:
+            type: number
         example:
           context: explorerActivities
           uniqueNameName][matches: f
+          typeSlug][contains: admin,school
 
   responses:
     '200':
