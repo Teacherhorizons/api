@@ -7,7 +7,7 @@ import { addApplicationEvent } from './applicationEvent';
 import { addJob } from './job';
 import { addSchool, updateSchool } from './school';
 import { addTeacher } from './teacher';
-import { addTest } from './test';
+import { addSingleTest, addTest } from './test';
 
 export const data: Config.Data = {
   schools: [],
@@ -15,6 +15,15 @@ export const data: Config.Data = {
   jobs: [],
   applications: [],
   applicationEvents: [],
+};
+
+export const postAddedTestData = async (ids: number[], nameIds: string): Promise<number> => {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await setApi();
+  await signOut();
+  await signIn('admin@th.test');
+  const test = await addSingleTest(api, ids, nameIds);
+  return test.id;
 };
 
 export const getAddTestData = async (): Promise<Config.Data> => {

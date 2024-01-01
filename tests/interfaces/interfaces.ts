@@ -75,6 +75,9 @@ declare namespace Config {
   export interface ExplorerRecord {
     id?: number;
   }
+  export interface ExplorerActivity {
+    id?: number;
+  }
 
   export interface Data {
     test?: Test;

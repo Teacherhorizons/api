@@ -24,3 +24,22 @@ export const addTest = async (api: AxiosInstance, data: Config.Data): Promise<Co
     console.log('addTest', error);
   }
 };
+
+export const addSingleTest = async (api: AxiosInstance, ids: number[], nameIds: string): Promise<Config.Test> => {
+  const payload = {
+    data: {
+      type: 'test-apiTests',
+      attributes: {
+        dataIds: `{"${nameIds}": [${ids}]}`,
+      },
+    },
+  };
+  try {
+    const response = await api.post('/test-apiTests', payload);
+    return {
+      id: response.data.data.id,
+    };
+  } catch (error) {
+    console.log('addTest', error);
+  }
+};
