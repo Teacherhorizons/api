@@ -3,31 +3,28 @@ import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
 
-let explorerActivityIds: number[] = [];
+let explorerRecordIds: number[] = [];
 
 var tests = shared.addTestGroups(
   [],
   [
     {
-      getUrl: (data) => `explorer-activities`,
+      getUrl: (data) => `explorer-records`,
       getPayload: (data) => ({
         data: {
-          type: 'explorer-activity',
+          type: 'explorer-record',
           attributes: {
-            date: '2011-02-07T15:53:34Z',
-            text: 'Accepted another offer',
-            record: {
-              id: '24',
-            },
-            type: {
-              id: '1',
+            text: 'foo bar baz',
+            teacher: {
+              id: '2513',
+              memberNumber: '123724',
             },
           },
         },
       }),
       tests: [
         {
-          name: 'explorer-activities',
+          name: 'explorer-record',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 201,
         },
@@ -39,7 +36,7 @@ var tests = shared.addTestGroups(
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 
-describe('explorerActivityRW', () => {
+describe('explorerRecordRW', () => {
   beforeAll(async () => {
     await shared.setupBeforeAll();
   });
@@ -55,7 +52,7 @@ describe('explorerActivityRW', () => {
         expect(response.status).toEqual(t.expectedStatus);
         expect(response).toSatisfyApiSpec();
         if (response.data.data.id != null) {
-          explorerActivityIds.push(response.data.data.id);
+          explorerRecordIds.push(response.data.data.id);
         }
       } else {
         try {
@@ -71,11 +68,11 @@ describe('explorerActivityRW', () => {
 
   jest.setTimeout(60 * 1000);
   afterAll(async () => {
-    console.log(explorerActivityIds);
+    console.log(explorerRecordIds);
     let isSuccess = false;
-    if (explorerActivityIds.length > 0) {
+    if (explorerRecordIds.length > 0) {
       try {
-        const testId = await postAddedTestData(explorerActivityIds, 'explorerActivityIds');
+        const testId = await postAddedTestData(explorerRecordIds, 'explorerRecordIds');
         console.log('Created testId: ', testId);
         const wasTestDataDeleted = await deleteTestData(testId);
         console.log('wasTestDataDeleted: ', wasTestDataDeleted);
