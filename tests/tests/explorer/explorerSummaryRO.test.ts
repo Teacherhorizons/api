@@ -1,5 +1,3 @@
-import { ResourceObject } from 'ts-json-api';
-
 import {
   addTestGroups,
   api,
@@ -9,7 +7,6 @@ import {
   data,
   compareFnGenerator,
   signedInAs,
-  getIsResponseValid,
 } from '../../shared';
 
 var testsForGet = addTestGroups(

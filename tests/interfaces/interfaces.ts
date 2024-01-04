@@ -74,8 +74,15 @@ declare namespace Config {
 
   export interface ExplorerRecord {
     id?: number;
+    teacherMemberNumber?: number;
+    latestActivityTypeId?: number;
+    latestActivityCreationUserId?: number;
   }
   export interface ExplorerActivity {
+    id?: number;
+  }
+
+  export interface SystemTemplate {
     id?: number;
   }
 
@@ -93,5 +100,6 @@ declare namespace Config {
     users?: User[];
     explorerRecords?: ExplorerRecord[];
     schoolUsers?: User[];
+    systemTemplates?: SystemTemplate[];
   }
 }

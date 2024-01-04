@@ -234,8 +234,13 @@ const jpLocalData: Config.Data = {
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
   dataIssues: [{ id: 1 }],
-  explorerRecords: [{ id: 1 }, { id: 3 }],
+  explorerRecords: [
+    { id: 1 },
+    { id: 3 },
+    { id: 23, teacherMemberNumber: 1321566, latestActivityTypeId: 7, latestActivityCreationUserId: 1031 },
+  ],
   schoolUsers: [{ id: 6 }],
+  systemTemplates: [{ id: 1 }],
 };
 
 const betaData: Config.Data = {
@@ -273,6 +278,13 @@ const betaData: Config.Data = {
     { id: 1064, userTypeSlug: 'teacher-new' },
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
+  explorerRecords: [
+    { id: 1 },
+    { id: 3 },
+    { id: 23, teacherMemberNumber: 1316206, latestActivityTypeId: 2, latestActivityCreationUserId: 14926 },
+  ],
+  schoolUsers: [{ id: 1031 }],
+  systemTemplates: [{ id: 1 }],
 };
 
 const getDataItems = (relationships: JsonApi.Relationships): JsonApi.ResourceObject[] => {

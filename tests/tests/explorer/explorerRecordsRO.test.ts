@@ -176,10 +176,11 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=admin&filter[teacher.memberNumber][contains]=1321566`,
+      getUrl: (data) =>
+        `explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[2].teacherMemberNumber}`,
       tests: [
         {
-          name: 'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=1321566',
+          name: 'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[2].teacherMemberNumber}',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
@@ -196,20 +197,22 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=admin&filter[latestActivity.type.id][contains]=7`,
+      getUrl: (data) =>
+        `explorer-records?schema=admin&filter[latestActivity.type.id][contains]=${data.explorerRecords[2].latestActivityTypeId}`,
       tests: [
         {
-          name: 'explorer-records?schema=admin&filter[latestActivity.type.id][contains]=7',
+          name: 'explorer-records?schema=admin&filter[latestActivity.type.id][contains]=${data.explorerRecords[2].latestActivityTypeId}',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=admin&filter[latestActivity.creationUser.id][contains]=1031`,
+      getUrl: (data) =>
+        `explorer-records?schema=admin&filter[latestActivity.creationUser.id][contains]=${data.explorerRecords[2].latestActivityCreationUserId}`,
       tests: [
         {
-          name: 'explorer-records?schema=admin&filter[latestActivity.creationUser.id][contains]=1031',
+          name: 'explorer-records?schema=admin&filter[latestActivity.creationUser.id][contains]=${data.explorerRecords[2].latestActivityCreationUserId}',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
