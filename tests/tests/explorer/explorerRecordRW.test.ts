@@ -5,33 +5,78 @@ const includeTestNames: string[] = null;
 
 let explorerRecordIds: number[] = [];
 
-var tests = shared.addTestGroups(
+let tests = shared.addTestGroups(
   [],
   [
     {
       getUrl: (data) => `explorer-records`,
-      getPayload: (data) => ({
-        data: {
-          type: 'explorer-record',
-          attributes: {
-            text: 'foo bar baz',
-            teacher: {
-              id: '2513',
-              memberNumber: '123724',
-            },
-          },
-        },
-      }),
+      getPayload: (data) => getExplorerRecordPayload(),
       tests: [
         {
-          name: 'explorer-record',
+          name: 'explorer-records',
           userEmail: 'school-1-school@th.test',
+          expectedStatus: 201,
+        },
+        {
+          name: 'explorer-records',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records',
+          userEmail: 'admin@th.test',
+          expectedStatus: 404, // schoolUserId not found
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `explorer-records?asUserId=${data.users[1].id}`,
+      getPayload: (data) => getExplorerRecordPayload(),
+      tests: [
+        {
+          name: 'explorer-records?asUserId=${data.users[1].id}',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records?asUserId=${data.users[1].id}',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records?asUserId=${data.users[1].id}',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records?asUserId=${data.users[1].id}',
+          userEmail: 'admin@th.test',
           expectedStatus: 201,
         },
       ],
     },
   ]
 );
+
+const getExplorerRecordPayload = () => {
+  return {
+    data: {
+      type: 'explorer-record',
+      attributes: {
+        text: 'foo bar baz',
+        teacher: {
+          id: '2513',
+          memberNumber: '123724',
+        },
+      },
+    },
+  };
+};
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
