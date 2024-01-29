@@ -43,6 +43,31 @@ var testsForGet = addTestGroups(
       ],
     },
     {
+      getUrl: (data) => `explorer-summary?schema=default&asUserId=${data.users[1].id}`,
+      tests: [
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'admin@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+      ],
+    },
+    {
       getUrl: (data) =>
         `explorer-summary?schema=default&filter[explorer-record.creationDate][gte]=2022-09-01T00:00:00Z`,
       tests: [
