@@ -235,7 +235,7 @@ const jpLocalData: Config.Data = {
   ],
   dataIssues: [{ id: 1 }],
   explorerRecords: [
-    { id: 1 },
+    { id: 1, teacherMemberNumber: 123724 },
     { id: 3 },
     { id: 23, teacherMemberNumber: 1321566, latestActivityTypeId: 7, latestActivityCreationUserId: 1031 },
   ],
@@ -279,7 +279,7 @@ const betaData: Config.Data = {
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
   explorerRecords: [
-    { id: 1 },
+    { id: 1, teacherMemberNumber: 123724 },
     { id: 3 },
     { id: 23, teacherMemberNumber: 1316206, latestActivityTypeId: 2, latestActivityCreationUserId: 14926 },
   ],
