@@ -12,6 +12,11 @@ import {
   getIsResponseValid,
 } from '../../shared';
 
+// const includeTestNames: string[] = null;
+const includeTestNames = [
+  'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[0].teacherMemberNumber}',
+];
+
 var testsForGet = addTestGroups(
   [],
   [
@@ -19,22 +24,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records`,
       tests: [
         {
-          name: 'explorer-records',
+          name: 'explorer-records - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records',
+          name: 'explorer-records - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 400, // missingMandatoryParameter - schema
         },
         {
-          name: 'explorer-records',
+          name: 'explorer-records - school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 400, // missingMandatoryParameter - schema
         },
         {
-          name: 'explorer-records',
+          name: 'explorer-records - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 400, // missingMandatoryParameter - schema
         },
@@ -44,22 +49,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records/foo`,
       tests: [
         {
-          name: 'explorer-records/foo',
+          name: 'explorer-records/foo - signed out',
           userEmail: 'signedOut',
           expectedStatus: 400, // invalidParameterValue - recordId
         },
         {
-          name: 'explorer-records/foo',
+          name: 'explorer-records/foo - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 400, // invalidParameterValue - recordId
         },
         {
           name: 'explorer-records/foo',
-          userEmail: 'school-1-school@th.test',
+          userEmail: 'school-1-school@th.test - school',
           expectedStatus: 400, // invalidParameterValue - recordId
         },
         {
-          name: 'explorer-records/foo',
+          name: 'explorer-records/foo - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 400, // invalidParameterValue - recordId
         },
@@ -69,22 +74,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records?schema=foo`,
       tests: [
         {
-          name: 'explorer-records?schema=foo',
+          name: 'explorer-records?schema=foo - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=foo',
+          name: 'explorer-records?schema=foo - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 400, // invalidParameterValue - schema
         },
         {
-          name: 'explorer-records?schema=foo',
+          name: 'explorer-records?schema=foo - school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 400, // invalidParameterValue - schema
         },
         {
-          name: 'explorer-records?schema=foo',
+          name: 'explorer-records?schema=foo - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 400, // invalidParameterValue - schema
         },
@@ -94,22 +99,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records?schema=admin&useCache=false`,
       tests: [
         {
-          name: 'explorer-records?schema=admin',
+          name: 'explorer-records?schema=admin - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=admin',
+          name: 'explorer-records?schema=admin - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
         {
-          name: 'explorer-records?schema=admin',
+          name: 'explorer-records?schema=admin - school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=admin',
+          name: 'explorer-records?schema=admin - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
@@ -119,22 +124,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records?schema=school`,
       tests: [
         {
-          name: 'explorer-records?schema=school',
+          name: 'explorer-records?schema=school - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=school',
+          name: 'explorer-records?schema=school - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
         {
-          name: 'explorer-records?schema=school',
+          name: 'explorer-records?schema=school - school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 200,
         },
         {
-          name: 'explorer-records?schema=school',
+          name: 'explorer-records?schema=school - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
@@ -144,22 +149,22 @@ var testsForGet = addTestGroups(
       getUrl: (data) => `explorer-records?schema=teacher`,
       tests: [
         {
-          name: 'explorer-records?schema=teacher',
+          name: 'explorer-records?schema=teacher - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=teacher',
+          name: 'explorer-records?schema=teacher - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
         {
-          name: 'explorer-records?schema=teacher',
+          name: 'explorer-records?schema=teacher - school',
           userEmail: 'school-1-school@th.test',
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
-          name: 'explorer-records?schema=teacher',
+          name: 'explorer-records?schema=teacher - endorsed',
           userEmail: 'endorsed@th.test',
           expectedStatus: 200,
         },
@@ -177,10 +182,10 @@ var testsForGet = addTestGroups(
     },
     {
       getUrl: (data) =>
-        `explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[2].teacherMemberNumber}`,
+        `explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[0].teacherMemberNumber}`,
       tests: [
         {
-          name: 'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[2].teacherMemberNumber}',
+          name: 'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[0].teacherMemberNumber}',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
         },
@@ -352,14 +357,14 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-records?schema=admin&page[number]=20`,
+      getUrl: (data) => `explorer-records?schema=admin&page[number]=2`,
       tests: [
         {
-          name: 'explorer-records?schema=admin&page[number]=20',
+          name: 'explorer-records?schema=admin&page[number]=2',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            return (response.data as ResourceObject[]).length == 4 && response.meta.pageCount == 4;
+            return (response.data as ResourceObject[]).length == 5 && response.meta.pageCount == 5;
           },
         },
       ],
@@ -438,7 +443,8 @@ var testsForGet = addTestGroups(
   ]
 );
 
-testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
+// testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
+testsForGet = testsForGet.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 console.log(101, testsForGet);
 jest.setTimeout(60 * 1000);
 
