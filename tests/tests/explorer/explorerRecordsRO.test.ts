@@ -452,6 +452,22 @@ var testsForGet = addTestGroups(
         },
       ],
     },
+    {
+      getUrl: (data) => `explorer-records?schema=admin&filter[activity.date][lte]=2000-08-11T00:00:00Z`,
+      tests: [
+        {
+          name: 'explorer-records?schema=admin&filter[activity.date][lte]=2000-08-11T00:00:00Z - no records',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const schema = (response as any).schema;
+            const meta = response.meta;
+            const resData = response.data as ResourceObject[];
+            return !!schema && !!meta && meta.pageCount === 0 && meta.count === 0 && !!resData && resData.length === 0;
+          },
+        },
+      ],
+    },
   ]
 );
 
