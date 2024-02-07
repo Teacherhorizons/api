@@ -13,7 +13,7 @@ import {
 } from '../../shared';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['explorer-records?schema=admin&sort=teacherFullName'];
+// const includeTestNames = ['explorer-records?schema=admin&sort=-teacherFullName'];
 
 var testsForGet = addTestGroups(
   [],
