@@ -1,4 +1,4 @@
-import { ResourceObject } from 'ts-json-api';
+import { ResourceObject, ResourceObjectOrObjects, Response } from 'ts-json-api';
 
 import {
   addTestGroups,
@@ -12,10 +12,8 @@ import {
   getIsResponseValid,
 } from '../../shared';
 
-// const includeTestNames: string[] = null;
-const includeTestNames = [
-  'explorer-records?schema=admin&filter[teacher.memberNumber][contains]=${data.explorerRecords[0].teacherMemberNumber}',
-];
+const includeTestNames: string[] = null;
+// const includeTestNames = ['explorer-records?schema=admin&sort=teacherFullName'];
 
 var testsForGet = addTestGroups(
   [],
@@ -364,7 +362,7 @@ var testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            return (response.data as ResourceObject[]).length == 5 && response.meta.pageCount == 5;
+            return (response.data as ResourceObject[]).length == 10 && response.meta.pageCount == 10;
           },
         },
       ],
@@ -376,6 +374,9 @@ var testsForGet = addTestGroups(
           name: 'explorer-records?schema=admin&sort=creationDate',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            return isSortedByCreationDate(response);
+          },
         },
       ],
     },
@@ -386,6 +387,10 @@ var testsForGet = addTestGroups(
           name: 'explorer-records?schema=admin&sort=-creationDate',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const isLatestToEarliest = true;
+            return isSortedByCreationDate(response, isLatestToEarliest);
+          },
         },
       ],
     },
@@ -396,6 +401,9 @@ var testsForGet = addTestGroups(
           name: 'explorer-records?schema=admin&sort=teacherFullName',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            return isSortedByTeacherFullName(response);
+          },
         },
       ],
     },
@@ -406,6 +414,10 @@ var testsForGet = addTestGroups(
           name: 'explorer-records?schema=admin&sort=-teacherFullName',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const isDescending = true;
+            return isSortedByTeacherFullName(response, isDescending);
+          },
         },
       ],
     },
@@ -442,6 +454,53 @@ var testsForGet = addTestGroups(
     },
   ]
 );
+
+const isSortedByCreationDate = (response: Response<ResourceObjectOrObjects>, isLatestToEarliest = false) => {
+  const data = response.data as ResourceObject[];
+
+  for (let i = 0; i < data.length - 1; i++) {
+    if (!data[i].attributes?.creationDate) {
+      return false;
+    }
+
+    const currentDate = new Date(data[i].attributes.creationDate as Date);
+    const nextDate = new Date(data[i + 1].attributes.creationDate as Date);
+
+    if (isLatestToEarliest) {
+      if (currentDate < nextDate) {
+        return false;
+      }
+    } else {
+      if (currentDate > nextDate) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+const isSortedByTeacherFullName = (response: Response<ResourceObjectOrObjects>, isDescending = false) => {
+  const erData = response.data as ResourceObject[];
+
+  const orderedTeacherIds = erData.map((er) => er.relationships.teacher.data).map((f) => (f as any).id);
+
+  const orderedIncludedTeachers = response.included
+    .filter((x) => x.type === 'teacher')
+    .sort((a, b) => {
+      return orderedTeacherIds.indexOf(a.id) - orderedTeacherIds.indexOf(b.id);
+    });
+
+  return orderedIncludedTeachers.every((obj, index) => {
+    if (index === 0) return true;
+    const currentFullName = obj.attributes.fullName;
+    const prevFullName = orderedIncludedTeachers[index - 1].attributes.fullName;
+    if (isDescending) {
+      return currentFullName < prevFullName;
+    } else {
+      return currentFullName > prevFullName;
+    }
+  });
+};
 
 // testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
 testsForGet = testsForGet.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
