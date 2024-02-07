@@ -1,5 +1,3 @@
-import { ResourceObject } from 'ts-json-api';
-
 import {
   addTestGroups,
   api,
@@ -9,7 +7,6 @@ import {
   data,
   compareFnGenerator,
   signedInAs,
-  getIsResponseValid,
 } from '../../shared';
 
 var testsForGet = addTestGroups(
@@ -42,6 +39,31 @@ var testsForGet = addTestGroups(
           name: 'explorer-summary?schema=default',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `explorer-summary?schema=default&asUserId=${data.users[1].id}`,
+      tests: [
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'admin@th.test',
+          expectedStatus: 200,
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-summary?schema=default&asUserId=${data.users[1].id}',
+          userEmail: 'admin@th.test',
+          expectedStatus: 401, // accessNotPermitted
         },
       ],
     },
