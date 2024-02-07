@@ -103,6 +103,8 @@
 # teacher
 /teachers/{teacherId}:
   $ref: './../paths/teacher/teacher.yaml'
+/teacher-teacherReferenceResponses/{teacherReferenceResponseId}:
+  $ref: './../paths/teacher/teacherReferenceResponse.yaml'
 
 # test
 /test-apiTests:

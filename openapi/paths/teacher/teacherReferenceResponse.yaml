@@ -1,0 +1,52 @@
+patch:
+  operationId: patch-teacherReferenceResponses
+  summary: Update teacher reference response
+  tags:
+    - teacher
+    - testing-status-1
+  description: |
+    <span class="testing-status-1"></span><br/><br/>
+    [Simple model](/#tag/simple-model-teacher-teacherReferenceResponse) | 
+    [JSON:API model](/#tag/json-api-model-teacher-teacherReferenceResponse)
+  parameters:
+    - in: path
+      name: teacherReferenceResponseId
+      required: true
+      example: 1
+      schema:
+        type: integer
+    - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
+  requestBody:
+    content:
+      teacher/json:
+        schema:
+          type: object
+          properties:
+            type:
+              type: string
+              example: teacher-teacherReferenceResponses
+            id:
+              type: string
+              example: '1'
+            attributes:
+              type: object
+              additionalProperties: false
+              properties:
+                text:
+                  type: string
+                  example: With reservation
+  responses:
+    '204':
+      $ref: '../../components/models/json-api/standard/success.yaml#/JsonApiModel_success_204'
+    '400':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
+    '401':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_401'
+    '403':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_403'
+    '404':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_404'
+    '413':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_413'
+    '422':
+      $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_422'
