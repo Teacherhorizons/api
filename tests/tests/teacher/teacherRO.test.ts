@@ -12,7 +12,12 @@ import {
   getIsResponseValid,
 } from '../../shared';
 
-var testsForGet = addTestGroups(
+const includeTestNames: string[] = null;
+// const includeTestNames: string[] = [
+//   'teachers/${data.teachers[4].id}?schema=default&include=upcomingExplorerInterviews',
+// ];
+
+let testsForGet = addTestGroups(
   [],
   [
     {
@@ -88,15 +93,26 @@ var testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default&include=upcomingExplorerInterviews`,
+      getUrl: (data) => `teachers/${data.teachers[4].id}?schema=default&include=upcomingExplorerInterviews`,
       tests: [
         {
-          name: 'teachers/${data.teachers[2].id}?schema=default&include=upcomingExplorerInterviews',
+          name: 'teachers/${data.teachers[4].id}?schema=default&include=upcomingExplorerInterviews',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
             const responseData = response.data as ResourceObject;
-            return responseData.attributes.photo === undefined;
+            const upcomingExplorerInterviews = responseData.relationships?.upcomingExplorerInterviews
+              .data as ResourceObject[];
+            const explorerActivities = upcomingExplorerInterviews.filter((x) => x.type === 'explorer-activity');
+            const includedExplorerActivities = response.included.filter((x) => x.type === 'explorer-activity');
+            const areAllInFuture = includedExplorerActivities.every(
+              (ea) => new Date(ea.attributes.date as string).getTime() > new Date().getTime()
+            );
+            return (
+              responseData.attributes.photo === undefined &&
+              explorerActivities.length === includedExplorerActivities.length &&
+              areAllInFuture
+            );
           },
         },
       ],
@@ -116,6 +132,7 @@ var testsForGet = addTestGroups(
 );
 
 testsForGet = testsForGet.sort(compareFnGenerator(['userEmail']));
+testsForGet = testsForGet.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));
 console.log(101, testsForGet);
 jest.setTimeout(60 * 1000);
 
