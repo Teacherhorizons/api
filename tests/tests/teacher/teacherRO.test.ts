@@ -51,16 +51,45 @@ let testsForGet = addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `teachers/${data.teachers[2].id}?schema=default`,
+      getUrl: (data) => `teachers/${data.teachers[4].id}?schema=default`,
       tests: [
         {
-          name: 'teachers/${data.teachers[2].id}?schema=default',
+          name: 'teachers/${data.teachers[4].id}?schema=default - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
             const responseData = response.data as ResourceObject;
             return responseData.attributes.photo === undefined;
           },
+        },
+        {
+          name: 'teachers/${data.teachers[4].id}?schema=default - teacher',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            return responseData.attributes.photo === undefined;
+          },
+        },
+        {
+          name: 'teachers/${data.teachers[4].id}?schema=default - school',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'teachers/${data.teachers[4].id}?schema=default - signed out',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `teachers/${data.teachers[3].id}?schema=default`,
+      tests: [
+        {
+          name: 'teachers/${data.teachers[3].id}?schema=default - unauthorized teacher',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401,
         },
       ],
     },
