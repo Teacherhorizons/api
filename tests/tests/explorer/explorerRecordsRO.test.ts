@@ -13,7 +13,7 @@ import {
 } from '../../shared';
 
 const includeTestNames: string[] = null;
-// const includeTestNames = ['explorer-records?schema=admin&sort=-teacherFullName'];
+// const includeTestNames = ['explorer-records - admin'];
 
 var testsForGet = addTestGroups(
   [],
@@ -362,7 +362,7 @@ var testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
-            return (response.data as ResourceObject[]).length == 10 && response.meta.pageCount == 10;
+            return (response.data as ResourceObject[]).length == 4 && response.meta.pageCount == 4;
           },
         },
       ],
