@@ -154,6 +154,15 @@ let testsForGet = addTestGroups(
           name: 'teachers/${data.teachers[2].id}?schema=default&include=photo,explorerSummary,upcomingExplorerInterviews',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
+          getPassesCustomChecks(response, data) {
+            const responseData = response.data as ResourceObject;
+            const upcomingExplorerInterviews = responseData.relationships?.upcomingExplorerInterviews
+              .data as ResourceObject[];
+            const explorerSummary = response.included.filter((x) => x.type === 'explorer-summary')[0];
+            const numberOfIncludedUpcomingInterviews =
+              explorerSummary.attributes.numberOfExplorerOpenUpcomingInterviews;
+            return upcomingExplorerInterviews.length === numberOfIncludedUpcomingInterviews;
+          },
         },
       ],
     },

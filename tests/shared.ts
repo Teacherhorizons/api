@@ -239,7 +239,7 @@ const jpLocalData: Config.Data = {
     { id: 3 },
     { id: 23, teacherMemberNumber: 1321566, latestActivityTypeId: 7, latestActivityCreationUserId: 1031 },
   ],
-  schoolUsers: [{ id: 1031 }],
+  schoolUsers: [{ id: 1031 }, { id: 6 }],
   systemTemplates: [{ id: 1 }],
 };
 
