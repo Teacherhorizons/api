@@ -2,6 +2,7 @@ import { deleteTestData, postAddedTestData } from '../../data/main';
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
+// const includeTestNames: string[] = ['explorer-activities?asUserId=${data.users[4].id}'];
 
 let explorerActivityIds: number[] = [];
 
@@ -61,11 +62,11 @@ let tests = shared.addTestGroups(
       ],
     },
     {
-      getUrl: (data) => `explorer-activities?asUserId=${data.teachers[3].id}`,
+      getUrl: (data) => `explorer-activities?asUserId=${data.users[4].id}`,
       getPayload: (data) => getExplorerActivityPayload(),
       tests: [
         {
-          name: 'explorer-activities?asUserId=${data.teachers[3].id}',
+          name: 'explorer-activities?asUserId=${data.users[4].id}',
           userEmail: 'admin@th.test',
           expectedStatus: 201,
         },
