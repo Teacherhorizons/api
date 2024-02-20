@@ -12,8 +12,8 @@ import {
   getIsResponseValid,
 } from '../../shared';
 
-const includeTestNames: string[] = null;
-// const includeTestNames = ['explorer-records - admin'];
+// const includeTestNames: string[] = null;
+const includeTestNames = ['explorer-records?schema=school - admin'];
 
 var testsForGet = addTestGroups(
   [],
@@ -127,6 +127,7 @@ var testsForGet = addTestGroups(
           expectedStatus: 401, // accessNotPermitted - Must be signed in
         },
         {
+          // NOTE: fails on beta => data issue. bExplorer_activityTypes nameForSchool NULL for activityType 4.
           name: 'explorer-records?schema=school - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 200,
@@ -362,6 +363,7 @@ var testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
+            // NOTE: varies between local and beta. Also changes as more records get added.
             return (response.data as ResourceObject[]).length == 4 && response.meta.pageCount == 4;
           },
         },

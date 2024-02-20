@@ -13,9 +13,7 @@ import {
 } from '../../shared';
 
 const includeTestNames: string[] = null;
-// const includeTestNames: string[] = [
-//   'teachers/${data.teachers[4].id}?schema=default&include=upcomingExplorerInterviews',
-// ];
+// const includeTestNames: string[] = ['teachers/${data.teachers[2].id}?schema=default&include=photo'];
 
 let testsForGet = addTestGroups(
   [],
@@ -101,6 +99,7 @@ let testsForGet = addTestGroups(
           userEmail: 'admin@th.test',
           expectedStatus: 200,
           getPassesCustomChecks(response, data) {
+            console.log(68, response);
             const responseData = response.data as ResourceObject;
             return !!responseData.attributes.photo;
           },
