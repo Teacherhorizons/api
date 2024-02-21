@@ -3,22 +3,24 @@ JsonApiModel_time-date:
   additionalProperties: false
   properties:
     type:
-      $ref: "#/JsonApiModel_time-date_type"
+      $ref: '#/JsonApiModel_time-date_type'
     id:
-      $ref: "#/JsonApiModel_time-date_id"
+      $ref: '#/JsonApiModel_time-date_id'
     attributes:
       type: object
       additionalProperties: false
       properties:
         # simple attributes
-        date: 
-          $ref: "../../library/time/date.yaml#/time-date_date"
+        date:
+          $ref: '../../library/time/date.yaml#/time-date_date'
         name:
           $ref: '../../library/time/date.yaml#/time-date_name'
         isMostRecentComplete:
           $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
         isCurrent:
           $ref: '../../library/time/date.yaml#/time-date_isCurrent'
+        numberOfNewAdviserInterviews:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAdviserInterviews'
         # relationship attributes
         weekId:
           $ref: '../../library/time/date.yaml#/time-date_weekId'
@@ -27,19 +29,19 @@ JsonApiModel_time-date:
         schoolYearId:
           $ref: '../../library/time/date.yaml#/time-date_schoolYearId'
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-            weekId:
-              $ref: "../time/week.yaml#/JsonApiModel_time-week_relationship"
-            monthId:
-              $ref: "../time/month.yaml#/JsonApiModel_time-month_relationship"
-            schoolYearId:
-              $ref: "../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship"
+      type: object
+      additionalProperties: false
+      properties:
+        weekId:
+          $ref: '../time/week.yaml#/JsonApiModel_time-week_relationship'
+        monthId:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship'
+        schoolYearId:
+          $ref: '../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship'
   required:
     - type
     - id
-    - attributes        
+    - attributes
 
 JsonApiModel_time-date_type:
   type: string
@@ -49,7 +51,7 @@ JsonApiModel_time-date_type:
 
 JsonApiModel_time-date_id:
   type: string
-  example: "1"
+  example: '1'
   readOnly: true
   description: Unique identifier of the entity (string)
 
@@ -60,7 +62,7 @@ JsonApiModel_time-date_relationship_attribute:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/JsonApiModel_time-date_id"
+      $ref: '#/JsonApiModel_time-date_id'
   required:
     - id
 
@@ -76,12 +78,11 @@ JsonApiModel_time-date_relationship:
       additionalProperties: false
       properties:
         type:
-          $ref: "#/JsonApiModel_time-date_type"
+          $ref: '#/JsonApiModel_time-date_type'
         id:
-          $ref: "#/JsonApiModel_time-date_id"
+          $ref: '#/JsonApiModel_time-date_id'
       required:
         - type
         - id
   required:
     - data
-

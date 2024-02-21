@@ -13,6 +13,8 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/date.yaml#/time-date_isCurrent'
+    numberOfNewAdviserInterviews:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAdviserInterviews'
     # relationship attributes
     weekId:
       $ref: '../../library/time/date.yaml#/time-date_weekId'
@@ -26,9 +28,10 @@ SimpleModel_time-date:
     - name
     - isMostRecentComplete
     - isCurrent
+    - numberOfNewAdviserInterviews
     - weekId
     - monthId
-    - schoolYearId   
+    - schoolYearId
 
 # shared
 SimpleModel_time-date_id:
