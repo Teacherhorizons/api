@@ -2,39 +2,96 @@ import { deleteTestData, postAddedTestData } from '../../data/main';
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
+// const includeTestNames: string[] = ['explorer-activities'];
 
 let explorerActivityIds: number[] = [];
 
-var tests = shared.addTestGroups(
+let tests = shared.addTestGroups(
   [],
   [
     {
       getUrl: (data) => `explorer-activities`,
-      getPayload: (data) => ({
-        data: {
-          type: 'explorer-activity',
-          attributes: {
-            date: '2011-02-07T15:53:34Z',
-            text: 'Accepted another offer',
-            record: {
-              id: '24',
-            },
-            type: {
-              id: '1',
-            },
-          },
-        },
-      }),
+      getPayload: (data) => getExplorerActivityPayload(),
       tests: [
         {
-          name: 'explorer-activities',
+          name: 'explorer-records - signed out',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-records - teacher',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 201,
+        },
+        {
+          name: 'explorer-records - admin',
+          userEmail: 'admin@th.test',
+          expectedStatus: 201,
+        },
+        {
+          name: 'explorer-activities - school',
           userEmail: 'school-1-school@th.test',
+          expectedStatus: 201,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `explorer-activities?asUserId=${data.users[1].id}`,
+      getPayload: (data) => getExplorerActivityPayload(),
+      tests: [
+        {
+          name: 'explorer-activities?asUserId=${data.users[1].id} - school',
+          userEmail: 'school-1-school@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-activities?asUserId=${data.users[1].id} - signed out',
+          userEmail: 'signedOut',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-activities?asUserId=${data.users[1].id} - teacher',
+          userEmail: 'endorsed@th.test',
+          expectedStatus: 401, // accessNotPermitted
+        },
+        {
+          name: 'explorer-activities?asUserId=${data.users[1].id}- admin',
+          userEmail: 'admin@th.test',
+          expectedStatus: 201,
+        },
+      ],
+    },
+    {
+      getUrl: (data) => `explorer-activities?asUserId=${data.users[4].id}`,
+      getPayload: (data) => getExplorerActivityPayload(),
+      tests: [
+        {
+          name: 'explorer-activities?asUserId=${data.users[4].id} - admin',
+          userEmail: 'admin@th.test',
           expectedStatus: 201,
         },
       ],
     },
   ]
 );
+
+const getExplorerActivityPayload = () => {
+  return {
+    data: {
+      type: 'explorer-activity',
+      attributes: {
+        date: '2025-02-07T15:53:34Z',
+        text: 'Accepted another offer',
+        record: {
+          id: '24',
+        },
+        type: {
+          id: '1',
+        },
+      },
+    },
+  };
+};
 
 tests = tests.sort(shared.compareFnGenerator(['userEmail']));
 tests = tests.filter((t) => includeTestNames == null || includeTestNames.includes(t.name));

@@ -1,0 +1,28 @@
+SimpleModel_system-dataCheck:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-dataCheck_id"
+    # simple attributes
+    typeId:
+      $ref: "../../library/system/dataCheck.yaml#/system-dataCheck_typeId"
+    result:
+      $ref: "../../library/system/dataCheck.yaml#/system-dataCheck_result"	
+    date:	
+      $ref: "../../library/system/dataCheck.yaml#/system-dataCheck_date"
+    isPass:	
+      $ref: "../../library/system/dataCheck.yaml#/system-dataCheck_isPass"
+  required:
+    - id
+    - typeId
+    - result
+    - date	
+    - isPass	
+
+# shared
+SimpleModel_system-dataCheck_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object

@@ -206,7 +206,7 @@ const jpLocalData: Config.Data = {
     { id: 3391, slug: 'europe-germany-berlin-my-test-school-101' },
     { id: 3392, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
-  teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }, { id: 1031 }],
+  teachers: [{ memberNumber: 2223638 }, { memberNumber: 2223639 }, { id: 1031 }, { id: 21566 }, { id: 4 }],
   jobs: [{ id: 1662 }, { id: 1663 }],
   cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
   countries: [
@@ -235,11 +235,11 @@ const jpLocalData: Config.Data = {
   ],
   dataIssues: [{ id: 1 }],
   explorerRecords: [
-    { id: 1 },
+    { id: 1, teacherMemberNumber: 123724 },
     { id: 3 },
     { id: 23, teacherMemberNumber: 1321566, latestActivityTypeId: 7, latestActivityCreationUserId: 1031 },
   ],
-  schoolUsers: [{ id: 6 }],
+  schoolUsers: [{ id: 1031 }, { id: 6 }],
   systemTemplates: [{ id: 1 }],
 };
 
@@ -248,7 +248,7 @@ const betaData: Config.Data = {
     { id: 3621, slug: 'europe-germany-berlin-my-test-school-101' },
     { id: 3622, slug: 'europe-germany-berlin-my-test-school-102' },
   ],
-  teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }],
+  teachers: [{ memberNumber: 2223653 }, { memberNumber: 2223654 }, { id: 21566 }, { id: 21566 }, { id: 4 }],
   jobs: [{ id: 1832 }, { id: 1833 }],
   cities: [{ id: 1, slug: 'africa-angola-luanda' }, { id: 3, slug: 'africa-egypt-alexandria' }, { id: 3000 }],
   countries: [
@@ -279,11 +279,11 @@ const betaData: Config.Data = {
     { id: 1059, userTypeSlug: 'teacher-endorsed' },
   ],
   explorerRecords: [
-    { id: 1 },
+    { id: 1, teacherMemberNumber: 123724 },
     { id: 3 },
     { id: 23, teacherMemberNumber: 1316206, latestActivityTypeId: 2, latestActivityCreationUserId: 14926 },
   ],
-  schoolUsers: [{ id: 1031 }],
+  schoolUsers: [{ id: 1031 }, { id: 6 }],
   systemTemplates: [{ id: 1 }],
 };
 
