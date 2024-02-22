@@ -28,6 +28,12 @@ JsonApiModel_time-date:
           $ref: '../../library/time/date.yaml#/time-date_monthId'
         schoolYearId:
           $ref: '../../library/time/date.yaml#/time-date_schoolYearId'
+        numberOfNewApplications:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfNewApplications'
+        numberOfNewAtsLraSubmissions:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsLraSubmissions'
+        numberOfNewAtsNotProgressedByLras:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsNotProgressedByLras'
     relationships:
       type: object
       additionalProperties: false

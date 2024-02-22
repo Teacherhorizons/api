@@ -2225,7 +2225,7 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-user-notificationType)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notificationType" />
-  
+
   - name: json-api-model-user-notificationImportance
     x-displayName: JSON:API model - user-notificationImportance
     description: |
@@ -2713,9 +2713,9 @@ components:
           authorizationUrl: '/th/api/auth/sign-in'
           scopes:
             admin: Can use any schema. In some case can pass asUserId to make the API call as though they are another user.
-            school: Can use school and not-signed-in schema types only. Can see themselves only.
-            teacher: Can use teacher and not-signed-in schema types only. Can see themselves only.
-            not-signed-in: Can use not-signed-in schema types only
+            school: Can use school, default and not-signed-in schema types only. Can see themselves only.
+            teacher: Can use teacher, default and not-signed-in schema types only. Can see themselves only.
+            not-signed-in: Can use default and not-signed-in schema types only
     api_key:
       type: apiKey
       in: header

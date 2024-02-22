@@ -71,6 +71,8 @@ get:
             type: string
           filter[latestActivity.type.id][contains]:
             type: string
+          filter[latestActivity.creationUser.type.id][contains]:
+            type: string
           filter[latestActivity.creationUser.id][contains]:
             type: string
           filter[latestActivity.creationDate][gte]:
@@ -152,7 +154,7 @@ post:
     [Simple model](/#tag/simple-model-explorer-record) | 
     [JSON:API model](/#tag/json-api-model-explorer-record)
 
-    Adds an explorer record, adds an explorer activity, and adds a teacher notification
+    Adds an explorer record, adds an explorer activity, and adds a teacher notification.
   parameters:
     - $ref: '../../components/models/json-api/standard/parameters.yaml#/JsonApiModel_parameters_asUserId'
   requestBody:
@@ -166,8 +168,9 @@ post:
               properties:
                 type:
                   type: string
-                  example: explorer
+                  example: explorer-record
                 attributes:
+                  description: Include either teacher.id or teacher.memberNumber to uniquely identify teacher.
                   allOf:
                     - type: object
                       properties:
