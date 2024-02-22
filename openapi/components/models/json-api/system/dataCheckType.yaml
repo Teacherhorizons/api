@@ -1,0 +1,66 @@
+JsonApiModel_system-dataCheckType:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_system-dataCheckType_type'
+    id:
+      $ref: '#/JsonApiModel_system-dataCheckType_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        description:
+          $ref: '../../library/system/dataCheckType.yaml#/system-dataCheckType_description'
+        tags:
+          $ref: '../../library/system/dataCheckType.yaml#/system-dataCheckType_tags'
+        sqlStatement:
+          $ref: '../../library/system/dataCheckType.yaml#/system-dataCheckType_sqlStatement'
+        expectedResult:
+          $ref: '../../library/system/dataCheckType.yaml#/system-dataCheckType_expectedResult'
+        latestCheckDate:
+          $ref: '../../library/system/dataCheckType.yaml#/system-dataCheckType_latestCheckDate'
+      required:
+        - description
+        - tags
+        - sqlStatement
+        - expectedResult
+        - latestCheckDate
+  required:
+    - type
+    - id
+
+JsonApiModel_system-dataCheckType_type:
+  type: string
+  example: system-dataCheckType
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-dataCheckType_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)
+
+JsonApiModel_system-dataCheckType_relationship:
+  type: object
+  description: |
+    [Simple model](/#tag/simple-model-system-dataCheckType) | 
+    [JSON:API model](/#tag/json-api-model-system-dataCheckType)
+  additionalProperties: false
+  properties:
+    data:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: '#/JsonApiModel_system-dataCheckType_type'
+        id:
+          $ref: '#/JsonApiModel_system-dataCheckType_id'
+      required:
+        - type
+        - id
+  required:
+    - data
+

@@ -191,6 +191,18 @@ tags:
       [JSON:API model](/#tag/json-api-model-system-dataImportTask)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataImportTask" />
 
+  - name: simple-model-system-dataCheck
+    x-displayName: Simple model - system-dataCheck
+    description: |
+      [JSON:API model](/#tag/json-api-model-system-dataCheck)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataCheck" />
+
+  - name: simple-model-system-dataCheckType
+    x-displayName: Simple model - system-dataCheckType
+    description: |
+      [JSON:API model](/#tag/json-api-model-system-dataCheckType)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_system-dataCheckType" />
+
   - name: simple-model-system-environment
     x-displayName: Simple model - system-environment
     description: |
@@ -1322,6 +1334,18 @@ tags:
       [Simple model](/#tag/simple-model-system-dataImportTask)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-dataImportTask" />
 
+  - name: json-api-model-system-dataCheck
+    x-displayName: JSON:API model - system-dataCheck
+    description: |
+      [Simple model](/#tag/simple-model-system-dataCheck)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-dataCheck" />
+
+  - name: json-api-model-system-dataCheckType
+    x-displayName: JSON:API model - system-dataCheckType
+    description: |
+      [Simple model](/#tag/simple-model-system-dataCheckType)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_system-dataCheckType" />
+
   - name: json-api-model-system-environment
     x-displayName: JSON:API model - system-environment
     description: |
@@ -2225,7 +2249,7 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-user-notificationType)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_user-notificationType" />
-  
+
   - name: json-api-model-user-notificationImportance
     x-displayName: JSON:API model - user-notificationImportance
     description: |
@@ -2308,6 +2332,8 @@ x-tagGroups:
       - simple-model-system-pageType
       - simple-model-system-dataExportTask
       - simple-model-system-dataImportTask
+      - simple-model-system-dataCheck
+      - simple-model-system-dataCheckType
       - simple-model-system-environment
       - simple-model-system-template
       - simple-model-general-actionType
@@ -2490,6 +2516,8 @@ x-tagGroups:
       - json-api-model-system-pageType
       - json-api-model-system-dataExportTask
       - json-api-model-system-dataImportTask
+      - json-api-model-system-dataCheck
+      - json-api-model-system-dataCheckType
       - json-api-model-system-environment
       - json-api-model-system-template
       - json-api-model-general-actionType
@@ -2713,9 +2741,9 @@ components:
           authorizationUrl: '/th/api/auth/sign-in'
           scopes:
             admin: Can use any schema. In some case can pass asUserId to make the API call as though they are another user.
-            school: Can use school and not-signed-in schema types only. Can see themselves only.
-            teacher: Can use teacher and not-signed-in schema types only. Can see themselves only.
-            not-signed-in: Can use not-signed-in schema types only
+            school: Can use school, default and not-signed-in schema types only. Can see themselves only.
+            teacher: Can use teacher, default and not-signed-in schema types only. Can see themselves only.
+            not-signed-in: Can use default and not-signed-in schema types only
     api_key:
       type: apiKey
       in: header

@@ -1,0 +1,50 @@
+JsonApiModel_system-dataCheck:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: '#/JsonApiModel_system-dataCheck_type'
+    id:
+      $ref: '#/JsonApiModel_system-dataCheck_id'
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        result:
+          $ref: '../../library/system/dataCheck.yaml#/system-dataCheck_result'
+        date:
+          $ref: '../../library/system/dataCheck.yaml#/system-dataCheck_date'
+        isPass:
+          $ref: '../../library/system/dataCheck.yaml#/system-dataCheck_isPass'
+        # relationship attributes
+        # type:
+        #   $ref: '../system/dataCheckType.yaml#/JsonApiModel_system-dataCheckType_relationship_attribute'
+      required:
+        - result
+        - date
+        - isPass
+        # - type
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        type:
+          $ref: '../system/dataCheckType.yaml#/JsonApiModel_system-dataCheckType_relationship'
+
+  required:
+    - type
+    - id
+
+JsonApiModel_system-dataCheck_type:
+  type: string
+  example: system-dataCheck
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_system-dataCheck_id:
+  type: string
+  example: '1'
+  readOnly: true
+  description: Unique identifier of the entity (string)
+

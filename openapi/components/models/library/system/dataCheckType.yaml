@@ -1,0 +1,21 @@
+# simple attributes
+system-dataCheckType_description:
+  type: string
+  example: AcreditationTypes should have unique type
+
+system-dataCheckType_tags:
+  type: string
+  example: AcreditationTypes, unique, canBeIndex
+
+system-dataCheckType_sqlStatement:
+  type: string
+  example: SET @result = (SELECT COUNT(*) FROM (SELECT type FROM AcreditationTypes GROUP BY type HAVING COUNT(*) > 1) a);
+
+system-dataCheckType_expectedResult:
+  type: number
+  example: 0
+
+system-dataCheckType_latestCheckDate:
+  type: string
+  format: date-time
+  example: 2024-02-16 05:26:32

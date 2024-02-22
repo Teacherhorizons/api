@@ -42,6 +42,9 @@ Response_user_item:
           $ref: '../../models/library/user/user.yaml#/user_fullName'
         uniqueName:
           $ref: '../../models/library/user/user.yaml#/user_uniqueName'
+        # relationship attributes
+        type:
+          $ref: '../../../components/models/json-api/user/type.yaml#/JsonApiModel_user-type_relationship_attribute'
       required:
         - fullName
         - uniqueName
