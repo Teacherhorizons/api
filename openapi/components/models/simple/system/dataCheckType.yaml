@@ -1,0 +1,31 @@
+SimpleModel_system-dataCheckType:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_system-dataCheckType_id"
+    # simple attributes
+    description:
+      $ref: "../../library/system/dataCheckType.yaml#/system-dataCheckType_description"
+    tags:
+      $ref: "../../library/system/dataCheckType.yaml#/system-dataCheckType_tags"	
+    sqlStatement:	
+      $ref: "../../library/system/dataCheckType.yaml#/system-dataCheckType_sqlStatement"
+    expectedResult:	
+      $ref: "../../library/system/dataCheckType.yaml#/system-dataCheckType_expectedResult"
+    latestCheckDate:	
+      $ref: "../../library/system/dataCheckType.yaml#/system-dataCheckType_latestCheckDate"
+  required:
+    - id
+    - description
+    - tags
+    - sqlStatement	
+    - expectedResult	
+    - latestCheckDate
+
+# shared
+SimpleModel_system-dataCheckType_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: Unique identifier of the object
