@@ -11,11 +11,38 @@ SimpleModel_time-week:
       $ref: '../../library/time/week.yaml#/time-week_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/week.yaml#/time-week_isCurrent'
+    numberOfNewAdviserInterviews:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAdviserInterviews'
+    numberOfNewApplications:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewApplications'
+    numberOfNewAtsLraSubmissions:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsLraSubmissions'
+    numberOfNewAtsNotProgressedByLras:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsNotProgressedByLras'
+    numberOfNewAtsRecommendations:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsRecommendations'
+    numberOfNewAtsSchoolInterviews:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsSchoolInterviews'
+    numberOfNewAtsJobOffers:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsJobOffers'
+    numberOfNewAtsPlacements:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsPlacements'
+    numberOfNewAtsDropouts:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfNewAtsDropouts'
   required:
     - id
     - name
     - isMostRecentComplete
     - isCurrent
+    - numberOfNewAdviserInterviews
+    - numberOfNewApplications
+    - numberOfNewAtsLraSubmissions
+    - numberOfNewAtsNotProgressedByLras
+    - numberOfNewAtsRecommendations
+    - numberOfNewAtsSchoolInterviews
+    - numberOfNewAtsJobOffers
+    - numberOfNewAtsPlacements
+    - numberOfNewAtsDropouts
 
 # shared
 SimpleModel_time-week_id:

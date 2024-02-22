@@ -21,6 +21,16 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsLraSubmissions'
     numberOfNewAtsNotProgressedByLras:
       $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsNotProgressedByLras'
+    numberOfNewAtsRecommendations:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsRecommendations'
+    numberOfNewAtsSchoolInterviews:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsSchoolInterviews'
+    numberOfNewAtsJobOffers:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsJobOffers'
+    numberOfNewAtsPlacements:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsPlacements'
+    numberOfNewAtsDropouts:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsDropouts'
     # relationship attributes
     weekId:
       $ref: '../../library/time/date.yaml#/time-date_weekId'
@@ -38,6 +48,11 @@ SimpleModel_time-date:
     - numberOfNewApplications
     - numberOfNewAtsLraSubmissions
     - numberOfNewAtsNotProgressedByLras
+    - numberOfNewAtsRecommendations
+    - numberOfNewAtsSchoolInterviews
+    - numberOfNewAtsJobOffers
+    - numberOfNewAtsPlacements
+    - numberOfNewAtsDropouts
     - weekId
     - monthId
     - schoolYearId

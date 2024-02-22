@@ -17,6 +17,24 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isMostRecentComplete'
         isCurrent:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
+        numberOfNewAdviserInterviews:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAdviserInterviews'
+        numberOfNewApplications:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
+        numberOfNewAtsLraSubmissions:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsLraSubmissions'
+        numberOfNewAtsNotProgressedByLras:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsNotProgressedByLras'
+        numberOfNewAtsRecommendations:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsRecommendations'
+        numberOfNewAtsSchoolInterviews:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
+        numberOfNewAtsJobOffers:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
+        numberOfNewAtsPlacements:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsPlacements'
+        numberOfNewAtsDropouts:
+              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts'  
   required:
     - type
     - id

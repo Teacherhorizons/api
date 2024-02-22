@@ -13,6 +13,24 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/month.yaml#/time-month_isCurrent'
+    numberOfNewAdviserInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAdviserInterviews'
+    numberOfNewApplications:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewApplications'
+    numberOfNewAtsLraSubmissions:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsLraSubmissions'
+    numberOfNewAtsNotProgressedByLras:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsNotProgressedByLras'
+    numberOfNewAtsRecommendations:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsRecommendations'
+    numberOfNewAtsSchoolInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsSchoolInterviews'
+    numberOfNewAtsJobOffers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsJobOffers'
+    numberOfNewAtsPlacements:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsPlacements'
+    numberOfNewAtsDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'  
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -29,6 +47,15 @@ SimpleModel_time-month:
     - startDateId
     - endDateId
     - schoolYearId
+    - numberOfNewAdviserInterviews
+    - numberOfNewApplications
+    - numberOfNewAtsLraSubmissions
+    - numberOfNewAtsNotProgressedByLras
+    - numberOfNewAtsRecommendations
+    - numberOfNewAtsSchoolInterviews
+    - numberOfNewAtsJobOffers
+    - numberOfNewAtsPlacements
+    - numberOfNewAtsDropouts
 
 # shared
 SimpleModel_time-month_id:
