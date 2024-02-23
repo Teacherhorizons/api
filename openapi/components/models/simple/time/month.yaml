@@ -31,6 +31,54 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsPlacements'
     numberOfNewAtsDropouts:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'  
+    numberOfNewFacebookFollowers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewFacebookFollowers'  
+    numberOfFacebookFollowers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowers'
+    numberOfNewAmbassadors:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAmbassadors'
+    numberOfAmbassadors:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadors'
+    numberOfNewAmbassadorsWithCommunityResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAmbassadorsWithCommunityResponses'
+    numberOfAmbassadorsWithCommunityResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithCommunityResponses'
+    numberOfNewAmbassadorsWithTestimonials:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAmbassadorsWithTestimonials'
+    numberOfAmbassadorsWithTestimonials:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithTestimonials'
+    numberOfActiveExplorerUsersAllYears:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveExplorerUsersAllYears'
+    numberOfActiveExplorerUsersInYear:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveExplorerUsersInYear'
+    numberOfCandidatesViewedViaExplorer:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfCandidatesViewedViaExplorer'
+    numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview'
+    numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview'
+    numberOfNewPlacementsExplorerBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewPlacementsExplorerBeforeDropouts'
+    numberOfNewPlacementsExplorerAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewPlacementsExplorerAfterDropouts'
+    percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout'
+    percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout'
+    averagePlacementFeeExplorerBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeExplorerBeforeDropouts'
+    incomeFromPlacementsExplorerBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsExplorerBeforeDropouts'
+    incomeFromPlacementsExplorerAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsExplorerAfterDropouts'
+    netAccrualFromPlacementsExplorerBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_netAccrualFromPlacementsExplorerBeforeDropouts'
+    netAccrualFromPlacementsExplorerAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_netAccrualFromPlacementsExplorerAfterDropouts'
+    numberOfDropoutsExplorerDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfDropoutsExplorerDropouts'
+    percentageOfDropoutsExplorerDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfDropoutsExplorerDropouts'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -56,6 +104,30 @@ SimpleModel_time-month:
     - numberOfNewAtsJobOffers
     - numberOfNewAtsPlacements
     - numberOfNewAtsDropouts
+    - numberOfNewFacebookFollowers
+    - numberOfFacebookFollowers
+    - numberOfNewAmbassadors
+    - numberOfAmbassadors
+    - numberOfNewAmbassadorsWithCommunityResponses
+    - numberOfAmbassadorsWithCommunityResponses
+    - numberOfNewAmbassadorsWithTestimonials
+    - numberOfAmbassadorsWithTestimonials
+    - numberOfActiveExplorerUsersAllYears
+    - numberOfActiveExplorerUsersInYear
+    - numberOfCandidatesViewedViaExplorer
+    - numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview
+    - numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview
+    - numberOfNewPlacementsExplorerBeforeDropouts
+    - numberOfNewPlacementsExplorerAfterDropouts
+    - percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout
+    - percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout
+    - averagePlacementFeeExplorerBeforeDropouts
+    - incomeFromPlacementsExplorerBeforeDropouts
+    - incomeFromPlacementsExplorerAfterDropouts
+    - netAccrualFromPlacementsExplorerBeforeDropouts
+    - netAccrualFromPlacementsExplorerAfterDropouts
+    - numberOfDropoutsExplorerDropouts
+    - percentageOfDropoutsExplorerDropouts
 
 # shared
 SimpleModel_time-month_id:

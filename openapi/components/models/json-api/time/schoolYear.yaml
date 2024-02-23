@@ -20,21 +20,71 @@ JsonApiModel_time-schoolYear:
         numberOfNewAdviserInterviews:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAdviserInterviews'
         numberOfNewApplications:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
         numberOfNewAtsLraSubmissions:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsLraSubmissions'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsLraSubmissions'
         numberOfNewAtsNotProgressedByLras:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsNotProgressedByLras'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsNotProgressedByLras'
         numberOfNewAtsRecommendations:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsRecommendations'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsRecommendations'
         numberOfNewAtsSchoolInterviews:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
         numberOfNewAtsJobOffers:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
         numberOfNewAtsPlacements:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsPlacements'
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsPlacements'
         numberOfNewAtsDropouts:
-              $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts'  
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts'  
+        numberOfNewFacebookFollowers:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewFacebookFollowers'
+        numberOfFacebookFollowers:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFacebookFollowers'
+        numberOfNewAmbassadors:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAmbassadors'
+        numberOfAmbassadors:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadors'
+        numberOfNewAmbassadorsWithCommunityResponses:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAmbassadorsWithCommunityResponses'
+        numberOfAmbassadorsWithCommunityResponses:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithCommunityResponses'
+        numberOfNewAmbassadorsWithTestimonials:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAmbassadorsWithTestimonials'
+        numberOfAmbassadorsWithTestimonials:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithTestimonials'
+        numberOfActiveExplorerUsersAllYears:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveExplorerUsersAllYears'
+        numberOfActiveExplorerUsersInYear:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveExplorerUsersInYear'
+        numberOfCandidatesViewedViaExplorer:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCandidatesViewedViaExplorer'
+        numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview'
+        numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview'
+        numberOfNewPlacementsExplorerBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerBeforeDropouts'
+        numberOfNewPlacementsExplorerAfterDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerAfterDropouts'
+        percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout'
+        percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout'
+        averagePlacementFeeExplorerBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeExplorerBeforeDropouts'
+        incomeFromPlacementsExplorerBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsExplorerBeforeDropouts'
+        incomeFromPlacementsExplorerAfterDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsExplorerAfterDropouts'
+        netAccrualFromPlacementsExplorerBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_netAccrualFromPlacementsExplorerBeforeDropouts'
+        netAccrualFromPlacementsExplorerAfterDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_netAccrualFromPlacementsExplorerAfterDropouts'
+        numberOfDropoutsExplorerDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfDropoutsExplorerDropouts'
+        percentageOfDropoutsExplorerDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfDropoutsExplorerDropouts'
+        facebookPostEngagement:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_facebookPostEngagement'
   required:
     - type
     - id
