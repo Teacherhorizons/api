@@ -2,7 +2,7 @@ import { deleteTestData, postAddedTestData } from '../../data/main';
 import * as shared from '../../shared';
 
 const includeTestNames: string[] = null;
-// const includeTestNames: string[] = ['explorer-activities'];
+// const includeTestNames: string[] = ['explorer-activities?asUserId=${data.users[4].id} - admin'];
 
 let explorerActivityIds: number[] = [];
 
@@ -14,17 +14,17 @@ let tests = shared.addTestGroups(
       getPayload: (data) => getExplorerActivityPayload(),
       tests: [
         {
-          name: 'explorer-records - signed out',
+          name: 'explorer-activities - signed out',
           userEmail: 'signedOut',
           expectedStatus: 401, // accessNotPermitted
         },
         {
-          name: 'explorer-records - teacher',
+          name: 'explorer-activities - teacher',
           userEmail: 'endorsed@th.test',
           expectedStatus: 201,
         },
         {
-          name: 'explorer-records - admin',
+          name: 'explorer-activities - admin',
           userEmail: 'admin@th.test',
           expectedStatus: 201,
         },
