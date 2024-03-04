@@ -43,6 +43,17 @@ JsonApiModel_system-dataCheckType_id:
   readOnly: true
   description: Unique identifier of the entity (string)
 
+JsonApiModel_system-dataCheckType_relationship_attribute:
+  type: object
+  description: |
+    Main properties of [system-dataCheckType](/#tag/simple-model-system-dataCheckType)
+  additionalProperties: false
+  properties:
+    id:
+      $ref: '#/JsonApiModel_system-dataCheckType_id'
+  required:
+    - id
+
 JsonApiModel_system-dataCheckType_relationship:
   type: object
   description: |
@@ -63,4 +74,3 @@ JsonApiModel_system-dataCheckType_relationship:
         - id
   required:
     - data
-
