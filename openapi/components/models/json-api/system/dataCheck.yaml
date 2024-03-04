@@ -18,13 +18,13 @@ JsonApiModel_system-dataCheck:
         isPass:
           $ref: '../../library/system/dataCheck.yaml#/system-dataCheck_isPass'
         # relationship attributes
-        # type:
-        #   $ref: '../system/dataCheckType.yaml#/JsonApiModel_system-dataCheckType_relationship_attribute'
+        type:
+          $ref: '../system/dataCheckType.yaml#/JsonApiModel_system-dataCheckType_relationship_attribute'
       required:
         - result
         - date
         - isPass
-        # - type
+        - type
     relationships:
       type: object
       additionalProperties: false
