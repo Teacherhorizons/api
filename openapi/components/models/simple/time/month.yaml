@@ -79,6 +79,42 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfDropoutsExplorerDropouts'
     percentageOfDropoutsExplorerDropouts:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfDropoutsExplorerDropouts'
+    numberOfWebsiteTeachersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteTeachersGained'
+    numberOfWebsiteTeachersLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteTeachersLost'
+    numberOfWebsiteTeachersNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteTeachersNet'
+    numberOfWebsiteTeachers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteTeachers'
+    numberOfWebsiteSltUsersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersGained'
+    numberOfSltUsers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSltUsers'
+    numberOfTeacherCommunityResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfTeacherCommunityResponses'
+    numberOfSchoolsWithCommunityResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithCommunityResponses'
+    numberOfAmbassadorsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsGained'
+    numberOfAmbassadorsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsLost'
+    numberOfAmbassadorsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsNet'
+    numberOfAmbassadorsWithCommunityResponsesGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithCommunityResponsesGained'
+    numberOfAmbassadorsWithCommunityResponsesLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithCommunityResponsesLost'
+    numberOfAmbassadorsWithCommunityResponsesNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithCommunityResponsesNet'
+    numberOfAmbassadorTestimonialsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorTestimonialsGained'
+    numberOfAmbassadorTestimonialsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorTestimonialsLost'
+    numberOfAmbassadorTestimonialsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorTestimonialsNet'
+    numberOfAmbassadorTestimonials:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorTestimonials'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -128,6 +164,24 @@ SimpleModel_time-month:
     - netAccrualFromPlacementsExplorerAfterDropouts
     - numberOfDropoutsExplorerDropouts
     - percentageOfDropoutsExplorerDropouts
+    - numberOfWebsiteTeachersGained
+    - numberOfWebsiteTeachersLost
+    - numberOfWebsiteTeachersNet
+    - numberOfWebsiteTeachers
+    - numberOfWebsiteSltUsersGained
+    - numberOfSltUsers
+    - numberOfTeacherCommunityResponses
+    - numberOfSchoolsWithCommunityResponses
+    - numberOfAmbassadorsGained
+    - numberOfAmbassadorsLost
+    - numberOfAmbassadorsNet
+    - numberOfAmbassadorsWithCommunityResponsesGained
+    - numberOfAmbassadorsWithCommunityResponsesLost
+    - numberOfAmbassadorsWithCommunityResponsesNet
+    - numberOfAmbassadorTestimonialsGained
+    - numberOfAmbassadorTestimonialsLost
+    - numberOfAmbassadorTestimonialsNet
+    - numberOfAmbassadorTestimonials
 
 # shared
 SimpleModel_time-month_id:

@@ -79,6 +79,42 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfDropoutsExplorerDropouts'
     facebookPostEngagement:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_facebookPostEngagement'
+    numberOfWebsiteTeachersGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteTeachersGained'
+    numberOfWebsiteTeachersLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteTeachersLost'
+    numberOfWebsiteTeachersNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteTeachersNet'
+    numberOfWebsiteTeachers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteTeachers'
+    numberOfWebsiteSltUsersGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteSltUsersGained'
+    numberOfSltUsers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSltUsers'
+    numberOfTeacherCommunityResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfTeacherCommunityResponses'
+    numberOfSchoolsWithCommunityResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithCommunityResponses'
+    numberOfAmbassadorsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsGained'
+    numberOfAmbassadorsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsLost'
+    numberOfAmbassadorsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsNet'
+    numberOfAmbassadorsWithCommunityResponsesGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithCommunityResponsesGained'
+    numberOfAmbassadorsWithCommunityResponsesLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithCommunityResponsesLost'
+    numberOfAmbassadorsWithCommunityResponsesNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithCommunityResponsesNet'
+    numberOfAmbassadorTestimonialsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorTestimonialsGained'
+    numberOfAmbassadorTestimonialsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorTestimonialsLost'
+    numberOfAmbassadorTestimonialsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorTestimonialsNet'
+    numberOfAmbassadorTestimonials:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorTestimonials'
   required:
     - id
     - name
@@ -118,7 +154,25 @@ SimpleModel_time-schoolYear:
     - numberOfDropoutsExplorerDropouts
     - percentageOfDropoutsExplorerDropouts
     - facebookPostEngagement
-    
+    - numberOfWebsiteTeachersGained
+    - numberOfWebsiteTeachersLost
+    - numberOfWebsiteTeachersNet
+    - numberOfWebsiteTeachers
+    - numberOfWebsiteSltUsersGained
+    - numberOfSltUsers
+    - numberOfTeacherCommunityResponses
+    - numberOfSchoolsWithCommunityResponses
+    - numberOfAmbassadorsGained
+    - numberOfAmbassadorsLost
+    - numberOfAmbassadorsNet
+    - numberOfAmbassadorsWithCommunityResponsesGained
+    - numberOfAmbassadorsWithCommunityResponsesLost
+    - numberOfAmbassadorsWithCommunityResponsesNet
+    - numberOfAmbassadorTestimonialsGained
+    - numberOfAmbassadorTestimonialsLost
+    - numberOfAmbassadorTestimonialsNet
+    - numberOfAmbassadorTestimonials
+
 # shared
 SimpleModel_time-schoolYear_id:
   type: integer
