@@ -61,15 +61,125 @@ time-month_numberOfNewAtsDropouts:
   example: 1
   description: Derived (dw)
 
-time-month_numberOfNewFacebookFollowers:
+time-month_numberOfFacebookFollowersGained:
   type: integer
   example: 1
-  description: Derived (dw)
+  description: New
+
+time-month_numberOfFacebookFollowersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfFacebookFollowersNet:
+  type: integer
+  example: 1
+  description: Formula
 
 time-month_numberOfFacebookFollowers:
   type: integer
   example: 1
-  description: Derived (dw)
+  description: Point in time
+
+time-month_numberOfInstagramFollowersGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfInstagramFollowersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfInstagramFollowersNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOfInstagramFollowers:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOfLinkedinFollowersGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfLinkedinFollowersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfLinkedinFollowersNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOfLinkedinFollowers:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOfTwitterFollowersGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfTwitterFollowersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfTwitterFollowersNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOfTwitterFollowers:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOfTiktokFollowersGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfTiktokFollowersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfTiktokFollowersNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOfTiktokFollowers:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOfYoutubeSubscribersGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfYoutubeSubscribersLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOfYoutubeSubscribersNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOfYoutubeSubscribers:
+  type: integer
+  example: 1
+  description: Point in time
 
 time-month_numberOfNewAmbassadors:
   type: integer
@@ -206,10 +316,100 @@ time-month_numberOfWebsiteSltUsersGained:
   example: 1
   description: New, Derived (dw)
 
+time-month_numberOfWebsiteSltUsersLost:
+  type: integer
+  example: 1
+  description: New, Derived (dw)
+
+time-month_numberOfWebsiteSltUsersNet:
+  type: integer
+  example: 1
+  description: Formula, Derived (dw)
+
 time-month_numberOfSltUsers:
   type: integer
   example: 1
   description: Point in time, Derived (dw)
+
+time-month_numberOfActivatedTeachersGained:
+  type: integer
+  example: 1
+  description: New, Derived (dw)
+
+time-month_numberOfActivatedTeachersLost:
+  type: integer
+  example: 1
+  description: New, Derived (dw)
+
+time-month_numberOfActivatedTeachersNet:
+  type: integer
+  example: 1
+  description: Formula, Derived (dw)
+
+time-month_numberOfActivatedTeachers:
+  type: integer
+  example: 1
+  description: Point in time, Derived (dw)
+
+time-month_numberOfPlaceableTeachersGained:
+  type: integer
+  example: 1
+  description: New, Derived (dw)
+
+time-month_numberOfPlaceableTeachersLost:
+  type: integer
+  example: 1
+  description: New, Derived (dw)
+
+time-month_numberOfPlaceableTeachersNet:
+  type: integer
+  example: 1
+  description: Formula, Derived (dw)
+
+time-month_numberOfPlaceableTeachers:
+  type: integer
+  example: 1
+  description: Point in time, Derived (dw)
+
+time-month_numberOf5StarGoogleReviewsGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarGoogleReviewsLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarGoogleReviewsNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOf5StarGoogleReviews:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOf5StarTrustpilotReviewsGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarTrustpilotReviewsLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarTrustpilotReviewsNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOf5StarTrustpilotReviews:
+  type: integer
+  example: 1
+  description: Point in time
 
 time-month_numberOfTeacherCommunityResponses:
   type: integer
