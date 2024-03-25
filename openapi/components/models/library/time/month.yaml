@@ -71,7 +71,19 @@ time-month_numberOfNewAtsDropouts:
   description: |
     <span class="dw"></span>
 
-time-month_numberOfNewFacebookFollowers:
+time-month_numberOfFacebookFollowersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="dw"></span>
+
+time-month_numberOfFacebookFollowersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="dw"></span>
+
+time-month_numberOfFacebookFollowersNet:
   type: integer
   example: 1
   description: |
@@ -82,6 +94,174 @@ time-month_numberOfFacebookFollowers:
   example: 1
   description: |
     <span class="dw"></span>
+
+time-month_numberOfInstagramFollowersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfInstagramFollowersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfInstagramFollowersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfInstagramFollowers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfLinkedinFollowersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfLinkedinFollowersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfLinkedinFollowersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfLinkedinFollowers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfTwitterFollowersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfTwitterFollowersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfTwitterFollowersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfTwitterFollowers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfTiktokFollowersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfTiktokFollowersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfTiktokFollowersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfTiktokFollowers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfYoutubeSubscribersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfYoutubeSubscribersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfYoutubeSubscribersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfYoutubeSubscribersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfYoutubeSubscribersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_numberOfYoutubeSubscribersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfYoutubeSubscribers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_numberOfYoutubeSubscribers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>"
 
 time-month_numberOfNewAmbassadors:
   type: integer
@@ -255,6 +435,22 @@ time-month_numberOfWebsiteSltUsersGained:
     <span class="type-new"></span>
     <span class="dw"></span>
 
+time-month_numberOfWebsiteSltUsersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-month_numberOfWebsiteSltUsersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
 time-month_numberOfSltUsers:
   type: integer
   example: 1
@@ -262,6 +458,110 @@ time-month_numberOfSltUsers:
     <span class="metric"></span>
     <span class="type-point-in-time"></span>
     <span class="dw"></span>
+
+time-month_numberOfActivatedTeachersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-month_numberOfActivatedTeachersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-month_numberOfActivatedTeachersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-month_numberOfActivatedTeachers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+    <span class="dw"></span>
+
+time-month_numberOfPlaceableTeachersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-month_numberOfPlaceableTeachersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-month_numberOfPlaceableTeachersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-month_numberOfPlaceableTeachers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+    <span class="dw"></span>
+
+time-month_numberOf5StarGoogleReviewsGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarGoogleReviewsLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarGoogleReviewsNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOf5StarGoogleReviews:
+  type: integer
+  example: 1
+  description: Point in time
+
+time-month_numberOf5StarTrustpilotReviewsGained:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarTrustpilotReviewsLost:
+  type: integer
+  example: 1
+  description: New
+
+time-month_numberOf5StarTrustpilotReviewsNet:
+  type: integer
+  example: 1
+  description: Formula
+
+time-month_numberOf5StarTrustpilotReviews:
+  type: integer
+  example: 1
+  description: Point in time
 
 time-month_numberOfTeacherCommunityResponses:
   type: integer
