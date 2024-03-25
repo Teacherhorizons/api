@@ -5,36 +5,52 @@ regional-city_name:
   description: Main
   maxLength: 250
 regional-city_alias:
+  description: |
+    <span class="website"></span>
   type: string
   example: /Africa/Angola/Luanda
   maxLength: 250
 regional-city_photo1Url:
+  description: |
+    <span class="website"></span>
   type: string
   example: /foo/bar/baz.jpeg
 regional-city_creationDate:
+  description: |
+    <span class="website"></span>
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
 regional-city_latestUpdateDate:
+  description: |
+    <span class="website"></span>
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
 regional-city_keyAttractions:
+  description: |
+    <span class="website"></span>
   type: string
   example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
 regional-city_slug:
+  description: |
+    <span class="website"></span>
+    Main
   type: string
   example: africa-angola-luanda
-  description: Main
   maxLength: 180
 regional-city_locationLatitude:
+  description: |
+    <span class="website"></span>
+    Latitude
   type: number
   example: -8.8383333
-  description: Latitude
 regional-city_locationLongitude:
+  description: |
+    <span class="website"></span>
+    Longitude
   type: number
   example: 13.2344444
-  description: Longitude
 regional-city_isoCode:
   type: string
   example: al
@@ -50,7 +66,8 @@ regional-city_teachingInCityDescription:
 regional-city_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
   maxLength: 2000
 regional-city_pageMetaDescription:
   deprecated: true
@@ -62,91 +79,114 @@ regional-city_pageMetaDescription:
 regional-city_numberOfSchools:
   type: integer
   example: 75
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfIBSchools:
   type: integer
   example: 45
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfLiveJobs:
   type: integer
   example: 75
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfPrimaryIBCurriculumSchools:
   type: integer
   example: 34
-  description: Derived (dw)
+  description: |
+    <span class="website"></span>
+    <span class="dw"></span>
 regional-city_numberOfPrimaryUSCurriculumSchools:
   type: integer
   example: 54
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfPrimaryUKCurriculumSchools:
   type: integer
   example: 35
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfPrimaryInternationalCurriculumSchools:
   type: integer
   example: 70
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfPrimaryOtherCurriculumSchools:
   type: integer
   example: 30
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSecondaryIBCurriculumSchools:
   type: number
   example: 34
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSecondaryUSCurriculumSchools:
   type: integer
   example: 54
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSecondaryUKCurriculumSchools:
   type: integer
   example: 35
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSecondaryInternationalCurriculumSchools:
   type: integer
   example: 70
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSecondaryOtherCurriculumSchools:
   type: integer
   example: 30
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageSavingPercentage:
   type: integer
   example: 0.3
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageAnnualSaving:
   type: integer
   example: 10,000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageAnnualGrossIncome:
   type: integer
   example: 50247
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageAnnualNetIncome:
   type: integer
   example: 40878
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageAnnualExpenditure:
   type: integer
   example: 21203
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_percentageOfSchoolsHaveFlightAllowance:
   type: integer
   example: 67
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_percentageOfSchoolsHavePrivateHealthcareScheme:
   type: integer
   example: 86
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_percentageOfOverseasTeachers:
   type: integer
   example: 0.35
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_percentageOfInternationalStudents:
   type: integer
   example: 0.4
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_costOfMidRange3CourseMealFor2:
   type: number
   example: 45.50
@@ -188,11 +228,13 @@ regional-city_walkingAloneAtNightSafetyIndex:
 regional-city_minGrossSalaryJuniorTeacher:
   type: integer
   example: 12000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_lowerQuartileGrossSalaryJuniorTeacher:
   type: integer
   example: 19000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageGrossSalaryJuniorTeacher:
   deprecated: true
   type: integer
@@ -205,21 +247,25 @@ regional-city_medianGrossSalaryJuniorTeacher:
 regional-city_upperQuartileGrossSalaryJuniorTeacher:
   type: integer
   example: 35000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_maxGrossSalaryJuniorTeacher:
   type: integer
   example: 55000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 
 # simple attributes - senior teacher
 regional-city_minGrossSalarySeniorTeacher:
   type: integer
   example: 21000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_lowerQuartileGrossSalarySeniorTeacher:
   type: integer
   example: 26000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_averageGrossSalarySeniorTeacher:
   type: integer
   example: 39000
@@ -231,11 +277,13 @@ regional-city_medianGrossSalarySeniorTeacher:
 regional-city_upperQuartileGrossSalarySeniorTeacher:
   type: integer
   example: 55000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_maxGrossSalarySeniorTeacher:
   type: integer
   example: 85000
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 #
 regional-city_qualityOfLifeIndex:
   type: number
@@ -271,69 +319,85 @@ regional-city_nearestWeatherStationId:
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 203
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSchoolsDoNotHaveFlightAllowance:
   type: integer
   example: 2
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfTeachers:
   type: integer
   example: 1345
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfOverseasTeachers:
   type: integer
   example: 726
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfLocalTeachers:
   type: integer
   example: 566
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfUnknownTeachers:
   type: integer
   example: 53
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSchoolsHavePrivateHealthcareScheme:
   type: integer
   example: 194
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfSchoolsDoNotHavePrivateHealthcareScheme:
   type: integer
   example: 20
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfStudents:
   type: integer
   example: 234722
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfInternationalStudents:
   type: integer
   example: 46770
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfLocalStudents:
   type: integer
   example: 148605
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_numberOfUnknownStudents:
   type: integer
   example: 39347
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_uniqueName:
   type: string
   example: Victoria (Seychelles)
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_importanceIndex:
   type: integer
   example: 6234
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_importance:
   type: string
   example: H
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 regional-city_communityResponseQuestionIds:
   type: array
   items:
     type: integer
   example: [4, 7, 10, 14]
-  description: Derived (dw)
+  description: |
+    <span class="dw"></span>
 
 # relationship attributes
 regional-city_countryId:

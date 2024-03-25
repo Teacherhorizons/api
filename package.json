@@ -16,6 +16,7 @@
     "start": "redocly preview-docs -p 8081",
     "build-yaml": "redocly bundle --output=tests/specs/openapi.yaml --dereferenced",
     "build-json": "redocly bundle --output=tests/specs/openapi.json --dereferenced",
+    "build-and-distribute-json": "npm run build-json; copy ...",
     "validate": "redocly lint",
     "lint": "redocly lint",
     "lint--generate-ignore-file": "redocly lint --generate-ignore-file",

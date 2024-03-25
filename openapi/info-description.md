@@ -241,9 +241,25 @@ See the 'Pet' example.
 
 ## Guidelines
 
+### Redoc vs beta
+
+- beta should contain an a-view for every redoc entity with the 'Website' badge
+- every beta a-view should have a redoc entity with the 'Website' badge
+- the beta a-view columns should match the redoc properties
+
+### WIP - Possible guidelines
+
 - Simple models give the ... properties of the entity
 - Properties labelled with 'Main' will always be included and will be required if they're required in the simple model
 - Json-API models give all the possible properties which can be used in related API calls
 - All properties of the simple model will be in the related database a-view (e.g. aTeachers)
 - All properties of the Json-API model will be in the related database b-view (e.g. bTeachers)
 - All properties of the simple model will be in the related database a-view (e.g. aTeachers)
+
+### Redoc vs data warehouse
+
+---
+
+http://127.0.0.1:8081/#tag/simple-model-school-schoolVideo - in beta, not in dw
+http://127.0.0.1:8081/#tag/simple-model-regional-city - in beta and in dw
+http://127.0.0.1:8081/#tag/simple-model-time-schoolYear - not in beta, in dw

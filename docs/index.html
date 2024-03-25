@@ -59,13 +59,63 @@
       }
 
       span[class^='testing-status-'],
-      span[class*=' testing-status-'] {
+      span[class*=' testing-status-'],
+      span[class='website'],
+      span[class='dw'],
+      span[class='metric'],
+      span[class='type-new'],
+      span[class='type-formula'],
+      span[class='type-point-in-time'] {
         padding: 3px 6px;
         text-align: center;
         text-decoration: none;
         margin: 0;
         border-radius: 5px;
         font-size: 0.8em;
+      }
+
+      .dw {
+        background-color: #3fa9b3;
+        color: white;
+      }
+      .dw::after {
+        content: 'Data warehouse';
+      }
+      .website {
+        background-color: #00264b;
+        color: white;
+      }
+      .website::after {
+        content: 'Website';
+      }
+      .metric {
+        background-color: #ff725e;
+        color: white;
+      }
+      .metric::after {
+        content: 'Metric';
+      }
+
+      .type-new {
+        background-color: #ffff00;
+        color: black;
+      }
+      .type-new::after {
+        content: 'New';
+      }
+      .type-formula {
+        background-color: #f6b26b;
+        color: white;
+      }
+      .type-formula::after {
+        content: 'Formula';
+      }
+      .type-point-in-time {
+        background-color: #6d9eeb;
+        color: white;
+      }
+      .type-point-in-time::after {
+        content: 'Point in time';
       }
 
       .testing-status-1 {
