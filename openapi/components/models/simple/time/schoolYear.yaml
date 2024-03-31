@@ -65,38 +65,8 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfYoutubeSubscribersLost'
     numberOfYoutubeSubscribersNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfYoutubeSubscribersNet' 
-    numberOfActiveExplorerUsersAllYears:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveExplorerUsersAllYears'
-    numberOfActiveExplorerUsersInYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveExplorerUsersInYear'
     numberOfCandidatesViewedViaExplorer:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCandidatesViewedViaExplorer'
-    numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview'
-    numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview'
-    numberOfNewPlacementsExplorerBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerBeforeDropouts'
-    numberOfNewPlacementsExplorerAfterDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewPlacementsExplorerAfterDropouts'
-    percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout'
-    percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout'
-    averagePlacementFeeExplorerBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeExplorerBeforeDropouts'
-    incomeFromPlacementsExplorerBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsExplorerBeforeDropouts'
-    incomeFromPlacementsExplorerAfterDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsExplorerAfterDropouts'
-    netAccrualFromPlacementsExplorerBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_netAccrualFromPlacementsExplorerBeforeDropouts'
-    netAccrualFromPlacementsExplorerAfterDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_netAccrualFromPlacementsExplorerAfterDropouts'
-    numberOfDropoutsExplorerDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfDropoutsExplorerDropouts'
-    percentageOfDropoutsExplorerDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfDropoutsExplorerDropouts'
     facebookPostEngagement:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_facebookPostEngagement'
     numberOfWebsiteTeachersGained:
@@ -170,76 +140,41 @@ SimpleModel_time-schoolYear:
     - numberOfFacebookFollowersGained
     - numberOfFacebookFollowersLost
     - numberOfFacebookFollowersNet
-    - numberOfFacebookFollowers
     - numberOfInstagramFollowersGained
     - numberOfInstagramFollowersLost
     - numberOfInstagramFollowersNet
-    - numberOfInstagramFollowers
     - numberOfLinkedinFollowersGained
     - numberOfLinkedinFollowersLost
     - numberOfLinkedinFollowersNet
-    - numberOfLinkedinFollowers
     - numberOfTwitterFollowersGained
     - numberOfTwitterFollowersLost
     - numberOfTwitterFollowersNet
-    - numberOfTwitterFollowers
     - numberOfTiktokFollowersGained
     - numberOfTiktokFollowersLost
     - numberOfTiktokFollowersNet
-    - numberOfTiktokFollowers
     - numberOfYoutubeSubscribersGained
     - numberOfYoutubeSubscribersLost
     - numberOfYoutubeSubscribersNet
-    - numberOfYoutubeSubscribers
-    - numberOfNewAmbassadors
-    - numberOfAmbassadors
-    - numberOfNewAmbassadorsWithCommunityResponses
-    - numberOfAmbassadorsWithCommunityResponses
-    - numberOfNewAmbassadorsWithTestimonials
-    - numberOfAmbassadorsWithTestimonials
-    - numberOfActiveExplorerUsersAllYears
-    - numberOfActiveExplorerUsersInYear
     - numberOfCandidatesViewedViaExplorer
-    - numberOfNewPlacementsExplorerBeforeDropoutsWithoutAdviserInterview
-    - numberOfNewPlacementsExplorerAfterDropoutsWithoutAdviserInterview
-    - numberOfNewPlacementsExplorerBeforeDropouts
-    - numberOfNewPlacementsExplorerAfterDropouts
-    - percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerBeforeDropout
-    - percentageOfPlacementsMadeWithoutAdviserInterviewVsTotalExplorerAfterDropout
-    - averagePlacementFeeExplorerBeforeDropouts
-    - incomeFromPlacementsExplorerBeforeDropouts
-    - incomeFromPlacementsExplorerAfterDropouts
-    - netAccrualFromPlacementsExplorerBeforeDropouts
-    - netAccrualFromPlacementsExplorerAfterDropouts
-    - numberOfDropoutsExplorerDropouts
-    - percentageOfDropoutsExplorerDropouts
     - facebookPostEngagement
     - numberOfWebsiteTeachersGained
     - numberOfWebsiteTeachersLost
     - numberOfWebsiteTeachersNet
-    - numberOfWebsiteTeachers
     - numberOfWebsiteSltUsersGained
     - numberOfWebsiteSltUsersLost
     - numberOfWebsiteSltUsersNet
-    - numberOfSltUsers
     - numberOfActivatedTeachersGained
     - numberOfActivatedTeachersLost
     - numberOfActivatedTeachersNet
-    - numberOfActivatedTeachers
     - numberOfPlaceableTeachersGained
     - numberOfPlaceableTeachersLost
     - numberOfPlaceableTeachersNet
-    - numberOfPlaceableTeachers
     - numberOf5StarGoogleReviewsGained
     - numberOf5StarGoogleReviewsLost
     - numberOf5StarGoogleReviewsNet
-    - numberOf5StarGoogleReviews
     - numberOf5StarTrustpilotReviewsGained
     - numberOf5StarTrustpilotReviewsLost
     - numberOf5StarTrustpilotReviewsNet
-    - numberOf5StarTrustpilotReviews
-    - numberOfTeacherCommunityResponses
-    - numberOfSchoolsWithCommunityResponses
     - numberOfAmbassadorsGained
     - numberOfAmbassadorsLost
     - numberOfAmbassadorsNet
@@ -249,7 +184,6 @@ SimpleModel_time-schoolYear:
     - numberOfAmbassadorTestimonialsGained
     - numberOfAmbassadorTestimonialsLost
     - numberOfAmbassadorTestimonialsNet
-    - numberOfAmbassadorTestimonials
 
 # shared
 SimpleModel_time-schoolYear_id:
