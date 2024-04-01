@@ -147,10 +147,6 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithCommunityResponsesLost'
     numberOfSchoolsWithCommunityResponsesNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithCommunityResponsesNet'
-    numberOfBacklinksGained:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfBacklinksGained'
-    numberOfBacklinksLost:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfBacklinksLost'
     numberOfBacklinksNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfBacklinksNet'
     numberOfReferringDomainsGained:
@@ -167,6 +163,20 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorsWithTestimonialsNet'
     numberOfFollowersIndex:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFollowersIndex'
+    numberOfGoodReferringDomainsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGoodReferringDomainsGained'
+    numberOfGoodReferringDomainsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGoodReferringDomainsLost'
+    numberOfGoodReferringDomainsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGoodReferringDomainsNet'
+    percentageOfAmbassadorsWithCommunityResponsesNet:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfAmbassadorsWithCommunityResponsesNet'
+    numberOfAtsPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacementsGained'
+    numberOfAtsPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacementsLost'
+    numberOfAtsPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacementsNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -269,8 +279,6 @@ SimpleModel_time-month:
     - numberOfSchoolsWithCommunityResponsesGained
     - numberOfSchoolsWithCommunityResponsesLost
     - numberOfSchoolsWithCommunityResponsesNet
-    - numberOfBacklinksGained
-    - numberOfBacklinksLost
     - numberOfBacklinksNet
     - numberOfReferringDomainsGained
     - numberOfReferringDomainsLost
@@ -279,6 +287,13 @@ SimpleModel_time-month:
     - numberOfAmbassadorsWithTestimonialsLost
     - numberOfAmbassadorsWithTestimonialsNet
     - numberOfFollowersIndex
+    - numberOfGoodReferringDomainsGained
+    - numberOfGoodReferringDomainsLost
+    - numberOfGoodReferringDomainsNet
+    - percentageOfAmbassadorsWithCommunityResponsesNet
+    - numberOfAtsPlacementsGained
+    - numberOfAtsPlacementsLost
+    - numberOfAtsPlacementsNet
 
 # shared
 SimpleModel_time-month_id:

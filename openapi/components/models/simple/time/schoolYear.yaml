@@ -147,10 +147,6 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithCommunityResponsesLost'
     numberOfSchoolsWithCommunityResponsesNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithCommunityResponsesNet'
-    numberOfBacklinksGained:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBacklinksGained'
-    numberOfBacklinksLost:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBacklinksLost'
     numberOfBacklinksNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBacklinksNet'
     numberOfReferringDomainsGained:
@@ -167,6 +163,20 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithTestimonialsNet'
     numberOfFollowersIndex:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFollowersIndex'
+    numberOfGoodReferringDomainsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsGained'
+    numberOfGoodReferringDomainsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsLost'
+    numberOfGoodReferringDomainsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsNet'
+    percentageOfAmbassadorsWithCommunityResponsesNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfAmbassadorsWithCommunityResponsesNet'
+    numberOfAtsPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacementsGained'
+    numberOfAtsPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacementsLost'
+    numberOfAtsPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacementsNet'
   required:
     - id
     - name
@@ -240,8 +250,6 @@ SimpleModel_time-schoolYear:
     - numberOfSchoolsWithCommunityResponsesGained
     - numberOfSchoolsWithCommunityResponsesLost
     - numberOfSchoolsWithCommunityResponsesNet
-    - numberOfBacklinksGained
-    - numberOfBacklinksLost
     - numberOfBacklinksNet
     - numberOfReferringDomainsGained
     - numberOfReferringDomainsLost
@@ -250,6 +258,13 @@ SimpleModel_time-schoolYear:
     - numberOfAmbassadorsWithTestimonialsLost
     - numberOfAmbassadorsWithTestimonialsNet
     - numberOfFollowersIndex
+    - numberOfGoodReferringDomainsGained
+    - numberOfGoodReferringDomainsLost
+    - numberOfGoodReferringDomainsNet
+    - percentageOfAmbassadorsWithCommunityResponsesNet
+    - numberOfAtsPlacementsGained
+    - numberOfAtsPlacementsLost
+    - numberOfAtsPlacementsNet
 
 # shared
 SimpleModel_time-schoolYear_id:
