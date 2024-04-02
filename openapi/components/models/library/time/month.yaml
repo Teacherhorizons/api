@@ -21,42 +21,56 @@ time-month_numberOfNewAdviserInterviews:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewApplications:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsLraSubmissions:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsNotProgressedByLras:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsRecommendations:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsSchoolInterviews:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsJobOffers:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfNewAtsPlacements:
@@ -75,19 +89,22 @@ time-month_numberOfFacebookFollowersGained:
   type: integer
   example: 1
   description: |
-    <span class="dw"></span>
+    <span class="metric"></span>
+    <span class="type-new"></span>
 
 time-month_numberOfFacebookFollowersLost:
   type: integer
   example: 1
   description: |
-    <span class="dw"></span>
+    <span class="metric"></span>
+    <span class="type-new"></span>
 
 time-month_numberOfFacebookFollowersNet:
   type: integer
   example: 1
   description: |
-    <span class="dw"></span>
+    <span class="metric"></span>
+    <span class="type-formula"></span>
 
 time-month_numberOfInstagramFollowersGained:
   type: integer
@@ -440,7 +457,7 @@ time-month_numberOfTeachersWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfTeachersWithCommunityResponsesLost:
@@ -448,7 +465,7 @@ time-month_numberOfTeachersWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfTeachersWithCommunityResponsesNet:
@@ -488,7 +505,7 @@ time-month_numberOfSchoolsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfSchoolsWithCommunityResponsesLost:
@@ -496,7 +513,7 @@ time-month_numberOfSchoolsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-month_numberOfSchoolsWithCommunityResponsesNet:
@@ -512,28 +529,7 @@ time-month_numberOfBacklinksNet:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_numberOfReferringDomainsGained:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
     <span class="type-new"></span>
-
-time-month_numberOfReferringDomainsLost:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-month_numberOfReferringDomainsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
 
 time-month_numberOfAmbassadorsWithTestimonialsGained:
   type: integer
@@ -566,27 +562,6 @@ time-month_numberOfFollowersIndex:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-time-month_numberOfGoodReferringDomainsGained:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-month_numberOfGoodReferringDomainsLost:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-month_numberOfGoodReferringDomainsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
 time-month_percentageOfAmbassadorsWithCommunityResponsesNet:
   type: integer
   example: 1
@@ -610,6 +585,175 @@ time-month_numberOfAtsPlacementsLost:
     <span class="type-new"></span>
 
 time-month_numberOfAtsPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfTop10KeywordsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfBacklinksOnWordpressPostsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_domainAuthorityMoz:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_domainAuthoritySemrush:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfReferringDomainsOnWordpressPosts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_similarwebRanking:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_clickThroughRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_percentageOfAmbassadorsWithTestimonialsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-month_incomeFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_incomeFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_incomeFromPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averageNewPlacementFeeAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averageNewPlacementFeeAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_revenueFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span
+
+time-month_revenueFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_expensesFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_expensesFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_expensesFromPlacementsNet:
   type: integer
   example: 1
   description: |

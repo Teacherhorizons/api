@@ -149,12 +149,6 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithCommunityResponsesNet'
     numberOfBacklinksNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBacklinksNet'
-    numberOfReferringDomainsGained:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReferringDomainsGained'
-    numberOfReferringDomainsLost:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReferringDomainsLost'
-    numberOfReferringDomainsNet:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReferringDomainsNet'
     numberOfAmbassadorsWithTestimonialsGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithTestimonialsGained'
     numberOfAmbassadorsWithTestimonialsLost:
@@ -163,12 +157,6 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorsWithTestimonialsNet'
     numberOfFollowersIndex:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFollowersIndex'
-    numberOfGoodReferringDomainsGained:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsGained'
-    numberOfGoodReferringDomainsLost:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsLost'
-    numberOfGoodReferringDomainsNet:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGoodReferringDomainsNet'
     percentageOfAmbassadorsWithCommunityResponsesNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfAmbassadorsWithCommunityResponsesNet'
     numberOfAtsPlacementsGained:
@@ -177,6 +165,54 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacementsLost'
     numberOfAtsPlacementsNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacementsNet'
+    numberOfTop10KeywordsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfTop10KeywordsNet'
+    numberOfBacklinksOnWordpressPostsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBacklinksOnWordpressPostsNet'
+    domainAuthorityMoz:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_domainAuthorityMoz'
+    domainAuthoritySemrush:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_domainAuthoritySemrush'
+    numberOfReferringDomainsOnWordpressPosts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReferringDomainsOnWordpressPosts'
+    similarwebRanking:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_similarwebRanking'
+    clickThroughRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_clickThroughRate'
+    percentageOfAmbassadorsWithTestimonialsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfAmbassadorsWithTestimonialsNet'
+    incomeFromPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsGained'
+    incomeFromPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsLost'
+    incomeFromPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsNet'
+    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
+    averageNewPlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllBeforeDropouts'
+    averageNewPlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllAfterDropouts'
+    numberOfPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsGained'
+    numberOfPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsLost'
+    numberOfPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsNet'
+    revenueFromPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromPlacementsGained'
+    revenueFromPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromPlacementsLost'
+    revenueFromPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromPlacementsNet'
+    expensesFromPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromPlacementsGained'
+    expensesFromPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromPlacementsLost'
+    expensesFromPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromPlacementsNet'
   required:
     - id
     - name
@@ -251,20 +287,37 @@ SimpleModel_time-schoolYear:
     - numberOfSchoolsWithCommunityResponsesLost
     - numberOfSchoolsWithCommunityResponsesNet
     - numberOfBacklinksNet
-    - numberOfReferringDomainsGained
-    - numberOfReferringDomainsLost
-    - numberOfReferringDomainsNet
     - numberOfAmbassadorsWithTestimonialsGained
     - numberOfAmbassadorsWithTestimonialsLost
     - numberOfAmbassadorsWithTestimonialsNet
     - numberOfFollowersIndex
-    - numberOfGoodReferringDomainsGained
-    - numberOfGoodReferringDomainsLost
-    - numberOfGoodReferringDomainsNet
     - percentageOfAmbassadorsWithCommunityResponsesNet
     - numberOfAtsPlacementsGained
     - numberOfAtsPlacementsLost
     - numberOfAtsPlacementsNet
+    - numberOfTop10KeywordsNet
+    - numberOfBacklinksOnWordpressPostsNet
+    - domainAuthorityMoz
+    - domainAuthoritySemrush
+    - numberOfReferringDomainsOnWordpressPosts
+    - similarwebRanking
+    - clickThroughRate
+    - incomeFromPlacementsGained
+    - incomeFromPlacementsLost
+    - incomeFromPlacementsNet
+    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
+    - averageNewPlacementFeeAllBeforeDropouts
+    - averageNewPlacementFeeAllAfterDropouts
+    - numberOfPlacementsGained
+    - numberOfPlacementsLost
+    - numberOfPlacementsNet
+    - revenueFromPlacementsGained
+    - revenueFromPlacementsLost
+    - revenueFromPlacementsNet
+    - expensesFromPlacementsGained
+    - expensesFromPlacementsLost
+    - expensesFromPlacementsNet
 
 # shared
 SimpleModel_time-schoolYear_id:

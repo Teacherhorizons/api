@@ -15,42 +15,56 @@ time-schoolYear_numberOfNewAdviserInterviews:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewApplications:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsLraSubmissions:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsNotProgressedByLras:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsRecommendations:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsSchoolInterviews:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsJobOffers:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfNewAtsPlacements:
@@ -462,7 +476,7 @@ time-schoolYear_numberOfTeachersWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfTeachersWithCommunityResponsesLost:
@@ -470,7 +484,7 @@ time-schoolYear_numberOfTeachersWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfTeachersWithCommunityResponsesNet:
@@ -510,7 +524,7 @@ time-schoolYear_numberOfSchoolsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfSchoolsWithCommunityResponsesLost:
@@ -518,7 +532,7 @@ time-schoolYear_numberOfSchoolsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfSchoolsWithCommunityResponsesNet:
@@ -534,28 +548,7 @@ time-schoolYear_numberOfBacklinksNet:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_numberOfReferringDomainsGained:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
     <span class="type-new"></span>
-
-time-schoolYear_numberOfReferringDomainsLost:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-schoolYear_numberOfReferringDomainsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
 
 time-schoolYear_numberOfAmbassadorsWithTestimonialsGained:
   type: integer
@@ -588,27 +581,6 @@ time-schoolYear_numberOfFollowersIndex:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-time-schoolYear_numberOfGoodReferringDomainsGained:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-schoolYear_numberOfGoodReferringDomainsLost:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
-
-time-schoolYear_numberOfGoodReferringDomainsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
 time-schoolYear_percentageOfAmbassadorsWithCommunityResponsesNet:
   type: integer
   example: 1
@@ -632,6 +604,175 @@ time-schoolYear_numberOfAtsPlacementsLost:
     <span class="type-new"></span>
 
 time-schoolYear_numberOfAtsPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_numberOfTop10KeywordsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfBacklinksOnWordpressPostsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_domainAuthorityMoz:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_domainAuthoritySemrush:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_numberOfReferringDomainsOnWordpressPosts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_similarwebRanking:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_clickThroughRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_percentageOfAmbassadorsWithTestimonialsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-schoolYear_incomeFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_incomeFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_incomeFromPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_averageNewPlacementFeeAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_averageNewPlacementFeeAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_numberOfPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_revenueFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_revenueFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_revenueFromPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_expensesFromPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_expensesFromPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_expensesFromPlacementsNet:
   type: integer
   example: 1
   description: |
