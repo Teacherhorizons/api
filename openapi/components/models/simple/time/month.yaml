@@ -213,6 +213,56 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_expensesFromPlacementsLost'
     expensesFromPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_expensesFromPlacementsNet'
+    numberOfReferringDomainsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReferringDomainsNet'
+    numberOfAdvisersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersGained'
+    numberOfAdvisersLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersLost'
+    numberOfAdvisersNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersNet'
+    numberOfLrasGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfLrasGained'
+    numberOfLrasLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfLrasLost'
+    numberOfLrasNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfLrasNet'
+    numberOfActiveMembershipsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveMembershipsGained'
+    numberOfActiveMembershipsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveMembershipsLost'
+    numberOfActiveMembershipsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveMembershipsNet'
+    numberOfAdvancedMembershipsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvancedMembershipsGained'
+    numberOfAdvancedMembershipsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvancedMembershipsLost'
+    numberOfAdvancedMembershipsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvancedMembershipsNet'
+    numberOfGlobalJobsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalJobsGained'
+    numberOfGlobalJobsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalJobsLost'
+    numberOfGlobalJobsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalJobsNet'
+    numberOfBasicJobsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfBasicJobsGained'
+    numberOfBasicJobsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfBasicJobsLost'
+    numberOfBasicJobsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfBasicJobsNet'
+    numberOfFeaturedJobsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFeaturedJobsGained'
+    numberOfFeaturedJobsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFeaturedJobsLost'
+    numberOfFeaturedJobsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFeaturedJobsNet'
+    numberOfSchoolsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsGained'
+    numberOfSchoolsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsLost'
+    numberOfSchoolsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -347,6 +397,31 @@ SimpleModel_time-month:
     - expensesFromPlacementsGained
     - expensesFromPlacementsLost
     - expensesFromPlacementsNet
+    - numberOfReferringDomainsNet
+    - numberOfAdvisersGained
+    - numberOfAdvisersLost
+    - numberOfAdvisersNet
+    - numberOfLrasGained
+    - numberOfLrasLost
+    - numberOfLrasNet
+    - numberOfActiveMembershipsGained
+    - numberOfActiveMembershipsLost
+    - numberOfActiveMembershipsNet
+    - numberOfAdvancedMembershipsGained
+    - numberOfAdvancedMembershipsLost
+    - numberOfAdvancedMembershipsNet
+    - numberOfGlobalJobsGained
+    - numberOfGlobalJobsLost
+    - numberOfGlobalJobsNet
+    - numberOfBasicJobsGained
+    - numberOfBasicJobsLost
+    - numberOfBasicJobsNet
+    - numberOfFeaturedJobsGained
+    - numberOfFeaturedJobsLost
+    - numberOfFeaturedJobsNet
+    - numberOfSchoolsGained
+    - numberOfSchoolsLost
+    - numberOfSchoolsNet
 
 # shared
 SimpleModel_time-month_id:
