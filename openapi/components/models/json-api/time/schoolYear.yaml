@@ -269,6 +269,40 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsLost'
         numberOfSchoolsNet:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsNet'
+        numberOfSchoolsWithProfileStrengthOver80percentageOfGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver80percentageOfGained'
+        numberOfSchoolsWithProfileStrengthOver80percentageOfLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver80percentageOfLost'
+        numberOfSchoolsWithProfileStrengthOver80percentageOfNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver80percentageOfNet'
+        percentageOfSchoolsWithProfileStrengthOver80percentageOf:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfSchoolsWithProfileStrengthOver80percentageOf'
+        numberOfSchoolsWithProfileStrengthOver88percentageOfGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver88percentageOfGained'
+        numberOfSchoolsWithProfileStrengthOver88percentageOfLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver88percentageOfLost'
+        numberOfSchoolsWithProfileStrengthOver88percentageOfNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithProfileStrengthOver88percentageOfNet'
+        percentageOfSchoolsWithProfileStrengthOver88percentageOf:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfSchoolsWithProfileStrengthOver88percentageOf'
+        numberOfGlobalPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalPlacementsGained'
+        numberOfGlobalPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalPlacementsLost'
+        numberOfGlobalPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalPlacementsNet'
+        revenueFromGlobalPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalPlacementsGained'
+        revenueFromGlobalPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalPlacementsLost'
+        revenueFromGlobalPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalPlacementsNet'
+        expensesFromGlobalPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalPlacementsGained'
+        expensesFromGlobalPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalPlacementsLost'
+        expensesFromGlobalPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalPlacementsNet'
   required:
     - type
     - id

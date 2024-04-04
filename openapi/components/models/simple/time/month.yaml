@@ -263,6 +263,40 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsLost'
     numberOfSchoolsNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsNet'
+    numberOfSchoolsWithProfileStrengthOver80percentageOfGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver80percentageOfGained'
+    numberOfSchoolsWithProfileStrengthOver80percentageOfLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver80percentageOfLost'
+    numberOfSchoolsWithProfileStrengthOver80percentageOfNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver80percentageOfNet'
+    percentageOfSchoolsWithProfileStrengthOver80percentageOf:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfSchoolsWithProfileStrengthOver80percentageOf'
+    numberOfSchoolsWithProfileStrengthOver88percentageOfGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver88percentageOfGained'
+    numberOfSchoolsWithProfileStrengthOver88percentageOfLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver88percentageOfLost'
+    numberOfSchoolsWithProfileStrengthOver88percentageOfNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithProfileStrengthOver88percentageOfNet'
+    percentageOfSchoolsWithProfileStrengthOver88percentageOf:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfSchoolsWithProfileStrengthOver88percentageOf'
+    numberOfGlobalPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalPlacementsGained'
+    numberOfGlobalPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalPlacementsLost'
+    numberOfGlobalPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalPlacementsNet'
+    revenueFromGlobalPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalPlacementsGained'
+    revenueFromGlobalPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalPlacementsLost'
+    revenueFromGlobalPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalPlacementsNet'
+    expensesFromGlobalPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalPlacementsGained'
+    expensesFromGlobalPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalPlacementsLost'
+    expensesFromGlobalPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalPlacementsNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -422,6 +456,23 @@ SimpleModel_time-month:
     - numberOfSchoolsGained
     - numberOfSchoolsLost
     - numberOfSchoolsNet
+    - numberOfSchoolsWithProfileStrengthOver80percentageOfGained
+    - numberOfSchoolsWithProfileStrengthOver80percentageOfLost
+    - numberOfSchoolsWithProfileStrengthOver80percentageOfNet
+    - percentageOfSchoolsWithProfileStrengthOver80percentageOf
+    - numberOfSchoolsWithProfileStrengthOver88percentageOfGained
+    - numberOfSchoolsWithProfileStrengthOver88percentageOfLost
+    - numberOfSchoolsWithProfileStrengthOver88percentageOfNet
+    - percentageOfSchoolsWithProfileStrengthOver88percentageOf
+    - numberOfGlobalPlacementsGained
+    - numberOfGlobalPlacementsLost
+    - numberOfGlobalPlacementsNet
+    - revenueFromGlobalPlacementsGained
+    - revenueFromGlobalPlacementsLost
+    - revenueFromGlobalPlacementsNet
+    - expensesFromGlobalPlacementsGained
+    - expensesFromGlobalPlacementsLost
+    - expensesFromGlobalPlacementsNet
 
 # shared
 SimpleModel_time-month_id:
