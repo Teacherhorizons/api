@@ -303,6 +303,42 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalPlacementsLost'
         expensesFromGlobalPlacementsNet:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalPlacementsNet'
+        incomeFromGlobalPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalPlacementsGained'
+        incomeFromGlobalPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalPlacementsLost'
+        incomeFromGlobalPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalPlacementsNet'
+        incomePercentageFromGlobalPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromGlobalPlacementsGained'
+        incomePercentageFromGlobalPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromGlobalPlacementsLost'
+        incomePercentageFromGlobalPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromGlobalPlacementsNet'
+        averageGlobalPlacementFeeGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalPlacementFeeGained'
+        averageGlobalPlacementFeeLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalPlacementFeeLost'
+        averageGlobalPlacementFeeNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalPlacementFeeNet'
+        numberOfGlobalTeacherPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalTeacherPlacementsGained'
+        numberOfGlobalTeacherPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalTeacherPlacementsLost'
+        numberOfGlobalTeacherPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalTeacherPlacementsNet'
+        incomeFromGlobalSltAndExecutiveSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalSltAndExecutiveSearchPlacementsGained'
+        incomeFromGlobalSltAndExecutiveSearchPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalSltAndExecutiveSearchPlacementsLost'
+        incomeFromGlobalSltAndExecutiveSearchPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromGlobalSltAndExecutiveSearchPlacementsNet'
+        averageGlobalSltAndExecutiveSearchPlacementFeeGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalSltAndExecutiveSearchPlacementFeeGained'
+        averageGlobalSltAndExecutiveSearchPlacementFeeLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalSltAndExecutiveSearchPlacementFeeLost'
+        averageGlobalSltAndExecutiveSearchPlacementFeeNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalSltAndExecutiveSearchPlacementFeeNet'
   required:
     - type
     - id

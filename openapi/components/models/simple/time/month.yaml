@@ -297,6 +297,42 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalPlacementsLost'
     expensesFromGlobalPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalPlacementsNet'
+    incomeFromGlobalPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalPlacementsGained'
+    incomeFromGlobalPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalPlacementsLost'
+    incomeFromGlobalPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalPlacementsNet'
+    incomePercentageFromGlobalPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomePercentageFromGlobalPlacementsGained'
+    incomePercentageFromGlobalPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomePercentageFromGlobalPlacementsLost'
+    incomePercentageFromGlobalPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomePercentageFromGlobalPlacementsNet'
+    averageGlobalPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalPlacementFeeGained'
+    averageGlobalPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalPlacementFeeLost'
+    averageGlobalPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalPlacementFeeNet'
+    numberOfGlobalTeacherPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalTeacherPlacementsGained'
+    numberOfGlobalTeacherPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalTeacherPlacementsLost'
+    numberOfGlobalTeacherPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalTeacherPlacementsNet'
+    incomeFromGlobalSltAndExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsGained'
+    incomeFromGlobalSltAndExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsLost'
+    incomeFromGlobalSltAndExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsNet'
+    averageGlobalSltAndExecutiveSearchPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltAndExecutiveSearchPlacementFeeGained'
+    averageGlobalSltAndExecutiveSearchPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltAndExecutiveSearchPlacementFeeLost'
+    averageGlobalSltAndExecutiveSearchPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltAndExecutiveSearchPlacementFeeNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -473,6 +509,24 @@ SimpleModel_time-month:
     - expensesFromGlobalPlacementsGained
     - expensesFromGlobalPlacementsLost
     - expensesFromGlobalPlacementsNet
+    - incomeFromGlobalPlacementsGained
+    - incomeFromGlobalPlacementsLost
+    - incomeFromGlobalPlacementsNet
+    - incomePercentageFromGlobalPlacementsGained
+    - incomePercentageFromGlobalPlacementsLost
+    - incomePercentageFromGlobalPlacementsNet
+    - averageGlobalPlacementFeeGained
+    - averageGlobalPlacementFeeLost
+    - averageGlobalPlacementFeeNet
+    - numberOfGlobalTeacherPlacementsGained
+    - numberOfGlobalTeacherPlacementsLost
+    - numberOfGlobalTeacherPlacementsNet
+    - incomeFromGlobalSltAndExecutiveSearchPlacementsGained
+    - incomeFromGlobalSltAndExecutiveSearchPlacementsLost
+    - incomeFromGlobalSltAndExecutiveSearchPlacementsNet
+    - averageGlobalSltAndExecutiveSearchPlacementFeeGained
+    - averageGlobalSltAndExecutiveSearchPlacementFeeLost
+    - averageGlobalSltAndExecutiveSearchPlacementFeeNet
 
 # shared
 SimpleModel_time-month_id:
