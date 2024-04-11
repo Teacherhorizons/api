@@ -11,8 +11,8 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
-    numberOfNewAdviserInterviews:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAdviserInterviews'
+    numberOfAdviserInterviews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdviserInterviews'
     numberOfNewApplications:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
     numberOfNewAtsLraSubmissions:
@@ -28,7 +28,7 @@ SimpleModel_time-schoolYear:
     numberOfNewAtsPlacements:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsPlacements'
     numberOfNewAtsDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts' 
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
@@ -64,7 +64,7 @@ SimpleModel_time-schoolYear:
     numberOfYoutubeSubscribersLost:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfYoutubeSubscribersLost'
     numberOfYoutubeSubscribersNet:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfYoutubeSubscribersNet' 
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfYoutubeSubscribersNet'
     numberOfCandidatesViewedViaExplorer:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCandidatesViewedViaExplorer'
     numberOfFacebookInteractionsNet:
@@ -338,7 +338,7 @@ SimpleModel_time-schoolYear:
     - name
     - isMostRecentComplete
     - isCurrent
-    - numberOfNewAdviserInterviews
+    - numberOfAdviserInterviews
     - numberOfNewApplications
     - numberOfNewAtsLraSubmissions
     - numberOfNewAtsNotProgressedByLras

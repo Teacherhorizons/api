@@ -13,8 +13,8 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/month.yaml#/time-month_isCurrent'
-    numberOfNewAdviserInterviews:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAdviserInterviews'
+    numberOfAdviserInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserInterviews'
     numberOfNewApplications:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewApplications'
     numberOfNewAtsLraSubmissions:
@@ -30,13 +30,13 @@ SimpleModel_time-month:
     numberOfNewAtsPlacements:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsPlacements'
     numberOfNewAtsDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'  
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersLost'
     numberOfFacebookFollowersNet:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersNet'   
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersNet'
     numberOfInstagramFollowersGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfInstagramFollowersGained'
     numberOfInstagramFollowersLost:
@@ -78,7 +78,7 @@ SimpleModel_time-month:
     numberOfWebsiteSltUsersGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersGained'
     numberOfWebsiteSltUsersLost:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersLost' 
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersLost'
     numberOfWebsiteSltUsersNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersNet'
     numberOfActivatedTeachersGained:
@@ -349,7 +349,7 @@ SimpleModel_time-month:
     - startDateId
     - endDateId
     - schoolYearId
-    - numberOfNewAdviserInterviews
+    - numberOfAdviserInterviews
     - numberOfNewApplications
     - numberOfNewAtsLraSubmissions
     - numberOfNewAtsNotProgressedByLras

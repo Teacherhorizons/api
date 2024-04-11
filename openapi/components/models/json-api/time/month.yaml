@@ -16,7 +16,7 @@ JsonApiModel_time-month:
         number:
           $ref: '../../library/time/month.yaml#/time-month_number'
         umberOfNewAdviserInterviews:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfNewAdviserInterviews'
+          $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserInterviews'
         numberOfNewApplications:
           $ref: '../../library/time/month.yaml#/time-month_numberOfNewApplications'
         numberOfNewAtsLraSubmissions:
@@ -32,13 +32,13 @@ JsonApiModel_time-month:
         numberOfNewAtsPlacements:
           $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsPlacements'
         numberOfNewAtsDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'  
+          $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'
         numberOfFacebookFollowersGained:
           $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersGained'
         numberOfFacebookFollowersLost:
           $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersLost'
         numberOfFacebookFollowersNet:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersNet' 
+          $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersNet'
         numberOfInstagramFollowersGained:
           $ref: '../../library/time/month.yaml#/time-month_numberOfInstagramFollowersGained'
         numberOfInstagramFollowersLost:
@@ -80,7 +80,7 @@ JsonApiModel_time-month:
         numberOfWebsiteSltUsersGained:
           $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersGained'
         numberOfWebsiteSltUsersLost:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersLost' 
+          $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersLost'
         numberOfWebsiteSltUsersNet:
           $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteSltUsersNet'
         numberOfActivatedTeachersGained:
@@ -343,19 +343,19 @@ JsonApiModel_time-month:
         schoolYearId:
           $ref: '../../library/time/month.yaml#/time-month_schoolYearId'
     relationships:
-        type: object
-        additionalProperties: false
-        properties: 
-            startDateId:
-              $ref: "../time/date.yaml#/JsonApiModel_time-date_relationship"
-            endDateId:
-              $ref: "../time/date.yaml#/JsonApiModel_time-date_relationship"
-            schoolYearId:
-              $ref: "../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship"
+      type: object
+      additionalProperties: false
+      properties:
+        startDateId:
+          $ref: '../time/date.yaml#/JsonApiModel_time-date_relationship'
+        endDateId:
+          $ref: '../time/date.yaml#/JsonApiModel_time-date_relationship'
+        schoolYearId:
+          $ref: '../time/schoolYear.yaml#/JsonApiModel_time-schoolYear_relationship'
   required:
     - type
     - id
-    - attributes  
+    - attributes
 
 JsonApiModel_time-month_type:
   type: string

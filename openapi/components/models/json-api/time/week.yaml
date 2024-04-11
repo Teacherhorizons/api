@@ -17,8 +17,8 @@ JsonApiModel_time-week:
           $ref: '../../library/time/week.yaml#/time-week_isMostRecentComplete'
         isCurrent:
           $ref: '../../library/time/week.yaml#/time-week_isCurrent'
-        numberOfNewAdviserInterviews:
-          $ref: '../../library/time/week.yaml#/time-week_numberOfNewAdviserInterviews'
+        numberOfAdviserInterviews:
+          $ref: '../../library/time/week.yaml#/time-week_numberOfAdviserInterviews'
         numberOfNewApplications:
           $ref: '../../library/time/week.yaml#/time-week_numberOfNewApplications'
         numberOfNewAtsLraSubmissions:
@@ -83,5 +83,3 @@ JsonApiModel_time-week_relationship:
         - id
   required:
     - data
-
-

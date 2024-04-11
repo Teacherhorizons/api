@@ -13,8 +13,8 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_isMostRecentComplete'
     isCurrent:
       $ref: '../../library/time/date.yaml#/time-date_isCurrent'
-    numberOfNewAdviserInterviews:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAdviserInterviews'
+    numberOfAdviserInterviews:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAdviserInterviews'
     numberOfNewApplications:
       $ref: '../../library/time/date.yaml#/time-date_numberOfNewApplications'
     numberOfNewAtsLraSubmissions:
@@ -44,7 +44,7 @@ SimpleModel_time-date:
     - name
     - isMostRecentComplete
     - isCurrent
-    - numberOfNewAdviserInterviews
+    - numberOfAdviserInterviews
     - numberOfNewApplications
     - numberOfNewAtsLraSubmissions
     - numberOfNewAtsNotProgressedByLras
