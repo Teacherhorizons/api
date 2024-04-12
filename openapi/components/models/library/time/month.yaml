@@ -73,13 +73,13 @@ time-month_numberOfNewAtsJobOffers:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-month_numberOfNewAtsPlacements:
+time-month_numberOfAtsPlacements:
   type: integer
   example: 1
   description: |
     <span class="dw"></span>
 
-time-month_numberOfNewAtsDropouts:
+time-month_numberOfAtsDropouts:
   type: integer
   example: 1
   description: |
@@ -1158,42 +1158,217 @@ time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>"
+    <span class="type-formula"></span>
 
 time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsLost:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>"
+    <span class="type-new"></span>
 
 time-month_incomeFromGlobalSltAndExecutiveSearchPlacementsNet:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>"
+    <span class="type-formula"></span>
 
 time-month_averageGlobalSltAndExecutiveSearchPlacementFeeGained:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>"
+    <span class="type-formula"></span>
 
 time-month_averageGlobalSltAndExecutiveSearchPlacementFeeLost:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>"
+    <span class="type-formula"></span>
 
 time-month_averageGlobalSltAndExecutiveSearchPlacementFeeNet:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>"
+    <span class="type-formula"></span>
+
+time-month_numberOfActivatedTeachersWithAtLeast1Reference:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfBusinessCalls:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerCandidateResponses:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerInterviewRequests:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerInterviews:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerJobOffers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfPageViews:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfReturningWebsiteUsers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfSignedUpTeachers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfWebsiteUsers:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfNewsletterSubscribersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfNewsletterSubscribersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfNewsletterSubscribersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfCommunityResponsesGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfCommunityResponsesLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfCommunityResponsesNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfFteLrasGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfFteLrasLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfFteLrasNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfAdvisersAndLrasGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfAdvisersAndLrasLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfAdvisersAndLrasNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfFteAdvisersAndLrasGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfFteAdvisersAndLrasLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfFteAdvisersAndLrasNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
 
 # relationship attributes
 time-month_startDateId:
