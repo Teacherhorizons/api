@@ -27,10 +27,10 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsSchoolInterviews'
     numberOfNewAtsJobOffers:
       $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsJobOffers'
-    numberOfNewAtsPlacements:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsPlacements'
-    numberOfNewAtsDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsDropouts'
+    numberOfAtsPlacements:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacements'
+    numberOfAtsDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
@@ -333,6 +333,56 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltAndExecutiveSearchPlacementFeeLost'
     averageGlobalSltAndExecutiveSearchPlacementFeeNet:
       $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltAndExecutiveSearchPlacementFeeNet'
+    numberOfActivatedTeachersWithAtLeast1Reference:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActivatedTeachersWithAtLeast1Reference'
+    numberOfBusinessCalls:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfBusinessCalls'
+    numberOfExplorerCandidateResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerCandidateResponses'
+    numberOfExplorerInterviewRequests:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerInterviewRequests'
+    numberOfExplorerInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerInterviews'
+    numberOfExplorerJobOffers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerJobOffers'
+    numberOfPageViews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfPageViews'
+    numberOfReturningWebsiteUsers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReturningWebsiteUsers'
+    numberOfSignedUpTeachers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSignedUpTeachers'
+    numberOfWebsiteUsers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWebsiteUsers'
+    numberOfNewsletterSubscribersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewsletterSubscribersGained'
+    numberOfNewsletterSubscribersLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewsletterSubscribersLost'
+    numberOfNewsletterSubscribersNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfNewsletterSubscribersNet'
+    numberOfCommunityResponsesGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfCommunityResponsesGained'
+    numberOfCommunityResponsesLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfCommunityResponsesLost'
+    numberOfCommunityResponsesNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfCommunityResponsesNet'
+    numberOfFteLrasGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteLrasGained'
+    numberOfFteLrasLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteLrasLost'
+    numberOfFteLrasNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteLrasNet'
+    numberOfAdvisersAndLrasGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersAndLrasGained'
+    numberOfAdvisersAndLrasLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersAndLrasLost'
+    numberOfAdvisersAndLrasNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdvisersAndLrasNet'
+    numberOfFteAdvisersAndLrasGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasGained'
+    numberOfFteAdvisersAndLrasLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasLost'
+    numberOfFteAdvisersAndLrasNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -356,8 +406,8 @@ SimpleModel_time-month:
     - numberOfNewAtsRecommendations
     - numberOfNewAtsSchoolInterviews
     - numberOfNewAtsJobOffers
-    - numberOfNewAtsPlacements
-    - numberOfNewAtsDropouts
+    - numberOfAtsPlacements
+    - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
     - numberOfFacebookFollowersLost
     - numberOfFacebookFollowersNet
@@ -527,6 +577,31 @@ SimpleModel_time-month:
     - averageGlobalSltAndExecutiveSearchPlacementFeeGained
     - averageGlobalSltAndExecutiveSearchPlacementFeeLost
     - averageGlobalSltAndExecutiveSearchPlacementFeeNet
+    - numberOfActivatedTeachersWithAtLeast1Reference
+    - numberOfBusinessCalls
+    - numberOfExplorerCandidateResponses
+    - numberOfExplorerInterviewRequests
+    - numberOfExplorerInterviews
+    - numberOfExplorerJobOffers
+    - numberOfPageViews
+    - numberOfReturningWebsiteUsers
+    - numberOfSignedUpTeachers
+    - numberOfWebsiteUsers
+    - numberOfNewsletterSubscribersGained
+    - numberOfNewsletterSubscribersLost
+    - numberOfNewsletterSubscribersNet
+    - numberOfCommunityResponsesGained
+    - numberOfCommunityResponsesLost
+    - numberOfCommunityResponsesNet
+    - numberOfFteLrasGained
+    - numberOfFteLrasLost
+    - numberOfFteLrasNet
+    - numberOfAdvisersAndLrasGained
+    - numberOfAdvisersAndLrasLost
+    - numberOfAdvisersAndLrasNet
+    - numberOfFteAdvisersAndLrasGained
+    - numberOfFteAdvisersAndLrasLost
+    - numberOfFteAdvisersAndLrasNet
 
 # shared
 SimpleModel_time-month_id:

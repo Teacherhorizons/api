@@ -25,10 +25,10 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
     numberOfNewAtsJobOffers:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
-    numberOfNewAtsPlacements:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsPlacements'
-    numberOfNewAtsDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsDropouts'
+    numberOfAtsPlacements:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacements'
+    numberOfAtsDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
@@ -333,6 +333,56 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalSltAndExecutiveSearchPlacementFeeLost'
     averageGlobalSltAndExecutiveSearchPlacementFeeNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageGlobalSltAndExecutiveSearchPlacementFeeNet'
+    numberOfActivatedTeachersWithAtLeast1Reference:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActivatedTeachersWithAtLeast1Reference'
+    numberOfBusinessCalls:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfBusinessCalls'
+    numberOfExplorerCandidateResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidateResponses'
+    numberOfExplorerInterviewRequests:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerInterviewRequests'
+    numberOfExplorerInterviews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerInterviews'
+    numberOfExplorerJobOffers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerJobOffers'
+    numberOfPageViews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPageViews'
+    numberOfReturningWebsiteUsers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReturningWebsiteUsers'
+    numberOfSignedUpTeachers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSignedUpTeachers'
+    numberOfWebsiteUsers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWebsiteUsers'
+    numberOfNewsletterSubscribersGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewsletterSubscribersGained'
+    numberOfNewsletterSubscribersLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewsletterSubscribersLost'
+    numberOfNewsletterSubscribersNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewsletterSubscribersNet'
+    numberOfCommunityResponsesGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCommunityResponsesGained'
+    numberOfCommunityResponsesLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCommunityResponsesLost'
+    numberOfCommunityResponsesNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfCommunityResponsesNet'
+    numberOfFteLrasGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteLrasGained'
+    numberOfFteLrasLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteLrasLost'
+    numberOfFteLrasNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteLrasNet'
+    numberOfAdvisersAndLrasGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdvisersAndLrasGained'
+    numberOfAdvisersAndLrasLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdvisersAndLrasLost'
+    numberOfAdvisersAndLrasNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdvisersAndLrasNet'
+    numberOfFteAdvisersAndLrasGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteAdvisersAndLrasGained'
+    numberOfFteAdvisersAndLrasLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteAdvisersAndLrasLost'
+    numberOfFteAdvisersAndLrasNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteAdvisersAndLrasNet'
   required:
     - id
     - name
@@ -345,8 +395,8 @@ SimpleModel_time-schoolYear:
     - numberOfNewAtsRecommendations
     - numberOfNewAtsSchoolInterviews
     - numberOfNewAtsJobOffers
-    - numberOfNewAtsPlacements
-    - numberOfNewAtsDropouts
+    - numberOfAtsPlacements
+    - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
     - numberOfFacebookFollowersLost
     - numberOfFacebookFollowersNet
@@ -504,6 +554,31 @@ SimpleModel_time-schoolYear:
     - averageGlobalSltAndExecutiveSearchPlacementFeeGained
     - averageGlobalSltAndExecutiveSearchPlacementFeeLost
     - averageGlobalSltAndExecutiveSearchPlacementFeeNet
+    - numberOfActivatedTeachersWithAtLeast1Reference
+    - numberOfBusinessCalls
+    - numberOfExplorerCandidateResponses
+    - numberOfExplorerInterviewRequests
+    - numberOfExplorerInterviews
+    - numberOfExplorerJobOffers
+    - numberOfPageViews
+    - numberOfReturningWebsiteUsers
+    - numberOfSignedUpTeachers
+    - numberOfWebsiteUsers
+    - numberOfNewsletterSubscribersGained
+    - numberOfNewsletterSubscribersLost
+    - numberOfNewsletterSubscribersNet
+    - numberOfCommunityResponsesGained
+    - numberOfCommunityResponsesLost
+    - numberOfCommunityResponsesNet
+    - numberOfFteLrasGained
+    - numberOfFteLrasLost
+    - numberOfFteLrasNet
+    - numberOfAdvisersAndLrasGained
+    - numberOfAdvisersAndLrasLost
+    - numberOfAdvisersAndLrasNet
+    - numberOfFteAdvisersAndLrasGained
+    - numberOfFteAdvisersAndLrasLost
+    - numberOfFteAdvisersAndLrasNet
 
 # shared
 SimpleModel_time-schoolYear_id:
