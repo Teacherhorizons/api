@@ -13,18 +13,18 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
     numberOfAdviserInterviews:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdviserInterviews'
-    numberOfNewApplications:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
-    numberOfNewAtsLraSubmissions:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsLraSubmissions'
-    numberOfNewAtsNotProgressedByLras:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsNotProgressedByLras'
-    numberOfNewAtsRecommendations:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsRecommendations'
-    numberOfNewAtsSchoolInterviews:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
-    numberOfNewAtsJobOffers:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
+    numberOfApplications:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfApplications'
+    numberOfAtsLraSubmissions:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsLraSubmissions'
+    numberOfAtsNotProgressedByLras:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsNotProgressedByLras'
+    numberOfAtsRecommendations:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendations'
+    numberOfAtsSchoolInterviews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsSchoolInterviews'
+    numberOfAtsJobOffers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsJobOffers'
     numberOfAtsPlacements:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacements'
     numberOfAtsDropouts:
@@ -187,14 +187,14 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsLost'
     incomeFromPlacementsNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsNet'
-    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-    averageNewPlacementFeeAllBeforeDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllBeforeDropouts'
-    averageNewPlacementFeeAllAfterDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllAfterDropouts'
+    thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfPlacementsAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
+    averagePlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllBeforeDropouts'
+    averagePlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllAfterDropouts'
     numberOfPlacementsGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsGained'
     numberOfPlacementsLost:
@@ -389,12 +389,12 @@ SimpleModel_time-schoolYear:
     - isMostRecentComplete
     - isCurrent
     - numberOfAdviserInterviews
-    - numberOfNewApplications
-    - numberOfNewAtsLraSubmissions
-    - numberOfNewAtsNotProgressedByLras
-    - numberOfNewAtsRecommendations
-    - numberOfNewAtsSchoolInterviews
-    - numberOfNewAtsJobOffers
+    - numberOfApplications
+    - numberOfAtsLraSubmissions
+    - numberOfAtsNotProgressedByLras
+    - numberOfAtsRecommendations
+    - numberOfAtsSchoolInterviews
+    - numberOfAtsJobOffers
     - numberOfAtsPlacements
     - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
@@ -475,10 +475,10 @@ SimpleModel_time-schoolYear:
     - incomeFromPlacementsGained
     - incomeFromPlacementsLost
     - incomeFromPlacementsNet
-    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
-    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
-    - averageNewPlacementFeeAllBeforeDropouts
-    - averageNewPlacementFeeAllAfterDropouts
+    - thpercentageOfIncomeOfPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfPlacementsAllAfterDropouts
+    - averagePlacementFeeAllBeforeDropouts
+    - averagePlacementFeeAllAfterDropouts
     - numberOfPlacementsGained
     - numberOfPlacementsLost
     - numberOfPlacementsNet

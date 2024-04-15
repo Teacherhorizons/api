@@ -15,18 +15,18 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_isCurrent'
     numberOfAdviserInterviews:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserInterviews'
-    numberOfNewApplications:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewApplications'
-    numberOfNewAtsLraSubmissions:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsLraSubmissions'
-    numberOfNewAtsNotProgressedByLras:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsNotProgressedByLras'
-    numberOfNewAtsRecommendations:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsRecommendations'
-    numberOfNewAtsSchoolInterviews:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsSchoolInterviews'
-    numberOfNewAtsJobOffers:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsJobOffers'
+    numberOfApplications:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfApplications'
+    numberOfAtsLraSubmissions:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsLraSubmissions'
+    numberOfAtsNotProgressedByLras:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsNotProgressedByLras'
+    numberOfAtsRecommendations:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendations'
+    numberOfAtsSchoolInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsSchoolInterviews'
+    numberOfAtsJobOffers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsJobOffers'
     numberOfAtsPlacements:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacements'
     numberOfAtsDropouts:
@@ -187,14 +187,14 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsLost'
     incomeFromPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsNet'
-    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-    averageNewPlacementFeeAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
-    averageNewPlacementFeeAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
+    thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfPlacementsAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
+    averagePlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllBeforeDropouts'
+    averagePlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllAfterDropouts'
     numberOfPlacementsGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfPlacementsGained'
     numberOfPlacementsLost:
@@ -400,12 +400,12 @@ SimpleModel_time-month:
     - endDateId
     - schoolYearId
     - numberOfAdviserInterviews
-    - numberOfNewApplications
-    - numberOfNewAtsLraSubmissions
-    - numberOfNewAtsNotProgressedByLras
-    - numberOfNewAtsRecommendations
-    - numberOfNewAtsSchoolInterviews
-    - numberOfNewAtsJobOffers
+    - numberOfApplications
+    - numberOfAtsLraSubmissions
+    - numberOfAtsNotProgressedByLras
+    - numberOfAtsRecommendations
+    - numberOfAtsSchoolInterviews
+    - numberOfAtsJobOffers
     - numberOfAtsPlacements
     - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
@@ -504,10 +504,10 @@ SimpleModel_time-month:
     - incomeFromPlacementsGained
     - incomeFromPlacementsLost
     - incomeFromPlacementsNet
-    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
-    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
-    - averageNewPlacementFeeAllBeforeDropouts
-    - averageNewPlacementFeeAllAfterDropouts
+    - thpercentageOfIncomeOfPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfPlacementsAllAfterDropouts
+    - averagePlacementFeeAllBeforeDropouts
+    - averagePlacementFeeAllAfterDropouts
     - numberOfPlacementsGained
     - numberOfPlacementsLost
     - numberOfPlacementsNet

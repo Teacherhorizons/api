@@ -21,12 +21,12 @@ JsonApiModel_time-date:
           $ref: '../../library/time/date.yaml#/time-date_isCurrent'
         numberOfAdviserInterviews:
           $ref: '../../library/time/date.yaml#/time-date_numberOfAdviserInterviews'
-        numberOfNewAtsRecommendations:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsRecommendations'
-        numberOfNewAtsSchoolInterviews:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsSchoolInterviews'
-        numberOfNewAtsJobOffers:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsJobOffers'
+        numberOfAtsRecommendations:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsRecommendations'
+        numberOfAtsSchoolInterviews:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsSchoolInterviews'
+        numberOfAtsJobOffers:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsJobOffers'
         numberOfAtsPlacements:
           $ref: '../../library/time/date.yaml#/time-date_numberOfAtsPlacements'
         numberOfAtsDropouts:
@@ -38,12 +38,12 @@ JsonApiModel_time-date:
           $ref: '../../library/time/date.yaml#/time-date_monthId'
         schoolYearId:
           $ref: '../../library/time/date.yaml#/time-date_schoolYearId'
-        numberOfNewApplications:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewApplications'
-        numberOfNewAtsLraSubmissions:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsLraSubmissions'
-        numberOfNewAtsNotProgressedByLras:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsNotProgressedByLras'
+        numberOfApplications:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfApplications'
+        numberOfAtsLraSubmissions:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsLraSubmissions'
+        numberOfAtsNotProgressedByLras:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsNotProgressedByLras'
     relationships:
       type: object
       additionalProperties: false

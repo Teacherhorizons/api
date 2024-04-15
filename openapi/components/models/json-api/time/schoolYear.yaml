@@ -19,18 +19,18 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_isCurrent'
         numberOfAdviserInterviews:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdviserInterviews'
-        numberOfNewApplications:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewApplications'
-        numberOfNewAtsLraSubmissions:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsLraSubmissions'
-        numberOfNewAtsNotProgressedByLras:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsNotProgressedByLras'
-        numberOfNewAtsRecommendations:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsRecommendations'
-        numberOfNewAtsSchoolInterviews:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsSchoolInterviews'
-        numberOfNewAtsJobOffers:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfNewAtsJobOffers'
+        numberOfApplications:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfApplications'
+        numberOfAtsLraSubmissions:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsLraSubmissions'
+        numberOfAtsNotProgressedByLras:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsNotProgressedByLras'
+        numberOfAtsRecommendations:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendations'
+        numberOfAtsSchoolInterviews:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsSchoolInterviews'
+        numberOfAtsJobOffers:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsJobOffers'
         numberOfAtsPlacements:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacements'
         numberOfAtsDropouts:
@@ -193,14 +193,14 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsLost'
         incomeFromPlacementsNet:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsNet'
-        thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-        thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-        averageNewPlacementFeeAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllBeforeDropouts'
-        averageNewPlacementFeeAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllAfterDropouts'
+        thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
+        thpercentageOfIncomeOfPlacementsAllAfterDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
+        averagePlacementFeeAllBeforeDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllBeforeDropouts'
+        averagePlacementFeeAllAfterDropouts:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllAfterDropouts'
         numberOfPlacementsGained:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsGained'
         numberOfPlacementsLost:
