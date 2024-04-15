@@ -15,18 +15,18 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_isCurrent'
     numberOfAdviserInterviews:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserInterviews'
-    numberOfNewApplications:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewApplications'
-    numberOfNewAtsLraSubmissions:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsLraSubmissions'
-    numberOfNewAtsNotProgressedByLras:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsNotProgressedByLras'
-    numberOfNewAtsRecommendations:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsRecommendations'
-    numberOfNewAtsSchoolInterviews:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsSchoolInterviews'
-    numberOfNewAtsJobOffers:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfNewAtsJobOffers'
+    numberOfApplications:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfApplications'
+    numberOfAtsLraSubmissions:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsLraSubmissions'
+    numberOfAtsNotProgressedByLras:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsNotProgressedByLras'
+    numberOfAtsRecommendations:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendations'
+    numberOfAtsSchoolInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsSchoolInterviews'
+    numberOfAtsJobOffers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsJobOffers'
     numberOfAtsPlacements:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacements'
     numberOfAtsDropouts:
@@ -187,14 +187,14 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsLost'
     incomeFromPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsNet'
-    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-    averageNewPlacementFeeAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
-    averageNewPlacementFeeAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
+    thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfPlacementsAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
+    averagePlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllBeforeDropouts'
+    averagePlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllAfterDropouts'
     numberOfPlacementsGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfPlacementsGained'
     numberOfPlacementsLost:
@@ -383,6 +383,116 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasLost'
     numberOfFteAdvisersAndLrasNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasNet'
+    numberOfReportedSiteDiscoveriesViaGoogle:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaGoogle'
+    percentageOfReportedSiteDiscoveriesViaGoogle:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaGoogle'
+    numberOfReportedSiteDiscoveriesViaBlogWebsite:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaBlogWebsite'
+    percentageOfReportedSiteDiscoveriesViaBlogWebsite:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaBlogWebsite'
+    numberOfReportedSiteDiscoveriesViaConferenceFair:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaConferenceFair'
+    percentageOfReportedSiteDiscoveriesViaConferenceFair:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaConferenceFair'
+    numberOfReportedSiteDiscoveriesViaFacebook:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFacebook'
+    percentageOfReportedSiteDiscoveriesViaFacebook:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFacebook'
+    numberOfReportedSiteDiscoveriesViaFriendColleague:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFriendColleague'
+    percentageOfReportedSiteDiscoveriesViaFriendColleague:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFriendColleague'
+    numberOfReportedSiteDiscoveriesViaLinkedin:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaLinkedin'
+    percentageOfReportedSiteDiscoveriesViaLinkedin:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaLinkedin'
+    numberOfReportedSiteDiscoveriesViaOther:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaOther'
+    percentageOfReportedSiteDiscoveriesViaOther:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaOther'
+    numberOfReportedSiteDiscoveriesViaTwitter:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaTwitter'
+    percentageOfReportedSiteDiscoveriesViaTwitter:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaTwitter'
+    numberOfReportedSiteDiscoveriesViaInstagram:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaInstagram'
+    percentageOfReportedSiteDiscoveriesViaInstagram:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaInstagram'
+    numberOfReportedSiteDiscoveriesViaYoutube:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaYoutube'
+    percentageOfReportedSiteDiscoveriesViaYoutube:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaYoutube'
+    numberOfReportedSiteDiscoveriesViaTiktok:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaTiktok'
+    percentageOfReportedSiteDiscoveriesViaTiktok:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaTiktok'
+    numberOfFteAdvisersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersGained'
+    numberOfFteAdvisersLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersLost'
+    numberOfFteAdvisersNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersNet'
+    averageGlobalTeacherPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalTeacherPlacementFeeGained'
+    averageGlobalTeacherPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalTeacherPlacementFeeLost'
+    averageGlobalTeacherPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalTeacherPlacementFeeNet'
+    numberOfGlobalMiddleManagerPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalMiddleManagerPlacementsGained'
+    numberOfGlobalMiddleManagerPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalMiddleManagerPlacementsLost'
+    numberOfGlobalMiddleManagerPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalMiddleManagerPlacementsNet'
+    averageGlobalMiddleManagerPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalMiddleManagerPlacementFeeGained'
+    averageGlobalMiddleManagerPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalMiddleManagerPlacementFeeLost'
+    averageGlobalMiddleManagerPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalMiddleManagerPlacementFeeNet'
+    numberOfGlobalSltSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltSearchPlacementsGained'
+    numberOfGlobalSltSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltSearchPlacementsLost'
+    numberOfGlobalSltSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltSearchPlacementsNet'
+    incomeFromGlobalSltSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltSearchPlacementsGained'
+    incomeFromGlobalSltSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltSearchPlacementsLost'
+    incomeFromGlobalSltSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromGlobalSltSearchPlacementsNet'
+    averageGlobalSltSearchPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltSearchPlacementFeeGained'
+    averageGlobalSltSearchPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltSearchPlacementFeeLost'
+    averageGlobalSltSearchPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageGlobalSltSearchPlacementFeeNet'
+    numberOfExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExecutiveSearchPlacementsGained'
+    numberOfExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExecutiveSearchPlacementsLost'
+    numberOfExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExecutiveSearchPlacementsNet'
+    incomeFromExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExecutiveSearchPlacementsGained'
+    incomeFromExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExecutiveSearchPlacementsLost'
+    incomeFromExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExecutiveSearchPlacementsNet'
+    averageExecutiveSearchPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageExecutiveSearchPlacementFeeGained'
+    averageExecutiveSearchPlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averageExecutiveSearchPlacementFeeLost'
+    averageExecutiveSearchPlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averageExecutiveSearchPlacementFeeNet'
+    numberOfGlobalSltAndExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsGained'
+    numberOfGlobalSltAndExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsLost'
+    numberOfGlobalSltAndExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -400,12 +510,12 @@ SimpleModel_time-month:
     - endDateId
     - schoolYearId
     - numberOfAdviserInterviews
-    - numberOfNewApplications
-    - numberOfNewAtsLraSubmissions
-    - numberOfNewAtsNotProgressedByLras
-    - numberOfNewAtsRecommendations
-    - numberOfNewAtsSchoolInterviews
-    - numberOfNewAtsJobOffers
+    - numberOfApplications
+    - numberOfAtsLraSubmissions
+    - numberOfAtsNotProgressedByLras
+    - numberOfAtsRecommendations
+    - numberOfAtsSchoolInterviews
+    - numberOfAtsJobOffers
     - numberOfAtsPlacements
     - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
@@ -504,10 +614,10 @@ SimpleModel_time-month:
     - incomeFromPlacementsGained
     - incomeFromPlacementsLost
     - incomeFromPlacementsNet
-    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
-    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
-    - averageNewPlacementFeeAllBeforeDropouts
-    - averageNewPlacementFeeAllAfterDropouts
+    - thpercentageOfIncomeOfPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfPlacementsAllAfterDropouts
+    - averagePlacementFeeAllBeforeDropouts
+    - averagePlacementFeeAllAfterDropouts
     - numberOfPlacementsGained
     - numberOfPlacementsLost
     - numberOfPlacementsNet
@@ -602,6 +712,61 @@ SimpleModel_time-month:
     - numberOfFteAdvisersAndLrasGained
     - numberOfFteAdvisersAndLrasLost
     - numberOfFteAdvisersAndLrasNet
+    - numberOfReportedSiteDiscoveriesViaGoogle
+    - percentageOfReportedSiteDiscoveriesViaGoogle
+    - numberOfReportedSiteDiscoveriesViaBlogWebsite
+    - percentageOfReportedSiteDiscoveriesViaBlogWebsite
+    - numberOfReportedSiteDiscoveriesViaConferenceFair
+    - percentageOfReportedSiteDiscoveriesViaConferenceFair
+    - numberOfReportedSiteDiscoveriesViaFacebook
+    - percentageOfReportedSiteDiscoveriesViaFacebook
+    - numberOfReportedSiteDiscoveriesViaFriendColleague
+    - percentageOfReportedSiteDiscoveriesViaFriendColleague
+    - numberOfReportedSiteDiscoveriesViaLinkedin
+    - percentageOfReportedSiteDiscoveriesViaLinkedin
+    - numberOfReportedSiteDiscoveriesViaOther
+    - percentageOfReportedSiteDiscoveriesViaOther
+    - numberOfReportedSiteDiscoveriesViaTwitter
+    - percentageOfReportedSiteDiscoveriesViaTwitter
+    - numberOfReportedSiteDiscoveriesViaInstagram
+    - percentageOfReportedSiteDiscoveriesViaInstagram
+    - numberOfReportedSiteDiscoveriesViaYoutube
+    - percentageOfReportedSiteDiscoveriesViaYoutube
+    - numberOfReportedSiteDiscoveriesViaTiktok
+    - percentageOfReportedSiteDiscoveriesViaTiktok
+    - numberOfFteAdvisersGained
+    - numberOfFteAdvisersLost
+    - numberOfFteAdvisersNet
+    - averageGlobalTeacherPlacementFeeGained
+    - averageGlobalTeacherPlacementFeeLost
+    - averageGlobalTeacherPlacementFeeNet
+    - numberOfGlobalMiddleManagerPlacementsGained
+    - numberOfGlobalMiddleManagerPlacementsLost
+    - numberOfGlobalMiddleManagerPlacementsNet
+    - averageGlobalMiddleManagerPlacementFeeGained
+    - averageGlobalMiddleManagerPlacementFeeLost
+    - averageGlobalMiddleManagerPlacementFeeNet
+    - numberOfGlobalSltSearchPlacementsGained
+    - numberOfGlobalSltSearchPlacementsLost
+    - numberOfGlobalSltSearchPlacementsNet
+    - incomeFromGlobalSltSearchPlacementsGained
+    - incomeFromGlobalSltSearchPlacementsLost
+    - incomeFromGlobalSltSearchPlacementsNet
+    - averageGlobalSltSearchPlacementFeeGained
+    - averageGlobalSltSearchPlacementFeeLost
+    - averageGlobalSltSearchPlacementFeeNet
+    - numberOfExecutiveSearchPlacementsGained
+    - numberOfExecutiveSearchPlacementsLost
+    - numberOfExecutiveSearchPlacementsNet
+    - incomeFromExecutiveSearchPlacementsGained
+    - incomeFromExecutiveSearchPlacementsLost
+    - incomeFromExecutiveSearchPlacementsNet
+    - averageExecutiveSearchPlacementFeeGained
+    - averageExecutiveSearchPlacementFeeLost
+    - averageExecutiveSearchPlacementFeeNet
+    - numberOfGlobalSltAndExecutiveSearchPlacementsGained
+    - numberOfGlobalSltAndExecutiveSearchPlacementsLost
+    - numberOfGlobalSltAndExecutiveSearchPlacementsNet
 
 # shared
 SimpleModel_time-month_id:

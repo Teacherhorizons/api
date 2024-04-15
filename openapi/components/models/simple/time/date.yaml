@@ -15,18 +15,18 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_isCurrent'
     numberOfAdviserInterviews:
       $ref: '../../library/time/date.yaml#/time-date_numberOfAdviserInterviews'
-    numberOfNewApplications:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewApplications'
-    numberOfNewAtsLraSubmissions:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsLraSubmissions'
-    numberOfNewAtsNotProgressedByLras:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsNotProgressedByLras'
-    numberOfNewAtsRecommendations:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsRecommendations'
-    numberOfNewAtsSchoolInterviews:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsSchoolInterviews'
-    numberOfNewAtsJobOffers:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfNewAtsJobOffers'
+    numberOfApplications:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfApplications'
+    numberOfAtsLraSubmissions:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsLraSubmissions'
+    numberOfAtsNotProgressedByLras:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsNotProgressedByLras'
+    numberOfAtsRecommendations:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsRecommendations'
+    numberOfAtsSchoolInterviews:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsSchoolInterviews'
+    numberOfAtsJobOffers:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsJobOffers'
     numberOfAtsPlacements:
       $ref: '../../library/time/date.yaml#/time-date_numberOfAtsPlacements'
     numberOfAtsDropouts:
@@ -45,12 +45,12 @@ SimpleModel_time-date:
     - isMostRecentComplete
     - isCurrent
     - numberOfAdviserInterviews
-    - numberOfNewApplications
-    - numberOfNewAtsLraSubmissions
-    - numberOfNewAtsNotProgressedByLras
-    - numberOfNewAtsRecommendations
-    - numberOfNewAtsSchoolInterviews
-    - numberOfNewAtsJobOffers
+    - numberOfApplications
+    - numberOfAtsLraSubmissions
+    - numberOfAtsNotProgressedByLras
+    - numberOfAtsRecommendations
+    - numberOfAtsSchoolInterviews
+    - numberOfAtsJobOffers
     - numberOfAtsPlacements
     - numberOfAtsDropouts
     - weekId
