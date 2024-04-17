@@ -27,10 +27,6 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_numberOfAtsSchoolInterviews'
     numberOfAtsJobOffers:
       $ref: '../../library/time/date.yaml#/time-date_numberOfAtsJobOffers'
-    numberOfAtsPlacements:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsPlacements'
-    numberOfAtsDropouts:
-      $ref: '../../library/time/date.yaml#/time-date_numberOfAtsDropouts'
     # relationship attributes
     weekId:
       $ref: '../../library/time/date.yaml#/time-date_weekId'
@@ -51,8 +47,6 @@ SimpleModel_time-date:
     - numberOfAtsRecommendations
     - numberOfAtsSchoolInterviews
     - numberOfAtsJobOffers
-    - numberOfAtsPlacements
-    - numberOfAtsDropouts
     - weekId
     - monthId
     - schoolYearId

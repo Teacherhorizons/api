@@ -25,10 +25,6 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsSchoolInterviews'
     numberOfAtsJobOffers:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsJobOffers'
-    numberOfAtsPlacements:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsPlacements'
-    numberOfAtsDropouts:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
@@ -521,8 +517,6 @@ SimpleModel_time-schoolYear:
     - numberOfAtsRecommendations
     - numberOfAtsSchoolInterviews
     - numberOfAtsJobOffers
-    - numberOfAtsPlacements
-    - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
     - numberOfFacebookFollowersLost
     - numberOfFacebookFollowersNet
