@@ -27,10 +27,6 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAtsSchoolInterviews'
     numberOfAtsJobOffers:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAtsJobOffers'
-    numberOfAtsPlacements:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsPlacements'
-    numberOfAtsDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsDropouts'
     numberOfFacebookFollowersGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFacebookFollowersGained'
     numberOfFacebookFollowersLost:
@@ -387,22 +383,22 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaGoogle'
     percentageOfReportedSiteDiscoveriesViaGoogle:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaGoogle'
-    numberOfReportedSiteDiscoveriesViaBlogWebsite:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaBlogWebsite'
-    percentageOfReportedSiteDiscoveriesViaBlogWebsite:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaBlogWebsite'
-    numberOfReportedSiteDiscoveriesViaConferenceFair:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaConferenceFair'
-    percentageOfReportedSiteDiscoveriesViaConferenceFair:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaConferenceFair'
+    numberOfReportedSiteDiscoveriesViaBlogOrWebsite:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaBlogOrWebsite'
+    percentageOfReportedSiteDiscoveriesViaBlogOrWebsite:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaBlogOrWebsite'
+    numberOfReportedSiteDiscoveriesViaConferenceOrFair:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaConferenceOrFair'
+    percentageOfReportedSiteDiscoveriesViaConferenceOrFair:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaConferenceOrFair'
     numberOfReportedSiteDiscoveriesViaFacebook:
       $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFacebook'
     percentageOfReportedSiteDiscoveriesViaFacebook:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFacebook'
-    numberOfReportedSiteDiscoveriesViaFriendColleague:
-      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFriendColleague'
-    percentageOfReportedSiteDiscoveriesViaFriendColleague:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFriendColleague'
+    numberOfReportedSiteDiscoveriesViaFriendOrColleague:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFriendOrColleague'
+    percentageOfReportedSiteDiscoveriesViaFriendOrColleague:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFriendOrColleague'
     numberOfReportedSiteDiscoveriesViaLinkedin:
       $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaLinkedin'
     percentageOfReportedSiteDiscoveriesViaLinkedin:
@@ -495,6 +491,18 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsLost'
     numberOfGlobalSltAndExecutiveSearchPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsNet'
+    numberOfUniqueUsersClarity:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfUniqueUsersClarity'
+    numberOfSessionsClarity:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSessionsClarity'
+    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
+    averageNewPlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
+    averageNewPlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -518,8 +526,6 @@ SimpleModel_time-month:
     - numberOfAtsRecommendations
     - numberOfAtsSchoolInterviews
     - numberOfAtsJobOffers
-    - numberOfAtsPlacements
-    - numberOfAtsDropouts
     - numberOfFacebookFollowersGained
     - numberOfFacebookFollowersLost
     - numberOfFacebookFollowersNet
@@ -716,14 +722,14 @@ SimpleModel_time-month:
     - numberOfFteAdvisersAndLrasNet
     - numberOfReportedSiteDiscoveriesViaGoogle
     - percentageOfReportedSiteDiscoveriesViaGoogle
-    - numberOfReportedSiteDiscoveriesViaBlogWebsite
-    - percentageOfReportedSiteDiscoveriesViaBlogWebsite
-    - numberOfReportedSiteDiscoveriesViaConferenceFair
-    - percentageOfReportedSiteDiscoveriesViaConferenceFair
+    - numberOfReportedSiteDiscoveriesViaBlogOrWebsite
+    - percentageOfReportedSiteDiscoveriesViaBlogOrWebsite
+    - numberOfReportedSiteDiscoveriesViaConferenceOrFair
+    - percentageOfReportedSiteDiscoveriesViaConferenceOrFair
     - numberOfReportedSiteDiscoveriesViaFacebook
     - percentageOfReportedSiteDiscoveriesViaFacebook
-    - numberOfReportedSiteDiscoveriesViaFriendColleague
-    - percentageOfReportedSiteDiscoveriesViaFriendColleague
+    - numberOfReportedSiteDiscoveriesViaFriendOrColleague
+    - percentageOfReportedSiteDiscoveriesViaFriendOrColleague
     - numberOfReportedSiteDiscoveriesViaLinkedin
     - percentageOfReportedSiteDiscoveriesViaLinkedin
     - numberOfReportedSiteDiscoveriesViaOther
@@ -769,6 +775,14 @@ SimpleModel_time-month:
     - numberOfGlobalSltAndExecutiveSearchPlacementsGained
     - numberOfGlobalSltAndExecutiveSearchPlacementsLost
     - numberOfGlobalSltAndExecutiveSearchPlacementsNet
+    - numberOfUniqueUsersClarity
+    - numberOfSessionsClarity
+    - adviserRetentionRate
+    - lraRetentionRate
+    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
+    - averageNewPlacementFeeAllBeforeDropouts
+    - averageNewPlacementFeeAllAfterDropouts
 
 # shared
 SimpleModel_time-month_id:

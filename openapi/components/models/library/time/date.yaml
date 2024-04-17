@@ -73,17 +73,77 @@ time-date_numberOfAtsJobOffers:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-date_numberOfAtsPlacements:
+time-date_numberOfGlobalJobsGained:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
 
-time-date_numberOfAtsDropouts:
+time-date_numberOfGlobalJobsLost:
   type: integer
   example: 1
   description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
     <span class="dw"></span>
+
+time-date_numberOfGlobalJobsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-date_numberOfBasicJobsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-date_numberOfBasicJobsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
+time-date_numberOfBasicJobsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>
+
+time-date_numberOfFeaturedJobsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>   
+
+time-date_numberOfFeaturedJobsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>  
+
+time-date_numberOfFeaturedJobsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+    <span class="dw"></span>  
 
 # relationship attributes
 time-date_weekId:

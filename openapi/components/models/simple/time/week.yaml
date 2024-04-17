@@ -25,10 +25,24 @@ SimpleModel_time-week:
       $ref: '../../library/time/week.yaml#/time-week_numberOfAtsSchoolInterviews'
     numberOfAtsJobOffers:
       $ref: '../../library/time/week.yaml#/time-week_numberOfAtsJobOffers'
-    numberOfAtsPlacements:
-      $ref: '../../library/time/week.yaml#/time-week_numberOfAtsPlacements'
-    numberOfAtsDropouts:
-      $ref: '../../library/time/week.yaml#/time-week_numberOfAtsDropouts'
+    numberOfGlobalJobsGained:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfGlobalJobsGained'
+    numberOfGlobalJobsLost:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfGlobalJobsLost'
+    numberOfGlobalJobsNet:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfGlobalJobsNet'
+    numberOfBasicJobsGained:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfGlobalJobsGained'
+    numberOfBasicJobsLost:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsLost'
+    numberOfBasicJobsNet:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsNet'
+    numberOfFeaturedJobsGained:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsGained'
+    numberOfFeaturedJobsLost:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsLost'
+    numberOfFeaturedJobsNet:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsNet'
   required:
     - id
     - name
@@ -41,8 +55,15 @@ SimpleModel_time-week:
     - numberOfAtsRecommendations
     - numberOfAtsSchoolInterviews
     - numberOfAtsJobOffers
-    - numberOfAtsPlacements
-    - numberOfAtsDropouts
+    - numberOfGlobalJobsGained
+    - numberOfGlobalJobsLost
+    - numberOfGlobalJobsNet
+    - numberOfBasicJobsGained
+    - numberOfBasicJobsLost
+    - numberOfBasicJobsNet
+    - numberOfFeaturedJobsGained
+    - numberOfFeaturedJobsLost
+    - numberOfFeaturedJobsNet
 
 # shared
 SimpleModel_time-week_id:

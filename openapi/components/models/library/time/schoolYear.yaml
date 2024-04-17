@@ -67,18 +67,6 @@ time-schoolYear_numberOfAtsJobOffers:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-schoolYear_numberOfAtsPlacements:
-  type: integer
-  example: 1
-  description: |
-    <span class="dw"></span>
-
-time-schoolYear_numberOfAtsDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="dw"></span>
-
 time-schoolYear_numberOfFacebookFollowersGained:
   type: integer
   example: 1
@@ -404,7 +392,7 @@ time-schoolYear_numberOfAmbassadorsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new(not-additive)"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithCommunityResponsesLost:
@@ -412,7 +400,7 @@ time-schoolYear_numberOfAmbassadorsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new(not-additive)"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithCommunityResponsesNet:
@@ -1389,7 +1377,6 @@ time-schoolYear_numberOfFteAdvisersAndLrasNet:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-
 time-schoolYear_numberOfReportedSiteDiscoveriesViaGoogle:
   type: integer
   example: 1
@@ -1406,7 +1393,7 @@ time-schoolYear_percentageOfReportedSiteDiscoveriesViaGoogle:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-schoolYear_numberOfReportedSiteDiscoveriesViaBlogWebsite:
+time-schoolYear_numberOfReportedSiteDiscoveriesViaBlogOrWebsite:
   type: integer
   example: 1
   description: |
@@ -1414,7 +1401,7 @@ time-schoolYear_numberOfReportedSiteDiscoveriesViaBlogWebsite:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-schoolYear_percentageOfReportedSiteDiscoveriesViaBlogWebsite:
+time-schoolYear_percentageOfReportedSiteDiscoveriesViaBlogOrWebsite:
   type: integer
   example: 1
   description: |
@@ -1422,7 +1409,7 @@ time-schoolYear_percentageOfReportedSiteDiscoveriesViaBlogWebsite:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-schoolYear_numberOfReportedSiteDiscoveriesViaConferenceFair:
+time-schoolYear_numberOfReportedSiteDiscoveriesViaConferenceOrFair:
   type: integer
   example: 1
   description: |
@@ -1430,7 +1417,7 @@ time-schoolYear_numberOfReportedSiteDiscoveriesViaConferenceFair:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-schoolYear_percentageOfReportedSiteDiscoveriesViaConferenceFair:
+time-schoolYear_percentageOfReportedSiteDiscoveriesViaConferenceOrFair:
   type: integer
   example: 1
   description: |
@@ -1454,7 +1441,7 @@ time-schoolYear_percentageOfReportedSiteDiscoveriesViaFacebook:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-schoolYear_numberOfReportedSiteDiscoveriesViaFriendColleague:
+time-schoolYear_numberOfReportedSiteDiscoveriesViaFriendOrColleague:
   type: integer
   example: 1
   description: |
@@ -1462,7 +1449,7 @@ time-schoolYear_numberOfReportedSiteDiscoveriesViaFriendColleague:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-schoolYear_percentageOfReportedSiteDiscoveriesViaFriendColleague:
+time-schoolYear_percentageOfReportedSiteDiscoveriesViaFriendOrColleague:
   type: integer
   example: 1
   description: |
@@ -1586,7 +1573,6 @@ time-schoolYear_numberOfFteAdvisersNet:
   description: |
     <span class="metric"></span>
     <span class="type-formula"></span>
-
 
 time-schoolYear_averageGlobalTeacherPlacementFeeGained:
   type: integer
@@ -1792,6 +1778,62 @@ time-schoolYear_numberOfGlobalSltAndExecutiveSearchPlacementsLost:
     <span class="type-new"></span>
 
 time-schoolYear_numberOfGlobalSltAndExecutiveSearchPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_numberOfUniqueUsersClarity:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new-(not-additive)"></span>
+
+time-schoolYear_numberOfSessionsClarity:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_adviserRetentionRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-change-or-rate"></span>
+
+time-schoolYear_lraRetentionRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-change-or-rate"></span>
+
+time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_averageNewPlacementFeeAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_averageNewPlacementFeeAllAfterDropouts:
   type: integer
   example: 1
   description: |

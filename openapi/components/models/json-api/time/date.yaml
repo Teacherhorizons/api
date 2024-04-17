@@ -27,10 +27,24 @@ JsonApiModel_time-date:
           $ref: '../../library/time/date.yaml#/time-date_numberOfAtsSchoolInterviews'
         numberOfAtsJobOffers:
           $ref: '../../library/time/date.yaml#/time-date_numberOfAtsJobOffers'
-        numberOfAtsPlacements:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsPlacements'
-        numberOfAtsDropouts:
-          $ref: '../../library/time/date.yaml#/time-date_numberOfAtsDropouts' 
+        numberOfGlobalJobsGained:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfGlobalJobsGained'
+        numberOfGlobalJobsLost:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfGlobalJobsLost'
+        numberOfGlobalJobsNet:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfGlobalJobsNet'
+        numberOfBasicJobsGained:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfBasicJobsGained'
+        numberOfBasicJobsLost:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfBasicJobsLost'
+        numberOfBasicJobsNet:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfBasicJobsNet'
+        numberOfFeaturedJobsGained:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsGained'
+        numberOfFeaturedJobsLost:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsLost'
+        numberOfFeaturedJobsNet:
+          $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsNet'
         # relationship attributes
         weekId:
           $ref: '../../library/time/date.yaml#/time-date_weekId'
