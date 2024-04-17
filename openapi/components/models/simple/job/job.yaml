@@ -3,43 +3,43 @@ SimpleModel_job:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_job-job_id"
+      $ref: '#/SimpleModel_job-job_id'
     # simple attributes
     startDate:
-      $ref: "../../library/job/job.yaml#/job_startDate"
+      $ref: '../../library/job/job.yaml#/job_startDate'
     deadlineDate:
-      $ref: "../../library/job/job.yaml#/job_deadlineDate"
+      $ref: '../../library/job/job.yaml#/job_deadlineDate'
     advertExpiryDate:
-      $ref: "../../library/job/job.yaml#/job_advertExpiryDate"
+      $ref: '../../library/job/job.yaml#/job_advertExpiryDate'
     furtherInfo:
-      $ref: "../../library/job/job.yaml#/job_furtherInfo"
+      $ref: '../../library/job/job.yaml#/job_furtherInfo'
     title:
-      $ref: "../../library/job/job.yaml#/job_title"
+      $ref: '../../library/job/job.yaml#/job_title'
     excludeFromJobSearch:
-      $ref: "../../library/job/job.yaml#/job_excludeFromJobSearch"
+      $ref: '../../library/job/job.yaml#/job_excludeFromJobSearch'
     creationDate:
-      $ref: "../../library/job/job.yaml#/job_creationDate"
+      $ref: '../../library/job/job.yaml#/job_creationDate'
     latestUpdateDate:
-      $ref: "../../library/job/job.yaml#/job_latestUpdateDate"
-    isBoosted:
-      $ref: "../../library/job/job.yaml#/job_isBoosted"
+      $ref: '../../library/job/job.yaml#/job_latestUpdateDate'
+    isFeatured:
+      $ref: '../../library/job/job.yaml#/job_isFeatured'
     # relationship attributes
     subjectId:
-      $ref: "../../library/job/job.yaml#/job_subjectId"
+      $ref: '../../library/job/job.yaml#/job_subjectId'
     typeId:
-      $ref: "../../library/job/job.yaml#/job_typeId"
+      $ref: '../../library/job/job.yaml#/job_typeId'
     roleId:
-      $ref: "../../library/job/job.yaml#/job_roleId"
+      $ref: '../../library/job/job.yaml#/job_roleId'
     schoolId:
-      $ref: "../../library/job/job.yaml#/job_schoolId"
+      $ref: '../../library/job/job.yaml#/job_schoolId'
     creationUserId:
-      $ref: "../../library/job/job.yaml#/job_creationUserId"
+      $ref: '../../library/job/job.yaml#/job_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/job/job.yaml#/job_latestUpdateUserId"
+      $ref: '../../library/job/job.yaml#/job_latestUpdateUserId'
     thOwnerUserId:
-      $ref: "../../library/job/job.yaml#/job_thOwnerUserId"
+      $ref: '../../library/job/job.yaml#/job_thOwnerUserId'
     statusId:
-      $ref: "../../library/job/job.yaml#/job_statusId"
+      $ref: '../../library/job/job.yaml#/job_statusId'
   required:
     - id
     - name
