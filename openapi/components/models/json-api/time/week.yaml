@@ -43,6 +43,12 @@ JsonApiModel_time-week:
           $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsLost'
         numberOfBasicJobsNet:
           $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsNet'
+        numberOfFeaturedJobsGained:
+          $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsGained'
+        numberOfFeaturedJobsLost:
+          $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsLost'
+        numberOfFeaturedJobsNet:
+          $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsNet'
   required:
     - type
     - id

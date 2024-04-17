@@ -39,6 +39,12 @@ SimpleModel_time-date:
       $ref: '../../library/time/date.yaml#/time-date_numberOfBasicJobsLost'
     numberOfBasicJobsNet:
       $ref: '../../library/time/date.yaml#/time-date_numberOfBasicJobsNet'   
+    numberOfFeaturedJobsGained:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsGained'
+    numberOfFeaturedJobsLost:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsLost'
+    numberOfFeaturedJobsNet:
+      $ref: '../../library/time/date.yaml#/time-date_numberOfFeaturedJobsNet'
     # relationship attributes
     weekId:
       $ref: '../../library/time/date.yaml#/time-date_weekId'
@@ -65,6 +71,9 @@ SimpleModel_time-date:
     - numberOfBasicJobsGained
     - numberOfBasicJobsLost
     - numberOfBasicJobsNet
+    - numberOfFeaturedJobsGained
+    - numberOfFeaturedJobsLost
+    - numberOfFeaturedJobsNet
     - weekId
     - monthId
     - schoolYearId

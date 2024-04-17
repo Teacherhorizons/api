@@ -37,6 +37,12 @@ SimpleModel_time-week:
       $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsLost'
     numberOfBasicJobsNet:
       $ref: '../../library/time/week.yaml#/time-week_numberOfBasicJobsNet'
+    numberOfFeaturedJobsGained:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsGained'
+    numberOfFeaturedJobsLost:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsLost'
+    numberOfFeaturedJobsNet:
+      $ref: '../../library/time/week.yaml#/time-week_numberOfFeaturedJobsNet'
   required:
     - id
     - name
@@ -55,6 +61,9 @@ SimpleModel_time-week:
     - numberOfBasicJobsGained
     - numberOfBasicJobsLost
     - numberOfBasicJobsNet
+    - numberOfFeaturedJobsGained
+    - numberOfFeaturedJobsLost
+    - numberOfFeaturedJobsNet
 
 # shared
 SimpleModel_time-week_id:
