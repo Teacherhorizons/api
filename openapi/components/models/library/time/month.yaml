@@ -385,7 +385,7 @@ time-month_numberOfAmbassadorsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithCommunityResponsesLost:
@@ -1370,7 +1370,6 @@ time-month_numberOfFteAdvisersAndLrasNet:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-
 time-month_numberOfReportedSiteDiscoveriesViaGoogle:
   type: integer
   example: 1
@@ -1568,6 +1567,12 @@ time-month_numberOfFteAdvisersNet:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
+time-month_adviserRetentionRate:
+  type: number
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-change-or-rate"></span>
 
 time-month_averageGlobalTeacherPlacementFeeGained:
   type: integer

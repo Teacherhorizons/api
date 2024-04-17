@@ -63,8 +63,10 @@
       span[class='website'],
       span[class='dw'],
       span[class='metric'],
-      span[class='type-new'],
+      span[class='type-change-or-rate'],
       span[class='type-formula'],
+      span[class='type-new'],
+      span[class='type-new-not-additive'],
       span[class='type-point-in-time'] {
         padding: 3px 6px;
         text-align: center;
@@ -96,12 +98,12 @@
         content: 'Metric';
       }
 
-      .type-new {
-        background-color: #ffff00;
+      .type-change-or-rate {
+        background-color: #d5a6bd;
         color: black;
       }
-      .type-new::after {
-        content: 'New';
+      .type-change-or-rate::after {
+        content: 'Change / rate';
       }
       .type-formula {
         background-color: #f6b26b;
@@ -109,6 +111,20 @@
       }
       .type-formula::after {
         content: 'Formula';
+      }
+      .type-new {
+        background-color: #ffff00;
+        color: black;
+      }
+      .type-new::after {
+        content: 'New';
+      }
+      .type-new-not-additive {
+        background-color: #f1c232;
+        color: white;
+      }
+      .type-new-not-additive::after {
+        content: 'New (not additive)';
       }
       .type-point-in-time {
         background-color: #6d9eeb;
