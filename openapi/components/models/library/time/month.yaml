@@ -385,7 +385,7 @@ time-month_numberOfAmbassadorsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new(not-additive)"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithCommunityResponsesLost:
@@ -393,7 +393,7 @@ time-month_numberOfAmbassadorsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new(not-additive)"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithCommunityResponsesNet:
@@ -1387,7 +1387,7 @@ time-month_percentageOfReportedSiteDiscoveriesViaGoogle:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-month_numberOfReportedSiteDiscoveriesViaBlogWebsite:
+time-month_numberOfReportedSiteDiscoveriesViaBlogOrWebsite:
   type: integer
   example: 1
   description: |
@@ -1395,7 +1395,7 @@ time-month_numberOfReportedSiteDiscoveriesViaBlogWebsite:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-month_percentageOfReportedSiteDiscoveriesViaBlogWebsite:
+time-month_percentageOfReportedSiteDiscoveriesViaBlogOrWebsite:
   type: integer
   example: 1
   description: |
@@ -1403,7 +1403,7 @@ time-month_percentageOfReportedSiteDiscoveriesViaBlogWebsite:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-month_numberOfReportedSiteDiscoveriesViaConferenceFair:
+time-month_numberOfReportedSiteDiscoveriesViaConferenceOrFair:
   type: integer
   example: 1
   description: |
@@ -1411,7 +1411,7 @@ time-month_numberOfReportedSiteDiscoveriesViaConferenceFair:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-month_percentageOfReportedSiteDiscoveriesViaConferenceFair:
+time-month_percentageOfReportedSiteDiscoveriesViaConferenceOrFair:
   type: integer
   example: 1
   description: |
@@ -1435,7 +1435,7 @@ time-month_percentageOfReportedSiteDiscoveriesViaFacebook:
     <span class="type-formula"></span>
     <span class="dw"></span>
 
-time-month_numberOfReportedSiteDiscoveriesViaFriendColleague:
+time-month_numberOfReportedSiteDiscoveriesViaFriendOrColleague:
   type: integer
   example: 1
   description: |
@@ -1443,7 +1443,7 @@ time-month_numberOfReportedSiteDiscoveriesViaFriendColleague:
     <span class="type-new"></span>
     <span class="dw"></span>
 
-time-month_percentageOfReportedSiteDiscoveriesViaFriendColleague:
+time-month_percentageOfReportedSiteDiscoveriesViaFriendOrColleague:
   type: integer
   example: 1
   description: |
@@ -1773,6 +1773,62 @@ time-month_numberOfGlobalSltAndExecutiveSearchPlacementsLost:
     <span class="type-new"></span>
 
 time-month_numberOfGlobalSltAndExecutiveSearchPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfUniqueUsersClarity:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new-(not-additive)"></span>
+
+time-month_numberOfSessionsClarity:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_adviserRetentionRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-change-/-rate"></span>  
+
+time-month_lraRetentionRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-change-/-rate"></span>
+
+time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averageNewPlacementFeeAllBeforeDropouts:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averageNewPlacementFeeAllAfterDropouts:
   type: integer
   example: 1
   description: |

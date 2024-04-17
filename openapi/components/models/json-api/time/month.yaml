@@ -389,22 +389,22 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaGoogle'
         percentageOfReportedSiteDiscoveriesViaGoogle:
           $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaGoogle'
-        numberOfReportedSiteDiscoveriesViaBlogWebsite:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaBlogWebsite'
-        percentageOfReportedSiteDiscoveriesViaBlogWebsite:
-          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaBlogWebsite'
-        numberOfReportedSiteDiscoveriesViaConferenceFair:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaConferenceFair'
-        percentageOfReportedSiteDiscoveriesViaConferenceFair:
-          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaConferenceFair'
+        numberOfReportedSiteDiscoveriesViaBlogOrWebsite:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaBlogOrWebsite'
+        percentageOfReportedSiteDiscoveriesViaBlogOrWebsite:
+          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaBlogOrWebsite'
+        numberOfReportedSiteDiscoveriesViaConferenceOrFair:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaConferenceOrFair'
+        percentageOfReportedSiteDiscoveriesViaConferenceOrFair:
+          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaConferenceOrFair'
         numberOfReportedSiteDiscoveriesViaFacebook:
           $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFacebook'
         percentageOfReportedSiteDiscoveriesViaFacebook:
           $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFacebook'
-        numberOfReportedSiteDiscoveriesViaFriendColleague:
-          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFriendColleague'
-        percentageOfReportedSiteDiscoveriesViaFriendColleague:
-          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFriendColleague'
+        numberOfReportedSiteDiscoveriesViaFriendOrColleague:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaFriendOrColleague'
+        percentageOfReportedSiteDiscoveriesViaFriendOrColleague:
+          $ref: '../../library/time/month.yaml#/time-month_percentageOfReportedSiteDiscoveriesViaFriendOrColleague'
         numberOfReportedSiteDiscoveriesViaLinkedin:
           $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaLinkedin'
         percentageOfReportedSiteDiscoveriesViaLinkedin:
@@ -495,6 +495,22 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsLost'
         numberOfGlobalSltAndExecutiveSearchPlacementsNet:
           $ref: '../../library/time/month.yaml#/time-month_numberOfGlobalSltAndExecutiveSearchPlacementsNet'
+        numberOfUniqueUsersClarity:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfUniqueUsersClarity'
+        numberOfSessionsClarity:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfSessionsClarity'
+        adviserRetentionRate:
+          $ref: '../../library/time/month.yaml#/time-month_adviserRetentionRate'
+        lraRetentionRate:
+          $ref: '../../library/time/month.yaml#/time-month_lraRetentionRate'
+        thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
+        thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
+        averageNewPlacementFeeAllBeforeDropouts:
+          $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
+        averageNewPlacementFeeAllAfterDropouts:
+          $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
         # relationship attributes
         startDateId:
           $ref: '../../library/time/month.yaml#/time-month_startDateId'

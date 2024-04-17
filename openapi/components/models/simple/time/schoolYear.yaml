@@ -387,22 +387,22 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaGoogle'
     percentageOfReportedSiteDiscoveriesViaGoogle:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaGoogle'
-    numberOfReportedSiteDiscoveriesViaBlogWebsite:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaBlogWebsite'
-    percentageOfReportedSiteDiscoveriesViaBlogWebsite:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaBlogWebsite'
-    numberOfReportedSiteDiscoveriesViaConferenceFair:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaConferenceFair'
-    percentageOfReportedSiteDiscoveriesViaConferenceFair:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaConferenceFair'
+    numberOfReportedSiteDiscoveriesViaBlogOrWebsite:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaBlogOrWebsite'
+    percentageOfReportedSiteDiscoveriesViaBlogOrWebsite:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaBlogOrWebsite'
+    numberOfReportedSiteDiscoveriesViaConferenceOrFair:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaConferenceOrFair'
+    percentageOfReportedSiteDiscoveriesViaConferenceOrFair:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaConferenceOrFair'
     numberOfReportedSiteDiscoveriesViaFacebook:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaFacebook'
     percentageOfReportedSiteDiscoveriesViaFacebook:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaFacebook'
-    numberOfReportedSiteDiscoveriesViaFriendColleague:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaFriendColleague'
-    percentageOfReportedSiteDiscoveriesViaFriendColleague:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaFriendColleague'
+    numberOfReportedSiteDiscoveriesViaFriendOrColleague:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaFriendOrColleague'
+    percentageOfReportedSiteDiscoveriesViaFriendOrColleague:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfReportedSiteDiscoveriesViaFriendOrColleague'
     numberOfReportedSiteDiscoveriesViaLinkedin:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaLinkedin'
     percentageOfReportedSiteDiscoveriesViaLinkedin:
@@ -493,6 +493,22 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalSltAndExecutiveSearchPlacementsLost'
     numberOfGlobalSltAndExecutiveSearchPlacementsNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfGlobalSltAndExecutiveSearchPlacementsNet'
+    numberOfUniqueUsersClarity:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfUniqueUsersClarity'
+    numberOfSessionsClarity:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSessionsClarity'
+    adviserRetentionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_adviserRetentionRate'
+    lraRetentionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraRetentionRate'
+    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
+    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
+    averageNewPlacementFeeAllBeforeDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllBeforeDropouts'
+    averageNewPlacementFeeAllAfterDropouts:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllAfterDropouts'
   required:
     - id
     - name
@@ -691,14 +707,14 @@ SimpleModel_time-schoolYear:
     - numberOfFteAdvisersAndLrasNet
     - numberOfReportedSiteDiscoveriesViaGoogle
     - percentageOfReportedSiteDiscoveriesViaGoogle
-    - numberOfReportedSiteDiscoveriesViaBlogWebsite
-    - percentageOfReportedSiteDiscoveriesViaBlogWebsite
-    - numberOfReportedSiteDiscoveriesViaConferenceFair
-    - percentageOfReportedSiteDiscoveriesViaConferenceFair
+    - numberOfReportedSiteDiscoveriesViaBlogOrWebsite
+    - percentageOfReportedSiteDiscoveriesViaBlogOrWebsite
+    - numberOfReportedSiteDiscoveriesViaConferenceOrFair
+    - percentageOfReportedSiteDiscoveriesViaConferenceOrFair
     - numberOfReportedSiteDiscoveriesViaFacebook
     - percentageOfReportedSiteDiscoveriesViaFacebook
-    - numberOfReportedSiteDiscoveriesViaFriendColleague
-    - percentageOfReportedSiteDiscoveriesViaFriendColleague
+    - numberOfReportedSiteDiscoveriesViaFriendOrColleague
+    - percentageOfReportedSiteDiscoveriesViaFriendOrColleague
     - numberOfReportedSiteDiscoveriesViaLinkedin
     - percentageOfReportedSiteDiscoveriesViaLinkedin
     - numberOfReportedSiteDiscoveriesViaOther
@@ -744,6 +760,14 @@ SimpleModel_time-schoolYear:
     - numberOfGlobalSltAndExecutiveSearchPlacementsGained
     - numberOfGlobalSltAndExecutiveSearchPlacementsLost
     - numberOfGlobalSltAndExecutiveSearchPlacementsNet
+    - numberOfUniqueUsersClarity
+    - numberOfSessionsClarity
+    - adviserRetentionRate
+    - lraRetentionRate
+    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
+    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
+    - averageNewPlacementFeeAllBeforeDropouts
+    - averageNewPlacementFeeAllAfterDropouts
 
 # shared
 SimpleModel_time-schoolYear_id:
