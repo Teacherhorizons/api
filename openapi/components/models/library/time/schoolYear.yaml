@@ -392,7 +392,7 @@ time-schoolYear_numberOfAmbassadorsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithCommunityResponsesLost:
@@ -400,7 +400,7 @@ time-schoolYear_numberOfAmbassadorsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithCommunityResponsesNet:
@@ -543,7 +543,7 @@ time-schoolYear_numberOfAmbassadorsWithTestimonialsGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithTestimonialsLost:
@@ -551,7 +551,7 @@ time-schoolYear_numberOfAmbassadorsWithTestimonialsLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfAmbassadorsWithTestimonialsNet:
@@ -670,34 +670,6 @@ time-schoolYear_incomeFromPlacementsLost:
     <span class="type-formula"></span>
 
 time-schoolYear_incomeFromPlacementsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_thpercentageOfIncomeOfPlacementsAllAfterDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_averagePlacementFeeAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_averagePlacementFeeAllAfterDropouts:
   type: integer
   example: 1
   description: |
@@ -1789,7 +1761,7 @@ time-schoolYear_numberOfUniqueUsersClarity:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new-(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
 
 time-schoolYear_numberOfSessionsClarity:
   type: integer
@@ -1812,30 +1784,30 @@ time-schoolYear_lraRetentionRate:
     <span class="metric"></span>
     <span class="type-change-or-rate"></span>
 
-time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsNet:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+time-schoolYear_adviserAndLraRetentionRate:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_averageNewPlacementFeeAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-schoolYear_averageNewPlacementFeeAllAfterDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
+    <span class="type-change-/-rate"></span>

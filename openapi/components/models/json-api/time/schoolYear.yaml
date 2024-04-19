@@ -189,14 +189,6 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsLost'
         incomeFromPlacementsNet:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromPlacementsNet'
-        thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
-        thpercentageOfIncomeOfPlacementsAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
-        averagePlacementFeeAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllBeforeDropouts'
-        averagePlacementFeeAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeAllAfterDropouts'
         numberOfPlacementsGained:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfPlacementsGained'
         numberOfPlacementsLost:
@@ -503,14 +495,14 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_adviserRetentionRate'
         lraRetentionRate:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraRetentionRate'
-        thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-        thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-        averageNewPlacementFeeAllBeforeDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllBeforeDropouts'
-        averageNewPlacementFeeAllAfterDropouts:
-          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageNewPlacementFeeAllAfterDropouts'
+        numberOfExplorerWithoutAdviserInterviewPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsGained'
+        numberOfExplorerWithoutAdviserInterviewPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsLost'
+        numberOfExplorerWithoutAdviserInterviewPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsNet'
+        adviserAndLraRetentionRate:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_adviserAndLraRetentionRate'
   required:
     - type
     - id

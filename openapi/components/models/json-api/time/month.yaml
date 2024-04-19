@@ -185,14 +185,6 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsLost'
         incomeFromPlacementsNet:
           $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsNet'
-        thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
-        thpercentageOfIncomeOfPlacementsAllAfterDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
-        averagePlacementFeeAllBeforeDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllBeforeDropouts'
-        averagePlacementFeeAllAfterDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllAfterDropouts'
         numberOfPlacementsGained:
           $ref: '../../library/time/month.yaml#/time-month_numberOfPlacementsGained'
         numberOfPlacementsLost:
@@ -499,14 +491,14 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_adviserRetentionRate'
         lraRetentionRate:
           $ref: '../../library/time/month.yaml#/time-month_lraRetentionRate'
-        thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-        thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-        averageNewPlacementFeeAllBeforeDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
-        averageNewPlacementFeeAllAfterDropouts:
-          $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
+        numberOfExplorerWithoutAdviserInterviewPlacementsGained:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsGained'
+        numberOfExplorerWithoutAdviserInterviewPlacementsLost:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsLost'
+        numberOfExplorerWithoutAdviserInterviewPlacementsNet:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsNet'
+        adviserAndLraRetentionRate:
+          $ref: '../../library/time/month.yaml#/time-month_adviserAndLraRetentionRate'
         # relationship attributes
         startDateId:
           $ref: '../../library/time/month.yaml#/time-month_startDateId'

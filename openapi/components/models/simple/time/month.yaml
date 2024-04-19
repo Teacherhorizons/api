@@ -183,14 +183,6 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsLost'
     incomeFromPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_incomeFromPlacementsNet'
-    thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllBeforeDropouts'
-    thpercentageOfIncomeOfPlacementsAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfPlacementsAllAfterDropouts'
-    averagePlacementFeeAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllBeforeDropouts'
-    averagePlacementFeeAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeAllAfterDropouts'
     numberOfPlacementsGained:
       $ref: '../../library/time/month.yaml#/time-month_numberOfPlacementsGained'
     numberOfPlacementsLost:
@@ -495,14 +487,16 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfUniqueUsersClarity'
     numberOfSessionsClarity:
       $ref: '../../library/time/month.yaml#/time-month_numberOfSessionsClarity'
-    thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts'
-    thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts'
-    averageNewPlacementFeeAllBeforeDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllBeforeDropouts'
-    averageNewPlacementFeeAllAfterDropouts:
-      $ref: '../../library/time/month.yaml#/time-month_averageNewPlacementFeeAllAfterDropouts'
+    lraRetentionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraRetentionRate'
+    numberOfExplorerWithoutAdviserInterviewPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsGained'
+    numberOfExplorerWithoutAdviserInterviewPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsLost'
+    numberOfExplorerWithoutAdviserInterviewPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsNet'
+    adviserAndLraRetentionRate:
+      $ref: '../../library/time/month.yaml#/time-month_adviserAndLraRetentionRate'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -622,10 +616,6 @@ SimpleModel_time-month:
     - incomeFromPlacementsGained
     - incomeFromPlacementsLost
     - incomeFromPlacementsNet
-    - thpercentageOfIncomeOfPlacementsAllBeforeDropouts
-    - thpercentageOfIncomeOfPlacementsAllAfterDropouts
-    - averagePlacementFeeAllBeforeDropouts
-    - averagePlacementFeeAllAfterDropouts
     - numberOfPlacementsGained
     - numberOfPlacementsLost
     - numberOfPlacementsNet
@@ -779,10 +769,10 @@ SimpleModel_time-month:
     - numberOfSessionsClarity
     - adviserRetentionRate
     - lraRetentionRate
-    - thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts
-    - thpercentageOfIncomeOfNewPlacementsAllAfterDropouts
-    - averageNewPlacementFeeAllBeforeDropouts
-    - averageNewPlacementFeeAllAfterDropouts
+    - numberOfExplorerWithoutAdviserInterviewPlacementsGained
+    - numberOfExplorerWithoutAdviserInterviewPlacementsLost
+    - numberOfExplorerWithoutAdviserInterviewPlacementsNet
+    - adviserAndLraRetentionRate
 
 # shared
 SimpleModel_time-month_id:

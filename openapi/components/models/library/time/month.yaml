@@ -373,7 +373,7 @@ time-month_numberOfAmbassadorsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithCommunityResponsesLost:
@@ -381,7 +381,7 @@ time-month_numberOfAmbassadorsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithCommunityResponsesNet:
@@ -524,7 +524,7 @@ time-month_numberOfAmbassadorsWithTestimonialsGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithTestimonialsLost:
@@ -532,7 +532,7 @@ time-month_numberOfAmbassadorsWithTestimonialsLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-month_numberOfAmbassadorsWithTestimonialsNet:
@@ -651,34 +651,6 @@ time-month_incomeFromPlacementsLost:
     <span class="type-formula"></span>
 
 time-month_incomeFromPlacementsNet:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_thpercentageOfIncomeOfPlacementsAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_thpercentageOfIncomeOfPlacementsAllAfterDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_averagePlacementFeeAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_averagePlacementFeeAllAfterDropouts:
   type: integer
   example: 1
   description: |
@@ -1777,7 +1749,7 @@ time-month_numberOfUniqueUsersClarity:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new-(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
 
 time-month_numberOfSessionsClarity:
   type: integer
@@ -1793,33 +1765,33 @@ time-month_lraRetentionRate:
     <span class="metric"></span>
     <span class="type-change-or-rate"></span>
 
-time-month_thpercentageOfIncomeOfNewPlacementsAllBeforeDropouts:
+time-month_numberOfExplorerWithoutAdviserInterviewPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerWithoutAdviserInterviewPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerWithoutAdviserInterviewPlacementsNet:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
     <span class="type-formula"></span>
 
-time-month_thpercentageOfIncomeOfNewPlacementsAllAfterDropouts:
+time-month_adviserAndLraRetentionRate:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_averageNewPlacementFeeAllBeforeDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
-
-time-month_averageNewPlacementFeeAllAfterDropouts:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-formula"></span>
+    <span class="type-change-/-rate"></span>
 
 # relationship attributes
 time-month_startDateId:
