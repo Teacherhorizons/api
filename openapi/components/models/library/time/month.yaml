@@ -1330,6 +1330,14 @@ time-month_numberOfFteAdvisersAndLrasNet:
     <span class="metric"></span>
     <span class="type-formula"></span>
 
+time-month_numberOfReportedSiteDiscoveries:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+    <span class="dw"></span>
+
 time-month_numberOfReportedSiteDiscoveriesViaGoogle:
   type: integer
   example: 1
@@ -1791,7 +1799,217 @@ time-month_adviserAndLraRetentionRate:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-change-/-rate"></span>
+    <span class="type-change-or-rate"></span>
+
+time-month_marketingIndex:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_numberOfExplorerPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_numberOfExplorerPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfExplorerPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfWithoutAdviserInterviewPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_revenueFromExplorerPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromExplorerPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromExplorerPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averageExplorerPlacementFeeGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_incomeFromExplorerPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_incomeFromExplorerPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_incomeFromExplorerPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_percentageOfExplorerPlacementsLostVsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+
+time-month_revenueFromGlobalMiddleManagerPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromGlobalMiddleManagerPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromGlobalMiddleManagerPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+
+time-month_revenueFromGlobalSltSearchPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_revenueFromGlobalSltSearchPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_revenueFromGlobalSltSearchPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+
+time-month_expensesFromGlobalSltSearchPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromExecutiveSearchPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromExecutiveSearchPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_revenueFromExecutiveSearchPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
 
 # relationship attributes
 time-month_startDateId:

@@ -371,6 +371,8 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasLost'
     numberOfFteAdvisersAndLrasNet:
       $ref: '../../library/time/month.yaml#/time-month_numberOfFteAdvisersAndLrasNet'
+    numberOfReportedSiteDiscoveries:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveries'
     numberOfReportedSiteDiscoveriesViaGoogle:
       $ref: '../../library/time/month.yaml#/time-month_numberOfReportedSiteDiscoveriesViaGoogle'
     percentageOfReportedSiteDiscoveriesViaGoogle:
@@ -497,6 +499,64 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerWithoutAdviserInterviewPlacementsNet'
     adviserAndLraRetentionRate:
       $ref: '../../library/time/month.yaml#/time-month_adviserAndLraRetentionRate'
+    marketingIndex:
+      $ref: '../../library/time/month.yaml#/time-month_marketingIndex'
+    numberOfExplorerPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerPlacementsGained'
+    numberOfExplorerPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerPlacementsLost'
+    numberOfExplorerPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerPlacementsNet'
+    numberOfWithoutAdviserInterviewPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfWithoutAdviserInterviewPlacementsGained'
+    percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained'
+    percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet'
+    revenueFromExplorerPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExplorerPlacementsGained'
+    revenueFromExplorerPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExplorerPlacementsLost'
+    revenueFromExplorerPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExplorerPlacementsNet'
+    averageExplorerPlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averageExplorerPlacementFeeGained'
+    incomeFromExplorerPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExplorerPlacementsGained'
+    incomeFromExplorerPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExplorerPlacementsLost'
+    incomeFromExplorerPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomeFromExplorerPlacementsNet'
+    percentageOfExplorerPlacementsLostVsGained:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfExplorerPlacementsLostVsGained'
+    revenueFromGlobalMiddleManagerPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalMiddleManagerPlacementsGained'
+    revenueFromGlobalMiddleManagerPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalMiddleManagerPlacementsLost'
+    revenueFromGlobalMiddleManagerPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalMiddleManagerPlacementsNet'
+    revenueFromGlobalSltSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltSearchPlacementsGained'
+    revenueFromGlobalSltSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltSearchPlacementsLost'
+    revenueFromGlobalSltSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltSearchPlacementsNet'
+    expensesFromGlobalSltSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalSltSearchPlacementsGained'
+    revenueFromExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExecutiveSearchPlacementsGained'
+    revenueFromExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExecutiveSearchPlacementsLost'
+    revenueFromExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromExecutiveSearchPlacementsNet'
+    revenueFromGlobalSltAndExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsGained'
+    revenueFromGlobalSltAndExecutiveSearchPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsLost'
+    revenueFromGlobalSltAndExecutiveSearchPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsNet'
+    expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalSltAndExecutiveSearchPlacementsGained' 
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -773,6 +833,36 @@ SimpleModel_time-month:
     - numberOfExplorerWithoutAdviserInterviewPlacementsLost
     - numberOfExplorerWithoutAdviserInterviewPlacementsNet
     - adviserAndLraRetentionRate
+    - numberOfReportedSiteDiscoveries
+    - marketingIndex
+    - numberOfExplorerPlacementsGained
+    - numberOfExplorerPlacementsLost
+    - numberOfExplorerPlacementsNet
+    - numberOfWithoutAdviserInterviewPlacementsGained
+    - percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained
+    - percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet
+    - revenueFromExplorerPlacementsGained
+    - revenueFromExplorerPlacementsLost
+    - revenueFromExplorerPlacementsNet
+    - averageExplorerPlacementFeeGained
+    - incomeFromExplorerPlacementsGained
+    - incomeFromExplorerPlacementsLost
+    - incomeFromExplorerPlacementsNet
+    - percentageOfExplorerPlacementsLostVsGained
+    - revenueFromGlobalMiddleManagerPlacementsGained
+    - revenueFromGlobalMiddleManagerPlacementsLost
+    - revenueFromGlobalMiddleManagerPlacementsNet
+    - revenueFromGlobalSltSearchPlacementsGained
+    - revenueFromGlobalSltSearchPlacementsLost
+    - revenueFromGlobalSltSearchPlacementsNet
+    - expensesFromGlobalSltSearchPlacementsGained
+    - revenueFromExecutiveSearchPlacementsGained
+    - revenueFromExecutiveSearchPlacementsLost
+    - revenueFromExecutiveSearchPlacementsNet
+    - revenueFromGlobalSltAndExecutiveSearchPlacementsGained
+    - revenueFromGlobalSltAndExecutiveSearchPlacementsLost
+    - revenueFromGlobalSltAndExecutiveSearchPlacementsNet
+    - expensesFromGlobalSltAndExecutiveSearchPlacementsGained
 
 # shared
 SimpleModel_time-month_id:

@@ -377,6 +377,8 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteAdvisersAndLrasLost'
         numberOfFteAdvisersAndLrasNet:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfFteAdvisersAndLrasNet'
+        numberOfReportedSiteDiscoveries:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveries'
         numberOfReportedSiteDiscoveriesViaGoogle:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfReportedSiteDiscoveriesViaGoogle'
         percentageOfReportedSiteDiscoveriesViaGoogle:
@@ -503,6 +505,64 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerWithoutAdviserInterviewPlacementsNet'
         adviserAndLraRetentionRate:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_adviserAndLraRetentionRate'
+        marketingIndex:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_marketingIndex'
+        numberOfExplorerPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerPlacementsGained'
+        numberOfExplorerPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerPlacementsLost'
+        numberOfExplorerPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerPlacementsNet'
+        numberOfWithoutAdviserInterviewPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfWithoutAdviserInterviewPlacementsGained'
+        percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsGained'
+        percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfExplorerWithoutAdviserInterviewPlacementsVsPlacementsNet'
+        revenueFromExplorerPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExplorerPlacementsGained'
+        revenueFromExplorerPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExplorerPlacementsLost'
+        revenueFromExplorerPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExplorerPlacementsNet'
+        averageExplorerPlacementFeeGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averageExplorerPlacementFeeGained'
+        incomeFromExplorerPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromExplorerPlacementsGained'
+        incomeFromExplorerPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromExplorerPlacementsLost'
+        incomeFromExplorerPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeFromExplorerPlacementsNet'
+        percentageOfExplorerPlacementsLostVsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfExplorerPlacementsLostVsGained'
+        revenueFromGlobalMiddleManagerPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalMiddleManagerPlacementsGained'
+        revenueFromGlobalMiddleManagerPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalMiddleManagerPlacementsLost'
+        revenueFromGlobalMiddleManagerPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalMiddleManagerPlacementsNet'
+        revenueFromGlobalSltSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltSearchPlacementsGained'
+        revenueFromGlobalSltSearchPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltSearchPlacementsLost'
+        revenueFromGlobalSltSearchPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltSearchPlacementsNet'   
+        expensesFromGlobalSltSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalSltSearchPlacementsGained'
+        revenueFromExecutiveSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExecutiveSearchPlacementsGained'
+        revenueFromExecutiveSearchPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExecutiveSearchPlacementsLost'
+        revenueFromExecutiveSearchPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromExecutiveSearchPlacementsNet'
+        revenueFromGlobalSltAndExecutiveSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltAndExecutiveSearchPlacementsGained'
+        revenueFromGlobalSltAndExecutiveSearchPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltAndExecutiveSearchPlacementsLost'
+        revenueFromGlobalSltAndExecutiveSearchPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltAndExecutiveSearchPlacementsNet'
+        expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalSltAndExecutiveSearchPlacementsGained'
   required:
     - type
     - id
