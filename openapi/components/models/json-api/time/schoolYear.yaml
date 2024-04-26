@@ -573,6 +573,46 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionLra'
         percentageOfCommissionNewBusiness:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionNewBusiness'
+        activeMembershipFeeAnnual:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_activeMembershipFeeAnnual'
+        numberOfActiveMembershipRenewals:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveMembershipRenewals'
+        revenueFromActiveMembershipRenewals:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromActiveMembershipRenewals'
+        revenueFromActiveMembershipsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromActiveMembershipsGained'
+        revenueFromActiveMemberships:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromActiveMemberships'
+        advancedMembershipFeeAnnual:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_advancedMembershipFeeAnnual'
+        revenueFromAdvancedMembershipRenewals:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromAdvancedMembershipRenewals'
+        revenueFromAdvancedMembershipGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromAdvancedMembershipGained'
+        revenueFromAdvancedMemberships:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromAdvancedMemberships'
+        revenueFromAllSchoolMemberships:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromAllSchoolMemberships'
+        revenueFromSchoolAddOns:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromSchoolAddOns'
+        numberOfSchoolsWithPlacementsGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithPlacementsGained'
+        numberOfSchoolsWithPlacementsLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithPlacementsLost'
+        numberOfSchoolsWithPlacementsNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolsWithPlacementsNet'
+        numberOfSchoolServicesTeamMembersGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolServicesTeamMembersGained'
+        numberOfSchoolServicesTeamMembersLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolServicesTeamMembersLost'
+        numberOfSchoolServicesTeamMembersNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSchoolServicesTeamMembersNet'
+        averagePlacementFeeGained:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeGained'
+        averagePlacementFeeLost:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeLost'
+        averagePlacementFeeNet:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeNet'
   required:
     - type
     - id

@@ -567,6 +567,46 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionLra'
     percentageOfCommissionNewBusiness:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionNewBusiness'
+    activeMembershipFeeAnnual:
+      $ref: '../../library/time/month.yaml#/time-month_activeMembershipFeeAnnual'
+    numberOfActiveMembershipRenewals:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveMembershipRenewals'
+    revenueFromActiveMembershipRenewals:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromActiveMembershipRenewals'
+    revenueFromActiveMembershipsGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromActiveMembershipsGained'
+    revenueFromActiveMemberships:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromActiveMemberships'
+    advancedMembershipFeeAnnual:
+      $ref: '../../library/time/month.yaml#/time-month_advancedMembershipFeeAnnual'
+    revenueFromAdvancedMembershipRenewals:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromAdvancedMembershipRenewals'
+    revenueFromAdvancedMembershipGained:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromAdvancedMembershipGained'
+    revenueFromAdvancedMemberships:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromAdvancedMemberships'
+    revenueFromAllSchoolMemberships:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromAllSchoolMemberships'
+    revenueFromSchoolAddOns:
+      $ref: '../../library/time/month.yaml#/time-month_revenueFromSchoolAddOns'
+    numberOfSchoolsWithPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithPlacementsGained'
+    numberOfSchoolsWithPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithPlacementsLost'
+    numberOfSchoolsWithPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolsWithPlacementsNet'
+    numberOfSchoolServicesTeamMembersGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolServicesTeamMembersGained'
+    numberOfSchoolServicesTeamMembersLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolServicesTeamMembersLost'
+    numberOfSchoolServicesTeamMembersNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSchoolServicesTeamMembersNet'
+    averagePlacementFeeGained:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeGained'
+    averagePlacementFeeLost:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeLost'
+    averagePlacementFeeNet:
+      $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -878,6 +918,26 @@ SimpleModel_time-month:
     - lraPlacementCommissionPerFteLra
     - percentageOfCommissionLra
     - percentageOfCommissionNewBusiness
+    - activeMembershipFeeAnnual
+    - numberOfActiveMembershipRenewals
+    - revenueFromActiveMembershipRenewals
+    - revenueFromActiveMembershipsGained
+    - revenueFromActiveMemberships
+    - advancedMembershipFeeAnnual
+    - revenueFromAdvancedMembershipRenewals
+    - revenueFromAdvancedMembershipGained
+    - revenueFromAdvancedMemberships
+    - revenueFromAllSchoolMemberships
+    - revenueFromSchoolAddOns
+    - numberOfSchoolsWithPlacementsGained
+    - numberOfSchoolsWithPlacementsLost
+    - numberOfSchoolsWithPlacementsNet
+    - numberOfSchoolServicesTeamMembersGained
+    - numberOfSchoolServicesTeamMembersLost
+    - numberOfSchoolServicesTeamMembersNet
+    - averagePlacementFeeGained
+    - averagePlacementFeeLost
+    - averagePlacementFeeNet
 
 # shared
 SimpleModel_time-month_id:

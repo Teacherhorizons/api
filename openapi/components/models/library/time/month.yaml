@@ -2045,7 +2045,150 @@ time-month_percentageOfCommissionNewBusiness:
   description: |
     <span class="metric"></span>
     <span class="type-point-in-time"></span>
-    
+
+time-month_activeMembershipFeeAnnual:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfActiveMembershipRenewals:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_revenueFromActiveMembershipRenewals:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromActiveMembershipsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromActiveMemberships:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_advancedMembershipFeeAnnual:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+
+time-month_revenueFromAdvancedMembershipRenewals:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromAdvancedMembershipGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_revenueFromAdvancedMemberships:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_revenueFromAllSchoolMemberships:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_revenueFromSchoolAddOns:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_numberOfSchoolsWithPlacementsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new-(not-additive)"></span>
+
+time-month_numberOfSchoolsWithPlacementsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new-(not-additive)"></span>
+
+time-month_numberOfSchoolsWithPlacementsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_numberOfSchoolServicesTeamMembersGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfSchoolServicesTeamMembersLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_numberOfSchoolServicesTeamMembersNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averagePlacementFeeGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averagePlacementFeeLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_averagePlacementFeeNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
 # relationship attributes
 time-month_startDateId:
   type: integer
