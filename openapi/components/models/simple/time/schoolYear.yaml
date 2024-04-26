@@ -557,6 +557,16 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueFromGlobalSltAndExecutiveSearchPlacementsNet'
     expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromGlobalSltAndExecutiveSearchPlacementsGained'
+    lraPlacementCommissionTotal:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraPlacementCommissionTotal'
+    lraPlacementCommissionPerLra:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraPlacementCommissionPerLra'
+    lraPlacementCommissionPerFteLra:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraPlacementCommissionPerFteLra'
+    percentageOfCommissionLra:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionLra'
+    percentageOfCommissionNewBusiness:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionNewBusiness'
   required:
     - id
     - name
@@ -840,6 +850,11 @@ SimpleModel_time-schoolYear:
     - revenueFromGlobalSltAndExecutiveSearchPlacementsLost
     - revenueFromGlobalSltAndExecutiveSearchPlacementsNet
     - expensesFromGlobalSltAndExecutiveSearchPlacementsGained
+    - lraPlacementCommissionTotal
+    - lraPlacementCommissionPerLra
+    - lraPlacementCommissionPerFteLra
+    - percentageOfCommissionLra
+    - percentageOfCommissionNewBusiness
 
 # shared
 SimpleModel_time-schoolYear_id:

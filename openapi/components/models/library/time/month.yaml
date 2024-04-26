@@ -2011,6 +2011,41 @@ time-month_expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
     <span class="metric"></span>
     <span class="type-new"></span>
 
+time-month_lraPlacementCommissionTotal:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-month_lraPlacementCommissionPerLra:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_lraPlacementCommissionPerFteLra:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_percentageOfCommissionLra:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_percentageOfCommissionNewBusiness:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+    
 # relationship attributes
 time-month_startDateId:
   type: integer

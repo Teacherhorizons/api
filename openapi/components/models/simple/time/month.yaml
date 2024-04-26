@@ -556,7 +556,17 @@ SimpleModel_time-month:
     revenueFromGlobalSltAndExecutiveSearchPlacementsNet:
       $ref: '../../library/time/month.yaml#/time-month_revenueFromGlobalSltAndExecutiveSearchPlacementsNet'
     expensesFromGlobalSltAndExecutiveSearchPlacementsGained:
-      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalSltAndExecutiveSearchPlacementsGained' 
+      $ref: '../../library/time/month.yaml#/time-month_expensesFromGlobalSltAndExecutiveSearchPlacementsGained'
+    lraPlacementCommissionTotal:
+      $ref: '../../library/time/month.yaml#/time-month_lraPlacementCommissionTotal'
+    lraPlacementCommissionPerLra:
+      $ref: '../../library/time/month.yaml#/time-month_lraPlacementCommissionPerLra'
+    lraPlacementCommissionPerFteLra:
+      $ref: '../../library/time/month.yaml#/time-month_lraPlacementCommissionPerFteLra'
+    percentageOfCommissionLra:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionLra'
+    percentageOfCommissionNewBusiness:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionNewBusiness'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -863,6 +873,11 @@ SimpleModel_time-month:
     - revenueFromGlobalSltAndExecutiveSearchPlacementsLost
     - revenueFromGlobalSltAndExecutiveSearchPlacementsNet
     - expensesFromGlobalSltAndExecutiveSearchPlacementsGained
+    - lraPlacementCommissionTotal
+    - lraPlacementCommissionPerLra
+    - lraPlacementCommissionPerFteLra
+    - percentageOfCommissionLra
+    - percentageOfCommissionNewBusiness
 
 # shared
 SimpleModel_time-month_id:
