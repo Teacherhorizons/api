@@ -563,10 +563,10 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_lraPlacementCommissionPerLra'
     lraPlacementCommissionPerFteLra:
       $ref: '../../library/time/month.yaml#/time-month_lraPlacementCommissionPerFteLra'
-    percentageOfCommissionLra:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionLra'
-    percentageOfCommissionNewBusiness:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionNewBusiness'
+    percentageCommissionLra:
+      $ref: '../../library/time/month.yaml#/time-month_percentageCommissionLra'
+    percentageCommissionNewBusiness:
+      $ref: '../../library/time/month.yaml#/time-month_percentageCommissionNewBusiness'
     activeMembershipFeeAnnual:
       $ref: '../../library/time/month.yaml#/time-month_activeMembershipFeeAnnual'
     numberOfActiveMembershipRenewals:
@@ -916,8 +916,8 @@ SimpleModel_time-month:
     - lraPlacementCommissionTotal
     - lraPlacementCommissionPerLra
     - lraPlacementCommissionPerFteLra
-    - percentageOfCommissionLra
-    - percentageOfCommissionNewBusiness
+    - percentageCommissionLra
+    - percentageCommissionNewBusiness
     - activeMembershipFeeAnnual
     - numberOfActiveMembershipRenewals
     - revenueFromActiveMembershipRenewals

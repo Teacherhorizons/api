@@ -563,10 +563,10 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraPlacementCommissionPerLra'
     lraPlacementCommissionPerFteLra:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_lraPlacementCommissionPerFteLra'
-    percentageOfCommissionLra:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionLra'
-    percentageOfCommissionNewBusiness:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionNewBusiness'
+    percentageCommissionLra:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageCommissionLra'
+    percentageCommissionNewBusiness:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageCommissionNewBusiness'
     activeMembershipFeeAnnual:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_activeMembershipFeeAnnual'
     numberOfActiveMembershipRenewals:
@@ -893,8 +893,8 @@ SimpleModel_time-schoolYear:
     - lraPlacementCommissionTotal
     - lraPlacementCommissionPerLra
     - lraPlacementCommissionPerFteLra
-    - percentageOfCommissionLra
-    - percentageOfCommissionNewBusiness
+    - percentageCommissionLra
+    - percentageCommissionNewBusiness
     - activeMembershipFeeAnnual
     - numberOfActiveMembershipRenewals
     - revenueFromActiveMembershipRenewals
