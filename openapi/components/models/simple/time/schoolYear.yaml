@@ -607,6 +607,36 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeLost'
     averagePlacementFeeNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_averagePlacementFeeNet'
+    numberOfAtsRecommendationsSinceInterviewedBySchool:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendationsSinceInterviewedBySchool'
+    numberOfAtsRecommendationsNowPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendationsNowPlacementsGained'
+    numberOfAtsRecommendationsNowPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendationsNowPlacementsLost'
+    numberOfAtsRecommendationsNowPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAtsRecommendationsNowPlacementsNet'
+    numberOfActivatedTeachers:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActivatedTeachers'
+    percentageOfRevenueFromPlacements:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfRevenueFromPlacements'
+    atsRecommendationToSchoolInterviewConversionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_atsRecommendationToSchoolInterviewConversionRate'
+    atsRecommendationToPlacementGainedConversionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_atsRecommendationToPlacementGainedConversionRate'
+    atsRecommendationToPlacementNetConversionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_atsRecommendationToPlacementNetConversionRate'
+    percentageOfCommisionInterview:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommisionInterview'
+    percentageOfCommissionJobOwner:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionJobOwner'
+    percentageOfPlacementsLostVsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsLostVsGained'
+    incomepercentageOfFromPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsGained'
+    incomepercentageOfFromPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsLost'
+    incomepercentageOfFromPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsNet'
   required:
     - id
     - name
@@ -915,6 +945,22 @@ SimpleModel_time-schoolYear:
     - averagePlacementFeeGained
     - averagePlacementFeeLost
     - averagePlacementFeeNet
+    - numberOfAtsRecommendationsSinceInterviewedBySchool
+    - numberOfAtsRecommendationsNowPlacementsGained
+    - numberOfAtsRecommendationsNowPlacementsLost
+    - numberOfAtsRecommendationsNowPlacementsNet
+    - numberOfActivatedTeachers
+    - percentageOfRevenueFromPlacements
+    - atsRecommendationToSchoolInterviewConversionRate
+    - atsRecommendationToPlacementGainedConversionRate
+    - atsRecommendationToPlacementNetConversionRate
+    - percentageOfCommisionInterview
+    - percentageOfCommissionJobOwner
+    - percentageOfPlacementsLostVsGained
+    - incomepercentageOfFromPlacementsGained
+    - incomepercentageOfFromPlacementsLost
+    - incomepercentageOfFromPlacementsNet
+
 
 # shared
 SimpleModel_time-schoolYear_id:

@@ -607,6 +607,36 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeLost'
     averagePlacementFeeNet:
       $ref: '../../library/time/month.yaml#/time-month_averagePlacementFeeNet'
+    numberOfAtsRecommendationsSinceInterviewedBySchool:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendationsSinceInterviewedBySchool'
+    numberOfAtsRecommendationsNowPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendationsNowPlacementsGained'
+    numberOfAtsRecommendationsNowPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendationsNowPlacementsLost'
+    numberOfAtsRecommendationsNowPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAtsRecommendationsNowPlacementsNet'
+    numberOfActivatedTeachers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActivatedTeachers'
+    percentageOfRevenueFromPlacements:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfRevenueFromPlacements'
+    atsRecommendationToSchoolInterviewConversionRate:
+      $ref: '../../library/time/month.yaml#/time-month_atsRecommendationToSchoolInterviewConversionRate'
+    atsRecommendationToPlacementGainedConversionRate:
+      $ref: '../../library/time/month.yaml#/time-month_atsRecommendationToPlacementGainedConversionRate'
+    atsRecommendationToPlacementNetConversionRate:
+      $ref: '../../library/time/month.yaml#/time-month_atsRecommendationToPlacementNetConversionRate'
+    percentageOfCommisionInterview:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommisionInterview'
+    percentageOfCommissionJobOwner:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionJobOwner'
+    percentageOfPlacementsLostVsGained:
+      $ref: '../../library/time/month.yaml#/time-month_percentageOfPlacementsLostVsGained'
+    incomepercentageOfFromPlacementsGained:
+      $ref: '../../library/time/month.yaml#/time-month_incomepercentageOfFromPlacementsGained'
+    incomepercentageOfFromPlacementsLost:
+      $ref: '../../library/time/month.yaml#/time-month_incomepercentageOfFromPlacementsLost'
+    incomepercentageOfFromPlacementsNet:
+      $ref: '../../library/time/month.yaml#/time-month_incomepercentageOfFromPlacementsNet'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -938,6 +968,21 @@ SimpleModel_time-month:
     - averagePlacementFeeGained
     - averagePlacementFeeLost
     - averagePlacementFeeNet
+    - numberOfAtsRecommendationsSinceInterviewedBySchool
+    - numberOfAtsRecommendationsNowPlacementsGained
+    - numberOfAtsRecommendationsNowPlacementsLost
+    - numberOfAtsRecommendationsNowPlacementsNet
+    - numberOfActivatedTeachers
+    - percentageOfRevenueFromPlacements
+    - atsRecommendationToSchoolInterviewConversionRate
+    - atsRecommendationToPlacementGainedConversionRate
+    - atsRecommendationToPlacementNetConversionRate
+    - percentageOfCommisionInterview
+    - percentageOfCommissionJobOwner
+    - percentageOfPlacementsLostVsGained
+    - incomepercentageOfFromPlacementsGained
+    - incomepercentageOfFromPlacementsLost
+    - incomepercentageOfFromPlacementsNet
 
 # shared
 SimpleModel_time-month_id:
