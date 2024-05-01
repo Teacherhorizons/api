@@ -631,12 +631,12 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfCommissionJobOwner'
     percentageOfPlacementsLostVsGained:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageOfPlacementsLostVsGained'
-    incomepercentageOfFromPlacementsGained:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsGained'
-    incomepercentageOfFromPlacementsLost:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsLost'
-    incomepercentageOfFromPlacementsNet:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomepercentageOfFromPlacementsNet'
+    incomePercentageFromPlacementsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromPlacementsGained'
+    incomePercentageFromPlacementsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromPlacementsLost'
+    incomePercentageFromPlacementsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromPlacementsNet'
   required:
     - id
     - name
@@ -957,9 +957,9 @@ SimpleModel_time-schoolYear:
     - percentageOfCommisionInterview
     - percentageOfCommissionJobOwner
     - percentageOfPlacementsLostVsGained
-    - incomepercentageOfFromPlacementsGained
-    - incomepercentageOfFromPlacementsLost
-    - incomepercentageOfFromPlacementsNet
+    - incomePercentageFromPlacementsGained
+    - incomePercentageFromPlacementsLost
+    - incomePercentageFromPlacementsNet
 
 
 # shared
