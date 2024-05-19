@@ -641,18 +641,16 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_incomePercentageFromPlacementsNet'
         revenueNet:
           $ref: '../../library/time/month.yaml#/time-month_revenueNet'
-        profitFinancialYear:
-          $ref: '../../library/time/month.yaml#/time-month_profitFinancialYear'
-        investmentInGrowthFinancialYear:
-          $ref: '../../library/time/month.yaml#/time-month_investmentInGrowthFinancialYear'
-        ProfitabilityPossibleProfitFinancialYear:
-          $ref: '../../library/time/month.yaml#/time-month_ProfitabilityPossibleProfitFinancialYear'
-        valuationEndOfSchoolYear:
-          $ref: '../../library/time/month.yaml#/time-month_valuationEndOfSchoolYear'
+        investmentInGrowth:
+          $ref: '../../library/time/month.yaml#/time-month_investmentInGrowth'
+        potentialProfit:
+          $ref: '../../library/time/month.yaml#/time-month_potentialProfit'
+        valuation:
+          $ref: '../../library/time/month.yaml#/time-month_valuation'
         dividends:
           $ref: '../../library/time/month.yaml#/time-month_dividends'
-        currentKpiIndexEndOfSchoolYear:
-          $ref: '../../library/time/month.yaml#/time-month_currentKpiIndexEndOfSchoolYear'
+        originalKpiIndex:
+          $ref: '../../library/time/month.yaml#/time-month_originalKpiIndex'
         thOverallIndex:
           $ref: '../../library/time/month.yaml#/time-month_thOverallIndex'
         revenueFromGlobalTeacherPlacementsNet:
@@ -801,6 +799,8 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_expensesFromFacilitiesOfficeRent'
         expensesFromFacilitiesComputerEquipment:
           $ref: '../../library/time/month.yaml#/time-month_expensesFromFacilitiesComputerEquipment'
+        expensesFromFacilitiesStationary:
+          $ref: '../../library/time/month.yaml#/time-month_expensesFromFacilitiesStationary'
         expensesFromFacilitiesTotal:
           $ref: '../../library/time/month.yaml#/time-month_expensesFromFacilitiesTotal'
         expensesFromFinanceBanking:
@@ -839,6 +839,14 @@ JsonApiModel_time-month:
           $ref: '../../library/time/month.yaml#/time-month_expensesTotal'
         incomeTotal:
           $ref: '../../library/time/month.yaml#/time-month_incomeTotal'
+        numberOfActiveAmbassadorsGained:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfActiveAmbassadorsGained'
+        numberOfActiveAmbassadorsLost:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfActiveAmbassadorsLost'
+        numberOfActiveAmbassadorsNet:
+          $ref: '../../library/time/month.yaml#/time-month_numberOfActiveAmbassadorsNet'
+        activeMinutesPerWebsiteSession:
+          $ref: '../../library/time/month.yaml#/time-month_activeMinutesPerWebsiteSession'
         # relationship attributes
         startDateId:
           $ref: '../../library/time/month.yaml#/time-month_startDateId'

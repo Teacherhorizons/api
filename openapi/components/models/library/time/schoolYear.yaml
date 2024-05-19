@@ -464,7 +464,7 @@ time-schoolYear_numberOfTeachersWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfTeachersWithCommunityResponsesLost:
@@ -472,7 +472,7 @@ time-schoolYear_numberOfTeachersWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfTeachersWithCommunityResponsesNet:
@@ -512,7 +512,7 @@ time-schoolYear_numberOfSchoolsWithCommunityResponsesGained:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfSchoolsWithCommunityResponsesLost:
@@ -520,7 +520,7 @@ time-schoolYear_numberOfSchoolsWithCommunityResponsesLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-new-not-additive"></span>
     <span class="dw"></span>
 
 time-schoolYear_numberOfSchoolsWithCommunityResponsesNet:
@@ -2308,9 +2308,9 @@ time-schoolYear_thOverallIndex:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new-(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
 
-time-schoolYear_currentKpiIndexEndOfSchoolYear:
+time-schoolYear_originalKpiIndex:
   type: integer
   example: 1
   description: |
@@ -2324,21 +2324,21 @@ time-schoolYear_dividends:
     <span class="metric"></span>
     <span class="type-new"></span>
 
-time-schoolYear_valuationEndOfSchoolYear:
+time-schoolYear_valuation:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
     <span class="type-new"></span>
 
-time-schoolYear_ProfitabilityPossibleProfitFinancialYear:
+time-schoolYear_potentialProfit:
   type: integer
   example: 1
   description: |
     <span class="metric"></span>
     <span class="type-new"></span>
 
-time-schoolYear_investmentInGrowthFinancialYear:
+time-schoolYear_investmentInGrowth:
   type: integer
   example: 1
   description: |
@@ -2351,13 +2351,6 @@ time-schoolYear_revenueNet:
   description: |
     <span class="metric"></span>
     <span class="type-point-in-time"></span>
-
-time-schoolYear_profitFinancialYear:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
 
 time-schoolYear_revenueFromGlobalTeacherPlacementsNet:
   type: integer
@@ -2871,6 +2864,13 @@ time-schoolYear_expensesFromFacilitiesComputerEquipment:
     <span class="metric"></span>
     <span class="type-new"></span>
 
+time-schoolYear_expensesFromFacilitiesStationary:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
 time-schoolYear_expensesFromFacilitiesTotal:
   type: integer
   example: 1
@@ -3003,3 +3003,31 @@ time-schoolYear_incomeTotal:
   description: |
     <span class="metric"></span>
     <span class="type-formula"></span>"
+
+time-schoolYear_numberOfActiveAmbassadorsGained:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>   
+
+time-schoolYear_numberOfActiveAmbassadorsLost:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+time-schoolYear_numberOfActiveAmbassadorsNet:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_activeMinutesPerWebsiteSession:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>"
