@@ -639,18 +639,16 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomePercentageFromPlacementsNet'
     revenueNet:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_revenueNet'
-    profitFinancialYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_profitFinancialYear'
-    investmentInGrowthFinancialYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_investmentInGrowthFinancialYear'
-    ProfitabilityPossibleProfitFinancialYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_ProfitabilityPossibleProfitFinancialYear'
-    valuationEndOfSchoolYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_valuationEndOfSchoolYear'
+    investmentInGrowth:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_investmentInGrowth'
+    potentialProfit:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_potentialProfit'
+    valuation:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_valuation'
     dividends:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_dividends'
-    currentKpiIndexEndOfSchoolYear:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_currentKpiIndexEndOfSchoolYear'
+    originalKpiIndex:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_originalKpiIndex'
     thOverallIndex:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_thOverallIndex'
     revenueFromGlobalTeacherPlacementsNet:
@@ -799,6 +797,8 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromFacilitiesOfficeRent'
     expensesFromFacilitiesComputerEquipment:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromFacilitiesComputerEquipment'
+    expensesFromFacilitiesStationary:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromFacilitiesStationary'
     expensesFromFacilitiesTotal:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesFromFacilitiesTotal'
     expensesFromFinanceBanking:
@@ -837,6 +837,14 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_expensesTotal'
     incomeTotal:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_incomeTotal'
+    numberOfActiveAmbassadorsGained:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveAmbassadorsGained'
+    numberOfActiveAmbassadorsLost:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveAmbassadorsLost'
+    numberOfActiveAmbassadorsNet:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveAmbassadorsNet'
+    activeMinutesPerWebsiteSession:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_activeMinutesPerWebsiteSession'
   required:
     - id
     - name
@@ -1161,12 +1169,11 @@ SimpleModel_time-schoolYear:
     - incomePercentageFromPlacementsLost
     - incomePercentageFromPlacementsNet
     - revenueNet
-    - profitFinancialYear
-    - investmentInGrowthFinancialYear
-    - ProfitabilityPossibleProfitFinancialYear
-    - valuationEndOfSchoolYear
+    - investmentInGrowth
+    - potentialProfit
+    - valuation
     - dividends
-    - currentKpiIndexEndOfSchoolYear
+    - originalKpiIndex
     - thOverallIndex
     - revenueFromGlobalTeacherPlacementsNet
     - revenueFromDropoutRecoveryFees
@@ -1241,6 +1248,7 @@ SimpleModel_time-schoolYear:
     - expensesFromTravelTotal
     - expensesFromFacilitiesOfficeRent
     - expensesFromFacilitiesComputerEquipment
+    - expensesFromFacilitiesStationary
     - expensesFromFacilitiesTotal
     - expensesFromFinanceBanking
     - expensesFromFinanceLegal
@@ -1260,6 +1268,10 @@ SimpleModel_time-schoolYear:
     - revenueTotal
     - expensesTotal
     - incomeTotal
+    - numberOfActiveAmbassadorsGained
+    - numberOfActiveAmbassadorsLost
+    - numberOfActiveAmbassadorsNet
+    - activeMinutesPerWebsiteSession
 
 
 # shared
