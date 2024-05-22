@@ -871,6 +871,22 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdviserCandidateInterviews'
     teachersUnderstandingOfThMission:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_teachersUnderstandingOfThMission'
+    numberOfExplorerInviteTo1stInterviews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerInviteTo1stInterviews'
+    numberOfExplorerCandidatePreNudgeResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidatePreNudgeResponses'
+    numberOfExplorerCandidate1stNudges:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidate1stNudges'
+    numberOfExplorerCandidate1stNudgeResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidate1stNudgeResponses'
+    numberOfExplorerCandidate2ndNudges:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidate2ndNudges'
+    numberOfExplorerCandidate2ndNudgeResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidate2ndNudgeResponses'
+    numberOfExplorerCandidateResponsesToInvite:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidateResponsesToInvite'
+    numberOfExplorer1stInterviews:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorer1stInterviews'
   required:
     - id
     - name
@@ -1311,6 +1327,14 @@ SimpleModel_time-schoolYear:
     - charityDonations
     - numberOfAdviserCandidateInterviews
     - teachersUnderstandingOfThMission
+    - numberOfExplorerInviteTo1stInterviews
+    - numberOfExplorerCandidatePreNudgeResponses
+    - numberOfExplorerCandidate1stNudges
+    - numberOfExplorerCandidate1stNudgeResponses
+    - numberOfExplorerCandidate2ndNudges
+    - numberOfExplorerCandidate2ndNudgeResponses
+    - numberOfExplorerCandidateResponsesToInvite
+    - numberOfExplorer1stInterviews
 
 
 # shared
