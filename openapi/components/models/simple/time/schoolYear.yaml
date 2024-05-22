@@ -857,10 +857,10 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidatesViewed'
     explorerCandidateResponseRateBeforeAnyNudges:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRateBeforeAnyNudges'
-    candidateResponseRateAfter1stNudge:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_candidateResponseRateAfter1stNudge'
-    candidateResponseRateAfter2ndNudge:
-      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_candidateResponseRateAfter2ndNudge'
+    explorerCandidateResponseRateTo1stNudge:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRateTo1stNudge'
+    explorerCandidateResponseRateTo2ndNudge:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRateTo2ndNudge'
     explorerCandidateResponseRate:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRate'
     percentageCommissionSchoolServicesTeam:
@@ -1304,8 +1304,8 @@ SimpleModel_time-schoolYear:
     - numberOfActiveExplorerUsers
     - numberOfExplorerCandidatesViewed
     - explorerCandidateResponseRateBeforeAnyNudges
-    - candidateResponseRateAfter1stNudge
-    - candidateResponseRateAfter2ndNudge
+    - explorerCandidateResponseRateTo1stNudge
+    - explorerCandidateResponseRateTo2ndNudge
     - explorerCandidateResponseRate
     - percentageCommissionSchoolServicesTeam
     - charityDonations
