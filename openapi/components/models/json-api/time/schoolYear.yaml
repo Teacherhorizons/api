@@ -851,6 +851,32 @@ JsonApiModel_time-schoolYear:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveAmbassadorsNet'
         activeMinutesPerWebsiteSession:
           $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_activeMinutesPerWebsiteSession'
+        numberOfSubjectPods:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfSubjectPods'
+        placementNetCommissionPerAdviserAndLra:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_placementNetCommissionPerAdviserAndLra'
+        placementNetCommissionPerFteAdviserAndLra:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_placementNetCommissionPerFteAdviserAndLra'
+        numberOfActiveExplorerUsers:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfActiveExplorerUsers'
+        numberOfExplorerCandidatesViewed:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidatesViewed'
+        explorerCandidateResponseRateBeforeAnyNudges:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRateBeforeAnyNudges'
+        candidateResponseRateAfter1stNudge:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_candidateResponseRateAfter1stNudge'
+        candidateResponseRateAfter2ndNudge:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_candidateResponseRateAfter2ndNudge'
+        explorerCandidateResponseRate:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorerCandidateResponseRate'
+        percentageCommissionSchoolServicesTeam:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_percentageCommissionSchoolServicesTeam'
+        charityDonations:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_charityDonations'
+        numberOfAdviserCandidateInterviews:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAdviserCandidateInterviews'
+        teachersUnderstandingOfThMission:
+          $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_teachersUnderstandingOfThMission'
   required:
     - type
     - id

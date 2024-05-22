@@ -845,6 +845,32 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfActiveAmbassadorsNet'
     activeMinutesPerWebsiteSession:
       $ref: '../../library/time/month.yaml#/time-month_activeMinutesPerWebsiteSession'
+    numberOfSubjectPods:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfSubjectPods'
+    placementNetCommissionPerAdviserAndLra:
+      $ref: '../../library/time/month.yaml#/time-month_placementNetCommissionPerAdviserAndLra'
+    placementNetCommissionPerFteAdviserAndLra:
+      $ref: '../../library/time/month.yaml#/time-month_placementNetCommissionPerFteAdviserAndLra'
+    numberOfActiveExplorerUsers:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfActiveExplorerUsers'
+    numberOfExplorerCandidatesViewed:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerCandidatesViewed'
+    explorerCandidateResponseRateBeforeAnyNudges:
+      $ref: '../../library/time/month.yaml#/time-month_explorerCandidateResponseRateBeforeAnyNudges'
+    candidateResponseRateAfter1stNudge:
+      $ref: '../../library/time/month.yaml#/time-month_candidateResponseRateAfter1stNudge'
+    candidateResponseRateAfter2ndNudge:
+      $ref: '../../library/time/month.yaml#/time-month_candidateResponseRateAfter2ndNudge'
+    explorerCandidateResponseRate:
+      $ref: '../../library/time/month.yaml#/time-month_explorerCandidateResponseRate'
+    percentageCommissionSchoolServicesTeam:
+      $ref: '../../library/time/month.yaml#/time-month_percentageCommissionSchoolServicesTeam'
+    charityDonations:
+      $ref: '../../library/time/month.yaml#/time-month_charityDonations'
+    numberOfAdviserCandidateInterviews:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserCandidateInterviews'
+    teachersUnderstandingOfThMission:
+      $ref: '../../library/time/month.yaml#/time-month_teachersUnderstandingOfThMission'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -1295,6 +1321,19 @@ SimpleModel_time-month:
     - numberOfActiveAmbassadorsLost
     - numberOfActiveAmbassadorsNet
     - activeMinutesPerWebsiteSession
+    - numberOfSubjectPods
+    - placementNetCommissionPerAdviserAndLra
+    - placementNetCommissionPerFteAdviserAndLra
+    - numberOfActiveExplorerUsers
+    - numberOfExplorerCandidatesViewed
+    - explorerCandidateResponseRateBeforeAnyNudges
+    - candidateResponseRateAfter1stNudge
+    - candidateResponseRateAfter2ndNudge
+    - explorerCandidateResponseRate
+    - percentageCommissionSchoolServicesTeam
+    - charityDonations
+    - numberOfAdviserCandidateInterviews
+    - teachersUnderstandingOfThMission
 
 # shared
 SimpleModel_time-month_id:
