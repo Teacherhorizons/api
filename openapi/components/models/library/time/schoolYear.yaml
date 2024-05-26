@@ -1650,7 +1650,7 @@ time-schoolYear_incomeFromGlobalSltSearchPlacementsLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-formula"></span>
 
 time-schoolYear_incomeFromGlobalSltSearchPlacementsNet:
   type: integer
@@ -2336,7 +2336,7 @@ time-schoolYear_potentialProfit:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-formula"></span>
 
 time-schoolYear_investmentInGrowth:
   type: integer
@@ -3058,7 +3058,7 @@ time-schoolYear_numberOfActiveExplorerUsers:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new-(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
 
 time-schoolYear_numberOfExplorerCandidatesViewed:
   type: integer
@@ -3179,3 +3179,38 @@ time-schoolYear_numberOfExplorer1stInterviews:
   description: |
     <span class="metric"></span>
     <span class="type-new"></span>"
+
+time-schoolYear_numberOfAmbassadorNetworkSurveyResponses:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_numberOfAmbassadorNetworkWouldRecommends:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_numberOfAmbassadorNetworkWouldNotRecommends:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-schoolYear_ambassadorNetworkNpsScore:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-schoolYear_explorer1stInterviewToPlacementConversionRate:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>

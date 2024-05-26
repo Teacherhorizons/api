@@ -1638,7 +1638,7 @@ time-month_incomeFromGlobalSltSearchPlacementsLost:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-formula"></span>
 
 time-month_incomeFromGlobalSltSearchPlacementsNet:
   type: integer
@@ -2312,7 +2312,7 @@ time-month_potentialProfit:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new"></span>
+    <span class="type-formula"></span>
 
 time-month_valuation:
   type: integer
@@ -3047,7 +3047,7 @@ time-month_numberOfActiveExplorerUsers:
   example: 1
   description: |
     <span class="metric"></span>
-    <span class="type-new-(not-additive)"></span>
+    <span class="type-new-not-additive"></span>
 
 time-month_numberOfExplorerCandidatesViewed:
   type: integer
@@ -3090,13 +3090,6 @@ time-month_percentageCommissionSchoolServicesTeam:
   description: |
     <span class="metric"></span>
     <span class="type-point-in-time"></span>
-
-time-month_charityDonations:
-  type: integer
-  example: 1
-  description: |
-    <span class="metric"></span>
-    <span class="type-new"></span>
 
 time-month_numberOfAdviserCandidateInterviews:
   type: integer
@@ -3163,6 +3156,42 @@ time-month_numberOfExplorerCandidateResponsesToInvite:
     <span class="type-new"></span>
 
 time-month_numberOfExplorer1stInterviews:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-new"></span>
+
+
+time-month_numberOfAmbassadorNetworkSurveyResponses:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfAmbassadorNetworkWouldRecommends:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_numberOfAmbassadorNetworkWouldNotRecommends:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-point-in-time"></span>
+
+time-month_ambassadorNetworkNpsScore:
+  type: integer
+  example: 1
+  description: |
+    <span class="metric"></span>
+    <span class="type-formula"></span>
+
+time-month_explorer1stInterviewToPlacementConversionRate:
   type: integer
   example: 1
   description: |
