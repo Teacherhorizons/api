@@ -1,0 +1,174 @@
+/* ReDoc uses font options from the parent element. So override default browser styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* override default column behaviour (width) */
+.evxOdD {
+  white-space: normal !important;
+}
+.sc-dLMFU {
+  min-width: 300px;
+}
+.property-name {
+  word-break: break-all;
+}
+/* / */
+.api-content {
+  overflow-wrap: anywhere;
+}
+a {
+  text-decoration: underline !important;
+}
+.dropdown {
+  /* related issue: https://github.com/Redocly/redoc/issues/451 */
+  /* workaround (hack): make full width */
+  /* future: keep an eye on the issue */
+  width: -webkit-fill-available !important;
+}
+li[data-item-id*='group/'] {
+  margin-top: 0;
+}
+li[data-item-id*='group/'] > label {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+li[data-item-id*='group/'] > label:hover {
+  background-color: rgb(225, 225, 225);
+}
+.expandAllButton {
+  float: right;
+  margin: 8px;
+}
+.locateButton {
+  float: right;
+  margin-right: 38px;
+}
+
+/* put model links on their own row */
+a[href^='/#tag/json-api-model']:has(+ span),
+a[href^='/#tag/simple-model']:has(+ span) {
+  display: block;
+  margin-bottom: 8px;
+}
+
+span[class^='testing-status-'],
+span[class*=' testing-status-'],
+span[class='main'],
+span[class='website'],
+span[class='dw'],
+span[class='metric'],
+span[class='type-change-or-rate'],
+span[class='type-formula'],
+span[class='type-new'],
+span[class='type-new-not-additive'],
+span[class='type-point-in-time'] {
+  padding: 3px 6px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.main {
+  background-color: #3fa9b3;
+  color: white;
+}
+.main::after {
+  content: 'Main';
+}
+.dw {
+  background-color: #3fa9b3;
+  color: white;
+}
+.dw::after {
+  content: 'Data warehouse';
+}
+.website {
+  background-color: #00264b;
+  color: white;
+}
+.website::after {
+  content: 'Website';
+}
+.metric {
+  background-color: #ff725e;
+  color: white;
+}
+.metric::after {
+  content: 'Metric';
+}
+
+.type-change-or-rate {
+  background-color: #d5a6bd;
+  color: black;
+}
+.type-change-or-rate::after {
+  content: 'Change / rate';
+}
+.type-formula {
+  background-color: #f6b26b;
+  color: white;
+}
+.type-formula::after {
+  content: 'Formula';
+}
+.type-new {
+  background-color: #ffff00;
+  color: black;
+}
+.type-new::after {
+  content: 'New';
+}
+.type-new-not-additive {
+  background-color: #f1c232;
+  color: white;
+}
+.type-new-not-additive::after {
+  content: 'New (not additive)';
+}
+.type-point-in-time {
+  background-color: #6d9eeb;
+  color: white;
+}
+.type-point-in-time::after {
+  content: 'Point in time';
+}
+
+.testing-status-1 {
+  background-color: #ff0000;
+  color: white;
+}
+.testing-status-1::after {
+  content: 'testing-status-1';
+}
+.testing-status-2 {
+  background-color: #ff7f00;
+  color: white;
+}
+.testing-status-2::after {
+  content: 'testing-status-2';
+}
+.testing-status-3 {
+  background-color: #ffff00;
+}
+.testing-status-3::after {
+  content: 'testing-status-3';
+}
+.testing-status-4 {
+  background-color: #7fff00;
+}
+.testing-status-4::after {
+  content: 'testing-status-4';
+}
+.testing-status-5 {
+  background-color: #00ff00;
+}
+.testing-status-5::after {
+  content: 'testing-status-5';
+}
+
+.sc-kYPZxB.jzOqkP {
+  display: none;
+}

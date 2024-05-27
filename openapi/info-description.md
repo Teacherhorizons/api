@@ -254,7 +254,6 @@ See the 'Pet' example.
 - Json-API models give all the possible properties which can be used in related API calls
 - All properties of the simple model will be in the related database a-view (e.g. aTeachers)
 - All properties of the Json-API model will be in the related database b-view (e.g. bTeachers)
-- All properties of the simple model will be in the related database a-view (e.g. aTeachers)
 
 ### Redoc vs data warehouse
 
