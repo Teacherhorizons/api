@@ -887,6 +887,16 @@ SimpleModel_time-schoolYear:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorerCandidateResponsesToInvite'
     numberOfExplorer1stInterviews:
       $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfExplorer1stInterviews'
+    numberOfAmbassadorNetworkSurveyResponses:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorNetworkSurveyResponses'
+    numberOfAmbassadorNetworkWouldRecommends:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorNetworkWouldRecommends'
+    numberOfAmbassadorNetworkWouldNotRecommends:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_numberOfAmbassadorNetworkWouldNotRecommends'
+    ambassadorNetworkNpsScore:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_ambassadorNetworkNpsScore'
+    explorer1stInterviewToPlacementConversionRate:
+      $ref: '../../library/time/schoolYear.yaml#/time-schoolYear_explorer1stInterviewToPlacementConversionRate'
   required:
     - id
     - name
@@ -1335,7 +1345,11 @@ SimpleModel_time-schoolYear:
     - numberOfExplorerCandidate2ndNudgeResponses
     - numberOfExplorerCandidateResponsesToInvite
     - numberOfExplorer1stInterviews
-
+    - numberOfAmbassadorNetworkSurveyResponses
+    - numberOfAmbassadorNetworkWouldRecommends
+    - numberOfAmbassadorNetworkWouldNotRecommends
+    - ambassadorNetworkNpsScore
+    - explorer1stInterviewToPlacementConversionRate
 
 # shared
 SimpleModel_time-schoolYear_id:

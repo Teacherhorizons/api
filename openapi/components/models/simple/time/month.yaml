@@ -865,8 +865,6 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_explorerCandidateResponseRate'
     percentageCommissionSchoolServicesTeam:
       $ref: '../../library/time/month.yaml#/time-month_percentageCommissionSchoolServicesTeam'
-    charityDonations:
-      $ref: '../../library/time/month.yaml#/time-month_charityDonations'
     numberOfAdviserCandidateInterviews:
       $ref: '../../library/time/month.yaml#/time-month_numberOfAdviserCandidateInterviews'
     teachersUnderstandingOfThMission:
@@ -887,6 +885,16 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_numberOfExplorerCandidateResponsesToInvite'
     numberOfExplorer1stInterviews:
       $ref: '../../library/time/month.yaml#/time-month_numberOfExplorer1stInterviews'
+    numberOfAmbassadorNetworkSurveyResponses:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorNetworkSurveyResponses'
+    numberOfAmbassadorNetworkWouldRecommends:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorNetworkWouldRecommends'
+    numberOfAmbassadorNetworkWouldNotRecommends:
+      $ref: '../../library/time/month.yaml#/time-month_numberOfAmbassadorNetworkWouldNotRecommends'
+    ambassadorNetworkNpsScore:
+      $ref: '../../library/time/month.yaml#/time-month_ambassadorNetworkNpsScore'
+    explorer1stInterviewToPlacementConversionRate:
+      $ref: '../../library/time/month.yaml#/time-month_explorer1stInterviewToPlacementConversionRate'
     # relationship attributes
     startDateId:
       $ref: '../../library/time/month.yaml#/time-month_startDateId'
@@ -1347,7 +1355,6 @@ SimpleModel_time-month:
     - explorerCandidateResponseRateTo2ndNudge
     - explorerCandidateResponseRate
     - percentageCommissionSchoolServicesTeam
-    - charityDonations
     - numberOfAdviserCandidateInterviews
     - teachersUnderstandingOfThMission
     - numberOfExplorerInviteTo1stInterviews
@@ -1358,6 +1365,11 @@ SimpleModel_time-month:
     - numberOfExplorerCandidate2ndNudgeResponses
     - numberOfExplorerCandidateResponsesToInvite
     - numberOfExplorer1stInterviews
+    - numberOfAmbassadorNetworkSurveyResponses
+    - numberOfAmbassadorNetworkWouldRecommends
+    - numberOfAmbassadorNetworkWouldNotRecommends
+    - ambassadorNetworkNpsScore
+    - explorer1stInterviewToPlacementConversionRate
 
 # shared
 SimpleModel_time-month_id:
