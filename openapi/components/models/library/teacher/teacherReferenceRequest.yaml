@@ -29,6 +29,7 @@ teacher-teacherReferenceRequest_fileUri:
   example: f2bac1d1-ff2a-4061-851c-b61be65eb2a2
 teacher-teacherReferenceRequest_isArchived:
   type: boolean
+  nullable: true
   example: true
 teacher-teacherReferenceRequest_creationDate:
   type: string
@@ -59,11 +60,13 @@ teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
 teacher-teacherReferenceRequest_schoolId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [school](/#tag/simple-model-school)
 teacher-teacherReferenceRequest_countryId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-teacherReferenceRequest_creationUserId:

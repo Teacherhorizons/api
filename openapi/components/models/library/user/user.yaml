@@ -15,6 +15,7 @@ user_lastName:
 user_uniqueName:
   type: string
   example: Fred Smith (12345)
+  nullable: true
   description: |
     Derived:
     - school: firstName (with city name if firstName not unique) - e.g. 'British School of Alexandria' or 'British International School (Lisbon)'
@@ -32,6 +33,7 @@ user_password:
   example: 123
 user_phone:
   type: string
+  nullable: true
   example: 1234567890
 user_optin:
   deprecated: true
@@ -53,6 +55,7 @@ user_latestUpdateDate:
   example: 2010-12-20T14:56:32Z
 user_authToken:
   type: string
+  nullable: true
   example: 2386dc3a-608f-424f-a1e0-44c3a02fc78b
 user_latestLoginDate:
   type: string
@@ -60,17 +63,21 @@ user_latestLoginDate:
   example: 2017-04-06T10:57:04Z
 user_encryptedPassword:
   type: string
+  nullable: true
   example: kNBCYFF3McYxKDFiBVVFpQ==
 user_allowLogin:
   type: integer
+  nullable: true
   example: 0
 user_thDoNotContact:
   description: Physically represented by 'active' column (where 'active' 0 means 'thDoNotContact' 1 )
   type: boolean
+  nullable: true
   example: true
 user_latestMessageViewDate:
   type: string
   format: date-time
+  nullable: true
   example: 2017-04-06T10:57:04Z
 
 # relationship attributes
@@ -92,10 +99,12 @@ user_latestUpdateUserId:
 user_phoneCodeCountryId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)
 user_photoId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [general-photo](/#tag/simple-model-general-photo)

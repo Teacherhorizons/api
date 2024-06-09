@@ -22,6 +22,7 @@ teacher_availableFromDate:
 
 teacher_statement:
   type: string
+  nullable: true
   example: Foo bar
 
 teacher_partnerMemberNumber:
@@ -34,6 +35,7 @@ teacher_profileStrength:
 
 teacher_birthYear:
   type: integer
+  nullable: true
   example: 1990
 
 teacher_latestAdviserCommentDate:
@@ -47,46 +49,57 @@ teacher_isInterestedInPrivateTuition:
 
 teacher_isInterestedInCommunityFeatures:
   type: boolean
+  nullable: true
   example: true
 
 teacher_neverPotentialRiskToChildren:
   type: boolean
+  nullable: true
   example: true
 
 teacher_neverBehaviouralConcernsTowardsChildren:
   type: boolean
+  nullable: true
   example: true
 
 teacher_thPlaceabilityRating:
   type: integer
+  nullable: true
   example: 1
 
 teacher_teacherDoesNotWantToBeContacted:
   type: boolean
+  nullable: true
   example: true
 
 teacher_isAvailableForRemoteTeaching:
   type: boolean
+  nullable: true
   example: true
 
 teacher_twitterHandle:
   type: string
+  nullable: true
   example: '@teacherhorizons'
 
 teacher_instagramHandle:
   type: string
+  nullable: true
   example: teacher.horizons
 
 teacher_linkedInProfileUrl:
   type: string
+  nullable: true
   example: https://www.linkedin.com/company/teacherhorizons
 
 teacher_facebookProfileUrl:
   type: string
+  nullable: true
   example: https://facebook.com/teacherhorizons
 
 teacher_videoInterviewClipUrl:
   type: string
+  nullable: true
   example: https://youtu.be/cEHAWhG6B3c
 
 teacher_numberOfYearsTeachingExperience:
@@ -234,6 +247,7 @@ teacher_latestAdviserCommentUserId:
 teacher_currentCountryId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher_numberOfDependentChildrenId:

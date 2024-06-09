@@ -10,6 +10,7 @@ regional-region_name:
 regional-region_slug:
   type: string
   maxLength: 180
+  nullable: true
   example: africa
   description: Main
 # Raw data
@@ -17,6 +18,7 @@ regional-region_alias:
   type: string
   maxLength: 60
   deprecated: true
+  nullable: true
   example: /Africa
 regional-region_creationDate:
   type: string
@@ -36,17 +38,21 @@ regional-region_locationLongitude:
   description: Longitude
 regional-region_teachingInRegionDescription:
   type: string
+  nullable: true
   example: Foo bar baz
   maxLength: 1000
 regional-region_ambassadorTestimonial:
   type: string
+  nullable: true
   example: Foo bar baz
 regional-region_qualityOfLifeDescription:
   type: string
+  nullable: true
   example: Foo bar baz
   maxLength: 2000
 regional-region_pageMetaDescription:
   deprecated: true
+  nullable: true
   description: |
     Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
@@ -54,6 +60,7 @@ regional-region_pageMetaDescription:
   maxLength: 255
 regional-region_adviceForInternationalTeachers:
   type: string
+  nullable: true
   example: Foo bar baz
   maxLength: 2000
 # Derived (dw)
@@ -307,6 +314,7 @@ regional-region_communityResponseQuestionIds:
     <span class="dw"></span>
 regional-region_costOfLivingIndex:
   type: number
+  nullable: true
   example: 45.6
   description: |
     <span class="dw"></span>
@@ -324,6 +332,7 @@ regional-region_latestUpdateUserId:
     Relationship to [user](/#tag/simple-model-user)
 regional-region_ambassadorTeacherId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)
@@ -331,4 +340,4 @@ regional-region_photo1Id:
   type: integer
   example: 1
   description: |
-    Derived (dw); Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="dw"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)
