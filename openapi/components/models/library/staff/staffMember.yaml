@@ -14,9 +14,11 @@ staff-staffMember_activeInTh:
   example: 1
 staff-staffMember_description:
   type: string
+  nullable: true
   example: Lorem Ipsum
 staff-staffMember_roleTitle:
   type: integer
+  nullable: true
   example: Kindergarten Teacher
 staff-staffMember_salesforceUserIdString:
   type: string
@@ -33,6 +35,7 @@ staff-staffMember_userId:
 staff-staffMember_currentCityId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-city](/#tag/simple-model-regional-city)
 
@@ -46,5 +49,6 @@ staff-staffMember_photoId:
 staff-staffMember_currentCountryId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)

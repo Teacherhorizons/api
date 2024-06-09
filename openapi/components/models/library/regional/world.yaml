@@ -4,10 +4,12 @@ regional-world_photo1:
   example: /foo/bar/baz.jpeg
 regional-world_teachingInWorldDescription:
   type: string
+  nullable: true
   example: foo bar baz qux
   maxLength: 1000
 regional-world_pageMetaDescription:
   deprecated: true
+  nullable: true
   description: |
     Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
@@ -90,6 +92,7 @@ regional-world_numberOfSecondaryOtherCurriculumSchools:
     <span class="dw"></span>
 regional-world_qualityOfLifeDescription:
   type: string
+  nullable: true
   example: Foo bar qux
   maxLength: 2000
 regional-world_averageSavingPercentage:
@@ -103,6 +106,7 @@ regional-world_percentageOfSchoolsHavePrivateHealthcareScheme:
   example: 86
 regional-world_adviceForInternationalTeachers:
   type: string
+  nullable: true
   example: Foo bar baz
   maxLength: 2000
 regional-world_percentageOfOverseasTeachers:

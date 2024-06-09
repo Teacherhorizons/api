@@ -6,6 +6,7 @@ school_name:
 school_slug:
   type: string
   description: Main
+  nullable: true
   example: africa-angola-luanda-english-school-community-of-luanda
 school_isActive:
   type: boolean
@@ -18,6 +19,7 @@ school_isActive:
 #   example: 1
 school_thRating:
   type: number
+  nullable: true
   example: 7.5
   description: Between 6 and 10, in steps of 0.5
 school_alias:
@@ -25,12 +27,15 @@ school_alias:
   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
 school_address1:
   type: string
+  nullable: true
   example: Rua de Cambambe No 21-23
 school_address2:
   type: string
+  nullable: true
   example: Bairro Patrice Lumumba
 school_address3:
   type: string
+  nullable: true
   example: Luanda
 school_websiteUrl:
   type: string
@@ -100,27 +105,34 @@ school_isAcademicallySelective:
   example: true
 school_yearFounded:
   type: integer
+  nullable: true
   example: 2003
 school_promoVideoUrl:
   type: string
+  nullable: true
   example: https://youtu.be/cEHAWhG6B3c
 school_numberOfSchoolDaysPerYear:
   type: integer
   example: 155
 school_yearHeadTeacherStarted:
   type: integer
+  nullable: true
   example: 2020
 school_yearLastAccredited:
   type: integer
+  nullable: true
   example: 2001
 school_hasLocalAccreditation:
   type: boolean
+  nullable: true
   example: true
 school_missionStatementText:
   type: string
+  nullable: true
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
 school_promoVideoCaption:
   type: string
+  nullable: true
   example: Lorem ipsum
 school_percentageOfOverseasTeachers:
   type: integer
@@ -145,45 +157,58 @@ school_monthRecruitmentBegins:
   example: 3
 school_teacherUpperAgeLimit:
   type: integer
+  nullable: true
   example: 55
 school_isOpenToNewlyQualifiedTeachers:
   type: boolean
+  nullable: true
   example: true
 school_isOpenToUntrainedTeachers:
   type: boolean
+  nullable: true
   example: true
 school_isOpenToPgcei:
   type: boolean
+  nullable: true
   example: true
 school_isOpenToTeachingCouples:
   type: boolean
+  nullable: true
   example: true
 school_additionalVisaRequirementsText:
   type: string
+  nullable: true
   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
 school_additionalRecruitmentRequirementsText:
   type: string
+  nullable: true
   example: Lorem ipsum
 school_monthForNoticeOfIntentionToLeave:
   type: integer
+  nullable: true
   example: 1
 school_monthContractEnds:
   type: integer
+  nullable: true
   example: 11
 school_additionalContractText:
   type: string
+  nullable: true
   example: Foo
 school_monthContractStarts:
   type: integer
+  nullable: true
   example: 4
 school_locationLatLong:
   type: string
   example: -8.91461649145998, 13.1904718044952
 school_yearCampusLastRenovated:
   type: integer
+  nullable: true
   example: 2000
 school_locationText:
   type: string
+  nullable: true
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
   maxLength: 1000
 school_locationLatitude:
@@ -239,48 +264,62 @@ school_amountIndividualTeacherSavesYearlyInUsd:
   example: 13400
 school_numberOfDependentsPerTeacher:
   type: integer
+  nullable: true
   example: 2
 school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
   type: boolean
   example: true
 school_additionalTaxText:
   type: string
+  nullable: true
   example: Foo bar
 school_billsExpenditurePercentage:
   type: integer
+  nullable: true
   example: 20
 school_foodAndDrinkExpenditurePercentage:
   type: integer
+  nullable: true
   example: 10
 school_travelExpenditurePercentage:
   type: integer
+  nullable: true
   example: 11
 school_otherExpenditurePercentage:
   type: integer
+  nullable: true
   example: 13
 school_accommodationExpenditurePercentage:
   type: integer
+  nullable: true
   example: 15
 school_hasTeacherInductionProgramme:
   type: boolean
+  nullable: true
   example: true
 school_hasTeacherPersonalLeaveDays:
   type: boolean
+  nullable: true
   example: true
 school_hasTeacherBereavementLeave:
   type: boolean
+  nullable: true
   example: true
 school_additionalAccommodationText:
   type: string
+  nullable: true
   example: Lorem ipsum
 school_ambassadorTestimonial:
   type: string
+  nullable: true
   example: Foo bar
 school_leadRecruitmentContactName:
   type: string
+  nullable: true
   example: Mrs Sharon Morgan
 school_leadRecruitmentContactEmail:
   type: string
+  nullable: true
   example: smorgan@escolaangola.org
 school_isInterestedInRecruitmentServices:
   type: boolean
@@ -295,6 +334,7 @@ school_numberOfBasicActiveJobCredits:
   description: Business idea retracted
 school_hasThSaferRecruitmentBadgeOnOwnWebsite:
   type: boolean
+  nullable: true
   example: true
 school_logoUrl:
   type: string
@@ -342,12 +382,14 @@ school_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 school_summaryTemplate:
   type: string
+  nullable: true
   example: Foo bar ${baz}
 
 # relationship attributes
 school_phoneCodeCountryId:
   type: integer
   example: 1
+  nullable: true
   description: |
     Relationship to [regional-country](/#tag/simple-model-regional-country)
 school_internationalWorkingCurrencyId:
@@ -357,6 +399,7 @@ school_internationalWorkingCurrencyId:
     Relationship to [general-internationalWorkingCurrency](/#tag/simple-model-general-internationalWorkingCurrency)
 school_cityId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [regional-city](/#tag/simple-model-regional-city)
