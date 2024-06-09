@@ -3,6 +3,7 @@ application-action_detail:
   type: string
   description: Main
   example: already interviewed
+  maxLength: 100
 
 application-action_politeEmailMessage:
   type: string
@@ -12,7 +13,7 @@ application-action_politeEmailMessage:
 application-action_endStateId:
   type: integer
   example: 1
-  description: Relationship to State 
+  description: Relationship to State
 #check with RR
 
 application-action_emailId:

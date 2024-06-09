@@ -24,6 +24,8 @@ application_latestUpdateDate:
 application_hasDataIssues:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 
 application_thSystemMatchScore:
   description: System match score of teacher and job, value between 0 and 1
@@ -65,6 +67,7 @@ application_statusId:
 
 application_latestEventId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [application-applicationEvent](/#tag/simple-model-application-applicationEvent)
