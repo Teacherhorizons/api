@@ -7,6 +7,7 @@ application-action_detail:
 
 application-action_politeEmailMessage:
   type: string
+  nullable: true
   example: foo bar
 
 # relationship attributes
@@ -18,6 +19,7 @@ application-action_endStateId:
 
 application-action_emailId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR

@@ -1,6 +1,7 @@
 # simple attributes
 job_title:
   type: string
+  nullable: true
   example: Foo bar
   description: Main
   maxLength: 100
@@ -25,6 +26,7 @@ job_latestUpdateDate:
   example: 2011-02-07T15:53:34Z
 job_advertExpiryDate:
   type: string
+  nullable: true
   format: date-time
   example: 2011-02-07T15:53:32Z"
 job_excludeFromJobSearch:
@@ -47,6 +49,7 @@ job_typeId:
     Relationship to [job-type](/#tag/simple-model-job-type)
 job_roleId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [general-role](/#tag/simple-model-general-role)
@@ -67,6 +70,7 @@ job_latestUpdateUserId:
     Relationship to [user](/#tag/simple-model-user)
 job_thOwnerUserId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)

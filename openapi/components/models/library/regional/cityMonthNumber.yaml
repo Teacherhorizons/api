@@ -7,23 +7,29 @@ regional-cityMonthNumber_monthNumber:
   example: 3
 regional-cityMonthNumber_averageMinTemperatureInDegreesC:
   type: number
+  nullable: true
   example: 14.6
 regional-cityMonthNumber_averageMaxTemperatureInDegreesC:
   type: number
+  nullable: true
   example: 19.7
 regional-cityMonthNumber_averageRainfallInMM:
   type: number
+  nullable: true
   example: 123
 regional-cityMonthNumber_notes:
   type: string
+  nullable: true
   example: Foo bar
   maxLength: 255
 regional-cityMonthNumber_creationDate:
   type: string
+  nullable: true
   example: 2011-02-07T15:53:34Z
   format: date-time
 regional-cityMonthNumber_latestUpdateDate:
   type: string
+  nullable: true
   example: 2011-02-07T15:53:34Z
   format: date-time
 
@@ -36,12 +42,14 @@ regional-cityMonthNumber_cityId:
 
 regional-cityMonthNumber_creationUserId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
 
 regional-cityMonthNumber_latestUpdateUserId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)

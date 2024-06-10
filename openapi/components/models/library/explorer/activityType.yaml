@@ -6,11 +6,13 @@ explorer-activityType_nameForAdmin:
   maxLength: 50
 explorer-activityType_nameForSchool:
   type: string
+  nullable: true
   example: Interview request sent
   description: Main; available to school only
   maxLength: 50
 explorer-activityType_nameForTeacher:
   type: string
+  nullable: true
   example: Interview request received from school
   description: Main; available to teacher only
   maxLength: 50
@@ -27,6 +29,7 @@ explorer-activityType_templateText:
 # relationship attributes
 explorer-activityType_recordStatusId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [explorer-status](/#tag/simple-model-explorer-status)

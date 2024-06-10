@@ -1,32 +1,38 @@
 # simple attributes
 meta-entityChange_date:
   type: string
+  nullable: true
   format: date-time
   example: 2011-02-07T15:53:34Z
 meta-entityChange_isProcessed:
   type: boolean
+  nullable: true
   example: true
 
 # relationship attributes
 meta-entityChange_entityTypeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 
 meta-entityChange_entityId:
   type: integer
+  nullable: true
   example: 1
   description: The id of the related entity (non-specific relationship)
 
 meta-entityChange_userId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [user](/#tag/simple-model-user)
 
 meta-entityChange_typeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [meta-entityChangeType](/#tag/simple-model-meta-entityChangeType)

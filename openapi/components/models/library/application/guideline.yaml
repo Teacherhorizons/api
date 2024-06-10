@@ -7,12 +7,14 @@ application-guideline_name:
 # relationship attributes
 application-guideline_fromEventTypeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [application-eventType](/#tag/simple-model-application-eventType)
 
 application-guideline_toEventTypeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [application-eventType](/#tag/simple-model-application-eventType)
