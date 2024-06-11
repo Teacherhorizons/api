@@ -16,10 +16,12 @@ staff-staffMember_description:
   type: string
   nullable: true
   example: Lorem Ipsum
+  maxLength: 100
 staff-staffMember_roleTitle:
   type: integer
   nullable: true
   example: Kindergarten Teacher
+  maxLength: 100
 staff-staffMember_salesforceUserIdString:
   type: string
   example: a0DD000000Y4zYh

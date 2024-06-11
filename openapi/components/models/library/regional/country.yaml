@@ -13,6 +13,7 @@ regional-country_middleOfSentenceName:
   nullable: true
   example: the Philippines
   description: Idea - derived based on name and nameUsesThe (e.g. 'the Philippines' or 'China')
+  maxLength: 100
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
@@ -57,6 +58,7 @@ regional-country_phoneCode:
 regional-country_ambassadorTestimonial:
   type: string
   example: Lorem ipsum
+  maxLength: 100
 regional-country_teachingInCountryDescription:
   type: string
   nullable: true
@@ -68,6 +70,7 @@ regional-country_qualityOfLifeDescription:
   example: Fooo barrr abc
   description: |
     <span class="dw"></span>
+  maxLength: 100
 regional-country_pageMetaDescription:
   deprecated: true
   description: |

@@ -9,9 +9,11 @@ user_fullName:
 user_firstName:
   type: string
   example: Simon
+  maxLength: 100
 user_lastName:
   type: string
   example: Jones
+  maxLength: 100
 user_uniqueName:
   type: string
   example: Fred Smith (12345)
@@ -21,9 +23,11 @@ user_uniqueName:
     - school: firstName (with city name if firstName not unique) - e.g. 'British School of Alexandria' or 'British International School (Lisbon)'
     - admin: `${firstName} ${lastName}` - e.g. 'Alex Reynolds'
     - teacher: `${firstName} ${lastName} (${memberNumber})` - e.g. 'Poobie Kisten (123724)'
+  maxLength: 100
 user_email:
   type: string
   example: simon.jones@gmail.com
+  maxLength: 100
 user_skypeUserName:
   type: string
   example: abc_teacher
@@ -35,6 +39,7 @@ user_phone:
   type: string
   nullable: true
   example: 1234567890
+  maxLength: 100
 user_optin:
   deprecated: true
   description: Deprecated until we figure out what this is used for. Possibly used to represent when user would like to receive job emails.
@@ -57,6 +62,7 @@ user_authToken:
   type: string
   nullable: true
   example: 2386dc3a-608f-424f-a1e0-44c3a02fc78b
+  maxLength: 100
 user_latestLoginDate:
   type: string
   format: date-time
@@ -65,6 +71,7 @@ user_encryptedPassword:
   type: string
   nullable: true
   example: kNBCYFF3McYxKDFiBVVFpQ==
+  maxLength: 100
 user_allowLogin:
   type: integer
   nullable: true

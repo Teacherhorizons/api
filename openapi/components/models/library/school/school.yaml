@@ -3,11 +3,13 @@ school_name:
   type: string
   description: Main
   example: English School Community of Luanda
+  maxLength: 100
 school_slug:
   type: string
   description: Main
   nullable: true
   example: africa-angola-luanda-english-school-community-of-luanda
+  maxLength: 100
 school_isActive:
   type: boolean
   example: true
@@ -25,18 +27,22 @@ school_thRating:
 school_alias:
   type: string
   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
+  maxLength: 100
 school_address1:
   type: string
   nullable: true
   example: Rua de Cambambe No 21-23
+  maxLength: 100
 school_address2:
   type: string
   nullable: true
   example: Bairro Patrice Lumumba
+  maxLength: 100
 school_address3:
   type: string
   nullable: true
   example: Luanda
+  maxLength: 100
 school_websiteUrl:
   type: string
   example: www.isbi.com
@@ -111,6 +117,7 @@ school_promoVideoUrl:
   type: string
   nullable: true
   example: https://youtu.be/cEHAWhG6B3c
+  maxLength: 100
 school_numberOfSchoolDaysPerYear:
   type: integer
   example: 155
@@ -130,10 +137,12 @@ school_missionStatementText:
   type: string
   nullable: true
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
+  maxLength: 100
 school_promoVideoCaption:
   type: string
   nullable: true
   example: Lorem ipsum
+  maxLength: 100
 school_percentageOfOverseasTeachers:
   type: integer
   example: 80
@@ -179,10 +188,12 @@ school_additionalVisaRequirementsText:
   type: string
   nullable: true
   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
+  maxLength: 100
 school_additionalRecruitmentRequirementsText:
   type: string
   nullable: true
   example: Lorem ipsum
+  maxLength: 100
 school_monthForNoticeOfIntentionToLeave:
   type: integer
   nullable: true
@@ -195,6 +206,7 @@ school_additionalContractText:
   type: string
   nullable: true
   example: Foo
+  maxLength: 100
 school_monthContractStarts:
   type: integer
   nullable: true
@@ -273,6 +285,7 @@ school_additionalTaxText:
   type: string
   nullable: true
   example: Foo bar
+  maxLength: 100
 school_billsExpenditurePercentage:
   type: integer
   nullable: true
@@ -309,18 +322,22 @@ school_additionalAccommodationText:
   type: string
   nullable: true
   example: Lorem ipsum
+  maxLength: 100
 school_ambassadorTestimonial:
   type: string
   nullable: true
   example: Foo bar
+  maxLength: 100
 school_leadRecruitmentContactName:
   type: string
   nullable: true
   example: Mrs Sharon Morgan
+  maxLength: 100
 school_leadRecruitmentContactEmail:
   type: string
   nullable: true
   example: smorgan@escolaangola.org
+  maxLength: 100
 school_isInterestedInRecruitmentServices:
   type: boolean
   example: true
@@ -384,6 +401,7 @@ school_summaryTemplate:
   type: string
   nullable: true
   example: Foo bar ${baz}
+  maxLength: 100
 
 # relationship attributes
 school_phoneCodeCountryId:
