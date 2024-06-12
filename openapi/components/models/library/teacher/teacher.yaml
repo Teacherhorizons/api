@@ -24,6 +24,7 @@ teacher_statement:
   type: string
   nullable: true
   example: Foo bar
+  maxLength: 100
 
 teacher_partnerMemberNumber:
   type: integer
@@ -81,26 +82,31 @@ teacher_twitterHandle:
   type: string
   nullable: true
   example: '@teacherhorizons'
+  maxLength: 100
 
 teacher_instagramHandle:
   type: string
   nullable: true
   example: teacher.horizons
+  maxLength: 100
 
 teacher_linkedInProfileUrl:
   type: string
   nullable: true
   example: https://www.linkedin.com/company/teacherhorizons
+  maxLength: 100
 
 teacher_facebookProfileUrl:
   type: string
   nullable: true
   example: https://facebook.com/teacherhorizons
+  maxLength: 100
 
 teacher_videoInterviewClipUrl:
   type: string
   nullable: true
   example: https://youtu.be/cEHAWhG6B3c
+  maxLength: 100
 
 teacher_numberOfYearsTeachingExperience:
   type: integer

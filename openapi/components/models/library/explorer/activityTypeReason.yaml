@@ -3,10 +3,12 @@ explorer-activityTypeReason_name:
   type: string
   description: Main
   example: Accepted another offer
+  maxLength: 100
 
 # relationship attributes
 explorer-activityTypeReason_typeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [explorer-activityType](/#tag/simple-model-explorer-activityType)

@@ -10,8 +10,10 @@ regional-country_nameUsesThe:
   description: Idea - to be able to write 'the Philippines' (true) or 'China' (false), for example
 regional-country_middleOfSentenceName:
   type: string
+  nullable: true
   example: the Philippines
   description: Idea - derived based on name and nameUsesThe (e.g. 'the Philippines' or 'China')
+  maxLength: 100
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
@@ -33,6 +35,7 @@ regional-country_latestUpdateDate:
   example: 2011-02-07T15:53:32Z
 regional-country_slug:
   type: string
+  nullable: true
   example: africa-angola-luanda
   description: Main
   maxLength: 180
@@ -55,20 +58,25 @@ regional-country_phoneCode:
 regional-country_ambassadorTestimonial:
   type: string
   example: Lorem ipsum
+  maxLength: 100
 regional-country_teachingInCountryDescription:
   type: string
+  nullable: true
   example: Fooo barrr abc
   maxLength: 1000
 regional-country_qualityOfLifeDescription:
   type: string
+  nullable: true
   example: Fooo barrr abc
   description: |
     <span class="dw"></span>
+  maxLength: 100
 regional-country_pageMetaDescription:
   deprecated: true
   description: |
     Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
+  nullable: true
   example: foo bar baz qux
   maxLength: 255
 regional-country_travelAdviceUrl:
@@ -196,12 +204,14 @@ regional-country_percentageOfInternationalStudents:
     <span class="dw"></span>
 regional-country_costOfMidRange3CourseMealFor2:
   type: number
+  nullable: true
   example: 45
 regional-country_costOfCappuccinoRegular:
   type: number
   example: 1.89
 regional-country_costOf1WayTicketLocalTransport:
   type: number
+  nullable: true
   example: 1.60
 regional-country_costOfTaxi1KilometerNormalTariff:
   type: number
@@ -211,24 +221,30 @@ regional-country_costOfGasoline1Litre:
   example: 2.04
 regional-country_monthlyCostOfBasicUtilities:
   type: number
+  nullable: true
   example: 120.40
 regional-country_monthlyCostOfInternet:
   type: number
+  nullable: true
   example: 31.65
 regional-country_monthlyRent1BedroomApartmentInCityCentre:
   type: number
   example: 1026.5
 regional-country_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
+  nullable: true
   example: 776.5
 regional-country_crimeIndex:
   type: number
+  nullable: true
   example: 25
 regional-country_walkingAloneInDaylightSafetyIndex:
   type: number
+  nullable: true
   example: 85.62
 regional-country_walkingAloneAtNightSafetyIndex:
   type: number
+  nullable: true
   example: 67.5
 # junior teacher
 regional-country_minGrossSalaryJuniorTeacher:
@@ -297,9 +313,11 @@ regional-country_maxGrossSalarySeniorTeacher:
 #
 regional-country_qualityOfLifeIndex:
   type: number
+  nullable: true
   example: 163.8
 regional-country_costOfLivingIndex:
   type: number
+  nullable: true
   example: 45.3
 regional-country_averageAnnualGrossIncome:
   type: integer
@@ -370,24 +388,31 @@ regional-country_numberOfUnknownTeachers:
 # numbeo - expense percentages
 regional-country_expensePercentageTransportation:
   type: number
+  nullable: true
   example: 14.6
 regional-country_expensePercentageClothingAndShoes:
   type: number
+  nullable: true
   example: 3.4
 regional-country_expensePercentageSportsAndLeisure:
   type: number
+  nullable: true
   example: 5.4
 regional-country_expensePercentageMarkets:
   type: number
+  nullable: true
   example: 13.1
 regional-country_expensePercentageUtilities:
   type: number
+  nullable: true
   example: 18.3
 regional-country_expensePercentageRent:
   type: number
+  nullable: true
   example: 36.1
 regional-country_expensePercentageRestaurants:
   type: number
+  nullable: true
   example: 9.19999999999999
 regional-country_communityResponseQuestionIds:
   type: array
@@ -401,6 +426,7 @@ regional-country_communityResponseQuestionIds:
 # relationship attributes
 regional-country_localCurrencyId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [general-currency](/#tag/simple-model-general-currency)
@@ -426,6 +452,7 @@ regional-country_regionId:
     Relationship to [regional-region](/#tag/simple-model-regional-region)
 regional-country_capitalCityId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [regional-city](/#tag/simple-model-regional-city)

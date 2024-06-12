@@ -31,22 +31,27 @@ general-photo_heightInPx:
   example: 500
 general-photo_sourceUrl:
   type: string
+  nullable: true
   maxLength: 255
   example: /foo/bar/baz.jpeg
 general-photo_authorName:
   type: string
+  nullable: true
   maxLength: 100
   example: Archie
 general-photo_licenseDescription:
   type: string
+  nullable: true
   maxLength: 100
   example: Lorem Ipsum
 general-photo_modificationDescription:
   type: string
+  nullable: true
   maxLength: 100
   example: Lorem Ipsum
 general-photo_notes:
   type: string
+  nullable: true
   maxLength: 100
   example: Lorem Ipsum
 

@@ -31,12 +31,15 @@ regional-city_keyAttractions:
   description: |
     <span class="website"></span>
   type: string
+  nullable: true
   example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
+  maxLength: 100
 regional-city_slug:
   description: |
     <span class="website"></span>
     Main
   type: string
+  nullable: true
   example: africa-angola-luanda
   maxLength: 180
 regional-city_locationLatitude:
@@ -59,12 +62,17 @@ regional-city_phoneCode:
   example: 355
 regional-city_ambassadorTestimonial:
   type: string
+  nullable: true
   example: Lorem ipsum
+  maxLength: 100
 regional-city_teachingInCityDescription:
   type: string
+  nullable: true
   example: Fooo barrr abc
+  maxLength: 100
 regional-city_qualityOfLifeDescription:
   type: string
+  nullable: true
   example: Fooo barrr abc
   description: |
     <span class="dw"></span>
@@ -74,6 +82,7 @@ regional-city_pageMetaDescription:
   description: |
     Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
+  nullable: true
   example: foo bar baz qux
   maxLength: 255
 regional-city_numberOfSchools:
@@ -189,39 +198,50 @@ regional-city_percentageOfInternationalStudents:
     <span class="dw"></span>
 regional-city_costOfMidRange3CourseMealFor2:
   type: number
+  nullable: true
   example: 45.50
 regional-city_costOfCappuccinoRegular:
   type: number
+  nullable: true
   example: 1.89
 regional-city_costOf1WayTicketLocalTransport:
   type: number
+  nullable: true
   example: 1.60
 regional-city_costOfTaxi1KilometerNormalTariff:
   type: number
+  nullable: true
   example: 0.47
 regional-city_costOfGasoline1Litre:
   type: number
+  nullable: true
   example: 2.04
 regional-city_monthlyCostOfBasicUtilities:
   type: number
+  nullable: true
   example: 120.40
 regional-city_monthlyCostOfInternet:
   type: number
+  nullable: true
   example: 31.65
 regional-city_monthlyRent1BedroomApartmentInCityCentre:
   type: number
   example: 1,026.8
 regional-city_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
+  nullable: true
   example: 776.67
 regional-city_crimeIndex:
   type: number
+  nullable: true
   example: 25
 regional-city_walkingAloneInDaylightSafetyIndex:
   type: number
+  nullable: true
   example: 85.62
 regional-city_walkingAloneAtNightSafetyIndex:
   type: number
+  nullable: true
   example: 67
 
 # simple attributes - junior teacher
@@ -291,35 +311,46 @@ regional-city_maxGrossSalarySeniorTeacher:
 #
 regional-city_qualityOfLifeIndex:
   type: number
+  nullable: true
   example: 163.8
 regional-city_costOfLivingIndex:
   type: number
+  nullable: true
   example: 45.3
 regional-city_expensePercentageTransportation:
   type: number
+  nullable: true
   example: 14.6
 regional-city_expensePercentageClothingAndShoes:
   type: number
+  nullable: true
   example: 3.4
 regional-city_expensePercentageSportsAndLeisure:
   type: number
+  nullable: true
   example: 5.4
 regional-city_expensePercentageMarkets:
   type: number
+  nullable: true
   example: 13.5
 regional-city_expensePercentageUtilities:
   type: number
+  nullable: true
   example: 18.3
 regional-city_expensePercentageRent:
   type: number
+  nullable: true
   example: 36.1
 regional-city_expensePercentageRestaurants:
   type: number
+  nullable: true
   example: 9.199
 regional-city_nearestWeatherStationId:
   type: string
+  nullable: true
   example: '01234'
   description: Not a relationship
+  maxLength: 100
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 203
@@ -426,6 +457,7 @@ regional-city_worldLanguageId:
     Relationship to [general-worldLanguage](/#tag/simple-model-general-worldLanguage)
 regional-city_ambassadorTeacherId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [teacher](/#tag/simple-model-teacher)

@@ -2,18 +2,22 @@
 system-dataCheckType_description:
   type: string
   example: AcreditationTypes should have unique type
+  maxLength: 100
 
 system-dataCheckType_tags:
   type: string
   example: AcreditationTypes, unique, canBeIndex
+  maxLength: 100
 
 system-dataCheckType_sqlStatement:
   type: string
   example: SET @result = (SELECT COUNT(*) FROM (SELECT type FROM AcreditationTypes GROUP BY type HAVING COUNT(*) > 1) a);
+  maxLength: 100
 
 system-dataCheckType_expectedResult:
   type: number
   example: 0
+  maxLength: 100
 
 system-dataCheckType_latestCheckDate:
   type: string

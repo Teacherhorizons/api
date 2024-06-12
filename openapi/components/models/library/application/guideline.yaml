@@ -3,16 +3,19 @@ application-guideline_name:
   type: string
   description: Main
   example: "'Submission to Adviser' should not come directly after 'Submission to Adviser'"
+  maxLength: 100
 
 # relationship attributes
 application-guideline_fromEventTypeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [application-eventType](/#tag/simple-model-application-eventType)
 
 application-guideline_toEventTypeId:
   type: integer
+  nullable: true
   example: 1
   description: |
     Relationship to [application-eventType](/#tag/simple-model-application-eventType)
