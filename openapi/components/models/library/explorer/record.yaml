@@ -1,15 +1,18 @@
 # simple attributes
+
 explorer-record_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 explorer-record_teacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 # teacherId
 # (teacherFullName)
 
@@ -17,18 +20,18 @@ explorer-record_schoolUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user-schoolUser](/#tag/simple-model-user-schoolUser)
+    <span class="website"></span> Relationship to [user-schoolUser](/#tag/simple-model-user-schoolUser)
 
 explorer-record_statusId:
   type: integer
   example: 1
   description: |
-    Relationship to [explorer-status](/#tag/simple-model-explorer-status)
+    <span class="website"></span> Relationship to [explorer-status](/#tag/simple-model-explorer-status)
 
 explorer-record_latestActivityId:
   type: integer
   nullable: true
   example: 1
   description: |
-    Relationship to [explorer-activity](/#tag/simple-model-explorer-activity)
+    <span class="website"></span> Relationship to [explorer-activity](/#tag/simple-model-explorer-activity)
 

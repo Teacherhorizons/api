@@ -34,26 +34,36 @@ general-photo_sourceUrl:
   nullable: true
   maxLength: 255
   example: /foo/bar/baz.jpeg
+  description: |
+    <span class="website"></span>
 general-photo_authorName:
   type: string
   nullable: true
   maxLength: 100
   example: Archie
+  description: |
+    <span class="website"></span>
 general-photo_licenseDescription:
   type: string
   nullable: true
   maxLength: 100
   example: Lorem Ipsum
+  description: |
+    <span class="website"></span>
 general-photo_modificationDescription:
   type: string
   nullable: true
   maxLength: 100
   example: Lorem Ipsum
+  description: |
+    <span class="website"></span>
 general-photo_notes:
   type: string
   nullable: true
   maxLength: 100
   example: Lorem Ipsum
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 general-photo_creationUserId:

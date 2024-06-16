@@ -4,38 +4,54 @@ general-manualEmailTemplate_to:
   nullable: true
   example: ${teacher.email}
   maxLength: 100
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_cc:
   type: string
   nullable: true
   example: ${job.school.lraUser?.email}
   maxLength: 100
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_bcc:
   type: string
   nullable: true
   example: info@teacherhorizons.com
   maxLength: 100
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_subject:
   type: string
   nullable: true
   example: Your application to ${job.school.name} in ${job.school.city.country.name}
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 255
 general-manualEmailTemplate_body:
   type: string
   nullable: true
   example: Lorem ipsum
   maxLength: 10000
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_description:
   type: string
   nullable: true
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_isVisibleToAdmin:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_isVisibleToSchool:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 general-manualEmailTemplate_isVisibleToTeacher:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>

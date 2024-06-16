@@ -3,13 +3,16 @@ application_recommendationText:
   type: string
   nullable: true
   example: Lorem ipsum
-  description: Main
   maxLength: 10000
+  description: |
+    <span class="website"></span> Main
 
 application_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:35Z
+  description: |
+    <span class="website"></span>
 
 application_submissionToSchoolDate:
   type: string
@@ -20,6 +23,8 @@ application_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:35Z
+  description: |
+    <span class="website"></span>
 
 application_hasDataIssues:
   type: boolean
@@ -39,30 +44,36 @@ application_jobId:
   type: integer
   example: 1
   description: |
+    <span class="website"></span> 
+    <span class="dw"></span>
     Relationship to [job](/#tag/simple-model-job)
 
 application_teacherId:
   type: integer
   example: 1
   description: |
+    <span class="website"></span> 
+    <span class="dw"></span>
     Relationship to [teacher](/#tag/simple-model-teacher)
 
 application_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 
 application_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user) 
 
 application_statusId:
   type: integer
   example: 1
   description: |
+    <span class="website"></span> 
+    <span class="dw"></span>
     Relationship to [application-status](/#tag/simple-model-application-status)
 
 application_latestEventId:
@@ -70,11 +81,11 @@ application_latestEventId:
   nullable: true
   example: 1
   description: |
-    Relationship to [application-applicationEvent](/#tag/simple-model-application-applicationEvent)
+    <span class="website"></span> Relationship to [application-applicationEvent](/#tag/simple-model-application-applicationEvent)
 
 application_thMatchTypeId:
   type: integer
   nullable: true
   example: 1
   description: |
-    Relationship to [application-thMatchType](/#tag/simple-model-application-thMatchType)
+    <span class="website"></span> Relationship to [application-thMatchType](/#tag/simple-model-application-thMatchType)

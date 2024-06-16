@@ -1,7 +1,8 @@
 # simple attributes
 application-action_detail:
   type: string
-  description: Main
+  description: |
+    <span class="website"></span> Main
   example: already interviewed
   maxLength: 100
 
@@ -10,6 +11,8 @@ application-action_politeEmailMessage:
   nullable: true
   example: foo bar
   maxLength: 100
+  description: |
+    <span class="website"></span> 
 
 # relationship attributes
 application-action_endStateId:
@@ -23,4 +26,4 @@ application-action_emailId:
   nullable: true
   example: 1
   description: |
-    Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR
+    <span class="website"></span> Relationship to [general-autoEmail ](/#tag/simple-model-general-autoEmail ) #check with RR

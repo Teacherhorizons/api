@@ -8,11 +8,15 @@ general-nationality_parent:
   type: string
   nullable: true
   example: test
+  description: |
+    <span class="website"></span>
 general-nationality_flag:
   type: string
   nullable: true
   example: us
   maxLength: 100
+  description: |
+    <span class="website"></span>
 general-nationality_creationDate:
   type: string
   format: date-time
