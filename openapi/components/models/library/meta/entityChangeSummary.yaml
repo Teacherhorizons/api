@@ -1,9 +1,12 @@
 # simple attributes
+
 meta-entityChangeSummary_fromDate:
   type: string
   nullable: true
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 meta-entityChangeSummary_toDate:
   type: string
   nullable: true
@@ -14,10 +17,14 @@ meta-entityChangeSummary_notes:
   nullable: true
   example: foo bar
   maxLength: 255
+  description: |
+    <span class="website"></span>
 meta-entityChangeSummary_isProcessed:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 #relationships attributes
 meta-entityChangeSummary_entityTypeId:
@@ -25,21 +32,21 @@ meta-entityChangeSummary_entityTypeId:
   nullable: true
   example: 1
   description: |
-    Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
+    <span class="website"></span> Relationship to [meta-entityType](/#tag/simple-model-meta-entityType)
 meta-entityChangeSummary_entityId:
   type: integer
   nullable: true
   example: 1
-  description: The id of the related entity (non-specific relationship)
+  description: <span class="website"></span> The id of the related entity (non-specific relationship)
 meta-entityChangeSummary_typeId:
   type: integer
   nullable: true
   example: 1
   description: |
-    Relationship to [meta-entityChangeType](/#tag/simple-model-meta-entityChangeType)
+    <span class="website"></span> Relationship to [meta-entityChangeType](/#tag/simple-model-meta-entityChangeType)
 meta-entityChangeSummary_userId:
   type: integer
   nullable: true
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

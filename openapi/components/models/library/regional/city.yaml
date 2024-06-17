@@ -2,7 +2,7 @@
 regional-city_name:
   type: string
   example: Luanda
-  description: Main
+  description: <span class="website"></span> <span class="dw"></span> Main
   maxLength: 250
 regional-city_alias:
   description: |
@@ -65,21 +65,26 @@ regional-city_ambassadorTestimonial:
   nullable: true
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 regional-city_teachingInCityDescription:
   type: string
   nullable: true
   example: Fooo barrr abc
   maxLength: 100
+  description: |
+    <span class="website"></span>
 regional-city_qualityOfLifeDescription:
   type: string
   nullable: true
   example: Fooo barrr abc
   description: |
-    <span class="dw"></span>
+    <span class="website"></span>
   maxLength: 2000
 regional-city_pageMetaDescription:
   deprecated: true
   description: |
+    <span class="website"></span>
     Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   nullable: true
@@ -200,30 +205,44 @@ regional-city_costOfMidRange3CourseMealFor2:
   type: number
   nullable: true
   example: 45.50
+  description: |
+    <span class="website"></span>
 regional-city_costOfCappuccinoRegular:
   type: number
   nullable: true
   example: 1.89
+  description: |
+    <span class="website"></span>
 regional-city_costOf1WayTicketLocalTransport:
   type: number
   nullable: true
   example: 1.60
+  description: |
+    <span class="website"></span>
 regional-city_costOfTaxi1KilometerNormalTariff:
   type: number
   nullable: true
   example: 0.47
+  description: |
+    <span class="website"></span>
 regional-city_costOfGasoline1Litre:
   type: number
   nullable: true
   example: 2.04
+  description: |
+    <span class="website"></span>
 regional-city_monthlyCostOfBasicUtilities:
   type: number
   nullable: true
   example: 120.40
+  description: |
+    <span class="website"></span>
 regional-city_monthlyCostOfInternet:
   type: number
   nullable: true
   example: 31.65
+  description: |
+    <span class="website"></span>
 regional-city_monthlyRent1BedroomApartmentInCityCentre:
   type: number
   example: 1,026.8
@@ -231,18 +250,26 @@ regional-city_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
   nullable: true
   example: 776.67
+  description: |
+    <span class="website"></span>
 regional-city_crimeIndex:
   type: number
   nullable: true
   example: 25
+  description: |
+    <span class="website"></span>
 regional-city_walkingAloneInDaylightSafetyIndex:
   type: number
   nullable: true
   example: 85.62
+  description: |
+    <span class="website">
 regional-city_walkingAloneAtNightSafetyIndex:
   type: number
   nullable: true
   example: 67
+  description: |
+    <span class="website">
 
 # simple attributes - junior teacher
 regional-city_minGrossSalaryJuniorTeacher:
@@ -313,43 +340,61 @@ regional-city_qualityOfLifeIndex:
   type: number
   nullable: true
   example: 163.8
+  description: |
+    <span class="website"></span>
 regional-city_costOfLivingIndex:
   type: number
   nullable: true
   example: 45.3
+  description: |
+    <span class="website"></span>
 regional-city_expensePercentageTransportation:
   type: number
   nullable: true
   example: 14.6
+  description: |
+    <span class="website"></span>
 regional-city_expensePercentageClothingAndShoes:
   type: number
   nullable: true
   example: 3.4
+  description: |
+    <span class="website"></span> 
 regional-city_expensePercentageSportsAndLeisure:
   type: number
   nullable: true
   example: 5.4
+  description: |
+    <span class="website">
 regional-city_expensePercentageMarkets:
   type: number
   nullable: true
   example: 13.5
+  description: |
+    <span class="website">
 regional-city_expensePercentageUtilities:
   type: number
   nullable: true
   example: 18.3
+  description: |
+    <span class="website">
 regional-city_expensePercentageRent:
   type: number
   nullable: true
   example: 36.1
+  description: |
+    <span class="website">
 regional-city_expensePercentageRestaurants:
   type: number
   nullable: true
   example: 9.199
+  description: |
+    <span class="website">
 regional-city_nearestWeatherStationId:
   type: string
   nullable: true
   example: '01234'
-  description: Not a relationship
+  description: <span class="website"> Not a relationship
   maxLength: 100
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
@@ -439,7 +484,7 @@ regional-city_countryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> <span class="dw"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 regional-city_creationUserId:
   type: integer
   example: 1
@@ -460,9 +505,9 @@ regional-city_ambassadorTeacherId:
   nullable: true
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 regional-city_photo1Id:
   type: integer
   example: 1
   description: |
-    <span class="dw"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="dw"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
