@@ -1,12 +1,12 @@
 # simple attributes
 school_name:
   type: string
-  description: Main
+  description: <span class="website"></span> Main
   example: English School Community of Luanda
   maxLength: 100
 school_slug:
   type: string
-  description: Main
+  description: <span class="website"></span> Main
   nullable: true
   example: africa-angola-luanda-english-school-community-of-luanda
   maxLength: 100
@@ -23,26 +23,34 @@ school_thRating:
   type: number
   nullable: true
   example: 7.5
-  description: Between 6 and 10, in steps of 0.5
+  description: <span class="website"></span> Between 6 and 10, in steps of 0.5
 school_alias:
   type: string
   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_address1:
   type: string
   nullable: true
   example: Rua de Cambambe No 21-23
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_address2:
   type: string
   nullable: true
   example: Bairro Patrice Lumumba
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_address3:
   type: string
   nullable: true
   example: Luanda
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_websiteUrl:
   type: string
   example: www.isbi.com
@@ -113,11 +121,15 @@ school_yearFounded:
   type: integer
   nullable: true
   example: 2003
+  description: |
+    <span class="website"></span>
 school_promoVideoUrl:
   type: string
   nullable: true
   example: https://youtu.be/cEHAWhG6B3c
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_numberOfSchoolDaysPerYear:
   type: integer
   example: 155
@@ -125,24 +137,34 @@ school_yearHeadTeacherStarted:
   type: integer
   nullable: true
   example: 2020
+  description: |
+    <span class="website"></span>
 school_yearLastAccredited:
   type: integer
   nullable: true
   example: 2001
+  description: |
+    <span class="website"></span>
 school_hasLocalAccreditation:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_missionStatementText:
   type: string
   nullable: true
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_promoVideoCaption:
   type: string
   nullable: true
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_percentageOfOverseasTeachers:
   type: integer
   example: 80
@@ -168,49 +190,71 @@ school_teacherUpperAgeLimit:
   type: integer
   nullable: true
   example: 55
+  description: |
+    <span class="website"></span>
 school_isOpenToNewlyQualifiedTeachers:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_isOpenToUntrainedTeachers:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_isOpenToPgcei:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_isOpenToTeachingCouples:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_additionalVisaRequirementsText:
   type: string
   nullable: true
   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_additionalRecruitmentRequirementsText:
   type: string
   nullable: true
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_monthForNoticeOfIntentionToLeave:
   type: integer
   nullable: true
   example: 1
+  description: |
+    <span class="website"></span>
 school_monthContractEnds:
   type: integer
   nullable: true
   example: 11
+  description: |
+    <span class="website"></span>
 school_additionalContractText:
   type: string
   nullable: true
   example: Foo
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_monthContractStarts:
   type: integer
   nullable: true
   example: 4
+  description: |
+    <span class="website"></span>
 school_locationLatLong:
   type: string
   example: -8.91461649145998, 13.1904718044952
@@ -218,11 +262,15 @@ school_yearCampusLastRenovated:
   type: integer
   nullable: true
   example: 2000
+  description: |
+    <span class="website"></span>
 school_locationText:
   type: string
   nullable: true
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
   maxLength: 1000
+  description: |
+    <span class="website"></span>
 school_locationLatitude:
   type: number
   example: -8.91461649145998
@@ -278,6 +326,8 @@ school_numberOfDependentsPerTeacher:
   type: integer
   nullable: true
   example: 2
+  description: |
+    <span class="website"></span>
 school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
   type: boolean
   example: true
@@ -286,58 +336,84 @@ school_additionalTaxText:
   nullable: true
   example: Foo bar
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_billsExpenditurePercentage:
   type: integer
   nullable: true
   example: 20
+  description: |
+    <span class="website"></span>
 school_foodAndDrinkExpenditurePercentage:
   type: integer
   nullable: true
   example: 10
+  description: |
+    <span class="website"></span>
 school_travelExpenditurePercentage:
   type: integer
   nullable: true
   example: 11
+  description: |
+    <span class="website"></span>
 school_otherExpenditurePercentage:
   type: integer
   nullable: true
   example: 13
+  description: |
+    <span class="website"></span>
 school_accommodationExpenditurePercentage:
   type: integer
   nullable: true
   example: 15
+  description: |
+    <span class="website"></span>
 school_hasTeacherInductionProgramme:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_hasTeacherPersonalLeaveDays:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_hasTeacherBereavementLeave:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_additionalAccommodationText:
   type: string
   nullable: true
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_ambassadorTestimonial:
   type: string
   nullable: true
   example: Foo bar
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_leadRecruitmentContactName:
   type: string
   nullable: true
   example: Mrs Sharon Morgan
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_leadRecruitmentContactEmail:
   type: string
   nullable: true
   example: smorgan@escolaangola.org
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school_isInterestedInRecruitmentServices:
   type: boolean
   example: true
@@ -353,6 +429,8 @@ school_hasThSaferRecruitmentBadgeOnOwnWebsite:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
@@ -402,6 +480,8 @@ school_summaryTemplate:
   nullable: true
   example: Foo bar ${baz}
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 school_phoneCodeCountryId:
@@ -409,7 +489,7 @@ school_phoneCodeCountryId:
   example: 1
   nullable: true
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 school_internationalWorkingCurrencyId:
   type: integer
   example: 1
@@ -420,7 +500,7 @@ school_cityId:
   nullable: true
   example: 1
   description: |
-    Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="website"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 school_fundingTypeId:
   type: integer
   example: 1
