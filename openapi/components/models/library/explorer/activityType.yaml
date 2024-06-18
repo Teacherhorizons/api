@@ -1,5 +1,4 @@
 # simple attributes
-
 explorer-activityType_nameForAdmin:
   type: string
   example: Job offered
@@ -15,11 +14,13 @@ explorer-activityType_nameForTeacher:
   type: string
   nullable: true
   example: Interview request received from school
-  description: Main; available to teacher only
+  description: <span class="website"></span> Main; available to teacher only
   maxLength: 50
 explorer-activityType_isVisibleToSchool:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 explorer-activityType_isVisibleToTeacher:
   type: boolean
   example: true

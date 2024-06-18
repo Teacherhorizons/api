@@ -7,11 +7,13 @@ regional-world_teachingInWorldDescription:
   nullable: true
   example: foo bar baz qux
   maxLength: 1000
+  description: |
+    <span class="website"></span>
 regional-world_pageMetaDescription:
   deprecated: true
   nullable: true
   description: |
-    Moved to [simple-model-system-page](/#tag/simple-model-system-page)
+    <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   example: foo bar baz qux
   maxLength: 255
@@ -95,6 +97,8 @@ regional-world_qualityOfLifeDescription:
   nullable: true
   example: Foo bar qux
   maxLength: 2000
+  description: |
+    <span class="website"></span>
 regional-world_averageSavingPercentage:
   type: integer
   example: 30
@@ -109,6 +113,8 @@ regional-world_adviceForInternationalTeachers:
   nullable: true
   example: Foo bar baz
   maxLength: 2000
+  description: |
+    <span class="website"></span>
 regional-world_percentageOfOverseasTeachers:
   type: integer
   example: 70

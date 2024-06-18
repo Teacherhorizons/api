@@ -1,3 +1,4 @@
+#Simple attributes
 regional-countrySubject_name:
   type: string
   description: Main
@@ -6,6 +7,8 @@ regional-countrySubject_slug:
   type: string
   example: asia-singapore-english
   maxLength: 100
+  description: |
+    <span class="website"></span>
 regional-countrySubject_numberOfLiveJobs:
   type: integer
   example: 75
@@ -20,26 +23,36 @@ regional-countrySubject_teachingSubjectInCountryDescription:
   type: string
   example: Fooo barrr abc
   maxLength: 1000
+  description: |
+    <span class="website"></span>
 regional-countrySubject_opportunitiesAndTypesOfSchoolDescription:
   type: string
   example: Fooo barrr abc
   maxLength: 2000
+  description: |
+    <span class="website"></span>
 regional-countrySubject_qualificationsAndExperienceDescription:
   type: string
   example: Fooo barrr abc
   maxLength: 2000
+  description: |
+    <span class="website"></span>
 regional-countrySubject_salariesAndBenefitsDescription:
   type: string
   example: Fooo barrr abc
   maxLength: 1000
+  description: |
+    <span class="website"></span>
 regional-countrySubject_qualityOfLifeDescription:
   type: string
   example: Fooo barrr abc
   maxLength: 1000
+  description: |
+    <span class="website"></span>
 regional-countrySubject_pageMetaDescription:
   deprecated: true
   description: |
-    Moved to [simple-model-system-page](/#tag/simple-model-system-page)
+    <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   example: foo bar baz qux
   maxLength: 255
@@ -49,10 +62,10 @@ regional-countrySubject_countryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 
 regional-countrySubject_subjectId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject](/#tag/simple-model-subject)
+    <span class="website"></span>  Relationship to [subject](/#tag/simple-model-subject)

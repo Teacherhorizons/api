@@ -21,22 +21,26 @@ regional-worldArticle_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
   format: date-time
+  description: |
+    <span class="website"></span>
 regional-worldArticle_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
   format: date-time
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 regional-worldArticle_categoryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
+    <span class="website"></span> Relationship to [regional-articleCategory](/#tag/simple-model-regional-articleCategory)
 regional-worldArticle_articleId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-regionArticle](/#tag/simple-model-regional-regionArticle)
+    <span class="website"></span> Relationship to [regional-regionArticle](/#tag/simple-model-regional-regionArticle)
 regional-worldArticle_photoId:
   type: integer
   example: 1
@@ -46,9 +50,9 @@ regional-worldArticle_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 regional-worldArticle_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

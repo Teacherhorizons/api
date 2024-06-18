@@ -12,7 +12,7 @@ regional-region_slug:
   maxLength: 180
   nullable: true
   example: africa
-  description: Main
+  description: <span class="website"></span> Main
 # Raw data
 regional-region_alias:
   type: string
@@ -20,6 +20,8 @@ regional-region_alias:
   deprecated: true
   nullable: true
   example: /Africa
+  description: |
+    <span class="website"></span>
 regional-region_creationDate:
   type: string
   format: date-time
@@ -41,21 +43,27 @@ regional-region_teachingInRegionDescription:
   nullable: true
   example: Foo bar baz
   maxLength: 1000
+  description: |
+   <span class="website"></span>
 regional-region_ambassadorTestimonial:
   type: string
   nullable: true
   example: Foo bar baz
   maxLength: 100
+  description: |
+   <span class="website"></span>
 regional-region_qualityOfLifeDescription:
   type: string
   nullable: true
   example: Foo bar baz
   maxLength: 2000
+  description: |
+   <span class="website"></span>
 regional-region_pageMetaDescription:
   deprecated: true
   nullable: true
   description: |
-    Moved to [simple-model-system-page](/#tag/simple-model-system-page)
+   <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   example: foo bar baz qux
   maxLength: 255
@@ -64,6 +72,8 @@ regional-region_adviceForInternationalTeachers:
   nullable: true
   example: Foo bar baz
   maxLength: 2000
+  description: |
+   <span class="website"></span>
 # Derived (dw)
 regional-region_averageAnnualGrossIncome:
   type: integer
@@ -318,7 +328,7 @@ regional-region_costOfLivingIndex:
   nullable: true
   example: 45.6
   description: |
-    <span class="dw"></span>
+    <span class="website"></span> <span class="dw"></span>
 
 # relationship attribute
 regional-region_creationUserId:
@@ -336,7 +346,7 @@ regional-region_ambassadorTeacherId:
   nullable: true
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 regional-region_photo1Id:
   type: integer
   example: 1

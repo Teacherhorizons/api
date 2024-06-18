@@ -2,22 +2,24 @@
 regional-country_name:
   type: string
   example: Luanda
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 250
 regional-country_nameUsesThe:
   type: boolean
   example: true
-  description: Idea - to be able to write 'the Philippines' (true) or 'China' (false), for example
+  description: <span class="website"></span> Idea - to be able to write 'the Philippines' (true) or 'China' (false), for example
 regional-country_middleOfSentenceName:
   type: string
   nullable: true
   example: the Philippines
-  description: Idea - derived based on name and nameUsesThe (e.g. 'the Philippines' or 'China')
+  description: <span class="website"></span> Idea - derived based on name and nameUsesThe (e.g. 'the Philippines' or 'China')
   maxLength: 100
 regional-country_alias:
   type: string
   example: /Africa/Angola/Luanda
   maxLength: 250
+  description: |
+    <span class="website"></span>
 regional-country_photo1Url:
   type: string
   example: /foo/bar/baz.jpeg
@@ -25,6 +27,8 @@ regional-country_population:
   type: integer
   example: 10494500
   nullable: true
+  description: |
+    <span class="website"></span>  
 regional-country_creationDate:
   type: string
   format: date-time
@@ -37,7 +41,7 @@ regional-country_slug:
   type: string
   nullable: true
   example: africa-angola-luanda
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 180
 regional-country_locationLatitude:
   type: number
@@ -51,30 +55,38 @@ regional-country_isoCode:
   type: string
   example: pt
   maxLength: 2
+  description: |
+    <span class="website"></span>
 regional-country_phoneCode:
   type: string
   example: 355
   maxLength: 4
+  description: |
+    <span class="website"></span>
 regional-country_ambassadorTestimonial:
   type: string
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 regional-country_teachingInCountryDescription:
   type: string
   nullable: true
   example: Fooo barrr abc
   maxLength: 1000
+  description: |
+    <span class="website"></span> 
 regional-country_qualityOfLifeDescription:
   type: string
   nullable: true
   example: Fooo barrr abc
   description: |
-    <span class="dw"></span>
+    <span class="website"></span> <span class="dw"></span>
   maxLength: 100
 regional-country_pageMetaDescription:
   deprecated: true
   description: |
-    Moved to [simple-model-system-page](/#tag/simple-model-system-page)
+   <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   nullable: true
   example: foo bar baz qux
@@ -206,27 +218,41 @@ regional-country_costOfMidRange3CourseMealFor2:
   type: number
   nullable: true
   example: 45
+  description: |
+    <span class="website"></span>
 regional-country_costOfCappuccinoRegular:
   type: number
   example: 1.89
+  description: |
+    <span class="website"></span>
 regional-country_costOf1WayTicketLocalTransport:
   type: number
   nullable: true
   example: 1.60
+  description: |
+    <span class="website"></span>
 regional-country_costOfTaxi1KilometerNormalTariff:
   type: number
   example: 0.47
+  description: |
+    <span class="website"></span>
 regional-country_costOfGasoline1Litre:
   type: number
   example: 2.04
+  description: |
+    <span class="website"></span>
 regional-country_monthlyCostOfBasicUtilities:
   type: number
   nullable: true
   example: 120.40
+  description: |
+    <span class="website"></span>
 regional-country_monthlyCostOfInternet:
   type: number
   nullable: true
   example: 31.65
+  description: |
+    <span class="website"></span>
 regional-country_monthlyRent1BedroomApartmentInCityCentre:
   type: number
   example: 1026.5
@@ -234,18 +260,26 @@ regional-country_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
   nullable: true
   example: 776.5
+  description: |
+    <span class="website"></span>
 regional-country_crimeIndex:
   type: number
   nullable: true
   example: 25
+  description: |
+    <span class="website"></span>
 regional-country_walkingAloneInDaylightSafetyIndex:
   type: number
   nullable: true
   example: 85.62
+  description: |
+    <span class="website"></span>
 regional-country_walkingAloneAtNightSafetyIndex:
   type: number
   nullable: true
   example: 67.5
+  description: |
+    <span class="website"></span>
 # junior teacher
 regional-country_minGrossSalaryJuniorTeacher:
   type: integer
@@ -315,10 +349,14 @@ regional-country_qualityOfLifeIndex:
   type: number
   nullable: true
   example: 163.8
+  description: |
+    <span class="website"></span>
 regional-country_costOfLivingIndex:
   type: number
   nullable: true
   example: 45.3
+  description: |
+    <span class="website"></span>
 regional-country_averageAnnualGrossIncome:
   type: integer
   example: 50247
@@ -390,30 +428,44 @@ regional-country_expensePercentageTransportation:
   type: number
   nullable: true
   example: 14.6
+  description: |
+    <span class="website"></span>
 regional-country_expensePercentageClothingAndShoes:
   type: number
   nullable: true
   example: 3.4
+  description: |
+    <span class="website"></span>
 regional-country_expensePercentageSportsAndLeisure:
   type: number
   nullable: true
   example: 5.4
+  description: |
+    <span class="website"></span> 
 regional-country_expensePercentageMarkets:
   type: number
   nullable: true
   example: 13.1
+  description: |
+    <span class="website"></span> 
 regional-country_expensePercentageUtilities:
   type: number
   nullable: true
   example: 18.3
+  description: |
+    <span class="website"></span> 
 regional-country_expensePercentageRent:
   type: number
   nullable: true
   example: 36.1
+  description: |
+    <span class="website"></span> 
 regional-country_expensePercentageRestaurants:
   type: number
   nullable: true
   example: 9.19999999999999
+  description: |
+   <span class="website"></span> 
 regional-country_communityResponseQuestionIds:
   type: array
   items:
@@ -429,7 +481,7 @@ regional-country_localCurrencyId:
   nullable: true
   example: 1
   description: |
-    Relationship to [general-currency](/#tag/simple-model-general-currency)
+    <span class="website"></span> Relationship to [general-currency](/#tag/simple-model-general-currency)
 regional-country_internationalCurrencyId:
   type: integer
   example: 1
@@ -455,12 +507,12 @@ regional-country_capitalCityId:
   nullable: true
   example: 1
   description: |
-    Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="dw"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 regional-country_ambassadorTeacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 regional-country_photo1Id:
   type: integer
   example: 1
