@@ -2,20 +2,27 @@
 general-autoEmail_name:
   type: string
   example: Registration email
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 150
 general-autoEmail_storedProcedureName:
   type: string
   example: spGetRegistrantData
   maxLength: 200
+  description: |
+    <span class="website"></span>
 general-autoEmail_mandrillTemplateSlug:
   type: string
   example: welcome-to-teacher-horizons
   maxLength: 200
+  description: |
+    <span class="website"></span>
+
 general-autoEmail_mandrillTemplateType:
   type: string
   example: mailchimp
   maxLength: 200
+  description: |
+    <span class="website"></span>
 general-autoEmail_includeInAllEmailJobsRun:
   type: integer
   nullable: true

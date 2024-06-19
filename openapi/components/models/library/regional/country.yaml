@@ -33,10 +33,14 @@ regional-country_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+  description: |
+    <span class="website"></span>
 regional-country_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+  description: |
+    <span class="website"></span>
 regional-country_slug:
   type: string
   nullable: true
@@ -46,11 +50,11 @@ regional-country_slug:
 regional-country_locationLatitude:
   type: number
   example: -8.8383333
-  description: Latitude
+  description: <span class="website"></span> Latitude
 regional-country_locationLongitude:
   type: number
   example: 13.2344444
-  description: Longitude
+  description: <span class="website"></span> Longitude
 regional-country_isoCode:
   type: string
   example: pt
@@ -256,6 +260,8 @@ regional-country_monthlyCostOfInternet:
 regional-country_monthlyRent1BedroomApartmentInCityCentre:
   type: number
   example: 1026.5
+  description: |
+    <span class="website"></span>
 regional-country_monthlyRent1BedroomApartmentOutsideCityCentre:
   type: number
   nullable: true
@@ -491,23 +497,23 @@ regional-country_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 regional-country_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 regional-country_regionId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-region](/#tag/simple-model-regional-region)
+    <span class="website"></span> Relationship to [regional-region](/#tag/simple-model-regional-region)
 regional-country_capitalCityId:
   type: integer
   nullable: true
   example: 1
   description: |
-    <span class="dw"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="website"></span> <span class="dw"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 regional-country_ambassadorTeacherId:
   type: integer
   example: 1
@@ -517,4 +523,4 @@ regional-country_photo1Id:
   type: integer
   example: 1
   description: |
-    <span class="dw"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> <span class="dw"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)

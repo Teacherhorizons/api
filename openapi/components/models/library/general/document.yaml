@@ -2,16 +2,22 @@
 general-document_name:
   type: string
   example: Foo
+  description: |
+    <span class="website"></span>
 general-document_filePath:
   type: string
   example: /foo/bar/baz.html
-  description: Main
+  description: <span class="website"></span> Main
 general-document_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 general-document_latestUpdateDate:
   type: string
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 general-document_caption:
   type: string
   nullable: true
@@ -24,14 +30,14 @@ general-document_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 general-document_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 general-document_typeId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-documentType](/#tag/simple-model-general-documentType)
+    <span class="website"></span> Relationship to [general-documentType](/#tag/simple-model-general-documentType)

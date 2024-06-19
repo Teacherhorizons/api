@@ -3,32 +3,40 @@ general-photo_url:
   type: string
   maxLength: 65535
   example: /foo/bar/baz.jpeg
-  description: Main
+  description: <span class="website"></span> Main
 general-photo_description:
   type: string
   maxLength: 250
   example: abc ff
-  description: Main
+  description: <span class="website"></span> Main
 general-photo_name:
   deprecated: true
   type: string
   maxLength: 250
-  description: Attribute not needed for photos (hopefully)
+  description: <span class="website"></span> Attribute not needed for photos (hopefully)
   example: Foo
 general-photo_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 general-photo_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 general-photo_widthInPx:
   type: integer
   example: 400
+  description: |
+    <span class="website"></span>
 general-photo_heightInPx:
   type: integer
   example: 500
+  description: |
+    <span class="website"></span>
 general-photo_sourceUrl:
   type: string
   nullable: true
@@ -70,14 +78,14 @@ general-photo_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 general-photo_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 general-photo_typeId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-photoType](/#tag/simple-model-general-photoType)
+    <span class="website"></span> Relationship to [general-photoType](/#tag/simple-model-general-photoType)
