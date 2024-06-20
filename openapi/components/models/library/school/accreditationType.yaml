@@ -2,16 +2,20 @@
 school-accreditationType_name:
   type: string
   example: CIS
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 45
 school-accreditationType_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:35Z
+  description: |
+    <span class="website"></span>
 school-accreditationType_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:35Z
+  description: |
+    <span class="website"></span>
 school-accreditationType_url:
   type: string
   nullable: true
@@ -24,10 +28,10 @@ school-accreditationType_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 
 school-accreditationType_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

@@ -1,18 +1,20 @@
 # simple attributes
 school_name:
   type: string
-  description: <span class="website"></span> Main
+  description: <span class="website"></span> <span class="dw"></span> Main
   example: English School Community of Luanda
   maxLength: 100
 school_slug:
   type: string
-  description: <span class="website"></span> Main
+  description: <span class="dw"></span> <span class="website"></span> Main
   nullable: true
   example: africa-angola-luanda-english-school-community-of-luanda
   maxLength: 100
 school_isActive:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 # school_discountForStaffChildrenPercentage
 #   type: number
 #   example: 4
@@ -54,69 +56,109 @@ school_address3:
 school_websiteUrl:
   type: string
   example: www.isbi.com
+  description: |
+    <span class="website"></span>
 school_phoneNumber:
   type: string
   example: 935929501
+  description: |
+    <span class="website"></span>
 school_isEndorsedByTh:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_hasBeenVisitedByTh:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_acronym:
   type: string
   example: ESCOLA
   maxLength: 15
-  description: Updated from maxLength 10 in Sep 2023 due to 'Dwight School Hanoi' being unhappy to go shorter than 'Dwight Hanoi' (12 chars).
+  description: <span class="website"></span> Updated from maxLength 10 in Sep 2023 due to 'Dwight School Hanoi' being unhappy to go shorter than 'Dwight Hanoi' (12 chars).
 school_profileStrength:
   type: number
   example: 75
+  description: |
+    <span class="website"></span>
 school_monthSchoolYearBegins:
   type: integer
   example: 9
+  description: |
+    <span class="website"></span>
 school_headTeacherName:
   type: string
   example: Mrs Sharon Morgan
+  description: |
+    <span class="website"></span>
 school_numberOfExtraCurricularHoursPerWeek:
   type: number
   example: 1
+  description: |
+    <span class="website"></span>
 school_numberOfTeachingHoursPerWeek:
   type: number
   example: 27
+  description: |
+    <span class="website"></span>
 school_numberOfStudents:
   type: integer
   example: 142
+  description: |
+    <span class="website"></span>
 school_numberOfPreSchoolStudents:
   type: integer
   example: 26
+  description: |
+    <span class="website"></span>
 school_numberOfPrimaryStudents:
   type: integer
   example: 118
+  description: |
+    <span class="website"></span>
 school_numberOfSecondaryStudents:
   type: integer
   example: 123
+  description: |
+    <span class="website"></span>
 school_numberOfPost16Students:
   type: integer
   example: 11
+  description: |
+    <span class="website"></span>
 #check with RR
 school_averagePreSchoolClassSize:
   type: integer
   example: 21
+  description: |
+    <span class="website"></span>
 school_averagePrimaryClassSize:
   type: integer
   example: 20
+  description: |
+    <span class="website"></span>
 school_averageSecondaryClassSize:
   type: integer
   example: 22
+  description: |
+    <span class="website"></span>
 school_averagePost16ClassSize:
   type: integer
   example: 23
+  description: |
+    <span class="website"></span>
 school_percentageOfInternationalStudents:
   type: integer
   example: 50
+  description: |
+    <span class="website"></span> <span class="dw"></span>
 school_isAcademicallySelective:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_yearFounded:
   type: integer
   nullable: true
@@ -133,6 +175,8 @@ school_promoVideoUrl:
 school_numberOfSchoolDaysPerYear:
   type: integer
   example: 155
+  description: |
+    <span class="website"></span>
 school_yearHeadTeacherStarted:
   type: integer
   nullable: true
@@ -168,24 +212,38 @@ school_promoVideoCaption:
 school_percentageOfOverseasTeachers:
   type: integer
   example: 80
+  description: |
+    <span class="website"></span> <span class="dw"></span>
 school_isOpenToTeflTeachers:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_numberOfTeachingStaff:
   type: integer
   example: 15
+  description: |
+    <span class="website"></span>
 school_annualTeacherTurnoverPercentage:
   type: integer
   example: 20
+  description: |
+    <span class="website"></span>
 school_numberOfOverseasTeachersRecruitedPerYear:
   type: integer
   example: 11
+  description: |
+    <span class="website"></span>
 school_minimumYearsTeachingExperience:
   type: integer
   example: 2
+  description: |
+    <span class="website"></span>
 school_monthRecruitmentBegins:
   type: integer
   example: 3
+  description: |
+    <span class="website"></span>
 school_teacherUpperAgeLimit:
   type: integer
   nullable: true
@@ -258,6 +316,8 @@ school_monthContractStarts:
 school_locationLatLong:
   type: string
   example: -8.91461649145998, 13.1904718044952
+  description: |
+    <span class="website"></span>
 school_yearCampusLastRenovated:
   type: integer
   nullable: true
@@ -274,54 +334,88 @@ school_locationText:
 school_locationLatitude:
   type: number
   example: -8.91461649145998
+  description: |
+    <span class="website"></span>
 school_locationLongitude:
   type: number
   example: 13.1904718044952
+  description: |
+    <span class="website"></span>
 school_isPayScaleBasedOnExperience:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_contractLengthInYears:
   type: integer
   example: 2
+  description: |
+    <span class="website"></span>
 school_hasTeacherSavingScheme:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_canSalarySupportFamilyOfFour:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_hasFreePrivateHealthcareScheme:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_grossSalaryJuniorTeacher:
   type: number
   example: 12345
+  description: |
+    <span class="website"></span>
 school_grossSalaryJuniorTeacherInUsd:
   type: number
   example: 13456
+  description: |
+    <span class="website"></span>
 school_grossSalarySeniorTeacher:
   type: number
   example: 23456
+  description: |
+    <span class="website"></span>
 school_grossSalarySeniorTeacherInUsd:
   type: number
   example: 24567
+  description: |
+    <span class="website"></span>
 school_juniorTeacherTaxPercentage:
   type: integer
   example: 20
+  description: |
+    <span class="website"></span>
 school_seniorTeacherTaxPercentage:
   type: integer
   example: 20
+  description: |
+    <span class="website"></span>
 school_schoolPensionContributionPercentage:
   type: integer
   example: 8
+  description: |
+    <span class="website"></span>
 school_teacherPensionContributionPercentage:
   type: integer
   example: 3
+  description: |
+    <span class="website"></span>
 school_amountIndividualTeacherSavesYearly:
   type: number
   example: 12000
+  description: |
+    <span class="website"></span>
 school_amountIndividualTeacherSavesYearlyInUsd:
   type: number
   example: 13400
+  description: |
+    <span class="website"></span>
 school_numberOfDependentsPerTeacher:
   type: integer
   nullable: true
@@ -331,6 +425,8 @@ school_numberOfDependentsPerTeacher:
 school_hasOpportunitiesAtSchoolForNonTeachingSpouses:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_additionalTaxText:
   type: string
   nullable: true
@@ -417,14 +513,18 @@ school_leadRecruitmentContactEmail:
 school_isInterestedInRecruitmentServices:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_isSubscribedToCandidateSuggestionEmails:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 school_numberOfBasicActiveJobCredits:
   type: integer
   example: 10
   deprecated: true
-  description: Business idea retracted
+  description: <span class="website"></span> Business idea retracted
 school_hasThSaferRecruitmentBadgeOnOwnWebsite:
   type: boolean
   nullable: true
@@ -434,6 +534,8 @@ school_hasThSaferRecruitmentBadgeOnOwnWebsite:
 school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
+  description: |
+    <span class="website"></span>
 school_smallProfileImageUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
@@ -442,6 +544,8 @@ school_accreditationRating:
   example: 3
   minimum: 1
   maximum: 5
+  description: |
+    <span class="website"></span>
 school_membershipsRating:
   type: integer
   example: 3
@@ -471,10 +575,14 @@ school_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 school_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 school_summaryTemplate:
   type: string
   nullable: true
@@ -494,75 +602,75 @@ school_internationalWorkingCurrencyId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-internationalWorkingCurrency](/#tag/simple-model-general-internationalWorkingCurrency)
+    <span class="website"></span> Relationship to [general-internationalWorkingCurrency](/#tag/simple-model-general-internationalWorkingCurrency)
 school_cityId:
   type: integer
   nullable: true
   example: 1
   description: |
-    <span class="website"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="website"></span> <span class="dw"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 school_fundingTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-fundingType](/#tag/simple-model-school-fundingType)
+    <span class="website"></span> Relationship to [school-fundingType](/#tag/simple-model-school-fundingType)
 school_studentGenderMixId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-studentGenderMix](/#tag/simple-model-school-studentGenderMix)
+    <span class="website"></span> Relationship to [school-studentGenderMix](/#tag/simple-model-school-studentGenderMix)
 school_affiliatedReligionId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-religion](/#tag/simple-model-general-religion)
+    <span class="website"></span> Relationship to [general-religion](/#tag/simple-model-general-religion)
 school_pensionSchemeTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-pensionSchemeType](/#tag/simple-model-general-pensionSchemeType)
+    <span class="website"></span> Relationship to [general-pensionSchemeType](/#tag/simple-model-general-pensionSchemeType)
 school_relocationAllowanceTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-relocationAllowanceType](/#tag/simple-model-school-relocationAllowanceType)
+    <span class="website"></span> Relationship to [school-relocationAllowanceType](/#tag/simple-model-school-relocationAllowanceType)
 school_flightAllowanceTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-flightAllowanceType](/#tag/simple-model-school-flightAllowanceType)
+    <span class="website"></span> Relationship to [school-flightAllowanceType](/#tag/simple-model-school-flightAllowanceType)
 school_managedByUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school_ambassadorTeacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 school_lraUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school_smallProfilePhotoId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
 school_largeProfilePhotoId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)

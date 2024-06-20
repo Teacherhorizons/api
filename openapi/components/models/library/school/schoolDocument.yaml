@@ -2,31 +2,39 @@
 school-schoolDocument_url:
   type: string
   example: /foo/bar/baz.html
+  description: |
+    <span class="website"></span>
 school-schoolDocument_caption:
   type: string
   example: Lorem ipsum
+  description: |
+    <span class="website"></span>
 school-schoolDocument_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 school-schoolDocument_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 
 #relationship attribites
 school-schoolDocument_categoryId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-documentCategory](/#tag/simple-model-school-documentCategory)
+    <span class="website"></span> Relationship to [school-documentCategory](/#tag/simple-model-school-documentCategory)
 school-schoolDocument_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school-schoolDocument_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

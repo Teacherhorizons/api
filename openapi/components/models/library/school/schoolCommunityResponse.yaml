@@ -6,6 +6,8 @@ school-schoolCommunityResponse_responseText:
   type: string
   example: Lorem ipsum
   maxLength: 100
+  description: |
+    <span class="website"></span>
 school-schoolCommunityResponse_creationDate:
   type: string
   format: date-time
@@ -20,7 +22,7 @@ school-schoolCommunityResponse_questionId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-communityQuestion](/#tag/simple-model-school-communityQuestion)
+    <span class="website"></span> Relationship to [school-communityQuestion](/#tag/simple-model-school-communityQuestion)
 school-schoolCommunityResponse_creationUserId:
   type: integer
   example: 1
@@ -35,4 +37,4 @@ school-schoolCommunityResponse_schoolId:
   type: integer
   example: 1
   description: |
-    Relationship to [school](/#tag/simple-model-school)
+    <span class="website"></span> Relationship to [school](/#tag/simple-model-school)
