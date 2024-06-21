@@ -3,15 +3,17 @@ user-favouriteTeacher_creationDate:
   type: string
   format: date-time
   example: 2018-12-02T12:47:14Z
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 user-favouriteTeacher_userId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 user-favouriteTeacher_teacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)

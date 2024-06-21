@@ -3,46 +3,58 @@ teacher_memberNumber:
   type: integer
   example: 1
   readOnly: true
-  description: Main
+  description: <span class="website"></span> Main
 
 teacher_fullName:
   type: string
   example: Foo Bar
-  description: Main. Derived from user.
+  description: <span class="website"></span> <span class="dw"></span> Main. Derived from user.
 
 teacher_firstName:
   type: string
   example: Foo bar
-  description: Main. Derived from user.
+  description: <span class="website"></span> <span class="dw"></span> Main. Derived from user.
 
 teacher_availableFromDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+  description: |
+    <span class="website"></span>
 
 teacher_statement:
   type: string
   nullable: true
   example: Foo bar
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_partnerMemberNumber:
   type: integer
   example: 1
+  description: |
+    <span class="website"></span>
 
 teacher_profileStrength:
   type: integer
   example: 12
+  description: |
+    <span class="website"></span>
 
 teacher_birthYear:
   type: integer
   nullable: true
   example: 1990
+  description: |
+    <span class="website"></span>
 
 teacher_latestAdviserCommentDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+  description: |
+    <span class="website"></span>
 
 teacher_isInterestedInPrivateTuition:
   type: boolean
@@ -52,69 +64,93 @@ teacher_isInterestedInCommunityFeatures:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 teacher_neverPotentialRiskToChildren:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 teacher_neverBehaviouralConcernsTowardsChildren:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 teacher_thPlaceabilityRating:
   type: integer
   nullable: true
   example: 1
+  description: |
+    <span class="website"></span>
 
 teacher_teacherDoesNotWantToBeContacted:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 teacher_isAvailableForRemoteTeaching:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 
 teacher_twitterHandle:
   type: string
   nullable: true
   example: '@teacherhorizons'
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_instagramHandle:
   type: string
   nullable: true
   example: teacher.horizons
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_linkedInProfileUrl:
   type: string
   nullable: true
   example: https://www.linkedin.com/company/teacherhorizons
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_facebookProfileUrl:
   type: string
   nullable: true
   example: https://facebook.com/teacherhorizons
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_videoInterviewClipUrl:
   type: string
   nullable: true
   example: https://youtu.be/cEHAWhG6B3c
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 teacher_numberOfYearsTeachingExperience:
   type: integer
   example: 4
+  description: |
+    <span class="website"></span>
 
 teacher_averageReferenceScoreOutOf100:
   type: number
-  description: Derived
+  description: <span class="website"></span> Derived
   example: 96.5
 
 teacher_numberOfExplorerOpen:
@@ -197,44 +233,44 @@ teacher_userId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 teacher_teachingQualificationCountryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher_qualificationTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-qualificationType](/#tag/simple-model-teacher-qualificationType)
+    <span class="website"></span> Relationship to [teacher-qualificationType](/#tag/simple-model-teacher-qualificationType)
 teacher_jobSeekingStatusId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-jobSeekingStatus](/#tag/simple-model-teacher-jobSeekingStatus)
+    <span class="website"></span> Relationship to [teacher-jobSeekingStatus](/#tag/simple-model-teacher-jobSeekingStatus)
 teacher_photoId:
   deprecated: true
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo). Historically phyically on teacher, but now moving photo to user.
+    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo). Historically phyically on teacher, but now moving photo to user.
 teacher_maritalStatusId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-maritalStatus](/#tag/simple-model-teacher-maritalStatus)
+    <span class="website"></span> Relationship to [teacher-maritalStatus](/#tag/simple-model-teacher-maritalStatus)
 teacher_internationalSchoolExperienceId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-internationalExperience](/#tag/simple-model-teacher-internationalExperience)
+    <span class="website"></span> Relationship to [teacher-internationalExperience](/#tag/simple-model-teacher-internationalExperience)
 teacher_userTypeId:
   deprecated: true
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-thStatus](/#tag/simple-model-teacher-thStatus)
+    <span class="website"></span> Relationship to [teacher-thStatus](/#tag/simple-model-teacher-thStatus)
 teacher_thStatusId:
   type: integer
   example: 1
@@ -244,20 +280,20 @@ teacher_thDiscoveryMethodId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-thDiscoveryMethod](/#tag/simple-model-teacher-thDiscoveryMethod)
+    <span class="website"></span> Relationship to [teacher-thDiscoveryMethod](/#tag/simple-model-teacher-thDiscoveryMethod)
 teacher_latestAdviserCommentUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 teacher_currentCountryId:
   type: integer
   example: 1
   nullable: true
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher_numberOfDependentChildrenId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-numberOfDependentChildren](/#tag/simple-model-teacher-numberOfDependentChildren)
+    <span class="website"></span> Relationship to [teacher-numberOfDependentChildren](/#tag/simple-model-teacher-numberOfDependentChildren)

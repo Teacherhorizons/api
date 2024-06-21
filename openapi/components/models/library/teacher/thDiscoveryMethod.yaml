@@ -2,11 +2,13 @@
 teacher-thDiscoveryMethod_name:
   type: string
   example: Friend / colleague
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 100
 teacher-thDiscoveryMethod_precedence:
   type: integer
   example: 1
+  description: |
+    <span class="website"></span>
 
 #relationship attribute
 teacher-thDiscoveryMethod_categoryId:
@@ -14,4 +16,4 @@ teacher-thDiscoveryMethod_categoryId:
   example: 1
   nullable: true
   description: |
-    Relationship to [teacher-thDiscoveryMethodCategory](/#tag/simple-model-teacher-thDiscoveryMethodCategory)
+     <span class="website"></span> Relationship to [teacher-thDiscoveryMethodCategory](/#tag/simple-model-teacher-thDiscoveryMethodCategory)

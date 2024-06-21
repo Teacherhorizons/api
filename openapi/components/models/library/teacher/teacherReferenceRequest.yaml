@@ -31,6 +31,8 @@ teacher-teacherReferenceRequest_isArchived:
   type: boolean
   nullable: true
   example: true
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_creationDate:
   type: string
   format: date-time
@@ -46,6 +48,9 @@ teacher-teacherReferenceRequest_completionDate:
 teacher-teacherReferenceRequest_score:
   type: integer
   example: 9
+  description: |
+    <span class="website"></span>
+
 # relationship attributes
 teacher-teacherReferenceRequest_statusId:
   type: integer
@@ -62,13 +67,13 @@ teacher-teacherReferenceRequest_schoolId:
   example: 1
   nullable: true
   description: |
-    Relationship to [school](/#tag/simple-model-school)
+    <span class="website"></span> Relationship to [school](/#tag/simple-model-school)
 teacher-teacherReferenceRequest_countryId:
   type: integer
   example: 1
   nullable: true
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-teacherReferenceRequest_creationUserId:
   type: integer
   example: 1

@@ -2,7 +2,7 @@
 teacher-ambassador_levelName:
   type: string
   example: Region
-  description: One of 'Region', 'Country', 'City', 'School'
+  description: <span class="website"></span> One of 'Region', 'Country', 'City', 'School'
 teacher-ambassador_fullName:
   type: string
   example: John Smith
@@ -13,40 +13,42 @@ teacher-ambassador_testimonial:
   type: string
   example: lorem ipsum
   nullable: true
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 teacher-ambassador_userId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 teacher-ambassador_photoId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
 teacher-ambassador_teacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-ambassador_schoolId:
   type: integer
   example: 1
   description: |
-    Relationship to [school](/#tag/simple-model-school)
+    <span class="website"></span> Relationship to [school](/#tag/simple-model-school)
 teacher-ambassador_cityId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="website"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 teacher-ambassador_countryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-ambassador_regionId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-region](/#tag/simple-model-regional-region)
+    <span class="website"></span> Relationship to [regional-region](/#tag/simple-model-regional-region)

@@ -1,6 +1,6 @@
 # simple attributes
 school-schoolPhoto_size:
-  description: WIP
+  description:  <span class="website"></span> WIP
   type: string
   example: L
 school-schoolPhoto_url:
@@ -15,10 +15,14 @@ school-schoolPhoto_creationDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 school-schoolPhoto_latestUpdateDate:
   type: integer
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 
 #relationship attribites
 school-schoolPhoto_schoolId:
@@ -26,24 +30,24 @@ school-schoolPhoto_schoolId:
   example: 1
   nullable: true
   description: |
-    Relationship to [school](/#tag/simple-model-school)
+    <span class="website"></span> Relationship to [school](/#tag/simple-model-school)
 school-schoolPhoto_photoId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
 school-schoolPhoto_categoryId:
   type: integer
   example: 1
   description: |
-    Relationship to [school-photoCategory](/#tag/simple-model-school-photoCategory)
+    <span class="website"></span> Relationship to [school-photoCategory](/#tag/simple-model-school-photoCategory)
 school-schoolPhoto_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 school-schoolPhoto_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

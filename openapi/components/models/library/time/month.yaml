@@ -2,6 +2,8 @@
 time-month_name:
   type: string
   example: Sep 2022
+  description: |
+    <span class="dw"></span>
 
 time-month_number:
   type: integer
@@ -16,6 +18,8 @@ time-month_isMostRecentComplete:
 time-month_isCurrent:
   type: boolean
   example: true
+  description: |
+    <span class="dw"></span>
 
 time-month_numberOfAdviserInterviews:
   type: integer
@@ -3203,14 +3207,14 @@ time-month_startDateId:
   type: integer
   example: 1
   description: |
-    Relationship to [time-date](/#tag/simple-model-time-date)
+    <span class="dw"></span> Relationship to [time-date](/#tag/simple-model-time-date)
 
 time-month_endDateId:
   type: integer
   example: 1
-  description: Relationship to [time-date](/#tag/simple-model-time-date)
+  description: <span class="dw"></span> Relationship to [time-date](/#tag/simple-model-time-date)
 
 time-month_schoolYearId:
   type: integer
   example: 1
-  description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
+  description: <span class="dw"></span> Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)

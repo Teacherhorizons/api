@@ -13,7 +13,7 @@ SimpleModel_subject-subjectLink:
       $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_description'
 
     # relationship attributes
-    linkTypeId:
+    linkTypeId: 
       $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_linkTypeId'
     subjectId:
       $ref: '../../library/subject/subjectLink.yaml#/subject-subjectLink_subjectId'
@@ -29,4 +29,6 @@ SimpleModel_subject-subjectLink_id:
   type: integer
   example: 1
   readOnly: true
-  description: Unique identifier of the object
+  description: |
+    <span class="website"></span> 
+    Unique identifier of the object

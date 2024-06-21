@@ -2,13 +2,13 @@
 subject-subjectLink_name:
   type: string
   example: FutureLearn
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 50
 
 subject-subjectLink_description:
   type: string
   example: Maths teaching courses exploring the fundamentals of the topic, and how to plan better lessons
-  description: Main
+  description: <span class="website"></span> Main
   nullable: true
   maxLength: 255
 
@@ -16,16 +16,18 @@ subject-subjectLink_url:
   type: string
   example: https://www.futurelearn.com/subjects/teaching-courses/teaching-maths
   maxLength: 255
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 subject-subjectLink_subjectId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject](/#tag/simple-model-subject)
+    <span class="website"></span> Relationship to [subject](/#tag/simple-model-subject)
 
 subject-subjectLink_linkTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject-linkType](/#tag/simple-model-subject-linkType)
+    <span class="website"></span> Relationship to [subject-linkType](/#tag/simple-model-subject-linkType)

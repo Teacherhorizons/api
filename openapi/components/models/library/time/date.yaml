@@ -3,19 +3,25 @@ time-date_date:
   type: string
   format: date-time
   example: 2023-08-06
-  description: Main
+  description: <span class="dw"></span> Main
 
 time-date_name:
   type: string
   example: Sep 2022
+  description: |
+    <span class="dw"></span>
 
 time-date_isMostRecentComplete:
   type: boolean
   example: true
+  description: |
+    <span class="dw"></span>
 
 time-date_isCurrent:
   type: boolean
   example: true
+  description: |
+    <span class="dw"></span>
 
 time-date_numberOfAdviserInterviews:
   type: integer
@@ -150,14 +156,14 @@ time-date_weekId:
   type: integer
   example: 1
   description: |
-    Relationship to [time-week](/#tag/simple-model-time-week)
+    <span class="dw"></span> Relationship to [time-week](/#tag/simple-model-time-week)
 
 time-date_monthId:
   type: integer
   example: 1
-  description: Relationship to [time-month](/#tag/simple-model-time-month)
+  description: <span class="dw"></span> Relationship to [time-month](/#tag/simple-model-time-month)
 
 time-date_schoolYearId:
   type: integer
   example: 1
-  description: Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)
+  description: <span class="dw"></span> Relationship to [time-schoolYear](/#tag/simple-model-time-schoolYear)

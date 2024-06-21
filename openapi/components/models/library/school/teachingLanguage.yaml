@@ -2,16 +2,21 @@
 school-teachingLanguage_name:
   type: string
   example: English
-
+  description: |
+    <span class="website"></span> 
 school-teachingLanguage_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span> 
 
 school-teachingLanguage_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span> 
 
 # relationship attributes
 school-teachingLanguage_schoolId:
@@ -24,10 +29,10 @@ school-teachingLanguage_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 
 school-teachingLanguage_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

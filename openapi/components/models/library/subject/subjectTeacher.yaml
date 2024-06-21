@@ -3,16 +3,18 @@ subject-subjectTeacher_testimonial:
   type: string
   example: Foo bar
   maxLength: 100
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 subject-subjectTeacher_subjectId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject](/#tag/simple-model-subject)
+    <span class="website"></span> Relationship to [subject](/#tag/simple-model-subject)
 
 subject-subjectTeacher_teacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)

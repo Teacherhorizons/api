@@ -2,14 +2,14 @@
 system-page_title:
   type: string
   example: Foo bar baz
-  description: Main
+  description: <span class="website"></span> Main
   nullable: true
   maxLength: 100
 
 system-page_metaDescription:
   type: string
   example: ''
-  description: Main
+  description: <span class="website"></span> Main
   nullable: true
   maxLength: 255
 
@@ -18,9 +18,9 @@ system-page_pageTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [system-pageType](/#tag/simple-model-system-pageType)
+    <span class="website"></span> Relationship to [system-pageType](/#tag/simple-model-system-pageType)
 
 system-page_entityId:
   type: integer
   example: 1
-  description: The id of the related entity (non-specific relationship)
+  description: <span class="website"></span> The id of the related entity (non-specific relationship)

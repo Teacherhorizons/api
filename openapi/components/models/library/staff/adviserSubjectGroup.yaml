@@ -4,22 +4,26 @@ staff-adviserSubjectGroup_fromDate:
   format: date-time
   nullable: true
   example: 1 Sep 2022
+  description: |
+    <span class="website"></span> 
 
 staff-adviserSubjectGroup_toDate:
   type: string
   format: date-time
   nullable: true
   example: 31 Aug 2023
+  description: |
+    <span class="website"></span> 
 
 # relationship attributes
 staff-adviserSubjectGroup_adviserId:
   type: integer
   example: 1
   description: |
-    Relationship to [staff-staffMember](/#tag/simple-model-staff-staffMember)
+    <span class="website"></span>  Relationship to [staff-staffMember](/#tag/simple-model-staff-staffMember)
 
 staff-adviserSubjectGroup_subjectGroupId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject-subjectGroup](/#tag/simple-model-subject-subjectGroup)
+    <span class="website"></span>  Relationship to [subject-subjectGroup](/#tag/simple-model-subject-subjectGroup)
