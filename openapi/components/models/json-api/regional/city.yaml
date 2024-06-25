@@ -149,6 +149,8 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher'
         medianGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_medianGrossSalaryJuniorTeacher'
+        upperGrossSalaryJuniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_upperGrossSalaryJuniorTeacher'
         upperQuartileGrossSalaryJuniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalaryJuniorTeacher'
         maxGrossSalaryJuniorTeacher:
@@ -166,6 +168,8 @@ JsonApiModel_regional-city_admin:
           $ref: '../../library/regional/city.yaml#/regional-city_upperQuartileGrossSalarySeniorTeacher'
         maxGrossSalarySeniorTeacher:
           $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
+        upperGrossSalarySeniorTeacher:
+          $ref: '../../library/regional/city.yaml#/regional-city_upperGrossSalarySeniorTeacher'
         #
         numberOfSchoolsHaveFlightAllowance:
           $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance'
@@ -283,6 +287,7 @@ JsonApiModel_regional-city_admin:
         - lowerQuartileGrossSalaryJuniorTeacher
         - averageGrossSalaryJuniorTeacher # TODO: remove once no longer used
         - medianGrossSalaryJuniorTeacher
+        - upperGrossSalaryJuniorTeacher
         - upperQuartileGrossSalaryJuniorTeacher
         - maxGrossSalaryJuniorTeacher
         # senior teacher
@@ -292,6 +297,7 @@ JsonApiModel_regional-city_admin:
         - medianGrossSalarySeniorTeacher
         - upperQuartileGrossSalarySeniorTeacher
         - maxGrossSalarySeniorTeacher
+        - upperGrossSalarySeniorTeacher
         #
         - numberOfSchoolsHaveFlightAllowance
         - numberOfSchoolsDoNotHaveFlightAllowance

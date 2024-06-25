@@ -136,6 +136,10 @@ SimpleModel_regional-city_admin:
       $ref: '../../library/regional/city.yaml#/regional-city_monthlyRent1BedroomApartmentOutsideCityCentre'
     minGrossSalaryJuniorTeacher:
       $ref: '../../library/regional/city.yaml#/regional-city_minGrossSalaryJuniorTeacher'
+    medianGrossSalaryJuniorTeacher:
+      $ref: '../../library/regional/city.yaml#/regional-city_medianGrossSalaryJuniorTeacher'
+    upperGrossSalaryJuniorTeacher:
+      $ref: '../../library/regional/city.yaml#/regional-city_upperGrossSalaryJuniorTeacher'
     averageGrossSalaryJuniorTeacher:
       $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalaryJuniorTeacher'
     maxGrossSalaryJuniorTeacher:
@@ -146,6 +150,12 @@ SimpleModel_regional-city_admin:
       $ref: '../../library/regional/city.yaml#/regional-city_averageGrossSalarySeniorTeacher'
     maxGrossSalarySeniorTeacher:
       $ref: '../../library/regional/city.yaml#/regional-city_maxGrossSalarySeniorTeacher'
+    lowerQuartileGrossSalarySeniorTeacher:
+      $ref: '../../library/regional/city.yaml#/regional-city_lowerQuartileGrossSalarySeniorTeacher'
+    medianGrossSalarySeniorTeacher:
+      $ref: '../../library/regional/city.yaml#/regional-city_medianGrossSalarySeniorTeacher'
+    upperGrossSalarySeniorTeacher:
+      $ref: '../../library/regional/city.yaml#/regional-city_upperGrossSalarySeniorTeacher'
     numberOfSchoolsHaveFlightAllowance:
       $ref: '../../library/regional/city.yaml#/regional-city_numberOfSchoolsHaveFlightAllowance'
     numberOfSchoolsDoNotHaveFlightAllowance:
@@ -260,11 +270,16 @@ SimpleModel_regional-city_admin:
     - monthlyRent1BedroomApartmentOutsideCityCentre
     - nearestWeatherStationId
     - minGrossSalaryJuniorTeacher
+    - medianGrossSalaryJuniorTeacher
+    - upperGrossSalaryJuniorTeacher
     - averageGrossSalaryJuniorTeacher
     - maxGrossSalaryJuniorTeacher
     - minGrossSalarySeniorTeacher
     - averageGrossSalarySeniorTeacher
     - maxGrossSalarySeniorTeacher
+    - lowerQuartileGrossSalarySeniorTeacher
+    - medianGrossSalarySeniorTeacher
+    - upperGrossSalarySeniorTeacher
     - numberOfSchoolsHaveFlightAllowance
     - numberOfSchoolsDoNotHaveFlightAllowance
     - numberOfSchoolsHavePrivateHealthcareScheme

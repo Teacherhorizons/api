@@ -7,8 +7,8 @@ SimpleModel_system-template:
     # simple attributes
     description:
       $ref: "../../library/system/template.yaml#/system-template_description"
-    template:
-      $ref: "../../library/system/template.yaml#/system-template_template"
+    text:
+      $ref: "../../library/system/template.yaml#/system-template_text"
     isVisibleToAdmin:
       $ref: "../../library/system/template.yaml#/system-template_isVisibleToAdmin"
     isVisibleToSchool:
@@ -18,7 +18,7 @@ SimpleModel_system-template:
   required:
     - id
     - description	
-    - template
+    - text
     - isVisibleToAdmin
     - isVisibleToSchool
     - isVisibleToTeacher

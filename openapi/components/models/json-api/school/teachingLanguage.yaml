@@ -18,8 +18,6 @@ JsonApiModel_school-teachingLanguage:
         latestUpdateDate:
           $ref: "../../library/school/teachingLanguage.yaml#/school-teachingLanguage_latestUpdateDate"
         # relationship attributes
-        school:
-          $ref: "../school/school.yaml#/JsonApiModel_school_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:

@@ -36,10 +36,10 @@ Response_system-template_item:
       additionalProperties: false
       properties:
         # simple attributes
-        template:
-          $ref: '../../models/library/system/template.yaml#/system-template_template'
+        text:
+          $ref: '../../models/library/system/template.yaml#/system-template_text'
       required:
-        - template
+        - text
   required:
     - type
     - id

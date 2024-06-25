@@ -38,12 +38,20 @@ SimpleModel_regional-region_admin:
       $ref: "../../library/regional/region.yaml#/regional-region_averageAnnualSaving"
     minGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalaryJuniorTeacher"
+    medianGrossSalaryJuniorTeacher:
+      $ref: '../../library/regional/region.yaml#/regional-region_medianGrossSalaryJuniorTeacher'
+    upperGrossSalaryJuniorTeacher:
+      $ref: '../../library/regional/region.yaml#/regional-region_upperGrossSalaryJuniorTeacher'
     averageGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalaryJuniorTeacher"
     maxGrossSalaryJuniorTeacher:
       $ref: "../../library/regional/region.yaml#/regional-region_maxGrossSalaryJuniorTeacher"
     minGrossSalarySeniorTeacher:
       $ref: "../../library/regional/region.yaml#/regional-region_minGrossSalarySeniorTeacher"
+    medianGrossSalarySeniorTeacher:
+      $ref: "../../library/regional/region.yaml#/regional-region_medianGrossSalarySeniorTeacher"
+    upperGrossSalarySeniorTeacher:
+      $ref: '../../library/regional/region.yaml#/regional-region_upperGrossSalarySeniorTeacher'
     averageGrossSalarySeniorTeacher:
       $ref: "../../library/regional/region.yaml#/regional-region_averageGrossSalarySeniorTeacher"
     maxGrossSalarySeniorTeacher:
@@ -185,9 +193,13 @@ SimpleModel_regional-region_admin:
     - averageAnnualExpenditure
     - averageAnnualSaving
     - minGrossSalaryJuniorTeacher
+    - medianGrossSalaryJuniorTeacher
+    - upperGrossSalaryJuniorTeacher
     - averageGrossSalaryJuniorTeacher
     - maxGrossSalaryJuniorTeacher
     - minGrossSalarySeniorTeacher
+    - medianGrossSalarySeniorTeacher
+    - upperGrossSalarySeniorTeacher
     - averageGrossSalarySeniorTeacher
     - maxGrossSalarySeniorTeacher
     - numberOfSchoolsHaveFlightAllowance

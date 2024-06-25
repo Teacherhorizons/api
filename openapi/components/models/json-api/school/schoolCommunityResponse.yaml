@@ -11,10 +11,8 @@ JsonApiModel_school-schoolCommunityResponse:
       additionalProperties: false
       properties:
         # simple attributes
-        name:
-          $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_name"
-        responseText:
-          $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_responseText"
+        text:
+          $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_text"
         creationDate:
           $ref: "../../library/school/schoolCommunityResponse.yaml#/school-schoolCommunityResponse_creationDate"  
         latestUpdateDate:
