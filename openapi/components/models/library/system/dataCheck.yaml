@@ -2,18 +2,24 @@
 
 system-dataCheck_typeId:
   type: integer
-  description: non-standard id property (in 1 way) #check with RR
+  description: <span class="website"></span> non-standard id property (in 1 way) #check with RR
   example: 24
 
 system-dataCheck_result:
   type: integer
   example: 41
+  description: |
+    <span class="website"></span>
 
 system-dataCheck_date:
   type: string
   format: date-time
   example: 2016-08-30 08:49:45
+  description: |
+    <span class="website"></span>
 
 system-dataCheck_isPass:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>

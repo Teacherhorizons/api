@@ -2,20 +2,24 @@
 subject-communityQuestion_text:
   type: string
   example: What do international schools look for in maths teacher applications and interviews?
-  description: Main
+  description: <span class="website"></span> Main
   maxLength: 250
 
 subject-communityQuestion_isActive:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 
 subject-communityQuestion_precedence:
   type: integer
   example: 1
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 subject-communityQuestion_typeId:
   type: integer
   example: 1
   description: |
-    Relationship to [subject-communityQuestionType](/#tag/simple-model-subject-communityQuestionType)
+    <span class="website"></span> Relationship to [subject-communityQuestionType](/#tag/simple-model-subject-communityQuestionType)
