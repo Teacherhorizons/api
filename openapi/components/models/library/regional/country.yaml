@@ -2,7 +2,7 @@
 regional-country_name:
   type: string
   example: Luanda
-  description: <span class="website"></span> Main
+  description: <span class="website"></span> <span class="dw"></span> Main
   maxLength: 250
 regional-country_nameUsesThe:
   type: boolean
@@ -45,7 +45,7 @@ regional-country_slug:
   type: string
   nullable: true
   example: africa-angola-luanda
-  description: <span class="website"></span> Main
+  description: <span class="website"></span> <span class="dw"></span> Main
   maxLength: 180
 regional-country_locationLatitude:
   type: number
@@ -504,7 +504,7 @@ regional-country_regionId:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> Relationship to [regional-region](/#tag/simple-model-regional-region)
+    <span class="website"></span> <span class="dw"></span> Relationship to [regional-region](/#tag/simple-model-regional-region)
 regional-country_capitalCityId:
   type: integer
   nullable: true

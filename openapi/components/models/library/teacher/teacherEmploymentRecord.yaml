@@ -2,39 +2,49 @@
 teacher-teacherEmploymentRecord_employerName:
   type: string
   example: Colegio Internacional
+  description: |
+    <span class="website"></span> 
 teacher-teacherEmploymentRecord_startDate:
   type: string
   example: 2011-02-07T15:53:34Z
   format: date-time
+  description: |
+    <span class="website"></span> 
 teacher-teacherEmploymentRecord_endDate:
   type: string
   example: 2011-02-07T15:53:34Z
   format: date-time
+  description: |
+    <span class="website"></span> 
 teacher-teacherEmploymentRecord_isInternationalSchool:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span> 
 teacher-teacherEmploymentRecord_allowDisplay:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span> 
 
   # relationship attributes
 teacher-teacherEmploymentRecord_teacherId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
+    <span class="website"></span>  Relationship to [teacher](/#tag/simple-model-teacher)
 teacher-teacherEmploymentRecord_roleId:
   type: integer
   example: 1
   description: |
-    Relationship to [general-role](/#tag/simple-model-general-role)
+    <span class="website"></span>  Relationship to [general-role](/#tag/simple-model-general-role)
 teacher-teacherEmploymentRecord_schoolId:
   type: integer
   example: 1
   description: |
-    Relationship to [school](/#tag/simple-model-school)
+    <span class="website"></span>  Relationship to [school](/#tag/simple-model-school)
 teacher-teacherEmploymentRecord_countryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span>  Relationship to [regional-country](/#tag/simple-model-regional-country)
