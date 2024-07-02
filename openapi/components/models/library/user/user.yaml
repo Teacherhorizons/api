@@ -10,13 +10,13 @@ user_fullName:
 user_firstName:
   type: string
   example: Simon
-  maxLength: 100
+  maxLength: 50
   description: |
     <span class="website"></span> <span class="dw"></span>
 user_lastName:
   type: string
   example: Jones
-  maxLength: 100
+  maxLength: 50
   description: |
     <span class="website"></span> <span class="dw"></span>
 user_uniqueName:
@@ -47,7 +47,7 @@ user_phone:
   type: string
   nullable: true
   example: 1234567890
-  maxLength: 100
+  maxLength: 50
   description: |
     <span class="website"></span>
 user_optin:
@@ -76,7 +76,7 @@ user_authToken:
   type: string
   nullable: true
   example: 2386dc3a-608f-424f-a1e0-44c3a02fc78b
-  maxLength: 100
+  maxLength: 50
   description: |
     <span class="website"></span>
 user_latestLoginDate:
@@ -89,7 +89,7 @@ user_encryptedPassword:
   type: string
   nullable: true
   example: kNBCYFF3McYxKDFiBVVFpQ==
-  maxLength: 100
+  maxLength: 128
   description: |
     <span class="website"></span>
 user_allowLogin:

@@ -33,7 +33,7 @@ regional-city_keyAttractions:
   type: string
   nullable: true
   example: Beach, Beach, Beach... All year round!<br>Luanda lies in a bay off an island with beaches spreading along the coast line. There is poverty next to great wealth almost anywhere you look but 3 or 4 nice beaches belonging to restaurantes to go to.
-  maxLength: 100
+  maxLength: 65535
 regional-city_slug:
   description: |
     <span class="website"></span> <span class="dw"></span>
@@ -64,14 +64,14 @@ regional-city_ambassadorTestimonial:
   type: string
   nullable: true
   example: Lorem ipsum
-  maxLength: 100
+  maxLength: 65535
   description: |
     <span class="website"></span>
 regional-city_teachingInCityDescription:
   type: string
   nullable: true
   example: Fooo barrr abc
-  maxLength: 100
+  maxLength: 1000
   description: |
     <span class="website"></span>
 regional-city_qualityOfLifeDescription:
@@ -408,7 +408,7 @@ regional-city_nearestWeatherStationId:
   nullable: true
   example: '01234'
   description: <span class="website"></span> Not a relationship
-  maxLength: 100
+  maxLength: 10
 regional-city_numberOfSchoolsHaveFlightAllowance:
   type: integer
   example: 203

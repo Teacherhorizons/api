@@ -3,13 +3,13 @@ school_name:
   type: string
   description: <span class="website"></span> <span class="dw"></span> Main
   example: English School Community of Luanda
-  maxLength: 100
+  maxLength: 255
 school_slug:
   type: string
   description: <span class="dw"></span> <span class="website"></span> Main
   nullable: true
   example: africa-angola-luanda-english-school-community-of-luanda
-  maxLength: 100
+  maxLength: 180
 school_isActive:
   type: boolean
   example: true
@@ -29,28 +29,28 @@ school_thRating:
 school_alias:
   type: string
   example: /Africa/Angola/Luanda/English_School_Community_of_Luanda
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_address1:
   type: string
   nullable: true
   example: Rua de Cambambe No 21-23
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_address2:
   type: string
   nullable: true
   example: Bairro Patrice Lumumba
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_address3:
   type: string
   nullable: true
   example: Luanda
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_websiteUrl:
@@ -169,7 +169,7 @@ school_promoVideoUrl:
   type: string
   nullable: true
   example: https://youtu.be/cEHAWhG6B3c
-  maxLength: 100
+  maxLength: 250
   description: |
     <span class="website"></span>
 school_numberOfSchoolDaysPerYear:
@@ -199,14 +199,14 @@ school_missionStatementText:
   type: string
   nullable: true
   example: The Mission of the English School Community of Luanda Angola, (E.S.C.O.L.A.) is to provide through the medium of English, a student-centred education of the highest calibre that is holistically relevant in the Southern African and international context.
-  maxLength: 100
+  maxLength: 65535
   description: |
     <span class="website"></span>
 school_promoVideoCaption:
   type: string
   nullable: true
   example: Lorem ipsum
-  maxLength: 100
+  maxLength: 250
   description: |
     <span class="website"></span>
 school_percentageOfOverseasTeachers:
@@ -278,14 +278,14 @@ school_additionalVisaRequirementsText:
   type: string
   nullable: true
   example: Passport valid 18 months (4 sequential empty pages); ID (valid 12 months); 6 passport photos; Criminal Record; Medical Certificate; Professional Diplomas and Degrees; CV; Yellow Fever Vaccination;
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_additionalRecruitmentRequirementsText:
   type: string
   nullable: true
   example: Lorem ipsum
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_monthForNoticeOfIntentionToLeave:
@@ -304,7 +304,7 @@ school_additionalContractText:
   type: string
   nullable: true
   example: Foo
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_monthContractStarts:
@@ -328,7 +328,7 @@ school_locationText:
   type: string
   nullable: true
   example: The school is housed in 5 colonial type houses interlinked with diverse outdoor gardens and spaces. It is located in the well established old suburb of Cruzeiro near many embassies in nearby Miramar.
-  maxLength: 1000
+  maxLength: 65535
   description: |
     <span class="website"></span>
 school_locationLatitude:
@@ -431,7 +431,7 @@ school_additionalTaxText:
   type: string
   nullable: true
   example: Foo bar
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_billsExpenditurePercentage:
@@ -486,28 +486,28 @@ school_additionalAccommodationText:
   type: string
   nullable: true
   example: Lorem ipsum
-  maxLength: 100
+  maxLength: 255
   description: |
     <span class="website"></span>
 school_ambassadorTestimonial:
   type: string
   nullable: true
   example: Foo bar
-  maxLength: 100
+  maxLength: 65535
   description: |
     <span class="website"></span>
 school_leadRecruitmentContactName:
   type: string
   nullable: true
   example: Mrs Sharon Morgan
-  maxLength: 100
+  maxLength: 250
   description: |
     <span class="website"></span>
 school_leadRecruitmentContactEmail:
   type: string
   nullable: true
   example: smorgan@escolaangola.org
-  maxLength: 100
+  maxLength: 250
   description: |
     <span class="website"></span>
 school_isInterestedInRecruitmentServices:
@@ -587,7 +587,7 @@ school_summaryTemplate:
   type: string
   nullable: true
   example: Foo bar ${baz}
-  maxLength: 100
+  maxLength: 600
   description: |
     <span class="website"></span>
 

@@ -8,6 +8,7 @@ staff-staffMember_fullName:
 staff-staffMember_initials:
   type: string
   example: SW
+  maxLength: 10
   description: <span class="website"></span> <span class="dw"></span> Main
 staff-staffMember_activeInTh:
   type: integer
@@ -18,7 +19,7 @@ staff-staffMember_description:
   type: string
   nullable: true
   example: Lorem Ipsum
-  maxLength: 100
+  maxLength: 1000
   description: |
     <span class="website"></span> 
 staff-staffMember_roleTitle:
