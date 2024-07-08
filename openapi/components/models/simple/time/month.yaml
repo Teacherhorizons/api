@@ -625,10 +625,10 @@ SimpleModel_time-month:
       $ref: '../../library/time/month.yaml#/time-month_atsRecommendationToPlacementGainedConversionRate'
     atsRecommendationToPlacementNetConversionRate:
       $ref: '../../library/time/month.yaml#/time-month_atsRecommendationToPlacementNetConversionRate'
-    percentageOfCommissionInterview:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionInterview'
-    percentageOfCommissionJobOwner:
-      $ref: '../../library/time/month.yaml#/time-month_percentageOfCommissionJobOwner'
+    percentageCommissionInterview:
+      $ref: '../../library/time/month.yaml#/time-month_percentageCommissionInterview'
+    percentageCommissionJobOwner:
+      $ref: '../../library/time/month.yaml#/time-month_percentageCommissionJobOwner'
     percentageOfPlacementsLostVsGained:
       $ref: '../../library/time/month.yaml#/time-month_percentageOfPlacementsLostVsGained'
     incomePercentageFromPlacementsGained:
@@ -1235,8 +1235,8 @@ SimpleModel_time-month:
     - atsRecommendationToSchoolInterviewConversionRate
     - atsRecommendationToPlacementGainedConversionRate
     - atsRecommendationToPlacementNetConversionRate
-    - percentageOfCommissionInterview
-    - percentageOfCommissionJobOwner
+    - percentageCommissionInterview
+    - percentageCommissionJobOwner
     - percentageOfPlacementsLostVsGained
     - incomePercentageFromPlacementsGained
     - incomePercentageFromPlacementsLost
