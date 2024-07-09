@@ -1,0 +1,19 @@
+# simple attributes
+teacher-teacherExperienceSubject_precedence:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span>
+
+# relationship attributes
+teacher-teacherExperienceSubject_subjectId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [subject](/#tag/simple-model-subject)
+teacher-teacherExperienceSubject_teacherId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
+

@@ -20,12 +20,24 @@ JsonApiModel_user-notification:
       # relationship attributes
         toUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
+        status: 
+          $ref: "../user/notificationStatus.yaml#/JsonApiModel_user-notificationStatus_relationship_attribute"
+        importance:
+          $ref: "../user/notificationImportance.yaml#/JsonApiModel_user-notificationImportance_relationship_attribute"
+        type:
+          $ref: "../user/notificationType.yaml#/JsonApiModel_user-notificationType_relationship_attribute"
     relationships:
       type: object
       additionalProperties: false
       properties:
         toUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
+        status: 
+          $ref: "../user/notificationStatus.yaml#/JsonApiModel_user-notificationStatus_relationship"
+        importance:
+          $ref: "../user/notificationImportance.yaml#/JsonApiModel_user-notificationImportance_relationship"
+        type:
+          $ref: "../user/notificationType.yaml#/JsonApiModel_user-notificationType_relationship"
   required:
     - type
     - id

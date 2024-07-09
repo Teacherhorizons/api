@@ -1,0 +1,43 @@
+JsonApiModel_teacher-teacherReferenceResponseData:
+  type: object
+  additionalProperties: false
+  properties:
+    type:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponseData_type"
+    id:
+      $ref: "#/JsonApiModel_teacher-teacherReferenceResponseData_id"
+    attributes:
+      type: object
+      additionalProperties: false
+      properties:
+        # simple attributes
+        text:
+          $ref: "../../library/teacher/teacherReferenceResponseData.yaml#/teacher-teacherReferenceResponseData_text"
+        # relationship attributes
+        response:
+          $ref: "../teacher/teacherReferenceResponse.yaml#/JsonApiModel_teacher-teacherReferenceResponse_relationship_attribute"
+        question:
+          $ref: "../teacher/referenceQuestion.yaml#/JsonApiModel_teacher-referenceQuestion_relationship_attribute"
+    relationships:
+      type: object
+      additionalProperties: false
+      properties:
+        response:
+          $ref: "../teacher/teacherReferenceResponse.yaml#/JsonApiModel_teacher-teacherReferenceResponse_relationship"
+        question:
+          $ref: "../teacher/referenceQuestion.yaml#/JsonApiModel_teacher-referenceQuestion_relationship"
+  required:
+    - type
+    - id
+
+JsonApiModel_teacher-teacherReferenceResponseData_type:
+  type: string
+  example: teacher-teacherReferenceResponseData
+  description: Unique identifier of the entity type
+  readOnly: true
+
+JsonApiModel_teacher-teacherReferenceResponseData_id:
+  type: string
+  example: "1"
+  readOnly: true
+  description: Unique identifier of the entity (string)

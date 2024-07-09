@@ -14,6 +14,12 @@ SimpleModel_user-notification:
     # relationship attributes
     toUserId:
       $ref: "../../library/user/notification.yaml#/user-notification_toUserId"
+    statusId:
+      $ref: "../../library/user/notification.yaml#/user-notification_statusId"
+    importanceId:
+      $ref: "../../library/user/notification.yaml#/user-notification_importanceId"
+    typeId:
+      $ref: "../../library/user/notification.yaml#/user-notification_typeId"
   required:
     - id
 

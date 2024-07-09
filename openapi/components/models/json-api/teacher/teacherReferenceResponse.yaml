@@ -13,6 +13,10 @@ JsonApiModel_teacher-teacherReferenceResponse:
         # simple attributes
         text:
           $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"
+        score:
+          $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_score"
+        creationDate:
+          $ref: "../../library/teacher/teacherReferenceResponse.yaml#/teacher-teacherReferenceResponse_text"
         # relationship attributes
         request:
           $ref: "../teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest_relationship_attribute"

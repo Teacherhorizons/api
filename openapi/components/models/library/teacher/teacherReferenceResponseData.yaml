@@ -1,0 +1,16 @@
+# simple attributes
+teacher-teacherReferenceResponseData_text:
+  type: string
+  example: Foo bar
+
+# relationship attributes
+teacher-teacherReferenceResponseData_responseId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [teacher-teacherReferenceResponse](/#tag/simple-model-teacher-teacherReferenceResponse)
+teacher-teacherReferenceResponseData_questionId:
+  type: integer
+  example: 1
+  description: |
+    Relationship to [teacher-referenceQuestion](/#tag/simple-model-teacher-referenceQuestion)

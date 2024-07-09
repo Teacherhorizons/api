@@ -1,0 +1,32 @@
+SimpleModel_teacher-teacherReferenceResponseData:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherReferenceResponseData_id"
+    # simple attributes
+    text:
+      $ref: "../../library/teacher/teacherReferenceResponseData.yaml#/teacher-teacherReferenceResponseData_text"
+    # relationship attributes
+    requestId:
+      $ref: "../../library/teacher/teacherReferenceResponseData.yaml#/teacher-teacherReferenceResponseData_requestId"
+    questionId:
+      $ref: "../../library/teacher/teacherReferenceResponseData.yaml#/teacher-teacherReferenceResponseData_questionId"
+  required:
+    - id
+
+# shared
+# SimpleModel_teacher-teacherReferenceResponseData_type:
+# properties:
+#   type:
+#     type: string
+#     example: teacher-teacherReferenceResponseData
+#     description: teacher-teacherReferenceResponseData
+#     readOnly: true
+SimpleModel_teacher-teacherReferenceResponseData_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: |
+    <span class="website"></span> 
+    Unique identifier of the object
