@@ -1,0 +1,31 @@
+SimpleModel_teacher-teacherExperienceSubject:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      $ref: "#/SimpleModel_teacher-teacherExperienceSubject_id"
+    # simple attributes
+    precedence:
+      $ref: "../../library/teacher/teacherExperienceSubject.yaml#/teacher-teacherExperienceSubject_precedence"
+    # relationship attributes
+    subjectId:
+      $ref: "../../library/teacher/teacherExperienceSubject.yaml#/teacher-teacherExperienceSubject_subjectId"
+    teacherId:
+      $ref: "../../library/teacher/teacherExperienceSubject.yaml#/teacher-teacherExperienceSubject_teacherId"
+  required:
+    - id
+# shared
+
+# SimpleModel_teacher-teacherExperienceSubject_type:
+#   type: string
+#   example: teacher-teacherExperienceSubject
+#   description: teacher-teacherExperienceSubject
+#   readOnly: true
+
+SimpleModel_teacher-teacherExperienceSubject_id:
+  type: integer
+  example: 1
+  readOnly: true
+  description: |
+    <span class="website"></span> 
+    Unique identifier of the object

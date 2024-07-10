@@ -83,7 +83,6 @@ SimpleModels:
 
     # application
     - $ref: '../../models/simple/application/application.yaml#/SimpleModel_application'
-    - $ref: '../../models/simple/application/action.yaml#/SimpleModel_application-action'
     - $ref: '../../models/simple/application/applicationEvent.yaml#/SimpleModel_application-applicationEvent'
     - $ref: '../../models/simple/application/applicationDataIssue.yaml#/SimpleModel_application-applicationDataIssue'
     - $ref: '../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType'
@@ -145,7 +144,7 @@ SimpleModels:
     - $ref: '../../models/simple/teacher/qualificationType.yaml#/SimpleModel_teacher-qualificationType'
     - $ref: '../../models/simple/teacher/teacherNote.yaml#/SimpleModel_teacher-teacherNote'
     - $ref: '../../models/simple/teacher/noteType.yaml#/SimpleModel_teacher-noteType'
-    - $ref: '../../models/simple/teacher/teacherReference.yaml#/SimpleModel_teacher-teacherReference'
+    - $ref: '../../models/simple/teacher/teacherReferenceResponse.yaml#/SimpleModel_teacher-teacherReferenceResponse'
     - $ref: '../../models/simple/teacher/teacherReferenceRequest.yaml#/SimpleModel_teacher-teacherReferenceRequest'
     - $ref: '../../models/simple/teacher/thDiscoveryMethod.yaml#/SimpleModel_teacher-thDiscoveryMethod'
     - $ref: '../../models/simple/teacher/thDiscoveryMethodCategory.yaml#/SimpleModel_teacher-thDiscoveryMethodCategory'
@@ -177,6 +176,7 @@ SimpleModels:
     - $ref: '../../models/simple/teacher/teachingSkill.yaml#/SimpleModel_teacher-teachingSkill'
     - $ref: '../../models/simple/teacher/teacherTeachingLanguage.yaml#/SimpleModel_teacher-teacherTeachingLanguage'
     - $ref: '../../models/simple/teacher/teacherExperienceCurriculum.yaml#/SimpleModel_teacher-teacherExperienceCurriculum'
+    - $ref: '../../models/simple/teacher/teacherExperienceSubject.yaml#/SimpleModel_teacher-teacherExperienceSubject'
     - $ref: '../../models/simple/teacher/teacherLookingForCurriculum.yaml#/SimpleModel_teacher-teacherLookingForCurriculum'
     - $ref: '../../models/simple/teacher/teacherEmploymentRecord.yaml#/SimpleModel_teacher-teacherEmploymentRecord'
     - $ref: '../../models/simple/teacher/teacherEmploymentRecordSubject.yaml#/SimpleModel_teacher-teacherEmploymentRecordSubject'
@@ -235,7 +235,6 @@ JsonApiModels:
   anyOf:
     # application
     - $ref: '../../models/json-api/application/application.yaml#/JsonApiModel_application'
-    - $ref: '../../models/json-api/application/action.yaml#/JsonApiModel_application-action'
     - $ref: '../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent'
     - $ref: '../../models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue'
     - $ref: '../../models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType'
@@ -352,7 +351,7 @@ JsonApiModels:
     - $ref: '../../models/json-api/teacher/qualificationType.yaml#/JsonApiModel_teacher-qualificationType'
     - $ref: '../../models/json-api/teacher/teacherNote.yaml#/JsonApiModel_teacher-teacherNote'
     - $ref: '../../models/json-api/teacher/noteType.yaml#/JsonApiModel_teacher-noteType'
-    - $ref: '../../models/json-api/teacher/teacherReference.yaml#/JsonApiModel_teacher-teacherReference'
+    - $ref: '../../models/json-api/teacher/teacherReferenceResponse.yaml#/JsonApiModel_teacher-teacherReferenceResponse'
     - $ref: '../../models/json-api/teacher/teacherReferenceRequest.yaml#/JsonApiModel_teacher-teacherReferenceRequest'
     - $ref: '../../models/json-api/teacher/teacherVideo.yaml#/JsonApiModel_teacher-teacherVideo'
     - $ref: '../../models/json-api/teacher/thDiscoveryMethod.yaml#/JsonApiModel_teacher-thDiscoveryMethod'
@@ -383,6 +382,7 @@ JsonApiModels:
     - $ref: '../../models/json-api/teacher/teachingSkill.yaml#/JsonApiModel_teacher-teachingSkill'
     - $ref: '../../models/json-api/teacher/teacherTeachingLanguage.yaml#/JsonApiModel_teacher-teacherTeachingLanguage'
     - $ref: '../../models/json-api/teacher/teacherExperienceCurriculum.yaml#/JsonApiModel_teacher-teacherExperienceCurriculum'
+    - $ref: '../../models/json-api/teacher/teacherExperienceSubject.yaml#/JsonApiModel_teacher-teacherExperienceSubject'
     - $ref: '../../models/json-api/teacher/teacherLookingForCurriculum.yaml#/JsonApiModel_teacher-teacherLookingForCurriculum'
     - $ref: '../../models/json-api/teacher/teacherEmploymentRecord.yaml#/JsonApiModel_teacher-teacherEmploymentRecord'
     - $ref: '../../models/json-api/teacher/teacherEmploymentRecordSubject.yaml#/JsonApiModel_teacher-teacherEmploymentRecordSubject'

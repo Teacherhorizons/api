@@ -100,14 +100,6 @@ tags:
       [JSON:API model](/#tag/json-api-model-application-guideline)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-guideline" />
 
-  - name: simple-model-application-action
-    x-displayName: Simple model - application-action
-    description: |
-      Note: TODO - figure out whether this entity is now deprecated / no longer needed 
-
-      [JSON:API model](/#tag/json-api-model-application-action)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-action" />
-
   - name: simple-model-application-status
     x-displayName: Simple model - application-status
     description: |
@@ -876,11 +868,11 @@ tags:
       [JSON:API model](/#tag/json-api-model-teacher-noteType)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-noteType" />
 
-  - name: simple-model-teacher-teacherReference
-    x-displayName: Simple model - teacher-teacherReference
+  - name: simple-model-teacherReferenceResponse
+    x-displayName: Simple model - teacherReferenceResponse
     description: |
-      [JSON:API model](/#tag/json-api-model-teacher-teacherReference)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReference" />
+      [JSON:API model](/#tag/json-api-model-teacherReferenceResponse)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponse" />
 
   - name: simple-model-teacher-teacherReferenceRequest
     x-displayName: Simple model - teacher-teacherReferenceRequest
@@ -1001,12 +993,6 @@ tags:
       [JSON:API model](/#tag/json-api-model-teacher-referenceStatus)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-referenceStatus" />
 
-  - name: simple-model-teacher-teacherReferenceResponse
-    x-displayName: Simple model - teacher-teacherReferenceResponse
-    description: |
-      [JSON:API model](/#tag/json-api-model-teacher-teacherReferenceResponse)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponse" />
-
   - name: simple-model-teacher-referenceQuestion
     x-displayName: Simple model - teacher-referenceQuestion
     description: |
@@ -1078,6 +1064,12 @@ tags:
     description: |
       [JSON:API model](/#tag/json-api-model-teacher-teacherExperienceCurriculum)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherExperienceCurriculum" />
+
+  - name: simple-model-teacher-teacherExperienceSubject
+    x-displayName: Simple model - teacher-teacherExperienceSubject
+    description: |
+      [JSON:API model](/#tag/json-api-model-teacher-teacherExperienceSubject)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherExperienceSubject" />
 
   - name: simple-model-teacher-teacherLookingForCurriculum
     x-displayName: Simple model - teacher-teacherLookingForCurriculum
@@ -1226,12 +1218,6 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-application)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
-
-  - name: json-api-model-application-action
-    x-displayName: JSON:API model - application-action
-    description: |
-      [Simple model](/#tag/simple-model-application-action)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
 
   - name: json-api-model-application-applicationEvent
     x-displayName: JSON:API model - application-applicationEvent
@@ -1766,11 +1752,11 @@ tags:
       [Simple model](/#tag/simple-model-teacher-noteType)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-noteType" />
 
-  - name: json-api-model-teacher-teacherReference
-    x-displayName: JSON:API model - teacher-teacherReference
+  - name: json-api-model-teacherReferenceResponse
+    x-displayName: JSON:API model - teacherReferenceResponse
     description: |
-      [Simple model](/#tag/simple-model-teacher-teacherReference)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReference" />
+      [Simple model](/#tag/simple-model-teacherReferenceResponse)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponse" />
 
   - name: json-api-model-teacher-teacherReferenceRequest
     x-displayName: JSON:API model - teacher-teacherReferenceRequest
@@ -1885,12 +1871,6 @@ tags:
       [Simple model](/#tag/simple-model-teacher-referenceStatus)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-referenceStatus" />
 
-  - name: json-api-model-teacher-teacherReferenceResponse
-    x-displayName: JSON:API model - teacher-teacherReferenceResponse
-    description: |
-      [Simple model](/#tag/simple-model-teacher-teacherReferenceResponse)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponse" />
-
   - name: json-api-model-teacher-referenceQuestion
     x-displayName: JSON:API model - teacher-referenceQuestion
     description: |
@@ -1950,6 +1930,12 @@ tags:
     description: |
       [Simple model](/#tag/simple-model-teacher-teacherExperienceCurriculum)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherExperienceCurriculum" />
+
+  - name: json-api-model-teacher-teacherExperienceSubject
+    x-displayName: JSON:API model - teacher-teacherExperienceSubject
+    description: |
+      [Simple model](/#tag/simple-model-teacher-teacherExperienceSubject)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherExperienceSubject" />
 
   - name: json-api-model-teacher-teacherLookingForCurriculum
     x-displayName: JSON:API model - teacher-teacherLookingForCurriculum
@@ -2312,7 +2298,6 @@ x-tagGroups:
       # - simple-model-lists
       # - simple-model-pet
       # - simple-model-accreditation-type
-      - simple-model-application-action
       - simple-model-application
       - simple-model-application-applicationEvent
       - simple-model-application-applicationDataIssue
@@ -2433,7 +2418,7 @@ x-tagGroups:
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
       - simple-model-teacher-noteType
-      - simple-model-teacher-teacherReference
+      - simple-model-teacherReferenceResponse
       - simple-model-teacher-teacherReferenceRequest
       - simple-model-teacher-thDiscoveryMethod
       - simple-model-teacher-thDiscoveryMethodCategory
@@ -2453,7 +2438,6 @@ x-tagGroups:
       - simple-model-teacher-preferenceOption
       - simple-model-teacher-referenceType
       - simple-model-teacher-referenceStatus
-      - simple-model-teacher-teacherReferenceResponse
       - simple-model-teacher-referenceQuestion
       - simple-model-teacher-documentCategory
       - simple-model-teacher-teacherDocument
@@ -2465,6 +2449,7 @@ x-tagGroups:
       - simple-model-teacher-teacherTeachingLanguage
       - simple-model-teacher-teacherExperienceCurriculum
       - simple-model-teacher-teacherLookingForCurriculum
+      - simple-model-teacher-teacherExperienceSubject
       - simple-model-teacher-teacherEmploymentRecord
       - simple-model-teacher-teacherEmploymentRecordSubject
       - simple-model-teacher-jobSeekingStatus
@@ -2496,7 +2481,6 @@ x-tagGroups:
   - name: JSON:API models
     tags:
       - json-api-model-application
-      - json-api-model-application-action
       - json-api-model-application-applicationEvent
       - json-api-model-application-applicationDataIssue
       - json-api-model-application-eventType
@@ -2614,7 +2598,7 @@ x-tagGroups:
       - json-api-model-teacher-qualificationType
       - json-api-model-teacher-teacherNote
       - json-api-model-teacher-noteType
-      - json-api-model-teacher-teacherReference
+      - json-api-model-teacherReferenceResponse
       - json-api-model-teacher-teacherReferenceRequest
       - json-api-model-teacher-thDiscoveryMethod
       - json-api-model-teacher-thDiscoveryMethodCategory
@@ -2634,7 +2618,6 @@ x-tagGroups:
       - json-api-model-teacher-preferenceOption
       - json-api-model-teacher-referenceType
       - json-api-model-teacher-referenceStatus
-      - json-api-model-teacher-teacherReferenceResponse
       - json-api-model-teacher-referenceQuestion
       - json-api-model-teacher-documentCategory
       - json-api-model-teacher-teacherDocument
@@ -2647,6 +2630,7 @@ x-tagGroups:
       - json-api-model-teacher-teacherTeachingLanguage
       - json-api-model-teacher-teacherExperienceCurriculum
       - json-api-model-teacher-teacherLookingForCurriculum
+      - json-api-model-teacher-teacherExperienceSubject
       - json-api-model-teacher-teacherEmploymentRecord
       - json-api-model-teacher-teacherEmploymentRecordSubject
       - json-api-model-teacher-jobSeekingStatus

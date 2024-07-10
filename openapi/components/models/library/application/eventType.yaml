@@ -1,28 +1,36 @@
 # simple attributes
 application-eventType_name:
   type: string
-  description: Main
+  description: <span class="website"></span> Main
   example: Info request from Candidate
 
 application-eventType_nameForSchool:
   type: string
   example: Info request from Candidate
+  description: |
+    <span class="website"></span>
 
 application-eventType_nameForTeacher:
   type: string
   example: Info request from Candidate
+  description: |
+    <span class="website"></span>
 
 application-eventType_isVisibleToSchool:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 
 application-eventType_isVisibleToTeacher:
   type: boolean
   example: true
+  description: |
+    <span class="website"></span>
 
 # relationship attributes
 application-eventType_applicationStatusId:
   type: integer
   example: 1
   description: |
-    Relationship to [application-status](/#tag/simple-model-application-status)
+    <span class="website"></span> Relationship to [application-status](/#tag/simple-model-application-status)

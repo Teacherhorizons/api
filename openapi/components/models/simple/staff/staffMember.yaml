@@ -5,6 +5,12 @@ SimpleModel_staff-staffMember:
     id:
       $ref: '#/SimpleModel_staff-staffMember_id'
     # simple attributes
+    firstName:
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_firstName'
+    fullName:
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_fullName'
+    lastName:
+      $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_lastName'
     initials:
       $ref: '../../library/staff/staffMember.yaml#/staff-staffMember_initials'
     activeInTh:
@@ -27,6 +33,9 @@ SimpleModel_staff-staffMember:
   required:
     - id
     # simple attributes
+    - fullName
+    - firstName
+    - lastName
     - initials
     - activeInTh
     - description

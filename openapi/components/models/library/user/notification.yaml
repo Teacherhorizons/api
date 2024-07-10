@@ -4,6 +4,8 @@ user-notification_date:
   type: string
   format: date-time
   example: 2011-02-07T15:53:34Z
+  description: |
+    <span class="website"></span>
 user-notification_text:
   type: string
   example: A reminder that [Explorer record 123](/explorer-records/123) (Poobie Kitsen, interviewed) is awaiting your response
@@ -19,3 +21,21 @@ user-notification_toUserId:
   example: 1
   description: |
     <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
+
+user-notification_statusId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [user-notificationStatus](/#tag/simple-model-user-notificationStatus)
+
+user-notification_importanceId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [user-notificationImportance](/#tag/simple-model-user-notificationImportance)
+
+user-notification_typeId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [user-notificationType](/#tag/simple-model-user-notificationType)

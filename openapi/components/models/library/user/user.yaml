@@ -24,7 +24,7 @@ user_uniqueName:
   example: Fred Smith (12345)
   nullable: true
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="dw"></span>
     Derived:
     - school: firstName (with city name if firstName not unique) - e.g. 'British School of Alexandria' or 'British International School (Lisbon)'
     - admin: `${firstName} ${lastName}` - e.g. 'Alex Reynolds'
@@ -39,10 +39,8 @@ user_email:
 user_skypeUserName:
   type: string
   example: abc_teacher
-user_password:
-  deprecated: true
-  type: string
-  example: 123
+  description: |
+    <span class="website"></span>
 user_phone:
   type: string
   nullable: true
@@ -116,7 +114,7 @@ user_typeId:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> Relationship to [user-type](/#tag/simple-model-user-type)
+    <span class="website"></span> <span class="dw"></span> Relationship to [user-type](/#tag/simple-model-user-type)
 user_creationUserId:
   type: integer
   example: 1
