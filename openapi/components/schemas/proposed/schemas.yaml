@@ -83,7 +83,6 @@ SimpleModels:
 
     # application
     - $ref: '../../models/simple/application/application.yaml#/SimpleModel_application'
-    - $ref: '../../models/simple/application/action.yaml#/SimpleModel_application-action'
     - $ref: '../../models/simple/application/applicationEvent.yaml#/SimpleModel_application-applicationEvent'
     - $ref: '../../models/simple/application/applicationDataIssue.yaml#/SimpleModel_application-applicationDataIssue'
     - $ref: '../../models/simple/application/eventType.yaml#/SimpleModel_application-eventType'
@@ -236,7 +235,6 @@ JsonApiModels:
   anyOf:
     # application
     - $ref: '../../models/json-api/application/application.yaml#/JsonApiModel_application'
-    - $ref: '../../models/json-api/application/action.yaml#/JsonApiModel_application-action'
     - $ref: '../../models/json-api/application/applicationEvent.yaml#/JsonApiModel_application-applicationEvent'
     - $ref: '../../models/json-api/application/applicationDataIssue.yaml#/JsonApiModel_application-applicationDataIssue'
     - $ref: '../../models/json-api/application/eventType.yaml#/JsonApiModel_application-eventType'

@@ -100,14 +100,6 @@ tags:
       [JSON:API model](/#tag/json-api-model-application-guideline)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-guideline" />
 
-  - name: simple-model-application-action
-    x-displayName: Simple model - application-action
-    description: |
-      Note: TODO - figure out whether this entity is now deprecated / no longer needed 
-
-      [JSON:API model](/#tag/json-api-model-application-action)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_application-action" />
-
   - name: simple-model-application-status
     x-displayName: Simple model - application-status
     description: |
@@ -1227,12 +1219,6 @@ tags:
       [Simple model](/#tag/simple-model-application)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application" />
 
-  - name: json-api-model-application-action
-    x-displayName: JSON:API model - application-action
-    description: |
-      [Simple model](/#tag/simple-model-application-action)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_application-action" />
-
   - name: json-api-model-application-applicationEvent
     x-displayName: JSON:API model - application-applicationEvent
     description: |
@@ -2312,7 +2298,6 @@ x-tagGroups:
       # - simple-model-lists
       # - simple-model-pet
       # - simple-model-accreditation-type
-      - simple-model-application-action
       - simple-model-application
       - simple-model-application-applicationEvent
       - simple-model-application-applicationDataIssue
@@ -2496,7 +2481,6 @@ x-tagGroups:
   - name: JSON:API models
     tags:
       - json-api-model-application
-      - json-api-model-application-action
       - json-api-model-application-applicationEvent
       - json-api-model-application-applicationDataIssue
       - json-api-model-application-eventType
