@@ -2,18 +2,20 @@
 user-setting_name:
   type: string
   example: can-see-candidate-filter
+  description: |
+    <span class="website"></span>
 
 #relationship attribute
 user-setting_editableByUserTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [user-type](/#tag/simple-model-user-type)
+    <span class="website"></span> Relationship to [user-type](/#tag/simple-model-user-type)
   # check with RR
 
 user-setting_appliesToUserTypeId:
   type: integer
   example: 1
   description: |
-    Relationship to [user-type](/#tag/simple-model-user-type)
+    <span class="website"></span> Relationship to [user-type](/#tag/simple-model-user-type)
   # check with RR

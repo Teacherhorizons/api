@@ -211,8 +211,6 @@ JsonApiModel_regional-city_admin:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship_attribute'
         country:
           $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship_attribute'
-        worldLanguage:
-          $ref: '../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship_attribute'
         ambassadorTeacher:
           $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute'
         photo1:
@@ -231,7 +229,6 @@ JsonApiModel_regional-city_admin:
         - creationUser
         - latestUpdateUser
         - country
-        - worldLanguage
         - ambassadorTeacher
         - photo1
         - crimeIndex
@@ -326,8 +323,6 @@ JsonApiModel_regional-city_admin:
           $ref: '../user/user.yaml#/JsonApiModel_user_relationship'
         country:
           $ref: '../regional/country.yaml#/JsonApiModel_regional-country_relationship'
-        worldLanguage:
-          $ref: '../general/worldLanguage.yaml#/JsonApiModel_general-worldLanguage_relationship'
         ambassadorTeacher:
           $ref: '../teacher/teacher.yaml#/JsonApiModel_teacher_relationship'
         photo1:
