@@ -868,17 +868,23 @@ tags:
       [JSON:API model](/#tag/json-api-model-teacher-noteType)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-noteType" />
 
-  - name: simple-model-teacherReferenceResponse
-    x-displayName: Simple model - teacherReferenceResponse
-    description: |
-      [JSON:API model](/#tag/json-api-model-teacherReferenceResponse)
-      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponse" />
-
   - name: simple-model-teacher-teacherReferenceRequest
     x-displayName: Simple model - teacher-teacherReferenceRequest
     description: |
       [JSON:API model](/#tag/json-api-model-teacher-teacherReferenceRequest)
       <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceRequest" />
+
+  - name: simple-model-teacher-teacherReferenceResponse
+    x-displayName: Simple model - teacher- teacherReferenceResponse
+    description: |
+      [JSON:API model](/#tag/json-api-model-teacher- teacherReferenceResponse)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponse" />
+
+  - name: simple-model-teacher-teacherReferenceResponseData
+    x-displayName: Simple model - teacher-teacherReferenceResponseData
+    description: |
+      [JSON:API model](/#tag/json-api-model-teacher-teacherReferenceResponseData)
+      <SchemaDefinition schemaRef="#/components/schemas/SimpleModel_teacher-teacherReferenceResponseData" />
 
   - name: simple-model-teacher-thDiscoveryMethod
     x-displayName: Simple model - teacher-thDiscoveryMethod
@@ -1752,17 +1758,23 @@ tags:
       [Simple model](/#tag/simple-model-teacher-noteType)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-noteType" />
 
-  - name: json-api-model-teacherReferenceResponse
-    x-displayName: JSON:API model - teacherReferenceResponse
-    description: |
-      [Simple model](/#tag/simple-model-teacherReferenceResponse)
-      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponse" />
-
   - name: json-api-model-teacher-teacherReferenceRequest
     x-displayName: JSON:API model - teacher-teacherReferenceRequest
     description: |
       [Simple model](/#tag/simple-model-teacher-teacherReferenceRequest)
       <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceRequest" />
+
+  - name: json-api-model-teacher-teacherReferenceResponse
+    x-displayName: JSON:API model - teacher-teacherReferenceResponse
+    description: |
+      [Simple model](/#tag/simple-model-teacher-teacherReferenceResponse)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponse" />
+
+  - name: json-api-model-teacher-teacherReferenceResponseData
+    x-displayName: JSON:API model - teacher-teacherReferenceResponseData
+    description: |
+      [Simple model](/#tag/simple-model-teacher-teacherReferenceResponseData)
+      <SchemaDefinition schemaRef="#/components/schemas/JsonApiModel_teacher-teacherReferenceResponseData" />
 
   - name: json-api-model-teacher-thDiscoveryMethod
     x-displayName: JSON:API model - teacher-thDiscoveryMethod
@@ -2418,8 +2430,9 @@ x-tagGroups:
       - simple-model-teacher-qualificationType
       - simple-model-teacher-teacherNote
       - simple-model-teacher-noteType
-      - simple-model-teacherReferenceResponse
       - simple-model-teacher-teacherReferenceRequest
+      - simple-model-teacher-teacherReferenceResponse
+      - simple-model-teacher-teacherReferenceResponseData
       - simple-model-teacher-thDiscoveryMethod
       - simple-model-teacher-thDiscoveryMethodCategory
       - simple-model-teacher-thStatus
@@ -2598,8 +2611,9 @@ x-tagGroups:
       - json-api-model-teacher-qualificationType
       - json-api-model-teacher-teacherNote
       - json-api-model-teacher-noteType
-      - json-api-model-teacherReferenceResponse
       - json-api-model-teacher-teacherReferenceRequest
+      - json-api-model-teacher-teacherReferenceResponse
+      - json-api-model-teacher-teacherReferenceResponseData
       - json-api-model-teacher-thDiscoveryMethod
       - json-api-model-teacher-thDiscoveryMethodCategory
       - json-api-model-teacher-thStatus

@@ -9,7 +9,7 @@ SimpleModel_teacher-teacherReferenceRequest:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeFullName"
     refereeRoleName:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeRoleName"
-    refereeRoleEmail:
+    refereeEmail:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeEmail"
     refereeOrganisationName:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationName"
@@ -23,10 +23,6 @@ SimpleModel_teacher-teacherReferenceRequest:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationDate"
     latestUpdateDate:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_latestUpdateDate"
-    completionDate:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_completionDate"
-    score:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_score"
     # relationship attributes
     teacherId:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_teacherId"
@@ -38,8 +34,8 @@ SimpleModel_teacher-teacherReferenceRequest:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereePhoneCodeCountryId"
     schoolId:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_schoolId"
-    countryId:
-      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_countryId"
+    refereeOrganisationCountryId:
+      $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationCountryId"
     creationUserId:
       $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationUserId"
     latestUpdateUserId:

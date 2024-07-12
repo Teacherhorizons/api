@@ -85,7 +85,7 @@ regional-country_qualityOfLifeDescription:
   nullable: true
   example: Fooo barrr abc
   description: |
-    <span class="website"></span> <span class="dw"></span>
+    <span class="website"></span> 
   maxLength: 2000
 regional-country_pageMetaDescription:
   deprecated: true
@@ -475,7 +475,7 @@ regional-country_communityResponseQuestionIds:
     type: integer
   example: [4, 7, 10, 14]
   description: |
-    <span class="website"></span> <span class="dw"></span>
+    <span class="website"></span> 
   nullable: true
 
 # relationship attributes
@@ -510,7 +510,7 @@ regional-country_capitalCityId:
   nullable: true
   example: 1
   description: |
-    <span class="website"></span> <span class="dw"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
+    <span class="website"></span> Relationship to [regional-city](/#tag/simple-model-regional-city)
 regional-country_ambassadorTeacherId:
   type: integer
   example: 1
@@ -520,4 +520,4 @@ regional-country_photo1Id:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> <span class="dw"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span>; Relationship to [general-photo](/#tag/simple-model-general-photo)

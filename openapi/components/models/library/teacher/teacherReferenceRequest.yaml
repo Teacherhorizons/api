@@ -1,32 +1,34 @@
 # simple attributes
-teacher-teacherReferenceRequest_teacherId:
-  type: integer
-  example: 1
-  description: |
-    Relationship to [teacher](/#tag/simple-model-teacher)
-teacher-teacherReferenceRequest_typeId:
-  type: integer
-  example: 1
-  description: |
-    Relationship to [teacher-referenceType](/#tag/simple-model-teacher-referenceType)
 teacher-teacherReferenceRequest_refereeFullName:
   type: string
   example: Loreem ipsum
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_refereeOrganisationName:
   type: string
   example: Foo bar
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_refereeRoleName:
   type: string
   example: Foo
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_refereeEmail:
   type: string
   example: abc@gmail.com
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_refereePhoneNumber:
   type: string
   example: 1234567890
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_fileUri:
   type: string
   example: f2bac1d1-ff2a-4061-851c-b61be65eb2a2
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_isArchived:
   type: boolean
   nullable: true
@@ -37,38 +39,43 @@ teacher-teacherReferenceRequest_creationDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
+  description: |
+    <span class="website"></span>
 teacher-teacherReferenceRequest_latestUpdateDate:
   type: string
   format: date-time
   example: 2011-02-07T15:53:32Z
-teacher-teacherReferenceRequest_completionDate:
-  type: string
-  format: date-time
-  example: 2011-02-07T15:53:32Z
-teacher-teacherReferenceRequest_score:
-  type: integer
-  example: 9
   description: |
     <span class="website"></span>
 
 # relationship attributes
+teacher-teacherReferenceRequest_teacherId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [teacher](/#tag/simple-model-teacher)
+teacher-teacherReferenceRequest_typeId:
+  type: integer
+  example: 1
+  description: |
+    <span class="website"></span> Relationship to [teacher-referenceType](/#tag/simple-model-teacher-referenceType)
 teacher-teacherReferenceRequest_statusId:
   type: integer
   example: 1
   description: |
-    Relationship to [teacher-referenceStatus](/#tag/simple-model-teacher-referenceStatus)
+    <span class="website"></span> Relationship to [teacher-referenceStatus](/#tag/simple-model-teacher-referenceStatus)
 teacher-teacherReferenceRequest_refereePhoneCodeCountryId:
   type: integer
   example: 1
   description: |
-    Relationship to [regional-country](/#tag/simple-model-regional-country)
+    <span class="website"></span> Relationship to [regional-country](/#tag/simple-model-regional-country)
 teacher-teacherReferenceRequest_schoolId:
   type: integer
   example: 1
   nullable: true
   description: |
     <span class="website"></span> Relationship to [school](/#tag/simple-model-school)
-teacher-teacherReferenceRequest_countryId:
+teacher-teacherReferenceRequest_refereeOrganisationCountryId:
   type: integer
   example: 1
   nullable: true
@@ -78,9 +85,9 @@ teacher-teacherReferenceRequest_creationUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
 teacher-teacherReferenceRequest_latestUpdateUserId:
   type: integer
   example: 1
   description: |
-    Relationship to [user](/#tag/simple-model-user)
+    <span class="website"></span> Relationship to [user](/#tag/simple-model-user)

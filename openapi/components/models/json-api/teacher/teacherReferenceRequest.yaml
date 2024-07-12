@@ -17,7 +17,7 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeFullName"
         refereeRoleName:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeRoleName"
-        refereeRoleEmail:
+        refereeEmail:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeEmail"
         refereeOrganisationName:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationName"
@@ -31,10 +31,6 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_creationDate"
         latestUpdateDate:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_latestUpdateDate"
-        completionDate:
-          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_completionDate"
-        score:
-          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_score"
         # relationship attributes
         teacher:
           $ref: "../teacher/teacher.yaml#/JsonApiModel_teacher_relationship_attribute"
@@ -46,7 +42,7 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
         school:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-        country:
+        refereeOrganisationCountry:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
         creationUser:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"     
@@ -66,7 +62,7 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
         school:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-        country:
+        refereeOrganisationCountry:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
         creationUser:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"     
