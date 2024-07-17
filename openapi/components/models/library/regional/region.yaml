@@ -12,7 +12,10 @@ regional-region_slug:
   maxLength: 180
   nullable: true
   example: africa
-  description: <span class="website"></span> <span class="dw"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span>
+    <span class="dw"></span>
 # Raw data
 regional-region_alias:
   type: string
@@ -48,26 +51,26 @@ regional-region_teachingInRegionDescription:
   example: Foo bar baz
   maxLength: 1500
   description: |
-   <span class="website"></span>
+    <span class="website"></span>
 regional-region_ambassadorTestimonial:
   type: string
   nullable: true
   example: Foo bar baz
   maxLength: 65535
   description: |
-   <span class="website"></span>
+    <span class="website"></span>
 regional-region_qualityOfLifeDescription:
   type: string
   nullable: true
   example: Foo bar baz
   maxLength: 2000
   description: |
-   <span class="website"></span>
+    <span class="website"></span>
 regional-region_pageMetaDescription:
   deprecated: true
   nullable: true
   description: |
-   <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
+    <span class="website"></span> Moved to [simple-model-system-page](/#tag/simple-model-system-page)
   type: string
   example: foo bar baz qux
   maxLength: 255
@@ -77,7 +80,7 @@ regional-region_adviceForInternationalTeachers:
   example: Foo bar baz
   maxLength: 2000
   description: |
-   <span class="website"></span>
+    <span class="website"></span>
 # Derived (dw)
 regional-region_averageAnnualGrossIncome:
   type: integer
@@ -336,13 +339,13 @@ regional-region_communityResponseQuestionIds:
     type: integer
   example: [4, 7, 10, 14]
   description: |
-    <span class="website"></span> 
+    <span class="website"></span>
 regional-region_costOfLivingIndex:
   type: number
   nullable: true
   example: 45.6
   description: |
-    <span class="website"></span> 
+    <span class="website"></span>
 
 # relationship attribute
 regional-region_creationUserId:
