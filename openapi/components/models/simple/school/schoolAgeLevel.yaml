@@ -3,21 +3,21 @@ SimpleModel_school-schoolAgeLevel:
   additionalProperties: false
   properties:
     id:
-      $ref: "#/SimpleModel_school-schoolAgeLevel_id"
+      $ref: '#/SimpleModel_school-schoolAgeLevel_id'
     # simple attributes
     creationDate:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationDate"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationDate'
     latestUpdateDate:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateDate"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateDate'
     # relationship attributes
     schoolId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_schoolId"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_schoolId'
     ageLevelId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_ageLevelId"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_ageLevelId'
     creationUserId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationUserId"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_creationUserId'
     latestUpdateUserId:
-      $ref: "../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateUserId"
+      $ref: '../../library/school/schoolAgeLevel.yaml#/school-schoolAgeLevel_latestUpdateUserId'
   required:
     - id
 # shared

@@ -55,9 +55,10 @@ a[href^='/#tag/simple-model']:has(+ span) {
 span[class^='testing-status-'],
 span[class*=' testing-status-'],
 span[class='main'],
-span[class='website'],
 span[class='dw'],
 span[class='metric'],
+span[class='non-standard'],
+span[class='website'],
 span[class='type-change-or-rate'],
 span[class='type-formula'],
 span[class='type-new'],
@@ -72,8 +73,8 @@ span[class='type-point-in-time'] {
 }
 
 .main {
-  background-color: #3fa9b3;
-  color: white;
+  background-color: #00ffff;
+  color: black;
 }
 .main::after {
   content: 'Main';
@@ -85,19 +86,26 @@ span[class='type-point-in-time'] {
 .dw::after {
   content: 'Data warehouse';
 }
-.website {
-  background-color: #00264b;
-  color: white;
-}
-.website::after {
-  content: 'Website';
-}
 .metric {
   background-color: #ff725e;
   color: white;
 }
 .metric::after {
   content: 'Metric';
+}
+.non-standard {
+  background-color: #ff00ff;
+  color: white;
+}
+.non-standard::after {
+  content: 'Non-standard';
+}
+.website {
+  background-color: #00264b;
+  color: white;
+}
+.website::after {
+  content: 'Website';
 }
 
 .type-change-or-rate {
