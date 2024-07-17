@@ -19,8 +19,8 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeRoleName"
         refereeEmail:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeEmail"
-        refereeOrganisationName:
-          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereeOrganisationName"
+        organisationName:
+          $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_organisationName"
         refereePhoneNumber:
           $ref: "../../library/teacher/teacherReferenceRequest.yaml#/teacher-teacherReferenceRequest_refereePhoneNumber"
         fileUri:
@@ -42,7 +42,7 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
         school:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
-        refereeOrganisationCountry:
+        organisationCountry:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"
         creationUser:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship_attribute"     
@@ -62,7 +62,7 @@ JsonApiModel_teacher-teacherReferenceRequest:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
         school:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
-        refereeOrganisationCountry:
+        organisationCountry:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"
         creationUser:
           $ref: "../teacher/referenceType.yaml#/JsonApiModel_teacher-referenceType_relationship"     
