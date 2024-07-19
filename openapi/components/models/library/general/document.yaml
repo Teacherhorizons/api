@@ -7,7 +7,9 @@ general-document_name:
 general-document_filePath:
   type: string
   example: /foo/bar/baz.html
-  description: <span class="website"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
 general-document_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
@@ -22,7 +24,9 @@ general-document_caption:
   type: string
   nullable: true
   example: Foo bar
-  description: <span class="website"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
   maxLength: 250
 
 # relationship attributes

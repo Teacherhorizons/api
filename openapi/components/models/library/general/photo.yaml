@@ -3,12 +3,16 @@ general-photo_url:
   type: string
   maxLength: 65535
   example: /foo/bar/baz.jpeg
-  description: <span class="website"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
 general-photo_description:
   type: string
   maxLength: 250
   example: abc ff
-  description: <span class="website"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
 general-photo_name:
   deprecated: true
   type: string

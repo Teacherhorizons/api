@@ -3,17 +3,27 @@ teacher_memberNumber:
   type: integer
   example: 1
   readOnly: true
-  description: <span class="website"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
 
 teacher_fullName:
   type: string
   example: Foo Bar
-  description: <span class="website"></span> <span class="dw"></span> Main. Derived from user.
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
+    <span class="dw"></span>
+    Derived from user
 
 teacher_firstName:
   type: string
   example: Foo bar
-  description: <span class="website"></span> <span class="dw"></span> Main. Derived from user.
+  description: 
+    <span class="main"></span>
+    <span class="website"></span> 
+    <span class="dw"></span> 
+    Derived from user
 
 teacher_availableFromDate:
   type: string

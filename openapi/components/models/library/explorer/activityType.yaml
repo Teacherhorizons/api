@@ -2,19 +2,28 @@
 explorer-activityType_nameForAdmin:
   type: string
   example: Job offered
-  description: <span class="website"></span> Main; available to admin only
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
+    available to admin only
   maxLength: 50
 explorer-activityType_nameForSchool:
   type: string
   nullable: true
   example: Interview request sent
-  description: <span class="website"></span> Main; available to school only
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
+    available to school only
   maxLength: 50
 explorer-activityType_nameForTeacher:
   type: string
   nullable: true
   example: Interview request received from school
-  description: <span class="website"></span> Main; available to teacher only
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
+    available to teacher only
   maxLength: 50
 explorer-activityType_isVisibleToSchool:
   type: boolean

@@ -2,7 +2,10 @@
 regional-city_name:
   type: string
   example: Luanda
-  description: <span class="website"></span> <span class="dw"></span> Main
+  description: |
+    <span class="main"></span>
+    <span class="website"></span> 
+    <span class="dw"></span> 
   maxLength: 250
 regional-city_alias:
   description: |
@@ -36,8 +39,9 @@ regional-city_keyAttractions:
   maxLength: 65535
 regional-city_slug:
   description: |
-    <span class="website"></span> <span class="dw"></span>
-    Main
+    <span class="main"></span>
+    <span class="website"></span> 
+    <span class="dw"></span>
   type: string
   nullable: true
   example: africa-angola-luanda
