@@ -73,7 +73,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/user/user.yaml#/Response_user'
+            $ref: '../../components/responses/user/users.yaml#/Response_user'
     '400':
       $ref: '../../components/models/json-api/standard/error.yaml#/JsonApiModel_error_400'
     '401':
