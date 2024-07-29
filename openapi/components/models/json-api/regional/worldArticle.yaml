@@ -11,19 +11,11 @@ JsonApiModel_regional-worldArticle:
       additionalProperties: false
       properties:
         # simple attributes
-        title:
-          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
-        snippet:
-          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
-        url:
-          $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
         creationDate:
           $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_creationDate"
         latestUpdateDate:
           $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_latestUpdateDate"
         # relationship attributes
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         category:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
         article:
@@ -34,22 +26,16 @@ JsonApiModel_regional-worldArticle:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
         - id
-        - title
-        - snippet
-        - url
         - creationDate
         - latestUpdateDate
         - category
         - article
-        - photo
         - creationUser
         - latestUpdateUser
     relationships:
       type: object
       additionalProperties: false
       properties:
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         category:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
         article:
@@ -82,14 +68,8 @@ JsonApiModel_regional-worldArticle_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-worldArticle_id"
-    title:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
-    url:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
   required:
     - id
-    - title
-    - url
 
 JsonApiModel_regional-worldArticle_relationship:
   type: object

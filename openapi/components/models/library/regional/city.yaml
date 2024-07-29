@@ -112,8 +112,6 @@ regional-city_numberOfLiveJobs:
 regional-city_numberOfPrimaryIBCurriculumSchools:
   type: integer
   example: 34
-  description: |
-    <span class="website"></span>
 regional-city_numberOfPrimaryUSCurriculumSchools:
   type: integer
   example: 54
@@ -494,6 +492,7 @@ regional-city_communityResponseQuestionIds:
   example: [4, 7, 10, 14]
   description: |
     <span class="website"></span>
+    <span class="non-standard"></span>
 
 # relationship attributes
 regional-city_countryId:
@@ -521,4 +520,4 @@ regional-city_photo1Id:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> <span class="non-standard"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)

@@ -37,16 +37,7 @@ Response_regional-countryArticles_item:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
-        title:
-          $ref: '../../models/library/regional/countryArticle.yaml#/regional-countryArticle_title'
-        snippet:
-          $ref: '../../models/library/regional/countryArticle.yaml#/regional-countryArticle_snippet'
-        url:
-          $ref: '../../models/library/regional/countryArticle.yaml#/regional-countryArticle_url'
         #relationship attribute
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         category:
           $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
   required:

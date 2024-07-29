@@ -1,22 +1,4 @@
 # simple attributes
-regional-worldArticle_title:
-  type: string
-  example: Foo bar baz
-  description: |
-    <span class="website"></span> 
-  maxLength: 100
-regional-worldArticle_snippet:
-  type: string
-  example: Foo bar baz
-  description: |
-    <span class="website"></span> 
-  maxLength: 1000
-regional-worldArticle_url:
-  type: string
-  example: /foo/bar/baz.html
-  description: |
-    <span class="website"></span> 
-  maxLength: 255
 regional-worldArticle_creationDate:
   type: string
   example: 2011-02-07T15:53:34Z
@@ -41,11 +23,6 @@ regional-worldArticle_articleId:
   example: 1
   description: |
     <span class="website"></span> Relationship to [regional-regionArticle](/#tag/simple-model-regional-regionArticle)
-regional-worldArticle_photoId:
-  type: integer
-  example: 1
-  description: |
-    <span class="website"></span>, Relationship to [general-photo](/#tag/simple-model-general-photo)
 regional-worldArticle_creationUserId:
   type: integer
   example: 1

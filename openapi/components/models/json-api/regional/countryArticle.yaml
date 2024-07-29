@@ -11,12 +11,6 @@ JsonApiModel_regional-countryArticle:
       additionalProperties: false
       properties:
         # simple attributes
-        title:
-          $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_title"
-        snippet:
-          $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
-        url:
-          $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_url"
         creationDate:
           $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
         latestUpdateDate:
@@ -29,17 +23,12 @@ JsonApiModel_regional-countryArticle:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute"
         article:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship_attribute"
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
       required:
         - id
-        - title
-        - snippet
-        - url
         - creationDate
         - latestUpdateDate
         - countryId
@@ -56,8 +45,6 @@ JsonApiModel_regional-countryArticle:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
         article:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
         creationUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship"
         latestUpdateUser:

@@ -37,23 +37,10 @@ Response_regional-cityArticles_item:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
-        title:
-          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_title'
-        snippet:
-          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_snippet'
-        url:
-          $ref: '../../models/library/regional/cityArticle.yaml#/regional-cityArticle_url'
         #relationship attribute
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         category:
           $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
       required:
-        - title
-        - snippet
-        - url
-        - photo
         - category
   required:
     - type

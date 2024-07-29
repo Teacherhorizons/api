@@ -5,12 +5,6 @@ SimpleModel_regional-countryArticle:
     id:
       $ref: "#/SimpleModel_regional-countryArticle_id"
     # simple attributes
-    title:
-      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_title"
-    snippet:
-      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_snippet"
-    url:
-      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_url"
     creationDate:
       $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationDate"
     latestUpdateDate:
@@ -22,23 +16,17 @@ SimpleModel_regional-countryArticle:
       $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_categoryId"
     articleId:
       $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_articleId"
-    photoId:
-      $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_photoId"
     creationUserId:
       $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_creationUserId"
     latestUpdateUserId:
       $ref: "../../library/regional/countryArticle.yaml#/regional-countryArticle_latestUpdateUserId"
   required:
     - id
-    - title
-    - snippet
-    - url
     - creationDate
     - latestUpdateDate
     - countryId
     - categoryId
     - articleId
-    - photoId
     - creationUserId
     - latestUpdateUserId
 

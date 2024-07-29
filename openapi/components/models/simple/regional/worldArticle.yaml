@@ -5,19 +5,11 @@ SimpleModel_regional-worldArticle:
     id:
       $ref: "#/SimpleModel_regional-worldArticle_id"
     # simple attributes
-    title:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_title"
-    snippet:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_snippet"
-    url:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_url"
     creationDate:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_creationDate"
     latestUpdateDate:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_latestUpdateDate"
     # relationship attributes
-    photoId:
-      $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_photoId"
     categoryId:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_categoryId"
     articleId:
@@ -28,14 +20,10 @@ SimpleModel_regional-worldArticle:
       $ref: "../../library/regional/worldArticle.yaml#/regional-worldArticle_latestUpdateUserId"
   required:
     - id
-    - title
-    - snippet
-    - url
     - creationDate
     - latestUpdateDate
     - categoryId
     - articleId
-    - photoId
     - creationUserId
     - latestUpdateUserId
 

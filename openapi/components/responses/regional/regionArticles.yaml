@@ -49,16 +49,7 @@ Response_regional-regionArticles_item:
       type: object
       additionalProperties: false
       properties:
-        # simple attributes
-        title:
-          $ref: '../../models/library/regional/regionArticle.yaml#/regional-regionArticle_title'
-        snippet:
-          $ref: '../../models/library/regional/regionArticle.yaml#/regional-regionArticle_snippet'
-        url:
-          $ref: '../../models/library/regional/regionArticle.yaml#/regional-regionArticle_url'
         #relationship attribute
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         category:
           $ref: '../../../components/models/json-api/regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship_attribute'
   required:

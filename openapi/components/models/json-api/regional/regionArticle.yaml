@@ -11,12 +11,6 @@ JsonApiModel_regional-regionArticle:
       additionalProperties: false
       properties:
         # simple attributes
-        title:
-          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_title"
-        snippet:
-          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_snippet"
-        url:
-          $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
         creationDate:
           $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_creationDate"
         latestUpdateDate:
@@ -32,14 +26,8 @@ JsonApiModel_regional-regionArticle:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
         latestUpdateUser:
           $ref: "../user/user.yaml#/JsonApiModel_user_relationship_attribute"
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
       required:
         - id
-        - title
-        - snippet
-        - url
-        - photo
         - creationDate
         - latestUpdateDate
         - region
@@ -59,8 +47,6 @@ JsonApiModel_regional-regionArticle:
           $ref: "../regional/articleCategory.yaml#/JsonApiModel_regional-articleCategory_relationship"
         article:
           $ref: "../general/article.yaml#/JsonApiModel_general-article_relationship"
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
   required:
     - type
     - id
@@ -85,14 +71,8 @@ JsonApiModel_regional-regionArticle_relationship_attribute:
   properties:
     id:
       $ref: "#/JsonApiModel_regional-regionArticle_id"
-    title:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_title"
-    url:
-      $ref: "../../library/regional/regionArticle.yaml#/regional-regionArticle_url"
   required:
     - id
-    - title
-    - url
 
 JsonApiModel_regional-regionArticle_relationship:
   type: object
