@@ -21,12 +21,36 @@ school_isActive:
   example: true
   description: |
     <span class="website"></span>
-# school_discountForStaffChildrenPercentage
-#   type: number
-#   example: 4
-# school_hasPlacesForStaffChildren
-#   type: boolean
-#   example: 1
+school_discountForStaffChildrenPercentage:
+  type: boolean
+  example: 4
+  description: |
+    <span class="non-standard"></span>
+school_hasPlacesForStaffChildren:
+  type: boolean
+  example: true
+  description: |
+    <span class="non-standard"></span>
+school_hasStaffAccommodationBenefit:
+  type: boolean
+  example: true
+  description: |
+    <span class="non-standard"></span>
+school_hasStaffLaptopAllowance:
+  type: boolean
+  example: true
+  description: |
+    <span class="non-standard"></span>
+school_monthlyStaffAccommodationAllowance:
+  type: boolean
+  example: true
+  description: |
+    <span class="non-standard"></span>
+school_hasStaffLanguageLessonAllowance:
+  type: boolean
+  example: true
+  description: |
+    <span class="non-standard"></span>
 school_thRating:
   type: number
   nullable: true
@@ -381,7 +405,7 @@ school_grossSalaryJuniorTeacherInUsd:
   type: number
   example: 13456
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="non-standard"></span>
 school_grossSalarySeniorTeacher:
   type: number
   example: 23456
@@ -391,7 +415,7 @@ school_grossSalarySeniorTeacherInUsd:
   type: number
   example: 24567
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="non-standard"></span>
 school_juniorTeacherTaxPercentage:
   type: integer
   example: 20
@@ -421,7 +445,7 @@ school_amountIndividualTeacherSavesYearlyInUsd:
   type: number
   example: 13400
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="non-standard"></span>
 school_numberOfDependentsPerTeacher:
   type: integer
   nullable: true
@@ -495,6 +519,13 @@ school_additionalAccommodationText:
   maxLength: 255
   description: |
     <span class="website"></span>
+school_additionalBenefitInformationText:
+  type: string
+  nullable: true
+  example: Foo
+  maxLength: 255
+  description: |
+    <span class="non-standard"></span>
 school_ambassadorTestimonial:
   type: string
   nullable: true
@@ -541,7 +572,7 @@ school_logoUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="non-standard"></span> 
 school_smallProfileImageUrl:
   type: string
   example: https://www.teacherhorizons.com/static/mediav2/schools/2538/images/487931_main.jpg
@@ -551,32 +582,52 @@ school_accreditationRating:
   minimum: 1
   maximum: 5
   description: |
-    <span class="website"></span>
+    <span class="website"></span> <span class="non-standard"></span>
 school_membershipsRating:
   type: integer
   example: 3
   minimum: 1
   maximum: 5
+  description: |
+    <span class="non-standard"></span>
 school_facilitiesRating:
   type: integer
   example: 3
   minimum: 1
   maximum: 5
+  description: |
+    <span class="non-standard"></span>
+school_diversityRating:
+  type: integer
+  example: 3
+  minimum: 1
+  maximum: 5
+  description: |
+    <span class="non-standard"></span>
 school_professionalDevelopmentRating:
   type: integer
   example: 3
   minimum: 1
   maximum: 5
+  description: |
+    <span class="non-standard"></span>
 school_abilityToSaveRating:
   type: integer
   example: 3
   minimum: 1
   maximum: 5
+  description: |
+    <span class="non-standard"></span>
 school_deiRating:
   type: integer
   example: 3
   minimum: 1
   maximum: 5
+school_annualProfessionalDevelopmentBudget:
+  type: number
+  example: 150
+  description: |
+    <span class="non-standard"></span>
 school_creationDate:
   type: string
   format: date-time
@@ -674,9 +725,25 @@ school_smallProfilePhotoId:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> <span class="non-standard"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
 school_largeProfilePhotoId:
   type: integer
   example: 1
   description: |
-    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
+    <span class="website"></span> <span class="non-standard"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
+school_contractStartMonthId:
+  type: integer
+  example: 1
+  description: |
+    <span class="non-standard"></span> Relationship to [time-month](/#tag/simple-model-time-month)
+school_contractEndMonthId:
+  type: integer
+  example: 1
+  description: |
+    <span class="non-standard"></span> Relationship to [time-month](/#tag/simple-model-time-month)
+school_noticeOfIntentionToLeaveMonthId:
+  type: integer
+  example: 1
+  description: |
+    <span class="non-standard"></span> Relationship to [time-month](/#tag/simple-model-time-month)
+

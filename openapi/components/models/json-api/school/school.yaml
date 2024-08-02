@@ -48,6 +48,32 @@ JsonApiModel_school:
           $ref: '../../library/school/school.yaml#/school_monthSchoolYearBegins'
         headTeacherName:
           $ref: '../../library/school/school.yaml#/school_headTeacherName'
+        abilityToSaveRating: 
+          $ref: '../../library/school/school.yaml#/school_abilityToSaveRating'
+        facilitiesRating: 
+          $ref: '../../library/school/school.yaml#/school_facilitiesRating'
+        membershipsRating: 
+          $ref: '../../library/school/school.yaml#/school_membershipsRating'
+        professionalDevelopmentRating: 
+          $ref: '../../library/school/school.yaml#/school_professionalDevelopmentRating'
+        diversityRating: 
+          $ref: '../../library/school/school.yaml#/school_diversityRating'
+        additionalBenefitInformationText: 
+          $ref: '../../library/school/school.yaml#/school_additionalBenefitInformationText'
+        annualProfessionalDevelopmentBudget: 
+          $ref: '../../library/school/school.yaml#/school_annualProfessionalDevelopmentBudget'
+        discountForStaffChildrenPercentage: 
+          $ref: '../../library/school/school.yaml#/school_discountForStaffChildrenPercentage'
+        hasPlacesForStaffChildren: 
+          $ref: '../../library/school/school.yaml#/school_hasPlacesForStaffChildren'
+        hasStaffAccommodationBenefit: 
+          $ref: '../../library/school/school.yaml#/school_hasStaffAccommodationBenefit'
+        hasStaffLanguageLessonAllowance: 
+          $ref: '../../library/school/school.yaml#/school_hasStaffLanguageLessonAllowance'
+        hasStaffLaptopAllowance: 
+          $ref: '../../library/school/school.yaml#/school_hasStaffLaptopAllowance'
+        monthlyStaffAccommodationAllowance: 
+          $ref: '../../library/school/school.yaml#/school_monthlyStaffAccommodationAllowance'
         numberOfExtraCurricularHoursPerWeek:
           $ref: '../../library/school/school.yaml#/school_numberOfExtraCurricularHoursPerWeek'
         numberOfTeachingHoursPerWeek:
@@ -243,6 +269,12 @@ JsonApiModel_school:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
         largeProfilePhoto:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+        contractStartMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship_attribute'
+        contractEndMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship_attribute'
+        noticeOfIntentionToLeaveMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship_attribute'
     relationships:
       type: object
       additionalProperties: false
@@ -279,6 +311,12 @@ JsonApiModel_school:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
         largeProfilePhoto:
           $ref: '../general/photo.yaml#/JsonApiModel_general-photo_relationship'
+        contractStartMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship'
+        contractEndMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship'
+        noticeOfIntentionToLeaveMonth:
+          $ref: '../time/month.yaml#/JsonApiModel_time-month_relationship'
   required:
     - type
     - id

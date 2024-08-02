@@ -42,6 +42,32 @@ SimpleModel_school:
       $ref: '../../library/school/school.yaml#/school_monthSchoolYearBegins'
     headTeacherName:
       $ref: '../../library/school/school.yaml#/school_headTeacherName'
+    abilityToSaveRating: 
+      $ref: '../../library/school/school.yaml#/school_abilityToSaveRating'
+    facilitiesRating: 
+      $ref: '../../library/school/school.yaml#/school_facilitiesRating'
+    membershipsRating: 
+      $ref: '../../library/school/school.yaml#/school_membershipsRating'
+    professionalDevelopmentRating: 
+      $ref: '../../library/school/school.yaml#/school_professionalDevelopmentRating'
+    diversityRating: 
+      $ref: '../../library/school/school.yaml#/school_diversityRating'
+    additionalBenefitInformationText: 
+      $ref: '../../library/school/school.yaml#/school_additionalBenefitInformationText'
+    annualProfessionalDevelopmentBudget: 
+      $ref: '../../library/school/school.yaml#/school_annualProfessionalDevelopmentBudget'
+    discountForStaffChildrenPercentage: 
+      $ref: '../../library/school/school.yaml#/school_discountForStaffChildrenPercentage'
+    hasPlacesForStaffChildren: 
+      $ref: '../../library/school/school.yaml#/school_hasPlacesForStaffChildren'
+    hasStaffAccommodationBenefit: 
+      $ref: '../../library/school/school.yaml#/school_hasStaffAccommodationBenefit'
+    hasStaffLanguageLessonAllowance: 
+      $ref: '../../library/school/school.yaml#/school_hasStaffLanguageLessonAllowance'
+    hasStaffLaptopAllowance: 
+      $ref: '../../library/school/school.yaml#/school_hasStaffLaptopAllowance'
+    monthlyStaffAccommodationAllowance: 
+      $ref: '../../library/school/school.yaml#/school_monthlyStaffAccommodationAllowance'
     numberOfExtraCurricularHoursPerWeek:
       $ref: '../../library/school/school.yaml#/school_numberOfExtraCurricularHoursPerWeek'
     numberOfTeachingHoursPerWeek:
@@ -238,6 +264,12 @@ SimpleModel_school:
       $ref: '../../library/school/school.yaml#/school_smallProfilePhotoId'
     largeProfilePhotoId:
       $ref: '../../library/school/school.yaml#/school_largeProfilePhotoId'
+    contractStartMonthId:
+      $ref: '../../library/school/school.yaml#/school_contractStartMonthId'
+    contractEndMonthId:
+      $ref: '../../library/school/school.yaml#/school_contractEndMonthId'
+    noticeOfIntentionToLeaveMonthId:
+      $ref: '../../library/school/school.yaml#/school_noticeOfIntentionToLeaveMonthId'
   required:
     - id
 
