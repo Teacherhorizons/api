@@ -1,25 +1,4 @@
 # simple attributes
-subject-subjectArticle_title:
-  type: string
-  example: Teach maths In Portugal - How To Get A Job
-  #maxLength: 250
-  description: |
-    <span class="website"></span>
-
-subject-subjectArticle_snippet:
-  type: string
-  example: Foo bar baz
-  #maxLength: 250
-  description: |
-    <span class="website"></span>
-
-subject-subjectArticle_url:
-  type: string
-  example: https://teflhero.com/blog/teach-maths-in-portugal/
-  #maxLength: 250
-  description: |
-    <span class="website"></span>
-
 subject-subjectArticle_creationDate:
   type: string
   format: date-time
@@ -46,12 +25,6 @@ subject-subjectArticle_latestUpdateUserId:
   example: 1
   description: |
     <span class="website"></span> Relationship to [user](/#tag/simple-model-user)
-
-subject-subjectArticle_photoId:
-  type: integer
-  example: 1
-  description: |
-    <span class="website"></span> Relationship to [general-photo](/#tag/simple-model-general-photo)
 
 subject-subjectArticle_subjectId:
   type: integer

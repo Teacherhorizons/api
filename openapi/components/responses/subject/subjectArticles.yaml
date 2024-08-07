@@ -19,35 +19,35 @@ Response_subject-subjectArticles_notSignedIn:
       description: |
         [Simple model](/#tag/simple-model-subjectArticle) | 
         [JSON:API model](/#tag/json-api-model-subjectArticle)
-      items:
-        $ref: '#/Response_subject-subjectArticles_notSignedIn_item'
+      # items:
+      #   $ref: '#/Response_subject-subjectArticles_notSignedIn_item'
   required:
     - schema
     - data
 
-Response_subject-subjectArticles_notSignedIn_item:
-  type: object
-  additionalProperties: false
-  properties:
-    type:
-      $ref: '../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle_type'
-    id:
-      $ref: '../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle_id'
-    attributes:
-      type: object
-      additionalProperties: false
-      properties:
-        # simple attributes
-        title:
-          $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_title'
-        snippet:
-          $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_snippet'
-        url:
-          $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_url'
-        # relationship attributes
-        photo:
-          $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
-  required:
-    - type
-    - id
-    - attributes
+# Response_subject-subjectArticles_notSignedIn_item:
+#   type: object
+#   additionalProperties: false
+#   properties:
+#     type:
+#       $ref: '../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle_type'
+#     id:
+#       $ref: '../../models/json-api/subject/subjectArticle.yaml#/JsonApiModel_subject-subjectArticle_id'
+#     attributes:
+#       type: object
+#       additionalProperties: false
+#       properties:
+#         # simple attributes
+#         title:
+#           $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_title'
+#         snippet:
+#           $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_snippet'
+#         url:
+#           $ref: '../../models/library/subject/subjectArticle.yaml#/subject-subjectArticle_url'
+#         # relationship attributes
+#         photo:
+#           $ref: '../../../components/models/json-api/general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute'
+#   required:
+#     - type
+#     - id
+#     - attributes

@@ -5,19 +5,11 @@ SimpleModel_subject-subjectArticle:
     id:
       $ref: "#/SimpleModel_subject-subjectArticle_id"
     # simple attributes
-    title:
-      $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_title"
-    snippet:
-      $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_snippet"
-    url:
-      $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_url"
     creationDate:
       $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_creationDate"
     latestUpdateDate:
       $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_latestUpdateDate"
     # relationship attributes
-    photoId:
-      $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_photoId"
     subjectId:
       $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_subjectId"    
     articleId:

@@ -11,20 +11,12 @@ JsonApiModel_subject-subjectArticle:
       additionalProperties: false
       properties:
         # simple attributes
-        title:
-          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_title"
-        snippet:
-          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_snippet"
-        url:
-          $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_url"
         creationDate:
           $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_creationDate"
         latestUpdateDate:
           $ref: "../../library/subject/subjectArticle.yaml#/subject-subjectArticle_latestUpdateDate"
 
         # relationship attributes
-        photo:
-          $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship_attribute"
         subject:
           $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship_attribute"    
         article:
@@ -37,8 +29,6 @@ JsonApiModel_subject-subjectArticle:
         type: object
         additionalProperties: false
         properties: 
-          photo:
-            $ref: "../general/photo.yaml#/JsonApiModel_general-photo_relationship"
           subject:
             $ref: "../subject/subject.yaml#/JsonApiModel_subject_relationship"    
           article:
